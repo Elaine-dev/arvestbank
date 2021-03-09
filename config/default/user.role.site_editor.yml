@@ -1,0 +1,9 @@
+uuid: 3286a557-2ee1-4cb4-a987-a6bdabc3795d
+langcode: en
+status: true
+dependencies: {  }
+id: site_editor
+label: 'Site Editor'
+weight: -6
+is_admin: null
+permissions: {  }

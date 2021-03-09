@@ -1,0 +1,14 @@
+uuid: 7fc40ad6-fc7c-413f-a595-96a91738ea23
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.enterprise_admin
+  module:
+    - user
+id: user_add_role_action.enterprise_admin
+label: 'Add the Enterprise Admin role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: enterprise_admin

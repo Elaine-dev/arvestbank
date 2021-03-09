@@ -1,0 +1,14 @@
+uuid: 63f6361a-c088-422b-81d5-b7a468ac3194
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.domain_admin
+  module:
+    - user
+id: user_add_role_action.domain_admin
+label: 'Add the Domain Admin role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: domain_admin

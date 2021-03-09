@@ -1,0 +1,14 @@
+uuid: 37b1a263-2d85-4768-9592-2428d4d67d2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.enterprise_admin
+  module:
+    - user
+id: user_remove_role_action.enterprise_admin
+label: 'Remove the Enterprise Admin role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: enterprise_admin

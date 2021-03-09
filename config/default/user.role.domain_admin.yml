@@ -1,0 +1,9 @@
+uuid: 3d6f35da-4c01-4e37-92a9-c4c9f56bfd7e
+langcode: en
+status: true
+dependencies: {  }
+id: domain_admin
+label: 'Domain Admin'
+weight: -5
+is_admin: null
+permissions: {  }

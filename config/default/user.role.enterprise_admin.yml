@@ -1,0 +1,9 @@
+uuid: 7bfd9323-25d3-4cfa-807c-701368ce6a79
+langcode: en
+status: true
+dependencies: {  }
+id: enterprise_admin
+label: 'Enterprise Admin'
+weight: -4
+is_admin: trye
+permissions: {  }
