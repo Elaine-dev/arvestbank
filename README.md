@@ -1,4 +1,4 @@
-# My Project
+# Arvest Bank
 This repository consists of the Arvest Bank Drupal 9 with Site Studio build.
 
 # Getting Started
