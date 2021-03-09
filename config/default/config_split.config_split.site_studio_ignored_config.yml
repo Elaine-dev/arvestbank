@@ -1,0 +1,16 @@
+uuid: 580ec0f0-7430-41a6-9b41-8e87f40546ea
+langcode: en
+status: true
+dependencies: {  }
+id: site_studio_ignored_config
+label: 'Site Studio ignored config'
+description: 'Avoid exporting cohesion configuration since that will be handled by the cohesion import/export commands. See: http://geertvd.github.io/post/exclude-config-from-cmi-in-d8/'
+folder: ../config/site_studio_sync
+module: {  }
+theme: {  }
+blacklist:
+  - 'cohesion_*'
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

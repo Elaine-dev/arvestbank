@@ -1,0 +1,15 @@
+uuid: 7d472c57-395c-46a3-ba1a-6bb5e237ff50
+langcode: en
+status: false
+dependencies: {  }
+id: stage
+label: Stage
+description: 'Configuration for the Cloud Platform staging environment.'
+folder: ../config/envs/stage
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

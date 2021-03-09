@@ -1,0 +1,15 @@
+uuid: 9add1190-3f6c-47e1-bfad-0e0e0e7a4021
+langcode: en
+status: false
+dependencies: {  }
+id: prod
+label: Prod
+description: 'Configuration of the Cloud Platform Production environment.'
+folder: ../config/envs/prod
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

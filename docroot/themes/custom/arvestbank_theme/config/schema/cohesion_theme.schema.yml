@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Claro theme.
+
+arvestbank_theme.settings:
+  type: theme_settings
+  label: 'Site studio settings'

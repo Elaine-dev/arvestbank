@@ -1,0 +1,15 @@
+uuid: ad08b5f2-4ece-4b48-b1a3-a80a1213d48d
+langcode: en
+status: false
+dependencies: {  }
+id: dev
+label: Dev
+description: 'Configuration for the Cloud Platform Development env'
+folder: ../config/envs/dev
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

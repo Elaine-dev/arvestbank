@@ -1,0 +1,13 @@
+uuid: 03df348a-4cb8-413c-8bba-7a610c722a84
+langcode: en
+status: true
+dependencies: {  }
+id: futura-book
+label: 'Futura Book'
+json_values: '{"inuse":false,"systemfont":false,"link":true,"name":"Futura Book","uid":"futura-book","class":".coh-font-futura-book","variable":"$coh-font-futura-book","fontStack":"FuturaBT-Book","smoothing":{"firefox":true,"webkit":true}}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+source: fontStacks

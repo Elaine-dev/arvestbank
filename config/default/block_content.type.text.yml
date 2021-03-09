@@ -1,0 +1,8 @@
+uuid: 5c7e821d-a36c-4db0-a805-1f3c1fa4f6e4
+langcode: en
+status: true
+dependencies: {  }
+id: text
+label: Text
+revision: 0
+description: "A text block contains a title and a body.\t\r\n"

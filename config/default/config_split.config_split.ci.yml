@@ -1,0 +1,15 @@
+uuid: 7bfdd333-9b93-4d0a-baf8-6d3dbd3bd5ae
+langcode: en
+status: false
+dependencies: {  }
+id: ci
+label: CI
+description: 'Configure for automated testing with Acquia Pipelines.'
+folder: ../config/envs/ci
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

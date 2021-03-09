@@ -1,0 +1,20 @@
+uuid: ae155a30-5f6f-40cf-a32e-7013d7358cea
+langcode: en
+status: true
+dependencies:
+  theme:
+    - arvestbank_theme
+_core:
+  default_config_hash: PffmQ-ABSz5tFjWmVsR7NesunDnEivvopnJnBjl8KNE
+id: arvestbank_theme_local_actions
+theme: arvestbank_theme
+region: dx8_hidden
+weight: 4
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

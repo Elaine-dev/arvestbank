@@ -1,0 +1,18 @@
+uuid: 1619d1f4-4873-41a2-a512-e0cbf97d4766
+langcode: en
+status: false
+dependencies: {  }
+id: node_article_education_article_s
+label: 'Search index (Node, Article - Education Article)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: article_education_article
+view_mode: search_index
+master_template: ''

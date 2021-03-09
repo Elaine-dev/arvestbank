@@ -1,0 +1,87 @@
+uuid: 1f97bbc2-6f56-4b66-8a0d-6843a5463048
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.article_education_article.field_education_article_category
+    - field.field.node.article_education_article.field_layout_canvas
+    - field.field.node.article_education_article.field_sub_title
+    - node.type.article_education_article
+  module:
+    - chosen_field
+    - cohesion_elements
+    - path
+    - scheduler
+id: node.article_education_article.default
+targetEntityType: node
+bundle: article_education_article
+mode: default
+content:
+  field_education_article_category:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: chosen_select
+    region: content
+  field_layout_canvas:
+    type: cohesion_layout_builder_widget
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_sub_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 9
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  promote: true
+  sticky: true
+  uid: true

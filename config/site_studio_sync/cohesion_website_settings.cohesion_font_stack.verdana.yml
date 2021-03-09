@@ -1,0 +1,13 @@
+uuid: 9787c951-2814-4bb2-93ce-2616a59abf14
+langcode: en
+status: true
+dependencies: {  }
+id: verdana
+label: Verdana
+json_values: '{"inuse":false,"systemfont":true,"name":"Verdana","uid":"verdana","fontStack":"Verdana,Geneva,sans-serif","smoothing":{"firefox":true,"webkit":true},"variable":"$coh-font-verdana","class":".coh-font-verdana","link":true}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+source: fontStacks

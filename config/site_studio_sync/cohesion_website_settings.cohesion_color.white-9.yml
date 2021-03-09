@@ -1,0 +1,13 @@
+uuid: c981f2f7-101b-458a-9f29-72ae05f72ef1
+langcode: en
+status: true
+dependencies: {  }
+id: white-9
+label: 'White 9'
+json_values: '{"name":"White 9","uid":"white-9","value":{"value":{"hex":"#ffffff","rgba":"rgba(255, 255, 255, 1)"}},"wysiwyg":true,"class":".coh-color-white-9","variable":"$coh-color-white-9","inuse":false,"link":true}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+weight: 8

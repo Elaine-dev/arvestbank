@@ -1,0 +1,27 @@
+name: arvestbank_theme
+type: theme
+description: Arvest Bank's minimal theme as a basis for Site Studio powered websites. It includes some basic styling for Drupal admin functions.
+core_version_requirement: ^8.8.0 || ^9
+
+# Defines the base theme.
+base theme: cohesion_theme
+
+libraries:
+  - arvestbank_theme/global-styling
+
+cohesion: true
+
+logo: logo.png
+
+# Defines theme regions available.
+regions:
+  top_menu: Top Menu
+  header: Header
+  featured: Featured
+  breadcrumbs: Breadcrumbs
+  content: Content
+  sidebar_first: First sidebar
+  sidebar_second: Second sidebar
+  footer_menu: Footer Menu
+  footer: Footer
+  dx8_hidden: Site Studio hidden region

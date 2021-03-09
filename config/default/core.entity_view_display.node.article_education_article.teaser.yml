@@ -1,0 +1,26 @@
+uuid: e77abce9-c5ed-4b6e-a2c7-3d21a76c1a9b
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.article_education_article.field_education_article_category
+    - field.field.node.article_education_article.field_layout_canvas
+    - field.field.node.article_education_article.field_sub_title
+    - node.type.article_education_article
+  module:
+    - user
+id: node.article_education_article.teaser
+targetEntityType: node
+bundle: article_education_article
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_education_article_category: true
+  field_layout_canvas: true
+  field_sub_title: true

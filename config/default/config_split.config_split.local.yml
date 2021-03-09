@@ -1,0 +1,17 @@
+uuid: c0851339-6340-405b-be9e-1d7b0d19030c
+langcode: en
+status: true
+dependencies: {  }
+id: local
+label: Local
+description: 'Local Configuration for development purposes outside of the Cloud Platform.'
+folder: ../config/envs/local
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist:
+  - dblog
+  - devel
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

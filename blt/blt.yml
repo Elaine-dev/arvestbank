@@ -1,2 +1,12 @@
 project:
   machine_name: arvestbank
+  prefix: AB
+site-studio:
+  cohesion-import: true
+  sync-import: true
+  rebuild: true
+
+git:
+  default_branch: master
+  remotes:
+    - 'git@github.com:acquia-pso/arvestbank'

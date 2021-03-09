@@ -1,0 +1,22 @@
+uuid: 3196db25-43dd-40db-8a79-93f86b445d8a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - cohesion_theme
+_core:
+  default_config_hash: 5MNdk3fpMKx_xxBTcz2T11DL4XEU1H5SgHl8BsYdFsA
+id: cohesion_theme_messages
+theme: cohesion_theme
+region: header
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

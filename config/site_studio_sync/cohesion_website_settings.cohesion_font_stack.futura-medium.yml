@@ -1,0 +1,13 @@
+uuid: fe92890b-bf97-4fc9-8691-11bdc0992627
+langcode: en
+status: true
+dependencies: {  }
+id: futura-medium
+label: 'Futura Medium'
+json_values: '{"inuse":false,"systemfont":false,"link":true,"fontStack":"FuturaBT-Medium","name":"Futura Medium","uid":"futura-medium","class":".coh-font-futura-medium","variable":"$coh-font-futura-medium","smoothing":{"firefox":true,"webkit":true}}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+source: fontStacks

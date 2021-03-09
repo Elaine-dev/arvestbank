@@ -1,0 +1,34 @@
+uuid: 6562f3c1-497c-4e10-82b5-d969f5568386
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - cohesion
+    - menu_block
+  theme:
+    - arvestbank_theme
+id: mainnavigation
+theme: arvestbank_theme
+region: dx8_hidden
+weight: -1
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Sidebar Menu Block'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: false
+  parent: 'main:'
+  suggestion: main
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

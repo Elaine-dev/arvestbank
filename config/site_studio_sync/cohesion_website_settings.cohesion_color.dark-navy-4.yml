@@ -1,0 +1,13 @@
+uuid: ab78ae9d-f528-4d82-852f-d018fd9aabca
+langcode: en
+status: true
+dependencies: {  }
+id: dark-navy-4
+label: 'Dark Navy 4'
+json_values: '{"link":true,"value":{"value":{"hex":"#002c5c","rgba":"rgba(0, 44, 92, 1)"}},"name":"Dark Navy 4","uid":"dark-navy-4","class":".coh-color-dark-navy-4","variable":"$coh-color-dark-navy-4","wysiwyg":true,"inuse":false}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+weight: 3

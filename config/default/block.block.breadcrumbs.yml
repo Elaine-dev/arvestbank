@@ -1,0 +1,25 @@
+uuid: 010857e8-e8f5-4ab8-8cc6-fb06783874ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - cohesion
+    - system
+  theme:
+    - arvestbank_theme
+id: breadcrumbs
+theme: arvestbank_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

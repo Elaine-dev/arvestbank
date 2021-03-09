@@ -1,0 +1,8 @@
+uuid: af0f7e2e-cd38-49ab-afab-30450db61577
+langcode: en
+status: true
+dependencies: {  }
+name: 'Education Article Category'
+vid: education_article_category
+description: ''
+weight: 0

@@ -1,0 +1,49 @@
+uuid: cf751eb5-b424-4a4d-b9bb-777a7b9cb70b
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.article_education_article.field_education_article_category
+    - field.field.node.article_education_article.field_layout_canvas
+    - field.field.node.article_education_article.field_sub_title
+    - node.type.article_education_article
+  module:
+    - entity_reference_revisions
+    - user
+id: node.article_education_article.full
+targetEntityType: node
+bundle: article_education_article
+mode: full
+content:
+  field_education_article_category:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_layout_canvas:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_sub_title:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

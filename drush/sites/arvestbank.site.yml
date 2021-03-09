@@ -1,0 +1,6 @@
+local:
+    root: /var/www/arvestbank/docroot
+    uri: 'local.arvestbank.com'
+    host: local.arvestbank.com
+    user: vagrant
+    ssh: { options: '-o StrictHostKeyChecking=no -o PasswordAuthentication=no -i $HOME/.vagrant.d/insecure_private_key' }

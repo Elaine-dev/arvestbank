@@ -1,0 +1,13 @@
+uuid: fe5722ec-106b-40db-b787-ebc5f4013d64
+langcode: en
+status: true
+dependencies: {  }
+id: danube-5
+label: 'Danube 5'
+json_values: '{"link":true,"value":{"value":{"hex":"#709ccc","rgba":"rgba(112, 156, 204, 1)"}},"name":"Danube 5","uid":"danube-5","class":".coh-color-danube-5","variable":"$coh-color-danube-5","wysiwyg":true,"inuse":false}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+weight: 4

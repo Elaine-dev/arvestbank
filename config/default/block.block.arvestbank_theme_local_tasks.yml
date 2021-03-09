@@ -1,0 +1,22 @@
+uuid: 5bf736e6-3b83-4a5a-9ec5-75ef663b6b20
+langcode: en
+status: true
+dependencies:
+  theme:
+    - arvestbank_theme
+_core:
+  default_config_hash: c-06bbElRY5sKmglk74ppgTW93Et4-EJFyNiUZMb8JY
+id: arvestbank_theme_local_tasks
+theme: arvestbank_theme
+region: dx8_hidden
+weight: 3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }
