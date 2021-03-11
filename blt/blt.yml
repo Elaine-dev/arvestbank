@@ -10,4 +10,3 @@ git:
   default_branch: master
   remotes:
     - 'arvestbank@svn-37631.prod.hosting.acquia.com:arvestbank.git'
-    - 'git@github.com:acquia-pso/arvestbank'
