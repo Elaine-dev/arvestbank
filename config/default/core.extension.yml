@@ -5,7 +5,6 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
-  captcha: 0
   chosen: 0
   chosen_field: 0
   chosen_lib: 0
@@ -44,7 +43,6 @@ module:
   file: 0
   filter: 0
   gtm: 0
-  honeypot: 0
   iframe: 0
   image: 0
   imce: 0
@@ -64,13 +62,17 @@ module:
   path: 0
   path_alias: 0
   pathauto_menu_link: 0
+  rabbit_hole: 0
   rdf: 0
-  recaptcha: 0
   redirect: 0
   redirect_404: 0
   redirect_domain: 0
   responsive_image: 0
   rest: 0
+  rh_media: 0
+  rh_node: 0
+  rh_taxonomy: 0
+  rh_user: 0
   scheduler: 0
   search: 0
   search404: 0
@@ -78,7 +80,10 @@ module:
   settings_tray: 0
   shortcut: 0
   simple_instagram_feed: 0
+  simple_sitemap: 0
+  simple_sitemap_engines: 0
   simplesamlphp_auth: 0
+  sitemap: 0
   system: 0
   taxonomy: 0
   telephone: 0
@@ -90,6 +95,7 @@ module:
   views_ui: 0
   webform: 0
   workflows: 0
+  yoast_seo: 0
   youtube: 0
   pathauto: 1
   externalauth: 10

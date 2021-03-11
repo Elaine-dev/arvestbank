@@ -1,0 +1,83 @@
+uuid: 55c58657-cfba-46f4-9c07-9e1409eb29f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article_education_article
+  module:
+    - content_moderation
+id: editorial
+label: Editorial
+type: content_moderation
+type_settings:
+  states:
+    archive:
+      published: false
+      default_revision: false
+      label: Archive
+      weight: 0
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: -3
+    in_review:
+      published: false
+      default_revision: false
+      label: 'In Review'
+      weight: 1
+    published:
+      label: Published
+      published: true
+      default_revision: true
+      weight: -1
+    unpublished:
+      published: false
+      default_revision: false
+      label: Unpublished
+      weight: -2
+  transitions:
+    archive:
+      label: Archive
+      from:
+        - archive
+        - draft
+        - in_review
+        - published
+        - unpublished
+      to: archive
+      weight: 3
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: 0
+      from:
+        - draft
+        - published
+    publish:
+      label: Publish
+      to: published
+      weight: 1
+      from:
+        - draft
+        - published
+    restore_from_archive:
+      label: 'Restore From Archive'
+      from:
+        - archive
+      to: draft
+      weight: 4
+    send_to_review:
+      label: 'Send to review'
+      from:
+        - archive
+        - draft
+        - in_review
+        - published
+        - unpublished
+      to: in_review
+      weight: 2
+  entity_types:
+    node:
+      - article_education_article
+  default_moderation_state: draft

@@ -5,5 +5,5 @@ dependencies: {  }
 id: enterprise_admin
 label: 'Enterprise Admin'
 weight: -4
-is_admin: trye
+is_admin: true
 permissions: {  }

@@ -2,3 +2,8 @@ global-styling:
   css:
     theme:
       css/main.css: {}
+
+adobe-fonts:
+  css:
+    theme:
+      'https://use.typekit.net/uhm3box.css': { type: external, minified: false }
