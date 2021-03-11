@@ -18,6 +18,11 @@ targetEntityType: node
 bundle: article_education_article
 mode: default
 content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_layout_canvas:
     type: cohesion_entity_reference_revisions_entity_view
     weight: 0
