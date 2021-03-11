@@ -137,7 +137,6 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require-dev": {
-        "acquia/blt-drupal-vm": "dev-master",
-        "phpunit/phpunit": "^4.8.35 || ^6.5 || ^7"
+        "acquia/blt-drupal-vm": "dev-master"
     }
 }
