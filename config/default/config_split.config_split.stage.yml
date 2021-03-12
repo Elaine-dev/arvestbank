@@ -6,7 +6,10 @@ id: stage
 label: Stage
 description: 'Configuration for the Cloud Platform staging environment.'
 folder: ../config/envs/stage
-module: {  }
+module:
+  acquia_connector: 0
+  shield: 0
+  syslog: 0
 theme: {  }
 blacklist: {  }
 graylist: {  }

@@ -6,7 +6,9 @@ id: local
 label: Local
 description: 'Local Configuration for development purposes outside of the Cloud Platform.'
 folder: ../config/envs/local
-module: {  }
+module:
+  dblog: 0
+  devel: 0
 theme: {  }
 blacklist: {  }
 graylist:

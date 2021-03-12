@@ -6,7 +6,10 @@ id: prod
 label: Prod
 description: 'Configuration of the Cloud Platform Production environment.'
 folder: ../config/envs/prod
-module: {  }
+module:
+  acquia_connector: 0
+  shield: 0
+  syslog: 0
 theme: {  }
 blacklist: {  }
 graylist: {  }
