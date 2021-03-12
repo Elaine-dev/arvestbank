@@ -1,7 +1,0 @@
-uuid: ccca0252-0f92-4d47-9789-2e51041b0d29
-langcode: en
-status: true
-dependencies: {  }
-id: button
-label: Button
-element: button

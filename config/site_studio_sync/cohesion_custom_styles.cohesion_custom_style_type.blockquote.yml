@@ -1,7 +1,0 @@
-uuid: 23577575-c565-4e00-90b7-f6025fcb8361
-langcode: en
-status: true
-dependencies: {  }
-id: blockquote
-label: 'Block quote'
-element: blockquote

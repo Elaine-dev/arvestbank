@@ -3,35 +3,40 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.article_education_article.body
     - field.field.node.article_education_article.field_education_article_category
-    - field.field.node.article_education_article.field_layout_canvas
     - field.field.node.article_education_article.field_meta_tags
-    - field.field.node.article_education_article.field_sub_title
     - field.field.node.article_education_article.field_yoast_seo
     - node.type.article_education_article
+    - workflows.workflow.editorial
   module:
     - chosen_field
-    - cohesion_elements
+    - content_moderation
     - metatag
     - path
     - scheduler
+    - text
     - yoast_seo
 id: node.article_education_article.default
 targetEntityType: node
 bundle: article_education_article
 mode: default
 content:
-  field_education_article_category:
+  body:
     weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_education_article_category:
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: chosen_select
-    region: content
-  field_layout_canvas:
-    type: cohesion_layout_builder_widget
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
     region: content
   field_meta_tags:
     weight: 9
@@ -39,14 +44,6 @@ content:
       sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
-    region: content
-  field_sub_title:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   field_yoast_seo:
     weight: 10
@@ -57,7 +54,7 @@ content:
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 100
+    weight: 12
     settings: {  }
     region: content
     third_party_settings: {  }
