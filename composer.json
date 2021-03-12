@@ -26,6 +26,7 @@
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-recommended": "^9",
         "drupal/critical_css": "^1.17",
+        "drupal/devel": "^4.1",
         "drupal/easy_breadcrumb": "^1.13",
         "drupal/external_link_popup": "^1.8",
         "drupal/fontyourface": "^3.6",

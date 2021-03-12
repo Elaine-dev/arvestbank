@@ -1,0 +1,44 @@
+uuid: 2ee9c89a-dcd8-4823-9671-814502279026
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.education_article_category.field_layout_canvas
+    - taxonomy.vocabulary.education_article_category
+  module:
+    - cohesion_elements
+    - path
+id: taxonomy_term.education_article_category.default
+targetEntityType: taxonomy_term
+bundle: education_article_category
+mode: default
+content:
+  field_layout_canvas:
+    type: cohesion_layout_builder_widget
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+hidden:
+  description: true

@@ -1,0 +1,25 @@
+uuid: d1d3fe18-b54d-4074-9b81-d25fbe670b4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.education_article_category.field_layout_canvas
+    - taxonomy.vocabulary.education_article_category
+  module:
+    - cohesion_elements
+id: taxonomy_term.education_article_category.default
+targetEntityType: taxonomy_term
+bundle: education_article_category
+mode: default
+content:
+  field_layout_canvas:
+    type: cohesion_entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  description: true
