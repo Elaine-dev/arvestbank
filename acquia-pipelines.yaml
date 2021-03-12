@@ -12,34 +12,34 @@ variables:
 events:
   build:
     steps:
-        - setup-env:
-            type: script
-            script:
-              - composer validate --no-check-all --ansi
-              - composer install --ansi
-              - source ${BLT_DIR}/scripts/pipelines/setup_env
-              # - nvm install v6.9.1 --latest-npm
-              # - npm install --global yarn
-        - validate:
-            type: script
-            script:
-              - source ${BLT_DIR}/scripts/pipelines/validate
-        # Uncomment these lines to test database updates using live content.
-        # You will need to set up SSH keys for your Pipelines container:
-        # @see https://docs.acquia.com/acquia-cloud/develop/pipelines/encrypt/
-        # - test-updates:
-        #     type: script
-        #     script:
-        #       - blt drupal:sync:default:site
-        - setup-app:
-            type: script
-            script:
-              - source ${BLT_DIR}/scripts/pipelines/setup_app
-        - tests:
-            type: script
-            script:
-              - source ${BLT_DIR}/scripts/pipelines/tests
-        - build-artifact:
-            type: script
-            script:
-              - source ${BLT_DIR}/scripts/pipelines/build_artifact
+      - setup-env:
+          type: script
+          script:
+            - composer validate --no-check-all --ansi
+            - composer install --ansi
+            - source ${BLT_DIR}/scripts/pipelines/setup_env
+            # - nvm install v6.9.1 --latest-npm
+            # - npm install --global yarn
+      - validate:
+          type: script
+          script:
+            - source ${BLT_DIR}/scripts/pipelines/validate
+      # Uncomment these lines to test database updates using live content.
+      # You will need to set up SSH keys for your Pipelines container:
+      # @see https://docs.acquia.com/acquia-cloud/develop/pipelines/encrypt/
+      # - test-updates:
+      #     type: script
+      #     script:
+      #       - blt drupal:sync:default:site
+      - setup-app:
+          type: script
+          script:
+            - blt setup --define drush.alias='${drush.aliases.ci}' --no-interaction --ansi --verbose
+      - tests:
+          type: script
+          script:
+            - source ${BLT_DIR}/scripts/pipelines/tests
+      - build-artifact:
+          type: script
+          script:
+            - source ${BLT_DIR}/scripts/pipelines/build_artifact

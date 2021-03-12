@@ -6,4 +6,7 @@ id: contributor
 label: Contributor
 weight: -7
 is_admin: null
-permissions: {  }
+permissions:
+  - 'administer taxonomy'
+  - 'create terms in education_article_category'
+  - 'edit terms in education_article_category'

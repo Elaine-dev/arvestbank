@@ -6,4 +6,8 @@ id: site_editor
 label: 'Site Editor'
 weight: -6
 is_admin: null
-permissions: {  }
+permissions:
+  - 'access taxonomy overview'
+  - 'administer taxonomy'
+  - 'create terms in education_article_category'
+  - 'edit terms in education_article_category'

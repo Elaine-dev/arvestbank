@@ -6,18 +6,18 @@ dependencies:
     - ctools
     - taxonomy
 id: term_name
-label: 'Term Name'
+label: 'Education Center Term Name'
 type: 'canonical_entities:taxonomy_term'
-pattern: '[term:name]'
+pattern: '/education-center/[term:name]'
 selection_criteria:
-  595f92a3-7d27-41e1-aec7-3a60a7d7421f:
+  42b41af4-297f-4bf3-8abe-b407acf20d42:
     id: 'entity_bundle:taxonomy_term'
     bundles:
       education_article_category: education_article_category
     negate: false
     context_mapping:
       taxonomy_term: taxonomy_term
-    uuid: 595f92a3-7d27-41e1-aec7-3a60a7d7421f
+    uuid: 42b41af4-297f-4bf3-8abe-b407acf20d42
 selection_logic: and
 weight: -5
 relationships: {  }

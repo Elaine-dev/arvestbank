@@ -5,8 +5,11 @@ site-studio:
   cohesion-import: true
   sync-import: true
   rebuild: true
-
 git:
   default_branch: master
   remotes:
     - 'arvestbank@svn-37631.prod.hosting.acquia.com:arvestbank.git'
+disable-targets:
+  tests:
+    security-composer: true
+simplesamlphp: true

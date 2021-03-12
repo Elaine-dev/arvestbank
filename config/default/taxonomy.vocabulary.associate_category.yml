@@ -1,0 +1,8 @@
+uuid: e3185c2e-891e-4cd7-a5af-d1f0b155bd43
+langcode: en
+status: true
+dependencies: {  }
+name: 'Associate Category'
+vid: associate_category
+description: ''
+weight: 0

@@ -6,4 +6,9 @@ id: domain_admin
 label: 'Domain Admin'
 weight: -5
 is_admin: null
-permissions: {  }
+permissions:
+  - 'access taxonomy overview'
+  - 'administer taxonomy'
+  - 'create terms in education_article_category'
+  - 'delete terms in education_article_category'
+  - 'edit terms in education_article_category'

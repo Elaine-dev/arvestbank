@@ -106,3 +106,6 @@ deployment_identifier
 /travis_wait*
 /files-private
 .phpcs-cache
+
+#composer v2 pipelines issues
+composer.phar
