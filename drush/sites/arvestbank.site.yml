@@ -4,3 +4,49 @@ local:
     host: local.arvestbank.com
     user: vagrant
     ssh: { options: '-o StrictHostKeyChecking=no -o PasswordAuthentication=no -i $HOME/.vagrant.d/insecure_private_key' }
+
+# Application 'arvestbank', environment 'dev'.
+dev:
+  root: /var/www/html/arvestbank.dev/docroot
+  ac-site: arvestbank
+  ac-env: dev
+  ac-realm: prod
+  uri: arvestbankdev.prod.acquia-sites.com
+  dev.livedev:
+    parent: '@arvestbank.dev'
+    root: /mnt/gfs/arvestbank.dev/livedev/docroot
+  host: arvestbankdev.ssh.prod.acquia-sites.com
+  user: arvestbank.dev
+  paths:
+    drush-script: drush9
+
+
+# Application 'arvestbank', environment 'prod'.
+prod:
+  root: /var/www/html/arvestbank.prod/docroot
+  ac-site: arvestbank
+  ac-env: prod
+  ac-realm: prod
+  uri: arvestbank.prod.acquia-sites.com
+  prod.livedev:
+    parent: '@arvestbank.prod'
+    root: /mnt/gfs/arvestbank.prod/livedev/docroot
+  host: arvestbank.ssh.prod.acquia-sites.com
+  user: arvestbank.prod
+  paths:
+    drush-script: drush9
+
+# Application 'arvestbank', environment 'test'.
+test:
+  root: /var/www/html/arvestbank.test/docroot
+  ac-site: arvestbank
+  ac-env: test
+  ac-realm: prod
+  uri: arvestbanktest.prod.acquia-sites.com
+  test.livedev:
+    parent: '@arvestbank.test'
+    root: /mnt/gfs/arvestbank.test/livedev/docroot
+  host: arvestbanktest.ssh.prod.acquia-sites.com
+  user: arvestbank.test
+  paths:
+    drush-script: drush9

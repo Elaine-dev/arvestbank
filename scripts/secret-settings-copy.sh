@@ -15,6 +15,6 @@ if [[ ! -e /var/www/arvestbank/tmp/secrets.settings.php ]]; then
     touch /var/www/arvestbank/tmp/secrets.settings.php
 fi
 
-drush rsync @arvestbank.dev:/home/arvestbank/dev/files/secrets.settings.php /var/www/arvestbank/tmp/secrets.settings.php -y
+drush rsync @arvestbank.dev:/mnt/files/arvestbank.dev/secrets.settings.php /var/www/arvestbank/tmp/secrets.settings.php -y
   echo "creating tmp secrets file."
 set +v
