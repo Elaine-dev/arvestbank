@@ -151,3 +151,7 @@ $settings['file_public_path'] = 'sites/' . EnvironmentDetector::getSiteName($sit
 $settings['trusted_host_patterns'] = [
   '^.+$',
 ];
+
+if (file_exists(DRUPAL_ROOT . "/../tmp/secrets.settings.php")) {
+  require DRUPAL_ROOT . "/../tmp/secrets.settings.php";
+}
