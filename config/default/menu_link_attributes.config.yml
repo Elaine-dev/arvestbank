@@ -1,0 +1,17 @@
+attributes:
+  data-icon:
+    label: Icon
+    description: 'Replace the text of the menu link with an icon.'
+    options:
+      social: Share
+      facebook: Facebook
+      twitter: Twitter
+      youtube: Youtube
+      instagram: Instagram
+  target:
+    label: ''
+    description: ''
+    options:
+      _blank: 'New window (_blank)'
+      _self: 'Same window (_self)'
+    default_value: ''
