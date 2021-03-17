@@ -62,16 +62,16 @@ Use BLT to setup the site with configuration.  If it is a multisite you can iden
    ```
 
 
-6. Create your local settings.php file 
-Rsync API key variables to your local.setting.php file. You can review the script here: scripts/secret-settings-copy.sh
+6. Create your local.settings.php file
+Rsync any site configuration left out of the github repo to your local.setting.php file. You can review the script here: scripts/secret-settings-copy.sh
    ```
    $ cd project_root
-   $ cp /docroot/sites/example.settings.local.php docroot/sites/settings.local.php 
-   $ ./secret-settings-copy.sh
+   $ cp docroot/sites/default/settings/default.local.settings.php docroot/sites/default/settings/local.settings.php
+   $ ./scripts/secret-settings-copy.sh
    ```
 
 7. Log into your site with drush.
-Access the site and do necessary work at #LOCAL_DEV_URL by running the following commands.
+Access the site and do necessary work at local.arvestbank.com by running the following commands.
     ```
     $ cd docroot
     $ drush uli
