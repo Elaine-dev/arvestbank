@@ -6,7 +6,7 @@ site-studio:
   sync-import: true
   rebuild: true
 git:
-  default_branch: master
+  default_branch: develop
   remotes:
     - 'arvestbank@svn-37631.prod.hosting.acquia.com:arvestbank.git'
 disable-targets:
