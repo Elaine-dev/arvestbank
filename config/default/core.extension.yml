@@ -1,4 +1,5 @@
 module:
+  acquia_connector: 0
   address: 0
   admin_toolbar: 0
   admin_toolbar_tools: 0
@@ -81,6 +82,7 @@ module:
   search404: 0
   serialization: 0
   settings_tray: 0
+  shield: 0
   shortcut: 0
   simple_sitemap: 0
   simple_sitemap_engines: 0

@@ -7,13 +7,17 @@ label: Local
 description: 'Local Configuration for development purposes outside of the Cloud Platform.'
 folder: ../config/envs/local
 module:
-  shield: 0
+  dblog: 0
+  devel: 0
 theme: {  }
 blacklist:
-  - shield.settings
+  - dblog.settings
+  - devel.settings
+  - devel.toolbar.settings
 graylist:
-  - dblog
-  - devel
+  - shield.settings
+  - system.performance
+  - acquia_connector.settings
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0

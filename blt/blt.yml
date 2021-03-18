@@ -13,3 +13,9 @@ disable-targets:
   tests:
     security-composer: true
 simplesamlphp: true
+drush:
+  aliases:
+    remote: 'arvestbank.prod'
+    local: self
+    ci: self
+  default_alias: '${drush.aliases.local}'

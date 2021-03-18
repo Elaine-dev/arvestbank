@@ -12,7 +12,8 @@ module:
   syslog: 0
 theme: {  }
 blacklist: {  }
-graylist: {  }
+graylist:
+  - shield.settings
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0
