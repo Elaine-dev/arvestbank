@@ -19,3 +19,19 @@ drush:
     local: self
     ci: self
   default_alias: '${drush.aliases.local}'
+modules:
+  local:
+    enable: {  }
+    uninstall: [acquia_connector, shield]
+  ci:
+    enable: {  }
+    uninstall: [acquia_connector]
+  dev:
+    enable: {  }
+    uninstall: {  }
+  test:
+    enable: {  }
+    uninstall: [dblog, devel, views_ui]
+  prod:
+    enable: {  }
+    uninstall: [dblog, devel, views_ui]
