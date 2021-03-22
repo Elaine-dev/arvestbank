@@ -1,6 +1,13 @@
 <?php
 
 /**
+ * @file
+ * Install actions related to branch locations.
+ */
+
+use Drupal\taxonomy\Entity\Term;
+
+/**
  * Install hook to create default branch locations.
  */
 function arvestbank_branch_locations_install() {
@@ -26,7 +33,7 @@ function arvestbank_branch_locations_install() {
  */
 function _get_default_branch_locations() {
 
-  $default_branch_locations = [
+  return [
     'AR - Bella Vista',
     'AR - Benton',
     'AR - Bentonville',
