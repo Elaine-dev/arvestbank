@@ -1,14 +1,12 @@
-uuid: 91910292-29e4-468b-b992-bd5659add2a3
+uuid: 722d2d7a-3c93-4519-a600-3921133a8036
 langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.cohesion
+    - filter.format.full_html
   module:
     - ckeditor
-_core:
-  default_config_hash: j5UoqyZc3VqPSDJ1-FrOoQa7nkOM9F3bV-4CMQY-l3U
-format: cohesion
+format: full_html
 editor: ckeditor
 settings:
   toolbar:
@@ -20,14 +18,10 @@ settings:
             - Bold
             - Italic
             - Underline
+            - Strike
+            - Superscript
+            - Subscript
             - RemoveFormat
-        -
-          name: Layout
-          items:
-            - JustifyLeft
-            - JustifyCenter
-            - JustifyRight
-            - JustifyBlock
         -
           name: Links
           items:
@@ -41,30 +35,25 @@ settings:
         -
           name: Media
           items:
-            - ImceImage
             - Blockquote
+            - DrupalImage
         -
           name: Tools
           items:
             - Source
-            - Maximize
         -
-          name: Styles
+          name: Insert
           items:
-            - Format
-            - Styles
-            - DX8Styles
-            - DX8InlineStyles
+            - node
+            - Table
+            - SpecialChar
   plugins:
     stylescombo:
       styles: ''
-    drupallink:
-      linkit_enabled: false
-      linkit_profile: ''
     language:
       language_list: un
 image_upload:
-  status: true
+  status: false
   scheme: public
   directory: inline-images
   max_size: ''

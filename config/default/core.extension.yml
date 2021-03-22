@@ -34,7 +34,9 @@ module:
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0
+  embed: 0
   entity_browser: 0
+  entity_embed: 0
   entity_reference_revisions: 0
   external_link_popup: 0
   fallback_formatter: 0
@@ -50,6 +52,7 @@ module:
   inline_entity_form: 0
   jsonapi: 0
   link: 0
+  linkit: 0
   media: 0
   media_acquiadam: 0
   media_library: 0
