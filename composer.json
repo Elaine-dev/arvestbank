@@ -30,6 +30,7 @@
         "drupal/devel": "^4.1",
         "drupal/easy_breadcrumb": "^1.13",
         "drupal/entity_browser": "^2.5",
+        "drupal/entity_embed": "^1.1",
         "drupal/external_link_popup": "^1.8",
         "drupal/field_group": "^3.1",
         "drupal/gtm": "^1.6",
