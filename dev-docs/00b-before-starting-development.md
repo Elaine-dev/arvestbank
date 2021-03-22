@@ -29,11 +29,11 @@ git push origin
 ### Create a feature branch from develop 
 ```
 $ git checkout develop 
-$ git checkout -b [JIRA-Ticket-number]:-short-description 
+$ git checkout -b [JIRA-Ticket-number]-short-description 
 ````
 for example 
 ```
-$ git checkout -b ab-34:-basic-page-content-type
+$ git checkout -b ab-34-basic-page-content-type
 ```
 
 ### Run blt setup (wait for site studio config to load, this can take a while)
@@ -54,5 +54,5 @@ and ends with a period or your commit will fail.
 ```
 $ git add . 
 $ git commit -m"[JIRA-Ticket-number]: Decription of commits."
-$ git push origin [JIRA-Ticket-number]:-short-description 
+$ git push origin [JIRA-Ticket-number]-short-description 
 ```
