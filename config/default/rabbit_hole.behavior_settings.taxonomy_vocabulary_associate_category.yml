@@ -9,6 +9,6 @@ entity_type_id: taxonomy_vocabulary
 entity_id: associate_category
 action: page_redirect
 allow_override: 0
-redirect: /documents-and-resources
+redirect: /
 redirect_code: 301
 redirect_fallback_action: access_denied
