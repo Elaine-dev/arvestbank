@@ -1,0 +1,36 @@
+uuid: 48f31ffe-eb70-4e6f-be4e-54031b9e9732
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.acquia_dam_video.field_acquiadam_asset_descrip
+    - field.field.media.acquia_dam_video.field_acquiadam_asset_id
+    - field.field.media.acquia_dam_video.field_acquiadam_asset_video
+    - image.style.thumbnail
+    - media.type.acquia_dam_video
+  module:
+    - image
+_core:
+  default_config_hash: 2me-OW9dcblheUWIauZvb3-9brBbYee41ZTp6XyqUrA
+id: media.acquia_dam_video.media_library
+targetEntityType: media
+bundle: acquia_dam_video
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_acquiadam_asset_descrip: true
+  field_acquiadam_asset_id: true
+  field_acquiadam_asset_video: true
+  name: true
+  uid: true

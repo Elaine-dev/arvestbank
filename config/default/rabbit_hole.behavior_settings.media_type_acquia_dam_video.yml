@@ -1,0 +1,14 @@
+uuid: c5b85b1c-00c9-4a54-a784-73e5628806ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.acquia_dam_video
+id: media_type_acquia_dam_video
+entity_type_id: media_type
+entity_id: acquia_dam_video
+action: page_redirect
+allow_override: 0
+redirect: /<front>
+redirect_code: 301
+redirect_fallback_action: access_denied

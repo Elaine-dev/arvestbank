@@ -1,0 +1,21 @@
+uuid: 4d9e7c46-acb5-407e-b710-bfc2cdae439a
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_acquiadam
+_core:
+  default_config_hash: AK_rEWpB0RohIxcT9KaIPYosPv_LbHtPqMD0wdFDQu4
+id: acquia_dam_document
+label: 'Acquia DAM Document'
+description: 'A document hosted on Acquia DAM.'
+source: acquiadam_asset
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_acquiadam_asset_id
+field_map:
+  description: field_acquiadam_asset_descrip
+  file: field_acquiadam_asset_doc
+  filename: name
+  status: status

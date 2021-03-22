@@ -1,0 +1,21 @@
+uuid: 9766fa98-eacf-41dc-b539-be207b28c254
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_acquiadam_asset_descrip
+    - media.type.acquia_dam_image
+_core:
+  default_config_hash: msEsN8KxI-5SmJw1W-CSVt6OtF0t8dhUZxDcZ6rfIu8
+id: media.acquia_dam_image.field_acquiadam_asset_descrip
+field_name: field_acquiadam_asset_descrip
+entity_type: media
+bundle: acquia_dam_image
+label: Description
+description: 'The asset description from Acquia DAM.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,4 +1,4 @@
-uuid: ff1a0745-456d-4e2c-a283-24964b168b4f
+uuid: 63740a09-84b7-4a3b-be26-3d73e0383c5e
 langcode: en
 status: true
 dependencies:
@@ -6,13 +6,16 @@ dependencies:
     - file
     - image
     - media
-id: media.field_media_image
-field_name: field_media_image
+_core:
+  default_config_hash: H51vCjG5geCP0PsItaXL1muag8zDEjykescRLQFSdxU
+id: media.field_acquiadam_asset_image
+field_name: field_acquiadam_asset_image
 entity_type: media
 type: image
 settings:
+  uri_scheme: public
   default_image:
-    uuid: null
+    uuid: ''
     alt: ''
     title: ''
     width: null
@@ -20,7 +23,6 @@ settings:
   target_type: file
   display_field: false
   display_default: false
-  uri_scheme: public
 module: image
 locked: false
 cardinality: 1
