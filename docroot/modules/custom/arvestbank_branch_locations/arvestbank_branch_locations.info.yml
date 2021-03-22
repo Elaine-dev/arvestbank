@@ -2,3 +2,5 @@ name: Arvest Bank Branch Locations
 type: module
 description: 'Adds default branch locations on install.'
 core_version_requirement: ^9
+dependencies:
+  - drupal:taxonomy
