@@ -39,6 +39,7 @@
         "drupal/iframe": "^2.8",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/link_attributes": "^1.11",
+        "drupal/linkit": "5.0.0-beta12",
         "drupal/media_acquiadam": "^1.47",
         "drupal/menu_block": "^1.6",
         "drupal/menu_link_attributes": "^1.2",

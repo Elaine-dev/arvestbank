@@ -30,6 +30,7 @@ permissions:
   - 'revert article_education_article revisions'
   - 'update any media'
   - 'update media'
+  - 'use text format cohesion'
   - 'use text format full_html'
   - 'view all media revisions'
   - 'view article_education_article revisions'

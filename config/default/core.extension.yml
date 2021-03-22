@@ -55,6 +55,7 @@ module:
   inline_entity_form: 0
   jsonapi: 0
   link: 0
+  linkit: 0
   media: 0
   media_acquiadam: 0
   media_library: 0
