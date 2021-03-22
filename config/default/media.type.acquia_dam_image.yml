@@ -1,0 +1,21 @@
+uuid: 0a30640b-df41-4320-9f78-bde22d75771a
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_acquiadam
+_core:
+  default_config_hash: kfkOH_3L57Jz3v9-ssNb39vafmodxjen7LDUjl17lUI
+id: acquia_dam_image
+label: 'Acquia DAM Image'
+description: 'An image asset hosted on Acquia DAM.'
+source: acquiadam_asset
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_acquiadam_asset_id
+field_map:
+  description: field_acquiadam_asset_descrip
+  file: field_acquiadam_asset_image
+  filename: name
+  status: status

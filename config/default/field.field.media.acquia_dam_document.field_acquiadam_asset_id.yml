@@ -1,0 +1,25 @@
+uuid: b10d7ea4-ea27-42bb-a9ba-31585bdbfc50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_acquiadam_asset_id
+    - media.type.acquia_dam_document
+_core:
+  default_config_hash: skjk2h_Z34W3j7HSzNBoosFa2Ek1MNv-V-S5BfaTpEU
+id: media.acquia_dam_document.field_acquiadam_asset_id
+field_name: field_acquiadam_asset_id
+entity_type: media
+bundle: acquia_dam_document
+label: 'Asset ID'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

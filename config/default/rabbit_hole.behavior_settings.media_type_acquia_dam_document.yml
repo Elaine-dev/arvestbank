@@ -1,0 +1,14 @@
+uuid: 5e09ce3a-9281-423d-a6ac-d310578e6ac3
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.acquia_dam_document
+id: media_type_acquia_dam_document
+entity_type_id: media_type
+entity_id: acquia_dam_document
+action: display_page
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

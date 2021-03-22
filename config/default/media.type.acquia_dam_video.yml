@@ -1,0 +1,21 @@
+uuid: 6b4f4508-f60e-4482-aa27-54b7a9b7bbe9
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_acquiadam
+_core:
+  default_config_hash: tpkK-HD2zDPkGibuZ7MAuSOTGc09d9hCiD8uCY3nYVc
+id: acquia_dam_video
+label: 'Acquia DAM Video'
+description: 'A video asset hosted on Acquia DAM.'
+source: acquiadam_asset
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_acquiadam_asset_id
+field_map:
+  description: field_acquiadam_asset_descrip
+  file: field_acquiadam_asset_video
+  filename: name
+  status: status

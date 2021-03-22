@@ -1,0 +1,25 @@
+uuid: 471ec81e-c277-409b-90a0-fe503185f64a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_acquiadam_asset_id
+    - media.type.acquia_dam_video
+_core:
+  default_config_hash: DGJgq6j5jg2bUe9pVdy6-MpTyYyGNq25PqOnI_38JC0
+id: media.acquia_dam_video.field_acquiadam_asset_id
+field_name: field_acquiadam_asset_id
+entity_type: media
+bundle: acquia_dam_video
+label: 'Asset ID'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

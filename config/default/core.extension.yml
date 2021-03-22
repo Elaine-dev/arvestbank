@@ -1,5 +1,4 @@
 module:
-  acquia_connector: 0
   address: 0
   admin_toolbar: 0
   admin_toolbar_tools: 0
@@ -32,11 +31,10 @@ module:
   ctools_entity_mask: 0
   datetime: 0
   datetime_range: 0
-  dblog: 0
-  devel: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0
+  entity_browser: 0
   entity_reference_revisions: 0
   external_link_popup: 0
   fallback_formatter: 0
@@ -82,7 +80,6 @@ module:
   search404: 0
   serialization: 0
   settings_tray: 0
-  shield: 0
   shortcut: 0
   simple_sitemap: 0
   simple_sitemap_engines: 0

@@ -1,0 +1,21 @@
+uuid: 5392790f-32f2-4b50-a50c-054fa8cd4e93
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: SKZisjUksMUw_KeVYVY2NXRRWLJ3fVsnmesEBA0Q08s
+id: media.field_acquiadam_asset_descrip
+field_name: field_acquiadam_asset_descrip
+entity_type: media
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
