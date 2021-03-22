@@ -1,0 +1,8 @@
+uuid: 816dc963-ba2b-49c5-86be-81f2328a24c8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Card Category Keywords'
+vid: card_category_keywords
+description: 'Taxonomy category to classify cards of the card media entity.'
+weight: 0

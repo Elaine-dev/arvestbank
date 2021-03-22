@@ -1,0 +1,14 @@
+uuid: 4768713e-85d3-4c3e-8cc6-e2bac57243e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.card_category_keywords
+id: taxonomy_vocabulary_card_category_keywords
+entity_type_id: taxonomy_vocabulary
+entity_id: card_category_keywords
+action: page_redirect
+allow_override: 0
+redirect: /
+redirect_code: 301
+redirect_fallback_action: access_denied

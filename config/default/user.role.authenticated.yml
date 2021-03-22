@@ -10,4 +10,6 @@ weight: -8
 is_admin: false
 permissions:
   - 'access content'
+  - 'create terms in card_category_keywords'
+  - 'edit terms in card_category_keywords'
   - 'view media'
