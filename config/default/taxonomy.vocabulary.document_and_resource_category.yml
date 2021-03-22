@@ -1,0 +1,8 @@
+uuid: 80d3dd65-f442-4fbb-a12d-0192974ff99c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Document and Resource Category'
+vid: document_and_resource_category
+description: 'Taxonomy category to classify nodes of the documents entity.'
+weight: 0
