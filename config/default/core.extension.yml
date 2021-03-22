@@ -34,12 +34,9 @@ module:
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0
-<<<<<<< HEAD
-  entity_browser: 0
-=======
   embed: 0
+  entity_browser: 0
   entity_embed: 0
->>>>>>> AB-65: Add Full HTML text format.
   entity_reference_revisions: 0
   external_link_popup: 0
   fallback_formatter: 0
