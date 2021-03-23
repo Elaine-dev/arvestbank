@@ -3,6 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - media.type.acquia_dam_document
+    - media.type.acquia_dam_image
+    - media.type.acquia_dam_video
+    - media.type.video
     - node.type.article_education_article
   module:
     - content_moderation
@@ -78,6 +82,11 @@ type_settings:
       to: in_review
       weight: 2
   entity_types:
+    media:
+      - acquia_dam_document
+      - acquia_dam_image
+      - acquia_dam_video
+      - video
     node:
       - article_education_article
   default_moderation_state: draft

@@ -7,8 +7,8 @@ dependencies:
 _core:
   default_config_hash: AK_rEWpB0RohIxcT9KaIPYosPv_LbHtPqMD0wdFDQu4
 id: acquia_dam_document
-label: 'Acquia DAM Document'
-description: 'A document hosted on Acquia DAM.'
+label: 'Document or Resource'
+description: 'A document or Resource hosted on Acquia DAM.'
 source: acquiadam_asset
 queue_thumbnail_downloads: false
 new_revision: false
