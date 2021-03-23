@@ -1,6 +1,6 @@
 username: arvestadmin
 password: 'Arv3st42*'
-client_id: '445e7798666d5ca4f0ea2906549edb3f0eca6ea1  '
+client_id: 445e7798666d5ca4f0ea2906549edb3f0eca6ea1
 secret: 22d00af856002a9090e1675ce18833a49fb85950
 sync_interval: -1
 size_limit: -1
