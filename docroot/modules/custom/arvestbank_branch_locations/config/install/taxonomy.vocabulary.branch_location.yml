@@ -1,0 +1,8 @@
+uuid: 08810f4b-1192-4378-8fa7-ad0f46602ff8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Branch Location'
+vid: branch_location
+description: 'Taxonomy category to list all branches.'
+weight: 0

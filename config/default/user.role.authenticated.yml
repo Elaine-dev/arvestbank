@@ -12,4 +12,5 @@ permissions:
   - 'access content'
   - 'create terms in card_category_keywords'
   - 'edit terms in card_category_keywords'
+  - 'use text format cohesion'
   - 'view media'
