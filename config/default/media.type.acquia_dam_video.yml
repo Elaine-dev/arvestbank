@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: tpkK-HD2zDPkGibuZ7MAuSOTGc09d9hCiD8uCY3nYVc
 id: acquia_dam_video
-label: 'Acquia DAM Video'
+label: 'Video: DAM'
 description: 'A video asset hosted on Acquia DAM.'
 source: acquiadam_asset
 queue_thumbnail_downloads: false

@@ -14,3 +14,4 @@ permissions:
   - 'edit terms in card_category_keywords'
   - 'use text format cohesion'
   - 'view media'
+  - 'view own unpublished media'

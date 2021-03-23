@@ -8,7 +8,7 @@ id: media_type_acquia_dam_image
 entity_type_id: media_type
 entity_id: acquia_dam_image
 action: page_redirect
-allow_override: 1
+allow_override: 0
 redirect: /<front>
 redirect_code: 301
 redirect_fallback_action: access_denied
