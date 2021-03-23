@@ -25,7 +25,7 @@ modules:
     uninstall: [acquia_connector, shield]
   ci:
     enable: {  }
-    uninstall: [acquia_connector]
+    uninstall: [acquia_connector, shield]
   dev:
     enable: [shield]
     uninstall: {  }
