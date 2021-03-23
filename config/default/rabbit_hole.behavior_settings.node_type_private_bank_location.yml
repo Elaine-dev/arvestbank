@@ -1,0 +1,14 @@
+uuid: f9415ffc-7e53-4c5d-bbf3-14e2bd502655
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.private_bank_location
+id: node_type_private_bank_location
+entity_type_id: node_type
+entity_id: private_bank_location
+action: page_redirect
+allow_override: 0
+redirect: /personal/invest/private-banking
+redirect_code: 301
+redirect_fallback_action: access_denied
