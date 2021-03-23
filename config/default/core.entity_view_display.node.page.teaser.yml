@@ -1,0 +1,46 @@
+uuid: 250ebd82-f7df-4273-9c99-4bce8cb63e22
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.page.body
+    - field.field.node.page.field_callout_layout_optio
+    - field.field.node.page.field_callout_title
+    - field.field.node.page.field_cta_text
+    - field.field.node.page.field_featured_image
+    - field.field.node.page.field_meta_tags
+    - field.field.node.page.field_page_type
+    - field.field.node.page.field_print_button_text
+    - field.field.node.page.field_schedule_appointment_link
+    - node.type.page
+  module:
+    - text
+    - user
+id: node.page.teaser
+targetEntityType: node
+bundle: page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_callout_layout_optio: true
+  field_callout_title: true
+  field_cta_text: true
+  field_featured_image: true
+  field_meta_tags: true
+  field_page_type: true
+  field_print_button_text: true
+  field_schedule_appointment_link: true
