@@ -2,3 +2,5 @@ name: Arvest Bank Associate Category
 type: module
 description: 'Adds default associate categories on install.'
 core_version_requirement: ^9
+dependencies:
+  - drupal:taxonomy
