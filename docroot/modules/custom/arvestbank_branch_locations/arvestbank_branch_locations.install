@@ -1,0 +1,149 @@
+<?php
+
+/**
+ * @file
+ * Install actions related to branch locations.
+ */
+
+use Drupal\taxonomy\Entity\Term;
+
+/**
+ * Install hook to create default branch locations.
+ */
+function arvestbank_branch_locations_install() {
+
+  // Get default branch locations to create.
+  $default_branch_locations = _get_default_branch_locations();
+
+  // Loop over branch locations to create.
+  foreach ($default_branch_locations as $default_branch_location) {
+
+    // Create term.
+    $term = Term::create([
+      'name' => $default_branch_location,
+      'vid' => 'branch_location',
+    ])->save();
+
+  }
+
+}
+
+/**
+ * Returns the default branch locations.
+ */
+function _get_default_branch_locations() {
+
+  return [
+    'AR - Bella Vista',
+    'AR - Benton',
+    'AR - Bentonville',
+    'AR - Berryville',
+    'AR - Bryant',
+    'AR - Centerton',
+    'AR - Clarksville',
+    'AR - Conway',
+    'AR - De Queen',
+    'AR - Eureka Springs',
+    'AR - Farmington',
+    'AR - Fayetteville',
+    'AR - Flippin',
+    'AR - Fort Smith',
+    'AR - Gentry',
+    'AR - Greenwood',
+    'AR - Harrison',
+    'AR - Hot Springs',
+    'AR - Jonesboro',
+    'AR - Lincoln',
+    'AR - Little Rock',
+    'AR - Lowell',
+    'AR - Mena',
+    'AR - Mountain Home',
+    'AR - North Little Rock',
+    'AR - Paris',
+    'AR - Pea Ridge',
+    'AR - Prairie Grove',
+    'AR - Rogers',
+    'AR - Russellville',
+    'AR - Sherwood',
+    'AR - Siloam Springs',
+    'AR - Springdale',
+    'AR - Van Buren',
+    'AR - Waldron',
+    'AR - West Fork',
+    'AR - Yellville',
+    'KS - Gardner',
+    'KS - Leawood',
+    'KS - Lenexa',
+    'KS - Mission',
+    'KS - Olathe',
+    'KS - Ottawa',
+    'KS - Overland Park',
+    'KS - Pittsburg',
+    'MO - Anderson',
+    'MO - Aurora',
+    'MO - Branson',
+    'MO - Carthage',
+    'MO - Cassville',
+    'MO - Gladstone',
+    'MO - Independence',
+    'MO - Joplin',
+    'MO - Kansas City',
+    'MO - Lamar',
+    'MO - Lebanon',
+    'MO - Lee\'s Summit',
+    'MO - Lockwood',
+    'MO - Monett',
+    'MO - Mountain Grove',
+    'MO - Neosho',
+    'MO - Nevada',
+    'MO - Nixa',
+    'MO - Noel',
+    'MO - Shell Knob',
+    'MO - Springfield',
+    'MO - West Plains',
+    'OK - Bartlesville',
+    'OK - Bixby',
+    'OK - Broken Arrow',
+    'OK - Broken Bow',
+    'OK - Catoosa',
+    'OK - Choctaw',
+    'OK - Claremore',
+    'OK - Collinsville',
+    'OK - Coweta',
+    'OK - Del City',
+    'OK - Duncan',
+    'OK - Edmond',
+    'OK - Eufaula',
+    'OK - Grove',
+    'OK - Idabel',
+    'OK - Jenks',
+    'OK - Kansas',
+    'OK - Lawton',
+    'OK - McAlester',
+    'OK - Miami',
+    'OK - Midwest City',
+    'OK - Moore',
+    'OK - Muskogee',
+    'OK - Norman',
+    'OK - Nowata',
+    'OK - Oklahoma City',
+    'OK - Okmulgee',
+    'OK - Oologah',
+    'OK - Owasso',
+    'OK - Pryor',
+    'OK - Sapulpa',
+    'OK - Shawnee',
+    'OK - Skiatook',
+    'OK - Sperry',
+    'OK - Stillwater',
+    'OK - Stilwell',
+    'OK - Tahlequah',
+    'OK - Tulsa',
+    'OK - Verdigris',
+    'OK - Vinita',
+    'OK - Wagoner',
+    'OK - Westville',
+    'OK - Yukon',
+  ];
+
+}
