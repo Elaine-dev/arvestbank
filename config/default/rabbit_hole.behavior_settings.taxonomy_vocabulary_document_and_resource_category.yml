@@ -1,0 +1,14 @@
+uuid: 3e8b33f7-5966-4392-abee-d7250bdfbc6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.document_and_resource_category
+id: taxonomy_vocabulary_document_and_resource_category
+entity_type_id: taxonomy_vocabulary
+entity_id: document_and_resource_category
+action: page_redirect
+allow_override: 0
+redirect: /
+redirect_code: 301
+redirect_fallback_action: access_denied
