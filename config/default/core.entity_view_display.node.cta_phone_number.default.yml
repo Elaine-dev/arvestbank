@@ -1,0 +1,19 @@
+uuid: 147abadd-51c4-4391-8657-34ddcf95207e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.cta_phone_number
+  module:
+    - user
+id: node.cta_phone_number.default
+targetEntityType: node
+bundle: cta_phone_number
+mode: default
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
