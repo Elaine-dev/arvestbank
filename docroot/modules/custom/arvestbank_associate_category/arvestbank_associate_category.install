@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * @file
+ * Install actions related to associate categories.
+ */
+
+use Drupal\taxonomy\Entity\Term;
+
+/**
+ * Install hook to create default branch locations.
+ */
+function arvestbank_associate_category_install() {
+
+  // Get default branch locations to create.
+  $default_associate_categories = _get_associate_categories();
+
+  // Loop over branch locations to create.
+  foreach ($default_associate_categories as $default_associate_category) {
+
+    // Create term.
+    Term::create([
+      'name' => $default_associate_category,
+      'vid' => 'associate_category',
+    ])->save();
+
+  }
+
+}
+
+/**
+ * Returns the default branch locations.
+ */
+function _get_associate_categories() {
+
+  return [
+    'Lenders',
+    'Advisors',
+    'Trust Officers',
+    'Private Bankers',
+    'Estate Planning',
+  ];
+
+}
