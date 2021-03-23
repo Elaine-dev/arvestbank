@@ -1,0 +1,8 @@
+uuid: e220361e-92f8-4867-b741-fe02a9bb6fac
+langcode: en
+status: true
+dependencies: {  }
+name: 'Debit Card Category'
+vid: debit_card_category
+description: ''
+weight: 0
