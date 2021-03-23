@@ -4,6 +4,7 @@ module:
   admin_toolbar_tools: 0
   arvestbank_associate_category: 0
   arvestbank_branch_locations: 0
+  arvestbank_menus: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -54,6 +55,7 @@ module:
   inline_entity_form: 0
   jsonapi: 0
   link: 0
+  link_attributes: 0
   linkit: 0
   media: 0
   media_acquiadam: 0
@@ -103,6 +105,7 @@ module:
   workflows: 0
   yoast_seo: 0
   youtube: 0
+  menu_admin_per_menu: 1
   pathauto: 1
   externalauth: 10
   views: 10
