@@ -1,0 +1,113 @@
+uuid: 3ee3350c-9dc5-4020-96e4-7604daf9a742
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.credit_or_debit_card.field_acquiadam_asset_descrip
+    - field.field.media.credit_or_debit_card.field_acquiadam_asset_id
+    - field.field.media.credit_or_debit_card.field_credit_or_debit_card
+    - field.field.media.credit_or_debit_card.field_debit_card_category
+    - field.field.media.credit_or_debit_card.field_debit_card_keywords
+    - field.field.media.credit_or_debit_card.field_description
+    - media.type.credit_or_debit_card
+  module:
+    - content_moderation
+    - path
+id: media.credit_or_debit_card.default
+targetEntityType: media
+bundle: credit_or_debit_card
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_acquiadam_asset_descrip:
+    weight: 102
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_acquiadam_asset_id:
+    weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_credit_or_debit_card:
+    weight: 104
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_debit_card_category:
+    weight: 103
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_debit_card_keywords:
+    weight: 105
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_description:
+    weight: 101
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden: {  }

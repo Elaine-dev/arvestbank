@@ -1,0 +1,38 @@
+uuid: 88db8e9f-6cc4-4ed1-ba9e-90d4ae4d392d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.credit_or_debit_card.field_acquiadam_asset_descrip
+    - field.field.media.credit_or_debit_card.field_acquiadam_asset_id
+    - field.field.media.credit_or_debit_card.field_credit_or_debit_card
+    - field.field.media.credit_or_debit_card.field_debit_card_category
+    - field.field.media.credit_or_debit_card.field_debit_card_keywords
+    - field.field.media.credit_or_debit_card.field_description
+    - media.type.credit_or_debit_card
+id: media.credit_or_debit_card.media_library
+targetEntityType: media
+bundle: credit_or_debit_card
+mode: media_library
+content:
+  name:
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_acquiadam_asset_descrip: true
+  field_acquiadam_asset_id: true
+  field_credit_or_debit_card: true
+  field_debit_card_category: true
+  field_debit_card_keywords: true
+  field_description: true
+  moderation_state: true
+  path: true
+  status: true
+  uid: true
