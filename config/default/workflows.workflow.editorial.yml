@@ -7,6 +7,7 @@ dependencies:
     - media.type.acquia_dam_image
     - media.type.acquia_dam_video
     - media.type.video
+    - node.type.ad
     - node.type.article_education_article
   module:
     - content_moderation
@@ -88,5 +89,6 @@ type_settings:
       - acquia_dam_video
       - video
     node:
+      - ad
       - article_education_article
   default_moderation_state: draft
