@@ -1,17 +1,16 @@
-uuid: 962eaae6-2ce4-4e30-9e32-9c0340277960
+uuid: 3e13ebdc-f004-41b6-9f5a-667ece417eaf
 langcode: en
 status: true
 dependencies:
   module:
-    - media
+    - link
     - node
-id: node.field_image
-field_name: field_image
+id: node.field_cta
+field_name: field_cta
 entity_type: node
-type: entity_reference
-settings:
-  target_type: media
-module: core
+type: link
+settings: {  }
+module: link
 locked: false
 cardinality: 1
 translatable: true
