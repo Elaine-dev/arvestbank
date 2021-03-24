@@ -1,0 +1,22 @@
+uuid: 6812ea37-e42b-46c7-996c-52523001b04c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: calculators
+label: Calculators
+type: 'canonical_entities:node'
+pattern: 'calculators/[node:title]'
+selection_criteria:
+  cacf18da-0390-44ba-bb9c-0db505ccc0c2:
+    id: node_type
+    bundles:
+      calculators: calculators
+    negate: false
+    context_mapping:
+      node: node
+    uuid: cacf18da-0390-44ba-bb9c-0db505ccc0c2
+selection_logic: and
+weight: -5
+relationships: {  }

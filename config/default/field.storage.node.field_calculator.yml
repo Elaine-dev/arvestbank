@@ -1,0 +1,21 @@
+uuid: cec4c841-5d23-475a-9e2e-077104c6b7fe
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_calculator
+field_name: field_calculator
+entity_type: node
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
