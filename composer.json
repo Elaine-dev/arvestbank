@@ -149,7 +149,8 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require-dev": {
-        "acquia/blt-drupal-vm": "dev-master"
+        "acquia/blt-drupal-vm": "dev-master",
+        "drupal/console": "~1.0"
     },
     "scripts": {
         "post-drupal-scaffold-cmd": [
