@@ -1,0 +1,38 @@
+uuid: 0b12199a-7692-47d5-8c1e-7e76a53d494c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.acquia_dam_document.field_acquiadam_asset_descrip
+    - field.field.media.acquia_dam_document.field_acquiadam_asset_doc
+    - field.field.media.acquia_dam_document.field_acquiadam_asset_id
+    - media.type.acquia_dam_document
+  module:
+    - path
+_core:
+  default_config_hash: PML3haUd0QzO47lE_0So_j8IwjVbSih45WsG5DVezYg
+id: media.acquia_dam_document.default
+targetEntityType: media
+bundle: acquia_dam_document
+mode: default
+content:
+  field_acquiadam_asset_id:
+    weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  path:
+    type: path
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_acquiadam_asset_descrip: true
+  field_acquiadam_asset_doc: true
+  name: true
+  status: true
+  uid: true

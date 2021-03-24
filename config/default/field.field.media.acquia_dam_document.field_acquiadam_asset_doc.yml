@@ -1,0 +1,29 @@
+uuid: 35fd364e-0114-4966-b84e-998fc3882d2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_acquiadam_asset_doc
+    - media.type.acquia_dam_document
+  module:
+    - file
+_core:
+  default_config_hash: 8QFeo6jmPiNG20fD1ERCwRaK7KCMgrYaaM3BOGVeBz8
+id: media.acquia_dam_document.field_acquiadam_asset_doc
+field_name: field_acquiadam_asset_doc
+entity_type: media
+bundle: acquia_dam_document
+label: Document
+description: 'This field will hold the original document data that was uploaded to Acquia DAM.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: acquiadam
+  file_extensions: 'txt pdf doc docx xls csv ppt'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: video
-label: Video
+label: 'Remote Video'
 description: 'Media type for remote Videos.'
 source: 'oembed:video'
 queue_thumbnail_downloads: false
