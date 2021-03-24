@@ -1,23 +1,23 @@
-uuid: c46d81dd-50c9-42d1-9384-78ce72676acf
+uuid: ec5a1342-6505-4eb5-811f-6ef8ba304267
 langcode: en
 status: true
 dependencies:
   module:
     - ctools
     - taxonomy
-id: term_name
-label: 'Education Center Term Name'
+id: education_center_term_name
+label: 'Education Taxonomy Term'
 type: 'canonical_entities:taxonomy_term'
 pattern: '/education-center/[term:name]'
 selection_criteria:
-  42b41af4-297f-4bf3-8abe-b407acf20d42:
+  0351256e-c698-44a3-9826-2aceab1d57ac:
     id: 'entity_bundle:taxonomy_term'
     bundles:
       education_article_category: education_article_category
     negate: false
     context_mapping:
       taxonomy_term: taxonomy_term
-    uuid: 42b41af4-297f-4bf3-8abe-b407acf20d42
+    uuid: 0351256e-c698-44a3-9826-2aceab1d57ac
 selection_logic: and
 weight: -5
 relationships: {  }
