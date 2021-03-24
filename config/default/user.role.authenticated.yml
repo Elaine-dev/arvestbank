@@ -10,10 +10,16 @@ weight: -8
 is_admin: false
 permissions:
   - 'access content'
+  - 'access toolbar'
+  - 'administer external link popup'
+  - 'administer linkit profiles'
+  - 'administer youtube'
   - 'create terms in card_category_keywords'
+  - 'edit conditional fields'
   - 'edit terms in card_category_keywords'
   - 'use editorial transition send_to_review'
   - 'view any unpublished content'
+  - 'view conditional fields'
   - 'view latest version'
   - 'view media'
   - 'view own unpublished media'
