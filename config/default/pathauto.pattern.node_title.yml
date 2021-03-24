@@ -1,0 +1,22 @@
+uuid: 8c5dbade-2abe-473a-8a3e-a8e7a2f84d56
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_title
+label: 'Node Title'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  02cf34ca-3621-4c39-ae29-8936a61e312a:
+    id: node_type
+    bundles:
+      cta_phone_number: cta_phone_number
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 02cf34ca-3621-4c39-ae29-8936a61e312a
+selection_logic: and
+weight: -5
+relationships: {  }
