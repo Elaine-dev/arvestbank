@@ -9,6 +9,7 @@ folder: ../config/envs/local
 module:
   dblog: 0
   devel: 0
+  qa_accounts: 0
 theme: {  }
 blacklist:
   - dblog.settings
@@ -18,6 +19,7 @@ blacklist:
 graylist:
   - shield.settings
   - system.performance
+  - qa_accounts.settings.yml
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0
