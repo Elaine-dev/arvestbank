@@ -12,10 +12,12 @@ module:
   syslog: 0
   qa_accounts: 0
 theme: {  }
-blacklist:
+blacklist: {  }
+graylist:
   - shield.settings
+  - system.performance
   - acquia_connector.settings
-graylist: { }
+  - qa_accounts.settings.yml
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0

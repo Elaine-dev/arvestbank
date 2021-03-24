@@ -16,6 +16,7 @@ blacklist:
   - devel.toolbar.settings
   - views.view.watchdog
 graylist:
+  - shield.settings
   - system.performance
 graylist_dependents: true
 graylist_skip_equal: true
