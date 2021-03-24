@@ -2,6 +2,7 @@
 
 /**
  * @file
+ * Arvestbank theme file.
  */
 
 use Drupal\Core\Form\FormStateInterface;
@@ -10,9 +11,46 @@ use Drupal\Core\Form\FormStateInterface;
  * Implements hook_form_alter().
  */
 function arvestbank_theme_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Add placeholder to search block form input.
+  if ($form_id === 'search_block_form') {
+    $form['keys']['#attributes']['placeholder'] = t('Search');
+  }
+}
 
-    // Add placeholder to search block form input.
-    if ($form_id === 'search_block_form') {
-        $form['keys']['#attributes']['placeholder'] = t('Search');
+/**
+ * Implements hook_preprocess_menu().
+ *
+ * @inheritDoc
+ */
+function arvestbank_theme_preprocess_menu(&$variables, $hook) {
+
+  // If this is the social media menu.
+  if ($hook == 'menu' && $variables['menu_name'] == 'social-media-menu') {
+
+    // Loop over menu items in this menu.
+    foreach ($variables['items'] as $menu_item_key => $menu_item) {
+      // Get plugin definition for this menu item.
+      $plugin_definition = $menu_item['original_link']->getPluginDefinition();
+      // If this menu item has an icon selected.
+      if (
+        isset($plugin_definition['options']['attributes']['data-icon'])
+        && $plugin_definition['options']['attributes']['data-icon'] != ''
+      ) {
+
+        // Get the variables we'll need for building icon render array.
+        $selected_icon = $plugin_definition['options']['attributes']['data-icon'];
+        $theme_path = \Drupal::theme()->getActiveTheme()->getPath();
+
+        // Replace link text with icon.
+        $variables['items'][$menu_item_key]['title'] = [
+          '#theme' => 'image',
+          '#uri' => $theme_path . '/images/social_icons/' . $selected_icon . '.png',
+          '#alt' => $selected_icon,
+          '#title' => $selected_icon,
+        ];
+      }
     }
+
+  }
+
 }

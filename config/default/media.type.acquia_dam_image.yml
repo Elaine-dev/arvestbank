@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: kfkOH_3L57Jz3v9-ssNb39vafmodxjen7LDUjl17lUI
 id: acquia_dam_image
-label: 'Acquia DAM Image'
+label: Image
 description: 'An image asset hosted on Acquia DAM.'
 source: acquiadam_asset
 queue_thumbnail_downloads: false

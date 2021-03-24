@@ -1,0 +1,29 @@
+uuid: 010832ae-e819-4c1d-bd02-299fd6122b14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fallback_image
+    - media.type.acquia_dam_image
+    - node.type.ad
+id: node.ad.field_fallback_image
+field_name: field_fallback_image
+entity_type: node
+bundle: ad
+label: 'Fallback Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      acquia_dam_image: acquia_dam_image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

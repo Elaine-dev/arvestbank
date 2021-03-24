@@ -1,0 +1,68 @@
+<?php
+
+/**
+ * @file
+ * Provides functionality for Arvest Bank menus.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Removes icon attribute from non-social media menus
+ * and renames form the social media menu.
+ *
+ * @inheritdoc
+ */
+function arvestbank_menus_form_menu_link_content_menu_link_content_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  // Get menu name.
+  $menu_name = $form_state->getformObject()->getEntity()->getMenuName();
+
+  // If this is the social media menu.
+  if ($menu_name == 'social-media-menu') {
+    // After build function to rename second attribute fieldgroup label.
+    $form['#after_build'][] = '_arvestbank_menus_rename_second_attribute_fieldgroup';
+  }
+  // For all other menus.
+  else {
+    // After build function to remove second attribute fieldgroup label.
+    $form['#after_build'][] = '_arvestbank_menus_remove_second_attribute_fieldgroup';
+  }
+
+}
+
+/**
+ * Afterbuild function to rename second attribute fieldgroup.
+ *
+ * @param array $form
+ *   The form to alter.
+ * @param Drupal\Core\Form\FormStateInterface $form_state
+ *   The formstate.
+ *
+ * @return array
+ *   Returns the altered form.
+ */
+function _arvestbank_menus_rename_second_attribute_fieldgroup(array $form, FormStateInterface &$form_state) {
+  // Change the fieldgroup title.
+  $form['options']['attributes']['#title'] = 'Select Link Icon';
+  return $form;
+}
+
+/**
+ * Afterbuild function to remove second attribute fieldgroup.
+ *
+ * @param array $form
+ *   The form to alter.
+ * @param Drupal\Core\Form\FormStateInterface $form_state
+ *   The formstate.
+ *
+ * @return array
+ *   Returns the altered form.
+ */
+function _arvestbank_menus_remove_second_attribute_fieldgroup(array $form, FormStateInterface &$form_state) {
+  // Remove fieldgroup from the form.
+  unset($form['options']);
+  return $form;
+}
