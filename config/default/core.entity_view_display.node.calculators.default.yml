@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.calculators.field_calculator
     - node.type.calculators
   module:
-    - options
+    - arvestbank_calculators
     - text
     - user
 id: node.calculators.default
@@ -18,20 +18,20 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     region: content
   field_calculator:
-    weight: 102
+    weight: 1
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    type: arvestbank_calculator
     region: content
   links:
-    weight: 100
+    weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }

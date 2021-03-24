@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains arvestbank_calculators.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function arvestbank_calculators_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the arvestbank_calculators module.
+    case 'help.page.arvestbank_calculators':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Support for embedded calculators from TimeValueCalculators.com.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function arvestbank_calculators_theme() {
+  return [
+    'arvestbank_calculators' => [
+      'render element' => 'children',
+      'variables' => ['calc_id' => NULL],
+    ],
+  ];
+}
