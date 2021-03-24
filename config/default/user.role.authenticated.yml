@@ -18,6 +18,7 @@ permissions:
   - 'edit conditional fields'
   - 'edit terms in card_category_keywords'
   - 'use editorial transition send_to_review'
+  - 'use moderation dashboard'
   - 'view any unpublished content'
   - 'view conditional fields'
   - 'view latest version'
