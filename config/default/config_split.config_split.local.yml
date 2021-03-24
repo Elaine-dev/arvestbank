@@ -14,10 +14,9 @@ blacklist:
   - dblog.settings
   - devel.settings
   - devel.toolbar.settings
+  - views.view.watchdog
 graylist:
-  - shield.settings
   - system.performance
-  - acquia_connector.settings
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0

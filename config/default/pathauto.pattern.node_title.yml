@@ -13,10 +13,11 @@ selection_criteria:
     id: node_type
     bundles:
       private_bank_location: private_bank_location
+      cta_phone_number: cta_phone_number
     negate: false
     context_mapping:
       node: node
-    uuid: fd95b87b-2993-40bd-862c-3de77688945b
+    uuid: 02cf34ca-3621-4c39-ae29-8936a61e312a
 selection_logic: and
 weight: -5
 relationships: {  }
