@@ -1,0 +1,23 @@
+uuid: 69e0ac85-68e7-4355-bbd4-0b0cf01ab673
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_title
+label: 'Node Title'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  fd95b87b-2993-40bd-862c-3de77688945b:
+    id: node_type
+    bundles:
+      private_bank_location: private_bank_location
+      cta_phone_number: cta_phone_number
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 02cf34ca-3621-4c39-ae29-8936a61e312a
+selection_logic: and
+weight: -5
+relationships: {  }

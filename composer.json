@@ -47,6 +47,7 @@
         "drupal/paragraphs": "^1.12",
         "drupal/pathauto": "^1.8",
         "drupal/pathauto_menu_link": "1.x-dev",
+        "drupal/qa_accounts": "1.x-dev@dev",
         "drupal/rabbit_hole": "^1.0@beta",
         "drupal/recaptcha": "^3.0",
         "drupal/redirect": "^1.6",

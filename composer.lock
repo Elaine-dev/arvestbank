@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe62efc58882986bb40b09c82db48420",
+    "content-hash": "07961bf7fea663b69010ffabb2d94b77",
     "packages": [
         {
             "name": "acquia/blt",
@@ -5263,6 +5263,47 @@
                 "source": "https://git.drupalcode.org/project/pathauto_menu_link"
             },
             "time": "2020-06-26T21:46:02+00:00"
+        },
+        {
+            "name": "drupal/qa_accounts",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/qa_accounts.git",
+                "reference": "1bd9a2a89ba486577af16008c2fd1ff0abe5eb6b"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta1+1-dev",
+                    "datestamp": "1588173078",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Dane Powell",
+                    "homepage": "https://www.drupal.org/user/339326"
+                }
+            ],
+            "description": "Creates dummy accounts to aid in testing. Never enable in production environments.",
+            "homepage": "https://www.drupal.org/project/qa_accounts",
+            "support": {
+                "source": "https://git.drupalcode.org/project/qa_accounts"
+            }
         },
         {
             "name": "drupal/rabbit_hole",
@@ -13222,6 +13263,7 @@
         "drupal/inline_entity_form": 5,
         "drupal/mysql56": 10,
         "drupal/pathauto_menu_link": 20,
+        "drupal/qa_accounts": 20,
         "drupal/rabbit_hole": 10,
         "drupal/sitemap": 10,
         "acquia/blt-drupal-vm": 20
@@ -13230,5 +13272,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }

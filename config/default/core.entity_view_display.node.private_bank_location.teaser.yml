@@ -1,0 +1,26 @@
+uuid: 25ee6c56-c826-4ded-ad01-2cf06aa932eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.private_bank_location.field_image
+    - field.field.node.private_bank_location.field_phone_number
+    - field.field.node.private_bank_location.field_private_bank_location_link
+    - node.type.private_bank_location
+  module:
+    - user
+id: node.private_bank_location.teaser
+targetEntityType: node
+bundle: private_bank_location
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_image: true
+  field_phone_number: true
+  field_private_bank_location_link: true

@@ -9,6 +9,7 @@ dependencies:
     - media.type.video
     - node.type.ad
     - node.type.article_education_article
+    - node.type.cta_phone_number
   module:
     - content_moderation
 id: editorial
@@ -91,4 +92,5 @@ type_settings:
     node:
       - ad
       - article_education_article
+      - cta_phone_number
   default_moderation_state: draft
