@@ -1,0 +1,29 @@
+uuid: 0961563c-b1a7-42fb-a669-e7f9283a20be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - media.type.acquia_dam_image
+    - node.type.private_bank_location
+id: node.private_bank_location.field_image
+field_name: field_image
+entity_type: node
+bundle: private_bank_location
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      acquia_dam_image: acquia_dam_image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

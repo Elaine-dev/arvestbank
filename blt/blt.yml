@@ -25,13 +25,13 @@ modules:
     uninstall: [acquia_connector, shield]
   ci:
     enable: {  }
-    uninstall: [acquia_connector]
+    uninstall: [acquia_connector, shield]
   dev:
-    enable: {  }
+    enable: [shield]
     uninstall: {  }
   test:
-    enable: {  }
+    enable: [shield, qa_accounts]
     uninstall: [dblog, devel, views_ui]
   prod:
-    enable: {  }
-    uninstall: [dblog, devel, views_ui]
+    enable: [shield]
+    uninstall: [dblog, devel, views_ui, qa_accounts]

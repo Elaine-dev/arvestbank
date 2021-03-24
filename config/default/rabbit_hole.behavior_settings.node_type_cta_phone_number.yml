@@ -1,0 +1,14 @@
+uuid: 88e96684-d12d-4712-ac68-1f5c84e8e62b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.cta_phone_number
+id: node_type_cta_phone_number
+entity_type_id: node_type
+entity_id: cta_phone_number
+action: page_redirect
+allow_override: 0
+redirect: /front
+redirect_code: 301
+redirect_fallback_action: access_denied

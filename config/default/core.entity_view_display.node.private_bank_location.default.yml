@@ -1,0 +1,51 @@
+uuid: b778dafe-e8d8-4ab2-bdb6-3bf9e5ed0f2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.private_bank_location.field_image
+    - field.field.node.private_bank_location.field_phone_number
+    - field.field.node.private_bank_location.field_private_bank_location_link
+    - node.type.private_bank_location
+  module:
+    - link
+    - user
+id: node.private_bank_location.default
+targetEntityType: node
+bundle: private_bank_location
+mode: default
+content:
+  field_image:
+    type: entity_reference_entity_view
+    weight: 103
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_phone_number:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_private_bank_location_link:
+    weight: 102
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

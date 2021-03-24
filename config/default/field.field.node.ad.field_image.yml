@@ -1,0 +1,29 @@
+uuid: 08e76300-a8d7-4174-b92a-1b72f242e3fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - media.type.acquia_dam_image
+    - node.type.ad
+id: node.ad.field_image
+field_name: field_image
+entity_type: node
+bundle: ad
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      acquia_dam_image: acquia_dam_image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
