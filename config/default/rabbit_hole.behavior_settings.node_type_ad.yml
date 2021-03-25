@@ -1,0 +1,14 @@
+uuid: 65ac6e81-55b8-4d24-b669-7f728a63bc79
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.ad
+id: node_type_ad
+entity_type_id: node_type
+entity_id: ad
+action: page_redirect
+allow_override: 0
+redirect: /
+redirect_code: 301
+redirect_fallback_action: access_denied
