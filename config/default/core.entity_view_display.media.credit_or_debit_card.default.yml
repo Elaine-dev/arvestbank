@@ -5,12 +5,14 @@ dependencies:
   config:
     - field.field.media.credit_or_debit_card.field_acquiadam_asset_descrip
     - field.field.media.credit_or_debit_card.field_acquiadam_asset_id
+    - field.field.media.credit_or_debit_card.field_acquiadam_asset_image
     - field.field.media.credit_or_debit_card.field_credit_or_debit_card
     - field.field.media.credit_or_debit_card.field_debit_card_category
     - field.field.media.credit_or_debit_card.field_debit_card_keywords
-    - field.field.media.credit_or_debit_card.field_description
+    - field.field.media.credit_or_debit_card.field_school_zip_code
     - media.type.credit_or_debit_card
   module:
+    - image
     - options
 id: media.credit_or_debit_card.default
 targetEntityType: media
@@ -32,6 +34,15 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
+  field_acquiadam_asset_image:
+    weight: 6
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
     region: content
   field_credit_or_debit_card:
     weight: 4
@@ -56,12 +67,13 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_description:
-    weight: 1
+  field_school_zip_code:
+    weight: 7
     label: above
-    settings: {  }
+    settings:
+      link: true
     third_party_settings: {  }
-    type: basic_string
+    type: entity_reference_label
     region: content
 hidden:
   created: true

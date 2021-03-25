@@ -1,0 +1,8 @@
+uuid: eeabfcdf-db83-45ce-9cbc-32ff96b47baa
+langcode: en
+status: true
+dependencies: {  }
+name: 'Debit Card Keywords'
+vid: debit_card_keywords
+description: 'Taxonomy for Debit card keywords.'
+weight: 0
