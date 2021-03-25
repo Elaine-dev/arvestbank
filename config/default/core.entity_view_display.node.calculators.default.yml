@@ -24,10 +24,10 @@ content:
     region: content
   field_calculator:
     weight: 1
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: arvestbank_calculator
+    type: arvestbank_calculators_embed
     region: content
   links:
     weight: 3
