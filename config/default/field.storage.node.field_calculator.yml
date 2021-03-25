@@ -1,21 +1,17 @@
-uuid: cec4c841-5d23-475a-9e2e-077104c6b7fe
+uuid: a22c8946-0448-4f45-9abb-c6830b2b2503
 langcode: en
 status: true
 dependencies:
   module:
+    - arvestbank_calculators
     - node
-    - options
 id: node.field_calculator
 field_name: field_calculator
 entity_type: node
-type: list_string
+type: entity_reference
 settings:
-  allowed_values:
-    -
-      value: HF06
-      label: 'Which mortgage is better for me?'
-  allowed_values_function: ''
-module: options
+  target_type: calculator_code
+module: core
 locked: false
 cardinality: 1
 translatable: true

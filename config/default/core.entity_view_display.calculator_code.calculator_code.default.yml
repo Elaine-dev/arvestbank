@@ -1,0 +1,30 @@
+uuid: c1a4713d-0975-476a-99c4-0c74f322743e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.calculator_code.calculator_code.field_calculator_code_descript
+  module:
+    - arvestbank_calculators
+id: calculator_code.calculator_code.default
+targetEntityType: calculator_code
+bundle: calculator_code
+mode: default
+content:
+  field_calculator_code_descript:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    label: hidden
+    type: string
+    weight: 1
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

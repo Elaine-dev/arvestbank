@@ -30,7 +30,7 @@ content:
     type: arvestbank_calculators_embed
     region: content
   links:
-    weight: 3
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }

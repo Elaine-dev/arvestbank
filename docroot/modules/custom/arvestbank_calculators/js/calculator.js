@@ -1,3 +1,9 @@
+// When the calc is in an iframe, the Drupal settings will be slightly different.
+if (drupalSettings.arvestbank_calculators === undefined) {
+  var settingsElement = document.querySelector('script[type="application/json"][data-drupal-selector="drupal-settings-json"]');
+  var drupalSettings = JSON.parse(settingsElement.textContent);
+}
+
 TEMPLATE_ID = "www.arvest.com_2";
 CALCULATORID = drupalSettings.arvestbank_calculators.calc_id;
 PASSTHROUGH = "";
