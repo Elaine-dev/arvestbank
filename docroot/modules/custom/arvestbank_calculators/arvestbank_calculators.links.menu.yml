@@ -1,0 +1,14 @@
+
+# Calculator Code menu items definition
+entity.calculator_code.collection:
+  title: 'Calculator Code list'
+  route_name: entity.calculator_code.collection
+  description: 'List Calculator Code entities'
+  parent: system.admin_structure
+  weight: 100
+
+calculator_code.admin.structure.settings:
+  title: 'Calculator Code settings'
+  description: 'Configure Calculator Code entities'
+  route_name: calculator_code.settings
+  parent: system.admin_structure
