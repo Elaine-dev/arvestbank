@@ -27,7 +27,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: arvestbank_calculators_embed
+    type: arvestbank_calculators_iframe_wrapper
     region: content
   links:
     weight: 2

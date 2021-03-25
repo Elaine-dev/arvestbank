@@ -218,7 +218,21 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
-      sorts: {  }
+      sorts:
+        name:
+          id: name
+          table: calculator_code
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: calculator_code
+          entity_field: name
+          plugin_id: standard
       header: {  }
       footer: {  }
       empty: {  }
