@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.media.field_debit_card_category
     - media.type.credit_or_debit_card
-    - taxonomy.vocabulary.card_category_keywords
+    - taxonomy.vocabulary.debit_card_category
 id: media.credit_or_debit_card.field_debit_card_category
 field_name: field_debit_card_category
 entity_type: media
@@ -20,10 +20,10 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      card_category_keywords: card_category_keywords
+      debit_card_category: debit_card_category
     sort:
       field: name
       direction: asc
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: card_category_keywords
 field_type: entity_reference
