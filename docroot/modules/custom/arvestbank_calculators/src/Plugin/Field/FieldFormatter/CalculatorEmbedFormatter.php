@@ -30,6 +30,7 @@ class CalculatorEmbedFormatter extends FormatterBase {
 
     foreach ($items as $delta => $item) {
 
+      // Get the calculator code from the custom entity.
       $calc_id = $item->getEntity()->field_calculator->referencedEntities()[0]->getName();
 
       $element[$delta] = [
@@ -37,9 +38,9 @@ class CalculatorEmbedFormatter extends FormatterBase {
       ];
 
     }
-    //$build['#attached']['drupalSettings']['myvar'] = 'allo';
 
     if (!empty($element)) {
+      // Attach libraries and pass calc_id through to JS via drupalSettings.
       $element['#attached'] = [
         'library' => [
           'arvestbank_calculators/calculator_script',

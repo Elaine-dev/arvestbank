@@ -17,7 +17,7 @@ use Drupal\media\OEmbed\UrlResolverInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Plugin implementation of the 'Calculator Embed' formatter.
+ * IFrame wrapper for a calculator field.
  *
  * @FieldFormatter(
  *   id = "arvestbank_calculators_iframe_wrapper",
@@ -28,7 +28,6 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * )
  */
 class CalculatorIframeWrapperFormatter extends FormatterBase implements ContainerFactoryPluginInterface {
-
 
   /**
    * The messenger service.
@@ -156,7 +155,7 @@ class CalculatorIframeWrapperFormatter extends FormatterBase implements Containe
         $url->setOption('base_url', $domain);
       }
 
-      // Render videos and rich content in an iframe for security reasons.
+      // Render content in an iframe for security reasons.
       $element[$delta] = [
         '#type' => 'html_tag',
         '#prefix' => '<div class="calculator-iframe-container">',

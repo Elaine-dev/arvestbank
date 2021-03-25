@@ -11,12 +11,12 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * An example controller.
+ * Renders a calculator in a complete page/response.
  */
 class CalculatorController extends ControllerBase {
 
   /**
-   * Constructs an OEmbedIframeController instance.
+   * Constructs a ControllerBase object.
    *
    * @param \Drupal\Core\Render\RendererInterface $renderer
    *   The renderer service.
@@ -39,7 +39,7 @@ class CalculatorController extends ControllerBase {
   }
 
   /**
-   * Renders a resource.
+   * Renders a calculator as a full HtmlResponse.
    *
    * @param \Symfony\Component\HttpFoundation\Request $request
    *   The request object.
@@ -53,27 +53,36 @@ class CalculatorController extends ControllerBase {
    */
   public function render(Request $request) {
 
+    // Set up the response.
     $response = new HtmlResponse();
 
+    // Initialize the html for the response.
     $html = ['#type' => 'html'];
 
+    // Get the node id from the URL.
     $nid = (int) \Drupal::request()->query->get('nid');
 
+    // Try to load the node off of the ID.
     if ($node = Node::load($nid)) {
 
+      // Content type = calculators.
       if ($node->bundle() == 'calculators') {
 
+        // Type is the formatter.
         $display_settings = [
           'label' => 'hidden',
           'type' => 'arvestbank_calculators_embed',
         ];
+        // Render array of the calculator field.
         $element = $node->get('field_calculator')->view($display_settings);
 
+        // Populate the page.
         $html['page'] = [
           '#type' => 'page',
           'content' => $element,
         ];
 
+        // Renderer service to render the html.
         \Drupal::service('renderer')->renderRoot($html);
         $response->setContent($html);
         $response->setMaxAge(0);
@@ -82,6 +91,7 @@ class CalculatorController extends ControllerBase {
 
     }
 
+    // Returns full HtmlResponse.
     return $response;
 
   }
