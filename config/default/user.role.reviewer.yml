@@ -6,5 +6,4 @@ id: reviewer
 label: Reviewer
 weight: -9
 is_admin: null
-permissions:
-  - 'use text format cohesion'
+permissions: {  }

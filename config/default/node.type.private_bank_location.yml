@@ -1,0 +1,31 @@
+uuid: 6585ba41-4de1-44f6-8366-023ad744bd26
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Private Bank Location'
+type: private_bank_location
+description: 'Contact information for private banking.'
+help: 'Private Bank Location City.'
+new_revision: true
+preview_mode: 1
+display_submitted: false
