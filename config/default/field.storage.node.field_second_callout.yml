@@ -1,0 +1,27 @@
+uuid: 3d973b15-e089-4de9-a579-7b09e549e880
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_second_callout
+field_name: field_second_callout
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: find_local_branch
+      label: 'Find your local Arvest branch'
+    -
+      value: schedule_appointment
+      label: 'Schedule an appointment'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
