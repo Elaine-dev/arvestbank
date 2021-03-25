@@ -1,0 +1,31 @@
+uuid: fd2478a5-27c8-46b9-ba03-ba8002767fb5
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+name: Ad
+type: ad
+description: 'Content Type for ads to be displayed in navigation menu, sidebar (like on the calculator), exit pages (when you log out of online banking)  3 display modes.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
