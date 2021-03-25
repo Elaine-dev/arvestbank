@@ -17,8 +17,8 @@ class CalculatorCodeListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['id'] = $this->t('Calculator Code ID');
     $header['name'] = $this->t('Name');
+    $header['field_calculator_code_descript'] = $this->t('Description');
     return $header + parent::buildHeader();
   }
 
@@ -27,12 +27,12 @@ class CalculatorCodeListBuilder extends EntityListBuilder {
    */
   public function buildRow(EntityInterface $entity) {
     /* @var \Drupal\arvestbank_calculators\Entity\CalculatorCode $entity */
-    $row['id'] = $entity->id();
     $row['name'] = Link::createFromRoute(
       $entity->label(),
       'entity.calculator_code.edit_form',
       ['calculator_code' => $entity->id()]
     );
+    $row['field_calculator_code_descript'] = $entity->get('field_calculator_code_descript')->getValue()[0]['value'];
     return $row + parent::buildRow($entity);
   }
 

@@ -97,8 +97,8 @@ class CalculatorCode extends ContentEntityBase implements CalculatorCodeInterfac
     $fields += static::publishedBaseFieldDefinitions($entity_type);
 
     $fields['name'] = BaseFieldDefinition::create('string')
-      ->setLabel(t('Name'))
-      ->setDescription(t('The name of the Calculator Code entity.'))
+      ->setLabel(t('Code'))
+      ->setDescription(t('The code for this calculator.'))
       ->setSettings([
         'max_length' => 50,
         'text_processing' => 0,
@@ -120,7 +120,7 @@ class CalculatorCode extends ContentEntityBase implements CalculatorCodeInterfac
     $fields['status']->setDescription(t('A boolean indicating whether the Calculator Code is published.'))
       ->setDisplayOptions('form', [
         'type' => 'boolean_checkbox',
-        'weight' => -3,
+        'weight' => 3,
       ]);
 
     $fields['created'] = BaseFieldDefinition::create('created')

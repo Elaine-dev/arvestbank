@@ -15,7 +15,7 @@ use Drupal\Core\Url;
  *   id = "arvestbank_calculators_embed",
  *   label = @Translation("Calculator Embed"),
  *   field_types = {
- *     "list_string"
+ *     "entity_reference"
  *   }
  * )
  */
@@ -30,20 +30,26 @@ class CalculatorEmbedFormatter extends FormatterBase {
 
     foreach ($items as $delta => $item) {
 
-      $calc_id = $item->value;
+      $calc_id = $item->getEntity()->field_calculator->referencedEntities()[0]->getName();
 
       $element[$delta] = [
         '#theme' => 'arvestbank_calculators_embed',
-        '#calc_id' => $calc_id,
       ];
 
     }
+    //$build['#attached']['drupalSettings']['myvar'] = 'allo';
 
     if (!empty($element)) {
       $element['#attached'] = [
         'library' => [
           'arvestbank_calculators/calculator_script',
+          'arvestbank_calculators/calculator_script_embed',
           'arvestbank_calculators/calculator_style',
+        ],
+        'drupalSettings' => [
+          'arvestbank_calculators' => [
+            'calc_id' => $calc_id,
+          ],
         ],
       ];
     }
