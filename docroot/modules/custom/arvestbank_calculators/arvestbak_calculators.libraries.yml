@@ -1,9 +1,0 @@
-calculator_script:
-  header: true
-  js:
-    https://resources.qumucloud.com/widgets/application.js: { type: external }
-
-qumu_iframe_style:
-  css:
-    theme:
-      css/qumu_iframe.css: {}

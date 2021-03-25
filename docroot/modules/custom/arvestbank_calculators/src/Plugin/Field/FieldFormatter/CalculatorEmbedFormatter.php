@@ -6,19 +6,20 @@ use Drupal\Core\Field\Annotation\FieldFormatter;
 use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\FormatterBase;
+use Drupal\Core\Url;
 
 /**
  * Plugin implementation of the 'Calculator Embed' formatter.
  *
  * @FieldFormatter(
- *   id = "arvestbank_calculator",
+ *   id = "arvestbank_calculators_embed",
  *   label = @Translation("Calculator Embed"),
  *   field_types = {
  *     "list_string"
  *   }
  * )
  */
-class CalculatorFormatter extends FormatterBase {
+class CalculatorEmbedFormatter extends FormatterBase {
 
   /**
    * {@inheritdoc}
@@ -32,10 +33,19 @@ class CalculatorFormatter extends FormatterBase {
       $calc_id = $item->value;
 
       $element[$delta] = [
-        '#theme' => 'arvestbank_calculators',
+        '#theme' => 'arvestbank_calculators_embed',
         '#calc_id' => $calc_id,
       ];
 
+    }
+
+    if (!empty($element)) {
+      $element['#attached'] = [
+        'library' => [
+          'arvestbank_calculators/calculator_script',
+          'arvestbank_calculators/calculator_style',
+        ],
+      ];
     }
 
     return $element;
@@ -45,10 +55,10 @@ class CalculatorFormatter extends FormatterBase {
   /**
    * {@inheritdoc}
    */
-  public static function isApplicable(FieldDefinitionInterface $field_definition) {
-    return TRUE;
-    //dump($field_definition);
-    //return $field_definition->getTargetEntityTypeId() === 'media' && $field_definition->getName() === 'field_media_qumu';
+  public static function isApplicable(FieldDefinitionInterface $field_definition): bool {
+    return $field_definition->getTargetEntityTypeId() === 'node'
+      && $field_definition->getTargetBundle() === 'calculators'
+      && $field_definition->getName() === 'field_calculator';
   }
 
 }

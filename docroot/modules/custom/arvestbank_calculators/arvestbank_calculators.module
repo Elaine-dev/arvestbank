@@ -28,7 +28,11 @@ function arvestbank_calculators_help($route_name, RouteMatchInterface $route_mat
  */
 function arvestbank_calculators_theme() {
   return [
-    'arvestbank_calculators' => [
+    'arvestbank_calculators_iframe_wrapper' => [
+      'render element' => 'children',
+      'variables' => ['calc_id' => NULL],
+    ],
+    'arvestbank_calculators_embed' => [
       'render element' => 'children',
       'variables' => ['calc_id' => NULL],
     ],
