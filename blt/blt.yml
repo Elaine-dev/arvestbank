@@ -21,17 +21,17 @@ drush:
   default_alias: '${drush.aliases.local}'
 modules:
   local:
-    enable: {  }
-    uninstall: [acquia_connector, shield]
+    enable: [qa_accounts]
+    uninstall: [acquia_connector]
   ci:
     enable: {  }
-    uninstall: [acquia_connector, shield]
+    uninstall: [shield]
   dev:
-    enable: [shield, qa_accounts]
+    enable: [qa_accounts]
     uninstall: {  }
   test:
     enable: [shield, qa_accounts]
     uninstall: [dblog, devel, views_ui]
   prod:
-    enable: [shield]
+    enable: [shield, acquia_connector]
     uninstall: [dblog, devel, views_ui, qa_accounts]
