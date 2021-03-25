@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 name: 'Associate Category'
 vid: associate_category
-description: ''
+description: 'Taxonomy category to classify notes of the associate content type.'
 weight: 0
