@@ -1,0 +1,32 @@
+uuid: 984cc11a-32be-4266-b3d2-40d59c9aff01
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.icon.field_acquiadam_asset_id
+    - field.field.media.icon.field_description
+    - field.field.media.icon.field_image
+    - media.type.icon
+id: media.icon.media_library
+targetEntityType: media
+bundle: icon
+mode: media_library
+content:
+  name:
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_acquiadam_asset_id: true
+  field_description: true
+  field_image: true
+  moderation_state: true
+  path: true
+  status: true
+  uid: true

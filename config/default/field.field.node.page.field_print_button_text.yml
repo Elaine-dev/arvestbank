@@ -1,0 +1,19 @@
+uuid: d393564c-a0b4-4699-a330-9fd328c0df9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_print_button_text
+    - node.type.page
+id: node.page.field_print_button_text
+field_name: field_print_button_text
+entity_type: node
+bundle: page
+label: 'Print Button Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

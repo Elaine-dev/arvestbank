@@ -1,0 +1,23 @@
+uuid: 13a47035-62a3-4751-b59c-ff2dbc9341f7
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: term_name
+label: 'Term Name'
+type: 'canonical_entities:taxonomy_term'
+pattern: '[term:name]'
+selection_criteria:
+  52f9c636-d6f1-45f7-9d6d-0e5b94eee8ee:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      school_zip_code: school_zip_code
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 52f9c636-d6f1-45f7-9d6d-0e5b94eee8ee
+selection_logic: and
+weight: -5
+relationships: {  }
