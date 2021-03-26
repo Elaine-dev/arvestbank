@@ -12,6 +12,7 @@ permissions:
   - 'access content'
   - 'access toolbar'
   - 'administer external link popup'
+  - 'administer gtm'
   - 'administer linkit profiles'
   - 'administer youtube'
   - 'create terms in card_category_keywords'
