@@ -1,0 +1,25 @@
+uuid: 357a1d9f-016b-43a8-99ff-ea285f79c020
+langcode: en
+status: true
+dependencies:
+  module:
+    - cohesion
+    - masquerade
+  theme:
+    - claro
+id: masquerade_3
+theme: claro
+region: header
+weight: -3
+provider: null
+plugin: masquerade
+settings:
+  id: masquerade
+  label: Masquerade
+  provider: masquerade
+  label_display: visible
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

@@ -1,3 +1,63 @@
-definitions: {  }
+definitions:
+  system__admin:
+    weight: 1
+    menu_name: admin
+    parent: ''
+    expanded: false
+    enabled: true
+  dblog__overview:
+    weight: -49
+    menu_name: admin
+    parent: system.admin_reports
+    enabled: true
+    expanded: false
+  entity__field_storage_config__collection:
+    weight: -48
+    menu_name: admin
+    parent: system.admin_reports
+    expanded: false
+    enabled: true
+  metatag__reports_plugins:
+    weight: -47
+    menu_name: admin
+    parent: system.admin_reports
+    expanded: false
+    enabled: true
+  system__status:
+    weight: -46
+    menu_name: admin
+    parent: system.admin_reports
+    expanded: false
+    enabled: true
+  dblog__access_denied:
+    weight: -45
+    menu_name: admin
+    parent: system.admin_reports
+    expanded: false
+    enabled: true
+  dblog__page_not_found:
+    weight: -44
+    menu_name: admin
+    parent: system.admin_reports
+    expanded: false
+    enabled: true
+  dblog__search:
+    weight: -43
+    menu_name: admin
+    parent: system.admin_reports
+    expanded: false
+    enabled: true
+  views_ui__reports_plugins:
+    weight: -42
+    menu_name: admin
+    parent: system.admin_reports
+    expanded: false
+    enabled: true
+  webform__reports_plugins:
+    weight: -41
+    menu_name: admin
+    parent: system.admin_reports
+    expanded: false
+    enabled: true
 _core:
   default_config_hash: jdY7AU0tU-QsjmiOw3W8vwpYMb-By--_MSFgbqKUTYM

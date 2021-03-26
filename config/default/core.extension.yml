@@ -1,10 +1,12 @@
 module:
   address: 0
   admin_toolbar: 0
+  admin_toolbar_links_access_filter: 0
   admin_toolbar_tools: 0
   arvestbank_associate_category: 0
   arvestbank_branch_locations: 0
   arvestbank_menus: 0
+  automated_cron: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -54,9 +56,11 @@ module:
   imce: 0
   inline_entity_form: 0
   jsonapi: 0
+  layout_discovery: 0
   link: 0
   link_attributes: 0
   linkit: 0
+  masquerade: 0
   media: 0
   media_acquiadam: 0
   media_library: 0
@@ -65,9 +69,12 @@ module:
   menu_link_content: 0
   menu_ui: 0
   metatag: 0
+  moderation_dashboard: 0
   node: 0
   options: 0
   page_cache: 0
+  page_manager: 0
+  panels: 0
   path: 0
   path_alias: 0
   pathauto_menu_link: 0
@@ -87,6 +94,7 @@ module:
   search404: 0
   serialization: 0
   settings_tray: 0
+  shield: 0
   shortcut: 0
   simple_sitemap: 0
   simple_sitemap_engines: 0

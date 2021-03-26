@@ -7,15 +7,15 @@ label: Stage
 description: 'Configuration for the Cloud Platform staging environment.'
 folder: ../config/envs/stage
 module:
-  acquia_connector: 0
   shield: 0
   syslog: 0
   qa_accounts: 0
 theme: {  }
-blacklist:
+blacklist: {  }
+graylist:
   - shield.settings
-  - acquia_connector.settings
-graylist: { }
+  - system.performance
+  - qa_accounts.settings.yml
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0

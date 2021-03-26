@@ -1,0 +1,14 @@
+uuid: 4a1b4f31-3e24-45b6-a3f4-b4489abf3966
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.branch_location
+id: taxonomy_vocabulary_branch_location
+entity_type_id: taxonomy_vocabulary
+entity_id: branch_location
+action: page_redirect
+allow_override: 0
+redirect: /
+redirect_code: 301
+redirect_fallback_action: access_denied

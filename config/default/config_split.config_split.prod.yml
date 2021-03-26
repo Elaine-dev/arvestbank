@@ -11,10 +11,10 @@ module:
   shield: 0
   syslog: 0
 theme: {  }
-blacklist:
+blacklist: {  }
+graylist:
   - shield.settings
-  - acquia_connector.settings
-graylist: { }
+  - system.performance
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0
