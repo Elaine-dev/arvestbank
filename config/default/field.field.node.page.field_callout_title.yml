@@ -10,10 +10,12 @@ field_name: field_callout_title
 entity_type: node
 bundle: page
 label: 'CTA Title'
-description: ''
+description: 'For Example: Connect with our specialist & apply.'
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: 'Connect with our specialist & apply'
 default_value_callback: ''
 settings: {  }
 field_type: string

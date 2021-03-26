@@ -18,6 +18,7 @@ dependencies:
     - node.type.page
     - workflows.workflow.editorial
   module:
+    - conditional_fields
     - content_moderation
     - entity_browser
     - field_group
@@ -32,13 +33,13 @@ third_party_settings:
     group_cta:
       children:
         - field_callout_title
+        - field_callout_layout_optio
+        - field_cta_text
         - field_field_callout_phone_number
         - field_second_callout
         - field_schedule_appointment_link
-        - field_cta_text
-        - field_callout_layout_optio
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: details
       region: content
       format_settings:
@@ -65,15 +66,16 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 12
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   field_callout_layout_optio:
-    weight: 10
+    weight: 6
     settings:
       display_label: true
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
     type: boolean_checkbox
     region: content
   field_callout_title:
@@ -81,15 +83,17 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
     type: string_textfield
     region: content
   field_cta_text:
-    weight: 9
+    weight: 7
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
     type: string_textfield
     region: content
   field_featured_image:
@@ -107,7 +111,7 @@ content:
     third_party_settings: {  }
     region: content
   field_field_callout_phone_number:
-    weight: 6
+    weight: 8
     settings:
       form_mode: default
       label_singular: ''
@@ -120,11 +124,12 @@ content:
       collapsible: false
       collapsed: false
       allow_duplicate: false
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
     type: inline_entity_form_complex
     region: content
   field_meta_tags:
-    weight: 10
+    weight: 6
     settings:
       sidebar: true
     third_party_settings: {  }
@@ -137,7 +142,7 @@ content:
     type: options_buttons
     region: content
   field_print_button_text:
-    weight: 9
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -145,46 +150,85 @@ content:
     type: string_textfield
     region: content
   field_schedule_appointment_link:
-    weight: 8
+    weight: 10
     settings:
       placeholder_url: ''
       placeholder_title: ''
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        97934b67-cdf7-415a-8541-370f6bfbd489:
+          dependee: field_second_callout
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: schedule_appointment
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: page
     type: link_default
     region: content
   field_second_callout:
-    weight: 7
+    weight: 9
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
     type: options_select
+    region: content
+  group_cta:
+    third_party_settings:
+      conditional_fields:
+        cd861df8-fab3-4f4b-99a0-2820974c78c7:
+          dependee: field_page_type
+          settings:
+            state: '!visible'
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: disclosure
+            effect: show
+            effect_options: {  }
+            selector: ''
+            inheritance:
+              apply_to_parent: '0'
+              recurse: '0'
+              propagate: '0'
+          entity_type: node
+          bundle: page
+    weight: 26
+    settings: {  }
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 20
+    weight: 14
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 16
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 13
-    region: content
-    third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 17
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 15
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -192,14 +236,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 21
-    region: content
-    third_party_settings: {  }
-  sticky:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 14
+    weight: 15
     region: content
     third_party_settings: {  }
   title:
@@ -212,7 +249,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 11
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60
@@ -222,13 +259,15 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 18
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 19
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  promote: true
+  sticky: true
