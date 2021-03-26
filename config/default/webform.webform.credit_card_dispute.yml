@@ -9,10 +9,10 @@ uid: 1
 template: false
 archive: false
 id: credit_card_dispute
-title: 'Credit Card Dispute'
+title: 'Credit Card Dispute Form'
 description: 'Dispute an unauthorized charge on my Arvest Credit Card.'
 category: ''
-elements: null
+elements: "header:\n  '#type': webform_markup\n  '#markup': |\n    <p>We may request additional information from you at various stages in this process to assist us in our investigation and to substantiate your claim.</p>\n    <p>To preserve these billing rights, <b>you must notify Arvest Credit Card Division within (60) days of the closing date of the statement on which the error or problem first appeared.</b></p>\n    <p>For help with this form please call (800) 356-8085.</p>\n    <p>Asterisks (<span style=\"color:#e60000;\">*</span>) indicate required fields.</p>\n    \ncredit_card_account_number:\n  '#type': textfield\n  '#title': 'Credit Card Account Number'\n  '#placeholder': nnnn-nnnn-nnnn-nnnn\n  '#required': true\ntransaction_date:\n  '#type': date\n  '#title': 'Transaction Date'\ncharge_amount:\n  '#type': number\n  '#title': 'Charge Amount'\n  '#field_prefix': $\n  '#required': true\nmerchant_name:\n  '#type': textfield\n  '#title': 'Merchant Name'\n  '#required': true\nmerchant_location:\n  '#type': textfield\n  '#title': 'Merchant Location'"
 css: ''
 javascript: ''
 settings:
@@ -21,7 +21,7 @@ settings:
   ajax_progress_type: ''
   ajax_effect: ''
   ajax_speed: null
-  page: false
+  page: true
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
