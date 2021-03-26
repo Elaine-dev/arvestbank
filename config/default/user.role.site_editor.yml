@@ -54,7 +54,6 @@ permissions:
   - 'delete own private_bank_location content'
   - 'delete own video media'
   - 'delete private_bank_location revisions'
-  - 'delete terms in associate_category'
   - 'delete terms in branch_location'
   - 'delete terms in card_category_keywords'
   - 'delete terms in document_and_resource_category'
