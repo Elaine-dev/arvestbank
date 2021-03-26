@@ -1,0 +1,19 @@
+uuid: 097c30a6-b460-415a-952b-022617eacfbc
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_acquiadam
+id: credit_or_debit_card
+label: 'Credit or Debit Card'
+description: 'Media entity for credit or debit cards.'
+source: acquiadam_asset
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_acquiadam_asset_id
+field_map:
+  description: field_acquiadam_asset_descrip
+  file: field_acquiadam_asset_image
+  filename: name
+  status: status

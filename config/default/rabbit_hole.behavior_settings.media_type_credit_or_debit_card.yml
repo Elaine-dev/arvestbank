@@ -1,0 +1,14 @@
+uuid: 11a928b9-4627-4ea4-ba5a-b3c4dee1b393
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.credit_or_debit_card
+id: media_type_credit_or_debit_card
+entity_type_id: media_type
+entity_id: credit_or_debit_card
+action: page_redirect
+allow_override: 0
+redirect: /<front>
+redirect_code: 301
+redirect_fallback_action: access_denied
