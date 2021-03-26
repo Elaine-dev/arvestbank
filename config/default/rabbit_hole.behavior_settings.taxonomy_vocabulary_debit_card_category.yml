@@ -1,0 +1,14 @@
+uuid: 24bc541d-a947-4de5-a932-6418e055e354
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.debit_card_category
+id: taxonomy_vocabulary_debit_card_category
+entity_type_id: taxonomy_vocabulary
+entity_id: debit_card_category
+action: page_redirect
+allow_override: 0
+redirect: /<front>
+redirect_code: 301
+redirect_fallback_action: access_denied
