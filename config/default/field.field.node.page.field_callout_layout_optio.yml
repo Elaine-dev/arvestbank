@@ -1,0 +1,23 @@
+uuid: dec34d59-7c26-47a8-8ada-15ce1e9afa42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_callout_layout_optio
+    - node.type.page
+id: node.page.field_callout_layout_optio
+field_name: field_callout_layout_optio
+entity_type: node
+bundle: page
+label: 'CTA Layout Option'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
