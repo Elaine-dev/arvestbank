@@ -1,0 +1,18 @@
+uuid: 1d3b0813-b813-44d3-8d68-d5a30be399d4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_callout_layout_optio
+field_name: field_callout_layout_optio
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

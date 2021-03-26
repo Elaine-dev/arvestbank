@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 name: 'Debit Card Category'
 vid: debit_card_category
-description: ''
+description: 'Taxonomy category to classify cards of the debit card media entity.'
 weight: 0
