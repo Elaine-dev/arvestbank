@@ -1,0 +1,46 @@
+uuid: cff3b37e-fdf4-47de-99c5-28ba4ad834a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.icon.field_acquiadam_asset_id
+    - field.field.media.icon.field_description
+    - field.field.media.icon.field_image
+    - media.type.icon
+  module:
+    - image
+id: media.icon.default
+targetEntityType: media
+bundle: icon
+mode: default
+content:
+  field_acquiadam_asset_id:
+    label: visually_hidden
+    weight: 0
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_description:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_image:
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

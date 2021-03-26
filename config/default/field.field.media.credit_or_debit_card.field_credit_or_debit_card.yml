@@ -1,0 +1,21 @@
+uuid: 472ac861-baee-40b1-be1e-cd26783fce6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_credit_or_debit_card
+    - media.type.credit_or_debit_card
+  module:
+    - options
+id: media.credit_or_debit_card.field_credit_or_debit_card
+field_name: field_credit_or_debit_card
+entity_type: media
+bundle: credit_or_debit_card
+label: 'Credit or Debit card'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

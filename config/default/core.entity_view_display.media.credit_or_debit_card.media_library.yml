@@ -1,0 +1,42 @@
+uuid: 59e25fbd-2eae-4327-8930-aa717c7cdbde
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.credit_or_debit_card.field_acquiadam_asset_descrip
+    - field.field.media.credit_or_debit_card.field_acquiadam_asset_id
+    - field.field.media.credit_or_debit_card.field_acquiadam_asset_image
+    - field.field.media.credit_or_debit_card.field_credit_or_debit_card
+    - field.field.media.credit_or_debit_card.field_debit_card_category
+    - field.field.media.credit_or_debit_card.field_debit_card_keywords
+    - field.field.media.credit_or_debit_card.field_school_zip_code
+    - image.style.medium
+    - media.type.credit_or_debit_card
+  module:
+    - image
+id: media.credit_or_debit_card.media_library
+targetEntityType: media
+bundle: credit_or_debit_card
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_acquiadam_asset_descrip: true
+  field_acquiadam_asset_id: true
+  field_acquiadam_asset_image: true
+  field_credit_or_debit_card: true
+  field_debit_card_category: true
+  field_debit_card_keywords: true
+  field_school_zip_code: true
+  name: true
+  uid: true
