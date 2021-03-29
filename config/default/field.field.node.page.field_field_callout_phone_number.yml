@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_field_callout_phone_number
+    - node.type.cta_phone_number
     - node.type.page
 id: node.page.field_field_callout_phone_number
 field_name: field_field_callout_phone_number
@@ -17,5 +18,12 @@ default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:node'
-  handler_settings: {  }
+  handler_settings:
+    target_bundles:
+      cta_phone_number: cta_phone_number
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference

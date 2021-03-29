@@ -128,6 +128,9 @@
             "drupal/core": "-p2"
         },
         "patches": {
+            "drupal/field_group": {
+                "Conditional Fields support": "https://www.drupal.org/files/issues/2019-12-10/field_group-support_conditional_fields-3099051-6.patch"
+            },
             "drupal/conditional_fields": {
                 "Notice: Trying to access array offset on value of type null\n": "https://www.drupal.org/files/issues/2021-01-21/3191984-3-notice-trying-to-access-offset-on-value-of-type-null.patch"
             }
