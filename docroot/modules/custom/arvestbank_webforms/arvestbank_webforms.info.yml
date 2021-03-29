@@ -1,0 +1,7 @@
+name: 'Arvest Bank Webforms'
+type: module
+description: 'Custom support for webforms.'
+core_version_requirement: ^9
+package: 'Custom'
+dependencies:
+  - 'webform:webform'
