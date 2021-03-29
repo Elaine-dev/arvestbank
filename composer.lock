@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e4dea2d526ca5fba51737b4d772d4ca",
+    "content-hash": "a09c359e38cdb82c4eb794fec654b8dd",
     "packages": [
         {
             "name": "acquia/blt",
@@ -143,16 +143,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/davidtrainer/blt-site-studio.git",
-                "reference": "2877aea0b787b8bd3d88cd362b326997c153e073"
+                "reference": "43fa072545523c324c4db8d71d689a87cc4c7ee2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davidtrainer/blt-site-studio/zipball/2877aea0b787b8bd3d88cd362b326997c153e073",
-                "reference": "2877aea0b787b8bd3d88cd362b326997c153e073",
+                "url": "https://api.github.com/repos/davidtrainer/blt-site-studio/zipball/43fa072545523c324c4db8d71d689a87cc4c7ee2",
+                "reference": "43fa072545523c324c4db8d71d689a87cc4c7ee2",
                 "shasum": ""
             },
             "require": {
-                "acquia/cohesion": ">=6.4.0"
+                "acquia/cohesion": ">=6.4.0",
+                "drupal/config_ignore": "^1 | ^2",
+                "drupal/config_split": "^1 | ^2"
             },
             "type": "library",
             "autoload": {
@@ -175,7 +177,7 @@
                 "source": "https://github.com/davidtrainer/blt-site-studio/tree/develop",
                 "issues": "https://github.com/davidtrainer/blt-site-studio/issues"
             },
-            "time": "2021-02-27T04:18:44+00:00"
+            "time": "2021-03-29T19:17:11+00:00"
         },
         {
             "name": "acquia/cohesion",
@@ -3308,8 +3310,7 @@
                         "[web-root]/profiles/README.txt": "assets/scaffold/files/profiles.README.txt",
                         "[web-root]/themes/README.txt": "assets/scaffold/files/themes.README.txt"
                     }
-                },
-                "patches_applied": []
+                }
             },
             "autoload": {
                 "psr-4": {
@@ -6398,6 +6399,10 @@
                 {
                     "name": "awasson",
                     "homepage": "https://www.drupal.org/user/127091"
+                },
+                {
+                    "name": "paulocs",
+                    "homepage": "https://www.drupal.org/user/3640109"
                 }
             ],
             "description": "Creates a block with a dynamic Instagram Feed using https://github.com/jsanahuja/jquery.instagramFeed.",
@@ -11371,16 +11376,16 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v4.4.20",
+            "version": "v4.4.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "715e7a531bdae109a828f9e91629e5b3b2926beb"
+                "reference": "940826c465be2690c9fae91b2793481e5cbd6834"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/715e7a531bdae109a828f9e91629e5b3b2926beb",
-                "reference": "715e7a531bdae109a828f9e91629e5b3b2926beb",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/940826c465be2690c9fae91b2793481e5cbd6834",
+                "reference": "940826c465be2690c9fae91b2793481e5cbd6834",
                 "shasum": ""
             },
             "require": {
@@ -11426,7 +11431,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-11T19:34:41+00:00"
+            "time": "2021-03-28T09:59:32+00:00"
         },
         {
             "name": "symfony/finder",
