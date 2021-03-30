@@ -5,13 +5,14 @@ dependencies:
   config:
     - field.storage.node.body
     - field.storage.node.field_field_callout_phone_number
-    - field.storage.node.field_cta_text
     - field.storage.node.field_callout_title
+    - field.storage.node.field_cta_text
     - search_api.server.database_search_server
   module:
     - node
     - search_api
-    - file
+    - search_api_attachments
+    - media
 id: database_search_index
 name: 'Database Search Index'
 description: ''
@@ -61,7 +62,14 @@ field_settings:
       module:
         - node
 datasource_settings:
-  'entity:file': {  }
+  'entity:media':
+    bundles:
+      default: false
+      selected:
+        - acquia_dam_document
+    languages:
+      default: true
+      selected: {  }
   'entity:node':
     bundles:
       default: false
@@ -75,6 +83,13 @@ datasource_settings:
 processor_settings:
   add_url: {  }
   aggregated_field: {  }
+  file_attachments:
+    excluded_extensions: 'aif art avi bmp gif ico mov oga ogv png psd ra ram rgb flv'
+    number_indexed: 0
+    number_first_bytes: '1 MB'
+    max_filesize: '0'
+    excluded_private: 0
+    excluded_mimes: 'audio/x-aiff image/x-jg video/x-msvideo image/x-ms-bmp image/gif image/vnd.microsoft.icon video/quicktime audio/ogg video/ogg image/png image/x-photoshop audio/x-realaudio audio/x-pn-realaudio image/x-rgb video/x-flv'
   language_with_fallback: {  }
   rendered_item: {  }
 tracker_settings:
