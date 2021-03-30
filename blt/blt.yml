@@ -22,7 +22,7 @@ drush:
 modules:
   local:
     enable: [qa_accounts]
-    uninstall: [acquia_connector]
+    uninstall: {  }
   ci:
     enable: {  }
     uninstall: [shield]
