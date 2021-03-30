@@ -1,0 +1,13 @@
+calculator_script:
+  header: true
+  js:
+    https://www.TimeValueCalculators.com/timevaluecalculators/Includes/tvcClientSideFunctions.js: { type: external }
+
+calculator_script_embed:
+  js:
+    js/calculator.js: {}
+
+calculator_style:
+  css:
+    theme:
+      css/calculator.css: {}

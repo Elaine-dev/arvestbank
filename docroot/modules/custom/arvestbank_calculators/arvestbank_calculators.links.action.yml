@@ -1,0 +1,5 @@
+entity.calculator_code.add_form:
+  route_name: entity.calculator_code.add_form
+  title: 'Add Calculator Code'
+  appears_on:
+    - entity.calculator_code.collection

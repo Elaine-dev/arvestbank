@@ -1,0 +1,37 @@
+uuid: 559b8d6a-91d1-46c9-b47d-597dfdcbc897
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.calculators.body
+    - field.field.node.calculators.field_calculator
+    - node.type.calculators
+  module:
+    - arvestbank_calculators
+    - text
+    - user
+id: node.calculators.default
+targetEntityType: node
+bundle: calculators
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_calculator:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: arvestbank_calculators_iframe_wrapper
+    region: content
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,23 @@
+uuid: 7381a9b9-80f0-44ab-9017-5d24cdf74678
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.calculators
+  module:
+    - text
+id: node.calculators.body
+field_name: body
+entity_type: node
+bundle: calculators
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

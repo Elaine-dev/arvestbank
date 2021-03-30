@@ -1,0 +1,25 @@
+uuid: 4ea2f18d-96b1-407c-a016-daedeb0ea0ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_calculator
+    - node.type.calculators
+id: node.calculators.field_calculator
+field_name: field_calculator
+entity_type: node
+bundle: calculators
+label: Calculator
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: calendar_codes_select
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

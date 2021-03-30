@@ -1,0 +1,6 @@
+arvestbank_calculators.iframe:
+  path: '/calculators/iframe'
+  defaults:
+    _controller: '\Drupal\arvestbank_calculators\Controller\CalculatorController::render'
+  requirements:
+    _permission: 'access content'
