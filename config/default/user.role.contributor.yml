@@ -70,3 +70,4 @@ permissions:
   - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view scheduled content'
+  - 'view the administration theme'
