@@ -1,0 +1,15 @@
+uuid: 5d7aaf9f-f524-4759-bbb4-9b363f5c816b
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_acquiadam
+id: icon
+label: Icon
+description: 'An icon image asset hosted on Acquia DAM.'
+source: acquiadam_asset
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_acquiadam_asset_id
+field_map: {  }

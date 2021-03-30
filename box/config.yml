@@ -97,3 +97,11 @@ php_memory_limit: "512M"
 
 post_provision_scripts:
   - "../../../acquia/blt-drupal-vm/scripts/drupal-vm/post-provision.php"
+
+apache_vhosts_ssl:
+  - servername: "{{ drupal_domain }}"
+    documentroot: "{{ drupal_core_path }}"
+    certificate_file: "/vagrant/example.crt"
+    certificate_key_file: "/vagrant/example.key"
+    extra_parameters: |
+      ProxyPassMatch ^/(.*\.php(/.*)?)$ "fcgi://127.0.0.1:9000{{ drupal_core_path }}"

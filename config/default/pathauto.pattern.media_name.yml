@@ -10,14 +10,15 @@ label: 'Media Name'
 type: 'canonical_entities:media'
 pattern: '[media:name]'
 selection_criteria:
-  cf9fed5e-d7f3-4f3f-9e19-236944cb34f0:
+  9991dabc-d8b6-46d4-9d08-52c4963efa8d:
     id: 'entity_bundle:media'
     bundles:
+      credit_or_debit_card: credit_or_debit_card
       video: video
     negate: false
     context_mapping:
       media: media
-    uuid: cf9fed5e-d7f3-4f3f-9e19-236944cb34f0
+    uuid: 9991dabc-d8b6-46d4-9d08-52c4963efa8d
 selection_logic: and
 weight: -5
 relationships: {  }

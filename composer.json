@@ -31,7 +31,7 @@
         "drupal/easy_breadcrumb": "^1.13",
         "drupal/entity_browser": "^2.5",
         "drupal/entity_embed": "^1.1",
-        "drupal/external_link_popup": "^1.8",
+        "drupal/extlink": "^1.6",
         "drupal/field_group": "^3.1",
         "drupal/gtm": "^1.6",
         "drupal/honeypot": "^2.0",
@@ -87,6 +87,9 @@
                     "mode": "replace",
                     "path": "docroot/core/assets/scaffold/files/default.settings.php",
                     "overwrite": false
+                },
+                "[web-root]/.htaccess": {
+                    "append": "patches/htaccess-ssl.txt"
                 }
             },
             "gitignore": true
@@ -128,6 +131,9 @@
             "drupal/core": "-p2"
         },
         "patches": {
+            "drupal/field_group": {
+                "Conditional Fields support": "https://www.drupal.org/files/issues/2019-12-10/field_group-support_conditional_fields-3099051-6.patch"
+            },
             "drupal/conditional_fields": {
                 "Notice: Trying to access array offset on value of type null\n": "https://www.drupal.org/files/issues/2021-01-21/3191984-3-notice-trying-to-access-offset-on-value-of-type-null.patch"
             }

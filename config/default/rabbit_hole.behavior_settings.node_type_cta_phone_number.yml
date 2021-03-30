@@ -9,6 +9,6 @@ entity_type_id: node_type
 entity_id: cta_phone_number
 action: page_redirect
 allow_override: 0
-redirect: /front
+redirect: /<front>
 redirect_code: 301
 redirect_fallback_action: access_denied

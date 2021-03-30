@@ -1,0 +1,29 @@
+uuid: 1ab897cc-64ad-4098-a0d0-c5338f84309d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_debit_card_category
+    - media.type.credit_or_debit_card
+    - taxonomy.vocabulary.debit_card_category
+id: media.credit_or_debit_card.field_debit_card_category
+field_name: field_debit_card_category
+entity_type: media
+bundle: credit_or_debit_card
+label: 'Debit Card Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      debit_card_category: debit_card_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: card_category_keywords
+field_type: entity_reference

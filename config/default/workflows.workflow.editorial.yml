@@ -10,7 +10,6 @@ dependencies:
     - node.type.ad
     - node.type.article_education_article
     - node.type.page
-    - node.type.cta_phone_number
   module:
     - content_moderation
 id: editorial
@@ -94,5 +93,4 @@ type_settings:
       - ad
       - article_education_article
       - page
-      - cta_phone_number
   default_moderation_state: draft
