@@ -87,6 +87,9 @@
                     "mode": "replace",
                     "path": "docroot/core/assets/scaffold/files/default.settings.php",
                     "overwrite": false
+                },
+                "[web-root]/.htaccess": {
+                    "append": "patches/htaccess-ssl.txt"
                 }
             },
             "gitignore": true
