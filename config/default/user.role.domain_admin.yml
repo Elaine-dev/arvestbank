@@ -34,7 +34,7 @@ permissions:
   - 'administer easy breadcrumb'
   - 'administer embed buttons'
   - 'administer entity browsers'
-  - 'administer external link popup'
+  - 'administer extlink'
   - 'administer filters'
   - 'administer footer menu items'
   - 'administer gtm'
