@@ -31,7 +31,6 @@ class NativePhpExtractor extends TextExtractorPluginBase {
 
     // If this is a pdf file.
     if (in_array($file->getMimeType(), $this->getPdfMimeTypes())) {
-      $output = '';
 
       // Load parser.
       $parser = new Parser();
@@ -44,17 +43,12 @@ class NativePhpExtractor extends TextExtractorPluginBase {
       // Load pdf into parser.
       $pdf = $parser->parseFile($file_path);
 
-      // Retrieve all pages from the pdf file.
-      $pages = $pdf->getPages();
-
-      // Loop over pages adding text to indexable output.
-      foreach ($pages as $page) {
-        $output .= $page->getText();
-      }
+      // Get contents of pdf.
+      $output = $pdf->getText();
 
       // Throw an error if we extracted no info from the pdf.
       if (is_null($output)) {
-        throw new \Exception('Pdftotext Exctractor is not available.');
+        throw new \Exception('Null output from NativePhpExtractor.');
       }
 
       // Return our output.

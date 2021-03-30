@@ -1,5 +1,5 @@
 extraction_method: native_php_extractor
-preserve_cache: true
+preserve_cache: false
 read_text_files_directly: false
 solr_extractor_configuration:
   solr_server: ''

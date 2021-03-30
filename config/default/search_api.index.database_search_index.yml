@@ -5,8 +5,8 @@ dependencies:
   config:
     - field.storage.node.body
     - field.storage.node.field_field_callout_phone_number
-    - field.storage.node.field_callout_title
     - field.storage.node.field_cta_text
+    - field.storage.node.field_callout_title
     - search_api.server.database_search_server
   module:
     - node
@@ -53,6 +53,10 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_cta_text
+  saa_field_acquiadam_asset_doc:
+    label: 'Search api attachments: Document'
+    property_path: saa_field_acquiadam_asset_doc
+    type: text
   title:
     label: Title
     datasource_id: 'entity:node'
@@ -86,12 +90,24 @@ processor_settings:
   file_attachments:
     excluded_extensions: 'aif art avi bmp gif ico mov oga ogv png psd ra ram rgb flv'
     number_indexed: 0
-    number_first_bytes: '1 MB'
+    number_first_bytes: '0'
     max_filesize: '0'
     excluded_private: 0
     excluded_mimes: 'audio/x-aiff image/x-jg video/x-msvideo image/x-ms-bmp image/gif image/vnd.microsoft.icon video/quicktime audio/ogg video/ogg image/png image/x-photoshop audio/x-realaudio audio/x-pn-realaudio image/x-rgb video/x-flv'
   language_with_fallback: {  }
   rendered_item: {  }
+  tokenizer:
+    all_fields: false
+    fields:
+      - body
+      - body_1
+    ignored: ._-
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '3'
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
 tracker_settings:
   default:
     indexing_order: fifo
