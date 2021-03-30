@@ -1,0 +1,86 @@
+uuid: df8665dc-b97c-4def-a468-217030a94d78
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - field.storage.node.field_field_callout_phone_number
+    - field.storage.node.field_cta_text
+    - field.storage.node.field_callout_title
+    - search_api.server.database_search_server
+  module:
+    - node
+    - search_api
+    - file
+id: database_search_index
+name: 'Database Search Index'
+description: ''
+read_only: false
+field_settings:
+  body:
+    label: body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  body_1:
+    label: 'CTA Phone Number » Content » Body'
+    datasource_id: 'entity:node'
+    property_path: 'field_field_callout_phone_number:entity:body'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+        - field.storage.node.field_field_callout_phone_number
+      module:
+        - node
+  field_callout_title:
+    label: 'CTA Title'
+    datasource_id: 'entity:node'
+    property_path: field_callout_title
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_callout_title
+  field_cta_text:
+    label: 'CTA text'
+    datasource_id: 'entity:node'
+    property_path: field_cta_text
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_cta_text
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:file': {  }
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - article_education_article
+        - calculators
+        - page
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: database_search_server

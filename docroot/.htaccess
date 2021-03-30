@@ -186,5 +186,5 @@ AddEncoding gzip svgz
   # Redirect all users to HTTPS
   RewriteCond %{HTTPS} off
   RewriteCond %{HTTP:X-Forwarded-Proto} !https
-  RewriteCond %{HTTP_HOST} !^local.dxp.com$
+  RewriteCond %{HTTP_HOST} !^local.arvestbank.com$
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
