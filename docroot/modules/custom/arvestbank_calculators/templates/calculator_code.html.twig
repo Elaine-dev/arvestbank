@@ -1,0 +1,22 @@
+{#
+/**
+ * @file calculator_code.html.twig
+ * Default theme implementation to present Calculator Code data.
+ *
+ * This template is used when viewing Calculator Code pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_calculator_code()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('calculator_code') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

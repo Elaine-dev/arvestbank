@@ -1,0 +1,21 @@
+# Calculator Code routing definition
+calculator_code.settings_tab:
+  route_name: calculator_code.settings
+  title: 'Settings'
+  base_route: calculator_code.settings
+
+entity.calculator_code.canonical:
+  route_name: entity.calculator_code.canonical
+  base_route: entity.calculator_code.canonical
+  title: 'View'
+
+entity.calculator_code.edit_form:
+  route_name: entity.calculator_code.edit_form
+  base_route: entity.calculator_code.canonical
+  title: 'Edit'
+
+entity.calculator_code.delete_form:
+  route_name:  entity.calculator_code.delete_form
+  base_route:  entity.calculator_code.canonical
+  title: Delete
+  weight: 10

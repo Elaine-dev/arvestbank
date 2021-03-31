@@ -1,0 +1,21 @@
+uuid: f669c6da-95cc-4d9b-b273-5c94b0490f43
+langcode: en
+status: true
+dependencies:
+  module:
+    - arvestbank_calculators
+id: calculator_code.field_calculator_code_descript
+field_name: field_calculator_code_descript
+entity_type: calculator_code
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

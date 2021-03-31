@@ -1,0 +1,34 @@
+# You may or may not find these aliases helpful - totally up to you.
+
+# inside terminal - contents of ~/.aliases
+# Git
+alias gs='git status'
+alias gbl='git branch --list'
+alias gc='git checkout'
+alias gpl='git pull'
+alias gph='git push'
+alias gac='git add --all && git commit -m'
+alias gpo='git push origin'
+
+# Vagrant
+alias vu='vagrant up'
+alias vh='vagrant halt'
+alias vs='vagrant ssh'
+
+# Composer
+alias comp='php -d memory_limit=-1 /usr/local/bin/composer'
+
+# Arvest
+# GIT ArVest Pull
+alias gitavp='git fetch --all && git checkout develop && git pull upstream develop && git rebase upstream/develop && git push origin'
+
+###########################
+
+# inside Drupal VM - contents of ~/.bash_aliases
+# Drush
+alias dr='drush'
+alias cc='drush cr'
+alias dru='drush uli'
+alias drcx='drush cr && drush cex'
+alias drci='drush cr && drush cim && drush cr'
+alias drc='/var/www/arvestbank/vendor/drupal/console/bin/drupal'

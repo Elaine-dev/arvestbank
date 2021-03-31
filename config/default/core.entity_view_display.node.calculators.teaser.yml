@@ -1,0 +1,32 @@
+uuid: d08a1efc-1199-4207-85a8-f87752c24829
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.calculators.body
+    - field.field.node.calculators.field_calculator
+    - node.type.calculators
+  module:
+    - text
+    - user
+id: node.calculators.teaser
+targetEntityType: node
+bundle: calculators
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_calculator: true

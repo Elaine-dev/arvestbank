@@ -59,5 +59,65 @@ definitions:
     parent: system.admin_reports
     expanded: false
     enabled: true
+  calculator_code__admin__structure__settings:
+    weight: 9
+    menu_name: admin
+    parent: system.admin_structure
+    enabled: true
+    expanded: false
+  entity__node_type__collection:
+    weight: 1
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  field_ui__display_mode:
+    weight: 2
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  entity__media_type__collection:
+    weight: 3
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  entity__menu__collection:
+    weight: 4
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  entity__taxonomy_vocabulary__collection:
+    weight: 5
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  entity__view__collection:
+    weight: 6
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  entity__webform__collection:
+    weight: 7
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  entity__calculator_code__collection:
+    weight: 8
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  config__conditional_field:
+    weight: 10
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
 _core:
   default_config_hash: jdY7AU0tU-QsjmiOw3W8vwpYMb-By--_MSFgbqKUTYM

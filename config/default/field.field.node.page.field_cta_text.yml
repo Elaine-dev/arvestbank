@@ -10,7 +10,7 @@ field_name: field_cta_text
 entity_type: node
 bundle: page
 label: 'CTA text'
-description: ''
+description: 'Optional text field to display instead of the phone number or branch location search bar.'
 required: false
 translatable: false
 default_value: {  }

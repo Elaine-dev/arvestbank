@@ -10,7 +10,6 @@ dependencies:
     - node.type.ad
     - node.type.article_education_article
     - node.type.page
-    - node.type.cta_phone_number
   module:
     - content_moderation
 id: editorial
@@ -60,12 +59,20 @@ type_settings:
       weight: 0
       from:
         - draft
+        - in_review
         - published
+    in_review:
+      label: 'In Review'
+      from:
+        - in_review
+      to: published
+      weight: 5
     publish:
       label: Publish
       to: published
       weight: 1
       from:
+        - archive
         - draft
         - published
     restore_from_archive:
@@ -84,6 +91,12 @@ type_settings:
         - unpublished
       to: in_review
       weight: 2
+    unpublished:
+      label: Unpublished
+      from:
+        - unpublished
+      to: published
+      weight: 6
   entity_types:
     media:
       - acquia_dam_document
@@ -94,5 +107,4 @@ type_settings:
       - ad
       - article_education_article
       - page
-      - cta_phone_number
   default_moderation_state: draft

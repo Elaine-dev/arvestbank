@@ -1,0 +1,20 @@
+add calculator code entities:
+  title: 'Create new Calculator Code entities'
+
+administer calculator code entities:
+  title: 'Administer Calculator Code entities'
+  description: 'Allow to access the administration form to configure Calculator Code entities.'
+  restrict access: true
+
+delete calculator code entities:
+  title: 'Delete Calculator Code entities'
+
+edit calculator code entities:
+  title: 'Edit Calculator Code entities'
+
+view published calculator code entities:
+  title: 'View published Calculator Code entities'
+
+view unpublished calculator code entities:
+  title: 'View unpublished Calculator Code entities'
+

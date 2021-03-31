@@ -1,0 +1,7 @@
+name: 'Arvest Bank Calculators'
+type: module
+description: 'Support for embedded calculators from TimeValueCalculators.com.'
+core_version_requirement: ^9
+package: 'Custom'
+dependencies:
+  - node
