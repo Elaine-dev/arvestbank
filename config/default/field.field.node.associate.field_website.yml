@@ -1,0 +1,23 @@
+uuid: 2c17bf99-931e-4b50-a851-819044ddf104
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_website
+    - node.type.associate
+  module:
+    - link
+id: node.associate.field_website
+field_name: field_website
+entity_type: node
+bundle: associate
+label: Website
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

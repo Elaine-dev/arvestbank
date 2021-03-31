@@ -1,0 +1,19 @@
+uuid: c6dc3d79-d19a-4bfc-b337-52c9ac4f4f95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.associate
+id: node.associate.field_location
+field_name: field_location
+entity_type: node
+bundle: associate
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
