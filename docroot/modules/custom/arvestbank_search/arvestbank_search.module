@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function arvestbank_menus_views_data_alter(array &$data) {
+
+  $data['search_api_index_database_search_index']['arvest_search_tabs'] = [
+    'title' => t('Arvest Search Tabs'),
+    'filter' => [
+      'title' => t('Arvest Search Tabs'),
+      'help' => t('Provides a tabs for the arvest search.'),
+      'field' => 'type',
+      'id' => 'arvest_search_tabs',
+    ],
+  ];
+
+}

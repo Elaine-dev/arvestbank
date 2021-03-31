@@ -7,6 +7,7 @@ dependencies:
     - field.storage.node.body
     - search_api.index.database_search_index
   module:
+    - arvestbank_search
     - file
     - search_api
     - text
@@ -567,6 +568,50 @@ display:
           min_length: null
           fields: {  }
           plugin_id: search_api_fulltext
+        arvest_search_tabs:
+          id: arvest_search_tabs
+          table: search_api_index_database_search_index
+          field: arvest_search_tabs
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Arvest Search Tabs'
+            description: ''
+            use_operator: false
+            operator: arvest_search_tabs_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: tab
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              reviewer: '0'
+              contributor: '0'
+              site_editor: '0'
+              domain_admin: '0'
+              enterprise_admin: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: arvest_search_tabs
       sorts: {  }
       title: 'Search Results'
       header: {  }
