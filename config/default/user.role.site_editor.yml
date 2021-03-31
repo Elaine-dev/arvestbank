@@ -16,7 +16,6 @@ permissions:
   - 'administer imce'
   - 'administer meta tags'
   - 'administer scheduler'
-  - 'administer taxonomy'
   - 'administer taxonomy_term display'
   - 'administer taxonomy_term fields'
   - 'administer taxonomy_term form display'
