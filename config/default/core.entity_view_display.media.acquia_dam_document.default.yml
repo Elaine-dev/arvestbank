@@ -6,6 +6,7 @@ dependencies:
     - field.field.media.acquia_dam_document.field_acquiadam_asset_descrip
     - field.field.media.acquia_dam_document.field_acquiadam_asset_doc
     - field.field.media.acquia_dam_document.field_acquiadam_asset_id
+    - field.field.media.acquia_dam_document.field_title
     - image.style.thumbnail
     - media.type.acquia_dam_document
   module:
@@ -18,6 +19,11 @@ targetEntityType: media
 bundle: acquia_dam_document
 mode: default
 content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   created:
     label: hidden
     type: timestamp
@@ -35,6 +41,14 @@ content:
       use_description_as_link_text: true
     third_party_settings: {  }
     type: file_default
+    region: content
+  field_title:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   name:
     type: string
@@ -56,4 +70,5 @@ content:
 hidden:
   field_acquiadam_asset_descrip: true
   field_acquiadam_asset_id: true
+  search_api_excerpt: true
   uid: true
