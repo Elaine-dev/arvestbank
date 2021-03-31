@@ -19,7 +19,6 @@ blacklist:
   - cohesion.sync.settings
 graylist:
   - shield.settings
-  - system.performance
   - qa_accounts.settings.yml
 graylist_dependents: true
 graylist_skip_equal: true
