@@ -7,6 +7,8 @@ dependencies:
     - field.field.node.article_education_article.body
     - field.field.node.article_education_article.field_education_article_category
     - field.field.node.article_education_article.field_meta_tags
+    - field.field.node.article_education_article.field_reference_text
+    - field.field.node.article_education_article.field_related_content_reference
     - field.field.node.article_education_article.field_yoast_seo
     - node.type.article_education_article
   module:
@@ -37,4 +39,6 @@ content:
 hidden:
   body: true
   field_meta_tags: true
+  field_reference_text: true
+  field_related_content_reference: true
   field_yoast_seo: true

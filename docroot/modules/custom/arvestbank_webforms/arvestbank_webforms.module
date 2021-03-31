@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Contains arvestbank_webforms.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function arvestbank_webforms_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the arvestbank_webforms module.
+    case 'help.page.arvestbank_webforms':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom support for webforms.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ */
+function arvestbank_webforms_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+  switch ($form_id) {
+
+    case "webform_submission_credit_card_dispute_add_form":
+      $form['#attached']['library'][] = 'arvestbank_webforms/credit_card_dispute';
+      break;
+
+  }
+
+  return $form;
+
+}

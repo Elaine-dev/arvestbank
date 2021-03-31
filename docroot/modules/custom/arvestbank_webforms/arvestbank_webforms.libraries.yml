@@ -1,0 +1,3 @@
+credit_card_dispute:
+  js:
+    js/credit_card_dispute.js: {}

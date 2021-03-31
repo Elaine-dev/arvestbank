@@ -1,4 +1,4 @@
-uuid: a542efb3-8a7f-423a-bd0a-03166675c5c8
+uuid: 888a1e90-48d2-44ca-b944-1fcf7488782f
 langcode: en
 status: open
 dependencies: {  }
@@ -8,11 +8,11 @@ weight: 0
 uid: 1
 template: false
 archive: false
-id: wealth_solutions_center
-title: 'Arvest Wealth Management Solutions Center'
-description: 'Form that allows Wealth Management Advisor contact opportunity.'
+id: auto_warranty_quote
+title: 'Route 66 Auto Service Contract Quote'
+description: ''
 category: ''
-elements: "header_markup:\n  '#type': webform_markup\n  '#markup': |\n    <h2>Access to Investment Planning Over the Phone</h2>\n    \n    <p>The Arvest Wealth Management Solutions Center team will help you with a range of options, from IRAs and retirement planning to building, managing, protecting and transitioning wealth through a disciplined and effective process. Our phone-based team of knowledgeable registered Client Advisors works with you to understand your life, your family, and your goals before developing an investment strategy that&#39;s tailored just for you.</p>\n    \n    <h2>A Tailored Approach to Your Needs</h2>\n    \n    <p>We always begin by listening to your story. It provides us crucial insight into your financial history and aspirations. After listening, we carefully, skillfully, and cautiously study and analyze them. This helps our team to design, create, and test your various objectives to help you succeed financially. As part of the analytical process, we also reach out to our strategic, in-house partners to create an effective, efficient, and long-term wealth strategy dedicated to your needs.</p>\n    \n    <h2>Monitoring Investment Performance</h2>\n    \n    <p>After we implement the process, our team will continue to monitor, evaluate, and adjust your plan accordingly. As we monitor and evaluate the plan, we will make sure that it meets your expectations, if not, we will quickly take appropriate action. Your plan will be continually monitored to verify that any inevitable changes in the market, regulations/laws, or your family will be consistent with your plan and objectives. We will also continue to meet annually to review the plan.</p>\n    \n    <h2>Let an Arvest Wealth Management Advisor Contact You</h2>\nbranch_location:\n  '#type': webform_term_select\n  '#title': 'Branch Location'\n  '#required': true\n  '#vocabulary': branch_location\n  '#breadcrumb_delimiter': ''\nname:\n  '#type': textfield\n  '#title': Name\n  '#required': true\ncurrent_address_with_city_and_state:\n  '#type': textfield\n  '#title': 'Current address with city and state'\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email address'\n  '#required': true\nphone_number:\n  '#type': tel\n  '#title': 'Phone Number'\n  '#required': true\nwhat_are_you_interested_in:\n  '#type': checkboxes\n  '#title': 'What are you interested in? (Check all that apply)'\n  '#options':\n    '401(k) Rollover': '401(k) Rollover'\n    IRA: IRA\n    'Investment Advice': 'Investment Advice'\n    'Retirement Planning': 'Retirement Planning'\n    Inheritance: Inheritance\n    Other: Other\n  '#options_display': two_columns\nhow_else_can_arvest_wealth_management_help_you:\n  '#type': textarea\n  '#title': 'How else can Arvest Wealth Management help you?'\n  '#states':\n    visible:\n      ':input[name=\"what_are_you_interested_in[Other]\"]':\n        checked: true"
+elements: "heading:\n  '#type': webform_markup\n  '#markup': |\n    <h3>Customized Rate Quote</h3>\n    \n    <p>For a free, no obligation Auto Service Contract Rate Quote, please fill out and submit the form below.</p>\n    \n    <p>Request your free rate quote and an Arvest lender will contact you with pricing options specific to your vehicle. Your lender is happy to answer any questions you have before you purchase. Your service contract can be purchased by check or financed (credit considerations apply).</p>\n    \ncustomer_information:\n  '#type': fieldset\n  '#title': 'Customer Information'\n  name_flexbox:\n    '#type': webform_flexbox\n    first_name:\n      '#type': textfield\n      '#title': 'First Name'\n      '#required': true\n    mi:\n      '#type': textfield\n      '#title': MI\n      '#size': 2\n    last_name:\n      '#type': textfield\n      '#title': 'Last Name'\n      '#required': true\n  address:\n    '#type': webform_address\n    '#title': Address\n    '#address__title': 'Street Address'\n    '#address__required': true\n    '#address_2__access': false\n    '#city__title': City\n    '#city__required': true\n    '#state_province__title': State\n    '#state_province__required': true\n    '#postal_code__title': ZIP\n    '#postal_code__required': true\n    '#country__access': false\n    '#required': true\n  email_address:\n    '#type': email\n    '#title': 'Email Address'\n    '#required': true\n  contact_flexbox:\n    '#type': webform_flexbox\n    phone_number:\n      '#type': tel\n      '#title': 'Phone Number'\n      '#placeholder': '(nnn) nnn-nnnn'\n      '#required': true\n    contact_me_with_quote_by_:\n      '#type': radios\n      '#title': 'Contact me with quote by:'\n      '#options':\n        Phone: Phone\n        Email: Email\nvehicle_information:\n  '#type': fieldset\n  '#title': 'Vehicle Information'\n  vehicle_flexbox:\n    '#type': webform_flexbox\n    year:\n      '#type': number\n      '#title': Year\n      '#required': true\n    make:\n      '#type': textfield\n      '#title': Make\n      '#required': true\n    exact_model:\n      '#type': textfield\n      '#title': 'Exact Model'\n      '#required': true\n  vin:\n    '#type': textfield\n    '#title': VIN\n    '#required': true\n  exact_odometer:\n    '#type': textfield\n    '#title': 'Exact Odometer'\n    '#required': true\n  check_all_that_apply:\n    '#type': checkboxes\n    '#title': 'Check all that apply'\n    '#options':\n      '1-Ton Vehicle': '1-Ton Vehicle'\n      '4 Wheel Drive': '4 Wheel Drive'\n      '4 Wheel Steering': '4 Wheel Steering'\n      'Commercial Use': 'Commercial Use'\n      Diesel: Diesel\n      'Dual Wheel Truck': 'Dual Wheel Truck'\n      'Super/Turbo Charger': 'Super/Turbo Charger'\n      'Wear and Tear': 'Wear and Tear'\nbranch_location:\n  '#type': webform_term_select\n  '#title': 'Branch Location'\n  '#vocabulary': branch_location\n  '#breadcrumb_delimiter': ''\n  '#required': true"
 css: ''
 javascript: ''
 settings:
@@ -25,7 +25,7 @@ settings:
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: both
+  form_title: source_entity
   form_submit_once: false
   form_exception_message: ''
   form_open_message: ''
@@ -94,7 +94,7 @@ settings:
   wizard_track: ''
   wizard_prev_button_label: ''
   wizard_next_button_label: ''
-  wizard_toggle: false
+  wizard_toggle: true
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
   preview: 0
@@ -114,7 +114,7 @@ settings:
   draft_pending_multiple_message: ''
   confirmation_type: inline
   confirmation_title: ''
-  confirmation_message: 'Thank you! You&#39;ll hear from us soon!'
+  confirmation_message: "We have recieved your request for a complimentary auto service contract rate quote and will respond to your request within 1 business day - Monday through Friday.<br />\r\n<br />\r\nThank you for the opportunity to quote this service for you."
   confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true

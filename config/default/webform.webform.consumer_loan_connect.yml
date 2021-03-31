@@ -1,4 +1,4 @@
-uuid: a542efb3-8a7f-423a-bd0a-03166675c5c8
+uuid: 80636022-f4ee-4845-96eb-96e45101ead7
 langcode: en
 status: open
 dependencies: {  }
@@ -8,11 +8,11 @@ weight: 0
 uid: 1
 template: false
 archive: false
-id: wealth_solutions_center
-title: 'Arvest Wealth Management Solutions Center'
-description: 'Form that allows Wealth Management Advisor contact opportunity.'
+id: consumer_loan_connect
+title: 'Personal Loan Specialist Connection'
+description: ''
 category: ''
-elements: "header_markup:\n  '#type': webform_markup\n  '#markup': |\n    <h2>Access to Investment Planning Over the Phone</h2>\n    \n    <p>The Arvest Wealth Management Solutions Center team will help you with a range of options, from IRAs and retirement planning to building, managing, protecting and transitioning wealth through a disciplined and effective process. Our phone-based team of knowledgeable registered Client Advisors works with you to understand your life, your family, and your goals before developing an investment strategy that&#39;s tailored just for you.</p>\n    \n    <h2>A Tailored Approach to Your Needs</h2>\n    \n    <p>We always begin by listening to your story. It provides us crucial insight into your financial history and aspirations. After listening, we carefully, skillfully, and cautiously study and analyze them. This helps our team to design, create, and test your various objectives to help you succeed financially. As part of the analytical process, we also reach out to our strategic, in-house partners to create an effective, efficient, and long-term wealth strategy dedicated to your needs.</p>\n    \n    <h2>Monitoring Investment Performance</h2>\n    \n    <p>After we implement the process, our team will continue to monitor, evaluate, and adjust your plan accordingly. As we monitor and evaluate the plan, we will make sure that it meets your expectations, if not, we will quickly take appropriate action. Your plan will be continually monitored to verify that any inevitable changes in the market, regulations/laws, or your family will be consistent with your plan and objectives. We will also continue to meet annually to review the plan.</p>\n    \n    <h2>Let an Arvest Wealth Management Advisor Contact You</h2>\nbranch_location:\n  '#type': webform_term_select\n  '#title': 'Branch Location'\n  '#required': true\n  '#vocabulary': branch_location\n  '#breadcrumb_delimiter': ''\nname:\n  '#type': textfield\n  '#title': Name\n  '#required': true\ncurrent_address_with_city_and_state:\n  '#type': textfield\n  '#title': 'Current address with city and state'\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email address'\n  '#required': true\nphone_number:\n  '#type': tel\n  '#title': 'Phone Number'\n  '#required': true\nwhat_are_you_interested_in:\n  '#type': checkboxes\n  '#title': 'What are you interested in? (Check all that apply)'\n  '#options':\n    '401(k) Rollover': '401(k) Rollover'\n    IRA: IRA\n    'Investment Advice': 'Investment Advice'\n    'Retirement Planning': 'Retirement Planning'\n    Inheritance: Inheritance\n    Other: Other\n  '#options_display': two_columns\nhow_else_can_arvest_wealth_management_help_you:\n  '#type': textarea\n  '#title': 'How else can Arvest Wealth Management help you?'\n  '#states':\n    visible:\n      ':input[name=\"what_are_you_interested_in[Other]\"]':\n        checked: true"
+elements: "markup:\n  '#type': webform_markup\n  '#markup': |\n    <h3>Connect With Us For Help With Your Personal Loan Needs</h3>\n    \n    <p>Interested in applying for or learning more about a personal loan from Arvest? Call us at (855) 662-5626 to get started or fill out the form below to have us contact you!</p>\n    \nname_flexbox:\n  '#type': webform_flexbox\n  first_name:\n    '#type': textfield\n    '#title': 'First Name'\n    '#required': true\n  last_name:\n    '#type': textfield\n    '#title': 'Last Name'\n    '#required': true\naddress:\n  '#type': webform_address\n  '#title': Address\n  '#address__access': false\n  '#address_2__access': false\n  '#city__title': City\n  '#city__required': true\n  '#state_province__title': State\n  '#state_province__required': true\n  '#postal_code__access': false\n  '#country__access': false\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email Address'\n  '#required': true\nphone_number:\n  '#type': tel\n  '#title': 'Phone Number'\n  '#placeholder': '(nnn) nnn-nnnn'\n  '#required': true\nexisting_arvest_customer_:\n  '#type': radios\n  '#title': 'Existing Arvest Customer?'\n  '#options':\n    'Yes': 'Yes'\n    'No': 'No'\n  '#required': true\nwhat_do_you_need_a_loan_for_check_all_that_apply_:\n  '#type': checkboxes\n  '#title': 'What do you need a loan for? (check all that apply)'\n  '#options':\n    'Buying a Vehicle': 'Buying a Vehicle'\n    'Making a Large Purchase': 'Making a Large Purchase'\n    'Home Improvement': 'Home Improvement'\n    Other: Other\n  '#required': true\nbranch_location:\n  '#type': webform_term_select\n  '#title': 'Branch Location'\n  '#vocabulary': branch_location\n  '#breadcrumb_delimiter': ''\n  '#required': true\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Submit\nterms:\n  '#type': webform_markup\n  '#markup': '<em>You expressly consent to be contacted by Arvest at the telephone number you have provided. You agree Arvest may contact you in any way, including calls delivered by an automatic telephone dialing system.</em>'"
 css: ''
 javascript: ''
 settings:
@@ -21,11 +21,11 @@ settings:
   ajax_progress_type: ''
   ajax_effect: ''
   ajax_speed: null
-  page: false
+  page: true
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: both
+  form_title: source_entity_webform
   form_submit_once: false
   form_exception_message: ''
   form_open_message: ''
@@ -49,9 +49,9 @@ settings:
   form_submit_back: false
   form_autofocus: false
   form_details_toggle: false
-  form_access_denied: default
+  form_access_denied: message
   form_access_denied_title: ''
-  form_access_denied_message: ''
+  form_access_denied_message: "Thank you for letting us know about your interest in a personal loan with Arvest.<br />\r\nOne of our knowledgeable lending associates will be contacting you shortly.<br />\r\nHave a great day!"
   form_access_denied_attributes: {  }
   form_file_limit: ''
   share: false
@@ -94,7 +94,7 @@ settings:
   wizard_track: ''
   wizard_prev_button_label: ''
   wizard_next_button_label: ''
-  wizard_toggle: false
+  wizard_toggle: true
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
   preview: 0
@@ -112,9 +112,9 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: inline
+  confirmation_type: page
   confirmation_title: ''
-  confirmation_message: 'Thank you! You&#39;ll hear from us soon!'
+  confirmation_message: ''
   confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true

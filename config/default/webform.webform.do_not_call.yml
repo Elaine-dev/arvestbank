@@ -1,4 +1,4 @@
-uuid: a542efb3-8a7f-423a-bd0a-03166675c5c8
+uuid: 4b3cd057-e07d-47e4-b01c-50d82ee8ff96
 langcode: en
 status: open
 dependencies: {  }
@@ -8,11 +8,11 @@ weight: 0
 uid: 1
 template: false
 archive: false
-id: wealth_solutions_center
-title: 'Arvest Wealth Management Solutions Center'
-description: 'Form that allows Wealth Management Advisor contact opportunity.'
+id: do_not_call
+title: 'Do Not Call Request'
+description: ''
 category: ''
-elements: "header_markup:\n  '#type': webform_markup\n  '#markup': |\n    <h2>Access to Investment Planning Over the Phone</h2>\n    \n    <p>The Arvest Wealth Management Solutions Center team will help you with a range of options, from IRAs and retirement planning to building, managing, protecting and transitioning wealth through a disciplined and effective process. Our phone-based team of knowledgeable registered Client Advisors works with you to understand your life, your family, and your goals before developing an investment strategy that&#39;s tailored just for you.</p>\n    \n    <h2>A Tailored Approach to Your Needs</h2>\n    \n    <p>We always begin by listening to your story. It provides us crucial insight into your financial history and aspirations. After listening, we carefully, skillfully, and cautiously study and analyze them. This helps our team to design, create, and test your various objectives to help you succeed financially. As part of the analytical process, we also reach out to our strategic, in-house partners to create an effective, efficient, and long-term wealth strategy dedicated to your needs.</p>\n    \n    <h2>Monitoring Investment Performance</h2>\n    \n    <p>After we implement the process, our team will continue to monitor, evaluate, and adjust your plan accordingly. As we monitor and evaluate the plan, we will make sure that it meets your expectations, if not, we will quickly take appropriate action. Your plan will be continually monitored to verify that any inevitable changes in the market, regulations/laws, or your family will be consistent with your plan and objectives. We will also continue to meet annually to review the plan.</p>\n    \n    <h2>Let an Arvest Wealth Management Advisor Contact You</h2>\nbranch_location:\n  '#type': webform_term_select\n  '#title': 'Branch Location'\n  '#required': true\n  '#vocabulary': branch_location\n  '#breadcrumb_delimiter': ''\nname:\n  '#type': textfield\n  '#title': Name\n  '#required': true\ncurrent_address_with_city_and_state:\n  '#type': textfield\n  '#title': 'Current address with city and state'\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email address'\n  '#required': true\nphone_number:\n  '#type': tel\n  '#title': 'Phone Number'\n  '#required': true\nwhat_are_you_interested_in:\n  '#type': checkboxes\n  '#title': 'What are you interested in? (Check all that apply)'\n  '#options':\n    '401(k) Rollover': '401(k) Rollover'\n    IRA: IRA\n    'Investment Advice': 'Investment Advice'\n    'Retirement Planning': 'Retirement Planning'\n    Inheritance: Inheritance\n    Other: Other\n  '#options_display': two_columns\nhow_else_can_arvest_wealth_management_help_you:\n  '#type': textarea\n  '#title': 'How else can Arvest Wealth Management help you?'\n  '#states':\n    visible:\n      ':input[name=\"what_are_you_interested_in[Other]\"]':\n        checked: true"
+elements: "markup:\n  '#type': webform_markup\n  '#markup': 'If you no longer wish to receive telemarketing phone calls from us, please complete the form below. We will add you to our Telemarketing &quot;Do Not Call&quot; list. Required fields are marked'\nname_flexbox:\n  '#type': webform_flexbox\n  first_name:\n    '#type': textfield\n    '#title': 'First Name'\n    '#required': true\n  last_name:\n    '#type': textfield\n    '#title': 'Last Name'\n    '#required': true\naddress:\n  '#type': webform_address\n  '#title': Address\n  '#address__access': false\n  '#address_2__access': false\n  '#city__title': City\n  '#state_province__title': State\n  '#postal_code__title': ZIP\n  '#country__access': false\nnumber_flexbox:\n  '#type': webform_flexbox\n  phone:\n    '#type': tel\n    '#title': 'Phone Number'\n    '#placeholder': '(nnn) nnn-nnnn'\n    '#required': true\n  account_number:\n    '#type': textfield\n    '#title': 'Account Number'\nsocial_security_number:\n  '#type': textfield\n  '#title': 'Social Security Number'\n  '#placeholder': nnn-nn-nnnn"
 css: ''
 javascript: ''
 settings:
@@ -25,7 +25,7 @@ settings:
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: both
+  form_title: source_entity_webform
   form_submit_once: false
   form_exception_message: ''
   form_open_message: ''
@@ -94,7 +94,7 @@ settings:
   wizard_track: ''
   wizard_prev_button_label: ''
   wizard_next_button_label: ''
-  wizard_toggle: false
+  wizard_toggle: true
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
   preview: 0
@@ -114,7 +114,7 @@ settings:
   draft_pending_multiple_message: ''
   confirmation_type: inline
   confirmation_title: ''
-  confirmation_message: 'Thank you! You&#39;ll hear from us soon!'
+  confirmation_message: 'Your Do-Not-Call request has been received.'
   confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true

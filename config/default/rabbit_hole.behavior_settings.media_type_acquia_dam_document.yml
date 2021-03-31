@@ -7,8 +7,8 @@ dependencies:
 id: media_type_acquia_dam_document
 entity_type_id: media_type
 entity_id: acquia_dam_document
-action: display_page
+action: page_redirect
 allow_override: 0
-redirect: ''
+redirect: /<front>
 redirect_code: 301
 redirect_fallback_action: access_denied

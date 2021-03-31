@@ -22,7 +22,7 @@ default_value_callback: ''
 settings:
   file_directory: acquiadam/documents
   file_extensions: 'txt pdf doc docx xls csv ppt'
-  max_filesize: ''
+  max_filesize: '50 MB'
   description_field: false
   handler: 'default:file'
   handler_settings: {  }
