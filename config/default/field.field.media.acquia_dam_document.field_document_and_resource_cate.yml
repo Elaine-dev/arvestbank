@@ -1,0 +1,29 @@
+uuid: 9debb5ea-67ae-44db-9833-c06396e0961d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_document_and_resource_cate
+    - media.type.acquia_dam_document
+    - taxonomy.vocabulary.document_and_resource_category
+id: media.acquia_dam_document.field_document_and_resource_cate
+field_name: field_document_and_resource_cate
+entity_type: media
+bundle: acquia_dam_document
+label: 'Document and Resource category'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      document_and_resource_category: document_and_resource_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

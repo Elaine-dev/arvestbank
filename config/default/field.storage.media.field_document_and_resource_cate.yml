@@ -1,0 +1,20 @@
+uuid: 279055ba-51ed-4f90-876f-dea0fcf3b9a3
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - taxonomy
+id: media.field_document_and_resource_cate
+field_name: field_document_and_resource_cate
+entity_type: media
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
