@@ -6,6 +6,8 @@ dependencies:
     - field.field.node.article_education_article.body
     - field.field.node.article_education_article.field_education_article_category
     - field.field.node.article_education_article.field_meta_tags
+    - field.field.node.article_education_article.field_reference_text
+    - field.field.node.article_education_article.field_related_content_reference
     - field.field.node.article_education_article.field_yoast_seo
     - node.type.article_education_article
   module:
@@ -22,6 +24,21 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_reference_text:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_related_content_reference:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
 hidden:
   content_moderation_control: true

@@ -1,0 +1,21 @@
+uuid: 58b7ea78-8ce0-4b0a-ab4d-d35fc5bf1715
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reference_text
+    - node.type.article_education_article
+  module:
+    - text
+id: node.article_education_article.field_reference_text
+field_name: field_reference_text
+entity_type: node
+bundle: article_education_article
+label: 'Reference Text'
+description: 'For example: This content has been provided by Practical Money Skills and is intended to serve as a general guideline.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
