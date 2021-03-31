@@ -1,4 +1,4 @@
-uuid: a542efb3-8a7f-423a-bd0a-03166675c5c8
+uuid: 7bf4b398-fffe-4882-a4c3-41dd434a78bf
 langcode: en
 status: open
 dependencies: {  }
@@ -8,11 +8,11 @@ weight: 0
 uid: 1
 template: false
 archive: false
-id: wealth_solutions_center
-title: 'Arvest Wealth Management Solutions Center'
-description: 'Form that allows Wealth Management Advisor contact opportunity.'
+id: opt_out_request
+title: 'Opt-Out Request'
+description: 'Opt Out of information sharing with Arvest Affiliates by filling out the online Opt Out request form.'
 category: ''
-elements: "header_markup:\n  '#type': webform_markup\n  '#markup': |\n    <h2>Access to Investment Planning Over the Phone</h2>\n    \n    <p>The Arvest Wealth Management Solutions Center team will help you with a range of options, from IRAs and retirement planning to building, managing, protecting and transitioning wealth through a disciplined and effective process. Our phone-based team of knowledgeable registered Client Advisors works with you to understand your life, your family, and your goals before developing an investment strategy that&#39;s tailored just for you.</p>\n    \n    <h2>A Tailored Approach to Your Needs</h2>\n    \n    <p>We always begin by listening to your story. It provides us crucial insight into your financial history and aspirations. After listening, we carefully, skillfully, and cautiously study and analyze them. This helps our team to design, create, and test your various objectives to help you succeed financially. As part of the analytical process, we also reach out to our strategic, in-house partners to create an effective, efficient, and long-term wealth strategy dedicated to your needs.</p>\n    \n    <h2>Monitoring Investment Performance</h2>\n    \n    <p>After we implement the process, our team will continue to monitor, evaluate, and adjust your plan accordingly. As we monitor and evaluate the plan, we will make sure that it meets your expectations, if not, we will quickly take appropriate action. Your plan will be continually monitored to verify that any inevitable changes in the market, regulations/laws, or your family will be consistent with your plan and objectives. We will also continue to meet annually to review the plan.</p>\n    \n    <h2>Let an Arvest Wealth Management Advisor Contact You</h2>\nbranch_location:\n  '#type': webform_term_select\n  '#title': 'Branch Location'\n  '#required': true\n  '#vocabulary': branch_location\n  '#breadcrumb_delimiter': ''\nname:\n  '#type': textfield\n  '#title': Name\n  '#required': true\ncurrent_address_with_city_and_state:\n  '#type': textfield\n  '#title': 'Current address with city and state'\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email address'\n  '#required': true\nphone_number:\n  '#type': tel\n  '#title': 'Phone Number'\n  '#required': true\nwhat_are_you_interested_in:\n  '#type': checkboxes\n  '#title': 'What are you interested in? (Check all that apply)'\n  '#options':\n    '401(k) Rollover': '401(k) Rollover'\n    IRA: IRA\n    'Investment Advice': 'Investment Advice'\n    'Retirement Planning': 'Retirement Planning'\n    Inheritance: Inheritance\n    Other: Other\n  '#options_display': two_columns\nhow_else_can_arvest_wealth_management_help_you:\n  '#type': textarea\n  '#title': 'How else can Arvest Wealth Management help you?'\n  '#states':\n    visible:\n      ':input[name=\"what_are_you_interested_in[Other]\"]':\n        checked: true"
+elements: "header_markup:\n  '#type': webform_markup\n  '#markup': 'To limit our sharing of your information among Arvest affiliates, please complete this form and click the submit button. *Required fields'\nbranch_location:\n  '#type': webform_term_select\n  '#title': 'Branch Location'\n  '#required': true\n  '#vocabulary': branch_location\n  '#breadcrumb_delimiter': ''\nname:\n  '#type': webform_name\n  '#title': Name\n  '#title__access': false\n  '#first__title': 'First Name'\n  '#first__required': true\n  '#middle__access': false\n  '#last__title': 'Last Name'\n  '#last__required': true\n  '#suffix__access': false\n  '#degree__access': false\naddress:\n  '#type': webform_address\n  '#title': Address\n  '#address__access': false\n  '#address_2__access': false\n  '#city__title': City\n  '#city__required': true\n  '#state_province__title': State\n  '#state_province__required': true\n  '#state_province__options': state_province_codes\n  '#postal_code__title': Zip\n  '#postal_code__required': true\n  '#country__access': false\nemail_address:\n  '#type': email\n  '#title': 'Email address'\naccount_number:\n  '#type': textfield\n  '#title': 'Account Number'\n  '#required': true\nsocial_security_number:\n  '#type': textfield\n  '#title': 'Social Security Number'\n  '#placeholder': nnn-nn-nnnn\n  '#required': true\n  '#pattern': '\\d{3}[. -]?\\d{2}[. -]?\\d{4}'\n  '#pattern_error': 'Please enter the Social Security Number in the correct format: nnn-nn-nnnn'\ndo_not_share:\n  '#type': checkboxes\n  '#title': 'Please check any/all you want to limit'\n  '#options':\n    no_everyday_business: 'Do not share information about my creditworthiness with your affiliates for their everyday business purposes.'\n    no_marketing: 'Do not allow your affiliates to use my personal information to market to me.'\nonly_me:\n  '#type': checkboxes\n  '#title': 'If you have a joint account, your choice(s) will apply to everyone on your account unless you check below:'\n  '#options':\n    only_me: 'Apply my choice(s) only to me.'"
 css: ''
 javascript: ''
 settings:
@@ -114,7 +114,7 @@ settings:
   draft_pending_multiple_message: ''
   confirmation_type: inline
   confirmation_title: ''
-  confirmation_message: 'Thank you! You&#39;ll hear from us soon!'
+  confirmation_message: 'Your Opt-out request has been received.'
   confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
