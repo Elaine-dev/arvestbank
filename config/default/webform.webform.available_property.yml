@@ -1,0 +1,195 @@
+uuid: fd1e2268-1783-489e-81fc-ad10ff45d51e
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: available_property
+title: 'Available Properties'
+description: 'Form to display available property for sale includes houses, vacant lots, acreage, commercial and new construction.'
+category: ''
+elements: "markup:\n  '#type': webform_markup\n  '#markup': |\n    <h2>Real Estate Properties Available</h2>\n    <p>Arvest Bank’s Special Assets Department facilitates the sale of foreclosed property (ORE, OREO). Available property includes houses, vacant lots, acreage, commercial and new construction.<br><br>Each foreclosure is managed by a local Arvest banker, listed individually in the real estate description. It is important to contact that banker directly for information.</p>\n    <p>Please select your search criteria below and click \"Continue\" to view a list of available foreclosures.</p>\n    \ncity:\n  '#type': select\n  '#title': City\n  '#options':\n    Altus: Altus\n    Amity: Amity\n    Bartlesville: Bartlesville\n    Bigelow: Bigelow\n    Blackwell: Blackwell\n    'Blue Eye': 'Blue Eye'\n    Blytheville: Blytheville\n    'Broken Arrow': 'Broken Arrow'\n    'Bull Shoals': 'Bull Shoals'\n    Cabot: Cabot\n    Chickasha: Chickasha\n    Duncan: Duncan\n    'Fort Smith': 'Fort Smith'\n    Greenwood: Greenwood\n    'Heber Springs': 'Heber Springs'\n    'Hot Springs': 'Hot Springs'\n    Huntsville: Huntsville\n    'Little Rock': 'Little Rock'\n    Maumelle: Maumelle\n    Mena: Mena\n    'Mountain Home': 'Mountain Home'\n    Perryville: Perryville\n    Porter: Porter\n    Randlett: Randlett\n    Russellville: Russellville\n    'Shell Knob': 'Shell Knob'\n    'Siloam Springs': 'Siloam Springs'\n    Springdale: Springdale\n    Tulsa: Tulsa\n  '#empty_option': Any\nstate:\n  '#type': select\n  '#title': State\n  '#options':\n    AR: AR\n    MO: MO\n    OK: OK\n  '#empty_option': Any\nzip_code:\n  '#type': select\n  '#title': 'Zip Code'\n  '#options':\n    65611: 65611\n    65747: 65747\n    71901: 71901\n    71921: 71921\n    71953: 71953\n    72016: 72016\n    72023: 72023\n    72113: 72113\n    72126: 72126\n    72205: 72205\n    72206: 72206\n    72315: 72315\n    72543: 72543\n    72619: 72619\n    72653: 72653\n    72740: 72740\n    72761: 72761\n    72762: 72762\n    72802: 72802\n    72821: 72821\n    72823: 72823\n    72903: 72903\n    72936: 72936\n    73018: 73018\n    73533: 73533\n    73562: 73562\n    74006: 74006\n    74012: 74012\n    74133: 74133\n    74454: 74454\n  '#empty_option': Any\nprice_range_markup:\n  '#type': webform_markup\n  '#display_on': both\n  '#markup': 'Price Range:'\nminimum:\n  '#type': select\n  '#title': Minimum\n  '#options':\n    25000: '$25,000'\n    50000: '$50,000'\n    60000: '$60,000'\n    70000: '$70,000'\n    80000: '$80,000'\n    90000: '$90,000'\n    100000: '$100,000'\n    125000: '$125,000'\n    150000: '$150,000'\n    175000: '$175,000'\n    200000: '$200,000'\n    250000: '$250,000'\n    300000: '$300,000'\n    400000: '$400,000'\n    500000: '$500,000'\n    '1.0E+6': '$1,000,000'\n  '#empty_option': None\n  '#empty_value': '0'\nmaximum:\n  '#type': select\n  '#title': Maximum\n  '#options':\n    25000: '$25,000'\n    50000: '$50,000'\n    60000: '$60,000'\n    70000: '$70,000'\n    80000: '$80,000'\n    90000: '$90,000'\n    100000: '$100,000'\n    125000: '$125,000'\n    150000: '$150,000'\n    175000: '$175,000'\n    200000: '$200,000'\n    250000: '$250,000'\n    300000: '$300,000'\n    400000: '$400,000'\n    500000: '$500,000'\n    '1.0E+6': '$1,000,000'\n  '#empty_option': None\n  '#empty_value': '1000000000.00'\nproperty_type:\n  '#type': select\n  '#title': 'Property Type'\n  '#options':\n    'Acreage - Commercial Raw Land': 'Acreage - Commercial Raw Land'\n    'Acreage - Residential Raw Land': 'Acreage - Residential Raw Land'\n    'Commercial - Apts. (Greater than 4 units)': 'Commercial - Apts. (Greater than 4 units)'\n    'Commercial - Bar/Club': 'Commercial - Bar/Club'\n    'Commercial - Bowling Alley': 'Commercial - Bowling Alley'\n    'Commercial - Church': 'Commercial - Church'\n    'Commercial - Convenience Store': 'Commercial - Convenience Store'\n    'Commercial - Farm': 'Commercial - Farm'\n    'Commercial - Health Club': 'Commercial - Health Club'\n    'Commercial - Hospitality': 'Commercial - Hospitality'\n    'Commercial - Improved Land': 'Commercial - Improved Land'\n    'Commercial - Industrial/Warehouse': 'Commercial - Industrial/Warehouse'\n    'Commercial - Marina': 'Commercial - Marina'\n    'Commercial - Medical/Health Care Facility': 'Commercial - Medical/Health Care Facility'\n    'Commercial - Office': 'Commercial - Office'\n    'Commercial - Retail': 'Commercial - Retail'\n    'Commercial - Self-Storage': 'Commercial - Self-Storage'\n    'Commercial - Senior Housing': 'Commercial - Senior Housing'\n    'Commercial - Theater': 'Commercial - Theater'\n    'Residential - Boat Dock': 'Residential - Boat Dock'\n    'Residential - Condo': 'Residential - Condo'\n    'Residential - Duplex, Triplex, or Fourplex': 'Residential - Duplex, Triplex, or Fourplex'\n    'Residential - Estate Home': 'Residential - Estate Home'\n    'Residential - Farm': 'Residential - Farm'\n    'Residential - Improved Subdivision': 'Residential - Improved Subdivision'\n    'Residential - Mobile/Modular Home': 'Residential - Mobile/Modular Home'\n    'Residential - Single Family Dwelling': 'Residential - Single Family Dwelling'\n    'Residential Lot - Lots': 'Residential Lot - Lots'\n  '#empty_option': Any\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Continue"
+css: ''
+javascript: ''
+settings:
+  ajax: true
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: false
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: modal
+  confirmation_title: ''
+  confirmation_message: '(list of available foreclosures)'
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: true
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }
