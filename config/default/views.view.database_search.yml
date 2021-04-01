@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block.block.alternateexposedfiltersblock
     - field.storage.media.field_title
     - field.storage.node.body
     - search_api.index.database_search_index
@@ -40,7 +41,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Ask
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -539,11 +540,11 @@ display:
             operator_list: {  }
             identifier: search
             required: false
-            remember: false
+            remember: true
             multiple: false
             remember_roles:
+              anonymous: anonymous
               authenticated: authenticated
-              anonymous: '0'
               reviewer: '0'
               contributor: '0'
               site_editor: '0'
@@ -581,19 +582,19 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: 'Arvest Search Tabs'
+            label: ''
             description: ''
             use_operator: false
             operator: arvest_search_tabs_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: tab
+            identifier: search-tab
             required: false
-            remember: false
+            remember: true
             multiple: false
             remember_roles:
+              anonymous: anonymous
               authenticated: authenticated
-              anonymous: '0'
               reviewer: '0'
               contributor: '0'
               site_editor: '0'
@@ -612,11 +613,46 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: arvest_search_tabs
-      sorts: {  }
+      sorts:
+        search_api_relevance:
+          id: search_api_relevance
+          table: search_api_index_database_search_index
+          field: search_api_relevance
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
       title: 'Search Results'
-      header: {  }
+      header:
+        entity_block:
+          id: entity_block
+          table: views
+          field: entity_block
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: true
+          target: alternateexposedfiltersblock
+          view_mode: default
+          bypass_access: false
+          plugin_id: entity
       footer: {  }
-      empty: {  }
+      empty:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          content: 'Your search returned 0 results.'
+          plugin_id: result
       relationships: {  }
       arguments: {  }
       display_extenders: {  }

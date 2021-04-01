@@ -51,33 +51,81 @@ class ArvestSearchTabs extends FilterPluginBase {
    */
   public function query() {
 
+    // Get exposed filter values.
+    $exposedFilterValues = $this->view->getExposedInput();
+
+    // If we have a non-null and non-all value for the tab.
+    if (
+      isset($exposedFilterValues['search-tab'])
+      && $exposedFilterValues['search-tab'] != ''
+      && $exposedFilterValues['search-tab'] != 'all'
+    ) {
+
+      // Get query fields to ensure the fields we want to filter with are there.
+      $queryFields = $this->query->getIndex()->getFields();
+
+      // Documents tab.
+      if (
+        isset($queryFields['media_type'])
+        && $exposedFilterValues['search-tab'] == 'documents'
+      ) {
+        $this->query->addCondition('media_type', 'acquia_dam_document');
+      }
+
+      // Financial Insights tab.
+      if (
+        isset($queryFields['type'])
+        && $exposedFilterValues['search-tab'] == 'financial_insights'
+      ) {
+        $this->query->addCondition('type', 'article_education_article');
+      }
+
+      // Services tab.
+      // Currently this is everything not in insights and documents.
+      // I expect the client to come back with better specifications.
+      if (
+        isset($queryFields['type'])
+        && isset($queryFields['media_type'])
+        && $exposedFilterValues['search-tab'] == 'services'
+      ) {
+        $this->query->addCondition('type', 'article_education_article', '<>');
+        $this->query->addCondition('media_type', 'acquia_dam_document', '<>');
+      }
+
+    }
+
   }
 
   /**
    * {@inheritdoc}
    */
   public function buildExposedForm(&$form, FormStateInterface $form_state) {
-    $form['tabs'] = [
-      '#theme' => 'item_list',
-      '#list_type' => 'ul',
-      '#title' => 'My List',
-      '#items' => [
-        [
-          '#markup' => '<a href="#" class="all-results search-tab">All Results</a>',
-        ],
-        [
-          '#markup' => '<a href="#" class="services search-tab">Services</a>',
-        ],
-        [
-          '#markup' => '<a href="#" class="all-results search-tab">Documents</a>',
-        ],
-        [
-          '#markup' => '<a href="#" class="all-results search-tab">Financial Insights</a>',
-        ],
+
+    // Get the active tab.
+    $activeSearchTab = 'all';
+    if (
+      isset($_GET['search-tab'])
+      && $_GET['search-tab'] != ''
+    ) {
+      $activeSearchTab = $_GET['search-tab'];
+    }
+
+    // Define our search tabs.
+    $form['search-tab'] = [
+      '#type' => 'radios',
+      '#default_value' => $activeSearchTab,
+      '#id' => 'search-tab',
+      '#options' => [
+        'all' => $this->t('All Results'),
+        'services' => $this->t('Services'),
+        'documents' => $this->t('Documents'),
+        'financial_insights' => $this->t('Financial Insights'),
       ],
-      '#attributes' => ['class' => 'mylist'],
-      '#wrapper_attributes' => ['class' => 'container'],
+      '#attributes' => ['class' => ['search-tabs']],
+      '#attached' => ['library' => ['arvestbank_search/search-tabs']],
+      '#cache' => ['contexts' => ['url.query_args']],
     ];
+
   }
 
   /**
