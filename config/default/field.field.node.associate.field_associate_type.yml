@@ -1,0 +1,29 @@
+uuid: e1075101-8f6c-495f-8191-33128a872eab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_associate_type
+    - node.type.associate
+    - taxonomy.vocabulary.associate_category
+id: node.associate.field_associate_type
+field_name: field_associate_type
+entity_type: node
+bundle: associate
+label: 'Associate Type'
+description: '(Lenders, advisors, trust officers, private bankers, estate planning)'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      associate_category: associate_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

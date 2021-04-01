@@ -1,0 +1,19 @@
+uuid: a48f291f-6abc-4e48-9165-e848b756ca09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_branch_nickname
+    - node.type.associate
+id: node.associate.field_branch_nickname
+field_name: field_branch_nickname
+entity_type: node
+bundle: associate
+label: 'Branch Nickname'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

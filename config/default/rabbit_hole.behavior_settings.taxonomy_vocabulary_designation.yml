@@ -1,0 +1,14 @@
+uuid: adc522a0-f619-42f5-bdfc-965012d8925f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.designation
+id: taxonomy_vocabulary_designation
+entity_type_id: taxonomy_vocabulary
+entity_id: designation
+action: page_redirect
+allow_override: 1
+redirect: /<front>
+redirect_code: 301
+redirect_fallback_action: access_denied

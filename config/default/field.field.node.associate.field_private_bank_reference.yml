@@ -1,0 +1,29 @@
+uuid: 75839a17-04dd-4cdd-b553-2e802ecd9c4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_private_bank_reference
+    - node.type.associate
+    - node.type.private_bank_location
+id: node.associate.field_private_bank_reference
+field_name: field_private_bank_reference
+entity_type: node
+bundle: associate
+label: 'Private Bank Reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      private_bank_location: private_bank_location
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
