@@ -12,7 +12,7 @@ id: consumer_loan_connect
 title: 'Personal Loan Specialist Connection'
 description: ''
 category: ''
-elements: "markup:\n  '#type': webform_markup\n  '#markup': |\n    <h3>Connect With Us For Help With Your Personal Loan Needs</h3>\n    \n    <p>Interested in applying for or learning more about a personal loan from Arvest? Call us at (855) 662-5626 to get started or fill out the form below to have us contact you!</p>\n    \nname_flexbox:\n  '#type': webform_flexbox\n  first_name:\n    '#type': textfield\n    '#title': 'First Name'\n    '#required': true\n  last_name:\n    '#type': textfield\n    '#title': 'Last Name'\n    '#required': true\naddress:\n  '#type': webform_address\n  '#title': Address\n  '#address__access': false\n  '#address_2__access': false\n  '#city__title': City\n  '#city__required': true\n  '#state_province__title': State\n  '#state_province__required': true\n  '#postal_code__access': false\n  '#country__access': false\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email Address'\n  '#required': true\nphone_number:\n  '#type': tel\n  '#title': 'Phone Number'\n  '#placeholder': '(nnn) nnn-nnnn'\n  '#required': true\nexisting_arvest_customer_:\n  '#type': radios\n  '#title': 'Existing Arvest Customer?'\n  '#options':\n    'Yes': 'Yes'\n    'No': 'No'\n  '#required': true\nwhat_do_you_need_a_loan_for_check_all_that_apply_:\n  '#type': checkboxes\n  '#title': 'What do you need a loan for? (check all that apply)'\n  '#options':\n    'Buying a Vehicle': 'Buying a Vehicle'\n    'Making a Large Purchase': 'Making a Large Purchase'\n    'Home Improvement': 'Home Improvement'\n    Other: Other\n  '#required': true\nbranch_location:\n  '#type': webform_term_select\n  '#title': 'Branch Location'\n  '#vocabulary': branch_location\n  '#breadcrumb_delimiter': ''\n  '#required': true\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Submit\nterms:\n  '#type': webform_markup\n  '#markup': '<em>You expressly consent to be contacted by Arvest at the telephone number you have provided. You agree Arvest may contact you in any way, including calls delivered by an automatic telephone dialing system.</em>'"
+elements: "markup:\n  '#type': webform_markup\n  '#markup': |\n    <h3>Connect With Us For Help With Your Personal Loan Needs</h3>\n    \n    <p>Interested in applying for or learning more about a personal loan from Arvest? Call us at (855) 662-5626 to get started or fill out the form below to have us contact you!</p>\n    \nbranch_location:\n  '#type': webform_term_select\n  '#title': 'Branch Location'\n  '#vocabulary': branch_location\n  '#breadcrumb_delimiter': ''\n  '#required': true\nname_flexbox:\n  '#type': webform_flexbox\n  first_name:\n    '#type': textfield\n    '#title': 'First Name'\n    '#required': true\n  last_name:\n    '#type': textfield\n    '#title': 'Last Name'\n    '#required': true\naddress:\n  '#type': webform_address\n  '#title': Address\n  '#address__access': false\n  '#address_2__access': false\n  '#city__title': City\n  '#city__required': true\n  '#state_province__title': State\n  '#state_province__required': true\n  '#postal_code__access': false\n  '#country__access': false\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email Address'\n  '#required': true\nphone_number:\n  '#type': tel\n  '#title': 'Phone Number'\n  '#placeholder': '(nnn) nnn-nnnn'\n  '#required': true\nexisting_arvest_customer_:\n  '#type': radios\n  '#title': 'Existing Arvest Customer?'\n  '#options':\n    'Yes': 'Yes'\n    'No': 'No'\n  '#required': true\nwhat_do_you_need_a_loan_for_check_all_that_apply_:\n  '#type': checkboxes\n  '#title': 'What do you need a loan for? (check all that apply)'\n  '#options':\n    'Buying a Vehicle': 'Buying a Vehicle'\n    'Making a Large Purchase': 'Making a Large Purchase'\n    'Home Improvement': 'Home Improvement'\n    Other: Other\n  '#required': true\nwhat_do_you_need_a_personal_loan_for_other:\n  '#type': textarea\n  '#title': 'What do you need a personal loan for?'\n  '#required': true\n  '#states':\n    visible:\n      ':input[name=\"what_do_you_need_a_loan_for_check_all_that_apply_[Other]\"]':\n        checked: true\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Submit\nterms:\n  '#type': webform_markup\n  '#markup': '<em>You expressly consent to be contacted by Arvest at the telephone number you have provided. You agree Arvest may contact you in any way, including calls delivered by an automatic telephone dialing system.</em>'"
 css: ''
 javascript: ''
 settings:
@@ -21,7 +21,7 @@ settings:
   ajax_progress_type: ''
   ajax_effect: ''
   ajax_speed: null
-  page: true
+  page: false
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
@@ -112,9 +112,9 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: page
+  confirmation_type: inline
   confirmation_title: ''
-  confirmation_message: ''
+  confirmation_message: 'Thank you for letting us know about your interest in a personal loan with Arvest. One of our knowledgeable lending associates will be contacting you shortly. Have a great day!'
   confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
