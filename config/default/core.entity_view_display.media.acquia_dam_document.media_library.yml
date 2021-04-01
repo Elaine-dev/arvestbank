@@ -40,9 +40,9 @@ hidden:
   field_acquiadam_asset_descrip: true
   field_acquiadam_asset_doc: true
   field_acquiadam_asset_id: true
-  field_title: true
   field_document_and_resource_cate: true
   field_link: true
+  field_title: true
   name: true
   search_api_excerpt: true
   uid: true

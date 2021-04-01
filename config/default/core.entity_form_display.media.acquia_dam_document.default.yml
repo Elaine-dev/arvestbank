@@ -29,14 +29,6 @@ content:
     third_party_settings: {  }
     type: number
     region: content
-  field_title:
-    weight: 0
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_document_and_resource_cate:
     weight: 102
     settings:
@@ -54,6 +46,14 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   moderation_state:
     type: moderation_state_default
