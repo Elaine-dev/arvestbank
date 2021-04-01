@@ -1,0 +1,23 @@
+uuid: e43d3d2a-92a3-41c1-89cd-48cd514be6cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_link
+    - media.type.acquia_dam_document
+  module:
+    - link
+id: media.acquia_dam_document.field_link
+field_name: field_link
+entity_type: media
+bundle: acquia_dam_document
+label: Link
+description: 'Link to a document that is not a pdf upload'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

@@ -79,7 +79,7 @@ Access the site and do necessary work at local.arvestbank.com by running the fol
 
 Note the following properties of this project:
 * Primary development branch: Develop
-* Local site URL: http://local.arvestbank.com
+* Local site URL: https://local.arvestbank.com
 
 ## Working With a BLT Project
 BLT projects are designed to instill software development best practices (including git workflows). \
