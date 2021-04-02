@@ -9,7 +9,6 @@ dependencies:
     - field.field.taxonomy_term.education_article_category.field_layout_canvas
     - taxonomy.vocabulary.education_article_category
   module:
-    - cohesion_elements
     - text
 id: taxonomy_term.education_article_category.teaser
 targetEntityType: taxonomy_term
@@ -17,29 +16,22 @@ bundle: education_article_category
 mode: teaser
 content:
   field_body:
-    weight: 1
-    label: above
+    type: text_default
+    weight: 0
+    region: content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
-    region: content
   field_featured_image:
     type: entity_reference_entity_view
-    weight: 2
-    label: above
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
+    weight: 1
     region: content
-  field_layout_canvas:
-    type: cohesion_entity_reference_revisions_entity_view
-    weight: 0
     label: hidden
     settings:
+      link: true
       view_mode: default
-      link: ''
     third_party_settings: {  }
-    region: content
 hidden:
   description: true
+  field_layout_canvas: true
+  search_api_excerpt: true
