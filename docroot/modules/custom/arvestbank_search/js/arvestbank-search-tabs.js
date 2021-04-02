@@ -3,7 +3,7 @@
  * Search tabs js.
  */
 
-Drupal.behaviors.exampleModule = {
+Drupal.behaviors.arvestbankSearch = {
   attach: function (context, settings) {
 
     // Remove active class from all tabs.
