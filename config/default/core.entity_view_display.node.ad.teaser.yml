@@ -25,6 +25,11 @@ content:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
@@ -34,3 +39,4 @@ hidden:
   field_cta: true
   field_fallback_image: true
   field_image: true
+  search_api_excerpt: true

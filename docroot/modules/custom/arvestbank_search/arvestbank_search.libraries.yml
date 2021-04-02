@@ -1,0 +1,7 @@
+search-tabs:
+  version: 1.x
+  js:
+    js/arvestbank-search-tabs.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once

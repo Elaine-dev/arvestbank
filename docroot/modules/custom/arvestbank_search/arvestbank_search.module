@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * @file
+ * Contains view hooks relating to search.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_views_data_alter().
+ *
+ * @param array $data
+ */
+function arvestbank_search_views_data_alter(array &$data) {
+
+  // Add our custom tabs filter.
+  $data['search_api_index_database_search_index']['arvest_search_tabs'] = [
+    'filter' => [
+      'title' => t('Arvest Search Tabs'),
+      'help' => t('Provides a tabs for the arvest search.'),
+      'field' => 'type',
+      'id' => 'arvest_search_tabs',
+    ],
+  ];
+
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function arvestbank_search_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  // Get form storage.
+  $storage = $form_state->getStorage();
+
+  // If this is the search page.
+  if (
+    $storage['view']->id() == 'database_search'
+    && isset($storage['search_page'])
+    && $storage['search_page']
+  ) {
+    // Add class to this form for css changes.
+    $form['#attributes']['class'][] = 'tabs-form';
+    // Hide submit button.
+    $form['actions']['submit']['#access'] = FALSE;
+    // Set default value for search based on get variable.
+    if (isset($_GET['search']) && $_GET['search']) {
+      $form['search']['#default_value'] = $_GET['search'];
+    }
+  }
+
+  // If this is the header search.
+  else {
+    // Hide tabs.
+    $form['search-tab']['#access'] = FALSE;
+  }
+
+}
