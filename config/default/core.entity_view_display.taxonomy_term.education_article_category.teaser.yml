@@ -1,8 +1,9 @@
-uuid: d1d3fe18-b54d-4074-9b81-d25fbe670b4d
+uuid: 85ed4766-6c97-442a-9d4e-475c19d32401
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.taxonomy_term.teaser
     - field.field.taxonomy_term.education_article_category.field_body
     - field.field.taxonomy_term.education_article_category.field_featured_image
     - field.field.taxonomy_term.education_article_category.field_layout_canvas
@@ -10,10 +11,10 @@ dependencies:
   module:
     - cohesion_elements
     - text
-id: taxonomy_term.education_article_category.default
+id: taxonomy_term.education_article_category.teaser
 targetEntityType: taxonomy_term
 bundle: education_article_category
-mode: default
+mode: teaser
 content:
   field_body:
     weight: 1
