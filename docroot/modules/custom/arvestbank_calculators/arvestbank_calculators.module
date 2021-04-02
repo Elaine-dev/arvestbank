@@ -38,3 +38,27 @@ function arvestbank_calculators_theme() {
     ],
   ];
 }
+
+
+/**
+ * Implements hook_preprocess_page().
+ *
+ * @param $variables
+ */
+function arvestbank_calculators_preprocess_block(&$variables) {
+
+  // Get route name from path.
+  $route_name = \Drupal::routeMatch()->getRouteName();
+
+  // Hide elements on the calculators iframe page.
+  if ($route_name == 'arvestbank_calculators.iframe') {
+    $plugin_id = $variables['plugin_id'] ?? null;
+    // Hide site branding.
+    if ($plugin_id == 'system_branding_block') {
+      $variables['content']['site_logo']['#access'] = false;
+      $variables['content']['site_name']['#access'] = false;
+      $variables['content']['site_slogan']['#access'] = false;
+    }
+  }
+
+}
