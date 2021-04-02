@@ -70,6 +70,7 @@ permissions:
   - 'view all media revisions'
   - 'view article_education_article revisions'
   - 'view conditional fields'
+  - 'view media'
   - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view scheduled content'

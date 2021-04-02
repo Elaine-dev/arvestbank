@@ -1,16 +1,16 @@
-uuid: 045da06a-ce0c-458d-a3db-e0abe793d41b
+uuid: 3423f8a8-a709-4e27-bbfa-91264c0531d0
 langcode: en
 status: false
 dependencies:
   module:
     - ctools
     - media
-id: media_name
-label: 'Media Name'
+id: media_title
+label: 'Media Title'
 type: 'canonical_entities:media'
-pattern: '[media:name]'
+pattern: '[media:field_title]'
 selection_criteria:
-  e80d796f-7b30-4257-bb38-1fe4a8ace8fb:
+  0defe958-ce9b-4a63-a5a2-42a6e6e2d355:
     id: 'entity_bundle:media'
     bundles:
       acquia_dam_document: acquia_dam_document
@@ -22,7 +22,7 @@ selection_criteria:
     negate: false
     context_mapping:
       media: media
-    uuid: e80d796f-7b30-4257-bb38-1fe4a8ace8fb
+    uuid: 0defe958-ce9b-4a63-a5a2-42a6e6e2d355
 selection_logic: and
 weight: -5
 relationships: {  }
