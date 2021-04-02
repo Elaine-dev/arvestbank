@@ -23,3 +23,6 @@ function arvestbank_calculators_update_8001() {
   ]);
 
 }
+
+
+// module_set_weight('arvestbank_calculators', 99999);
