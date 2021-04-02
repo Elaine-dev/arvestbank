@@ -1,0 +1,29 @@
+uuid: 31118cca-6eea-4fe9-ab10-11fbb216cde5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_designation
+    - node.type.associate
+    - taxonomy.vocabulary.designation
+id: node.associate.field_designation
+field_name: field_designation
+entity_type: node
+bundle: associate
+label: Designation
+description: 'Select any designation that applies. If you do not see your designation email wealth management marketing.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      designation: designation
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: associate_category
+field_type: entity_reference

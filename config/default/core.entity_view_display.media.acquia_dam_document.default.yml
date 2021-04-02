@@ -8,12 +8,10 @@ dependencies:
     - field.field.media.acquia_dam_document.field_acquiadam_asset_id
     - field.field.media.acquia_dam_document.field_document_and_resource_cate
     - field.field.media.acquia_dam_document.field_link
-    - image.style.thumbnail
+    - field.field.media.acquia_dam_document.field_title
     - media.type.acquia_dam_document
   module:
-    - file
     - image
-    - link
 _core:
   default_config_hash: mHzUY_jVM6LP-CPvj4mrVBTn0Btrmr7jys_yT2XiR1Y
 id: media.acquia_dam_document.default
@@ -21,67 +19,24 @@ targetEntityType: media
 bundle: acquia_dam_document
 mode: default
 content:
-  content_moderation_control:
-    weight: -20
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  created:
-    label: hidden
-    type: timestamp
-    weight: 1
-    region: content
-    settings:
-      date_format: medium
-      custom_date_format: ''
-      timezone: ''
-    third_party_settings: {  }
   field_acquiadam_asset_doc:
-    weight: 3
-    label: above
-    settings:
-      use_description_as_link_text: true
-    third_party_settings: {  }
-    type: file_default
-    region: content
-  field_document_and_resource_cate:
-    weight: 5
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_link:
-    weight: 4
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: content
-  name:
-    type: string
     weight: 0
-    region: content
     label: hidden
     settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  thumbnail:
-    type: image
-    weight: 2
-    label: hidden
-    settings:
-      image_style: thumbnail
+      image_style: ''
       image_link: ''
-    region: content
     third_party_settings: {  }
+    type: image
+    region: content
 hidden:
+  content_moderation_control: true
+  created: true
   field_acquiadam_asset_descrip: true
   field_acquiadam_asset_id: true
+  field_document_and_resource_cate: true
+  field_link: true
+  field_title: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
   uid: true

@@ -1,0 +1,21 @@
+uuid: e74d2607-9c41-4c87-8e2a-f37abcfa3ab4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mobile_number
+    - node.type.associate
+  module:
+    - telephone
+id: node.associate.field_mobile_number
+field_name: field_mobile_number
+entity_type: node
+bundle: associate
+label: 'Mobile Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

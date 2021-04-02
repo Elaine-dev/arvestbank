@@ -1,0 +1,23 @@
+uuid: aac0a100-9af1-4493-b32e-5e1f90090d01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_insurance_license_number
+    - node.type.associate
+id: node.associate.field_insurance_license_number
+field_name: field_insurance_license_number
+entity_type: node
+bundle: associate
+label: 'Insurance License Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,21 @@
+uuid: a6919699-2ce1-4266-bd08-4d1852a63cb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_office_number
+    - node.type.associate
+  module:
+    - telephone
+id: node.associate.field_office_number
+field_name: field_office_number
+entity_type: node
+bundle: associate
+label: 'Office Number'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

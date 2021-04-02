@@ -1,0 +1,21 @@
+{
+    "name": "drupal/search_api_attachments_php",
+    "description": "Provides a native php pdf text extractor for search_api_attachments.",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Dorian Damon (damondt)",
+            "homepage": "https://www.drupal.org/u/damondt",
+            "role": "Maintainer"
+        }
+    ],
+    "homepage": "https://drupal.org/project/search_api_attachments_php",
+    "support": {
+        "issues": "https://drupal.org/project/issues/search_api_attachments_php",
+        "source": "https://git.drupalcode.org/project/search_api_attachments_php"
+    },
+    "require": {
+        "smalot/pdfparser": "^0"
+    }
+}

@@ -1,0 +1,23 @@
+uuid: 76f261b5-d54e-457d-8481-024d35a7b438
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coconut_appointment
+    - node.type.associate
+  module:
+    - link
+id: node.associate.field_coconut_appointment
+field_name: field_coconut_appointment
+entity_type: node
+bundle: associate
+label: 'Coconut appointment'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

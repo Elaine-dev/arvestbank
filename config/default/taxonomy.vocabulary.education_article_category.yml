@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 name: 'Education Article Category'
 vid: education_article_category
-description: ''
+description: 'Taxonomy category to classify nodes of the associate content type.'
 weight: 0

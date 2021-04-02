@@ -179,6 +179,26 @@
   float: left;
 }
 
+#search-tab input {
+  display: none;
+}
+
+#search-tab .active-tab {
+  background-color: #4178b4;
+}
+
+#search-tab .form-item-search-tab {
+  display: inline-block;
+}
+
+.tabs-form .form-item-search {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
 #edit-help-link {
   display: block;
   margin-top: 10px;
