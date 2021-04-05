@@ -16,10 +16,10 @@ filters:
   filter_html:
     id: filter_html
     provider: filter
-    status: true
+    status: false
     weight: -10
     settings:
-      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h4 id> <h5 id> <h6 id> <img src alt data-entity-type data-entity-uuid> <h1 class="heading-2 heading-1"> <h2 id class="heading-3"> <h3 id class="heading-4"> <u> <p> <pre> <span class="red-pill blue-pill coh-color-blue-1 coh-color-navy-2 coh-color-midnight-blue-3 coh-color-dark-navy-4 coh-color-danube-5 coh-color-regent-st-blue-6 coh-color-red-7 coh-color-gray-8 coh-color-white-9 coh-color-mine-shaft-10"> <a href hreflang data-entity-substitution data-entity-type data-entity-uuid title class="">'
+      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h4 id> <h5 id> <h6 id> <img src alt data-entity-type data-entity-uuid> <h1 class="heading-2 heading-1"> <h2 id class="heading-3"> <h3 id class="heading-4"> <u> <p> <pre> <a href hreflang data-entity-substitution data-entity-type data-entity-uuid title class=" coh-style-link-arrow-button coh-style-link-button"> <span class="red-pill blue-pill coh-color-blue-1 coh-color-navy-2 coh-color-midnight-blue-3 coh-color-dark-navy-4 coh-color-danube-5 coh-color-regent-st-blue-6 coh-color-red-7 coh-color-gray-8 coh-color-white-9 coh-color-mine-shaft-10 coh-style-link-arrow-button coh-style-link-button coh-color-black coh-color-gray-1 coh-color-blue-6 coh-color-white">'
       filter_html_help: true
       filter_html_nofollow: false
   editor_file_reference:
