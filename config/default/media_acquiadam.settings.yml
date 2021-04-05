@@ -11,3 +11,4 @@ notifications_sync: 0
 num_images_per_page: 12
 _core:
   default_config_hash: GxmzZTLxQQW3HxqkAimrxwAlUASIAJx1xbSA1q_IxoI
+fallback_thumbnail: 'public://webdam.png'

@@ -9,7 +9,10 @@ dependencies:
     - media.type.video
     - node.type.ad
     - node.type.article_education_article
+    - node.type.associate
+    - node.type.calculators
     - node.type.page
+    - node.type.private_bank_location
   module:
     - content_moderation
 id: editorial
@@ -106,5 +109,8 @@ type_settings:
     node:
       - ad
       - article_education_article
+      - associate
+      - calculators
       - page
+      - private_bank_location
   default_moderation_state: draft
