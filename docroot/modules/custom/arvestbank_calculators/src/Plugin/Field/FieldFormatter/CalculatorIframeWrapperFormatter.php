@@ -161,13 +161,18 @@ class CalculatorIframeWrapperFormatter extends FormatterBase implements Containe
         '#suffix' => '</div>',
         '#tag' => 'iframe',
         '#attributes' => [
+          'id' => 'CalcFrame',
           'src' => $url->toString(),
           'frameborder' => 0,
           'scrolling' => FALSE,
           'allowtransparency' => TRUE,
           'width' => '100%',
-          'height' => '2500px',
           'class' => ['calculator-iframe'],
+        ],
+        '#attached' => [
+          'library' => [
+            'arvestbank_calculators/calculator_iframe',
+          ],
         ],
       ];
 
