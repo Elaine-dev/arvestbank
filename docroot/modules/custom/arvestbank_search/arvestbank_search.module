@@ -52,8 +52,16 @@ function arvestbank_search_form_views_exposed_form_alter(&$form, FormStateInterf
 
   // If this is the header search.
   else {
+    // Add class to this form.
+    $form['#attributes']['class'][] = 'top-search-form';
     // Hide tabs.
     $form['search-tab']['#access'] = FALSE;
+    // Add "Ask Arvest" autocomplete.
+    $form['search']['#autocomplete_route_name'] = 'arvestbank_search.ask_arvest_autocomplete';
+    // Attach Ask Arvest js.
+    $form['search']['#attached'] = [
+      'library' => ['arvestbank_search/ask-arvest'],
+    ];
   }
 
 }
