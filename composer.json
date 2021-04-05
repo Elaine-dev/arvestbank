@@ -142,6 +142,9 @@
             },
             "drupal/conditional_fields": {
                 "Notice: Trying to access array offset on value of type null\n": "https://www.drupal.org/files/issues/2021-01-21/3191984-3-notice-trying-to-access-offset-on-value-of-type-null.patch"
+            },
+            "acquia/cohesion": {
+                "Allow master templates to use to be defined at route level.\n": "patches/cohesion-master-template-by-route.patch"
             }
         }
     },
