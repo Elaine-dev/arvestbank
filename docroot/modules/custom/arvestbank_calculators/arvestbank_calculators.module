@@ -49,19 +49,20 @@ function arvestbank_calculators_theme_suggestions_page_alter(array &$suggestions
 //  }
 }
 
-/**
- * Implements hook_module_implements_alter().
- */
-function arvestbank_calculators_module_implements_alter(&$implementations, $hook) {
-  switch ($hook) {
-    // Move our hook_theme_suggestions_page_alter() implementation to the end of the list.
-    case 'theme_suggestions_page_alter':
-      $group = $implementations['arvestbank_calculators'];
-      unset($implementations['arvestbank_calculators']);
-      $implementations['arvestbank_calculators'] = $group;
-      break;
-  }
-}
+//
+///**
+// * Implements hook_module_implements_alter().
+// */
+//function arvestbank_calculators_module_implements_alter(&$implementations, $hook) {
+//  switch ($hook) {
+//    // Move our hook_theme_suggestions_page_alter() implementation to the end of the list.
+//    case 'theme_suggestions_page_alter':
+//      $group = $implementations['arvestbank_calculators'];
+//      unset($implementations['arvestbank_calculators']);
+//      $implementations['arvestbank_calculators'] = $group;
+//      break;
+//  }
+//}
 
 ///**
 // * Implements hook_preprocess_page().
