@@ -1,0 +1,7 @@
+name: Search API Attachments PHP
+type: module
+description: 'Provides a native php pdf text extractor for search_api_attachments.'
+core_version_requirement: ^8 || ^9
+dependencies:
+  - search_api_attachments:search_api_attachments
+package: Search

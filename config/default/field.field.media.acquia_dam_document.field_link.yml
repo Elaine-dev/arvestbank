@@ -12,7 +12,7 @@ field_name: field_link
 entity_type: media
 bundle: acquia_dam_document
 label: Link
-description: 'Link to a document that is not a pdf upload'
+description: 'Link to a document that is not a pdf upload.'
 required: false
 translatable: false
 default_value: {  }

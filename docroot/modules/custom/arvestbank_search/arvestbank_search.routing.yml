@@ -1,0 +1,7 @@
+arvestbank_search.ask_arvest_autocomplete:
+  path: '/arvestbank_search/autocomplete/ask_arvest_autocomplete'
+  defaults:
+    _controller: '\Drupal\arvestbank_search\Controller\AskArvestAutocomplete::handleAutocomplete'
+    _format: json
+  requirements:
+    _permission: 'access content'

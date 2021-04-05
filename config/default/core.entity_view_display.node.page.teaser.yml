@@ -53,3 +53,4 @@ hidden:
   field_print_button_text: true
   field_schedule_appointment_link: true
   field_second_callout: true
+  search_api_excerpt: true

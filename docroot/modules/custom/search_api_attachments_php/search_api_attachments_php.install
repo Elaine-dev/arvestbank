@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Contains install hook for this module.
+ */
+
+/**
+ * Add config for our attachment plugin.
+ */
+function search_api_attachments_php_install() {
+
+  // Get config factory.
+  $config_factory = \Drupal::configFactory();
+  // Add our config.
+  $config_factory->getEditable('search_api_attachments.admin_config')->set('native_php_extractor_configuration', [])->save();
+
+}

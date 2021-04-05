@@ -4,10 +4,12 @@ module:
   admin_toolbar: 0
   admin_toolbar_links_access_filter: 0
   admin_toolbar_tools: 0
+  arvestbank_ask_arvest: 0
   arvestbank_associate_category: 0
   arvestbank_branch_locations: 0
   arvestbank_calculators: 0
   arvestbank_menus: 0
+  arvestbank_search: 0
   arvestbank_webforms: 0
   automated_cron: 0
   block: 0
@@ -94,6 +96,10 @@ module:
   scheduler: 0
   search: 0
   search404: 0
+  search_api: 0
+  search_api_attachments: 0
+  search_api_attachments_php: 0
+  search_api_db: 0
   serialization: 0
   settings_tray: 0
   shield: 0

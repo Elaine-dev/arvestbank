@@ -252,6 +252,7 @@ permissions:
   - 'view calculators revisions'
   - 'view conditional fields'
   - 'view cta_phone_number revisions'
+  - 'view media'
   - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view own webform submission'

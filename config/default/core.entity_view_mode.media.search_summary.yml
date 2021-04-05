@@ -1,0 +1,10 @@
+uuid: 62b80dcc-a206-4706-be80-1bf14793e043
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.search_summary
+label: 'Search Summary'
+targetEntityType: media
+cache: true

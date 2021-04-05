@@ -1,0 +1,25 @@
+uuid: f3596d99-ce3d-4bcb-b751-84be7ffdd03c
+langcode: en
+status: true
+dependencies:
+  module:
+    - arvestbank_search
+    - cohesion
+  theme:
+    - arvestbank_theme
+id: alternateexposedfiltersblock
+theme: arvestbank_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: alt_exposed_filters_block
+settings:
+  id: alt_exposed_filters_block
+  label: 'Alternate Exposed Filters Block'
+  provider: arvestbank_search
+  label_display: '0'
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false
