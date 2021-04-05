@@ -2,5 +2,7 @@ arvestbank_calculators.iframe:
   path: '/calculators/iframe'
   defaults:
     _controller: '\Drupal\arvestbank_calculators\Controller\CalculatorController::render'
+  options:
+    cohesion_master_template: 'content_only'
   requirements:
     _permission: 'access content'
