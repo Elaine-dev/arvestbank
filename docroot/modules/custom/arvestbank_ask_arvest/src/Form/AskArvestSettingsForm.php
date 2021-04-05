@@ -38,7 +38,7 @@ class AskArvestSettingsForm extends ConfigFormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
 
-    // Get configuration for this modul.
+    // Get configuration for this module.
     $config = $this->config(static::SETTINGS);
 
     // Field for IntelliSuggest Endpoint.
