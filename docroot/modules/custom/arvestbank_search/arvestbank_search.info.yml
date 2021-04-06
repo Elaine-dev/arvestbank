@@ -1,0 +1,6 @@
+name: Arvest Bank Search
+type: module
+description: 'Adds Arvest Bank search functionality.'
+core_version_requirement: ^9
+dependencies:
+  - arvestbank_ask_arvest:arvestbank_ask_arvest

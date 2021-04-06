@@ -1,0 +1,7 @@
+arvestbank_ask_arvest.settings:
+  path: '/admin/config/ask-arvest/settings'
+  defaults:
+    _form: '\Drupal\arvestbank_ask_arvest\Form\AskArvestSettingsForm'
+    _title: 'Ask Arvest Settings'
+  requirements:
+    _permission: 'administer site configuration'

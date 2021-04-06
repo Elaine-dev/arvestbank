@@ -35,3 +35,4 @@ hidden:
   field_reference_text: true
   field_related_content_reference: true
   field_yoast_seo: true
+  search_api_excerpt: true

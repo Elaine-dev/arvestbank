@@ -8,8 +8,8 @@ name: dam_document_browser
 label: 'DAM Document Browser'
 display: modal
 display_configuration:
-  width: '650'
-  height: '500'
+  width: ''
+  height: ''
   link_text: 'Select entities'
   auto_open: false
 selection_display: no_display

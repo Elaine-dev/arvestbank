@@ -1,0 +1,12 @@
+search-tabs:
+  version: 1.x
+  js:
+    js/arvestbank-search-tabs.js: {}
+  dependencies:
+    - core/jquery
+ask-arvest:
+  version: 1.x
+  js:
+    js/ask-arvest.js: {}
+  dependencies:
+    - core/jquery

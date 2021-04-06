@@ -1,13 +1,173 @@
 -
   type: cohesion_base_styles
   export:
-    uuid: 906b8545-2a0a-4a43-8dbc-0ca4c3f077e1
+    uuid: f14d5c0e-0d07-4365-b26b-9eae12c7f5c7
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: base_breadcrumbs
+    label: Breadcrumbs
+    json_values: '{"preview":{"text":"<ul>\n\t<li><a href=\"\/\">Home<\/a><\/li>\n\t<li>Calculators<\/li>\n\t<li>Is an Auto or Home Equity Loan best for Purchasing a car?<\/li>\n<\/ul>\n","textFormat":"cohesion"},"styles":{"settings":{"element":".coh-breadcrumb"},"0b10910a-9c75-4517-8eaa-bb758e37a212":{"settings":{"element":"> li + li:before","class":"","combinator":"","pseudo":""},"styles":{"xl":{"custom-css":[{"customCssProperty":{"value":"content"},"customCss":{"value":"\">\\00a0\""}}]}}},"227cb17f-6f18-44d5-a1da-d50132285c9c":{"settings":{"element":"li","class":"","combinator":"","pseudo":""},"styles":{"xl":{"display":{"value":"inline-block"},"padding":{"padding-right":{"value":"8px"}}}}},"ecf6155f-3e0a-48b7-b138-6fb93d06f274":{"styles":{"xl":{}}},"styles":{"xl":{"padding":{"padding-top":{"value":"15px"},"padding-bottom":{"value":"8px"},"padding-left":{"value":""},"padding-right":{"value":""}},"margin":{"margin-top":{"value":"15px"}}}},"b05ae212-ac67-4195-8865-257a204ed802":{"settings":{"element":"li:last-child","class":"","combinator":"","pseudo":""},"styles":{"xl":{"font-weight":{"value":"900"}}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+    json_mapper: '{"styles":{"title":null,"selectorType":"topLevel","formDefinition":[{"formKey":"layout","children":[{"formKey":"padding","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"padding-equal","active":false},{"name":"padding-top","active":true},{"name":"padding-bottom","active":true},{"name":"padding-left","active":true},{"name":"padding-right","active":true},{"name":"padding-block-start","active":false},{"name":"padding-block-end","active":false},{"name":"padding-inline-start","active":false},{"name":"padding-inline-end","active":false}]},{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":true},{"name":"margin-bottom","active":true},{"name":"margin-left","active":true},{"name":"margin-right","active":true},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]}]}],"items":[{"title":"> li + li:before","type":"container","items":[],"form":null,"selectorType":"child","model":"> li + li:before","uuid":"0b10910a-9c75-4517-8eaa-bb758e37a212","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"custom-css","children":[{"formKey":"css-property-and-css-value","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"custom-css","active":true},{"name":"customCssProperty","active":true},{"name":"customCss","active":true}]}]}]},{"title":"li","type":"container","items":[],"form":null,"selectorType":"child","model":"li","uuid":"227cb17f-6f18-44d5-a1da-d50132285c9c","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"layout","children":[{"formKey":"padding","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"padding-equal","active":false},{"name":"padding-top","active":true},{"name":"padding-bottom","active":true},{"name":"padding-left","active":true},{"name":"padding-right","active":true},{"name":"padding-block-start","active":false},{"name":"padding-block-end","active":false},{"name":"padding-inline-start","active":false},{"name":"padding-inline-end","active":false}]},{"formKey":"display","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"display","active":true},{"name":"visibility","active":true},{"name":"overflow","active":true},{"name":"overflow-x","active":true},{"name":"overflow-y","active":true}]}]}]},{"title":"li:last-child","type":"container","items":[],"form":null,"selectorType":"child","model":"li:last-child","uuid":"b05ae212-ac67-4195-8865-257a204ed802","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]}]}]}],"form":null}}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    custom: null
+-
+  type: cohesion_base_styles
+  export:
+    uuid: 2c7f0224-9ff1-4e3d-a305-fcd3e5ddf93b
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: base_menu_links
+    label: 'Menu Links'
+    json_values: '{"preview":{"text":"<p>Add your preview HTML element here.<\/p>\n","textFormat":"cohesion"},"styles":{"settings":{"element":".menu a"},"styles":{"xl":{"color":{"value":{"link":true,"value":{"hex":"#ffffff","rgba":"rgba(255, 255, 255, 1)"},"name":"White","uid":"white","class":".coh-color-white","variable":"$coh-color-white","wysiwyg":true,"inuse":true}}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+    json_mapper: '{"styles":{"title":null,"selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]},{"formKey":"font-sizing-and-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-size","active":true},{"name":"line-height","active":true},{"name":"text-align","active":true},{"name":"letter-spacing","active":false},{"name":"word-spacing","active":false},{"name":"text-indent","active":false}]}]},{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":true},{"name":"margin-bottom","active":true},{"name":"margin-left","active":true},{"name":"margin-right","active":true},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]}]}],"items":[],"form":null}}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    custom: null
+-
+  type: cohesion_color
+  export:
+    uuid: aa68f2f4-2313-48da-8bfa-c0c6d0b576ac
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: white
+    label: White
+    json_values: '{"link":true,"value":{"value":{"hex":"#ffffff","rgba":"rgba(255, 255, 255, 1)"}},"name":"White","uid":"white","class":".coh-color-white","variable":"$coh-color-white","wysiwyg":true,"inuse":true}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    weight: 27
+-
+  type: cohesion_base_styles
+  export:
+    uuid: 8a4509b5-4d15-4ce2-b951-6ae76078529e
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: base_nav_li_a
+    label: 'Top Menu Links'
+    json_values: '{"preview":{"text":"<p>Add your preview HTML element here.<\/p>\n","textFormat":"cohesion"},"styles":{"settings":{"element":".top-menu .menu"},"styles":{"xl":{"color":{"value":{"value":{"hex":"transparent","rgba":"rgba(0, 0, 0, 0)"},"name":"Transparent","wysiwyg":true,"uid":"dx8-transparent","class":".dx8-transparent","variable":"$coh-dx8-transparent","inuse":true}},"clearfix":{"value":false},"float":{"value":"right"}},"f5160634-5f36-4b48-ae2d-9d1c0313703b":{"styles":{"xl":{"clearfix":{"value":false}}}}},"f5160634-5f36-4b48-ae2d-9d1c0313703b":{"settings":{"element":"li a","class":"","combinator":"","pseudo":""},"styles":{"xl":{"color":{"value":{"link":true,"value":{"hex":"#ffffff","rgba":"rgba(255, 255, 255, 1)"},"name":"White","uid":"white","class":".coh-color-white","variable":"$coh-color-white","wysiwyg":true,"inuse":false}},"padding":{"padding-top":{"value":""},"padding-bottom":{"value":""},"padding-left":{"value":"6px"},"padding-right":{"value":"10px"}}}}},"d021faf0-bdaa-4de6-9401-54cfc6e9ad10":{"settings":{"element":"li + li:before","class":"","combinator":"","pseudo":""},"styles":{"xl":{"custom-css":[{"customCss":{"value":"\"|\\00a0\""},"customCssProperty":{"value":"content"}}]}}},"f539093c-28ea-4610-9793-2790f29dc468":{"settings":{"element":"li","class":"","combinator":"","pseudo":""},"styles":{"xl":{"color":{"value":{"link":true,"value":{"hex":"#ffffff","rgba":"rgba(255, 255, 255, 1)"},"name":"White","uid":"white","class":".coh-color-white","variable":"$coh-color-white","wysiwyg":true,"inuse":false}},"padding":{"padding-top":{"value":""},"padding-bottom":{"value":""},"padding-left":{"value":""},"padding-right":{"value":"8px"}},"clearfix":{"value":false},"float":{"value":"left"},"display":{"value":"inline-block"}}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+    json_mapper: '{"styles":{"title":null,"selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":false},{"name":"font-weight","active":false},{"name":"color","active":true}]}]},{"formKey":"layout","children":[{"formKey":"float","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"float","active":true},{"name":"clear","active":true},{"name":"clearfix","active":true}]}]}],"items":[{"title":"li a","type":"container","items":[],"form":null,"selectorType":"child","model":"li a","uuid":"f5160634-5f36-4b48-ae2d-9d1c0313703b","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":false},{"name":"font-weight","active":false},{"name":"color","active":true}]}]},{"formKey":"layout","children":[{"formKey":"display","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"display","active":true},{"name":"visibility","active":false},{"name":"overflow","active":false},{"name":"overflow-x","active":false},{"name":"overflow-y","active":false}]},{"formKey":"float","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"float","active":true},{"name":"clear","active":false},{"name":"clearfix","active":false}]},{"formKey":"padding","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"padding-equal","active":false},{"name":"padding-top","active":true},{"name":"padding-bottom","active":true},{"name":"padding-left","active":true},{"name":"padding-right","active":true},{"name":"padding-block-start","active":false},{"name":"padding-block-end","active":false},{"name":"padding-inline-start","active":false},{"name":"padding-inline-end","active":false}]}]}]},{"title":"li + li:before","type":"container","items":[],"form":null,"selectorType":"child","model":"li + li:before","uuid":"d021faf0-bdaa-4de6-9401-54cfc6e9ad10","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"custom-css","children":[{"formKey":"css-property-and-css-value","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"custom-css","active":true},{"name":"customCssProperty","active":true},{"name":"customCss","active":true}]}]}]},{"title":"li","type":"container","items":[],"form":null,"selectorType":"child","model":"li","uuid":"f539093c-28ea-4610-9793-2790f29dc468","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]}]},{"formKey":"layout","children":[{"formKey":"padding","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"padding-equal","active":false},{"name":"padding-top","active":true},{"name":"padding-bottom","active":true},{"name":"padding-left","active":true},{"name":"padding-right","active":true},{"name":"padding-block-start","active":false},{"name":"padding-block-end","active":false},{"name":"padding-inline-start","active":false},{"name":"padding-inline-end","active":false}]},{"formKey":"float","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"float","active":true},{"name":"clear","active":true},{"name":"clearfix","active":true}]},{"formKey":"display","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"display","active":true},{"name":"visibility","active":true},{"name":"overflow","active":true},{"name":"overflow-x","active":true},{"name":"overflow-y","active":true}]}]}]}],"form":null}}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    custom: null
+-
+  type: cohesion_base_styles
+  export:
+    uuid: 79afa88d-c389-4797-a07a-3ac7210e3cd9
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: body
+    label: Body
+    json_values: '{"preview":{"text":"<p>Default content for ''Body''.<\/p>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"body","class":"","combinator":"","pseudo":""},"styles":{"xl":{"font-family":{"value":"$coh-font-verdana"},"color":{"value":{"name":"Main Gray","uid":"gray-1","value":{"hex":"#333333","rgba":"rgba(51, 51, 51, 1)"},"wysiwyg":true,"class":".coh-color-gray-1","variable":"$coh-color-gray-1","inuse":true,"link":false}},"line-height":{"value":"1.75"},"font-size":{"value":"12"}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+    json_mapper: '{"styles":{"title":"Body","selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]},{"formKey":"font-sizing-and-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-size","active":true},{"name":"line-height","active":true},{"name":"text-align","active":true},{"name":"letter-spacing","active":true},{"name":"word-spacing","active":true},{"name":"text-indent","active":true}]}]}],"items":[],"form":null}}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: false
+    custom: null
+-
+  type: cohesion_color
+  export:
+    uuid: af99fe7f-2885-4905-b577-466420c9f777
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: gray-1
+    label: 'Gray 1'
+    json_values: '{"name":"Main Gray","uid":"gray-1","value":{"value":{"hex":"#333333","rgba":"rgba(51, 51, 51, 1)"}},"wysiwyg":true,"class":".coh-color-gray-1","variable":"$coh-color-gray-1","inuse":true,"link":false}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    weight: 1
+-
+  type: cohesion_font_stack
+  export:
+    uuid: ad2cd4e8-f50b-4d84-b11c-1f4108a41eba
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: verdana
+    label: Verdana
+    json_values: '{"inuse":true,"systemfont":true,"name":"Verdana","uid":"verdana","fontStack":"Verdana,Geneva,sans-serif","smoothing":{"firefox":true,"webkit":true},"variable":"$coh-font-verdana","class":".coh-font-verdana","link":true}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    source: fontStacks
+-
+  type: cohesion_base_styles
+  export:
+    uuid: eea7abcc-70db-4fc3-968f-adbef1402f38
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: button
+    label: Button
+    json_values: '{"preview":{"text":"<p><button>Button<\/button><\/p>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"button","class":"","combinator":"","pseudo":""},"6319626a-9d0d-48d1-b45c-1321e5f29579":{"settings":{"element":"","class":"","combinator":"","pseudo":":hover"},"styles":{"xl":{"border-color":{"value":{"link":false,"value":{"hex":"#e60000","rgba":"rgba(230, 0, 0, 1)"},"name":"Primary Red","uid":"red-2","class":".coh-color-red-2","variable":"$coh-color-red-2","inuse":true,"wysiwyg":false}},"background-color":{"value":{"link":false,"value":{"hex":"#cd0000","rgba":"rgba(205, 0, 0, 1)"},"name":"Border Red","uid":"red-1","class":".coh-color-border-red","variable":"$coh-color-border-red","inuse":false}}}}},"styles":{"xl":{"color":{"value":{"link":true,"value":{"hex":"#ffffff","rgba":"rgba(255, 255, 255, 1)"},"name":"White","uid":"white","class":".coh-color-white","variable":"$coh-color-white","wysiwyg":true,"inuse":true}},"background-color":{"value":{"link":false,"value":{"hex":"#e60000","rgba":"rgba(230, 0, 0, 1)"},"name":"Primary Red","uid":"red-2","class":".coh-color-red-2","variable":"$coh-color-red-2","inuse":true,"wysiwyg":false}},"display":{"value":"inline-block"},"vertical-align":{"verticalAlignType":{"value":"middle"}},"font-weight":{"value":"normal"},"custom-css":[{"customCssProperty":{"value":"cursor"},"customCss":{"value":"pointer"}}],"margin":{"margin-bottom":{"value":"0"}},"text-align":{"value":"center"},"border-radius":{"value":"4"},"border-width":{"value":"1"},"border-style":{"value":"solid"},"padding":{"padding-top":{"value":"8"},"padding-bottom":{"value":"8"},"padding-left":{"value":"10"},"padding-right":{"value":"10"}},"border-color":{"value":{"link":false,"value":{"hex":"#cd0000","rgba":"rgba(205, 0, 0, 1)"},"name":"Border Red","uid":"red-1","class":".coh-color-border-red","variable":"$coh-color-border-red","inuse":false}}}},"undefined":{"styles":{"xl":{"background-color":{"value":{"link":true,"value":{"hex":"#cd0000","rgba":"rgba(205, 0, 0, 1)"},"name":"Red 1","uid":"red-1","class":".coh-color-red-1","variable":"$coh-color-red-1","inuse":false}}}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+    json_mapper: '{"styles":{"title":"Link","selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":false},{"name":"font-weight","active":true},{"name":"color","active":true}]},{"formKey":"font-sizing-and-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-size","active":false},{"name":"line-height","active":false},{"name":"text-align","active":true},{"name":"letter-spacing","active":false},{"name":"word-spacing","active":false},{"name":"text-indent","active":false}]}]},{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]},{"formKey":"layout","children":[{"formKey":"padding","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"padding-equal","active":false},{"name":"padding-top","active":true},{"name":"padding-bottom","active":true},{"name":"padding-left","active":true},{"name":"padding-right","active":true},{"name":"padding-block-start","active":false},{"name":"padding-block-end","active":false},{"name":"padding-inline-start","active":false},{"name":"padding-inline-end","active":false}]},{"formKey":"display","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"display","active":true},{"name":"visibility","active":false},{"name":"overflow","active":false},{"name":"overflow-x","active":false},{"name":"overflow-y","active":false}]},{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":false},{"name":"margin-bottom","active":true},{"name":"margin-left","active":false},{"name":"margin-right","active":false},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]},{"formKey":"vertical-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"verticalAlignType","active":true},{"name":"verticalAlignLength","active":true}]}]},{"formKey":"border-and-outline","children":[{"formKey":"border-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"border-color","active":true},{"name":"border-top-color","active":false},{"name":"border-bottom-color","active":false},{"name":"border-left-color","active":false},{"name":"border-right-color","active":false},{"name":"border-block-start-color","active":false},{"name":"border-block-end-color","active":false},{"name":"border-inline-start-color","active":false},{"name":"border-inline-end-color","active":false}]},{"formKey":"border-style","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"border-style","active":true},{"name":"border-top-style","active":false},{"name":"border-bottom-style","active":false},{"name":"border-left-style","active":false},{"name":"border-right-style","active":false},{"name":"border-block-start-style","active":false},{"name":"border-block-end-style","active":false},{"name":"border-inline-start-style","active":false},{"name":"border-inline-end-style","active":false}]},{"formKey":"border-radius","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"border-radius","active":true},{"name":"border-top-left-radius","active":false},{"name":"border-top-right-radius","active":false},{"name":"border-bottom-left-radius","active":false},{"name":"border-bottom-right-radius","active":false}]},{"formKey":"border-width","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"border-width","active":true},{"name":"border-top-width","active":false},{"name":"border-bottom-width","active":false},{"name":"border-left-width","active":false},{"name":"border-right-width","active":false},{"name":"border-block-start-width","active":false},{"name":"border-block-end-width","active":false},{"name":"border-inline-start-width","active":false},{"name":"border-inline-end-width","active":false}]}]},{"formKey":"custom-css","children":[{"formKey":"css-property-and-css-value","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"custom-css","active":true},{"name":"customCssProperty","active":true},{"name":"customCss","active":true}]}]}],"items":[{"title":":hover","type":"container","items":[],"selectorType":"pseudo","formDefinition":[{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]},{"formKey":"border-and-outline","children":[{"formKey":"border-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"border-color","active":true},{"name":"border-top-color","active":false},{"name":"border-bottom-color","active":false},{"name":"border-left-color","active":false},{"name":"border-right-color","active":false},{"name":"border-block-start-color","active":false},{"name":"border-block-end-color","active":false},{"name":"border-inline-start-color","active":false},{"name":"border-inline-end-color","active":false}]}]}],"form":null,"allowedTypes":["child","pseudo"],"uuid":"6319626a-9d0d-48d1-b45c-1321e5f29579"}],"form":null}}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: false
+    custom: null
+-
+  type: cohesion_color
+  export:
+    uuid: 9d6a93a4-2979-4e98-9e9f-8266fbb906e6
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: red-2
+    label: 'Red 2'
+    json_values: '{"link":false,"value":{"value":{"hex":"#e60000","rgba":"rgba(230, 0, 0, 1)"}},"name":"Primary Red","uid":"red-2","class":".coh-color-red-2","variable":"$coh-color-red-2","inuse":true,"wysiwyg":false}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    weight: 24
+-
+  type: cohesion_color
+  export:
+    uuid: 26316cae-2da6-4cf0-a9e1-f53e5322c684
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: red-1
+    label: 'Border Red'
+    json_values: '{"link":false,"value":{"value":{"hex":"#cd0000","rgba":"rgba(205, 0, 0, 1)"}},"name":"Border Red","uid":"red-1","class":".coh-color-border-red","variable":"$coh-color-border-red","inuse":false}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    weight: 23
+-
+  type: cohesion_base_styles
+  export:
+    uuid: 6dad7a68-0ced-4c87-a777-bedd81a7cae7
     langcode: en
     status: true
     dependencies: {  }
     id: heading_1
     label: 'Heading 1'
-    json_values: '{"preview":{"text":"<h1>Default content for ''Heading 1''.<\/h1>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"h1","class":"","combinator":"","pseudo":""},"styles":{"xl":{"font-family":{"value":"$coh-font-proxima-nova"},"font-weight":{"value":"500"},"color":{"value":{"link":true,"value":{"hex":"#ffffff","rgba":"rgba(255, 255, 255, 1)"},"name":"White","uid":"white","class":".coh-color-white","variable":"$coh-color-white","wysiwyg":true,"inuse":false}},"font-size":{"value":"17px"},"line-height":{"value":"1.1"},"text-transform":{"value":"uppercase"},"background-color":{"value":{"name":"Blue 1","uid":"blue-1","value":{"hex":"#001b44","rgba":"rgba(0, 27, 68, 1)"},"wysiwyg":false,"class":".coh-color-blue-1","variable":"$coh-color-blue-1","inuse":false,"link":true}},"padding":{"padding-top":{"value":"10px"},"padding-bottom":{"value":"10px"},"padding-left":{"value":"20px"},"padding-right":{"value":"0"}}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+    json_values: '{"preview":{"text":"<h1>Default content for ''Heading 1''.<\/h1>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"h1","class":"","combinator":"","pseudo":""},"styles":{"xl":{"font-family":{"value":"$coh-font-proxima-nova"},"font-weight":{"value":"500"},"color":{"value":{"link":true,"value":{"hex":"#ffffff","rgba":"rgba(255, 255, 255, 1)"},"name":"White","uid":"white","class":".coh-color-white","variable":"$coh-color-white","wysiwyg":true,"inuse":true}},"font-size":{"value":"17px"},"line-height":{"value":"1.1"},"text-transform":{"value":"uppercase"},"background-color":{"value":{"name":"Blue 1","uid":"blue-1","value":{"hex":"#001b44","rgba":"rgba(0, 27, 68, 1)"},"wysiwyg":false,"class":".coh-color-blue-1","variable":"$coh-color-blue-1","inuse":true,"link":true}},"padding":{"padding-top":{"value":"10px"},"padding-bottom":{"value":"10px"},"padding-left":{"value":"20px"},"padding-right":{"value":"0"}}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
     json_mapper: '{"styles":{"title":"Heading 1","selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]},{"formKey":"font-sizing-and-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-size","active":true},{"name":"line-height","active":true},{"name":"text-align","active":true},{"name":"letter-spacing","active":false},{"name":"word-spacing","active":false},{"name":"text-indent","active":false}]},{"formKey":"font-style-and-wrapping","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-style","active":true},{"name":"text-transform","active":true},{"name":"text-decoration","active":true},{"name":"word-wrap","active":true},{"name":"direction","active":true}]}]},{"formKey":"layout","children":[{"formKey":"padding","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"padding-equal","active":false},{"name":"padding-top","active":true},{"name":"padding-bottom","active":true},{"name":"padding-left","active":true},{"name":"padding-right","active":true},{"name":"padding-block-start","active":false},{"name":"padding-block-end","active":false},{"name":"padding-inline-start","active":false},{"name":"padding-inline-end","active":false}]}]},{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]}],"items":[],"form":null}}'
     last_entity_update: entityupdate_0029
     locked: false
@@ -17,35 +177,19 @@
 -
   type: cohesion_color
   export:
-    uuid: 919b6dd9-168b-462c-9069-1ff5a4e8d197
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: white
-    label: White
-    json_values: '{"link":true,"value":{"value":{"hex":"#ffffff","rgba":"rgba(255, 255, 255, 1)"}},"name":"White","uid":"white","class":".coh-color-white","variable":"$coh-color-white","wysiwyg":true,"inuse":false}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0029
-    locked: false
-    modified: true
-    selectable: true
-    weight: 1
--
-  type: cohesion_color
-  export:
     uuid: c973fc83-2b20-44c0-936d-e6b4e25c79e4
     langcode: en
     status: true
     dependencies: {  }
     id: blue-1
     label: 'Blue 1'
-    json_values: '{"name":"Blue 1","uid":"blue-1","value":{"value":{"hex":"#001b44","rgba":"rgba(0, 27, 68, 1)"}},"wysiwyg":false,"class":".coh-color-blue-1","variable":"$coh-color-blue-1","inuse":false,"link":true}'
+    json_values: '{"name":"Blue 1","uid":"blue-1","value":{"value":{"hex":"#001b44","rgba":"rgba(0, 27, 68, 1)"}},"wysiwyg":false,"class":".coh-color-blue-1","variable":"$coh-color-blue-1","inuse":true,"link":true}'
     json_mapper: '{}'
     last_entity_update: entityupdate_0029
     locked: false
     modified: true
     selectable: true
-    weight: 11
+    weight: 10
 -
   type: cohesion_font_stack
   export:
@@ -65,13 +209,13 @@
 -
   type: cohesion_base_styles
   export:
-    uuid: e5a8127e-e791-48f5-8ffc-33d2a515253e
+    uuid: daf7c965-03d3-4fa6-9dd9-f3b018b53ede
     langcode: en
     status: true
     dependencies: {  }
     id: heading_2
     label: 'Heading 2'
-    json_values: '{"preview":{"text":"<h2>Default content for ''Heading 2''.<\/h2>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"h2","class":"","combinator":"","pseudo":""},"styles":{"xl":{"font-family":{"value":"$coh-font-proxima-nova"},"line-height":{"value":"1.2"},"font-size":{"value":"1.7rem"},"color":{"value":{"link":false,"value":{"hex":"#00457c","rgba":"rgba(0, 69, 124, 1)"},"name":"Arvest Blue","uid":"blue-4","class":".coh-color-blue-4","variable":"$coh-color-blue-4","inuse":false}},"padding":{"padding-left":{"value":""},"padding-top":{"value":"11px"},"padding-bottom":{"value":"11px"}},"font-weight":{"value":"500"}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+    json_values: '{"preview":{"text":"<h2>Default content for ''Heading 2''.<\/h2>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"h2","class":"","combinator":"","pseudo":""},"styles":{"xl":{"font-family":{"value":"$coh-font-proxima-nova"},"line-height":{"value":"1.2"},"font-size":{"value":"1.7rem"},"color":{"value":{"link":false,"value":{"hex":"#00457c","rgba":"rgba(0, 69, 124, 1)"},"name":"Arvest Blue","uid":"blue-4","class":".coh-color-blue-4","variable":"$coh-color-blue-4","inuse":true}},"padding":{"padding-left":{"value":""},"padding-top":{"value":"11px"},"padding-bottom":{"value":"11px"}},"font-weight":{"value":"500"}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
     json_mapper: '{"styles":{"title":"Heading 2","selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]},{"formKey":"font-sizing-and-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-size","active":true},{"name":"line-height","active":true},{"name":"text-align","active":true},{"name":"letter-spacing","active":false},{"name":"word-spacing","active":false},{"name":"text-indent","active":false}]}]},{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":true},{"name":"margin-bottom","active":true},{"name":"margin-left","active":true},{"name":"margin-right","active":true},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]},{"formKey":"padding","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"padding-equal","active":false},{"name":"padding-top","active":true},{"name":"padding-bottom","active":true},{"name":"padding-left","active":true},{"name":"padding-right","active":true},{"name":"padding-block-start","active":false},{"name":"padding-block-end","active":false},{"name":"padding-inline-start","active":false},{"name":"padding-inline-end","active":false}]}]}],"items":[],"form":null}}'
     last_entity_update: entityupdate_0029
     locked: false
@@ -87,251 +231,7 @@
     dependencies: {  }
     id: blue-4
     label: 'Blue 4'
-    json_values: '{"link":false,"value":{"value":{"hex":"#00457c","rgba":"rgba(0, 69, 124, 1)"}},"name":"Arvest Blue","uid":"blue-4","class":".coh-color-blue-4","variable":"$coh-color-blue-4","inuse":false}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0029
-    locked: false
-    modified: true
-    selectable: true
-    weight: 14
--
-  type: cohesion_content_templates
-  export:
-    uuid: c52ba4d2-6e1e-48b2-a010-8af03eee47eb
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: node_article_education_article_f
-    label: 'Full content (Node, Article - Education Article)'
-    json_values: '{"canvas":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"0ecb55d0-47af-4116-a86a-64262dd5274c","parentUid":"root","isContainer":true,"children":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"80cada58-a301-4374-a3d3-44fbdad450f5","parentUid":"container","isContainer":true,"children":[{"type":"item","uid":"breadcrumb","title":"Breadcrumb","status":{"collapsed":true},"uuid":"43d7755a-0993-4be4-abcc-39d4fed919c5","parentUid":"container","isContainer":false,"children":[]},{"type":"container","uid":"row-for-columns","title":"Row for columns","status":{"collapsed":false},"uuid":"e22fba23-983e-42d4-81c6-f1f3abf8ec0b","parentUid":"container","isContainer":true,"children":[{"type":"container","uid":"column","title":"Column","status":{"collapsed":false},"uuid":"bc59e6ba-db19-4df1-8e2c-eeeff664bf0e","parentUid":"row-for-columns","isContainer":true,"children":[{"type":"item","uid":"drupal-menu","title":"Menu","status":{"collapsed":true},"uuid":"eb838abe-ae00-4cf1-9d74-6491598f5a7a","parentUid":"column","isContainer":false,"children":[]}]},{"type":"container","uid":"column","title":"Column","status":{"collapsed":false},"uuid":"ccec8eda-404b-4b01-88de-69a316a578c8","parentUid":"row-for-columns","isContainer":true,"children":[{"type":"item","uid":"drupal-block","title":"Block","status":{"collapsed":true},"uuid":"a370a306-1410-42bf-b972-319188a91c2d","parentUid":"column","isContainer":false,"children":[]},{"type":"container","uid":"drupal-field","title":"Field","status":{"collapsed":true},"uuid":"1eea745e-e78c-4076-a6d6-9887a967b52e","parentUid":"column","isContainer":true,"children":[]}]}]}]}]}],"mapper":{"0ecb55d0-47af-4116-a86a-64262dd5274c":{},"80cada58-a301-4374-a3d3-44fbdad450f5":{},"e22fba23-983e-42d4-81c6-f1f3abf8ec0b":{},"ccec8eda-404b-4b01-88de-69a316a578c8":{"settings":{"formDefinition":[{"formKey":"column-settings","children":[{"formKey":"column-width-and-position","breakpoints":[{"name":"xl"},{"name":"sm"}],"activeFields":[{"name":"col","active":true},{"name":"pull","active":false},{"name":"push","active":false},{"name":"offset","active":false}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]}]}],"title":"Settings","selectorType":"topLevel","form":null,"items":[]}},"1eea745e-e78c-4076-a6d6-9887a967b52e":{"settings":{"formDefinition":[{"formKey":"drupal-field-settings","children":[{"formKey":"drupal-field-field","breakpoints":[],"activeFields":[{"name":"drupalField","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"a370a306-1410-42bf-b972-319188a91c2d":{"settings":{"formDefinition":[{"formKey":"block-settings","children":[{"formKey":"block-drupal-block","breakpoints":[],"activeFields":[{"name":"theme","active":true},{"name":"block","active":true}]},{"formKey":"block-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"bc59e6ba-db19-4df1-8e2c-eeeff664bf0e":{"settings":{"formDefinition":[{"formKey":"column-settings","children":[{"formKey":"column-width-and-position","breakpoints":[{"name":"xl"},{"name":"sm"}],"activeFields":[{"name":"col","active":true},{"name":"pull","active":false},{"name":"push","active":false},{"name":"offset","active":false}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]}]}],"title":"Settings","selectorType":"topLevel","form":null,"items":[]}},"eb838abe-ae00-4cf1-9d74-6491598f5a7a":{},"43d7755a-0993-4be4-abcc-39d4fed919c5":{}},"model":{"0ecb55d0-47af-4116-a86a-64262dd5274c":{"settings":{"width":"fluid"}},"80cada58-a301-4374-a3d3-44fbdad450f5":{"settings":{"title":"Boxed Width Container","width":"boxed","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"}}},"e22fba23-983e-42d4-81c6-f1f3abf8ec0b":{"settings":{"styles":{"xl":{"bleed":"retain","targetContainer":"inner","overflow":"visible","jsSettings":{"matchHeightRow":{"targetElement":"none"}}}}}},"bc59e6ba-db19-4df1-8e2c-eeeff664bf0e":{"settings":{"title":"Column","styles":{"xl":{"col":3},"sm":{"col":12}},"settings":{"styles":{"xl":{"col":-2,"pull":-1,"push":-1,"offset":-1}}}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"column"}}},"ccec8eda-404b-4b01-88de-69a316a578c8":{"settings":{"title":"Column","styles":{"xl":{"col":9},"sm":{"col":12,"pull":-1,"push":-1,"offset":-1}},"settings":{"styles":{"xl":{"col":-2,"pull":-1,"push":-1,"offset":-1}}}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"column"}}},"a370a306-1410-42bf-b972-319188a91c2d":{"settings":{"title":"Admin Edit Tabs Block","customStyle":[{"customStyle":""}],"settings":{"theme":"all","customStyle":[{"customStyle":""}]},"theme":"arvestbank_theme","block":"arvestbank_theme_local_tasks"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"block"}}},"1eea745e-e78c-4076-a6d6-9887a967b52e":{"settings":{"title":"Body Field","settings":{"drupalField":""},"drupalField":"content.body"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"drupal-field"}}}},"previewModel":{"80cada58-a301-4374-a3d3-44fbdad450f5":{},"bc59e6ba-db19-4df1-8e2c-eeeff664bf0e":{},"ccec8eda-404b-4b01-88de-69a316a578c8":{},"a370a306-1410-42bf-b972-319188a91c2d":{},"1eea745e-e78c-4076-a6d6-9887a967b52e":{}},"variableFields":{"80cada58-a301-4374-a3d3-44fbdad450f5":[],"bc59e6ba-db19-4df1-8e2c-eeeff664bf0e":[],"ccec8eda-404b-4b01-88de-69a316a578c8":[],"a370a306-1410-42bf-b972-319188a91c2d":[],"1eea745e-e78c-4076-a6d6-9887a967b52e":[]},"meta":{"fieldHistory":[]}}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0029
-    modified: true
-    selectable: true
-    custom: false
-    twig_template: node--cohesion--node-article-education-article-f
-    default: true
-    entity_type: node
-    bundle: article_education_article
-    view_mode: full
-    master_template: master_template
--
-  type: cohesion_master_templates
-  export:
-    uuid: 62698335-7c06-4e41-954f-69f4771d157d
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: master_template
-    label: 'Master template'
-    json_values: '{"canvas":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"ab0d27dc-5785-4feb-87e3-9ce6a259fd5d","parentUid":"root","isContainer":true,"children":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"2b3f1c8e-5a07-4b77-b822-68036efe13ad","parentUid":"container","isContainer":true,"children":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":true},"uuid":"c99bf51d-7780-4cdd-a0f0-162dc53adb84","parentUid":"container","isContainer":true,"children":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false,"collapsedParents":["c99bf51d-7780-4cdd-a0f0-162dc53adb84"]},"uuid":"8a9d63e7-4fbe-4f54-abe5-ca02d3362d57","parentUid":"container","isContainer":true,"children":[{"type":"item","uid":"drupal-menu","title":"Menu","status":{"collapsed":true,"collapsedParents":["c99bf51d-7780-4cdd-a0f0-162dc53adb84"]},"uuid":"64528a8f-e65a-4d53-97c3-bfda64593833","parentUid":"container","isContainer":false,"children":[]}]}]},{"type":"container","uid":"container","title":"Container","status":{"collapsed":true,"collapsedParents":[]},"uuid":"e0e8c0f2-c325-439d-88bf-3728bddd56fb","parentUid":"container","isContainer":true,"children":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false,"collapsedParents":["e0e8c0f2-c325-439d-88bf-3728bddd56fb"]},"uuid":"696aa976-33b8-47a4-9905-fd1c2008909a","parentUid":"container","isContainer":true,"children":[{"type":"item","uid":"drupal-block","title":"Block","status":{"collapsed":true,"collapsedParents":["e0e8c0f2-c325-439d-88bf-3728bddd56fb"]},"uuid":"2f987f69-8688-4e4f-8ecd-053c2425b90b","parentUid":"container","isContainer":false,"children":[]}]}]},{"type":"container","uid":"container","title":"Container","status":{"collapsed":true},"uuid":"1b024a18-6704-4a9a-8c0b-be4ac8a4c91c","parentUid":"container","isContainer":true,"children":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false,"collapsedParents":["1b024a18-6704-4a9a-8c0b-be4ac8a4c91c"]},"uuid":"96e25832-a44a-453a-a9b0-f7d67629547d","parentUid":"container","isContainer":true,"children":[{"type":"item","uid":"drupal-menu","title":"Menu","status":{"collapsed":true,"collapsedParents":["1b024a18-6704-4a9a-8c0b-be4ac8a4c91c"]},"uuid":"fdebce4d-bfb8-47da-ba8c-307c6f2ce5bc","parentUid":"container","isContainer":false,"children":[]}]}]}]},{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"fb0e1d2e-10c9-4037-b042-b0240fd2dd38","parentUid":"container","isContainer":true,"children":[{"type":"item","uid":"drupal-region","title":"Region","status":{"collapsed":true,"collapsedParents":[]},"uuid":"705ab74a-45f8-457d-b037-7091dbcb17d5","parentUid":"container","isContainer":false,"children":[]}]},{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"1a6d5c21-fbc9-41ad-b89e-8f1097eab14c","parentUid":"container","isContainer":true,"children":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false,"collapsedParents":[]},"uuid":"2cf894b2-b92f-4228-9053-e15e7d252d16","parentUid":"container","isContainer":true,"children":[{"type":"item","uid":"drupal-menu","title":"Menu","status":{"collapsed":true,"collapsedParents":[]},"uuid":"1de0373f-1140-4e2e-8383-e858b2cdc2ea","parentUid":"container","isContainer":false,"children":[]}]}]},{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"6c00c9cb-aa53-44e0-9599-d858f00dec66","parentUid":"container","isContainer":true,"children":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false,"collapsedParents":[]},"uuid":"cfd0f982-25a3-4502-babf-faa74db66938","parentUid":"container","isContainer":true,"children":[{"type":"item","uid":"drupal-region","title":"Region","status":{"collapsed":true},"uuid":"6570fdc8-e1ac-4c4c-941b-dd8f57bf24a7","parentUid":"container","isContainer":false,"children":[]}]}]}]}],"mapper":{"ab0d27dc-5785-4feb-87e3-9ce6a259fd5d":{},"6c00c9cb-aa53-44e0-9599-d858f00dec66":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]},"styles":{"formDefinition":[{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]}],"selectorType":"topLevel","items":[],"form":null}},"cfd0f982-25a3-4502-babf-faa74db66938":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"6570fdc8-e1ac-4c4c-941b-dd8f57bf24a7":{},"1a6d5c21-fbc9-41ad-b89e-8f1097eab14c":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]},"styles":{"formDefinition":[{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]}],"selectorType":"topLevel","items":[],"form":null}},"2cf894b2-b92f-4228-9053-e15e7d252d16":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"1de0373f-1140-4e2e-8383-e858b2cdc2ea":{"settings":{"formDefinition":[{"formKey":"drupal-menu-settings","children":[{"formKey":"drupal-menu-menu","breakpoints":[],"activeFields":[{"name":"id","active":true},{"name":"onlyRenderActiveTrail","active":true},{"name":"startLevel","active":true}]},{"formKey":"drupal-menu-template","breakpoints":[],"activeFields":[{"name":"template","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"fb0e1d2e-10c9-4037-b042-b0240fd2dd38":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"705ab74a-45f8-457d-b037-7091dbcb17d5":{"settings":{"formDefinition":[{"formKey":"region-settings","children":[{"formKey":"region-type","breakpoints":[],"activeFields":[{"name":"theme","active":true},{"name":"type","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"2b3f1c8e-5a07-4b77-b822-68036efe13ad":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]},"styles":{"formDefinition":[{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]}],"selectorType":"topLevel","items":[],"form":null}},"1b024a18-6704-4a9a-8c0b-be4ac8a4c91c":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]},"styles":{"formDefinition":[{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]}],"selectorType":"topLevel","items":[],"form":null}},"96e25832-a44a-453a-a9b0-f7d67629547d":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"fdebce4d-bfb8-47da-ba8c-307c6f2ce5bc":{"settings":{"formDefinition":[{"formKey":"drupal-menu-settings","children":[{"formKey":"drupal-menu-menu","breakpoints":[],"activeFields":[{"name":"id","active":true},{"name":"onlyRenderActiveTrail","active":true},{"name":"startLevel","active":true}]},{"formKey":"drupal-menu-template","breakpoints":[],"activeFields":[{"name":"template","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"e0e8c0f2-c325-439d-88bf-3728bddd56fb":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"696aa976-33b8-47a4-9905-fd1c2008909a":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"2f987f69-8688-4e4f-8ecd-053c2425b90b":{"settings":{"formDefinition":[{"formKey":"block-settings","children":[{"formKey":"block-drupal-block","breakpoints":[],"activeFields":[{"name":"theme","active":true},{"name":"block","active":true}]},{"formKey":"block-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"c99bf51d-7780-4cdd-a0f0-162dc53adb84":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]},"styles":{"formDefinition":[{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]}],"selectorType":"topLevel","items":[],"form":null}},"8a9d63e7-4fbe-4f54-abe5-ca02d3362d57":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]},"styles":{"formDefinition":[{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]}],"selectorType":"topLevel","items":[],"form":null}},"64528a8f-e65a-4d53-97c3-bfda64593833":{"settings":{"formDefinition":[{"formKey":"drupal-menu-settings","children":[{"formKey":"drupal-menu-menu","breakpoints":[],"activeFields":[{"name":"id","active":true},{"name":"onlyRenderActiveTrail","active":true},{"name":"startLevel","active":true}]},{"formKey":"drupal-menu-template","breakpoints":[],"activeFields":[{"name":"template","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}}},"model":{"ab0d27dc-5785-4feb-87e3-9ce6a259fd5d":{"settings":{"width":"fluid"}},"2b3f1c8e-5a07-4b77-b822-68036efe13ad":{"settings":{"title":"Header Container","width":"fluid","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"},"styles":{"xl":{"background-color":{"value":{"link":false,"value":{"hex":"#00457c","rgba":"rgba(0, 69, 124, 1)"},"name":"Arvest Blue","uid":"blue-4","class":".coh-color-blue-4","variable":"$coh-color-blue-4","inuse":false}}}}}},"c99bf51d-7780-4cdd-a0f0-162dc53adb84":{"settings":{"title":"Top Menu Container","width":"fluid","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"},"styles":{"xl":{"background-color":{"value":{"link":false,"value":{"hex":"#00457c","rgba":"rgba(0, 69, 124, 1)"},"name":"Arvest Blue","uid":"blue-4","class":".coh-color-blue-4","variable":"$coh-color-blue-4","inuse":false}}}}}},"8a9d63e7-4fbe-4f54-abe5-ca02d3362d57":{"settings":{"title":"Top Menu Container","width":"fluid","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"},"styles":{"xl":{"background-color":{"value":{}}}}}},"64528a8f-e65a-4d53-97c3-bfda64593833":{"settings":{"title":"Menu","settings":{"settings":{"menu":{"id":"","template":""}},"menu":{"id":"top-menu","template":""}}},"contextVisibility":{"condition":"ALL"},"styles":{"settings":{"element":"drupal-menu"}}},"e0e8c0f2-c325-439d-88bf-3728bddd56fb":{"settings":{"title":"Site Branding Container","width":"fluid","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"}}},"696aa976-33b8-47a4-9905-fd1c2008909a":{"settings":{"title":"Boxed Width Container","width":"boxed","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"}}},"2f987f69-8688-4e4f-8ecd-053c2425b90b":{"settings":{"title":"Site Branding Block","customStyle":[{"customStyle":""}],"settings":{"theme":"all","customStyle":[{"customStyle":""}]},"theme":"arvestbank_theme","block":"arvestbank_theme_branding"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"block"}}},"1b024a18-6704-4a9a-8c0b-be4ac8a4c91c":{"settings":{"title":"Main Nav Container","width":"fluid","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"},"styles":{"xl":{"background-color":{"value":{"link":false,"value":{"hex":"#002c5c","rgba":"rgba(0, 44, 92, 1)"},"name":"Navigation Blue","uid":"blue-2","class":".coh-color-blue-2","variable":"$coh-color-blue-2","inuse":false}}}}}},"96e25832-a44a-453a-a9b0-f7d67629547d":{"settings":{"title":"Boxed Width Container","width":"boxed","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"}}},"fdebce4d-bfb8-47da-ba8c-307c6f2ce5bc":{"settings":{"title":"Main Menu Navigation","settings":{"settings":{"menu":{"id":"","template":""}},"menu":{"id":"main","template":""}}},"contextVisibility":{"condition":"ALL"},"styles":{"settings":{"element":"drupal-menu"}}},"fb0e1d2e-10c9-4037-b042-b0240fd2dd38":{"settings":{"title":"Content Region Container","width":"fluid","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"}}},"705ab74a-45f8-457d-b037-7091dbcb17d5":{"settings":{"title":"Region","region":{"theme":"arvestbank_theme","type":"content"}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"region"}}},"1a6d5c21-fbc9-41ad-b89e-8f1097eab14c":{"settings":{"title":"Footer Nav Container","width":"fluid","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"},"styles":{"xl":{"background-color":{"value":{"link":false,"value":{"hex":"#002c5c","rgba":"rgba(0, 44, 92, 1)"},"name":"Navigation Blue","uid":"blue-2","class":".coh-color-blue-2","variable":"$coh-color-blue-2","inuse":false}}}}}},"2cf894b2-b92f-4228-9053-e15e7d252d16":{"settings":{"title":"Boxed Width Container","width":"boxed","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"}}},"1de0373f-1140-4e2e-8383-e858b2cdc2ea":{"settings":{"title":"Footer Nav","settings":{"settings":{"menu":{"id":"","template":""}},"menu":{"id":"footer","template":""}}},"contextVisibility":{"condition":"ALL"},"styles":{"settings":{"element":"drupal-menu"}}},"6c00c9cb-aa53-44e0-9599-d858f00dec66":{"settings":{"title":"Footer Container","width":"fluid","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"},"styles":{"xl":{"background-color":{"value":{"link":false,"value":{"hex":"#00457c","rgba":"rgba(0, 69, 124, 1)"},"name":"Arvest Blue","uid":"blue-4","class":".coh-color-blue-4","variable":"$coh-color-blue-4","inuse":false}}}}}},"cfd0f982-25a3-4502-babf-faa74db66938":{"settings":{"title":"Boxed Width Container","width":"boxed","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"}}},"6570fdc8-e1ac-4c4c-941b-dd8f57bf24a7":{"settings":{"title":"Footer Region","region":{"theme":"arvestbank_theme","type":"footer"}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"region"}}}},"previewModel":{"2b3f1c8e-5a07-4b77-b822-68036efe13ad":{},"c99bf51d-7780-4cdd-a0f0-162dc53adb84":{},"64528a8f-e65a-4d53-97c3-bfda64593833":{},"e0e8c0f2-c325-439d-88bf-3728bddd56fb":{},"2f987f69-8688-4e4f-8ecd-053c2425b90b":{},"fdebce4d-bfb8-47da-ba8c-307c6f2ce5bc":{},"705ab74a-45f8-457d-b037-7091dbcb17d5":{},"fb0e1d2e-10c9-4037-b042-b0240fd2dd38":{},"696aa976-33b8-47a4-9905-fd1c2008909a":{},"96e25832-a44a-453a-a9b0-f7d67629547d":{},"1b024a18-6704-4a9a-8c0b-be4ac8a4c91c":{},"8a9d63e7-4fbe-4f54-abe5-ca02d3362d57":{},"6c00c9cb-aa53-44e0-9599-d858f00dec66":{},"2cf894b2-b92f-4228-9053-e15e7d252d16":{},"1de0373f-1140-4e2e-8383-e858b2cdc2ea":{},"cfd0f982-25a3-4502-babf-faa74db66938":{},"1a6d5c21-fbc9-41ad-b89e-8f1097eab14c":{},"6570fdc8-e1ac-4c4c-941b-dd8f57bf24a7":{}},"variableFields":{"2b3f1c8e-5a07-4b77-b822-68036efe13ad":[],"c99bf51d-7780-4cdd-a0f0-162dc53adb84":[],"64528a8f-e65a-4d53-97c3-bfda64593833":[],"e0e8c0f2-c325-439d-88bf-3728bddd56fb":[],"2f987f69-8688-4e4f-8ecd-053c2425b90b":[],"fdebce4d-bfb8-47da-ba8c-307c6f2ce5bc":[],"705ab74a-45f8-457d-b037-7091dbcb17d5":[],"fb0e1d2e-10c9-4037-b042-b0240fd2dd38":[],"696aa976-33b8-47a4-9905-fd1c2008909a":[],"96e25832-a44a-453a-a9b0-f7d67629547d":[],"1b024a18-6704-4a9a-8c0b-be4ac8a4c91c":[],"8a9d63e7-4fbe-4f54-abe5-ca02d3362d57":[],"6c00c9cb-aa53-44e0-9599-d858f00dec66":[],"2cf894b2-b92f-4228-9053-e15e7d252d16":[],"1de0373f-1140-4e2e-8383-e858b2cdc2ea":[],"cfd0f982-25a3-4502-babf-faa74db66938":[],"1a6d5c21-fbc9-41ad-b89e-8f1097eab14c":[],"6570fdc8-e1ac-4c4c-941b-dd8f57bf24a7":[]},"meta":{"fieldHistory":[]}}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0029
-    locked: false
-    modified: true
-    selectable: true
-    custom: false
-    twig_template: page--cohesion--master-template
-    default: true
--
-  type: cohesion_color
-  export:
-    uuid: c0c7ba6a-2eba-4d0b-a91c-440f1d2315dd
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: blue-2
-    label: 'Blue 2'
-    json_values: '{"link":false,"value":{"value":{"hex":"#002c5c","rgba":"rgba(0, 44, 92, 1)"}},"name":"Navigation Blue","uid":"blue-2","class":".coh-color-blue-2","variable":"$coh-color-blue-2","inuse":false}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0029
-    locked: false
-    modified: true
-    selectable: true
-    weight: 12
--
-  type: cohesion_website_settings
-  export:
-    uuid: c97aa6dd-f934-44e1-b8c6-296df41f6100
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: base_unit_settings
-    label: 'Base unit settings'
-    json_values: '{"baseFontSize":{"value":12},"baseFontSizeEnable":true,"defaultUnitConversion":"rem"}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0029
-    locked: false
-    modified: true
-    selectable: true
--
-  type: cohesion_website_settings
-  export:
-    uuid: 30161dc0-a813-4834-b96b-1ae515f7eaf8
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: default_font_settings
-    label: 'Default font settings'
-    json_values: '{"defaultFontStack":"$coh-font-verdana","color":{"name":"Gray 1","uid":"gray-1","value":{"hex":"#333333","rgba":"rgba(51, 51, 51, 1)"},"wysiwyg":true,"class":".coh-color-gray-1","variable":"$coh-color-gray-1","inuse":false,"link":true}}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0029
-    locked: false
-    modified: true
-    selectable: true
--
-  type: cohesion_color
-  export:
-    uuid: af99fe7f-2885-4905-b577-466420c9f777
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: gray-1
-    label: 'Gray 1'
-    json_values: '{"name":"Main Gray","uid":"gray-1","value":{"value":{"hex":"#333333","rgba":"rgba(51, 51, 51, 1)"}},"wysiwyg":true,"class":".coh-color-gray-1","variable":"$coh-color-gray-1","inuse":false,"link":false}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0029
-    locked: false
-    modified: true
-    selectable: true
-    weight: 2
--
-  type: cohesion_font_stack
-  export:
-    uuid: ad2cd4e8-f50b-4d84-b11c-1f4108a41eba
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: verdana
-    label: Verdana
-    json_values: '{"inuse":true,"systemfont":true,"name":"Verdana","uid":"verdana","fontStack":"Verdana,Geneva,sans-serif","smoothing":{"firefox":true,"webkit":true},"variable":"$coh-font-verdana","class":".coh-font-verdana","link":true}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0029
-    locked: false
-    modified: true
-    selectable: true
-    source: fontStacks
--
-  type: cohesion_website_settings
-  export:
-    uuid: 356a4ff9-9c98-404a-b812-e4fd91b23867
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: responsive_grid_settings
-    label: 'Responsive grid settings'
-    json_values: '{"gridType":"desktop-first","columns":12,"breakpoints":{"xl":{"width":1170,"innerGutter":30,"outerGutter":30,"widthType":"fixed","previewColumns":12,"label":"Television","class":"coh-icon-television","iconHex":"F26C","boxedWidth":1110},"lg":{"width":1030,"innerGutter":30,"outerGutter":30,"widthType":"fixed","previewColumns":12,"label":"Desktop","class":"coh-icon-desktop","iconHex":"F108","boxedWidth":970},"md":{"width":950,"innerGutter":30,"outerGutter":30,"widthType":"fixed","previewColumns":12,"label":"Laptop","class":"coh-icon-laptop","iconHex":"F109","boxedWidth":890},"sm":{"width":768,"innerGutter":30,"outerGutter":30,"widthType":"fixed","previewColumns":12,"label":"Tablet","class":"coh-icon-tablet","iconHex":"F10A","boxedWidth":708},"ps":{"width":565,"innerGutter":30,"outerGutter":30,"widthType":"fixed","previewColumns":12,"label":"Mobile landscape","class":"coh-icon-mobile-landscape","iconHex":"E91E","boxedWidth":505},"xs":{"width":320,"innerGutter":20,"outerGutter":20,"widthType":"fluid","mobilePlaceholderWidth":320,"mobilePlaceholderType":"fluid","previewColumns":12,"label":"Mobile","class":"coh-icon-mobile","iconHex":"F10B","boxedWidth":280}}}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0029
-    locked: false
-    modified: true
-    selectable: true
--
-  type: cohesion_font_stack
-  export:
-    uuid: 900d7bab-9071-4f5e-8d9b-56ee4e5d0ec3
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: arial
-    label: Arial
-    json_values: '{"inuse":false,"systemfont":true,"name":"Arial","uid":"arial","fontStack":"Arial, ''Helvetica Neue'', Helvetica, sans-serif","smoothing":{"firefox":false,"webkit":false},"variable":"$coh-font-arial","class":".coh-font-arial"}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0029
-    locked: false
-    modified: true
-    selectable: true
-    source: null
--
-  type: cohesion_color
-  export:
-    uuid: a0c3d055-2701-43f6-8d38-b3f7cac06c98
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: black
-    label: Black
-    json_values: '{"name":"Black","uid":"black","value":{"value":{"hex":"#000000","rgba":"rgba(0, 0, 0, 1)"}},"wysiwyg":true,"class":".coh-color-black","variable":"$coh-color-black","inuse":false,"link":true}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0029
-    locked: false
-    modified: true
-    selectable: true
-    weight: 0
--
-  type: cohesion_color
-  export:
-    uuid: 13e4e11a-2f38-4068-b078-2b7076f649c9
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: blue-10
-    label: 'Blue 10'
-    json_values: '{"link":true,"value":{"value":{"hex":"#4879ad","rgba":"rgba(72, 121, 173, 1)"}},"name":"Blue 10","uid":"blue-10","class":".coh-color-blue-10","variable":"$coh-color-blue-10","inuse":false}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0029
-    locked: false
-    modified: true
-    selectable: true
-    weight: 20
--
-  type: cohesion_color
-  export:
-    uuid: b5c8070e-37c1-40ea-89e2-d09e1aa471df
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: blue-11
-    label: 'Blue 11'
-    json_values: '{"link":true,"value":{"value":{"hex":"#acc6e1","rgba":"rgba(172, 198, 225, 1)"}},"name":"Blue 11","uid":"blue-11","class":".coh-color-blue-11","variable":"$coh-color-blue-11","inuse":false}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0029
-    locked: false
-    modified: true
-    selectable: true
-    weight: 21
--
-  type: cohesion_color
-  export:
-    uuid: 78a53cb0-e96f-4c93-8fd0-55d83c1df9e4
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: blue-12
-    label: 'Blue 12'
-    json_values: '{"link":true,"value":{"value":{"hex":"#b3cae4","rgba":"rgba(179, 202, 228, 1)"}},"name":"Blue 12","uid":"blue-12","class":".coh-color-blue-12","variable":"$coh-color-blue-12","inuse":false}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0029
-    locked: false
-    modified: true
-    selectable: true
-    weight: 22
--
-  type: cohesion_color
-  export:
-    uuid: 8be7586b-c444-4e4a-950c-350438abe4de
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: blue-13
-    label: 'Blue 13'
-    json_values: '{"link":true,"value":{"value":{"hex":"#f5f9fe","rgba":"rgba(245, 249, 254, 1)"}},"name":"Blue 13","uid":"blue-13","class":".coh-color-blue-13","variable":"$coh-color-blue-13","inuse":false}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0029
-    locked: false
-    modified: true
-    selectable: true
-    weight: 23
--
-  type: cohesion_color
-  export:
-    uuid: 5f65ddb7-d1e8-4023-b2d9-ca9f9a676f81
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: blue-3
-    label: 'Blue 3'
-    json_values: '{"name":"Blue 3","uid":"blue-3","value":{"value":{"hex":"#003162","rgba":"rgba(0, 49, 98, 1)"}},"wysiwyg":false,"class":".coh-color-blue-3","variable":"$coh-color-blue-3","inuse":false,"link":true}'
+    json_values: '{"link":false,"value":{"value":{"hex":"#00457c","rgba":"rgba(0, 69, 124, 1)"}},"name":"Arvest Blue","uid":"blue-4","class":".coh-color-blue-4","variable":"$coh-color-blue-4","inuse":true}'
     json_mapper: '{}'
     last_entity_update: entityupdate_0029
     locked: false
@@ -339,21 +239,53 @@
     selectable: true
     weight: 13
 -
-  type: cohesion_color
+  type: cohesion_base_styles
   export:
-    uuid: 5fd5a90e-0330-460b-908f-158926625fd7
+    uuid: 0aa67aa2-0851-4924-8b99-bfcb40e36b80
     langcode: en
     status: true
     dependencies: {  }
-    id: blue-5
-    label: 'Blue 5'
-    json_values: '{"link":true,"value":{"value":{"hex":"#004580","rgba":"rgba(0, 69, 128, 1)"}},"name":"Blue 5","uid":"blue-5","class":".coh-color-blue-5","variable":"$coh-color-blue-5","inuse":false}'
+    id: html
+    label: HTML
+    json_values: '{"preview":{"text":"<p>Default content for ''HTML''.<\/p>\n","textFormat":"cohesion"},"sBackgroundColour":"#FFFFFF","styles":{"settings":{"element":"html","class":"","combinator":"","pseudo":""},"styles":{"xl":{"line-height":{"value":"1.75"},"font-family":{"value":"$coh-font-proxima-nova"},"color":{"value":{"name":"Black","uid":"black","value":{"hex":"#000000","rgba":"rgba(0, 0, 0, 1)"},"wysiwyg":true,"class":".coh-color-black","variable":"$coh-color-black","inuse":false,"link":true}}}}},"variableFields":[]}'
+    json_mapper: '{"styles":{"title":"HTML","selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-sizing-and-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-size","active":true},{"name":"line-height","active":true},{"name":"text-align","active":true},{"name":"letter-spacing","active":true},{"name":"word-spacing","active":true},{"name":"text-indent","active":true}]},{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]}]}],"items":[],"form":null}}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: false
+    custom: null
+-
+  type: cohesion_color
+  export:
+    uuid: dc3c48b1-f4ee-4ea4-b404-5eb30806624d
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: black
+    label: Black
+    json_values: '{"name":"Black","uid":"black","value":{"value":{"hex":"#000000","rgba":"rgba(0, 0, 0, 1)"}},"wysiwyg":true,"class":".coh-color-black","variable":"$coh-color-black","inuse":true,"link":true}'
     json_mapper: '{}'
     last_entity_update: entityupdate_0029
     locked: false
     modified: true
     selectable: true
-    weight: 15
+    weight: 0
+-
+  type: cohesion_base_styles
+  export:
+    uuid: ac01cb93-9f17-4d5d-ab1d-01f79c7c33fb
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: link
+    label: Link
+    json_values: '{"preview":{"text":"<p><a href=\"#\">Default content for ''Link''.<\/a><\/p>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"a","class":"","combinator":"","pseudo":""},"5601726c-9240-4ad7-8fd9-71441d1f36b7":{"settings":{"element":"","class":"","combinator":"","pseudo":":hover"},"styles":{"xl":{"text-decoration":{"value":"underline"}}}},"styles":{"xl":{"color":{"value":{"link":false,"value":{"hex":"#1a6ac0","rgba":"rgba(26, 106, 192, 1)"},"name":"Link Blue","uid":"blue-6","class":".coh-color-blue-6","variable":"$coh-color-blue-6","inuse":false,"wysiwyg":true}}}},"undefined":{"styles":{"xl":{"color":{"value":{"link":false,"value":{"hex":"#00457c","rgba":"rgba(0, 69, 124, 1)"},"name":"Arvest Blue","uid":"blue-4","class":".coh-color-blue-4","variable":"$coh-color-blue-4","inuse":true}}}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+    json_mapper: '{"styles":{"title":"Link","selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":false},{"name":"font-weight","active":false},{"name":"color","active":true}]}]}],"items":[{"title":":hover","type":"container","items":[],"selectorType":"pseudo","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":false},{"name":"font-weight","active":false},{"name":"color","active":true}]},{"formKey":"font-style-and-wrapping","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-style","active":false},{"name":"text-transform","active":false},{"name":"text-decoration","active":true},{"name":"word-wrap","active":false},{"name":"direction","active":false}]}]}],"form":null,"allowedTypes":["child","pseudo"],"uuid":"5601726c-9240-4ad7-8fd9-71441d1f36b7"}],"form":null}}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: false
+    custom: null
 -
   type: cohesion_color
   export:
@@ -369,7 +301,537 @@
     locked: false
     modified: true
     selectable: true
-    weight: 16
+    weight: 15
+-
+  type: cohesion_base_styles
+  export:
+    uuid: 7bbec311-130c-419b-83bb-b7839d307d3a
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: ordered_list
+    label: 'Ordered list'
+    json_values: '{"preview":{"text":"<ol>\n\t<li>List item 1<\/li>\n\t<li>List item 2<\/li>\n\t<li>List item 3<\/li>\n<\/ol>\n","textFormat":"cohesion"},"sBackgroundColour":"#FFFFFF","styles":{"settings":{"element":"ol","class":"","combinator":"","pseudo":""},"styles":{"xl":{"color":{"value":{}},"margin":{"margin-top":{"value":""}}}},"ce6977c1-2199-4f38-b8db-bc999b8f84f7":{"settings":{"element":"li::marker","class":"","combinator":"","pseudo":""},"styles":{"xl":{"color":{"value":{"link":true,"value":{"hex":"#e60000","rgba":"rgba(230, 0, 0, 1)"},"name":"Red 2","uid":"red-2","class":".coh-color-red-2","variable":"$coh-color-red-2","inuse":false,"wysiwyg":false}}}}},"5a7f2f4f-e374-4015-9273-8e4e90da0ed8":{"settings":{"element":"li","class":"","combinator":"","pseudo":""},"styles":{"xl":{"line-height":{"value":"1.5"},"margin":{"margin-top":{"value":"20px"}}}}}},"variableFields":[]}'
+    json_mapper: '{"styles":{"title":"Ordered list","selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]},{"formKey":"font-sizing-and-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-size","active":true},{"name":"line-height","active":true},{"name":"text-align","active":true},{"name":"letter-spacing","active":false},{"name":"word-spacing","active":false},{"name":"text-indent","active":false}]}]},{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":true},{"name":"margin-bottom","active":true},{"name":"margin-left","active":true},{"name":"margin-right","active":true},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]}]}],"items":[{"title":"li::marker","type":"container","items":[],"form":null,"selectorType":"child","model":"li::marker","uuid":"ce6977c1-2199-4f38-b8db-bc999b8f84f7","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]}]}]},{"title":"li","type":"container","items":[],"form":null,"selectorType":"child","model":"li","uuid":"5a7f2f4f-e374-4015-9273-8e4e90da0ed8","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"font","children":[{"formKey":"font-sizing-and-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-size","active":true},{"name":"line-height","active":true},{"name":"text-align","active":true},{"name":"letter-spacing","active":true},{"name":"word-spacing","active":true},{"name":"text-indent","active":true}]}]},{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":true},{"name":"margin-bottom","active":true},{"name":"margin-left","active":true},{"name":"margin-right","active":true},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]}]}]}],"form":null}}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: false
+    custom: null
+-
+  type: cohesion_custom_style
+  export:
+    uuid: 95798c9d-8686-406e-8041-1dcf7be77dc2
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: c5b21ed6
+    label: 'Link arrow button'
+    json_values: '{"preview":{"text":"<p><a class=\"coh-preview\" href=\"#\">Default content for ''Link''.<\/a><\/p>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"a","class":"","combinator":"","pseudo":""},"94562c00-b746-407d-ab0a-b62a574a11a8":{"settings":{"element":"","class":"","combinator":"","pseudo":":hover"},"styles":{}},"7d6264b9-c883-462c-9ae4-05f668403b4b":{"settings":{"element":"","class":"","combinator":"","pseudo":":before"},"styles":{"xl":{"height":{"value":"0"},"width":{"value":"0"},"border-top-width":{"value":"5"},"border-bottom-width":{"value":"5"},"border-left-width":{"value":"5"},"border-top-color":{"value":{"value":{"hex":"transparent","rgba":"rgba(0, 0, 0, 0)"},"name":"Transparent","wysiwyg":true,"uid":"dx8-transparent","class":".dx8-transparent","variable":"$coh-dx8-transparent","inuse":true}},"border-bottom-color":{"value":{"value":{"hex":"transparent","rgba":"rgba(0, 0, 0, 0)"},"name":"Transparent","wysiwyg":true,"uid":"dx8-transparent","class":".dx8-transparent","variable":"$coh-dx8-transparent","inuse":true}},"border-left-color":{"value":{"link":true,"value":{"hex":"#ffffff","rgba":"rgba(255, 255, 255, 1)"},"name":"White","uid":"white","class":".coh-color-white","variable":"$coh-color-white","wysiwyg":true,"inuse":true}},"content-string":{"contentType":{"value":"string"},"contentString":{"value":""}},"border-style":{"value":"solid"},"display":{"value":"inline-block"},"border-right-width":{"value":"0"},"padding":{"padding-right":{"value":"4"}}}}},"styles":{"xl":{"position":{"value":"relative"}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+    json_mapper: '{"styles":{"title":"Link","selectorType":"topLevel","formDefinition":[{"formKey":"layout","children":[{"formKey":"position","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"position","active":true},{"name":"top","active":true},{"name":"bottom","active":true},{"name":"left","active":true},{"name":"right","active":true},{"name":"z-index","active":true}]}]}],"items":[{"title":":hover","type":"container","items":[],"selectorType":"pseudo","formDefinition":[],"form":null,"allowedTypes":["child","pseudo"],"uuid":"94562c00-b746-407d-ab0a-b62a574a11a8"},{"title":":before","type":"container","items":[],"form":null,"selectorType":"pseudo","uuid":"7d6264b9-c883-462c-9ae4-05f668403b4b","allowedTypes":["child","pseudo"],"formDefinition":[{"formKey":"layout","children":[{"formKey":"height","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"min-height","active":false},{"name":"max-height","active":false},{"name":"height","active":true}]},{"formKey":"width","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"min-width","active":false},{"name":"max-width","active":false},{"name":"width","active":true}]},{"formKey":"display","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"display","active":true},{"name":"visibility","active":false},{"name":"overflow","active":false},{"name":"overflow-x","active":false},{"name":"overflow-y","active":false}]},{"formKey":"padding","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"padding-equal","active":false},{"name":"padding-top","active":false},{"name":"padding-bottom","active":false},{"name":"padding-left","active":false},{"name":"padding-right","active":true},{"name":"padding-block-start","active":false},{"name":"padding-block-end","active":false},{"name":"padding-inline-start","active":false},{"name":"padding-inline-end","active":false}]}]},{"formKey":"border-and-outline","children":[{"formKey":"border-width","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"border-width","active":false},{"name":"border-top-width","active":true},{"name":"border-bottom-width","active":true},{"name":"border-left-width","active":true},{"name":"border-right-width","active":true},{"name":"border-block-start-width","active":false},{"name":"border-block-end-width","active":false},{"name":"border-inline-start-width","active":false},{"name":"border-inline-end-width","active":false}]},{"formKey":"border-style","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"border-style","active":true},{"name":"border-top-style","active":false},{"name":"border-bottom-style","active":false},{"name":"border-left-style","active":false},{"name":"border-right-style","active":false},{"name":"border-block-start-style","active":false},{"name":"border-block-end-style","active":false},{"name":"border-inline-start-style","active":false},{"name":"border-inline-end-style","active":false}]},{"formKey":"border-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"border-color","active":false},{"name":"border-top-color","active":true},{"name":"border-bottom-color","active":true},{"name":"border-left-color","active":true},{"name":"border-right-color","active":false},{"name":"border-block-start-color","active":false},{"name":"border-block-end-color","active":false},{"name":"border-inline-start-color","active":false},{"name":"border-inline-end-color","active":false}]}]},{"formKey":"content","children":[{"formKey":"strings-counters-quotes-urls-and-attributes","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"contentType","active":true},{"name":"contentString","active":true},{"name":"counterString","active":true},{"name":"customString","active":true}]}]}]}],"form":null}}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    class_name: .coh-style-link-arrow-button
+    custom_style_type: link
+    available_in_wysiwyg: true
+    parent: .coh-style-link-button
+    weight: 0
+-
+  type: cohesion_custom_style
+  export:
+    uuid: a4926d57-063b-4016-8d45-849169165fbc
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: e178ae42
+    label: 'Link button'
+    json_values: '{"preview":{"text":"<p><a class=\"coh-preview\" href=\"#\">Link Button<\/a><\/p>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"a","class":"","combinator":"","pseudo":""},"0a98a5d7-a8e7-4e94-afad-f50eac5e33ee":{"settings":{"element":"","class":"","combinator":"","pseudo":":hover"},"styles":{"xl":{"background-color":{"value":{"link":false,"value":{"hex":"#cd0000","rgba":"rgba(205, 0, 0, 1)"},"name":"Border Red","uid":"red-1","class":".coh-color-border-red","variable":"$coh-color-border-red","inuse":false}},"text-decoration":{"value":"none"},"color":{"value":{"link":true,"value":{"hex":"#ffffff","rgba":"rgba(255, 255, 255, 1)"},"name":"White","uid":"white","class":".coh-color-white","variable":"$coh-color-white","wysiwyg":true,"inuse":true}},"border-color":{"value":{"link":false,"value":{"hex":"#e60000","rgba":"rgba(230, 0, 0, 1)"},"name":"Primary Red","uid":"red-2","class":".coh-color-red-2","variable":"$coh-color-red-2","inuse":true,"wysiwyg":false}}}}},"styles":{"xl":{"vertical-align":{"verticalAlignType":{"value":"middle"}},"custom-css":[{"customCssProperty":{"value":"cursor"},"customCss":{"value":"pointer"}}],"font-weight":{"value":"normal"},"color":{"value":{"link":true,"value":{"hex":"#ffffff","rgba":"rgba(255, 255, 255, 1)"},"name":"White","uid":"white","class":".coh-color-white","variable":"$coh-color-white","wysiwyg":true,"inuse":true}},"text-align":{"value":"center"},"background-color":{"value":{"link":false,"value":{"hex":"#e60000","rgba":"rgba(230, 0, 0, 1)"},"name":"Primary Red","uid":"red-2","class":".coh-color-red-2","variable":"$coh-color-red-2","inuse":true,"wysiwyg":false}},"padding":{"padding-top":{"value":"8"},"padding-bottom":{"value":"8"},"padding-left":{"value":"10"},"padding-right":{"value":"10"}},"margin":{"margin-bottom":{"value":"0"}},"display":{"value":"inline-block"},"border-width":{"value":"1"},"border-radius":{"value":"4"},"border-style":{"value":"solid"},"border-color":{"value":{"link":false,"value":{"hex":"#cd0000","rgba":"rgba(205, 0, 0, 1)"},"name":"Border Red","uid":"red-1","class":".coh-color-border-red","variable":"$coh-color-border-red","inuse":false}}}},"undefined":{"styles":{"xl":{"color":{"value":{"link":false,"value":{"hex":"#cd0000","rgba":"rgba(205, 0, 0, 1)"},"name":"Border Red","uid":"red-1","class":".coh-color-border-red","variable":"$coh-color-border-red","inuse":false}}}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+    json_mapper: '{"styles":{"title":"Link","selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":false},{"name":"font-weight","active":true},{"name":"color","active":true}]},{"formKey":"font-sizing-and-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-size","active":false},{"name":"line-height","active":false},{"name":"text-align","active":true},{"name":"letter-spacing","active":false},{"name":"word-spacing","active":false},{"name":"text-indent","active":false}]}]},{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]},{"formKey":"layout","children":[{"formKey":"padding","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"padding-equal","active":false},{"name":"padding-top","active":true},{"name":"padding-bottom","active":true},{"name":"padding-left","active":true},{"name":"padding-right","active":true},{"name":"padding-block-start","active":false},{"name":"padding-block-end","active":false},{"name":"padding-inline-start","active":false},{"name":"padding-inline-end","active":false}]},{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":false},{"name":"margin-bottom","active":true},{"name":"margin-left","active":false},{"name":"margin-right","active":false},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]},{"formKey":"display","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"display","active":true},{"name":"visibility","active":false},{"name":"overflow","active":false},{"name":"overflow-x","active":false},{"name":"overflow-y","active":false}]},{"formKey":"vertical-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"verticalAlignType","active":true},{"name":"verticalAlignLength","active":true}]}]},{"formKey":"border-and-outline","children":[{"formKey":"border-width","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"border-width","active":true},{"name":"border-top-width","active":false},{"name":"border-bottom-width","active":false},{"name":"border-left-width","active":false},{"name":"border-right-width","active":false},{"name":"border-block-start-width","active":false},{"name":"border-block-end-width","active":false},{"name":"border-inline-start-width","active":false},{"name":"border-inline-end-width","active":false}]},{"formKey":"border-radius","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"border-radius","active":true},{"name":"border-top-left-radius","active":false},{"name":"border-top-right-radius","active":false},{"name":"border-bottom-left-radius","active":false},{"name":"border-bottom-right-radius","active":false}]},{"formKey":"border-style","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"border-style","active":true},{"name":"border-top-style","active":false},{"name":"border-bottom-style","active":false},{"name":"border-left-style","active":false},{"name":"border-right-style","active":false},{"name":"border-block-start-style","active":false},{"name":"border-block-end-style","active":false},{"name":"border-inline-start-style","active":false},{"name":"border-inline-end-style","active":false}]},{"formKey":"border-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"border-color","active":true},{"name":"border-top-color","active":false},{"name":"border-bottom-color","active":false},{"name":"border-left-color","active":false},{"name":"border-right-color","active":false},{"name":"border-block-start-color","active":false},{"name":"border-block-end-color","active":false},{"name":"border-inline-start-color","active":false},{"name":"border-inline-end-color","active":false}]}]},{"formKey":"custom-css","children":[{"formKey":"css-property-and-css-value","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"custom-css","active":true},{"name":"customCssProperty","active":true},{"name":"customCss","active":true}]}]}],"items":[{"title":":hover","type":"container","items":[],"selectorType":"pseudo","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":false},{"name":"font-weight","active":false},{"name":"color","active":true}]},{"formKey":"font-style-and-wrapping","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-style","active":false},{"name":"text-transform","active":false},{"name":"text-decoration","active":true},{"name":"word-wrap","active":false},{"name":"direction","active":false}]}]},{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]},{"formKey":"border-and-outline","children":[{"formKey":"border-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"border-color","active":true},{"name":"border-top-color","active":false},{"name":"border-bottom-color","active":false},{"name":"border-left-color","active":false},{"name":"border-right-color","active":false},{"name":"border-block-start-color","active":false},{"name":"border-block-end-color","active":false},{"name":"border-inline-start-color","active":false},{"name":"border-inline-end-color","active":false}]}]}],"form":null,"allowedTypes":["child","pseudo"],"uuid":"0a98a5d7-a8e7-4e94-afad-f50eac5e33ee"}],"form":null}}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    class_name: .coh-style-link-button
+    custom_style_type: link
+    available_in_wysiwyg: true
+    parent: null
+    weight: 0
+-
+  type: cohesion_custom_style
+  export:
+    uuid: 45f847d5-5f4d-4784-94a0-3d9f622e5fa2
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: e4d06388
+    label: 'menu link'
+    json_values: '{"preview":{"text":"<p><a class=\"coh-preview\" href=\"#\">Default content for ''Link''.<\/a><\/p>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"a","class":"","combinator":"","pseudo":""},"47025376-9f49-4f46-966d-0c63a26bbb09":{"settings":{"element":"","class":"","combinator":"","pseudo":":hover"},"styles":{"xl":{"color":{"value":{"link":false,"value":{"hex":"#002c5c","rgba":"rgba(0, 44, 92, 1)"},"name":"Navigation Blue","uid":"blue-2","class":".coh-color-blue-2","variable":"$coh-color-blue-2","inuse":true}},"text-decoration":{"value":"none"}}}},"styles":{"xl":{"color":{"value":{"link":true,"value":{"hex":"#ffffff","rgba":"rgba(255, 255, 255, 1)"},"name":"White","uid":"white","class":".coh-color-white","variable":"$coh-color-white","wysiwyg":true,"inuse":true}}}},"undefined":{"styles":{"xl":{"color":{"value":{"link":false,"value":{"hex":"#002c5c","rgba":"rgba(0, 44, 92, 1)"},"name":"Navigation Blue","uid":"blue-2","class":".coh-color-blue-2","variable":"$coh-color-blue-2","inuse":true}}}}}},"sBackgroundColour":"#acc6e1","variableFields":[]}'
+    json_mapper: '{"styles":{"title":"Link","selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":false},{"name":"font-weight","active":false},{"name":"color","active":true}]}]}],"items":[{"title":":hover","type":"container","items":[],"selectorType":"pseudo","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":false},{"name":"font-weight","active":false},{"name":"color","active":true}]},{"formKey":"font-style-and-wrapping","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-style","active":false},{"name":"text-transform","active":false},{"name":"text-decoration","active":true},{"name":"word-wrap","active":false},{"name":"direction","active":false}]}]}],"form":null,"allowedTypes":["child","pseudo"],"uuid":"47025376-9f49-4f46-966d-0c63a26bbb09"}],"form":null}}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    class_name: .coh-style-menu-link
+    custom_style_type: link
+    available_in_wysiwyg: false
+    parent: null
+    weight: 0
+-
+  type: cohesion_color
+  export:
+    uuid: c0c7ba6a-2eba-4d0b-a91c-440f1d2315dd
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: blue-2
+    label: 'Blue 2'
+    json_values: '{"link":false,"value":{"value":{"hex":"#002c5c","rgba":"rgba(0, 44, 92, 1)"}},"name":"Navigation Blue","uid":"blue-2","class":".coh-color-blue-2","variable":"$coh-color-blue-2","inuse":true}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    weight: 11
+-
+  type: cohesion_component_category
+  export:
+    uuid: e5796afe-7ac5-40fc-9757-799c37368d9c
+    langcode: en
+    status: true
+    dependencies: {  }
+    _core:
+      default_config_hash: 8oroYAuHNTHgB3x8YPAK3PcwPwTg3ltFUYntoK9iyX4
+    id: cpt_cat_dynamic_components
+    label: 'Dynamic components'
+    json_values: '{}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: false
+    selectable: true
+    class: category-2
+    weight: -6
+-
+  type: cohesion_component_category
+  export:
+    uuid: f0745755-460f-41c6-a9f9-a67e82e788c4
+    langcode: en
+    status: true
+    dependencies: {  }
+    _core:
+      default_config_hash: uD3bsqk6dEY_k5T4rq3k_rgjNjR_BC3IXrfvj9t3SKk
+    id: cpt_cat_general_components
+    label: 'General components'
+    json_values: '{}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: false
+    selectable: true
+    class: category-3
+    weight: -10
+-
+  type: cohesion_component_category
+  export:
+    uuid: d5402ffa-c089-4573-93f0-e9f5d57944d5
+    langcode: en
+    status: true
+    dependencies: {  }
+    _core:
+      default_config_hash: I47o9AQ2aifarRRBg5ARzeIci3dQn_LA6Z-yu_QWpOM
+    id: cpt_cat_interactive_components
+    label: 'Interactive components'
+    json_values: '{}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: false
+    selectable: true
+    class: category-7
+    weight: -7
+-
+  type: cohesion_component_category
+  export:
+    uuid: 61d60d8d-d74f-4df1-a589-abfc4fa2ff8a
+    langcode: en
+    status: true
+    dependencies: {  }
+    _core:
+      default_config_hash: akr0yahJxkNIF15REREkc47dz8rdLCWxC9-DfvndSh0
+    id: cpt_cat_layout_components
+    label: 'Layout components'
+    json_values: '{}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: false
+    selectable: true
+    class: category-1
+    weight: -9
+-
+  type: cohesion_component_category
+  export:
+    uuid: a58aa7af-aa5e-466b-acf2-df36074658ae
+    langcode: en
+    status: true
+    dependencies: {  }
+    _core:
+      default_config_hash: y8SQnGF4oyOEfEO0IrAQ0wh4reR4IQtzZWz733gFyPE
+    id: cpt_cat_media_components
+    label: 'Media components'
+    json_values: '{}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: false
+    selectable: true
+    class: category-4
+    weight: -8
+-
+  type: cohesion_component
+  export:
+    uuid: 20b1e0a1-bcdf-4d30-ab99-3f44e192a74b
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: cpt_1_column_layout_component
+    label: '1 column layout component'
+    json_values: '{"canvas":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"450d0f2c-4c02-4498-9f3f-20160e17fbb3","parentUid":"root","isContainer":true,"children":[{"type":"container","uid":"row-for-columns","title":"Row for columns","status":{"collapsed":false},"uuid":"083ff466-d978-4011-9649-19c091827d18","parentUid":"container","isContainer":true,"children":[{"type":"container","uid":"column","title":"Column","status":{"collapsed":false},"uuid":"9aeb30ba-818d-4ea4-86e0-76b6d757662f","parentUid":"row-for-columns","isContainer":true,"children":[{"type":"item","uid":"wysiwyg","title":"WYSIWYG","status":{"collapsed":true},"uuid":"60f6ea2f-6a00-4783-89c8-cadff942c296","parentUid":"column","isContainer":false,"children":[]}]}]}]}],"componentForm":[{"type":"form-field","uid":"form-wysiwyg","title":"WYSIWYG","translate":true,"status":{"collapsed":false},"uuid":"0de35e25-627c-4df5-ab7b-b20ae97f4f00","parentUid":"root","isContainer":false,"children":[]}],"mapper":{"450d0f2c-4c02-4498-9f3f-20160e17fbb3":{},"083ff466-d978-4011-9649-19c091827d18":{},"9aeb30ba-818d-4ea4-86e0-76b6d757662f":{"settings":{"formDefinition":[{"formKey":"column-settings","children":[{"formKey":"column-width-and-position","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"col","active":true},{"name":"pull","active":false},{"name":"push","active":false},{"name":"offset","active":false}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]}]}],"title":"Settings","selectorType":"topLevel","form":null,"items":[]}},"60f6ea2f-6a00-4783-89c8-cadff942c296":{"settings":{"formDefinition":[{"formKey":"wysiwyg-settings","children":[{"formKey":"wysiwyg-editor","breakpoints":[],"activeFields":[{"name":"content","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}}},"model":{"450d0f2c-4c02-4498-9f3f-20160e17fbb3":{"settings":{"width":"fluid"}},"083ff466-d978-4011-9649-19c091827d18":{"settings":{"styles":{"xl":{"bleed":"retain","targetContainer":"inner","overflow":"visible","jsSettings":{"matchHeightRow":{"targetElement":"none"}}}}}},"9aeb30ba-818d-4ea4-86e0-76b6d757662f":{"settings":{"title":"Column","styles":{"xl":{"col":-2}},"settings":{"styles":{"xl":{"col":-2,"pull":-1,"push":-1,"offset":-1}}}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"column"}}},"60f6ea2f-6a00-4783-89c8-cadff942c296":{"settings":{"title":"WYSIWYG","content":"[field.0de35e25-627c-4df5-ab7b-b20ae97f4f00]"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"wysiwyg"}}},"0de35e25-627c-4df5-ab7b-b20ae97f4f00":{"settings":{"title":"WYSIWYG","type":"cohWysiwyg","schema":{"type":"object"},"machineName":"wysiwyg","tooltipPlacement":"auto right"},"contextVisibility":{"condition":"ALL"},"model":{"value":{"text":"","textFormat":"cohesion"}}}},"previewModel":{"0de35e25-627c-4df5-ab7b-b20ae97f4f00":{},"60f6ea2f-6a00-4783-89c8-cadff942c296":{"settings":{"content":{"text":"","textFormat":"cohesion"}}},"9aeb30ba-818d-4ea4-86e0-76b6d757662f":{}},"variableFields":{"0de35e25-627c-4df5-ab7b-b20ae97f4f00":[],"60f6ea2f-6a00-4783-89c8-cadff942c296":["settings.content"],"9aeb30ba-818d-4ea4-86e0-76b6d757662f":[]},"meta":{"fieldHistory":[{"uuid":"0de35e25-627c-4df5-ab7b-b20ae97f4f00","type":"form-wysiwyg","machineName":"wysiwyg"}]}}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    category: cpt_cat_layout_components
+    preview_image: {  }
+    has_quick_edit: true
+    entity_type_access: {  }
+    bundle_access: {  }
+    twig_template: component--cohesion-cpt-1-column-layout-component
+    weight: 0
+-
+  type: cohesion_helper_category
+  export:
+    uuid: 179b546b-c18c-4c08-a0e4-bffedcb8721f
+    langcode: en
+    status: true
+    dependencies: {  }
+    _core:
+      default_config_hash: iInZNB7jJ_BAGoIHc1B8rhjUD96MGbM7Gc85Zhmozrw
+    id: hlp_cat_dynamic_helpers
+    label: 'Dynamic helpers'
+    json_values: '{}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    modified: false
+    selectable: true
+    class: category-2
+    weight: -6
+-
+  type: cohesion_helper_category
+  export:
+    uuid: 93a5f555-dc7c-4cfb-bff5-7562b2577037
+    langcode: en
+    status: true
+    dependencies: {  }
+    _core:
+      default_config_hash: ktL9Xx15xJF3iz9B9X4NG6Em4-Lf7Dr-5VjWMk8YlfI
+    id: hlp_cat_general_helpers
+    label: 'General helpers'
+    json_values: '{}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    modified: false
+    selectable: true
+    class: category-3
+    weight: -10
+-
+  type: cohesion_helper_category
+  export:
+    uuid: 09067ec0-23ea-431b-8fba-136cf873464c
+    langcode: en
+    status: true
+    dependencies: {  }
+    _core:
+      default_config_hash: yIlzPcNx-lImWWKpcw-Yyqy1L41_zEWhGI9_Q_TKPWA
+    id: hlp_cat_interactive_helpers
+    label: 'Interactive helpers'
+    json_values: '{}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    modified: false
+    selectable: true
+    class: category-7
+    weight: -7
+-
+  type: cohesion_helper_category
+  export:
+    uuid: 38203168-34b3-4f93-94ea-904da5394b07
+    langcode: en
+    status: true
+    dependencies: {  }
+    _core:
+      default_config_hash: cNkk4A9oLwODqwQYdvskShydWHgoAyB1VKP3uDVFmt0
+    id: hlp_cat_layout_helpers
+    label: 'Layout helpers'
+    json_values: '{}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    modified: false
+    selectable: true
+    class: category-1
+    weight: -8
+-
+  type: cohesion_helper_category
+  export:
+    uuid: 77eed4be-0ec4-4440-90bc-6f6f068d8178
+    langcode: en
+    status: true
+    dependencies: {  }
+    _core:
+      default_config_hash: cn_lJjjSTAK56cN46EVDQfTwkgFhktFI8uwXjHWBK1E
+    id: hlp_cat_media_helpers
+    label: 'Media helpers'
+    json_values: '{}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    modified: false
+    selectable: true
+    class: category-4
+    weight: -9
+-
+  type: cohesion_content_templates
+  export:
+    uuid: c3b1e252-20e1-414b-be90-87f302d4c967
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: node___any___full
+    label: 'Full content (Node)'
+    json_values: '{"canvas":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"fc97c06b-6367-4fe2-abbc-7ac5d2ae41f8","parentUid":"root","isContainer":true,"children":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"39d561de-49df-4f16-b2d2-723bf456b750","parentUid":"container","isContainer":true,"children":[{"type":"item","uid":"breadcrumb","title":"Breadcrumb","status":{"collapsed":true},"uuid":"3a4a5ed7-9970-41d5-8e03-8c62fe336a32","parentUid":"container","isContainer":false,"children":[]},{"type":"container","uid":"row-for-columns","title":"Row for columns","status":{"collapsed":false},"uuid":"0812a7c3-56df-4c8c-af17-cc76273779c8","parentUid":"container","isContainer":true,"children":[{"type":"container","uid":"column","title":"Column","status":{"collapsed":false},"uuid":"5dbe0488-d8b0-42f0-990a-8ad02ea2b486","parentUid":"row-for-columns","isContainer":true,"children":[{"type":"item","uid":"drupal-menu","title":"Menu","status":{"collapsed":true},"uuid":"2f85775a-9ea8-4d7c-818b-71bdfbc2bf17","parentUid":"column","isContainer":false,"children":[]}]},{"type":"container","uid":"column","title":"Column","status":{"collapsed":false},"uuid":"fa98b697-af9f-4a39-82e6-59b5ad573430","parentUid":"row-for-columns","isContainer":true,"children":[{"type":"container","uid":"heading","title":"Heading","status":{"collapsed":false},"uuid":"4ead2386-2db7-4d18-8542-fa81498d81e7","parentUid":"column","isContainer":true,"children":[]},{"type":"item","uid":"drupal-block","title":"Block","status":{"collapsed":true},"uuid":"685fd4dd-3468-4eda-9174-ccc4575491c2","parentUid":"column","isContainer":false,"children":[]},{"type":"item","uid":"drupal-content","title":"Content","status":{"collapsed":true},"uuid":"625f9e60-67b6-4196-811c-0b04eacde17e","parentUid":"column","isContainer":false,"children":[]}]}]}]}]}],"mapper":{"fc97c06b-6367-4fe2-abbc-7ac5d2ae41f8":{},"39d561de-49df-4f16-b2d2-723bf456b750":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"0812a7c3-56df-4c8c-af17-cc76273779c8":{},"fa98b697-af9f-4a39-82e6-59b5ad573430":{"settings":{"formDefinition":[{"formKey":"column-settings","children":[{"formKey":"column-width-and-position","breakpoints":[{"name":"xl"},{"name":"sm"}],"activeFields":[{"name":"col","active":true},{"name":"pull","active":false},{"name":"push","active":false},{"name":"offset","active":false}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]}]}],"title":"Settings","selectorType":"topLevel","form":null,"items":[]}},"625f9e60-67b6-4196-811c-0b04eacde17e":{},"685fd4dd-3468-4eda-9174-ccc4575491c2":{"settings":{"formDefinition":[{"formKey":"block-settings","children":[{"formKey":"block-drupal-block","breakpoints":[],"activeFields":[{"name":"theme","active":true},{"name":"block","active":true}]},{"formKey":"block-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"4ead2386-2db7-4d18-8542-fa81498d81e7":{"settings":{"formDefinition":[{"formKey":"heading-settings","children":[{"formKey":"heading-element","breakpoints":[],"activeFields":[{"name":"element","active":true}]},{"formKey":"heading-heading","breakpoints":[],"activeFields":[{"name":"content","active":true}]},{"formKey":"heading-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"5dbe0488-d8b0-42f0-990a-8ad02ea2b486":{"settings":{"formDefinition":[{"formKey":"column-settings","children":[{"formKey":"column-width-and-position","breakpoints":[{"name":"xl"},{"name":"sm"}],"activeFields":[{"name":"col","active":true},{"name":"pull","active":false},{"name":"push","active":false},{"name":"offset","active":false}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]}]}],"title":"Settings","selectorType":"topLevel","form":null,"items":[]}},"2f85775a-9ea8-4d7c-818b-71bdfbc2bf17":{},"3a4a5ed7-9970-41d5-8e03-8c62fe336a32":{}},"model":{"fc97c06b-6367-4fe2-abbc-7ac5d2ae41f8":{"settings":{"width":"fluid"}},"39d561de-49df-4f16-b2d2-723bf456b750":{"settings":{"title":"Boxed Width Container","width":"boxed","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"}}},"0812a7c3-56df-4c8c-af17-cc76273779c8":{"settings":{"styles":{"xl":{"bleed":"retain","targetContainer":"inner","overflow":"visible","jsSettings":{"matchHeightRow":{"targetElement":"none"}}}}}},"5dbe0488-d8b0-42f0-990a-8ad02ea2b486":{"settings":{"title":"Column","styles":{"xl":{"col":3},"sm":{"col":12,"pull":-1,"push":-1,"offset":-1}},"settings":{"styles":{"xl":{"col":-2,"pull":-1,"push":-1,"offset":-1}}}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"column"}}},"fa98b697-af9f-4a39-82e6-59b5ad573430":{"settings":{"title":"Column","styles":{"xl":{"col":9},"sm":{"col":12,"pull":-1,"push":-1,"offset":-1}},"settings":{"styles":{"xl":{"col":-2,"pull":-1,"push":-1,"offset":-1}}}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"column"}}},"4ead2386-2db7-4d18-8542-fa81498d81e7":{"settings":{"title":"Page Title","element":"h1","customStyle":[{"customStyle":""}],"settings":{"element":"h1","customStyle":[{"customStyle":""}]},"content":"[current-page:title]"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"heading"}}},"685fd4dd-3468-4eda-9174-ccc4575491c2":{"settings":{"title":"Admin Edit Tabs Block","customStyle":[{"customStyle":""}],"settings":{"theme":"all","customStyle":[{"customStyle":""}]},"theme":"arvestbank_theme","block":"arvestbank_theme_local_tasks"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"block"}}}},"previewModel":{"5dbe0488-d8b0-42f0-990a-8ad02ea2b486":{},"fa98b697-af9f-4a39-82e6-59b5ad573430":{},"39d561de-49df-4f16-b2d2-723bf456b750":{},"4ead2386-2db7-4d18-8542-fa81498d81e7":{},"685fd4dd-3468-4eda-9174-ccc4575491c2":{}},"variableFields":{"5dbe0488-d8b0-42f0-990a-8ad02ea2b486":[],"fa98b697-af9f-4a39-82e6-59b5ad573430":[],"39d561de-49df-4f16-b2d2-723bf456b750":[],"4ead2386-2db7-4d18-8542-fa81498d81e7":["settings.content"],"685fd4dd-3468-4eda-9174-ccc4575491c2":[]},"meta":{"fieldHistory":[]}}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    modified: true
+    selectable: false
+    custom: false
+    twig_template: node--cohesion--node---any---full
+    default: true
+    entity_type: node
+    bundle: __any__
+    view_mode: full
+    master_template: master_template
+-
+  type: cohesion_master_templates
+  export:
+    uuid: 84bb7ea4-dc93-42d5-87f7-8a64f5bd029e
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: master_template
+    label: 'Master template'
+    json_values: '{"canvas":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"ab0d27dc-5785-4feb-87e3-9ce6a259fd5d","parentUid":"root","isContainer":true,"children":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"2b3f1c8e-5a07-4b77-b822-68036efe13ad","parentUid":"container","isContainer":true,"children":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"c99bf51d-7780-4cdd-a0f0-162dc53adb84","parentUid":"container","isContainer":true,"children":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false,"collapsedParents":[]},"uuid":"8a9d63e7-4fbe-4f54-abe5-ca02d3362d57","parentUid":"container","isContainer":true,"children":[{"type":"container","uid":"row-for-columns","title":"Row for columns","status":{"collapsed":false},"uuid":"0e008580-8860-476e-833a-75adb7941a20","parentUid":"container","isContainer":true,"children":[{"type":"container","uid":"column","title":"Column","status":{"collapsed":false},"uuid":"e7bd3f37-fc84-4cc8-a8d7-a4e8ab1d7999","parentUid":"row-for-columns","isContainer":true,"children":[]},{"type":"container","uid":"column","title":"Column","status":{"collapsed":false},"uuid":"e6905e81-e216-4dac-80ce-2e540160fdd0","parentUid":"row-for-columns","isContainer":true,"children":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"5f954bff-8461-427b-afb0-557f7391340e","parentUid":"column","isContainer":true,"children":[{"type":"item","uid":"drupal-menu","title":"Menu","status":{"collapsed":true,"collapsedParents":[]},"uuid":"64528a8f-e65a-4d53-97c3-bfda64593833","parentUid":"container","isContainer":false,"children":[]}]}]},{"type":"container","uid":"column","title":"Column","status":{"collapsed":false},"uuid":"4716e377-11e7-4f94-aa09-8ea569a9e6f3","parentUid":"row-for-columns","isContainer":true,"children":[{"type":"item","uid":"drupal-region","title":"Region","status":{"collapsed":true},"uuid":"d4f8f498-ea9d-4f31-9390-4997074a3320","parentUid":"column","isContainer":false,"children":[]}]}]}]}]},{"type":"container","uid":"container","title":"Container","status":{"collapsed":true,"collapsedParents":[]},"uuid":"e0e8c0f2-c325-439d-88bf-3728bddd56fb","parentUid":"container","isContainer":true,"children":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false,"collapsedParents":["e0e8c0f2-c325-439d-88bf-3728bddd56fb"]},"uuid":"696aa976-33b8-47a4-9905-fd1c2008909a","parentUid":"container","isContainer":true,"children":[{"type":"item","uid":"drupal-block","title":"Block","status":{"collapsed":true,"collapsedParents":["e0e8c0f2-c325-439d-88bf-3728bddd56fb"]},"uuid":"2f987f69-8688-4e4f-8ecd-053c2425b90b","parentUid":"container","isContainer":false,"children":[]}]}]},{"type":"container","uid":"container","title":"Container","status":{"collapsed":true},"uuid":"1b024a18-6704-4a9a-8c0b-be4ac8a4c91c","parentUid":"container","isContainer":true,"children":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false,"collapsedParents":["1b024a18-6704-4a9a-8c0b-be4ac8a4c91c"]},"uuid":"96e25832-a44a-453a-a9b0-f7d67629547d","parentUid":"container","isContainer":true,"children":[{"type":"item","uid":"drupal-menu","title":"Menu","status":{"collapsed":true,"collapsedParents":["1b024a18-6704-4a9a-8c0b-be4ac8a4c91c"]},"uuid":"fdebce4d-bfb8-47da-ba8c-307c6f2ce5bc","parentUid":"container","isContainer":false,"children":[]}]}]}]},{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"fb0e1d2e-10c9-4037-b042-b0240fd2dd38","parentUid":"container","isContainer":true,"children":[{"type":"item","uid":"drupal-region","title":"Region","status":{"collapsed":true,"collapsedParents":[]},"uuid":"705ab74a-45f8-457d-b037-7091dbcb17d5","parentUid":"container","isContainer":false,"children":[]}]},{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"1a6d5c21-fbc9-41ad-b89e-8f1097eab14c","parentUid":"container","isContainer":true,"children":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false,"collapsedParents":[]},"uuid":"2cf894b2-b92f-4228-9053-e15e7d252d16","parentUid":"container","isContainer":true,"children":[{"type":"item","uid":"drupal-menu","title":"Menu","status":{"collapsed":true,"collapsedParents":[]},"uuid":"1de0373f-1140-4e2e-8383-e858b2cdc2ea","parentUid":"container","isContainer":false,"children":[]}]}]},{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"6c00c9cb-aa53-44e0-9599-d858f00dec66","parentUid":"container","isContainer":true,"children":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false,"collapsedParents":[]},"uuid":"cfd0f982-25a3-4502-babf-faa74db66938","parentUid":"container","isContainer":true,"children":[{"type":"item","uid":"drupal-region","title":"Region","status":{"collapsed":true},"uuid":"6570fdc8-e1ac-4c4c-941b-dd8f57bf24a7","parentUid":"container","isContainer":false,"children":[]}]}]}]}],"mapper":{"ab0d27dc-5785-4feb-87e3-9ce6a259fd5d":{},"6c00c9cb-aa53-44e0-9599-d858f00dec66":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]},"styles":{"formDefinition":[{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]}],"selectorType":"topLevel","items":[],"form":null}},"cfd0f982-25a3-4502-babf-faa74db66938":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"6570fdc8-e1ac-4c4c-941b-dd8f57bf24a7":{},"1a6d5c21-fbc9-41ad-b89e-8f1097eab14c":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]},"styles":{"formDefinition":[{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]}],"selectorType":"topLevel","items":[],"form":null}},"2cf894b2-b92f-4228-9053-e15e7d252d16":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"1de0373f-1140-4e2e-8383-e858b2cdc2ea":{"settings":{"formDefinition":[{"formKey":"drupal-menu-settings","children":[{"formKey":"drupal-menu-menu","breakpoints":[],"activeFields":[{"name":"id","active":true},{"name":"onlyRenderActiveTrail","active":true},{"name":"startLevel","active":true}]},{"formKey":"drupal-menu-template","breakpoints":[],"activeFields":[{"name":"template","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"fb0e1d2e-10c9-4037-b042-b0240fd2dd38":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"705ab74a-45f8-457d-b037-7091dbcb17d5":{"settings":{"formDefinition":[{"formKey":"region-settings","children":[{"formKey":"region-type","breakpoints":[],"activeFields":[{"name":"theme","active":true},{"name":"type","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"2b3f1c8e-5a07-4b77-b822-68036efe13ad":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]},"styles":{"formDefinition":[{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]}],"selectorType":"topLevel","items":[],"form":null}},"1b024a18-6704-4a9a-8c0b-be4ac8a4c91c":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]},"styles":{"formDefinition":[{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]}],"selectorType":"topLevel","items":[],"form":null}},"96e25832-a44a-453a-a9b0-f7d67629547d":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"fdebce4d-bfb8-47da-ba8c-307c6f2ce5bc":{"settings":{"formDefinition":[{"formKey":"drupal-menu-settings","children":[{"formKey":"drupal-menu-menu","breakpoints":[],"activeFields":[{"name":"id","active":true},{"name":"onlyRenderActiveTrail","active":true},{"name":"startLevel","active":true}]},{"formKey":"drupal-menu-template","breakpoints":[],"activeFields":[{"name":"template","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"e0e8c0f2-c325-439d-88bf-3728bddd56fb":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"696aa976-33b8-47a4-9905-fd1c2008909a":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"2f987f69-8688-4e4f-8ecd-053c2425b90b":{"settings":{"formDefinition":[{"formKey":"block-settings","children":[{"formKey":"block-drupal-block","breakpoints":[],"activeFields":[{"name":"theme","active":true},{"name":"block","active":true}]},{"formKey":"block-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"c99bf51d-7780-4cdd-a0f0-162dc53adb84":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]},"styles":{"formDefinition":[{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]}],"selectorType":"topLevel","items":[],"form":null}},"8a9d63e7-4fbe-4f54-abe5-ca02d3362d57":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]},"styles":{"formDefinition":[{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]}],"selectorType":"topLevel","items":[],"form":null}},"0e008580-8860-476e-833a-75adb7941a20":{},"4716e377-11e7-4f94-aa09-8ea569a9e6f3":{"settings":{"formDefinition":[{"formKey":"column-settings","children":[{"formKey":"column-width-and-position","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"col","active":true},{"name":"pull","active":false},{"name":"push","active":false},{"name":"offset","active":false}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]}]}],"title":"Settings","selectorType":"topLevel","form":null,"items":[]}},"d4f8f498-ea9d-4f31-9390-4997074a3320":{"settings":{"formDefinition":[{"formKey":"region-settings","children":[{"formKey":"region-type","breakpoints":[],"activeFields":[{"name":"theme","active":true},{"name":"type","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"e6905e81-e216-4dac-80ce-2e540160fdd0":{"settings":{"formDefinition":[{"formKey":"column-settings","children":[{"formKey":"column-width-and-position","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"col","active":true},{"name":"pull","active":false},{"name":"push","active":false},{"name":"offset","active":false}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]}]}],"title":"Settings","selectorType":"topLevel","form":null,"items":[]}},"5f954bff-8461-427b-afb0-557f7391340e":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]},"markup":{"formDefinition":[{"formKey":"tab-markup-classes-and-ids","children":[{"formKey":"tab-markup-add-classes","breakpoints":[],"activeFields":[{"name":"classes","active":true}]}]}],"title":"Markup","selectorType":"topLevel","form":null,"items":[]}},"64528a8f-e65a-4d53-97c3-bfda64593833":{"settings":{"formDefinition":[{"formKey":"drupal-menu-settings","children":[{"formKey":"drupal-menu-menu","breakpoints":[],"activeFields":[{"name":"id","active":true},{"name":"onlyRenderActiveTrail","active":true},{"name":"startLevel","active":true}]},{"formKey":"drupal-menu-template","breakpoints":[],"activeFields":[{"name":"template","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"e7bd3f37-fc84-4cc8-a8d7-a4e8ab1d7999":{}},"model":{"ab0d27dc-5785-4feb-87e3-9ce6a259fd5d":{"settings":{"width":"fluid"}},"2b3f1c8e-5a07-4b77-b822-68036efe13ad":{"settings":{"title":"Header Container","width":"fluid","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"},"styles":{"xl":{"background-color":{"value":{"link":false,"value":{"hex":"#00457c","rgba":"rgba(0, 69, 124, 1)"},"name":"Arvest Blue","uid":"blue-4","class":".coh-color-blue-4","variable":"$coh-color-blue-4","inuse":false}}}}}},"c99bf51d-7780-4cdd-a0f0-162dc53adb84":{"settings":{"title":"Top Menu Container","width":"fluid","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"},"styles":{"xl":{"background-color":{"value":{"link":false,"value":{"hex":"#00457c","rgba":"rgba(0, 69, 124, 1)"},"name":"Arvest Blue","uid":"blue-4","class":".coh-color-blue-4","variable":"$coh-color-blue-4","inuse":false}}}}}},"8a9d63e7-4fbe-4f54-abe5-ca02d3362d57":{"settings":{"title":"Top Menu Container","width":"fluid","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"},"styles":{"xl":{"background-color":{"value":{}}}}}},"0e008580-8860-476e-833a-75adb7941a20":{"settings":{"styles":{"xl":{"bleed":"retain","targetContainer":"inner","overflow":"visible","jsSettings":{"matchHeightRow":{"targetElement":"none"}}}}}},"e7bd3f37-fc84-4cc8-a8d7-a4e8ab1d7999":{"settings":{"title":"Column","styles":{"xl":{"col":2}},"settings":{"styles":{"xl":{"col":-2,"pull":-1,"push":-1,"offset":-1}}}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"column"}}},"e6905e81-e216-4dac-80ce-2e540160fdd0":{"settings":{"title":"Column","styles":{"xl":{"col":5}},"settings":{"styles":{"xl":{"col":-2,"pull":-1,"push":-1,"offset":-1}}}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"column"}}},"5f954bff-8461-427b-afb0-557f7391340e":{"settings":{"title":"Container","width":"fluid","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"}},"markup":{"classes":"top-menu"}},"64528a8f-e65a-4d53-97c3-bfda64593833":{"settings":{"title":"Menu","settings":{"settings":{"menu":{"id":"","template":""}},"menu":{"id":"top-menu","template":""}}},"contextVisibility":{"condition":"ALL"},"styles":{"settings":{"element":"drupal-menu"}}},"4716e377-11e7-4f94-aa09-8ea569a9e6f3":{"settings":{"title":"Column","styles":{"xl":{"col":5}},"settings":{"styles":{"xl":{"col":-2,"pull":-1,"push":-1,"offset":-1}}}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"column"}}},"d4f8f498-ea9d-4f31-9390-4997074a3320":{"settings":{"title":"Top Menu Region","region":{"theme":"arvestbank_theme","type":"top_menu"}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"region"}}},"e0e8c0f2-c325-439d-88bf-3728bddd56fb":{"settings":{"title":"Site Branding Container","width":"fluid","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"}}},"696aa976-33b8-47a4-9905-fd1c2008909a":{"settings":{"title":"Boxed Width Container","width":"boxed","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"}}},"2f987f69-8688-4e4f-8ecd-053c2425b90b":{"settings":{"title":"Site Branding Block","customStyle":[{"customStyle":""}],"settings":{"theme":"all","customStyle":[{"customStyle":""}]},"theme":"arvestbank_theme","block":"arvestbank_theme_branding"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"block"}}},"1b024a18-6704-4a9a-8c0b-be4ac8a4c91c":{"settings":{"title":"Main Nav Container","width":"fluid","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"},"styles":{"xl":{"background-color":{"value":{"link":false,"value":{"hex":"#002c5c","rgba":"rgba(0, 44, 92, 1)"},"name":"Navigation Blue","uid":"blue-2","class":".coh-color-blue-2","variable":"$coh-color-blue-2","inuse":false}}}}}},"96e25832-a44a-453a-a9b0-f7d67629547d":{"settings":{"title":"Boxed Width Container","width":"boxed","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"}}},"fdebce4d-bfb8-47da-ba8c-307c6f2ce5bc":{"settings":{"title":"Main Menu Navigation","settings":{"settings":{"menu":{"id":"","template":""}},"menu":{"id":"main","template":""}}},"contextVisibility":{"condition":"ALL"},"styles":{"settings":{"element":"drupal-menu"}}},"fb0e1d2e-10c9-4037-b042-b0240fd2dd38":{"settings":{"title":"Content Region Container","width":"boxed","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"}}},"705ab74a-45f8-457d-b037-7091dbcb17d5":{"settings":{"title":"Region","region":{"theme":"arvestbank_theme","type":"content"}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"region"}}},"1a6d5c21-fbc9-41ad-b89e-8f1097eab14c":{"settings":{"title":"Footer Nav Container","width":"fluid","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"},"styles":{"xl":{"background-color":{"value":{"link":false,"value":{"hex":"#002c5c","rgba":"rgba(0, 44, 92, 1)"},"name":"Navigation Blue","uid":"blue-2","class":".coh-color-blue-2","variable":"$coh-color-blue-2","inuse":false}}}}}},"2cf894b2-b92f-4228-9053-e15e7d252d16":{"settings":{"title":"Boxed Width Container","width":"boxed","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"}}},"1de0373f-1140-4e2e-8383-e858b2cdc2ea":{"settings":{"title":"Footer Nav","settings":{"settings":{"menu":{"id":"","template":""}},"menu":{"id":"footer","template":""}}},"contextVisibility":{"condition":"ALL"},"styles":{"settings":{"element":"drupal-menu"}}},"6c00c9cb-aa53-44e0-9599-d858f00dec66":{"settings":{"title":"Footer Container","width":"fluid","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"},"styles":{"xl":{"background-color":{"value":{"link":false,"value":{"hex":"#00457c","rgba":"rgba(0, 69, 124, 1)"},"name":"Arvest Blue","uid":"blue-4","class":".coh-color-blue-4","variable":"$coh-color-blue-4","inuse":false}}}}}},"cfd0f982-25a3-4502-babf-faa74db66938":{"settings":{"title":"Boxed Width Container","width":"boxed","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"}}},"6570fdc8-e1ac-4c4c-941b-dd8f57bf24a7":{"settings":{"title":"Footer Region","region":{"theme":"arvestbank_theme","type":"footer"}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"region"}}}},"previewModel":{"2b3f1c8e-5a07-4b77-b822-68036efe13ad":{},"c99bf51d-7780-4cdd-a0f0-162dc53adb84":{},"64528a8f-e65a-4d53-97c3-bfda64593833":{},"e0e8c0f2-c325-439d-88bf-3728bddd56fb":{},"2f987f69-8688-4e4f-8ecd-053c2425b90b":{},"fdebce4d-bfb8-47da-ba8c-307c6f2ce5bc":{},"705ab74a-45f8-457d-b037-7091dbcb17d5":{},"fb0e1d2e-10c9-4037-b042-b0240fd2dd38":{},"696aa976-33b8-47a4-9905-fd1c2008909a":{},"96e25832-a44a-453a-a9b0-f7d67629547d":{},"1b024a18-6704-4a9a-8c0b-be4ac8a4c91c":{},"8a9d63e7-4fbe-4f54-abe5-ca02d3362d57":{},"6c00c9cb-aa53-44e0-9599-d858f00dec66":{},"2cf894b2-b92f-4228-9053-e15e7d252d16":{},"1de0373f-1140-4e2e-8383-e858b2cdc2ea":{},"cfd0f982-25a3-4502-babf-faa74db66938":{},"1a6d5c21-fbc9-41ad-b89e-8f1097eab14c":{},"6570fdc8-e1ac-4c4c-941b-dd8f57bf24a7":{},"d4f8f498-ea9d-4f31-9390-4997074a3320":{},"e7bd3f37-fc84-4cc8-a8d7-a4e8ab1d7999":{},"e6905e81-e216-4dac-80ce-2e540160fdd0":{},"4716e377-11e7-4f94-aa09-8ea569a9e6f3":{},"5f954bff-8461-427b-afb0-557f7391340e":{}},"variableFields":{"2b3f1c8e-5a07-4b77-b822-68036efe13ad":[],"c99bf51d-7780-4cdd-a0f0-162dc53adb84":[],"64528a8f-e65a-4d53-97c3-bfda64593833":[],"e0e8c0f2-c325-439d-88bf-3728bddd56fb":[],"2f987f69-8688-4e4f-8ecd-053c2425b90b":[],"fdebce4d-bfb8-47da-ba8c-307c6f2ce5bc":[],"705ab74a-45f8-457d-b037-7091dbcb17d5":[],"fb0e1d2e-10c9-4037-b042-b0240fd2dd38":[],"696aa976-33b8-47a4-9905-fd1c2008909a":[],"96e25832-a44a-453a-a9b0-f7d67629547d":[],"1b024a18-6704-4a9a-8c0b-be4ac8a4c91c":[],"8a9d63e7-4fbe-4f54-abe5-ca02d3362d57":[],"6c00c9cb-aa53-44e0-9599-d858f00dec66":[],"2cf894b2-b92f-4228-9053-e15e7d252d16":[],"1de0373f-1140-4e2e-8383-e858b2cdc2ea":[],"cfd0f982-25a3-4502-babf-faa74db66938":[],"1a6d5c21-fbc9-41ad-b89e-8f1097eab14c":[],"6570fdc8-e1ac-4c4c-941b-dd8f57bf24a7":[],"d4f8f498-ea9d-4f31-9390-4997074a3320":[],"e7bd3f37-fc84-4cc8-a8d7-a4e8ab1d7999":[],"e6905e81-e216-4dac-80ce-2e540160fdd0":[],"4716e377-11e7-4f94-aa09-8ea569a9e6f3":[],"5f954bff-8461-427b-afb0-557f7391340e":[]},"meta":{"fieldHistory":[]}}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    custom: false
+    twig_template: page--cohesion--master-template
+    default: true
+-
+  type: cohesion_view_templates
+  export:
+    uuid: 8577aa36-c5a6-46ee-b224-e8507044c7c6
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: view_tpl_education_center_view_t
+    label: 'Education Center View Template'
+    json_values: '{"canvas":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"c28cfe8f-0c6c-4689-ad19-6dd96ec4d4a6","parentUid":"root","isContainer":true,"children":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"2adb6a17-6429-429b-b04d-051c682d822d","parentUid":"container","isContainer":true,"children":[{"type":"container","uid":"row-for-columns","title":"Row for columns","status":{"collapsed":false},"uuid":"6dd308ba-7e87-4858-abd6-079213c9f83b","parentUid":"container","isContainer":true,"children":[{"type":"container","uid":"column","title":"Column","status":{"collapsed":false},"uuid":"333fe19b-967e-481e-bcc3-a682d58dfef3","parentUid":"row-for-columns","isContainer":true,"children":[{"type":"item","uid":"drupal-block","title":"Block","status":{"collapsed":true},"uuid":"3a425089-0d18-4599-bc4c-524a36dea9bc","parentUid":"column","isContainer":false,"children":[]}]},{"type":"container","uid":"column","title":"Column","status":{"collapsed":false},"uuid":"3e02a1e8-8af3-4bf8-8f29-78326cb39f79","parentUid":"row-for-columns","isContainer":true,"children":[{"type":"container","uid":"drupal-view-contents","title":"View content","status":{"collapsed":false},"uuid":"897b8cdf-12aa-4ce0-964c-642529cacc7e","parentUid":"column","isContainer":true,"children":[]}]}]}]}]}],"mapper":{"c28cfe8f-0c6c-4689-ad19-6dd96ec4d4a6":{},"2adb6a17-6429-429b-b04d-051c682d822d":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"6dd308ba-7e87-4858-abd6-079213c9f83b":{},"3e02a1e8-8af3-4bf8-8f29-78326cb39f79":{"settings":{"formDefinition":[{"formKey":"column-settings","children":[{"formKey":"column-width-and-position","breakpoints":[{"name":"xl"},{"name":"sm"}],"activeFields":[{"name":"col","active":true},{"name":"pull","active":false},{"name":"push","active":false},{"name":"offset","active":false}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]}]}],"title":"Settings","selectorType":"topLevel","form":null,"items":[]}},"897b8cdf-12aa-4ce0-964c-642529cacc7e":{},"333fe19b-967e-481e-bcc3-a682d58dfef3":{"settings":{"formDefinition":[{"formKey":"column-settings","children":[{"formKey":"column-width-and-position","breakpoints":[{"name":"xl"},{"name":"sm"}],"activeFields":[{"name":"col","active":true},{"name":"pull","active":false},{"name":"push","active":false},{"name":"offset","active":false}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]}]}],"title":"Settings","selectorType":"topLevel","form":null,"items":[]}},"3a425089-0d18-4599-bc4c-524a36dea9bc":{}},"model":{"c28cfe8f-0c6c-4689-ad19-6dd96ec4d4a6":{"settings":{"width":"fluid"}},"2adb6a17-6429-429b-b04d-051c682d822d":{"settings":{"title":"Container","width":"boxed","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"}}},"6dd308ba-7e87-4858-abd6-079213c9f83b":{"settings":{"styles":{"xl":{"bleed":"retain","targetContainer":"inner","overflow":"visible","jsSettings":{"matchHeightRow":{"targetElement":"none"}}}}}},"333fe19b-967e-481e-bcc3-a682d58dfef3":{"settings":{"title":"Column","styles":{"xl":{"col":3},"sm":{"col":12,"pull":-1,"push":-1,"offset":-1}},"settings":{"styles":{"xl":{"col":-2,"pull":-1,"push":-1,"offset":-1}}}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"column"}}},"3e02a1e8-8af3-4bf8-8f29-78326cb39f79":{"settings":{"title":"Column","styles":{"xl":{"col":9},"sm":{"col":12,"pull":-1,"push":-1,"offset":-1}},"settings":{"styles":{"xl":{"col":-2,"pull":-1,"push":-1,"offset":-1}}}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"column"}}}},"previewModel":{"333fe19b-967e-481e-bcc3-a682d58dfef3":{},"3e02a1e8-8af3-4bf8-8f29-78326cb39f79":{},"2adb6a17-6429-429b-b04d-051c682d822d":{}},"variableFields":{"333fe19b-967e-481e-bcc3-a682d58dfef3":[],"3e02a1e8-8af3-4bf8-8f29-78326cb39f79":[],"2adb6a17-6429-429b-b04d-051c682d822d":[]},"meta":{"fieldHistory":[]}}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    custom: true
+    twig_template: views-view--cohesion-view-tpl-education-center-view-t
+-
+  type: cohesion_master_templates
+  export:
+    uuid: 7477ca17-c482-4b92-89f3-e3615830c7e0
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: mstr_tpl_content_only
+    label: 'Content Only'
+    json_values: '{"canvas":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"ab0d27dc-5785-4feb-87e3-9ce6a259fd5d","parentUid":"root","isContainer":true,"children":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"fb0e1d2e-10c9-4037-b042-b0240fd2dd38","parentUid":"container","isContainer":true,"children":[{"type":"item","uid":"drupal-region","title":"Region","status":{"collapsed":true,"collapsedParents":[]},"uuid":"705ab74a-45f8-457d-b037-7091dbcb17d5","parentUid":"container","isContainer":false,"children":[]}]}]}],"mapper":{"ab0d27dc-5785-4feb-87e3-9ce6a259fd5d":{},"fb0e1d2e-10c9-4037-b042-b0240fd2dd38":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"705ab74a-45f8-457d-b037-7091dbcb17d5":{"settings":{"formDefinition":[{"formKey":"region-settings","children":[{"formKey":"region-type","breakpoints":[],"activeFields":[{"name":"theme","active":true},{"name":"type","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}}},"model":{"ab0d27dc-5785-4feb-87e3-9ce6a259fd5d":{"settings":{"width":"fluid"}},"fb0e1d2e-10c9-4037-b042-b0240fd2dd38":{"settings":{"title":"Content Region Container","width":"boxed","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"}}},"705ab74a-45f8-457d-b037-7091dbcb17d5":{"settings":{"title":"Region","region":{"theme":"arvestbank_theme","type":"content"}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"region"}}}},"previewModel":{"705ab74a-45f8-457d-b037-7091dbcb17d5":{},"fb0e1d2e-10c9-4037-b042-b0240fd2dd38":{}},"variableFields":{"705ab74a-45f8-457d-b037-7091dbcb17d5":[],"fb0e1d2e-10c9-4037-b042-b0240fd2dd38":[]},"meta":{"fieldHistory":[]}}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    custom: false
+    twig_template: page--cohesion--mstr-tpl-content-only
+    default: false
+-
+  type: cohesion_website_settings
+  export:
+    uuid: b6841856-aedd-4161-9614-252b3557a81a
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: base_unit_settings
+    label: 'Base unit settings'
+    json_values: '{"baseFontSize":{"value":16},"baseFontSizeEnable":true,"defaultUnitConversion":"rem"}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+-
+  type: cohesion_website_settings
+  export:
+    uuid: 7b53ae42-4340-454c-a0cd-9b6a3ce17bfc
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: default_font_settings
+    label: 'Default font settings'
+    json_values: '{"defaultFontStack":"$coh-font-verdana","color":{"name":"Gray 1","uid":"gray-1","value":{"hex":"#333333","rgba":"rgba(51, 51, 51, 1)"},"wysiwyg":true,"class":".coh-color-gray-1","variable":"$coh-color-gray-1","inuse":false,"link":true}}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+-
+  type: cohesion_website_settings
+  export:
+    uuid: 7412dc79-38f8-4af6-99b2-411849db2423
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: responsive_grid_settings
+    label: 'Responsive grid settings'
+    json_values: '{"gridType":"desktop-first","columns":12,"breakpoints":{"xl":{"width":1170,"innerGutter":30,"outerGutter":30,"widthType":"fixed","previewColumns":12,"label":"Television","class":"coh-icon-television","iconHex":"F26C","boxedWidth":1110},"lg":{"width":1030,"innerGutter":30,"outerGutter":30,"widthType":"fixed","previewColumns":12,"label":"Desktop","class":"coh-icon-desktop","iconHex":"F108","boxedWidth":970},"md":{"width":950,"innerGutter":30,"outerGutter":30,"widthType":"fixed","previewColumns":12,"label":"Laptop","class":"coh-icon-laptop","iconHex":"F109","boxedWidth":890},"sm":{"width":768,"innerGutter":30,"outerGutter":30,"widthType":"fixed","previewColumns":12,"label":"Tablet","class":"coh-icon-tablet","iconHex":"F10A","boxedWidth":708},"ps":{"width":565,"innerGutter":30,"outerGutter":30,"widthType":"fixed","previewColumns":12,"label":"Mobile landscape","class":"coh-icon-mobile-landscape","iconHex":"E91E","boxedWidth":505},"xs":{"width":320,"innerGutter":20,"outerGutter":20,"widthType":"fluid","mobilePlaceholderWidth":320,"mobilePlaceholderType":"fluid","previewColumns":12,"label":"Mobile","class":"coh-icon-mobile","iconHex":"F10B","boxedWidth":280}}}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+-
+  type: cohesion_font_stack
+  export:
+    uuid: 196ba8a4-0bce-4f10-95b3-53441b264be2
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: arial
+    label: Arial
+    json_values: '{"inuse":false,"systemfont":true,"name":"Arial","uid":"arial","fontStack":"Arial, ''Helvetica Neue'', Helvetica, sans-serif","smoothing":{"firefox":false,"webkit":false},"variable":"$coh-font-arial","class":".coh-font-arial"}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    source: null
+-
+  type: cohesion_color
+  export:
+    uuid: 13e4e11a-2f38-4068-b078-2b7076f649c9
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: blue-10
+    label: 'Blue 10'
+    json_values: '{"link":true,"value":{"value":{"hex":"#4879ad","rgba":"rgba(72, 121, 173, 1)"}},"name":"Blue 10","uid":"blue-10","class":".coh-color-blue-10","variable":"$coh-color-blue-10","inuse":false}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    weight: 19
+-
+  type: cohesion_color
+  export:
+    uuid: b5c8070e-37c1-40ea-89e2-d09e1aa471df
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: blue-11
+    label: 'Blue 11'
+    json_values: '{"link":true,"value":{"value":{"hex":"#acc6e1","rgba":"rgba(172, 198, 225, 1)"}},"name":"Blue 11","uid":"blue-11","class":".coh-color-blue-11","variable":"$coh-color-blue-11","inuse":false}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    weight: 20
+-
+  type: cohesion_color
+  export:
+    uuid: 78a53cb0-e96f-4c93-8fd0-55d83c1df9e4
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: blue-12
+    label: 'Blue 12'
+    json_values: '{"link":true,"value":{"value":{"hex":"#b3cae4","rgba":"rgba(179, 202, 228, 1)"}},"name":"Blue 12","uid":"blue-12","class":".coh-color-blue-12","variable":"$coh-color-blue-12","inuse":false}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    weight: 21
+-
+  type: cohesion_color
+  export:
+    uuid: 8be7586b-c444-4e4a-950c-350438abe4de
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: blue-13
+    label: 'Blue 13'
+    json_values: '{"link":true,"value":{"value":{"hex":"#f5f9fe","rgba":"rgba(245, 249, 254, 1)"}},"name":"Blue 13","uid":"blue-13","class":".coh-color-blue-13","variable":"$coh-color-blue-13","inuse":false}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    weight: 22
+-
+  type: cohesion_color
+  export:
+    uuid: 5f65ddb7-d1e8-4023-b2d9-ca9f9a676f81
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: blue-3
+    label: 'Blue 3'
+    json_values: '{"name":"Blue 3","uid":"blue-3","value":{"value":{"hex":"#003162","rgba":"rgba(0, 49, 98, 1)"}},"wysiwyg":false,"class":".coh-color-blue-3","variable":"$coh-color-blue-3","inuse":false,"link":true}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    weight: 12
+-
+  type: cohesion_color
+  export:
+    uuid: 5fd5a90e-0330-460b-908f-158926625fd7
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: blue-5
+    label: 'Blue 5'
+    json_values: '{"link":true,"value":{"value":{"hex":"#004580","rgba":"rgba(0, 69, 128, 1)"}},"name":"Blue 5","uid":"blue-5","class":".coh-color-blue-5","variable":"$coh-color-blue-5","inuse":false}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    weight: 14
 -
   type: cohesion_color
   export:
@@ -385,7 +847,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 17
+    weight: 16
 -
   type: cohesion_color
   export:
@@ -401,7 +863,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 18
+    weight: 17
 -
   type: cohesion_color
   export:
@@ -417,7 +879,23 @@
     locked: false
     modified: true
     selectable: true
-    weight: 19
+    weight: 18
+-
+  type: cohesion_color
+  export:
+    uuid: 0367ccf6-5d8c-4c40-8545-12b8d5d5a6b3
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: gray
+    label: Gray
+    json_values: '{"name":"Gray","uid":"gray","value":{"value":{"hex":"#808080","rgba":"rgba(128, 128, 128, 1)"}},"wysiwyg":true,"class":".coh-color-gray","variable":"$coh-color-gray","inuse":false}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    weight: 1
 -
   type: cohesion_color
   export:
@@ -433,7 +911,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 3
+    weight: 2
 -
   type: cohesion_color
   export:
@@ -449,7 +927,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 4
+    weight: 3
 -
   type: cohesion_color
   export:
@@ -465,7 +943,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 5
+    weight: 4
 -
   type: cohesion_color
   export:
@@ -481,7 +959,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 6
+    weight: 5
 -
   type: cohesion_color
   export:
@@ -497,7 +975,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 7
+    weight: 6
 -
   type: cohesion_color
   export:
@@ -513,7 +991,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 8
+    weight: 7
 -
   type: cohesion_color
   export:
@@ -529,7 +1007,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 9
+    weight: 8
 -
   type: cohesion_color
   export:
@@ -545,39 +1023,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 10
--
-  type: cohesion_color
-  export:
-    uuid: 26316cae-2da6-4cf0-a9e1-f53e5322c684
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: red-1
-    label: 'Red 1'
-    json_values: '{"link":true,"value":{"value":{"hex":"#cd0000","rgba":"rgba(205, 0, 0, 1)"}},"name":"Red 1","uid":"red-1","class":".coh-color-red-1","variable":"$coh-color-red-1","inuse":false}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0029
-    locked: false
-    modified: true
-    selectable: true
-    weight: 24
--
-  type: cohesion_color
-  export:
-    uuid: 9d6a93a4-2979-4e98-9e9f-8266fbb906e6
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: red-2
-    label: 'Red 2'
-    json_values: '{"link":true,"value":{"value":{"hex":"#e60000","rgba":"rgba(230, 0, 0, 1)"}},"name":"Red 2","uid":"red-2","class":".coh-color-red-2","variable":"$coh-color-red-2","inuse":false,"wysiwyg":false}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0029
-    locked: false
-    modified: true
-    selectable: true
-    weight: 25
+    weight: 9
 -
   type: cohesion_color
   export:
@@ -593,7 +1039,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 26
+    weight: 25
 -
   type: cohesion_color
   export:
@@ -609,4 +1055,4 @@
     locked: false
     modified: true
     selectable: true
-    weight: 27
+    weight: 26

@@ -1,0 +1,5 @@
+services:
+
+ arvestbank_ask_arvest.answers_client:
+    class: Drupal\arvestbank_ask_arvest\Services\AnswersClient
+    arguments: ['@config.factory','@http_client']

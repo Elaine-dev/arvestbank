@@ -79,6 +79,35 @@
 
 // ---------------  SEARCH FORMS  --------------- //
 
+// Search tabs
+#search-tab {
+
+  // Hide radios
+  input {
+    display: none;
+  }
+
+  // Highlight active tab
+  .active-tab {
+    background-color: #4178b4;
+  }
+
+  // Inline block the tabs
+  .form-item-search-tab {
+    display: inline-block;
+  }
+
+}
+
+// For search tabs form.
+.tabs-form .form-item-search{
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
 #edit-help-link {
     display: block;
     margin-top: 10px;

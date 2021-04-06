@@ -7,6 +7,10 @@ calculator_script_embed:
   js:
     js/calculator.js: {}
 
+calculator_iframe:
+  js:
+    js/calculator-iframe.js: {}
+
 calculator_style:
   css:
     theme:

@@ -8,8 +8,8 @@ name: dam_image_entity_browser
 label: 'DAM Image Entity Browser'
 display: modal
 display_configuration:
-  width: '650'
-  height: '500'
+  width: ''
+  height: ''
   link_text: 'Select entities'
   auto_open: false
 selection_display: no_display

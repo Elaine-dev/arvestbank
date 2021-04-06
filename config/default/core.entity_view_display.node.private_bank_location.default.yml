@@ -9,6 +9,7 @@ dependencies:
     - node.type.private_bank_location
   module:
     - link
+    - telephone
     - user
 id: node.private_bank_location.default
 targetEntityType: node
@@ -17,7 +18,7 @@ mode: default
 content:
   field_image:
     type: entity_reference_entity_view
-    weight: 103
+    weight: 2
     label: above
     settings:
       view_mode: default
@@ -25,14 +26,15 @@ content:
     third_party_settings: {  }
     region: content
   field_phone_number:
-    weight: 101
+    weight: 0
     label: above
-    settings: {  }
+    settings:
+      title: ''
     third_party_settings: {  }
-    type: basic_string
+    type: telephone_link
     region: content
   field_private_bank_location_link:
-    weight: 102
+    weight: 1
     label: above
     settings:
       trim_length: 80
@@ -44,8 +46,10 @@ content:
     type: link
     region: content
   links:
-    weight: 100
+    weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
-hidden: {  }
+hidden:
+  content_moderation_control: true
+  search_api_excerpt: true

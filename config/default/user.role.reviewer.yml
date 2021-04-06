@@ -7,4 +7,6 @@ label: Reviewer
 weight: -9
 is_admin: null
 permissions:
+  - 'access administration pages'
+  - 'view media'
   - 'view the administration theme'

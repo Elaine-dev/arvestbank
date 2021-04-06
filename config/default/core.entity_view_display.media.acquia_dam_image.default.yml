@@ -16,6 +16,11 @@ targetEntityType: media
 bundle: acquia_dam_image
 mode: default
 content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_acquiadam_asset_image:
     weight: 0
     label: hidden
@@ -30,5 +35,6 @@ hidden:
   field_acquiadam_asset_descrip: true
   field_acquiadam_asset_id: true
   name: true
+  search_api_excerpt: true
   thumbnail: true
   uid: true

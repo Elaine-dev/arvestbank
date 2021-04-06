@@ -24,3 +24,4 @@ hidden:
   field_image: true
   field_phone_number: true
   field_private_bank_location_link: true
+  search_api_excerpt: true
