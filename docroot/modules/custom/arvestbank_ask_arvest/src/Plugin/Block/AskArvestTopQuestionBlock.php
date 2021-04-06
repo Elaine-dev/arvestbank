@@ -86,7 +86,62 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
     // Add "Best Answer" to render array.
     $renderArray['best_answer'] = $this->getBestAnswer($answers);
 
+    // Add Rating Widget.
+    $renderArray['rating_widget'] = $this->getRatingWidget($answers);
+
     return $renderArray;
+
+  }
+
+  /**
+   * Creates a render array for a "Best Answer" rating widget.
+   *
+   * @param array $answers
+   *   Response from SOAP Answers "ask" API.
+   *
+   * @return mixed
+   *   Render array.
+   */
+  private function getRatingWidget(array $answers) {
+
+    // If we have a Best Answer to rate.
+    if (isset($answers['id'])) {
+
+      // Have the answers client get the general rest endpoint from config.
+      $jsonEndpoint = $this->answersClient->getGeneralRestEndpoint();
+
+      // Attach "raty" rating js library.
+      $renderArray = [
+        '#type'       => 'container',
+        '#attributes' => [
+          'class' => ['ask-arvest-rating'],
+        ],
+        '#attached'   => [
+          'library' => [
+            'arvestbank_ask_arvest/raty',
+          ],
+          'drupalSettings' => [
+            'arvestbank_ask_arvest' => [
+              'json_endpoint' => $jsonEndpoint,
+            ],
+          ],
+        ],
+        '#cache'      => [
+          'contexts' => [
+            'url.query_args:search',
+          ],
+        ],
+      ];
+
+      // Add a div to use for the rating widget.
+      $renderArray['rating_widget_div'] = [
+        '#markup' => '<div class="rating-widget" data-id="' . $answers['id'] . '"></div>',
+      ];
+
+      return $renderArray;
+    }
+
+    return [];
 
   }
 
@@ -95,6 +150,9 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
    *
    * @param array $answers
    *   Response from SOAP Answers "ask" API.
+   *
+   * @return mixed
+   *   Render array.
    */
   private function getBestAnswer(array $answers) {
 

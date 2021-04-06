@@ -1,0 +1,10 @@
+raty:
+  version: 1.x
+  css:
+    theme:
+      js/raty-lib/jquery.raty.css: {}
+  js:
+    js/raty-lib/jquery.raty.js: {}
+    js/rating-widget.js: {}
+  dependencies:
+    - core/jquery

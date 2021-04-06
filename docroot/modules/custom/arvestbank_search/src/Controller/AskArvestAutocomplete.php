@@ -56,7 +56,7 @@ class AskArvestAutocomplete extends ControllerBase {
     foreach ($rawSuggestions as $rawSuggestion) {
       // Add to autocomplete suggestions.
       $results[] = [
-        'value' => $rawSuggestion['label'],
+        'value' => strip_tags($rawSuggestion['label']),
         'label' => $rawSuggestion['label'],
       ];
     }

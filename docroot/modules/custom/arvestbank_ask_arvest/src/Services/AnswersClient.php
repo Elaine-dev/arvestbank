@@ -55,6 +55,15 @@ class AnswersClient {
   }
 
   /**
+   * Gets the general rest endpoint from config.
+   */
+  public function getGeneralRestEndpoint() {
+
+    return $this->askArvestConfig->get('general_rest_api_endpoint');
+
+  }
+
+  /**
    * Gets suggestions from the intellisuggest endpoint.
    *
    * Uses the REST API "IntelliSuggest" endpoint.

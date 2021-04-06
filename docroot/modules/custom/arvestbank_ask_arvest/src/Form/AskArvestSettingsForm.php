@@ -46,7 +46,7 @@ class AskArvestSettingsForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('IntelliSuggest Endpoint'),
       '#default_value' => $config->get('intellisuggest_endpoint'),
-      '#description' => 'Enter the endpoint at which the Answers API IntelliSuggest endpoint can be reached.',
+      '#description' => 'Enter the endpoint at which the Answers API IntelliSuggest endpoint can be reached.<br/>This is generally https://[client name].intelliresponse.com/IntelliSuggest.',
     ];
 
     // Field for Intelliresponse Soap Endpoint.
@@ -54,7 +54,15 @@ class AskArvestSettingsForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('IntelliResponse Soap Endpoint'),
       '#default_value' => $config->get('intelliresponse_soap_endpoint'),
-      '#description' => 'Enter the soap endpoint at which the IntelliResponse can be reached.',
+      '#description' => 'Enter the soap endpoint at which the IntelliResponse can be reached.<br/>This is generally http://[client name].intelliresponse.com/ws/ir-user/Ask?wsdl.',
+    ];
+
+    // Field for General Rest API Endpoint.
+    $form['general_rest_api_endpoint'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('General [24]7.ai "Answers" Rest API Endpoint'),
+      '#default_value' => $config->get('general_rest_api_endpoint'),
+      '#description' => 'Enter the endpoint at which the general [24]7.ai Answers REST API can be reached.<br/>This is generally http://[client name].intelliresponse.com/json/.',
     ];
 
     return parent::buildForm($form, $form_state);
@@ -69,6 +77,7 @@ class AskArvestSettingsForm extends ConfigFormBase {
     $this->configFactory->getEditable(static::SETTINGS)
       ->set('intellisuggest_endpoint', $form_state->getValue('intellisuggest_endpoint'))
       ->set('intelliresponse_soap_endpoint', $form_state->getValue('intelliresponse_soap_endpoint'))
+      ->set('general_rest_api_endpoint', $form_state->getValue('general_rest_api_endpoint'))
       ->save();
 
     parent::submitForm($form, $form_state);
