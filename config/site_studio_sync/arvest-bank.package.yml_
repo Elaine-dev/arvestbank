@@ -33,7 +33,7 @@
 -
   type: cohesion_color
   export:
-    uuid: 919b6dd9-168b-462c-9069-1ff5a4e8d197
+    uuid: aa68f2f4-2313-48da-8bfa-c0c6d0b576ac
     langcode: en
     status: true
     dependencies: {  }
@@ -65,7 +65,7 @@
 -
   type: cohesion_base_styles
   export:
-    uuid: 19d03b88-1ece-4d82-8d0b-3b8a14ecd1af
+    uuid: 79afa88d-c389-4797-a07a-3ac7210e3cd9
     langcode: en
     status: true
     dependencies: {  }
@@ -113,7 +113,7 @@
 -
   type: cohesion_base_styles
   export:
-    uuid: ddda1226-45dc-46e4-ad27-314125a530ee
+    uuid: eea7abcc-70db-4fc3-968f-adbef1402f38
     langcode: en
     status: true
     dependencies: {  }
@@ -161,7 +161,7 @@
 -
   type: cohesion_base_styles
   export:
-    uuid: d5d047c7-041b-4cf5-9969-27c0352e7695
+    uuid: 6dad7a68-0ced-4c87-a777-bedd81a7cae7
     langcode: en
     status: true
     dependencies: {  }
@@ -209,7 +209,7 @@
 -
   type: cohesion_base_styles
   export:
-    uuid: c7bae38c-7179-4775-b09a-59146f7c31c8
+    uuid: daf7c965-03d3-4fa6-9dd9-f3b018b53ede
     langcode: en
     status: true
     dependencies: {  }
@@ -241,7 +241,7 @@
 -
   type: cohesion_base_styles
   export:
-    uuid: 5eb4db5c-38e3-4839-8fab-f27c40d68d20
+    uuid: 0aa67aa2-0851-4924-8b99-bfcb40e36b80
     langcode: en
     status: true
     dependencies: {  }
@@ -257,7 +257,7 @@
 -
   type: cohesion_color
   export:
-    uuid: a0c3d055-2701-43f6-8d38-b3f7cac06c98
+    uuid: dc3c48b1-f4ee-4ea4-b404-5eb30806624d
     langcode: en
     status: true
     dependencies: {  }
@@ -273,7 +273,7 @@
 -
   type: cohesion_base_styles
   export:
-    uuid: c27f39ed-c630-4ab1-81e7-f85fcf7376f5
+    uuid: ac01cb93-9f17-4d5d-ab1d-01f79c7c33fb
     langcode: en
     status: true
     dependencies: {  }
@@ -305,7 +305,7 @@
 -
   type: cohesion_base_styles
   export:
-    uuid: d092f145-7169-4344-ba4f-5679bae1bbff
+    uuid: 7bbec311-130c-419b-83bb-b7839d307d3a
     langcode: en
     status: true
     dependencies: {  }
@@ -604,7 +604,7 @@
 -
   type: cohesion_content_templates
   export:
-    uuid: b1290348-d60f-4b65-9794-efc22b7a8499
+    uuid: c3b1e252-20e1-414b-be90-87f302d4c967
     langcode: en
     status: true
     dependencies: {  }
@@ -625,7 +625,7 @@
 -
   type: cohesion_master_templates
   export:
-    uuid: 77ec9f12-cb22-4a09-b4ab-dfc87a592fc3
+    uuid: 84bb7ea4-dc93-42d5-87f7-8a64f5bd029e
     langcode: en
     status: true
     dependencies: {  }
@@ -658,9 +658,27 @@
     custom: true
     twig_template: views-view--cohesion-view-tpl-education-center-view-t
 -
+  type: cohesion_master_templates
+  export:
+    uuid: 7477ca17-c482-4b92-89f3-e3615830c7e0
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: mstr_tpl_content_only
+    label: 'Content Only'
+    json_values: '{"canvas":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"ab0d27dc-5785-4feb-87e3-9ce6a259fd5d","parentUid":"root","isContainer":true,"children":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"fb0e1d2e-10c9-4037-b042-b0240fd2dd38","parentUid":"container","isContainer":true,"children":[{"type":"item","uid":"drupal-region","title":"Region","status":{"collapsed":true,"collapsedParents":[]},"uuid":"705ab74a-45f8-457d-b037-7091dbcb17d5","parentUid":"container","isContainer":false,"children":[]}]}]}],"mapper":{"ab0d27dc-5785-4feb-87e3-9ce6a259fd5d":{},"fb0e1d2e-10c9-4037-b042-b0240fd2dd38":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}},"705ab74a-45f8-457d-b037-7091dbcb17d5":{"settings":{"formDefinition":[{"formKey":"region-settings","children":[{"formKey":"region-type","breakpoints":[],"activeFields":[{"name":"theme","active":true},{"name":"type","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}}},"model":{"ab0d27dc-5785-4feb-87e3-9ce6a259fd5d":{"settings":{"width":"fluid"}},"fb0e1d2e-10c9-4037-b042-b0240fd2dd38":{"settings":{"title":"Content Region Container","width":"boxed","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"}}},"705ab74a-45f8-457d-b037-7091dbcb17d5":{"settings":{"title":"Region","region":{"theme":"arvestbank_theme","type":"content"}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"region"}}}},"previewModel":{"705ab74a-45f8-457d-b037-7091dbcb17d5":{},"fb0e1d2e-10c9-4037-b042-b0240fd2dd38":{}},"variableFields":{"705ab74a-45f8-457d-b037-7091dbcb17d5":[],"fb0e1d2e-10c9-4037-b042-b0240fd2dd38":[]},"meta":{"fieldHistory":[]}}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    custom: false
+    twig_template: page--cohesion--mstr-tpl-content-only
+    default: false
+-
   type: cohesion_website_settings
   export:
-    uuid: be073944-e764-4c2c-a878-7164616718d3
+    uuid: b6841856-aedd-4161-9614-252b3557a81a
     langcode: en
     status: true
     dependencies: {  }
@@ -675,7 +693,7 @@
 -
   type: cohesion_website_settings
   export:
-    uuid: e92f0917-cdf6-4787-9f57-8cee308a9f51
+    uuid: 7b53ae42-4340-454c-a0cd-9b6a3ce17bfc
     langcode: en
     status: true
     dependencies: {  }
@@ -690,7 +708,7 @@
 -
   type: cohesion_website_settings
   export:
-    uuid: 0088fbfb-c0f3-408c-a9aa-4dfe31aeb20a
+    uuid: 7412dc79-38f8-4af6-99b2-411849db2423
     langcode: en
     status: true
     dependencies: {  }
@@ -705,7 +723,7 @@
 -
   type: cohesion_font_stack
   export:
-    uuid: 900d7bab-9071-4f5e-8d9b-56ee4e5d0ec3
+    uuid: 196ba8a4-0bce-4f10-95b3-53441b264be2
     langcode: en
     status: true
     dependencies: {  }
@@ -862,6 +880,22 @@
     modified: true
     selectable: true
     weight: 18
+-
+  type: cohesion_color
+  export:
+    uuid: 0367ccf6-5d8c-4c40-8545-12b8d5d5a6b3
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: gray
+    label: Gray
+    json_values: '{"name":"Gray","uid":"gray","value":{"value":{"hex":"#808080","rgba":"rgba(128, 128, 128, 1)"}},"wysiwyg":true,"class":".coh-color-gray","variable":"$coh-color-gray","inuse":false}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    weight: 1
 -
   type: cohesion_color
   export:
