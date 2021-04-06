@@ -2,10 +2,7 @@ uuid: 6590669b-2061-44a0-88d3-567dc36b3fe1
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:text:21b6e4b8-b57c-4621-b36a-fdfedb147766'
   module:
-    - block_content
     - cohesion
   theme:
     - arvestbank_theme

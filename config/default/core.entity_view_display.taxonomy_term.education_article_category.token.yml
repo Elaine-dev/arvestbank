@@ -1,8 +1,9 @@
-uuid: d1d3fe18-b54d-4074-9b81-d25fbe670b4d
+uuid: baeef0d3-2546-49ed-9e08-7343b962089b
 langcode: en
-status: true
+status: false
 dependencies:
   config:
+    - core.entity_view_mode.taxonomy_term.token
     - field.field.taxonomy_term.education_article_category.field_body
     - field.field.taxonomy_term.education_article_category.field_featured_image
     - field.field.taxonomy_term.education_article_category.field_layout_canvas
@@ -11,10 +12,10 @@ dependencies:
   module:
     - cohesion_elements
     - text
-id: taxonomy_term.education_article_category.default
+id: taxonomy_term.education_article_category.token
 targetEntityType: taxonomy_term
 bundle: education_article_category
-mode: default
+mode: token
 content:
   field_body:
     weight: 1
@@ -41,13 +42,7 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
-  field_teaser:
-    weight: 3
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-    region: content
 hidden:
   description: true
+  field_teaser: true
   search_api_excerpt: true

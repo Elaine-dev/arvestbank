@@ -266,6 +266,7 @@ display:
           reduce_duplicates: false
           plugin_id: taxonomy_index_tid
       display_extenders: {  }
+      title: Articles
     cache_metadata:
       max-age: -1
       contexts:
@@ -316,7 +317,7 @@ display:
           specify_validation: true
           validate:
             type: taxonomy_term_name
-            fail: 'not found'
+            fail: empty
           validate_options:
             bundles:
               education_article_category: education_article_category
@@ -337,6 +338,9 @@ display:
         row: false
         filters: false
         filter_groups: false
+        header: false
+        title: false
+        empty: false
       relationships:
         term_node_tid:
           id: term_node_tid
@@ -521,6 +525,35 @@ display:
         operator: AND
         groups:
           1: AND
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: 'ARTICLES HEADER'
+            format: full_html
+          plugin_id: text
+      title: Articles
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: 'Articles Block - no results'
+            format: full_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:
@@ -551,6 +584,7 @@ display:
         relationships: false
         arguments: false
         fields: false
+        title: false
       row:
         type: fields
         options:
@@ -628,6 +662,7 @@ display:
           plugin_id: field
       displays:
         articles: articles
+      title: ''
     cache_metadata:
       max-age: -1
       contexts:
