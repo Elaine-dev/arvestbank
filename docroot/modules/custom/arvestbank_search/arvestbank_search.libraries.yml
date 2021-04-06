@@ -4,4 +4,9 @@ search-tabs:
     js/arvestbank-search-tabs.js: {}
   dependencies:
     - core/jquery
-    - core/jquery.once
+ask-arvest:
+  version: 1.x
+  js:
+    js/ask-arvest.js: {}
+  dependencies:
+    - core/jquery

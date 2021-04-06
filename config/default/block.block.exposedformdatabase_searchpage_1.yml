@@ -12,7 +12,7 @@ dependencies:
 id: exposedformdatabase_searchpage_1
 theme: arvestbank_theme
 region: top_menu
-weight: 0
+weight: -6
 provider: null
 plugin: 'views_exposed_filter_block:database_search-page_1'
 settings:
