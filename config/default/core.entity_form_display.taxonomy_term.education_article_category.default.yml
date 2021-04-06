@@ -3,14 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.dam_image_entity_browser
     - field.field.taxonomy_term.education_article_category.field_body
     - field.field.taxonomy_term.education_article_category.field_featured_image
-    - field.field.taxonomy_term.education_article_category.field_layout_canvas
     - field.field.taxonomy_term.education_article_category.field_teaser
     - taxonomy.vocabulary.education_article_category
   module:
-    - cohesion_elements
-    - media_library
+    - entity_browser
     - path
     - text
 id: taxonomy_term.education_article_category.default
@@ -27,16 +26,17 @@ content:
     type: text_textarea
     region: content
   field_featured_image:
-    type: media_library_widget
+    type: entity_browser_entity_reference
     weight: 4
     settings:
-      media_types: {  }
-    third_party_settings: {  }
-    region: content
-  field_layout_canvas:
-    type: cohesion_layout_builder_widget
-    weight: 1
-    settings: {  }
+      entity_browser: dam_image_entity_browser
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings: {  }
     third_party_settings: {  }
     region: content
   field_teaser:
