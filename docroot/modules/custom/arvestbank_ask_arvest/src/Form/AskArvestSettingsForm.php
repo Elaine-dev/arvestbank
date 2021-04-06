@@ -49,6 +49,14 @@ class AskArvestSettingsForm extends ConfigFormBase {
       '#description' => 'Enter the endpoint at which the Answers API IntelliSuggest endpoint can be reached.',
     ];
 
+    // Field for Intelliresponse Soap Endpoint.
+    $form['intelliresponse_soap_endpoint'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('IntelliResponse Soap Endpoint'),
+      '#default_value' => $config->get('intelliresponse_soap_endpoint'),
+      '#description' => 'Enter the soap endpoint at which the IntelliResponse can be reached.',
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -60,6 +68,7 @@ class AskArvestSettingsForm extends ConfigFormBase {
     // Retrieve and update configuration.
     $this->configFactory->getEditable(static::SETTINGS)
       ->set('intellisuggest_endpoint', $form_state->getValue('intellisuggest_endpoint'))
+      ->set('intelliresponse_soap_endpoint', $form_state->getValue('intelliresponse_soap_endpoint'))
       ->save();
 
     parent::submitForm($form, $form_state);

@@ -57,6 +57,8 @@ class AnswersClient {
   /**
    * Gets suggestions from the intellisuggest endpoint.
    *
+   * Uses the REST API "IntelliSuggest" endpoint.
+   *
    * @param string $userInput
    *   String to provide autocomplete suggestions for.
    *
@@ -92,6 +94,36 @@ class AnswersClient {
       // Return empty array.
       return [];
     }
+
+  }
+
+  /**
+   * Queries the SOAP "ask" endpoint for answers.
+   *
+   * @param string $question
+   *   The question to get answers for.
+   */
+  public function askQuery(string $question) {
+
+    // Get soap endpoint from config.
+    $intelliresponseEndpoint = $this->askArvestConfig->get('intelliresponse_soap_endpoint');
+
+    // Create Soap Client.
+    $soapClient = new \nusoap_client($intelliresponseEndpoint);
+    $soapClient->soap_defencoding = 'UTF-8';
+    $soapClient->decode_utf8 = FALSE;
+
+    // Create object containing arguments.
+    $requestArguments = [
+      'interfaceId'        => 2,
+      'question' => $question,
+      'channelId' => '',
+      'typeId' => '',
+      'sessionId' => '',
+    ];
+
+    // Make request and return result.
+    return $soapClient->call('ask', $requestArguments, '/com/intelliresponse/search/user', '');
 
   }
 
