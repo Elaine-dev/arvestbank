@@ -143,11 +143,7 @@ class CalculatorIframeWrapperFormatter extends FormatterBase implements Containe
 
       $nid = $item->getEntity()->id();
 
-      $url = Url::fromRoute('arvestbank_calculators.iframe', [], [
-        'query' => [
-          'nid' => $nid,
-        ],
-      ]);
+      $url = Url::fromRoute('arvestbank_calculators.iframe', ['nid' => $nid], []);
 
       $domain = $this->config->get('iframe_domain');
       if ($domain) {
