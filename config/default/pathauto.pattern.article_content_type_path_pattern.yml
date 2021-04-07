@@ -7,16 +7,16 @@ dependencies:
 id: article_content_type_path_pattern
 label: 'Article Content Type Path Pattern'
 type: 'canonical_entities:node'
-pattern: '[node:field_education_article_category]/[node:title]'
+pattern: '/education-center/[node:field_education_article_category]/[node:title]'
 selection_criteria:
-  4869ca8d-7d42-49c5-9b68-c28d5f6138fd:
+  53b95e2f-ccd8-4d44-84b9-203e6717a8f8:
     id: node_type
     bundles:
       article_education_article: article_education_article
     negate: false
     context_mapping:
       node: node
-    uuid: 4869ca8d-7d42-49c5-9b68-c28d5f6138fd
+    uuid: 53b95e2f-ccd8-4d44-84b9-203e6717a8f8
 selection_logic: and
 weight: -5
 relationships: {  }
