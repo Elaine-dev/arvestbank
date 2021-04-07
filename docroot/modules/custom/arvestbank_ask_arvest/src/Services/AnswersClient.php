@@ -55,15 +55,6 @@ class AnswersClient {
   }
 
   /**
-   * Gets the general rest endpoint from config.
-   */
-  public function getGeneralRestEndpoint() {
-
-    return $this->askArvestConfig->get('general_rest_api_endpoint');
-
-  }
-
-  /**
    * Gets suggestions from the intellisuggest endpoint.
    *
    * Uses the REST API "IntelliSuggest" endpoint.
@@ -133,6 +124,47 @@ class AnswersClient {
 
     // Make request and return result.
     return $soapClient->call('ask', $requestArguments, '/com/intelliresponse/search/user', '');
+
+  }
+
+  /**
+   * Sends a request to the [24]7.ai Answers REST endpoint for rating.
+   *
+   * @param string $answerId
+   *   The answer id to rate.
+   * @param int $rating
+   *   The rating for the answer.
+   * @param string $question
+   *   The "question" entered into search.
+   *
+   * @return \Psr\Http\Message\ResponseInterface
+   *   The response returned from the API.
+   *
+   * @throws \GuzzleHttp\Exception\GuzzleException
+   */
+  public function rateAnswer(string $answerId, int $rating, string $question = NULL) {
+
+    // Get REST endpoint from config.
+    $intelliresponseEndpoint = $this->askArvestConfig->get('general_rest_api_endpoint');
+
+    // Build rating request.
+    // phpcs:disable
+    $ratingRequestUrl = $intelliresponseEndpoint
+      . '?interfaceID=2'
+      . '&sessionId='
+      . '&requestType=RatingRequest'
+      . '&responseID=' . $answerId
+      . '&uuid='
+      . '&rating=' . $rating
+      . '&source='
+      . '&question=' . $question;
+    // phpcs:enable
+
+    // Make request and return response.
+    return $this->httpClient->request(
+      'GET',
+      $ratingRequestUrl
+    );
 
   }
 

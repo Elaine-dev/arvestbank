@@ -5,3 +5,12 @@ arvestbank_ask_arvest.settings:
     _title: 'Ask Arvest Settings'
   requirements:
     _permission: 'administer site configuration'
+arvestbank_ask_arvest.rate_answer:
+  path: '/ask-arvest/rate-answer/{answer}/{rating}'
+  defaults:
+    _controller: '\Drupal\arvestbank_ask_arvest\Controller\RateAnswer::rateAnswer'
+    _format: json
+  requirements:
+    _permission: 'access content'
+  options:
+    no_cache: 'TRUE'

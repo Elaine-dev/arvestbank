@@ -107,9 +107,6 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
     // If we have a Best Answer to rate.
     if (isset($answers['id'])) {
 
-      // Have the answers client get the general rest endpoint from config.
-      $jsonEndpoint = $this->answersClient->getGeneralRestEndpoint();
-
       // Attach "raty" rating js library.
       $renderArray = [
         '#type'       => 'container',
@@ -119,11 +116,6 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
         '#attached'   => [
           'library' => [
             'arvestbank_ask_arvest/raty',
-          ],
-          'drupalSettings' => [
-            'arvestbank_ask_arvest' => [
-              'json_endpoint' => $jsonEndpoint,
-            ],
           ],
         ],
         '#cache'      => [

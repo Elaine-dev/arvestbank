@@ -12,24 +12,28 @@ Drupal.behaviors.arvestbankRatingWidget = {
     jQuery(node).raty({
         hints: ['Poor', 'Not so much', 'Adequate', 'Good', 'Excellent!'],
         starOff : '/modules/custom/arvestbank_ask_arvest/js/raty-lib/images/big_grey.png',
-        starOn	: '/modules/custom/arvestbank_ask_arvest/js/raty-lib/images/big_blue.png',
+        starOn : '/modules/custom/arvestbank_ask_arvest/js/raty-lib/images/big_blue.png',
         click: function (score, evt) {
 
-          // Get rest endpoint from drupalSettings.
-          var restEndpoint = drupalSettings.arvestbank_ask_arvest.json_endpoint;
+          // Define the path for our rating endpoint.
+          let requestUrl = '/ask-arvest/rate-answer/' + jQuery(this).attr('data-id') + '/' + score;
 
-          // Add variables to the restEndpoint.
-          var requestUrl =
-            restEndpoint
-            + '?interfaceID=2'
-            + '&sessionId='
-            + '&requestType=RatingRequest'
-            + '&responseID='
-            + '&uuid=' + jQuery(this).attr('data-id')
-            + '&rating=' + score
-            + '&source='
-            + '&question=';
-          // @todo make call to send rating to [24]7.ai
+          // Get url params.
+          // phpcs:disable
+          params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){params[k]=v})
+          // phpcs:enable
+
+          // If we have a question pass it to the rating endpoint.
+          if (typeof params.search != 'undefined') {
+            requestUrl += '?search=' + params.search;
+          }
+
+          // Make request to our rating endpoint.
+          jQuery.ajax({
+            url: requestUrl,
+            dataType: "jsonp",
+          });
+
         }
 
       });
