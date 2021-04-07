@@ -61,7 +61,7 @@ display:
         type: cohesion_layout
         options:
           views_template: view_tpl_education_center_view_t
-          master_template: master_template
+          master_template: __none__
       row:
         type: fields
         options:

@@ -4,24 +4,22 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.teaser
+    - field.field.taxonomy_term.education_article_category.field_addtl_section_icon
+    - field.field.taxonomy_term.education_article_category.field_addtl_section_links
+    - field.field.taxonomy_term.education_article_category.field_addtl_section_subtitle
+    - field.field.taxonomy_term.education_article_category.field_addtl_section_title
     - field.field.taxonomy_term.education_article_category.field_body
     - field.field.taxonomy_term.education_article_category.field_featured_image
+    - field.field.taxonomy_term.education_article_category.field_subtitle_articles
+    - field.field.taxonomy_term.education_article_category.field_subtitle_calculators
+    - field.field.taxonomy_term.education_article_category.field_subtitle_videos
     - field.field.taxonomy_term.education_article_category.field_teaser
     - taxonomy.vocabulary.education_article_category
-  module:
-    - text
 id: taxonomy_term.education_article_category.teaser
 targetEntityType: taxonomy_term
 bundle: education_article_category
 mode: teaser
 content:
-  field_body:
-    type: text_default
-    weight: 0
-    region: content
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
   field_featured_image:
     type: entity_reference_entity_view
     weight: 1
@@ -31,7 +29,21 @@ content:
       link: true
       view_mode: default
     third_party_settings: {  }
+  field_teaser:
+    type: basic_string
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   description: true
-  field_teaser: true
+  field_addtl_section_icon: true
+  field_addtl_section_links: true
+  field_addtl_section_subtitle: true
+  field_addtl_section_title: true
+  field_body: true
+  field_subtitle_articles: true
+  field_subtitle_calculators: true
+  field_subtitle_videos: true
   search_api_excerpt: true

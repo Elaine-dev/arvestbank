@@ -4,21 +4,97 @@ status: true
 dependencies:
   config:
     - entity_browser.browser.dam_image_entity_browser
+    - field.field.taxonomy_term.education_article_category.field_addtl_section_icon
+    - field.field.taxonomy_term.education_article_category.field_addtl_section_links
+    - field.field.taxonomy_term.education_article_category.field_addtl_section_subtitle
+    - field.field.taxonomy_term.education_article_category.field_addtl_section_title
     - field.field.taxonomy_term.education_article_category.field_body
     - field.field.taxonomy_term.education_article_category.field_featured_image
+    - field.field.taxonomy_term.education_article_category.field_subtitle_articles
+    - field.field.taxonomy_term.education_article_category.field_subtitle_calculators
+    - field.field.taxonomy_term.education_article_category.field_subtitle_videos
     - field.field.taxonomy_term.education_article_category.field_teaser
     - taxonomy.vocabulary.education_article_category
   module:
     - entity_browser
+    - field_group
+    - link
+    - media_library
     - path
     - text
+third_party_settings:
+  field_group:
+    group_subtitles:
+      children:
+        - field_subtitle_articles
+        - field_subtitle_calculators
+        - field_subtitle_videos
+      parent_name: ''
+      weight: 6
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: 'Subtitles for the Articles, Calculators, and Videos blocks.'
+        required_fields: true
+        open: false
+      label: Subtitles
+    group_additional_section:
+      children:
+        - field_addtl_section_title
+        - field_addtl_section_subtitle
+        - field_addtl_section_icon
+        - field_addtl_section_links
+      parent_name: ''
+      weight: 7
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Additional Section'
 id: taxonomy_term.education_article_category.default
 targetEntityType: taxonomy_term
 bundle: education_article_category
 mode: default
 content:
+  field_addtl_section_icon:
+    type: media_library_widget
+    weight: 10
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_addtl_section_links:
+    weight: 11
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_addtl_section_subtitle:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_addtl_section_title:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_body:
-    weight: 3
+    weight: 2
     settings:
       rows: 5
       placeholder: ''
@@ -27,7 +103,7 @@ content:
     region: content
   field_featured_image:
     type: entity_browser_entity_reference
-    weight: 4
+    weight: 3
     settings:
       entity_browser: dam_image_entity_browser
       field_widget_display: label
@@ -39,8 +115,32 @@ content:
       field_widget_display_settings: {  }
     third_party_settings: {  }
     region: content
+  field_subtitle_articles:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_subtitle_calculators:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_subtitle_videos:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_teaser:
-    weight: 2
+    weight: 1
     settings:
       rows: 5
       placeholder: ''
@@ -57,7 +157,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 5
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -65,7 +165,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 5
     region: content
     third_party_settings: {  }
 hidden:
