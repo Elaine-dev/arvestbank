@@ -9,6 +9,7 @@ dependencies:
     - system.menu.footer
     - taxonomy.vocabulary.education_article_category
   module:
+    - cohesion
     - media
     - taxonomy
     - user
@@ -57,11 +58,10 @@ display:
           items_per_page: 0
           offset: 0
       style:
-        type: default
+        type: cohesion_layout
         options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
+          views_template: view_tpl_education_center_view_t
+          master_template: master_template
       row:
         type: fields
         options:

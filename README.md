@@ -52,13 +52,13 @@ SSH into your localized Drupal VM environment automated with the BLT launch and 
     ```
 
 5. Setup a local Drupal site with an empty database.
-Use BLT to setup the site with configuration.  If it is a multisite you can identify a specific site.
+Use BLT to setup the site with configuration.
    ```
    $ blt setup
    ```
-   or
+   or pull in a full database with blt sync
    ```
-   $ blt setup --site=[sitename]
+   $ blt sync
    ```
 
 
