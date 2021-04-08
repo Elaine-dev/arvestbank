@@ -8,5 +8,6 @@ weight: -9
 is_admin: null
 permissions:
   - 'access administration pages'
+  - 'access sitemap'
   - 'view media'
   - 'view the administration theme'
