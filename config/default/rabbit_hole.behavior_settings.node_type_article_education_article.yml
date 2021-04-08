@@ -1,0 +1,14 @@
+uuid: 0d3d054b-2788-4c2f-a619-3d956a76058d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article_education_article
+id: node_type_article_education_article
+entity_type_id: node_type
+entity_id: article_education_article
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied
