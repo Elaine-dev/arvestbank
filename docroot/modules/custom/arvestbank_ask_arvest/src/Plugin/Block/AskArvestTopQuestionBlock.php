@@ -90,8 +90,14 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
       $source = 0;
     }
 
+    // Get search term if applicable.
+    $searchTerm = '';
+    if (isset($_GET['search'])) {
+      $searchTerm = $_GET['search'];
+    }
+
     // Get Answers.
-    $answers = $this->answersClient->askQuery($_GET['search'], $source);
+    $answers = $this->answersClient->askQuery($searchTerm, $source);
 
     // Add "Top Question" to render array.
     $renderArray['top_question'] = $this->getTopQuestion($answers);
@@ -138,9 +144,19 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
         ],
       ];
 
+      // Add a title.
+      $renderArray['title'] = [
+        '#markup' => '<h4>Please rate this response.</h4>',
+      ];
+
       // Add a div to use for the rating widget.
       $renderArray['rating_widget_div'] = [
         '#markup' => '<div class="rating-widget" data-id="' . $answers['id'] . '"></div>',
+      ];
+
+      // Add help text.
+      $renderArray['help_text'] = [
+        '#markup' => '<span class="rating-help-text">click on a star to rate</span>',
       ];
 
       return $renderArray;

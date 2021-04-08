@@ -50,7 +50,7 @@ function arvestbank_search_form_views_exposed_form_alter(&$form, FormStateInterf
     }
   }
 
-  // If this is the header search.
+  // If this is the header search or the alt search bar.
   else {
     // Add class to this form.
     $form['#attributes']['class'][] = 'top-search-form';
@@ -64,6 +64,8 @@ function arvestbank_search_form_views_exposed_form_alter(&$form, FormStateInterf
     ];
     // Add weight to get search after hidden suggestion field.
     $form['search']['#weight'] = 2;
+    // Change placeholder text for search bar.
+    $form['search']['#attributes']['placeholder'] = 'Enter a question or keyword.';
     // Add hidden field indicating if a suggestion was used.
     $form['suggestion'] = [
       '#type' => 'hidden',
@@ -72,6 +74,28 @@ function arvestbank_search_form_views_exposed_form_alter(&$form, FormStateInterf
         'class' => ['suggestion-field'],
       ],
       '#weight' => 1,
+    ];
+  }
+
+  // If this is the alternate search bar block.
+  if (
+    $storage['view']->id() == 'database_search'
+    && isset($storage['alt_search_block'])
+    && $storage['alt_search_block']
+  ) {
+    // Put heading at beginning.
+    $form['title'] = [
+      '#markup' => '<h2>Ask a QUESTION or Enter a KEYWORD</h2>',
+      '#weight' => 0,
+    ];
+    // Change placeholder text for search bar.
+    $form['search']['#attributes']['placeholder'] = 'Have a question? Ask it here.';
+    // Move submit before help text.
+    $form['actions']['#weight'] = 3;
+    // Put help text at the end.
+    $form['help-text'] = [
+      '#markup' => '<p>Example Question: What is my routing number?</p><p>Example Keyword: routing number</p>',
+      '#weight' => 4,
     ];
   }
 

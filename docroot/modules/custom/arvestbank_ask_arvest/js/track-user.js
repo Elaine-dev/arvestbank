@@ -8,7 +8,7 @@ Drupal.behaviors.arvestbankUserTracking = {
     // Make request to our tracking endpoint.
     jQuery.ajax({
       url: '/ask-arvest/track-user',
-      dataType: "jsonp",
+      dataType: "json",
     });
 
   }

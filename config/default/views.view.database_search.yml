@@ -541,7 +541,7 @@ display:
             operator_list: {  }
             identifier: search
             required: false
-            remember: true
+            remember: false
             multiple: false
             remember_roles:
               anonymous: anonymous

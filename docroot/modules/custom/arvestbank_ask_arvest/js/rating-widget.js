@@ -36,7 +36,11 @@ Drupal.behaviors.arvestbankRatingWidget = {
           // Make request to our rating endpoint.
           jQuery.ajax({
             url: requestUrl,
-            dataType: "jsonp",
+            dataType: "json",
+            context: this,
+          }).done(function () {
+            // Show thank you text.
+            jQuery(this).siblings('.rating-help-text').html('Thank You');
           });
 
         }

@@ -103,7 +103,7 @@ class AnswersClient {
   /**
    * Queries the SOAP "ask" endpoint for answers.
    *
-   * @param \Drupal\arvestbank_ask_arvest\Services\string $question
+   * @param $question
    *   The question to get answers for.
    * @param int $typeId
    *   Same as "source" from REST API, whence the question came.
@@ -111,7 +111,7 @@ class AnswersClient {
    *
    * @return mixed
    */
-  public function askQuery(string $question, $typeId = 0) {
+  public function askQuery($question, $typeId = 0) {
 
     // Get soap endpoint from config.
     $intelliresponseEndpoint = $this->askArvestConfig->get('intelliresponse_soap_endpoint');
