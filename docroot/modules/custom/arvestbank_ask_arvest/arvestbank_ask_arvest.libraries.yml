@@ -8,3 +8,9 @@ raty:
     js/rating-widget.js: {}
   dependencies:
     - core/jquery
+user-tracking:
+  version: 1.x
+  js:
+    js/track-user.js: {}
+    dependencies:
+      - core/jquery

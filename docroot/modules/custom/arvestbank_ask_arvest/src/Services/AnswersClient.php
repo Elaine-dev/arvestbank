@@ -75,13 +75,16 @@ class AnswersClient {
     // Get intellisuggest endpoint.
     $intellisuggestEndpoint = $this->askArvestConfig->get('intellisuggest_endpoint');
 
+
     // Make request.
     try {
       // Make request.
       // The interfaceID and requestType could be made config if needed.
       $request = $this->httpClient->request(
         'GET',
-        $intellisuggestEndpoint . '?interfaceID=2&requestType=8&term=' . $userInput
+        $intellisuggestEndpoint
+              . '?interfaceID=2&requestType=8&term=' . $userInput
+              . '&sessionId='.$this->getUserSessionId()
       );
       // Get response body.
       $data = $request->getBody();
@@ -100,10 +103,15 @@ class AnswersClient {
   /**
    * Queries the SOAP "ask" endpoint for answers.
    *
-   * @param string $question
+   * @param \Drupal\arvestbank_ask_arvest\Services\string $question
    *   The question to get answers for.
+   * @param int $typeId
+   *   Same as "source" from REST API, whence the question came.
+   *   @see https://engage.247.ai/docportal/Content/Answers/APIs/Set-Up-Question-Completion-Own-Servers.htm?Highlight=typeId
+   *
+   * @return mixed
    */
-  public function askQuery(string $question) {
+  public function askQuery(string $question, $typeId = 0) {
 
     // Get soap endpoint from config.
     $intelliresponseEndpoint = $this->askArvestConfig->get('intelliresponse_soap_endpoint');
@@ -115,11 +123,11 @@ class AnswersClient {
 
     // Create object containing arguments.
     $requestArguments = [
-      'interfaceId'        => 2,
+      'interfaceId' => 2,
       'question' => $question,
-      'channelId' => '',
-      'typeId' => '',
-      'sessionId' => '',
+      'channelId' => 0,
+      'typeId' => $typeId,
+      'sessionId' => $this->getUserSessionId(),
     ];
 
     // Make request and return result.
@@ -143,7 +151,8 @@ class AnswersClient {
    *   2 - Suggested
    *   3 - Top Questions
    *   4 - Embedded
-   *   ? - i.suggest
+   *   ...
+   *   @see https://engage.247.ai/docportal/Content/Answers/APIs/Set-Up-Question-Completion-Own-Servers.htm?Highlight=typeId
    *
    * @return \Psr\Http\Message\ResponseInterface
    *   The response returned from the API.
@@ -159,7 +168,7 @@ class AnswersClient {
     // phpcs:disable
     $ratingRequestUrl = $intelliresponseEndpoint
       . '?interfaceID=2'
-      . '&sessionId='
+      . '&sessionId=' . $this->getUserSessionId()
       . '&requestType=RatingRequest'
       . '&responseID=' . $answerId
       . '&uuid='
@@ -174,6 +183,51 @@ class AnswersClient {
       $ratingRequestUrl
     );
 
+  }
+
+  /**
+   * Create a [24]7.ai Answers API session id for a user.
+   * Categories enumerated at /json/answers.jsp?interfaceID=2&requestType=CategoryRequest.
+   */
+  public function getSessionId(){
+
+    // Get REST endpoint from config.
+    $intelliresponseEndpoint = $this->askArvestConfig->get('general_rest_api_endpoint');
+
+    // Add request vars to endpoint.
+    // It's unclear if category is needed, the documentation has internal inconsistencies.
+    $intelliresponseEndpoint .= 'answers.jsp?interfaceID=2&category=132';
+
+    // Make request and return session id.
+    // There is also a user id returned, but we don't currently have a use.
+    try {
+      $response = $this->httpClient->request('GET', $intelliresponseEndpoint)->getBody()->__toString();
+      $response = json_decode($response);
+      return $response->sessionID;
+    }
+    catch (RequestException $e) {
+      // Log error.
+      \Drupal::logger('arvestbank_ask_arvest')->error($e->getMessage());
+      // Return false.
+      return FALSE;
+    }
+
+
+
+  }
+
+  /**
+   * Helper function to avoid code duplication.
+   *
+   * @return string|null
+   */
+  private function getUserSessionId(){
+    // Get session id for user tracking.
+    $sessionId = NULL;
+    if(isset($_SESSION['ask_arvest_session_id'])) {
+      $sessionId = $_SESSION['ask_arvest_session_id'];
+    }
+    return $sessionId;
   }
 
 }

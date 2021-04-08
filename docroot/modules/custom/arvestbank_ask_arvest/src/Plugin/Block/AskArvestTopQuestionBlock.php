@@ -77,8 +77,21 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
       ],
     ];
 
+    // Determine if this question is from a suggestion.
+    if (
+      isset($_GET['suggestion'])
+      && $_GET['suggestion']
+    ) {
+      // Indicates suggested question.
+      $source = 2;
+    }
+    else {
+      // Indicates manual question.
+      $source = 0;
+    }
+
     // Get Answers.
-    $answers = $this->answersClient->askQuery($_GET['search']);
+    $answers = $this->answersClient->askQuery($_GET['search'], $source);
 
     // Add "Top Question" to render array.
     $renderArray['top_question'] = $this->getTopQuestion($answers);
