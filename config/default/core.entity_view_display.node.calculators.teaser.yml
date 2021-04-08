@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.calculators.body
     - field.field.node.calculators.field_calculator
+    - field.field.node.calculators.field_education_article_category
     - node.type.calculators
   module:
     - text
@@ -23,6 +24,11 @@ content:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
@@ -30,4 +36,5 @@ content:
     region: content
 hidden:
   field_calculator: true
+  field_education_article_category: true
   search_api_excerpt: true

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.calculators.body
     - field.field.node.calculators.field_calculator
+    - field.field.node.calculators.field_education_article_category
     - node.type.calculators
   module:
     - arvestbank_calculators
@@ -22,12 +23,25 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_calculator:
     weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: arvestbank_calculators_iframe_wrapper
+    region: content
+  field_education_article_category:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   links:
     weight: 2

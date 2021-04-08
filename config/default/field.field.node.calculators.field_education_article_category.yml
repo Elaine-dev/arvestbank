@@ -1,0 +1,29 @@
+uuid: 224a7030-a734-4273-a189-d6e9d59f97c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_education_article_category
+    - node.type.calculators
+    - taxonomy.vocabulary.education_article_category
+id: node.calculators.field_education_article_category
+field_name: field_education_article_category
+entity_type: node
+bundle: calculators
+label: 'Education Article Category'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      education_article_category: education_article_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
