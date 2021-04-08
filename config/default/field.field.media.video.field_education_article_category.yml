@@ -1,0 +1,29 @@
+uuid: 134a20c3-fad5-4fff-8e39-fed31016de23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_education_article_category
+    - media.type.video
+    - taxonomy.vocabulary.education_article_category
+id: media.video.field_education_article_category
+field_name: field_education_article_category
+entity_type: media
+bundle: video
+label: 'Education Article Category'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      education_article_category: education_article_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

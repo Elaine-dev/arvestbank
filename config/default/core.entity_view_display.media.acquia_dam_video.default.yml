@@ -6,6 +6,7 @@ dependencies:
     - field.field.media.acquia_dam_video.field_acquiadam_asset_descrip
     - field.field.media.acquia_dam_video.field_acquiadam_asset_id
     - field.field.media.acquia_dam_video.field_acquiadam_asset_video
+    - field.field.media.acquia_dam_video.field_education_article_category
     - media.type.acquia_dam_video
   module:
     - file
@@ -17,12 +18,12 @@ bundle: acquia_dam_video
 mode: default
 content:
   content_moderation_control:
-    weight: -20
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_acquiadam_asset_video:
-    weight: 0
+    weight: 1
     label: visually_hidden
     settings:
       controls: true
@@ -39,6 +40,7 @@ hidden:
   created: true
   field_acquiadam_asset_descrip: true
   field_acquiadam_asset_id: true
+  field_education_article_category: true
   name: true
   search_api_excerpt: true
   thumbnail: true

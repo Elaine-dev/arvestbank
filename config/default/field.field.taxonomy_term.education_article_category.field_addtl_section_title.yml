@@ -1,0 +1,19 @@
+uuid: 8f04aa27-85c0-440d-9115-6741ce84b418
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_addtl_section_title
+    - taxonomy.vocabulary.education_article_category
+id: taxonomy_term.education_article_category.field_addtl_section_title
+field_name: field_addtl_section_title
+entity_type: taxonomy_term
+bundle: education_article_category
+label: 'Section Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

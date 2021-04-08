@@ -1,0 +1,19 @@
+uuid: 15e01c3f-c6cd-4622-9147-f05d51f00665
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_subtitle_calculators
+    - taxonomy.vocabulary.education_article_category
+id: taxonomy_term.education_article_category.field_subtitle_calculators
+field_name: field_subtitle_calculators
+entity_type: taxonomy_term
+bundle: education_article_category
+label: Calculators
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

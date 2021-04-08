@@ -1,25 +1,25 @@
-uuid: 97176750-f9ca-46b5-a857-5c2201087ddf
+uuid: 9a28ba9f-e929-49f4-8573-81024588692f
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.education_details
+    - views.view.additional_links_section
   module:
     - cohesion
     - views
   theme:
     - arvestbank_theme
-id: views_block__education_details_articles
+id: views_block__additional_links_section_block_1
 theme: arvestbank_theme
 region: dx8_hidden
 weight: 0
 provider: null
-plugin: 'views_block:education_details-articles'
+plugin: 'views_block:additional_links_section-block_1'
 settings:
-  id: 'views_block:education_details-articles'
+  id: 'views_block:additional_links_section-block_1'
   label: ''
   provider: views
-  label_display: visible
+  label_display: '0'
   views_label: ''
   items_per_page: none
   context_mapping: {  }

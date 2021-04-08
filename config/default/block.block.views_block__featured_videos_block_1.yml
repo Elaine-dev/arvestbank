@@ -1,22 +1,22 @@
-uuid: 97176750-f9ca-46b5-a857-5c2201087ddf
+uuid: eb05953e-4f34-429c-808f-f81c6773dae6
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.education_details
+    - views.view.featured_videos
   module:
     - cohesion
     - views
   theme:
     - arvestbank_theme
-id: views_block__education_details_articles
+id: views_block__featured_videos_block_1
 theme: arvestbank_theme
 region: dx8_hidden
 weight: 0
 provider: null
-plugin: 'views_block:education_details-articles'
+plugin: 'views_block:featured_videos-block_1'
 settings:
-  id: 'views_block:education_details-articles'
+  id: 'views_block:featured_videos-block_1'
   label: ''
   provider: views
   label_display: visible

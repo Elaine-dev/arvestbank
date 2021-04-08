@@ -1,0 +1,19 @@
+uuid: f745f033-ac97-40ea-acb0-c7943935699c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_subtitle_articles
+    - taxonomy.vocabulary.education_article_category
+id: taxonomy_term.education_article_category.field_subtitle_articles
+field_name: field_subtitle_articles
+entity_type: taxonomy_term
+bundle: education_article_category
+label: Articles
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

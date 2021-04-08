@@ -1,0 +1,20 @@
+uuid: 32073400-9668-4985-b324-226d9edb16b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - taxonomy
+id: media.field_education_article_category
+field_name: field_education_article_category
+entity_type: media
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
