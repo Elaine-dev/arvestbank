@@ -247,7 +247,7 @@
     dependencies: {  }
     id: heading_2
     label: 'Heading 2'
-    json_values: '{"preview":{"text":"<h2>Default content for ''Heading 2''.<\/h2>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"h2","class":"","combinator":"","pseudo":""},"styles":{"xl":{"font-family":{"value":"$coh-font-proxima-nova"},"line-height":{"value":"1.2"},"font-size":{"value":"1.7rem"},"color":{"value":{"link":false,"value":{"hex":"#00457c","rgba":"rgba(0, 69, 124, 1)"},"name":"Arvest Blue","uid":"blue-4","class":".coh-color-blue-4","variable":"$coh-color-blue-4","inuse":true}},"padding":{"padding-left":{"value":""},"padding-top":{"value":"11px"},"padding-bottom":{"value":"11px"}},"font-weight":{"value":"500"}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+    json_values: '{"preview":{"text":"<h2>Default content for ''Heading 2''.<\/h2>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"h2","class":"","combinator":"","pseudo":""},"styles":{"xl":{"font-family":{"value":"$coh-font-proxima-nova"},"line-height":{"value":"1.4"},"font-size":{"value":"1.4rem"},"color":{"value":{"link":false,"value":{"hex":"#00457c","rgba":"rgba(0, 69, 124, 1)"},"name":"Arvest Blue","uid":"blue-4","class":".coh-color-blue-4","variable":"$coh-color-blue-4","inuse":true}},"padding":{"padding-left":{"value":""},"padding-top":{"value":"11px"},"padding-bottom":{"value":"11px"}},"font-weight":{"value":"500"}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
     json_mapper: '{"styles":{"title":"Heading 2","selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]},{"formKey":"font-sizing-and-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-size","active":true},{"name":"line-height","active":true},{"name":"text-align","active":true},{"name":"letter-spacing","active":false},{"name":"word-spacing","active":false},{"name":"text-indent","active":false}]}]},{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":true},{"name":"margin-bottom","active":true},{"name":"margin-left","active":true},{"name":"margin-right","active":true},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]},{"formKey":"padding","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"padding-equal","active":false},{"name":"padding-top","active":true},{"name":"padding-bottom","active":true},{"name":"padding-left","active":true},{"name":"padding-right","active":true},{"name":"padding-block-start","active":false},{"name":"padding-block-end","active":false},{"name":"padding-inline-start","active":false},{"name":"padding-inline-end","active":false}]}]}],"items":[],"form":null}}'
     last_entity_update: entityupdate_0029
     locked: false
@@ -270,6 +270,86 @@
     modified: true
     selectable: true
     weight: 13
+-
+  type: cohesion_base_styles
+  export:
+    uuid: ead1f350-23c1-42b2-a992-973d64dcc716
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: heading_3
+    label: 'Heading 3'
+    json_values: '{"preview":{"text":"<h3>Default content for ''Heading 3''.<\/h3>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"h3","class":"","combinator":"","pseudo":""},"styles":{"xl":{"font-family":{"value":"$coh-font-proxima-nova"},"color":{"value":{"link":false,"value":{"hex":"#002c5c","rgba":"rgba(0, 44, 92, 1)"},"name":"Navigation Blue","uid":"blue-2","class":".coh-color-blue-2","variable":"$coh-color-blue-2","inuse":true}},"font-size":{"value":"1.2rem"},"line-height":{"value":"1.1"},"margin":{"margin-left":{"value":""},"margin-top":{"value":"6px"},"margin-bottom":{"value":"6px"}}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+    json_mapper: '{"styles":{"title":"Heading 3","selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]},{"formKey":"font-sizing-and-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-size","active":true},{"name":"line-height","active":true},{"name":"text-align","active":true},{"name":"letter-spacing","active":false},{"name":"word-spacing","active":false},{"name":"text-indent","active":false}]}]},{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":true},{"name":"margin-bottom","active":true},{"name":"margin-left","active":true},{"name":"margin-right","active":true},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]}]}],"items":[],"form":null}}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: false
+    custom: null
+-
+  type: cohesion_color
+  export:
+    uuid: c0c7ba6a-2eba-4d0b-a91c-440f1d2315dd
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: blue-2
+    label: 'Blue 2'
+    json_values: '{"link":false,"value":{"value":{"hex":"#002c5c","rgba":"rgba(0, 44, 92, 1)"}},"name":"Navigation Blue","uid":"blue-2","class":".coh-color-blue-2","variable":"$coh-color-blue-2","inuse":true}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    weight: 11
+-
+  type: cohesion_base_styles
+  export:
+    uuid: 4de80b64-f6cf-4522-bc4f-e6c1fb3a4f00
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: heading_4
+    label: 'Heading 4'
+    json_values: '{"preview":{"text":"<h4>Default content for ''Heading 4''.<\/h4>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"h4","class":"","combinator":"","pseudo":""},"styles":{"xl":{"font-family":{"value":"$coh-font-proxima-nova"},"color":{"value":{"name":"Main Gray","uid":"gray-1","value":{"hex":"#333333","rgba":"rgba(51, 51, 51, 1)"},"wysiwyg":true,"class":".coh-color-gray-1","variable":"$coh-color-gray-1","inuse":true,"link":false}},"line-height":{"value":"1.1"},"font-size":{"value":"1.2rem"},"margin":{"margin-top":{"value":"10px"},"margin-bottom":{"value":"4px"}}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+    json_mapper: '{"styles":{"title":"Heading 4","selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]},{"formKey":"font-sizing-and-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-size","active":true},{"name":"line-height","active":true},{"name":"text-align","active":true},{"name":"letter-spacing","active":false},{"name":"word-spacing","active":false},{"name":"text-indent","active":false}]}]},{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":true},{"name":"margin-bottom","active":true},{"name":"margin-left","active":true},{"name":"margin-right","active":true},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]}]}],"items":[],"form":null}}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: false
+    custom: null
+-
+  type: cohesion_base_styles
+  export:
+    uuid: 51acd745-e938-4e25-9851-09f871d117cd
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: heading_5
+    label: 'Heading 5'
+    json_values: '{"preview":{"text":"<h5>Default content for ''Heading 5''.<\/h5>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"h5","class":"","combinator":"","pseudo":""},"styles":{"xl":{"color":{"value":{"name":"Main Gray","uid":"gray-1","value":{"hex":"#333333","rgba":"rgba(51, 51, 51, 1)"},"wysiwyg":true,"class":".coh-color-gray-1","variable":"$coh-color-gray-1","inuse":true,"link":false}},"font-family":{"value":"$coh-font-proxima-nova"},"font-weight":{"value":"500"},"font-size":{"value":"1.1rem"},"line-height":{"value":"1.1"}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+    json_mapper: '{"styles":{"title":"Heading 5","selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]},{"formKey":"font-sizing-and-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-size","active":true},{"name":"line-height","active":true},{"name":"text-align","active":true},{"name":"letter-spacing","active":false},{"name":"word-spacing","active":false},{"name":"text-indent","active":false}]}]},{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":true},{"name":"margin-bottom","active":true},{"name":"margin-left","active":true},{"name":"margin-right","active":true},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]}]}],"items":[],"form":null}}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: false
+    custom: null
+-
+  type: cohesion_base_styles
+  export:
+    uuid: 4c4c4371-45f8-4667-a997-2bf35a27e012
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: heading_6
+    label: 'Heading 6'
+    json_values: '{"preview":{"text":"<h6>Default content for ''Heading 6''.<\/h6>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"h6","class":"","combinator":"","pseudo":""},"styles":{"xl":{"font-family":{"value":"$coh-font-proxima-nova"},"font-weight":{"value":"500"},"font-size":{"value":"1.1rem"},"line-height":{"value":"1.2"},"color":{"value":{"name":"Main Gray","uid":"gray-1","value":{"hex":"#333333","rgba":"rgba(51, 51, 51, 1)"},"wysiwyg":true,"class":".coh-color-gray-1","variable":"$coh-color-gray-1","inuse":true,"link":false}}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+    json_mapper: '{"styles":{"title":"Heading 6","selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]},{"formKey":"font-sizing-and-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-size","active":true},{"name":"line-height","active":true},{"name":"text-align","active":true},{"name":"letter-spacing","active":false},{"name":"word-spacing","active":false},{"name":"text-indent","active":false}]}]},{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":true},{"name":"margin-bottom","active":true},{"name":"margin-left","active":true},{"name":"margin-right","active":true},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]}]}],"items":[],"form":null}}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: false
+    custom: null
 -
   type: cohesion_base_styles
   export:
@@ -343,7 +423,7 @@
     dependencies: {  }
     id: ordered_list
     label: 'Ordered list'
-    json_values: '{"preview":{"text":"<ol>\n\t<li>List item 1<\/li>\n\t<li>List item 2<\/li>\n\t<li>List item 3<\/li>\n<\/ol>\n","textFormat":"cohesion"},"sBackgroundColour":"#FFFFFF","styles":{"settings":{"element":"ol","class":"","combinator":"","pseudo":""},"styles":{"xl":{"color":{"value":{}},"margin":{"margin-top":{"value":""}}}},"ce6977c1-2199-4f38-b8db-bc999b8f84f7":{"settings":{"element":"li::marker","class":"","combinator":"","pseudo":""},"styles":{"xl":{"color":{"value":{"link":true,"value":{"hex":"#e60000","rgba":"rgba(230, 0, 0, 1)"},"name":"Red 2","uid":"red-2","class":".coh-color-red-2","variable":"$coh-color-red-2","inuse":false,"wysiwyg":false}}}}},"5a7f2f4f-e374-4015-9273-8e4e90da0ed8":{"settings":{"element":"li","class":"","combinator":"","pseudo":""},"styles":{"xl":{"line-height":{"value":"1.5"},"margin":{"margin-top":{"value":"20px"}}}}}},"variableFields":[]}'
+    json_values: '{"preview":{"text":"<ol>\n\t<li>List item 1<\/li>\n\t<li>List item 2<\/li>\n\t<li>List item 3<\/li>\n<\/ol>\n","textFormat":"cohesion"},"sBackgroundColour":"#FFFFFF","styles":{"settings":{"element":"ol","class":"","combinator":"","pseudo":""},"styles":{"xl":{"color":{"value":{}},"margin":{"margin-top":{"value":""}}}},"ce6977c1-2199-4f38-b8db-bc999b8f84f7":{"settings":{"element":"li::marker","class":"","combinator":"","pseudo":""},"styles":{"xl":{"color":{"value":{"link":false,"value":{"hex":"#e60000","rgba":"rgba(230, 0, 0, 1)"},"name":"Primary Red","uid":"red-2","class":".coh-color-red-2","variable":"$coh-color-red-2","inuse":true,"wysiwyg":false}}}}},"5a7f2f4f-e374-4015-9273-8e4e90da0ed8":{"settings":{"element":"li","class":"","combinator":"","pseudo":""},"styles":{"xl":{"line-height":{"value":"1.5"},"margin":{"margin-top":{"value":"10px"}}}}}},"variableFields":[]}'
     json_mapper: '{"styles":{"title":"Ordered list","selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]},{"formKey":"font-sizing-and-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-size","active":true},{"name":"line-height","active":true},{"name":"text-align","active":true},{"name":"letter-spacing","active":false},{"name":"word-spacing","active":false},{"name":"text-indent","active":false}]}]},{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":true},{"name":"margin-bottom","active":true},{"name":"margin-left","active":true},{"name":"margin-right","active":true},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]}]}],"items":[{"title":"li::marker","type":"container","items":[],"form":null,"selectorType":"child","model":"li::marker","uuid":"ce6977c1-2199-4f38-b8db-bc999b8f84f7","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]}]}]},{"title":"li","type":"container","items":[],"form":null,"selectorType":"child","model":"li","uuid":"5a7f2f4f-e374-4015-9273-8e4e90da0ed8","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"font","children":[{"formKey":"font-sizing-and-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-size","active":true},{"name":"line-height","active":true},{"name":"text-align","active":true},{"name":"letter-spacing","active":true},{"name":"word-spacing","active":true},{"name":"text-indent","active":true}]}]},{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":true},{"name":"margin-bottom","active":true},{"name":"margin-left","active":true},{"name":"margin-right","active":true},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]}]}]}],"form":null}}'
     last_entity_update: entityupdate_0029
     locked: false
@@ -361,6 +441,22 @@
     label: Paragraph
     json_values: '{"preview":{"text":"<p>Default content for ''Paragraph''.<\/p>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"p","class":"","combinator":"","pseudo":""},"styles":{"xl":{"margin":{"margin-bottom":{"value":"12"}}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
     json_mapper: '{"styles":{"title":"Paragraph","selectorType":"topLevel","formDefinition":[{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":false},{"name":"margin-bottom","active":true},{"name":"margin-left","active":false},{"name":"margin-right","active":false},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]}]}],"items":[],"form":null}}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: false
+    custom: null
+-
+  type: cohesion_base_styles
+  export:
+    uuid: 24052951-c552-4032-8623-cef6734336aa
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: unordered_list
+    label: 'Unordered list'
+    json_values: '{"preview":{"text":"<ul>\n\t<li>List item 1<\/li>\n\t<li>List item 2<\/li>\n\t<li>List item 3<\/li>\n<\/ul>\n\n<p>&nbsp;<\/p>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"ul","class":"","combinator":"","pseudo":""},"b8d1a623-28bd-440c-9d0c-d2567e37ee6e":{"settings":{"element":"li::marker","class":"","combinator":"","pseudo":""},"styles":{"xl":{"color":{"value":{"link":false,"value":{"hex":"#e60000","rgba":"rgba(230, 0, 0, 1)"},"name":"Primary Red","uid":"red-2","class":".coh-color-red-2","variable":"$coh-color-red-2","inuse":true,"wysiwyg":false}},"unordered-list":{"list-style-type":{"value":"disc"},"list-style-position":{"value":"inside"}}}}},"styles":{"xl":{"unordered-list":{"list-style-type":{"value":"disc"},"list-style-position":{"value":"inside"}}}},"4c4787f5-310f-44e9-80c2-12cee399290c":{"settings":{"element":"li","class":"","combinator":"","pseudo":""},"styles":{"xl":{"margin":{"margin-top":{"value":"10px"}}}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+    json_mapper: '{"styles":{"title":"Unordered list","selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]},{"formKey":"font-sizing-and-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-size","active":true},{"name":"line-height","active":true},{"name":"text-align","active":true},{"name":"letter-spacing","active":false},{"name":"word-spacing","active":false},{"name":"text-indent","active":false}]}]},{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":true},{"name":"margin-bottom","active":true},{"name":"margin-left","active":true},{"name":"margin-right","active":true},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]}]},{"formKey":"list-style","children":[{"formKey":"unordered-list","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"list-style-type","active":true},{"name":"list-style-image","active":true},{"name":"list-style-position","active":true}]}]}],"items":[{"title":"li::marker","type":"container","items":[],"form":null,"selectorType":"child","model":"li::marker","uuid":"b8d1a623-28bd-440c-9d0c-d2567e37ee6e","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]}]},{"formKey":"list-style","children":[{"formKey":"unordered-list","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"list-style-type","active":true},{"name":"list-style-image","active":true},{"name":"list-style-position","active":true}]}]}]},{"title":"li","type":"container","items":[],"form":null,"selectorType":"child","model":"li","uuid":"4c4787f5-310f-44e9-80c2-12cee399290c","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":true},{"name":"margin-bottom","active":true},{"name":"margin-left","active":true},{"name":"margin-right","active":true},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]}]}]}],"form":null}}'
     last_entity_update: entityupdate_0029
     locked: false
     modified: true
@@ -446,22 +542,6 @@
     available_in_wysiwyg: false
     parent: null
     weight: 0
--
-  type: cohesion_color
-  export:
-    uuid: c0c7ba6a-2eba-4d0b-a91c-440f1d2315dd
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: blue-2
-    label: 'Blue 2'
-    json_values: '{"link":false,"value":{"value":{"hex":"#002c5c","rgba":"rgba(0, 44, 92, 1)"}},"name":"Navigation Blue","uid":"blue-2","class":".coh-color-blue-2","variable":"$coh-color-blue-2","inuse":true}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0029
-    locked: false
-    modified: true
-    selectable: true
-    weight: 11
 -
   type: cohesion_component_category
   export:
@@ -724,6 +804,22 @@
     modified: true
     selectable: true
     weight: 26
+-
+  type: cohesion_color
+  export:
+    uuid: 78a53cb0-e96f-4c93-8fd0-55d83c1df9e4
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: blue-12
+    label: 'Blue 12'
+    json_values: '{"link":true,"value":{"value":{"hex":"#b3cae4","rgba":"rgba(179, 202, 228, 1)"}},"name":"Blue 12","uid":"blue-12","class":".coh-color-blue-12","variable":"$coh-color-blue-12","inuse":false}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: true
+    selectable: true
+    weight: 21
 -
   type: cohesion_content_templates
   export:
@@ -2830,43 +2926,6 @@
     custom: true
     twig_template: menu--cohesion-menu-tpl-sidebar
 -
-  type: cohesion_color
-  export:
-    uuid: 78a53cb0-e96f-4c93-8fd0-55d83c1df9e4
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: blue-12
-    label: 'Blue 12'
-    json_values: '{"link":true,"value":{"value":{"hex":"#b3cae4","rgba":"rgba(179, 202, 228, 1)"}},"name":"Blue 12","uid":"blue-12","class":".coh-color-blue-12","variable":"$coh-color-blue-12","inuse":false}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0029
-    locked: false
-    modified: true
-    selectable: true
-    weight: 21
--
-  type: cohesion_content_templates
-  export:
-    uuid: 391a385f-2d01-4135-9d42-e826e227c88b
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: taxonomy_term_education_article_
-    label: 'Taxonomy term page (Taxonomy_term, Education Article Category)'
-    json_values: '{"canvas":[],"mapper":{},"model":[],"previewModel":{},"variableFields":{},"meta":{"fieldHistory":[]}}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0029
-    modified: true
-    selectable: true
-    custom: false
-    twig_template: taxonomy-term--cohesion--taxonomy-term-education-article-
-    default: false
-    entity_type: taxonomy_term
-    bundle: education_article_category
-    view_mode: full
-    master_template: __none__
--
   type: cohesion_view_templates
   export:
     uuid: 8577aa36-c5a6-46ee-b224-e8507044c7c6
@@ -2927,7 +2986,7 @@
     dependencies: {  }
     id: base_unit_settings
     label: 'Base unit settings'
-    json_values: '{"baseFontSize":{"value":16},"baseFontSizeEnable":true,"defaultUnitConversion":"rem"}'
+    json_values: '{"baseFontSize":{"value":12},"baseFontSizeEnable":true,"defaultUnitConversion":"rem"}'
     json_mapper: '{}'
     last_entity_update: entityupdate_0029
     locked: false
