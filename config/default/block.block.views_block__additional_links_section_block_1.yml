@@ -1,0 +1,30 @@
+uuid: 9a28ba9f-e929-49f4-8573-81024588692f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.additional_links_section
+  module:
+    - cohesion
+    - views
+  theme:
+    - arvestbank_theme
+id: views_block__additional_links_section_block_1
+theme: arvestbank_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: 'views_block:additional_links_section-block_1'
+settings:
+  id: 'views_block:additional_links_section-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

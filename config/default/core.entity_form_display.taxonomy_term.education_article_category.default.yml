@@ -51,12 +51,12 @@ third_party_settings:
       format_type: details
       region: content
       format_settings:
+        description: ''
+        required_fields: true
         id: ''
         classes: ''
-        description: ''
         open: false
-        required_fields: true
-      label: 'Additional Section'
+      label: 'Additional Links Section'
 id: taxonomy_term.education_article_category.default
 targetEntityType: taxonomy_term
 bundle: education_article_category
