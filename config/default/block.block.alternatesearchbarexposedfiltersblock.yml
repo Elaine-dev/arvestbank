@@ -1,0 +1,30 @@
+uuid: 606a6ce0-2be2-41d1-a84e-dada36c06efd
+langcode: en
+status: true
+dependencies:
+  module:
+    - arvestbank_search
+    - cohesion
+    - system
+  theme:
+    - arvestbank_theme
+id: alternatesearchbarexposedfiltersblock
+theme: arvestbank_theme
+region: content
+weight: 0
+provider: null
+plugin: alt_search_bar_exposed_filters_block
+settings:
+  id: alt_search_bar_exposed_filters_block
+  label: 'Ask a QUESTION or Enter a KEYWORD'
+  provider: arvestbank_search
+  label_display: visible
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 1
+    negate: false
+  request_path:
+    id: request_path
+    pages: /search
+    negate: false

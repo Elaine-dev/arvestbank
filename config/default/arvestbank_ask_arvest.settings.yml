@@ -1,3 +1,5 @@
 intellisuggest_endpoint: 'https://arvest.intelliresponse.com/IntelliSuggest'
 _core:
   default_config_hash: PpiEM61_xVbbpLeDrbtKrK4tumYypgSaLRBiVtduM4k
+intelliresponse_soap_endpoint: 'http://arvest.intelliresponse.com/ws/ir-user/Ask?wsdl'
+general_rest_api_endpoint: 'http://arvest.intelliresponse.com/json/'

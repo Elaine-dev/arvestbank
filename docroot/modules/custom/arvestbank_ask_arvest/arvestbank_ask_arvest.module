@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Contains hooks for ask arvest functionality.
+ */
+
+/**
+ * Implements hook_page_attachments().
+ */
+function arvestbank_ask_arvest_page_attachments(array &$page) {
+
+  // Attach tracking library to page.
+  $page['#attached']['library'][] = 'arvestbank_ask_arvest/user-tracking';
+
+}
