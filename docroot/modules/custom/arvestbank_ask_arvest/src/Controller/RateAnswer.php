@@ -65,8 +65,18 @@ class RateAnswer extends ControllerBase {
     // Add question to response array.
     $response['question'] = $question;
 
+    // Determine the "source" for the question.
+    if (isset($_GET['suggestion']) && $_GET['suggestion']) {
+      $response['source'] = "Suggested";
+      $source = 2;
+    }
+    else {
+      $response['source'] = "General";
+      $source = 0;
+    }
+
     // Make rating request.
-    $apiResponse = $this->answersClient->rateAnswer($answer, $rating, $question);
+    $apiResponse = $this->answersClient->rateAnswer($answer, $rating, $question, $source);
 
     // Add response code from API to our json response.
     $response['response_code'] = $apiResponse->getStatusCode();

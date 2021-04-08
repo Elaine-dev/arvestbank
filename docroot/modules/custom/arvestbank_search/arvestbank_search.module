@@ -62,6 +62,17 @@ function arvestbank_search_form_views_exposed_form_alter(&$form, FormStateInterf
     $form['search']['#attached'] = [
       'library' => ['arvestbank_search/ask-arvest'],
     ];
+    // Add weight to get search after hidden suggestion field.
+    $form['search']['#weight'] = 2;
+    // Add hidden field indicating if a suggestion was used.
+    $form['suggestion'] = [
+      '#type' => 'hidden',
+      '#value' => FALSE,
+      '#attributes' => [
+        'class' => ['suggestion-field'],
+      ],
+      '#weight' => 1,
+    ];
   }
 
 }

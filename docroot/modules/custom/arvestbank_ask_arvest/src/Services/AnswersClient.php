@@ -136,13 +136,21 @@ class AnswersClient {
    *   The rating for the answer.
    * @param string $question
    *   The "question" entered into search.
+   * @param int $source
+   *   Where the question came from.
+   *   0 - Manual
+   *   1 - Related
+   *   2 - Suggested
+   *   3 - Top Questions
+   *   4 - Embedded
+   *   ? - i.suggest
    *
    * @return \Psr\Http\Message\ResponseInterface
    *   The response returned from the API.
    *
    * @throws \GuzzleHttp\Exception\GuzzleException
    */
-  public function rateAnswer(string $answerId, int $rating, string $question = NULL) {
+  public function rateAnswer(string $answerId, int $rating, string $question = NULL, int $source = 0) {
 
     // Get REST endpoint from config.
     $intelliresponseEndpoint = $this->askArvestConfig->get('general_rest_api_endpoint');
@@ -156,7 +164,7 @@ class AnswersClient {
       . '&responseID=' . $answerId
       . '&uuid='
       . '&rating=' . $rating
-      . '&source='
+      . '&source=' . $source
       . '&question=' . $question;
     // phpcs:enable
 

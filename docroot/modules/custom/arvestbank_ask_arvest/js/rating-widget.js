@@ -28,6 +28,11 @@ Drupal.behaviors.arvestbankRatingWidget = {
             requestUrl += '?search=' + params.search;
           }
 
+          // If we have a suggestion pass it to the rating endpoint.
+          if (typeof params.suggestion != 'undefined') {
+            requestUrl += '&suggestion=' + params.suggestion;
+          }
+
           // Make request to our rating endpoint.
           jQuery.ajax({
             url: requestUrl,
