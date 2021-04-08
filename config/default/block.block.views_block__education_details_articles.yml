@@ -1,26 +1,28 @@
-uuid: 59101a9c-4ec0-4122-9c8b-c24ee873271b
+uuid: 08bc086e-23c6-40ca-9d5b-4bf0e4d07dc4
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.database_search
+    - views.view.education_details
   module:
     - cohesion
     - views
   theme:
     - arvestbank_theme
-id: exposedformdatabase_searchpage_1
+id: views_block__education_details_articles
 theme: arvestbank_theme
-region: top_menu
-weight: -6
+region: dx8_hidden
+weight: 0
 provider: null
-plugin: 'views_exposed_filter_block:database_search-page_1'
+plugin: 'views_block:education_details-articles'
 settings:
-  id: 'views_exposed_filter_block:database_search-page_1'
+  id: 'views_block:education_details-articles'
   label: ''
   provider: views
   label_display: visible
   views_label: ''
+  items_per_page: none
+  context_mapping: {  }
 visibility:
   cohesion_master_template:
     id: cohesion_master_template

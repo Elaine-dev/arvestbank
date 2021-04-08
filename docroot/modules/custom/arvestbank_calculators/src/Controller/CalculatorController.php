@@ -5,6 +5,7 @@ namespace Drupal\arvestbank_calculators\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Render\HtmlResponse;
 use Drupal\Core\Render\RendererInterface;
+use Drupal\Core\TypedData\Plugin\DataType\IntegerData;
 use Drupal\node\Entity\Node;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -41,26 +42,20 @@ class CalculatorController extends ControllerBase {
   /**
    * Renders a calculator as a full HtmlResponse.
    *
-   * @param \Symfony\Component\HttpFoundation\Request $request
-   *   The request object.
+   * @param int $nid
+   *   Node id.
    *
    * @return \Symfony\Component\HttpFoundation\Response
    *   The response object.
    *
-   * @throws \Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException
-   *   Will be thrown if the 'hash' parameter does not match the expected hash
-   *   of the 'url' parameter.
    */
-  public function render(Request $request) {
+  public function render(int $nid) {
 
     // Set up the response.
     $response = new HtmlResponse();
 
     // Initialize the html for the response.
     $html = ['#type' => 'html'];
-
-    // Get the node id from the URL.
-    $nid = (int) \Drupal::request()->query->get('nid');
 
     // Try to load the node off of the ID.
     if ($node = Node::load($nid)) {

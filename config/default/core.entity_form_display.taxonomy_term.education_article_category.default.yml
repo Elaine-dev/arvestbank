@@ -3,21 +3,49 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.education_article_category.field_layout_canvas
+    - entity_browser.browser.dam_image_entity_browser
+    - field.field.taxonomy_term.education_article_category.field_body
+    - field.field.taxonomy_term.education_article_category.field_featured_image
+    - field.field.taxonomy_term.education_article_category.field_teaser
     - taxonomy.vocabulary.education_article_category
   module:
-    - cohesion_elements
+    - entity_browser
     - path
+    - text
 id: taxonomy_term.education_article_category.default
 targetEntityType: taxonomy_term
 bundle: education_article_category
 mode: default
 content:
-  field_layout_canvas:
-    type: cohesion_layout_builder_widget
-    weight: 1
-    settings: {  }
+  field_body:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_featured_image:
+    type: entity_browser_entity_reference
+    weight: 4
+    settings:
+      entity_browser: dam_image_entity_browser
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_teaser:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
   name:
     type: string_textfield
@@ -29,7 +57,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 2
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -37,7 +65,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 3
+    weight: 6
     region: content
     third_party_settings: {  }
 hidden:

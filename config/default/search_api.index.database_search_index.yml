@@ -3,17 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.media.field_acquiadam_asset_doc
-    - field.storage.media.field_title
     - field.storage.node.body
     - field.storage.node.field_field_callout_phone_number
-    - field.storage.node.field_cta_text
     - field.storage.node.field_callout_title
+    - field.storage.node.field_cta_text
+    - field.storage.media.field_title
+    - field.storage.media.field_acquiadam_asset_doc
     - search_api.server.database_search_server
   module:
-    - file
-    - media
     - node
+    - media
+    - file
     - search_api
     - search_api_attachments
 id: database_search_index
@@ -180,7 +180,7 @@ processor_settings:
       strong: 2
     weights:
       preprocess_index: -15
-      preprocess_query: -15
+      preprocess_query: -48
   ignorecase:
     all_fields: false
     fields:
@@ -194,7 +194,7 @@ processor_settings:
       - title
     weights:
       preprocess_index: -20
-      preprocess_query: -20
+      preprocess_query: -43
   language_with_fallback: {  }
   rendered_item: {  }
   stemmer:
@@ -213,7 +213,7 @@ processor_settings:
       texan: texa
     weights:
       preprocess_index: 0
-      preprocess_query: 0
+      preprocess_query: -44
   tokenizer:
     all_fields: false
     fields:
@@ -231,7 +231,7 @@ processor_settings:
     minimum_word_size: '3'
     weights:
       preprocess_index: -6
-      preprocess_query: -6
+      preprocess_query: -46
   transliteration:
     all_fields: true
     fields:
@@ -249,7 +249,7 @@ processor_settings:
       - url
     weights:
       preprocess_index: -20
-      preprocess_query: -20
+      preprocess_query: -49
 tracker_settings:
   default:
     indexing_order: fifo

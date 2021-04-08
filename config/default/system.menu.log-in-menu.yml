@@ -1,0 +1,8 @@
+uuid: e3fe54a3-d4e5-46d9-b5a5-1ac5970d047d
+langcode: en
+status: true
+dependencies: {  }
+id: log-in-menu
+label: 'Log in Menu'
+description: 'A menu for the login block located in the main navigation'
+locked: false

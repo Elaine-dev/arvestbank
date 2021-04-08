@@ -1,0 +1,21 @@
+uuid: f24f8679-9578-4df3-ab5f-4fd297bf48eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_body
+    - taxonomy.vocabulary.education_article_category
+  module:
+    - text
+id: taxonomy_term.education_article_category.field_body
+field_name: field_body
+entity_type: taxonomy_term
+bundle: education_article_category
+label: Body
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
