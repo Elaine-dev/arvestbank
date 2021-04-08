@@ -1,0 +1,20 @@
+uuid: a0b9d92f-62b6-4961-bfef-35f974a6d0b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - taxonomy
+id: taxonomy_term.field_featured_videos
+field_name: field_featured_videos
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -10,6 +10,7 @@ dependencies:
     - field.field.taxonomy_term.education_article_category.field_addtl_section_title
     - field.field.taxonomy_term.education_article_category.field_body
     - field.field.taxonomy_term.education_article_category.field_featured_image
+    - field.field.taxonomy_term.education_article_category.field_featured_videos
     - field.field.taxonomy_term.education_article_category.field_subtitle_articles
     - field.field.taxonomy_term.education_article_category.field_subtitle_calculators
     - field.field.taxonomy_term.education_article_category.field_subtitle_videos
@@ -57,6 +58,20 @@ third_party_settings:
         classes: ''
         open: false
       label: 'Additional Links Section'
+    group_featured_videos:
+      children:
+        - field_featured_videos
+      parent_name: ''
+      weight: 8
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Featured Videos'
 id: taxonomy_term.education_article_category.default
 targetEntityType: taxonomy_term
 bundle: education_article_category
@@ -113,6 +128,13 @@ content:
       field_widget_replace: false
       open: false
       field_widget_display_settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_featured_videos:
+    type: media_library_widget
+    weight: 9
+    settings:
+      media_types: {  }
     third_party_settings: {  }
     region: content
   field_subtitle_articles:

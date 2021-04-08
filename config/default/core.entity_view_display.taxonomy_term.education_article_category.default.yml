@@ -9,6 +9,7 @@ dependencies:
     - field.field.taxonomy_term.education_article_category.field_addtl_section_title
     - field.field.taxonomy_term.education_article_category.field_body
     - field.field.taxonomy_term.education_article_category.field_featured_image
+    - field.field.taxonomy_term.education_article_category.field_featured_videos
     - field.field.taxonomy_term.education_article_category.field_subtitle_articles
     - field.field.taxonomy_term.education_article_category.field_subtitle_calculators
     - field.field.taxonomy_term.education_article_category.field_subtitle_videos
@@ -43,6 +44,7 @@ hidden:
   field_addtl_section_links: true
   field_addtl_section_subtitle: true
   field_addtl_section_title: true
+  field_featured_videos: true
   field_subtitle_articles: true
   field_subtitle_calculators: true
   field_subtitle_videos: true
