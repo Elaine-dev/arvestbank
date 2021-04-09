@@ -8,7 +8,7 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Provides exposed filters in a block.
+ * Provides suggested questions in a block.
  *
  * @Block(
  *   id = "suggested_questions_block",
@@ -136,6 +136,7 @@ class SuggestedQuestionsBlock extends BlockBase implements ContainerFactoryPlugi
         // Loop over suggested questions.
         foreach ($answers['suggested'] as $suggested_answer) {
           // Add a link to search this question to the render array.
+          // The data-question-id isn't used right now, but could be helpful.
           $renderArray['questions'][] = [
             '#markup' => '<a href="/search?source=2&search='
             . urlencode(strip_tags($suggested_answer['title']))

@@ -70,6 +70,37 @@ class AnswersClient {
   }
 
   /**
+   * Gets top questions from [24]7.ai Answers REST "GET TOP QUESTIONS".
+   */
+  public function getTopQuestions() {
+
+    // Determine endpoint to request.
+    $topQuestionEndpoint = $this->askArvestConfig->get('general_rest_api_endpoint');
+    $topQuestionEndpoint .= '?interfaceID=2&sessionId=' . $this->getUserSessionId();
+    $topQuestionEndpoint .= '&requestType=TopQuestionsRequest';
+
+    try {
+      // Make request.
+      // The interfaceID and requestType could be made config if needed.
+      $request = $this->httpClient->request(
+        'GET',
+        $topQuestionEndpoint
+      );
+      // Get response body.
+      $data = $request->getBody();
+      // Decode and return the json.
+      return Json::decode($data);
+    }
+    catch (RequestException $e) {
+      // Log error.
+      \Drupal::logger('arvestbank_ask_arvest')->error($e->getMessage());
+      // Return empty array.
+      return [];
+    }
+
+  }
+
+  /**
    * Gets suggestions from the intellisuggest endpoint.
    *
    * Uses the REST API "IntelliSuggest" endpoint.
