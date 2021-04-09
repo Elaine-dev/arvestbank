@@ -1,8 +1,37 @@
 # Code Review
 
 
-`git fetch origin pull/ID/head:BRANCHNAME`
+To set up add the git remotes to your local repo (only need to do this once) 
 
+for example: `git remote add allie git@github.com:AllieRays/arvestbank.git`
+```
+allie	git@github.com:AllieRays/arvestbank.git (fetch)
+dorian git@github.com:dorian-e3/arvestbank.git (fetch)
+john git@github.com:drfirepants/arvestbank.git (fetch)
+upstream git@github.com:acquia-pso/arvestbank.git (fetch)
+scott	git@github.com:searnest-e3/arvestbank.git (fetch)
+```
+
+`git fetch upstream pull/ID/head:BRANCHNAME`
+
+`git checkout [BRANCHNAME]` 
+Depending on changes you can just run 
+* `drush cim`
+* `drush sync:import --overwrite-all`
+* `drush cohesion:rebuild`
+
+If there are lots of changes you can run `blt sync` which will
+* drop your database
+* pull database from prod
+* import config
+* import Site Studio config
+
+
+
+
+
+
+# More Information 
 
 
 "How do I perform a code review?"
