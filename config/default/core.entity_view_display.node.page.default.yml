@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_account_disclosure_informa
     - field.field.node.page.field_callout_layout_optio
     - field.field.node.page.field_callout_title
     - field.field.node.page.field_cta_text
@@ -37,6 +38,13 @@ content:
     weight: -20
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_account_disclosure_informa:
+    weight: 112
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_callout_layout_optio:
     weight: 107

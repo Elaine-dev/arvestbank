@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
+    - field.field.node.page.field_account_disclosure_informa
     - field.field.node.page.field_callout_layout_optio
     - field.field.node.page.field_callout_title
     - field.field.node.page.field_cta_text
@@ -43,6 +44,7 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_account_disclosure_informa: true
   field_callout_layout_optio: true
   field_callout_title: true
   field_cta_text: true
