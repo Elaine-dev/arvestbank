@@ -1,8 +1,29 @@
 # Code Review
 
 
+To set up add the git remotes to your local repo (only need to do this once) 
+```
+allie	git@github.com:AllieRays/arvestbank.git (fetch)
+allie	git@github.com:AllieRays/arvestbank.git (push)
+dorian	git@github.com:dorian-e3/arvestbank.git (fetch)
+dorian	git@github.com:dorian-e3/arvestbank.git (push)
+john	git@github.com:drfirepants/arvestbank.git (fetch)
+john	git@github.com:drfirepants/arvestbank.git (push)
+upstream	git@github.com:acquia-pso/arvestbank.git (fetch)
+upstream	git@github.com:acquia-pso/arvestbank.git (push)
+scott	git@github.com:searnest-e3/arvestbank.git (fetch)
+scott	git@github.com:searnest-e3/arvestbank.git (push)
+```
+
 `git fetch origin pull/ID/head:BRANCHNAME`
 
+
+
+
+
+
+
+# More Information 
 
 
 "How do I perform a code review?"
