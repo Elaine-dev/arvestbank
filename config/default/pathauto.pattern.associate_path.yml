@@ -1,0 +1,22 @@
+uuid: d28e3451-dba8-4feb-bfd4-b4c062d0af4e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: associate_path
+label: 'Associate Path'
+type: 'canonical_entities:node'
+pattern: '/[associate_type]/associate/[node:title]'
+selection_criteria:
+  a2249004-fbfa-479b-9527-facb73d88034:
+    id: node_type
+    bundles:
+      associate: associate
+    negate: false
+    context_mapping:
+      node: node
+    uuid: a2249004-fbfa-479b-9527-facb73d88034
+selection_logic: and
+weight: -5
+relationships: {  }
