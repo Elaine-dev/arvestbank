@@ -5,6 +5,7 @@ dependencies:
   config:
     - block.block.alternateexposedfiltersblock
     - block.block.askarvesttopquestionblock
+    - block.block.suggestedquestionsblock
     - field.storage.media.field_title
     - field.storage.node.body
     - search_api.index.database_search_index
@@ -655,7 +656,20 @@ display:
           view_mode: default
           bypass_access: false
           plugin_id: entity
-      footer: {  }
+      footer:
+        entity_block:
+          id: entity_block
+          table: views
+          field: entity_block
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: true
+          target: suggestedquestionsblock
+          view_mode: default
+          bypass_access: false
+          plugin_id: entity
       empty:
         result:
           id: result

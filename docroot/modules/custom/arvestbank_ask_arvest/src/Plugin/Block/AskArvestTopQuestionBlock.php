@@ -77,14 +77,15 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
       ],
     ];
 
-    // Determine if this question is from a suggestion.
+    // If we have a source and it's an allowed value.
     if (
-      isset($_GET['suggestion'])
-      && $_GET['suggestion']
+      isset($_GET['source'])
+      && isset($this->answersClient->allowedSources[$_GET['source']])
     ) {
-      // Indicates suggested question.
-      $source = 2;
+      // Use the source from the GET variable.
+      $source = $_GET['source'];
     }
+    // Default to the "manually entered" source.
     else {
       // Indicates manual question.
       $source = 0;
@@ -96,8 +97,18 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
       $searchTerm = $_GET['search'];
     }
 
-    // Get Answers.
-    $answers = $this->answersClient->askQuery($searchTerm, $source);
+    // If we haven't already made an ask query yet this request.
+    // This is to avoid duplicate calls showing up in [24]7.ai tracking.
+    if (!isset($GLOBALS['ask_query_response'][$searchTerm][$source])) {
+      // Get Answers.
+      $answers = $this->answersClient->askQuery($searchTerm, $source);
+      // Save ask response in globals for use later in the request.
+      $GLOBALS['ask_query_response'][$searchTerm][$source] = $answers;
+    }
+    // If we've already made this ask query this request.
+    else {
+      $answers = $GLOBALS['ask_query_response'][$searchTerm][$source];
+    }
 
     // Add "Top Question" to render array.
     $renderArray['top_question'] = $this->getTopQuestion($answers);

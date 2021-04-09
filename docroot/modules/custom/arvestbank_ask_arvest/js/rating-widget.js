@@ -28,9 +28,9 @@ Drupal.behaviors.arvestbankRatingWidget = {
             requestUrl += '?search=' + params.search;
           }
 
-          // If we have a suggestion pass it to the rating endpoint.
-          if (typeof params.suggestion != 'undefined') {
-            requestUrl += '&suggestion=' + params.suggestion;
+          // If we have a source GET var pass it to the rating endpoint.
+          if (typeof params.source != 'undefined') {
+            requestUrl += '&source=' + params.source;
           }
 
           // Make request to our rating endpoint.
