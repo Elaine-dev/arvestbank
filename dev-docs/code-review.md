@@ -3,12 +3,12 @@
 
 To set up add the git remotes to your local repo (only need to do this once) 
 
-for example: `git remote add allie	git@github.com:AllieRays/arvestbank.git
+for example: `git remote add allie git@github.com:AllieRays/arvestbank.git`
 ```
 allie	git@github.com:AllieRays/arvestbank.git (fetch)
-dorian	git@github.com:dorian-e3/arvestbank.git (fetch)
-john	git@github.com:drfirepants/arvestbank.git (fetch)
-upstream	git@github.com:acquia-pso/arvestbank.git (fetch)
+dorian git@github.com:dorian-e3/arvestbank.git (fetch)
+john git@github.com:drfirepants/arvestbank.git (fetch)
+upstream git@github.com:acquia-pso/arvestbank.git (fetch)
 scott	git@github.com:searnest-e3/arvestbank.git (fetch)
 ```
 
