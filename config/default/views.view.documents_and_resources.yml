@@ -7,6 +7,7 @@ dependencies:
     - media.type.acquia_dam_document
     - system.menu.footer
   module:
+    - cohesion
     - media
     - taxonomy
     - user
@@ -55,15 +56,10 @@ display:
           items_per_page: null
           offset: 0
       style:
-        type: default
+        type: cohesion_layout
         options:
-          grouping:
-            -
-              field: field_document_and_resource_cate
-              rendered: true
-              rendered_strip: false
-          row_class: ''
-          default_row_class: true
+          views_template: view_tpl_generic_view_template
+          master_template: __none__
       row:
         type: fields
       fields:
