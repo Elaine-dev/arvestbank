@@ -12,7 +12,7 @@ upstream git@github.com:acquia-pso/arvestbank.git (fetch)
 scott	git@github.com:searnest-e3/arvestbank.git (fetch)
 ```
 
-`git fetch origin pull/ID/head:BRANCHNAME`
+`git fetch upstream pull/ID/head:BRANCHNAME`
 
 `git checkout [BRANCHNAME]` 
 Depending on changes you can just run 
