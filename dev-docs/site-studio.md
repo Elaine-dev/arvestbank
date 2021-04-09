@@ -20,10 +20,22 @@ If Acquia Site Studio sync is enabled, you can use the following commands.
 
 ### General Rules 
 
+* Never add `px` to sizes. Site Studio will convert the size based on the base unit size.
+
 ### Base Styles 
 
+* Only use base styles for Global selectors and items you do not want a prefix of `.coh-`
+
 ### Custom Styles 
+* All custom styles will get a prefix of `.coh-`. You can then add this markup to templates.
 
 ### Templates 
+* If styles are only ever going to be used on the template, put styles inside the template. 
+
 
 ### Components
+
+
+
+
+
