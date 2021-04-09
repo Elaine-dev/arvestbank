@@ -1,0 +1,21 @@
+uuid: c103cfff-18c6-4d66-962f-f27e90dbdbcb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.calculators
+  module:
+    - metatag
+id: node.calculators.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: calculators
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag
