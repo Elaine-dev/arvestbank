@@ -1,0 +1,21 @@
+uuid: c5ee5515-b707-45f4-b404-f5004d62d10c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_account_disclosure_informa
+    - node.type.page
+  module:
+    - text
+id: node.page.field_account_disclosure_informa
+field_name: field_account_disclosure_informa
+entity_type: node
+bundle: page
+label: 'Account Disclosure Information'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
