@@ -3,8 +3,8 @@ name: 'Arvest Bank'
 mail: no-reply@acquia.com
 slogan: ''
 page:
-  403: ''
-  404: /search404
+  403: /search
+  404: /search
   front: /user/login
 admin_compact_mode: false
 weight_select_max: 100

@@ -7,8 +7,8 @@ dependencies:
 id: media_type_video
 entity_type_id: media_type
 entity_id: video
-action: page_redirect
+action: display_page
 allow_override: 0
-redirect: /<front>
+redirect: ''
 redirect_code: 301
-redirect_fallback_action: access_denied
+redirect_fallback_action: display_page
