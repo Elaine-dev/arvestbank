@@ -7,7 +7,7 @@ dependencies:
 id: media_type_acquia_dam_video
 entity_type_id: media_type
 entity_id: acquia_dam_video
-action: page_redirect
+action: display_page
 allow_override: 0
 redirect: /<front>
 redirect_code: 301

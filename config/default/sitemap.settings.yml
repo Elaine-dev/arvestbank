@@ -1,8 +1,206 @@
 page_title: Sitemap
 message:
-  format: plain_text
   value: ''
-plugins: {  }
+  format: plain_text
+plugins:
+  book:
+    enabled: false
+    weight: 0
+  'vocabulary:associate_category':
+    enabled: false
+    weight: 0
+    settings:
+      title: 'Associate Category'
+      show_description: false
+      show_count: false
+      term_depth: 9
+      term_count_threshold: 0
+      customize_link: false
+      term_link: entity.taxonomy_term.canonical|taxonomy_term
+      always_link: false
+      enable_rss: false
+      rss_link: view.taxonomy_term.feed_1|arg_0
+      rss_depth: 9
+  'vocabulary:education_article_category':
+    enabled: false
+    weight: 0
+    settings:
+      title: 'Education Article Category'
+      show_description: false
+      show_count: false
+      term_depth: 9
+      term_count_threshold: 0
+      customize_link: false
+      term_link: entity.taxonomy_term.canonical|taxonomy_term
+      always_link: false
+      enable_rss: false
+      rss_link: view.taxonomy_term.feed_1|arg_0
+      rss_depth: 9
+  'vocabulary:document_and_resource_category':
+    enabled: false
+    weight: 0
+    settings:
+      title: 'Document and Resource Category'
+      show_description: false
+      show_count: false
+      term_depth: 9
+      term_count_threshold: 0
+      customize_link: false
+      term_link: entity.taxonomy_term.canonical|taxonomy_term
+      always_link: false
+      enable_rss: false
+      rss_link: view.taxonomy_term.feed_1|arg_0
+      rss_depth: 9
+  'vocabulary:designation':
+    enabled: false
+    weight: 0
+    settings:
+      title: Designation
+      show_description: false
+      show_count: false
+      term_depth: 9
+      term_count_threshold: 0
+      customize_link: false
+      term_link: entity.taxonomy_term.canonical|taxonomy_term
+      always_link: false
+      enable_rss: false
+      rss_link: view.taxonomy_term.feed_1|arg_0
+      rss_depth: 9
+  'vocabulary:debit_card_keywords':
+    enabled: false
+    weight: 0
+    settings:
+      title: 'Debit Card Keywords'
+      show_description: false
+      show_count: false
+      term_depth: 9
+      term_count_threshold: 0
+      customize_link: false
+      term_link: entity.taxonomy_term.canonical|taxonomy_term
+      always_link: false
+      enable_rss: false
+      rss_link: view.taxonomy_term.feed_1|arg_0
+      rss_depth: 9
+  'vocabulary:debit_card_category':
+    enabled: false
+    weight: 0
+    settings:
+      title: 'Debit Card Category'
+      show_description: false
+      show_count: false
+      term_depth: 9
+      term_count_threshold: 0
+      customize_link: false
+      term_link: entity.taxonomy_term.canonical|taxonomy_term
+      always_link: false
+      enable_rss: false
+      rss_link: view.taxonomy_term.feed_1|arg_0
+      rss_depth: 9
+  'vocabulary:card_category_keywords':
+    enabled: false
+    weight: 0
+    settings:
+      title: 'Card Category Keywords'
+      show_description: false
+      show_count: false
+      term_depth: 9
+      term_count_threshold: 0
+      customize_link: false
+      term_link: entity.taxonomy_term.canonical|taxonomy_term
+      always_link: false
+      enable_rss: false
+      rss_link: view.taxonomy_term.feed_1|arg_0
+      rss_depth: 9
+  'vocabulary:branch_location':
+    enabled: false
+    weight: 0
+    settings:
+      title: 'Branch Location'
+      show_description: false
+      show_count: false
+      term_depth: 9
+      term_count_threshold: 0
+      customize_link: false
+      term_link: entity.taxonomy_term.canonical|taxonomy_term
+      always_link: false
+      enable_rss: false
+      rss_link: view.taxonomy_term.feed_1|arg_0
+      rss_depth: 9
+  'menu:top-menu':
+    enabled: false
+    weight: 0
+    settings:
+      title: 'Top Menu'
+      show_disabled: false
+  frontpage:
+    enabled: false
+    weight: 0
+    settings:
+      title: 'Front page'
+      rss: /rss.xml
+  'menu:tools':
+    enabled: false
+    weight: 0
+    settings:
+      title: Tools
+      show_disabled: false
+  'menu:social-media-menu':
+    enabled: false
+    weight: 0
+    settings:
+      title: 'Social Media Menu'
+      show_disabled: false
+  'menu:sidebar':
+    enabled: true
+    weight: 0
+    settings:
+      title: Sidebar
+      show_disabled: false
+  'menu:main':
+    enabled: true
+    weight: 0
+    settings:
+      title: 'Main navigation'
+      show_disabled: false
+  'menu:log-in-menu':
+    enabled: true
+    weight: 0
+    settings:
+      title: 'Log in Menu'
+      show_disabled: false
+  'menu:footer':
+    enabled: true
+    weight: 0
+    settings:
+      title: 'Footer Menu'
+      show_disabled: false
+  'menu:admin':
+    enabled: false
+    weight: 0
+    settings:
+      title: Administration
+      show_disabled: false
+  'menu:account':
+    enabled: false
+    weight: 0
+    settings:
+      title: 'User account menu'
+      show_disabled: false
+  'vocabulary:school_zip_code':
+    enabled: false
+    weight: 0
+    settings:
+      title: 'School Zip Code'
+      show_description: false
+      show_count: false
+      term_depth: 9
+      term_count_threshold: 0
+      customize_link: false
+      term_link: entity.taxonomy_term.canonical|taxonomy_term
+      always_link: false
+      enable_rss: false
+      rss_link: view.taxonomy_term.feed_1|arg_0
+      rss_depth: 9
 include_css: true
 _core:
   default_config_hash: xu0yG13sSQJcXrOJJqsn44W_hUWAIFHVlphrzxT2ycU
