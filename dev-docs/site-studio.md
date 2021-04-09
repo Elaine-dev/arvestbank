@@ -14,3 +14,16 @@ If Acquia Site Studio sync is enabled, you can use the following commands.
 - `drush sync:export --filename-prefix=myfilenamehere` - Exports all configuration to the sync folder as a .yml_ file with a custom filename rather than using the website name.
 - `drush sync:import --overwrite-all` - Imports all configuration from the sync folder and overwrite existing Site Studio configuration.
 - `drush sync:import --keep-all` - Imports all Site Studio configuration from the sync folder and keeps existing Site Studio configuration and only imports new configuration.
+
+
+## Coding Standards 
+
+### General Rules 
+
+### Base Styles 
+
+### Custom Styles 
+
+### Templates 
+
+### Components
