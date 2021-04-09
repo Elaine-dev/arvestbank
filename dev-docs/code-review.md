@@ -14,6 +14,17 @@ scott	git@github.com:searnest-e3/arvestbank.git (fetch)
 
 `git fetch origin pull/ID/head:BRANCHNAME`
 
+`git checkout [BRANCHNAME]` 
+Depending on changes you can just run 
+* `drush cim`
+* `drush sync:import --overwrite-all`
+* `drush cohesion:rebuild`
+
+If there are lots of changes you can run `blt sync` which will
+* drop your database
+* pull database from prod
+* import config
+* import Site Studio config
 
 
 
