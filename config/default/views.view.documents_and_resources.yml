@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.media.field_document_and_resource_cate
-    - field.storage.media.field_title
     - media.type.acquia_dam_document
     - system.menu.footer
   module:
@@ -131,10 +130,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_title:
-          id: field_title
-          table: media__field_title
-          field: field_title
+        name:
+          id: name
+          table: media_field_data
+          field: name
           relationship: none
           group_type: group
           admin_label: ''
@@ -193,6 +192,8 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: media
+          entity_field: name
           plugin_id: field
       filters:
         status:
@@ -282,7 +283,6 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.media.field_document_and_resource_cate'
-        - 'config:field.storage.media.field_title'
   documents_and_resources:
     display_plugin: page
     id: documents_and_resources
@@ -304,4 +304,3 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.media.field_document_and_resource_cate'
-        - 'config:field.storage.media.field_title'

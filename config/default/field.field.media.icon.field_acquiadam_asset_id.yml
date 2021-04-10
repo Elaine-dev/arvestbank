@@ -9,7 +9,7 @@ id: media.icon.field_acquiadam_asset_id
 field_name: field_acquiadam_asset_id
 entity_type: media
 bundle: icon
-label: 'Acquia ID'
+label: 'Asset ID'
 description: ''
 required: true
 translatable: true

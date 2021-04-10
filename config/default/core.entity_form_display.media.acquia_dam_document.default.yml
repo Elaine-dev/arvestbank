@@ -66,5 +66,6 @@ hidden:
   created: true
   field_acquiadam_asset_descrip: true
   field_acquiadam_asset_doc: true
+  field_title: true
   status: true
   uid: true
