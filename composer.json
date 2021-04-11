@@ -71,6 +71,7 @@
         "drupal/yoast_seo": "^1.7",
         "drupal/youtube": "^1.2",
         "drush/drush": "^10.4",
+        "econea/nusoap": "^0.9.11",
         "oomphinc/composer-installers-extender": "^2.0",
         "smalot/pdfparser": "^0.18.2"
     },

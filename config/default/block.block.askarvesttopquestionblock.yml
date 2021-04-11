@@ -1,0 +1,25 @@
+uuid: 511c1ac1-0ae9-4125-978c-bac96e898c5f
+langcode: en
+status: true
+dependencies:
+  module:
+    - arvestbank_ask_arvest
+    - cohesion
+  theme:
+    - arvestbank_theme
+id: askarvesttopquestionblock
+theme: arvestbank_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: ask_arvest_top_question_block
+settings:
+  id: ask_arvest_top_question_block
+  label: 'Ask Arvest Top Question Block'
+  provider: arvestbank_ask_arvest
+  label_display: visible
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false
