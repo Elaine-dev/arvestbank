@@ -8,8 +8,8 @@ dependencies:
 third_party_settings:
   menu_ui:
     available_menus:
-      - main
-    parent: 'main:'
+      - sidebar
+    parent: 'sidebar:menu_link_content:05eb051b-3c2a-4f09-bc51-46f736ece5f2'
   scheduler:
     expand_fieldset: when_required
     fields_display_mode: vertical_tab

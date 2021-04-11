@@ -14,24 +14,13 @@ targetEntityType: media
 bundle: icon
 mode: default
 content:
-  field_acquiadam_asset_id:
-    label: visually_hidden
+  content_moderation_control:
     weight: 0
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
     region: content
-  field_description:
-    weight: 1
-    label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
-    region: content
   field_image:
-    weight: 2
+    weight: 1
     label: above
     settings:
       image_style: ''
@@ -41,6 +30,8 @@ content:
     region: content
 hidden:
   created: true
+  field_acquiadam_asset_id: true
+  field_description: true
   name: true
   search_api_excerpt: true
   thumbnail: true

@@ -11,7 +11,7 @@ dev:
   ac-site: arvestbank
   ac-env: dev
   ac-realm: prod
-  uri: arvestbankdev.prod.acquia-sites.com
+  uri: https://arvestbankdev.prod.acquia-sites.com
   dev.livedev:
     parent: '@arvestbank.dev'
     root: /mnt/gfs/arvestbank.dev/livedev/docroot
@@ -27,7 +27,7 @@ prod:
   ac-site: arvestbank
   ac-env: prod
   ac-realm: prod
-  uri: arvestbank.prod.acquia-sites.com
+  uri: https://arvestbank.prod.acquia-sites.com
   prod.livedev:
     parent: '@arvestbank.prod'
     root: /mnt/gfs/arvestbank.prod/livedev/docroot
@@ -42,7 +42,7 @@ test:
   ac-site: arvestbank
   ac-env: test
   ac-realm: prod
-  uri: arvestbanktest.prod.acquia-sites.com
+  uri: https://arvestbanktest.prod.acquia-sites.com
   test.livedev:
     parent: '@arvestbank.test'
     root: /mnt/gfs/arvestbank.test/livedev/docroot

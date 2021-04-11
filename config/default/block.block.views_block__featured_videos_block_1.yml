@@ -1,0 +1,30 @@
+uuid: eb05953e-4f34-429c-808f-f81c6773dae6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.featured_videos
+  module:
+    - cohesion
+    - views
+  theme:
+    - arvestbank_theme
+id: views_block__featured_videos_block_1
+theme: arvestbank_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: 'views_block:featured_videos-block_1'
+settings:
+  id: 'views_block:featured_videos-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

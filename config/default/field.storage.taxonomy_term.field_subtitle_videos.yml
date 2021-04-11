@@ -1,0 +1,21 @@
+uuid: 29c3a6f9-2659-4e00-911e-f4bd1fb52f17
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_subtitle_videos
+field_name: field_subtitle_videos
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

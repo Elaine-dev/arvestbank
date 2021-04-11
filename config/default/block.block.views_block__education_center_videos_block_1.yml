@@ -1,0 +1,30 @@
+uuid: 27a98b7c-9727-4249-a560-f3f6880fcf59
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.education_center_videos
+  module:
+    - cohesion
+    - views
+  theme:
+    - arvestbank_theme
+id: views_block__education_center_videos_block_1
+theme: arvestbank_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: 'views_block:education_center_videos-block_1'
+settings:
+  id: 'views_block:education_center_videos-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

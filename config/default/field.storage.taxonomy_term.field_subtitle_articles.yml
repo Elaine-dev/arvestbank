@@ -1,0 +1,21 @@
+uuid: 9e4a8012-fc87-4c15-a76a-57e7494f9523
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_subtitle_articles
+field_name: field_subtitle_articles
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

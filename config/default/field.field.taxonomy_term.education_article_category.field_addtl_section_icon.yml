@@ -1,0 +1,29 @@
+uuid: 4d3b1704-f46a-4345-8086-345fb81b5cdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_addtl_section_icon
+    - media.type.icon
+    - taxonomy.vocabulary.education_article_category
+id: taxonomy_term.education_article_category.field_addtl_section_icon
+field_name: field_addtl_section_icon
+entity_type: taxonomy_term
+bundle: education_article_category
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      icon: icon
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
