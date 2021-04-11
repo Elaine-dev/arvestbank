@@ -368,7 +368,7 @@ display:
           empty: true
           tokenize: false
           content:
-            value: "<h1>Information To Help You Make Financial Decisions</h1>\r\n<p>Whether you find yourself dealing with day-to-day finances, making important buying decisions or planning for the long term, Arvest Bank wants to help answer your life's financial questions. The Arvest Bank Education Center provides educational information right at your fingertips.</p>\r\n<p>Choose a topic below.</p>\r\n"
+            value: "<h1>WELCOME TO THE ARVEST EDUCATION CENTER</h1>\r\n<div class=\"education-center-indent\">\r\n<h2>Information To Help You Make Financial Decisions</h2>\r\n<p>Whether you find yourself dealing with day-to-day finances, making important buying decisions or planning for the long term, Arvest Bank wants to help answer your life's financial questions. The Arvest Bank Education Center provides educational information right at your fingertips.</p>\r\n<p>Choose a topic below.</p>\r\n</div>"
             format: full_html
           plugin_id: text
       footer: {  }
