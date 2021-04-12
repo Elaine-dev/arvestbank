@@ -1,0 +1,25 @@
+uuid: 66728f3a-1554-415f-899a-22425b7f6eba
+langcode: en
+status: true
+dependencies:
+  module:
+    - arvestbank_branch_locations
+    - cohesion
+  theme:
+    - arvestbank_theme
+id: branchlocatorform
+theme: arvestbank_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: branch_locator
+settings:
+  id: branch_locator
+  label: 'Branch Locator Form'
+  provider: arvestbank_branch_locations
+  label_display: visible
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false
