@@ -18,7 +18,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <blockquote> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2> <h3> <h4> <h5> <h6> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid data-align data-caption> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p> <br> <h1> <pre> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button title alt> <sup> <sub>'
+      allowed_html: '<a href hreflang> <em> <strong> <blockquote> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2> <h3> <h4> <h5> <h6> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid data-align data-caption> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p> <br> <h1> <pre> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button title alt> <sup> <sub> <div><div class>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_align:
@@ -40,10 +40,9 @@ filters:
     weight: 100
     settings:
       default_view_mode: media_library
+      allowed_media_types: {  }
       allowed_view_modes:
         default: default
-      allowed_media_types:
-        image: image
   editor_file_reference:
     id: editor_file_reference
     provider: editor
