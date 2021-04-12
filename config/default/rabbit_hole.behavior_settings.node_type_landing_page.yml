@@ -1,0 +1,14 @@
+uuid: fa616a45-8dfd-4a59-be0a-255860284e43
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landing_page
+id: node_type_landing_page
+entity_type_id: node_type
+entity_id: landing_page
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied
