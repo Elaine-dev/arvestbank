@@ -3,7 +3,7 @@
 Documentation specifically to site studio for the Arvest build. 
 
 ## Development Changes
-1. Use BLT to get the latest Site Studio package. BLT automatically imports and rebuilds the latest Site Studio assets through the [BLT Site Studio plugin] (https://github.com/davidtrainer/blt-site-studio).
+1. Use BLT to get the latest Site Studio package. BLT automatically imports and rebuilds the latest Site Studio assets through the [BLT Site Studio plugin](https://github.com/davidtrainer/blt-site-studio).
   ```
   $ blt setup 
   or 
