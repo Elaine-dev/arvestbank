@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.dam_image_entity_browser
     - field.field.taxonomy_term.education_article_category.field_addtl_section_icon
     - field.field.taxonomy_term.education_article_category.field_addtl_section_links
     - field.field.taxonomy_term.education_article_category.field_addtl_section_subtitle
@@ -16,6 +17,7 @@ dependencies:
     - field.field.taxonomy_term.education_article_category.field_teaser
     - taxonomy.vocabulary.education_article_category
   module:
+    - entity_browser
     - field_group
     - inline_entity_form
     - link
@@ -116,27 +118,34 @@ content:
     type: text_textarea
     region: content
   field_featured_image:
-    type: inline_entity_form_complex
+    type: entity_browser_entity_reference
     weight: 3
     settings:
+      entity_browser: dam_image_entity_browser
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_featured_videos:
+    type: inline_entity_form_complex
+    weight: 9
+    settings:
       form_mode: default
-      revision: true
       label_singular: ''
       label_plural: ''
       allow_new: true
       allow_existing: true
       match_operator: CONTAINS
+      revision: false
       override_labels: false
       collapsible: false
       collapsed: false
       allow_duplicate: false
-    third_party_settings: {  }
-    region: content
-  field_featured_videos:
-    type: media_library_widget
-    weight: 9
-    settings:
-      media_types: {  }
     third_party_settings: {  }
     region: content
   field_subtitle_articles:

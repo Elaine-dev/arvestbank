@@ -13,7 +13,6 @@ dependencies:
     - workflows.workflow.editorial
   module:
     - content_moderation
-    - path
     - text
 _core:
   default_config_hash: PLmWkKplrfHYG0SeraE02PbJh37FMMRau7mNY24dRYg
@@ -53,9 +52,9 @@ content:
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 6
-    settings: {  }
+    weight: 5
     region: content
+    settings: {  }
     third_party_settings: {  }
   name:
     type: string_textfield
@@ -65,15 +64,10 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  path:
-    type: path
-    weight: 5
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   created: true
   field_acquiadam_asset_descrip: true
   field_acquiadam_asset_video: true
+  path: true
   status: true
   uid: true

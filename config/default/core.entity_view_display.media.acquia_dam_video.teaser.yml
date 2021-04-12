@@ -36,27 +36,34 @@ content:
     type: file_video
     region: content
   field_video_subtitle:
-    weight: 2
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_video_time_length:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
+  name:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden:
   content_moderation_control: true
   created: true
   field_acquiadam_asset_descrip: true
   field_acquiadam_asset_id: true
   field_education_article_category: true
-  name: true
   search_api_excerpt: true
   thumbnail: true
   uid: true
