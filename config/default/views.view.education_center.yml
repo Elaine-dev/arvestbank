@@ -262,7 +262,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<h2>{{ name }}</h2>\r\n<div>{{ field_teaser }}</div>\r\n<div class=\"view-all\">{{ view_taxonomy_term }}</div>"
+            text: "<h2>{{ name }}</h2>\r\n<div>{{ field_teaser }}</div>\r\n<div class=\"coh-style-red-triangle\">{{ view_taxonomy_term }}</div>"
             make_link: false
             path: ''
             absolute: false
