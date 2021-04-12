@@ -1,0 +1,21 @@
+uuid: 300de096-6d4c-404c-aad9-dff5b812e7fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_video_subtitle
+    - media.type.acquia_dam_video
+  module:
+    - text
+id: media.acquia_dam_video.field_video_subtitle
+field_name: field_video_subtitle
+entity_type: media
+bundle: acquia_dam_video
+label: 'Video Subtitle'
+description: 'For example: Learn more about loans used to buy a home.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

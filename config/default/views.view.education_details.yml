@@ -785,9 +785,9 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.taxonomy_term.field_subtitle_calculators'
-  block_1:
+  calculators:
     display_plugin: block
-    id: block_1
+    id: calculators
     display_title: 'Calculators Block'
     position: 3
     display_options:

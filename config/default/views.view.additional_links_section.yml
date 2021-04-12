@@ -438,7 +438,7 @@ display:
           entity_field: tid
           plugin_id: taxonomy
       display_extenders: {  }
-      css_class: MYBLOCK
+      css_class: education-center-additional-links
     cache_metadata:
       max-age: -1
       contexts:

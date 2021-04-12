@@ -7,11 +7,14 @@ dependencies:
     - field.field.media.acquia_dam_video.field_acquiadam_asset_id
     - field.field.media.acquia_dam_video.field_acquiadam_asset_video
     - field.field.media.acquia_dam_video.field_education_article_category
+    - field.field.media.acquia_dam_video.field_video_subtitle
+    - field.field.media.acquia_dam_video.field_video_time_length
     - media.type.acquia_dam_video
     - workflows.workflow.editorial
   module:
     - content_moderation
     - path
+    - text
 _core:
   default_config_hash: PLmWkKplrfHYG0SeraE02PbJh37FMMRau7mNY24dRYg
 id: media.acquia_dam_video.default
@@ -32,9 +35,25 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_video_subtitle:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_video_time_length:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   moderation_state:
     type: moderation_state_default
-    weight: 4
+    weight: 6
     settings: {  }
     region: content
     third_party_settings: {  }
@@ -48,7 +67,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 3
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }

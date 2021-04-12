@@ -1,8 +1,9 @@
-uuid: 8a57ae21-a7d2-42eb-8461-5e04e24abf76
+uuid: 149abc83-3149-46a2-b469-6469a6319526
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.teaser
     - field.field.media.acquia_dam_video.field_acquiadam_asset_descrip
     - field.field.media.acquia_dam_video.field_acquiadam_asset_id
     - field.field.media.acquia_dam_video.field_acquiadam_asset_video
@@ -15,24 +16,19 @@ dependencies:
     - text
 _core:
   default_config_hash: 0SfbdPcaaPkcBZkTnnvMgzRcl6mZOmeE9JfH8jBf4a0
-id: media.acquia_dam_video.default
+id: media.acquia_dam_video.teaser
 targetEntityType: media
 bundle: acquia_dam_video
-mode: default
+mode: teaser
 content:
-  content_moderation_control:
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_acquiadam_asset_video:
-    weight: 1
+    weight: 0
     label: visually_hidden
     settings:
       controls: true
       multiple_file_display_type: tags
-      width: 640
-      height: 480
+      width: 236
+      height: 117
       autoplay: false
       loop: false
       muted: false
@@ -40,21 +36,22 @@ content:
     type: file_video
     region: content
   field_video_subtitle:
-    weight: 3
-    label: above
+    weight: 2
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_video_time_length:
-    weight: 2
-    label: above
+    weight: 1
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
 hidden:
+  content_moderation_control: true
   created: true
   field_acquiadam_asset_descrip: true
   field_acquiadam_asset_id: true
