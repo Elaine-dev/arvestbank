@@ -1,0 +1,267 @@
+uuid: 6985739b-13ce-498f-8643-c7ec75ef33c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.associate.title
+    - field.field.node.associate.body
+    - field.field.node.associate.field_appointment
+    - field.field.node.associate.field_associate_id
+    - field.field.node.associate.field_associate_type
+    - field.field.node.associate.field_branch_nickname
+    - field.field.node.associate.field_designation
+    - field.field.node.associate.field_email
+    - field.field.node.associate.field_fax_number
+    - field.field.node.associate.field_image
+    - field.field.node.associate.field_insurance_license_number
+    - field.field.node.associate.field_job_title
+    - field.field.node.associate.field_location
+    - field.field.node.associate.field_mobile_number
+    - field.field.node.associate.field_nmls_number
+    - field.field.node.associate.field_office_number
+    - field.field.node.associate.field_private_banker_location
+    - node.type.associate
+  module:
+    - feeds_tamper
+    - node
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      bb0e1df6-690a-43e5-bb3f-d3fdf0950c34:
+        separator: ','
+        limit: null
+        plugin: explode
+        source: certs
+        weight: 0
+        label: Explode
+        uuid: bb0e1df6-690a-43e5-bb3f-d3fdf0950c34
+id: associates
+label: Associates
+description: ''
+help: ''
+import_period: -1
+fetcher: directory
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  allowed_schemes:
+    public: public
+  recursive_scan: false
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  langcode: en
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: associate
+custom_sources:
+  name:
+    label: name
+    value: name
+    machine_name: name
+  title:
+    label: title
+    value: title
+    machine_name: title
+  title2:
+    label: title2
+    value: title2
+    machine_name: title2
+  nmls_id:
+    label: 'nmls id'
+    value: 'nmls id'
+    machine_name: nmls_id
+  insurance_license_number:
+    label: insurance_license_number
+    value: insurance_license_number
+    machine_name: insurance_license_number
+  phone:
+    label: phone
+    value: phone
+    machine_name: phone
+  email:
+    label: email
+    value: email
+    machine_name: email
+  bio:
+    label: bio
+    value: bio
+    machine_name: bio
+  location:
+    label: Location
+    value: Location
+    machine_name: location
+  associate_type:
+    label: associate_type
+    value: associate_type
+    machine_name: associate_type
+  image:
+    label: image
+    value: image
+    machine_name: image
+  branch:
+    label: branch
+    value: branch
+    machine_name: branch
+  fax:
+    label: fax
+    value: fax
+    machine_name: fax
+  mobile:
+    label: mobile
+    value: mobile
+    machine_name: mobile
+  pb_location:
+    label: pb_location
+    value: pb_location
+    machine_name: pb_location
+  appointment:
+    label: appointment
+    value: appointment
+    machine_name: appointment
+  id:
+    label: id
+    value: id
+    machine_name: id
+  certs:
+    label: certs
+    value: certs
+    machine_name: certs
+mappings:
+  -
+    target: title
+    map:
+      value: name
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_job_title
+    map:
+      value: title
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_job_title
+    map:
+      value: title2
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_nmls_number
+    map:
+      value: nmls_id
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_insurance_license_number
+    map:
+      value: insurance_license_number
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_office_number
+    map:
+      value: phone
+    settings:
+      language: null
+  -
+    target: field_email
+    map:
+      value: email
+    unique: {  }
+    settings:
+      language: null
+      defuse: false
+  -
+    target: body
+    map:
+      value: bio
+      summary: ''
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_location
+    map:
+      value: location
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_associate_type
+    map:
+      target_id: associate_type
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+  -
+    target: field_image
+    map:
+      target_id: image
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+  -
+    target: field_branch_nickname
+    map:
+      value: branch
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_fax_number
+    map:
+      value: fax
+    settings:
+      language: null
+  -
+    target: field_mobile_number
+    map:
+      value: mobile
+    settings:
+      language: null
+  -
+    target: field_private_banker_location
+    map:
+      value: pb_location
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_appointment
+    map:
+      value: appointment
+    settings:
+      language: null
+  -
+    target: field_associate_id
+    map:
+      value: id
+    unique:
+      value: '1'
+    settings:
+      language: null
+  -
+    target: field_designation
+    map:
+      target_id: certs
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: '1'

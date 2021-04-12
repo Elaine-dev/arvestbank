@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.associate.body
+    - field.field.node.associate.feeds_item
     - field.field.node.associate.field_associate_type
     - field.field.node.associate.field_branch_nickname
     - field.field.node.associate.field_coconut_appointment
@@ -314,4 +315,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  feeds_item: true
