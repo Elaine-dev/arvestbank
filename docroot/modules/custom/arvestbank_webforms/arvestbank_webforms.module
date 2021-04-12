@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_help().
@@ -25,21 +26,58 @@ function arvestbank_webforms_help($route_name, RouteMatchInterface $route_match)
 
 /**
  * Implements hook_form_alter().
- *
- * @param $form
- * @param \Drupal\Core\Form\FormStateInterface $form_state
- * @param $form_id
  */
-function arvestbank_webforms_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+function arvestbank_webforms_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 
   switch ($form_id) {
 
+    // Credit Card Dispute Form.
     case "webform_submission_credit_card_dispute_add_form":
+      // Attach library.
       $form['#attached']['library'][] = 'arvestbank_webforms/credit_card_dispute';
+      break;
+
+    // Authorized Agent Designation Form.
+    case "webform_submission_authorized_agent_designation_for_add_form":
+      // Hide back button on second page.
+      if (isset($form['actions']['wizard_prev'])) {
+        $form['actions']['wizard_prev']['#access'] = FALSE;
+      }
+      // Add validation function.
+      $form['#validate'][] = '_arvestbank_webforms_authorized_agent_validate';
       break;
 
   }
 
   return $form;
+
+}
+
+/**
+ * Validate function for the Authorized Agent Designation Form.
+ *
+ * @param array $form
+ *   The form array passed by reference.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   The form state object.
+ */
+function _arvestbank_webforms_authorized_agent_validate(array &$form, FormStateInterface $form_state) {
+
+  // If the form has a zip code entered.
+  if (
+    is_array($form_state->getValue('address'))
+    && isset($form_state->getValue('address')['postal_code'])
+  ) {
+
+    // Get zip code value.
+    $zipCode = $form_state->getValue('address')['postal_code'];
+
+    // If the zip code is not 5 characters long.
+    if (count(str_split($zipCode)) != 5) {
+      // Set an error on the zip code field.
+      $form_state->setErrorByName('consumer_zip', t('Please enter a valid zip code.'));
+    }
+
+  }
 
 }
