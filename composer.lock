@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0f19bfd15e5b15df04aa30d61ca7de6c",
+    "content-hash": "17db228fbcd177308b257f5f0657aff5",
     "packages": [
         {
             "name": "acquia/blt",
@@ -6586,6 +6586,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "fix roles": "https://www.drupal.org/files/issues/2020-07-13/simplesamlphp_auth-role_assignment-2894945-11.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
