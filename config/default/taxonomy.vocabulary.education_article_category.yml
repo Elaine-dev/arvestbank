@@ -1,7 +1,14 @@
 uuid: af0f7e2e-cd38-49ab-afab-30450db61577
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - education-center-menu
+    parent: 'education-center-menu:'
 name: 'Education Article Category'
 vid: education_article_category
 description: 'Taxonomy category to classify nodes of the associate content type.'

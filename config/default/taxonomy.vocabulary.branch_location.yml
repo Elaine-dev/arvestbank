@@ -1,7 +1,13 @@
 uuid: 08810f4b-1192-4378-8fa7-ad0f46602ff8
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
 _core:
   default_config_hash: N5mxK8gHLO4LdWj6TLTpwqGUbZnwwhK5gBsJXA3jYqo
 name: 'Branch Location'

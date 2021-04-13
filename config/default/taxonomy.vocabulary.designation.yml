@@ -1,7 +1,13 @@
 uuid: 26cc82f6-ed56-4803-a0a5-42a89d326ff9
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
 name: Designation
 vid: designation
 description: 'Taxonomy category to classify locations or associates by region'

@@ -1,7 +1,13 @@
 uuid: e220361e-92f8-4867-b741-fe02a9bb6fac
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
 name: 'Debit Card Category'
 vid: debit_card_category
 description: 'Taxonomy category to classify cards of the debit card media entity.'
