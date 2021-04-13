@@ -9,7 +9,7 @@ dependencies:
     - menu_block
   theme:
     - arvestbank_theme
-id: sidebar_menu_top_block
+id: sidebar_menu_top_menu
 theme: arvestbank_theme
 region: dx8_hidden
 weight: 3
