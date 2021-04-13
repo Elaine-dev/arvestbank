@@ -11,7 +11,7 @@ field_name: field_education_article_category
 entity_type: media
 bundle: video
 label: 'Education Article Category'
-description: ''
+description: 'This field is for education details only and not for featured videos. '
 required: false
 translatable: true
 default_value: {  }

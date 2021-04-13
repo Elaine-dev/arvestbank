@@ -1,0 +1,21 @@
+uuid: 5be02988-492b-49f9-8db4-b4a7c4ec387d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_video_time_length
+    - media.type.video
+id: media.video.field_video_time_length
+field_name: field_video_time_length
+entity_type: media
+bundle: video
+label: 'Video Time length'
+description: 'The video time length for example 18:26'
+required: false
+translatable: false
+default_value:
+  -
+    value: '18:26'
+default_value_callback: ''
+settings: {  }
+field_type: string

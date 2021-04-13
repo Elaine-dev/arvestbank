@@ -1,8 +1,9 @@
-uuid: d264e649-5a50-4256-8579-89ac8e22831a
+uuid: 149abc83-3149-46a2-b469-6469a6319526
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.teaser
     - field.field.media.acquia_dam_video.field_acquiadam_asset_descrip
     - field.field.media.acquia_dam_video.field_acquiadam_asset_id
     - field.field.media.acquia_dam_video.field_acquiadam_asset_video
@@ -10,64 +11,59 @@ dependencies:
     - field.field.media.acquia_dam_video.field_video_subtitle
     - field.field.media.acquia_dam_video.field_video_time_length
     - media.type.acquia_dam_video
-    - workflows.workflow.editorial
   module:
-    - content_moderation
+    - file
     - text
 _core:
-  default_config_hash: PLmWkKplrfHYG0SeraE02PbJh37FMMRau7mNY24dRYg
-id: media.acquia_dam_video.default
+  default_config_hash: 0SfbdPcaaPkcBZkTnnvMgzRcl6mZOmeE9JfH8jBf4a0
+id: media.acquia_dam_video.teaser
 targetEntityType: media
 bundle: acquia_dam_video
-mode: default
+mode: teaser
 content:
-  field_acquiadam_asset_id:
-    weight: 1
+  field_acquiadam_asset_video:
+    weight: 0
+    label: visually_hidden
     settings:
-      placeholder: ''
+      controls: true
+      multiple_file_display_type: tags
+      width: 236
+      height: 117
+      autoplay: false
+      loop: false
+      muted: false
     third_party_settings: {  }
-    type: number
-    region: content
-  field_education_article_category:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
+    type: file_video
     region: content
   field_video_subtitle:
-    weight: 4
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textfield
-    region: content
-  field_video_time_length:
     weight: 3
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  moderation_state:
-    type: moderation_state_default
-    weight: 5
-    region: content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-  name:
-    type: string_textfield
-    weight: 0
+    type: text_default
     region: content
+  field_video_time_length:
+    weight: 2
+    label: hidden
     settings:
-      size: 60
-      placeholder: ''
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
 hidden:
+  content_moderation_control: true
   created: true
   field_acquiadam_asset_descrip: true
-  field_acquiadam_asset_video: true
-  path: true
-  status: true
+  field_acquiadam_asset_id: true
+  field_education_article_category: true
+  search_api_excerpt: true
+  thumbnail: true
   uid: true
