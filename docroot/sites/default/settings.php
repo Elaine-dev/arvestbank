@@ -790,6 +790,43 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 
 $settings['site_studio_sync'] = '../config/site_studio_sync';
 
+if (isset($_ENV['AH_SITE_ENVIRONMENT'])) {
+  switch ($_ENV['AH_SITE_ENVIRONMENT']) {
+    case 'prod':
+      // Acquia Lift Unique Values - Create in Lift Profile Manager Admin > Manage Configuration Data > Customer Sites
+      $config['acquia_lift.settings']['credential']['site_id'] = 'arvestprod';
+      // Uncomment this if you only want Content Hub content from this environment to show in Experience Builder
+      //$config['acquia_lift.settings']['credential']['content_origin'] = 'will be generated on /admin/config/services/acquia-contenthub';
+
+ 			// Acquia Content Hub Settings for prod - Create client_name in Content Hub module
+ 			//$config['acquia_contenthub.admin_settings']['client_name'] = 'create at /admin/config/services/acquia-contenthub';
+ 			//$config['acquia_contenthub.admin_settings']['origin'] = 'will be generated on /admin/config/services/acquia-contenthub';
+ 			break;
+
+		case 'test':
+      // Acquia Lift Unique Values - Create in Lift Profile Manager Admin > Manage Configuration Data > Customer Sites
+      $config['acquia_lift.settings']['credential']['site_id'] = 'arvesttest';
+      // Uncomment this if you only want Content Hub content from this environment to show in Experience Builder
+      //$config['acquia_lift.settings']['credential']['content_origin'] = 'will be generated on /admin/config/services/acquia-contenthub';
+
+ 			// Acquia Content Hub Settings for test - Create client_name in Content Hub module
+ 			//$config['acquia_contenthub.admin_settings']['client_name'] = 'create at /admin/config/services/acquia-contenthub';
+ 			//$config['acquia_contenthub.admin_settings']['origin'] = 'will be generated on /admin/config/services/acquia-contenthub';
+ 			break;
+
+		case 'dev':
+      // Acquia Lift Unique Values - Create in Lift Profile Manager Admin > Manage Configuration Data > Customer Sites
+      $config['acquia_lift.settings']['credential']['site_id'] = 'arvestdev';
+      // Uncomment this if you only want Content Hub content from this environment to show in Experience Builder
+      //$config['acquia_lift.settings']['credential']['content_origin'] = 'will be generated on /admin/config/services/acquia-contenthub';
+
+ 			// Acquia Content Hub Settings for dev - Create client_name in Content Hub module
+ 			//$config['acquia_contenthub.admin_settings']['client_name'] = 'create at /admin/config/services/acquia-contenthub';
+ 			//$config['acquia_contenthub.admin_settings']['origin'] = 'will be generated on /admin/config/services/acquia-contenthub';
+ 			break;
+  }
+}
+
 
 require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
 /**
