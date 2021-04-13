@@ -1,4 +1,4 @@
-uuid: 710e7ef1-d07a-4420-bee6-07c6ab4629d1
+uuid: fbc84aff-4652-42c8-b957-4ed4a28348f8
 langcode: en
 status: true
 dependencies:
@@ -9,14 +9,14 @@ dependencies:
     - views
   theme:
     - arvestbank_theme
-id: views_block__education_details_block_1
+id: views_block__education_details_calculators
 theme: arvestbank_theme
 region: dx8_hidden
 weight: 0
 provider: null
-plugin: 'views_block:education_details-block_1'
+plugin: 'views_block:education_details-calculators'
 settings:
-  id: 'views_block:education_details-block_1'
+  id: 'views_block:education_details-calculators'
   label: ''
   provider: views
   label_display: visible

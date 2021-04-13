@@ -227,6 +227,7 @@ display:
           plugin_id: taxonomy_index_tid
       display_extenders: {  }
       title: Articles
+      css_class: ''
     cache_metadata:
       max-age: -1
       contexts:
@@ -299,6 +300,7 @@ display:
         header: false
         title: false
         empty: false
+        css_class: false
       relationships:
         term_node_tid:
           id: term_node_tid
@@ -354,7 +356,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: ''
-          element_class: ''
+          element_class: coh-style-red-triangle
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -486,6 +488,8 @@ display:
       header: {  }
       title: Articles
       empty: {  }
+      css_class: education-details
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -508,6 +512,7 @@ display:
         title: false
         arguments: false
         fields: false
+        css_class: false
       arguments:
         tid:
           id: tid
@@ -627,6 +632,7 @@ display:
       displays:
         articles: articles
       attachment_position: before
+      css_class: ''
     cache_metadata:
       max-age: -1
       contexts:
@@ -779,9 +785,9 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.taxonomy_term.field_subtitle_calculators'
-  block_1:
+  calculators:
     display_plugin: block
-    id: block_1
+    id: calculators
     display_title: 'Calculators Block'
     position: 3
     display_options:
@@ -842,6 +848,7 @@ display:
         header: false
         title: false
         empty: false
+        css_class: false
       relationships:
         term_node_tid:
           id: term_node_tid
@@ -897,7 +904,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: ''
-          element_class: ''
+          element_class: coh-style-red-triangle
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -1029,6 +1036,8 @@ display:
       header: {  }
       title: Calculators
       empty: {  }
+      css_class: education-details
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:

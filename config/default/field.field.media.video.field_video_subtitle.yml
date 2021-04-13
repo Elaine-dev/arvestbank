@@ -1,0 +1,21 @@
+uuid: 39a36137-9e72-49a8-9b35-ea715de7434a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_video_subtitle
+    - media.type.video
+  module:
+    - text
+id: media.video.field_video_subtitle
+field_name: field_video_subtitle
+entity_type: media
+bundle: video
+label: 'Video Subtitle'
+description: 'For example: Learn more about loans used to buy a home.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
