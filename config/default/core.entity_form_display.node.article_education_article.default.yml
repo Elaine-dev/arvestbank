@@ -12,7 +12,6 @@ dependencies:
     - node.type.article_education_article
     - workflows.workflow.editorial
   module:
-    - chosen_field
     - content_moderation
     - metatag
     - path
@@ -38,7 +37,7 @@ content:
     weight: 1
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
+    type: options_buttons
     region: content
   field_meta_tags:
     weight: 10
