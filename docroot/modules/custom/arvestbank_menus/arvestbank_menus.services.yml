@@ -1,0 +1,5 @@
+services:
+
+ arvestbank_menus.canonical_menu_link_helper:
+    class: Drupal\arvestbank_menus\Services\CanonicalMenuLinkHelper
+    arguments: []

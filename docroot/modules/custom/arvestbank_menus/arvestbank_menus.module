@@ -10,6 +10,20 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Implements hook_form_FORM_ID_alter().
  *
+ * Adds afterbuild function for canonical menu link functionality.
+ *
+ * @inheritdoc
+ */
+function arvestbank_menus_form_node_form_alter(&$form, FormStateInterface &$form_state, $form_id) {
+
+  // Add an afterbuild for the menu link altering functionality.
+  $form['#after_build'][] = '_arvestbank_menus_node_form_canonical_menu_link_alters';
+
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
  * Removes icon attribute from non-social media menus
  * and renames form the social media menu.
  *
@@ -31,6 +45,55 @@ function arvestbank_menus_form_menu_link_content_menu_link_content_form_alter(&$
     $form['#after_build'][] = '_arvestbank_menus_remove_second_attribute_fieldgroup';
   }
 
+}
+
+/**
+ * Afterbuild function for canonical menu link functionality.
+ *
+ * @param array $form
+ *   The form to alter.
+ * @param Drupal\Core\Form\FormStateInterface $form_state
+ *   The formstate.
+ *
+ * @return array
+ *   Returns the altered form.
+ */
+function _arvestbank_menus_node_form_canonical_menu_link_alters(array $form, FormStateInterface &$form_state) {
+
+  // Get the node this form is for.
+  $node = $form_state->getFormObject()->getEntity();
+
+  // Get canonical menu link helper service.
+  $canonicalMenuLinkHelper = \Drupal::service('arvestbank_menus.canonical_menu_link_helper');
+
+  // Get canonical menu link for this node.
+  $canonicalMenuLinkId = $canonicalMenuLinkHelper->getCanonicalMenuLinkId($node->id());
+
+  // If there is a canonical menu link for this node.
+  if ($canonicalMenuLinkId) {
+
+    // Get menu link values from the form state.
+    $defaultMenuValues = $form_state->getValue('menu');
+
+    // Get field defaults for cannonical menu link.
+    $canonicalMenuLinkDefaults = $canonicalMenuLinkHelper->getLinkFieldDefaults($canonicalMenuLinkId);
+
+    // Change the menu link in the form state to the canonical one.
+    // This determines the one changed on node save.
+    $defaultMenuValues['entity_id'] = $canonicalMenuLinkId;
+
+    // @todo set the rest of the form state values (used if form fields not touched)
+    // @todo set $form['menu'] #defaults
+
+    // Set the menu link values.
+    $form_state->setValue('menu', $defaultMenuValues);
+
+
+  }
+
+  //$form['menu']['link']['enity_id']['#value'] = 94;
+
+  return $form;
 }
 
 /**
