@@ -59,8 +59,8 @@ display:
           bef:
             general:
               autosubmit: true
-              autosubmit_exclude_textfield: false
-              autosubmit_textfield_delay: 500
+              autosubmit_exclude_textfield: true
+              autosubmit_textfield_delay: 5000
               autosubmit_hide: true
               input_required: false
               allow_secondary: false
