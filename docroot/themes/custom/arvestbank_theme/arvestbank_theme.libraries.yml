@@ -7,3 +7,12 @@ adobe-fonts:
   css:
     theme:
       'https://use.typekit.net/uhm3box.css': { type: external, minified: false }
+
+slider-splash-page:
+  css:
+    theme:
+      node_modules/@glidejs/glide/dist/css/glide.core.min.css: {}
+      node_modules/@glidejs/glide/dist/css/glide.theme.min.css: {}
+  js:
+    node_modules/@glidejs/glide/dist/glide.js: {}
+    js/glide-slider-splash-page.js: {}
