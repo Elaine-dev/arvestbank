@@ -63,35 +63,51 @@ function _arvestbank_menus_node_form_canonical_menu_link_alters(array $form, For
   // Get the node this form is for.
   $node = $form_state->getFormObject()->getEntity();
 
+  // Get menu link values from the form state.
+  $defaultMenuValues = $form_state->getValue('menu');
+
   // Get canonical menu link helper service.
   $canonicalMenuLinkHelper = \Drupal::service('arvestbank_menus.canonical_menu_link_helper');
-
   // Get canonical menu link for this node.
   $canonicalMenuLinkId = $canonicalMenuLinkHelper->getCanonicalMenuLinkId($node->id());
 
   // If there is a canonical menu link for this node.
-  if ($canonicalMenuLinkId) {
+  // And the default menu item shown isn't the canonical menu link.
+  if (
+    $canonicalMenuLinkId
+    && $defaultMenuValues['entity_id'] != $canonicalMenuLinkId
+  ) {
 
-    // Get menu link values from the form state.
-    $defaultMenuValues = $form_state->getValue('menu');
-
-    // Get field defaults for cannonical menu link.
+    // Get field defaults for canonical menu link.
     $canonicalMenuLinkDefaults = $canonicalMenuLinkHelper->getLinkFieldDefaults($canonicalMenuLinkId);
 
-    // Change the menu link in the form state to the canonical one.
-    // This determines the one changed on node save.
-    $defaultMenuValues['entity_id'] = $canonicalMenuLinkId;
+    // Loop over the default menu values in the form state.
+    foreach ($defaultMenuValues as $defaultMenuValueKey => $defaultMenuValueValue) {
 
-    // @todo set the rest of the form state values (used if form fields not touched)
-    // @todo set $form['menu'] #defaults
+      // If the canonical link also has a value for this.
+      if (isset($canonicalMenuLinkDefaults[$defaultMenuValueKey])) {
+        // Replace the value in the form state with the canonical one.
+        $defaultMenuValues[$defaultMenuValueKey] = $canonicalMenuLinkDefaults[$defaultMenuValueKey];
+      }
+
+      // If there is a form field with a value we can set for this.
+      if (isset($form['menu']['link'][$defaultMenuValueKey]['#value'])) {
+        // Set the value to the canonical one.
+        $form['menu']['link'][$defaultMenuValueKey]['#value'] = $canonicalMenuLinkDefaults[$defaultMenuValueKey];
+      }
+
+      // If there is a form field with a default value we can set for this.
+      if (isset($form['menu']['link'][$defaultMenuValueKey]['#default_value'])) {
+        // Set the value to the canonical one.
+        $form['menu']['link'][$defaultMenuValueKey]['#default_value'] = $canonicalMenuLinkDefaults[$defaultMenuValueKey];
+      }
+
+    }
 
     // Set the menu link values.
     $form_state->setValue('menu', $defaultMenuValues);
 
-
   }
-
-  //$form['menu']['link']['enity_id']['#value'] = 94;
 
   return $form;
 }

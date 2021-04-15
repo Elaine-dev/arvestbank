@@ -57,6 +57,7 @@ class CanonicalMenuLinkHelper {
       'menu_name' => $menu_link->getMenuName(),
       'parent' => $menu_link->getParentId(),
       'weight' => $menu_link->getWeight(),
+      'menu_parent' => $menu_link->getMenuName() . ':' . $menu_link->getParentId(),
     ];
 
   }
