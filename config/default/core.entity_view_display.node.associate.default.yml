@@ -102,13 +102,12 @@ content:
     type: entity_reference_label
     region: content
   field_insurance_license_number:
-    weight: 115
+    weight: 118
     label: above
     settings:
-      thousand_separator: ''
-      prefix_suffix: true
+      link_to_entity: false
     third_party_settings: {  }
-    type: number_integer
+    type: string
     region: content
   field_job_title:
     weight: 104

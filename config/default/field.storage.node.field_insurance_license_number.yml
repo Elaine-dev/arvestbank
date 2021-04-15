@@ -1,4 +1,4 @@
-uuid: d8364daf-a00f-44a0-aa59-5d90a44d81f2
+uuid: a532b5fa-0b85-46e1-a406-8ec7b1b077a6
 langcode: en
 status: true
 dependencies:
@@ -7,13 +7,14 @@ dependencies:
 id: node.field_insurance_license_number
 field_name: field_insurance_license_number
 entity_type: node
-type: integer
+type: string
 settings:
-  unsigned: false
-  size: normal
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
-cardinality: 2
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

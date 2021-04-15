@@ -114,8 +114,9 @@ content:
     type: inline_entity_form_simple
     region: content
   field_insurance_license_number:
-    weight: 26
+    weight: 29
     settings:
+      size: 60
       placeholder: ''
     third_party_settings:
       conditional_fields:
@@ -140,7 +141,7 @@ content:
             selector: ''
           entity_type: node
           bundle: associate
-    type: number
+    type: string_textfield
     region: content
   field_job_title:
     weight: 14
