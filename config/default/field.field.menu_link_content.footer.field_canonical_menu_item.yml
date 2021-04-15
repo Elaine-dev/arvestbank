@@ -10,7 +10,7 @@ field_name: field_canonical_menu_item
 entity_type: menu_link_content
 bundle: footer
 label: 'Canonical Menu Item'
-description: "The canonical menu item indicates where a given page really lives in the menu.\r\nIf the page is in multiple locations or multiple menus this will determine which sidebar menu items will show up.\r\nChecking this box and saving will uncheck the box for any other menu items linking to this page."
+description: "The canonical menu item indicates where a given page really lives, in which menu and the location in that menu.<br/>\r\nIf the page is in multiple locations or multiple menus this will determine in which sidebar menu items will show up.<br/>\r\nChecking this box and saving will uncheck the box for any other menu items linking to this page.<br/>"
 required: false
 translatable: true
 default_value:
