@@ -95,6 +95,10 @@ display:
           offset: 0
       style:
         type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
       row:
         type: fields
       fields:
@@ -170,10 +174,10 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ field_debit_card_category }}:'
             make_link: false
             path: ''
             absolute: false
@@ -233,7 +237,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -285,8 +289,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: true
-            text: "<div class=\"category-count\">{{ field_debit_card_category }}: {{ counter }}</div>\r\n<div class=\"card-name\">{{ name }}</div>"
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -521,13 +525,52 @@ display:
           plugin_id: taxonomy_index_tid
       sorts: {  }
       title: 'Specialty Debit Cards'
-      header: {  }
-      footer: {  }
-      empty: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: "<h2>Debit Cards to Suit Your Style</h2>\r\n<p>In addition to our standard debit card, Arvest offers a variety of specialty cards, allowing you to show support for various organizations, schools and activities. We also offer a number of artistic and whimsical designs.</p>\r\n<h3>Order Your Card Today! Call <span itemprop=\"telephone\">(866) 952-9523</span>.</h3>\r\n<h3>Browse Our Cards Below</h3>\r\n<div>\r\n  <h3>Card Filter</h3>\r\n  <span>Narrow your search by using one of the filters below.</span>\r\n</div>"
+            format: full_html
+          plugin_id: text
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: "<div itemscope=\"\" itemtype=\"http://schema.org/BankOrCreditUnion\">\r\n<h2>Order Your Card Today!  Call <span itemprop=\"telephone\">(866) 952-9523</span>.</h2>\r\n<ul>\r\n\t\t<li>Arvest affinity cards are a free option for new accounts or replacing an expired card.</li>\r\n\t\t<li>Your current card number will not change when ordering one of these cards.</li>\r\n\t\t<li>Please allow 5-7 business days for your card to arrive.</li>\r\n                \t<li>Filter by Zip Code above to quickly locate the designs local to your area <br><a href=\"/contact/banking/email-bank\">Contact customer service</a> to learn more or to order your card today.</li>\r\n\t\t        <!--<li>Fee waived for current Arvest checking account customers on patriotic/military debit cards Nov. 10-15, 2014, in honor of Veterans Day. New customers are not charged for initial debit card orders.</li>-->\r\n\t</ul>\r\n\t$50 minimum deposit required to open account. Existing customers may be charged a $7.50 card replacement fee.\r\n    <br>Available for use with checking accounts only.\r\n</div>"
+            format: full_html
+          plugin_id: text
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: 'Sorry, there are no available cards for that search, please try again.'
+            format: cohesion
+          plugin_id: text
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
-      use_ajax: false
+      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:
