@@ -564,7 +564,7 @@ display:
           empty: true
           tokenize: false
           content:
-            value: 'Sorry, there are no available cards for that search, please try again.'
+            value: 'No cards match your search terms. Please try again.'
             format: cohesion
           plugin_id: text
       relationships: {  }
