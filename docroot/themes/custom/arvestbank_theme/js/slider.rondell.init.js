@@ -1,4 +1,4 @@
-(function ($) {
+(function ($, Drupal) {
 
   var totalSlides = $('#rondellCarousel > div').length,
     allowMultipleFilters = false;
@@ -71,12 +71,10 @@
       threshold: 50
     },
     visibleItems: 1,
-    funcOpacity: function(l, r, i) {
+    funcOpacity: function (l, r, i) {
       /**
        * Lazy Load hack!
        */
-        //console.log('l', l);
-        //console.log('i', i);
       var o = 0,
         $img = null,
         src = null;
@@ -86,16 +84,11 @@
         o = 1;
       }
       if ( o > 0 ) {
-        //console.log('node', );
-        $img = $('#item'+i).find('img'),
+        $img = $('#item' + i).find('img'),
           src = $img.data('src');
-        //console.log('src',src);
         if ( src !== undefined ) {
           $img.prop('src', src).addClass('rondell-item-resizeable').removeData('src');
-          $('#item'+i).removeClass('rondell-item-loading');
-          //$('#item'+i).find('.slide-caption').wrap('<div />').addClass('rondell-caption rondell-item-overlay');
-          //$('#item'+i).find('.slide-caption').addClass('rondell-caption rondell-item-overlay');
-
+          $('#item' + i).removeClass('rondell-item-loading');
         }
       }
       return o;
@@ -105,11 +98,12 @@
     options.controls.enabled = false;
   }
 
-  $('#rondellCarousel').rondell(options);
+  Drupal.behaviors.rondellSlider = {
+    attach: function (context) {
+      $(document).once('weberAjaxViews').ajaxComplete(function (event, xhr, settings) {
+        $('#rondellCarousel').rondell(options);
+      });
+    }
+  }
 
-  $( '#views-exposed-form-specialty-debit-cards-page-1 .form-select' ).change(function ( event ) {
-    $('#rondellCarousel').rondell();
-    window.alert('yep');
-  });
-
-}(jQuery));
+}(jQuery, Drupal));
