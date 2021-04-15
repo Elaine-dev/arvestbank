@@ -29,7 +29,7 @@ class BranchLocatorBlock extends BlockBase {
 
     // Add title to render array.
     $renderArray['title'] = [
-      '#markup' => '<h4>Atm & Branch Locations</h4>',
+      '#markup' => '<div class="branch-locator-label">Atm & Branch Locations</div>',
     ];
 
     // Add form to render array.
