@@ -1,0 +1,26 @@
+.glide__arrows {
+  display: none;
+}
+.glide__slide img {
+  width: 100%;
+}
+.glide_pager {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 118px;
+  height: 100px;
+  cursor: pointer;
+  text-align: center;
+  background: rgba(255,255,255,0.8);
+  color: #00457c;
+  border-radius: 10px;
+  margin: 0 15px;
+}
+
+.glide_pager:hover,
+.glide_pager.glide__bullet--active {
+  text-align: center;
+  background: rgba(0,69,124,0.8);
+  color: #fff;
+}

@@ -8,7 +8,7 @@
 /* ------------------------------------ *\
   01 - Imports
 \* ------------------------------------ */
-import Glide from '@glidejs/glide';
+//import Glide from '@glidejs/glide';
 /* ------------------------------------ *\
   02 - Functions
   Useful functions for production usage.
@@ -39,11 +39,16 @@ function getCookie(name) {
   as defined by Glide.js
 \* ------------------------------------ */
 const sliders = {
-  'block--quote-carousel': {
+  'card-slider': {
+    selector: '.glide__slide',
     options: {
-      type: 'slider',
-      rewind: false,
+      type: 'carousel',
+      startAt: Math.floor(Math.random() * 4),
+      gap: 0,
       perView: 1,
+      keyboard: false,
+      animationDuration: 1000,
+      focusAt: 'center',
     },
   },
 };
@@ -54,7 +59,7 @@ const sliders = {
   set by the object above. Define
   necessary classes and options there.
 \* ------------------------------------ */
-Drupal.behaviors.congaSliders = {
+Drupal.behaviors.arvestSliders = {
   attach(context) {
     if (typeof sliders !== 'undefined') {
       Object.keys(sliders).forEach((component) => {

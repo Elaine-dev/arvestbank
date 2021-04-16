@@ -13,6 +13,7 @@ slider-splash-page:
     theme:
       node_modules/@glidejs/glide/dist/css/glide.core.min.css: {}
       node_modules/@glidejs/glide/dist/css/glide.theme.min.css: {}
+      css/glide-slider-stage-page.css: {}
   js:
     node_modules/@glidejs/glide/dist/glide.js: {}
-    js/glide-slider-splash-page.js: {}
+    js/glide-slider-stage-page.js: {}
