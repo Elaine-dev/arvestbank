@@ -8,6 +8,7 @@ description: 'Configuration for the Cloud Platform Development env'
 folder: ../config/envs/dev
 module:
   acquia_connector: 0
+  acquia_lift: 0
   dblog: 0
   devel: 0
   shield: 0

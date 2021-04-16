@@ -7,6 +7,8 @@ label: Stage
 description: 'Configuration for the Cloud Platform staging environment.'
 folder: ../config/envs/stage
 module:
+  acquia_connector: 0
+  acquia_lift: 0
   shield: 0
   syslog: 0
   qa_accounts: 0
