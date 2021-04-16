@@ -388,7 +388,19 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: string
-      sorts: {  }
+      sorts:
+        field_addtl_section_links_title:
+          id: field_addtl_section_links_title
+          table: taxonomy_term__field_addtl_section_links
+          field: field_addtl_section_links_title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
       title: 'Education Center: Additional Links Section'
       header: {  }
       footer: {  }
