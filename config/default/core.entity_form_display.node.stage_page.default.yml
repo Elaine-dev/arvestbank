@@ -19,6 +19,26 @@ dependencies:
     - field.field.node.stage_page.field_icon_two
     - field.field.node.stage_page.field_icon_two_text
     - field.field.node.stage_page.field_meta_tags
+    - field.field.node.stage_page.field_slide1_cta_color
+    - field.field.node.stage_page.field_slide1_cta_link
+    - field.field.node.stage_page.field_slide1_cta_position
+    - field.field.node.stage_page.field_slide1_cta_text_1
+    - field.field.node.stage_page.field_slide1_cta_text_2
+    - field.field.node.stage_page.field_slide2_cta_color
+    - field.field.node.stage_page.field_slide2_cta_link
+    - field.field.node.stage_page.field_slide2_cta_position
+    - field.field.node.stage_page.field_slide2_cta_text_1
+    - field.field.node.stage_page.field_slide2_cta_text_2
+    - field.field.node.stage_page.field_slide3_cta_color
+    - field.field.node.stage_page.field_slide3_cta_link
+    - field.field.node.stage_page.field_slide3_cta_position
+    - field.field.node.stage_page.field_slide3_cta_text_1
+    - field.field.node.stage_page.field_slide3_cta_text_2
+    - field.field.node.stage_page.field_slide4_cta_color
+    - field.field.node.stage_page.field_slide4_cta_link
+    - field.field.node.stage_page.field_slide4_cta_position
+    - field.field.node.stage_page.field_slide4_cta_text_1
+    - field.field.node.stage_page.field_slide4_cta_text_2
     - field.field.node.stage_page.field_slide_four
     - field.field.node.stage_page.field_slide_one
     - field.field.node.stage_page.field_slide_three
@@ -74,6 +94,7 @@ third_party_settings:
         - field_slide_one
         - field_icon_one
         - field_icon_one_text
+        - group_cta_slide1
       parent_name: ''
       weight: 3
       format_type: details
@@ -90,6 +111,7 @@ third_party_settings:
         - field_slide_two
         - field_icon_two
         - field_icon_two_text
+        - group_cta_slide2
       parent_name: ''
       weight: 4
       format_type: details
@@ -106,6 +128,7 @@ third_party_settings:
         - field_slide_three
         - field_icon_three
         - field_icon_three_text
+        - group_cta_slide3
       parent_name: ''
       weight: 5
       format_type: details
@@ -122,6 +145,7 @@ third_party_settings:
         - field_slide_four
         - field_icon_four
         - field_icon_four_text
+        - group_cta_slide4
       parent_name: ''
       weight: 6
       format_type: details
@@ -133,6 +157,78 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Slide Four'
+    group_cta_slide1:
+      children:
+        - field_slide1_cta_text_1
+        - field_slide1_cta_text_2
+        - field_slide1_cta_link
+        - field_slide1_cta_color
+        - field_slide1_cta_position
+      parent_name: group_slide_one
+      weight: 18
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: CTA
+    group_cta_slide2:
+      children:
+        - field_slide2_cta_text_1
+        - field_slide2_cta_text_2
+        - field_slide2_cta_link
+        - field_slide2_cta_color
+        - field_slide2_cta_position
+      parent_name: group_slide_two
+      weight: 20
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: CTA
+    group_cta_slide3:
+      children:
+        - field_slide3_cta_text_1
+        - field_slide3_cta_text_2
+        - field_slide3_cta_link
+        - field_slide3_cta_color
+        - field_slide3_cta_position
+      parent_name: group_slide_three
+      weight: 21
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: CTA
+    group_cta_slide4:
+      children:
+        - field_slide4_cta_text_1
+        - field_slide4_cta_text_2
+        - field_slide4_cta_link
+        - field_slide4_cta_color
+        - field_slide4_cta_position
+      parent_name: group_slide_four
+      weight: 22
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: CTA
 id: node.stage_page.default
 targetEntityType: node
 bundle: stage_page
@@ -204,13 +300,13 @@ content:
     region: content
   field_icon_four:
     type: media_library_widget
-    weight: 19
+    weight: 20
     settings:
       media_types: {  }
     third_party_settings: {  }
     region: content
   field_icon_four_text:
-    weight: 20
+    weight: 21
     settings:
       size: 60
       placeholder: ''
@@ -240,7 +336,7 @@ content:
     third_party_settings: {  }
     region: content
   field_icon_three_text:
-    weight: 19
+    weight: 20
     settings:
       size: 60
       placeholder: ''
@@ -255,7 +351,7 @@ content:
     third_party_settings: {  }
     region: content
   field_icon_two_text:
-    weight: 18
+    weight: 19
     settings:
       size: 60
       placeholder: ''
@@ -263,11 +359,155 @@ content:
     type: string_textfield
     region: content
   field_meta_tags:
-    weight: 18
+    weight: 19
     settings:
       sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
+    region: content
+  field_slide1_cta_color:
+    weight: 23
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_slide1_cta_link:
+    weight: 22
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_slide1_cta_position:
+    weight: 24
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_slide1_cta_text_1:
+    weight: 20
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_slide1_cta_text_2:
+    weight: 21
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_slide2_cta_color:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_slide2_cta_link:
+    weight: 27
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_slide2_cta_position:
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_slide2_cta_text_1:
+    weight: 25
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_slide2_cta_text_2:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_slide3_cta_color:
+    weight: 34
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_slide3_cta_link:
+    weight: 32
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_slide3_cta_position:
+    weight: 35
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_slide3_cta_text_1:
+    weight: 30
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_slide3_cta_text_2:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_slide4_cta_color:
+    weight: 39
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_slide4_cta_link:
+    weight: 38
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_slide4_cta_position:
+    weight: 40
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_slide4_cta_text_1:
+    weight: 35
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_slide4_cta_text_2:
+    weight: 37
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_slide_four:
     type: media_library_widget
@@ -299,13 +539,13 @@ content:
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 16
+    weight: 17
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 12
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -318,12 +558,12 @@ content:
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 13
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -331,14 +571,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 17
+    weight: 18
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 11
     region: content
     third_party_settings: {  }
   title:
@@ -361,12 +601,12 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 14
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 15
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
