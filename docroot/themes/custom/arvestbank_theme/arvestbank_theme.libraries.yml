@@ -25,4 +25,4 @@ slider-splash-page:
       css/glide-slider-stage-page.css: {}
   js:
     node_modules/@glidejs/glide/dist/glide.js: {}
-    js/glide-slider-stage-page.js: {}
+    js/glide-sliders.js: {}

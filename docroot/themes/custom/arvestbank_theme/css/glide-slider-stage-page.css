@@ -16,6 +16,8 @@
   color: #00457c;
   border-radius: 10px;
   margin: 0 15px;
+  padding: 20px;
+  text-transform: uppercase;
 }
 
 .glide_pager:hover,
@@ -23,4 +25,47 @@
   text-align: center;
   background: rgba(0,69,124,0.8);
   color: #fff;
+}
+
+.slide-cta {
+  position: relative;
+  z-index: 1;
+  top: 100px;
+  text-align: center;
+}
+
+.slide-cta.position-left {
+  left: -25%;
+}
+
+.slide-cta.position-right {
+  right: -25%;
+}
+
+.slide-cta.color-light {
+  color: #fff;
+}
+
+.slide-cta.color-dark {
+  color: #000;
+}
+
+.slide-cta .text1 {
+  font-size: 17px;
+  line-height: 20px;
+}
+
+.slide-cta .text2 {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.slide-cta .cta-link a {
+  width: 80px;
+  background-color: #e60000;
+  color: #fff;
+  padding: 8px;
+  font-weight: bold;
+  position: relative;
+  top: 10px;
 }

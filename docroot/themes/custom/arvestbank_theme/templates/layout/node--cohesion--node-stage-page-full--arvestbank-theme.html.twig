@@ -11,10 +11,38 @@
 
     <div class="glide__track" data-glide-el="track">
       <ul class="glide__slides">
-        <li class="glide__slide">{{ content.field_slide_one|render }}</li>
-        <li class="glide__slide">{{ content.field_slide_two|render }}</li>
-        <li class="glide__slide">{{ content.field_slide_three|render }}</li>
-        <li class="glide__slide">{{ content.field_slide_four|render }}</li>
+        <li class="glide__slide">
+          <div class="slide-cta color-{{ content.field_slide1_cta_color.0 }} position-{{ content.field_slide1_cta_position.0 }}">
+            <span class="text1">{{ content.field_slide1_cta_text_1|render }}</span>
+            <span class="text2">{{ content.field_slide1_cta_text_2|render }}</span>
+            <span class="cta-link">{{ content.field_slide1_cta_link|render }}</span>
+          </div>
+          {{ content.field_slide_one|render }}
+        </li>
+        <li class="glide__slide">
+          <div class="slide-cta color-{{ content.field_slide2_cta_color.0 }} position-{{ content.field_slide2_cta_position.0 }}">
+            <span class="text1">{{ content.field_slide2_cta_text_1|render }}</span>
+            <span class="text2">{{ content.field_slide2_cta_text_2|render }}</span>
+            <span class="cta-link">{{ content.field_slide2_cta_link|render }}</span>
+          </div>
+          {{ content.field_slide_two|render }}
+        </li>
+        <li class="glide__slide">
+          <div class="slide-cta color-{{ content.field_slide3_cta_color.0 }} position-{{ content.field_slide3_cta_position.0 }}">
+            <span class="text1">{{ content.field_slide3_cta_text_1|render }}</span>
+            <span class="text2">{{ content.field_slide3_cta_text_2|render }}</span>
+            <span class="cta-link">{{ content.field_slide3_cta_link|render }}</span>
+          </div>
+          {{ content.field_slide_three|render }}
+        </li>
+        <li class="glide__slide">
+          <div class="slide-cta color-{{ content.field_slide4_cta_color.0 }} position-{{ content.field_slide4_cta_position.0 }}">
+            <span class="text1">{{ content.field_slide4_cta_text_1|render }}</span>
+            <span class="text2">{{ content.field_slide4_cta_text_2|render }}</span>
+            <span class="cta-link">{{ content.field_slide4_cta_link|render }}</span>
+          </div>
+          {{ content.field_slide_four|render }}
+        </li>
       </ul>
     </div>
 

@@ -6,10 +6,6 @@ dependencies:
     - field.field.node.stage_page.body
     - field.field.node.stage_page.field_block_button
     - field.field.node.stage_page.field_block_title
-    - field.field.node.stage_page.field_cta_button
-    - field.field.node.stage_page.field_cta_color
-    - field.field.node.stage_page.field_cta_layout_option
-    - field.field.node.stage_page.field_headline
     - field.field.node.stage_page.field_icon_four
     - field.field.node.stage_page.field_icon_four_text
     - field.field.node.stage_page.field_icon_one
@@ -57,7 +53,7 @@ mode: default
 content:
   body:
     weight: 102
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
@@ -69,7 +65,7 @@ content:
     third_party_settings: {  }
   field_block_button:
     weight: 103
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -81,43 +77,7 @@ content:
     region: content
   field_block_title:
     weight: 101
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_cta_button:
-    weight: 105
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: content
-  field_cta_color:
-    weight: 106
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_cta_layout_option:
-    weight: 107
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_headline:
-    weight: 104
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -193,21 +153,21 @@ content:
     region: content
   field_meta_tags:
     weight: 120
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
   field_slide1_cta_color:
     weight: 124
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    type: list_key
     region: content
   field_slide1_cta_link:
     weight: 123
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -219,14 +179,14 @@ content:
     region: content
   field_slide1_cta_position:
     weight: 125
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    type: list_key
     region: content
   field_slide1_cta_text_1:
     weight: 121
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -234,7 +194,7 @@ content:
     region: content
   field_slide1_cta_text_2:
     weight: 122
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -242,14 +202,14 @@ content:
     region: content
   field_slide2_cta_color:
     weight: 129
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    type: list_key
     region: content
   field_slide2_cta_link:
     weight: 128
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -261,14 +221,14 @@ content:
     region: content
   field_slide2_cta_position:
     weight: 130
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    type: list_key
     region: content
   field_slide2_cta_text_1:
     weight: 126
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -276,7 +236,7 @@ content:
     region: content
   field_slide2_cta_text_2:
     weight: 127
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -284,14 +244,14 @@ content:
     region: content
   field_slide3_cta_color:
     weight: 134
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    type: list_key
     region: content
   field_slide3_cta_link:
     weight: 133
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -303,14 +263,14 @@ content:
     region: content
   field_slide3_cta_position:
     weight: 135
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    type: list_key
     region: content
   field_slide3_cta_text_1:
     weight: 131
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -318,7 +278,7 @@ content:
     region: content
   field_slide3_cta_text_2:
     weight: 132
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -326,14 +286,14 @@ content:
     region: content
   field_slide4_cta_color:
     weight: 139
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    type: list_key
     region: content
   field_slide4_cta_link:
     weight: 138
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -345,14 +305,14 @@ content:
     region: content
   field_slide4_cta_position:
     weight: 140
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    type: list_key
     region: content
   field_slide4_cta_text_1:
     weight: 136
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -360,7 +320,7 @@ content:
     region: content
   field_slide4_cta_text_2:
     weight: 137
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }

@@ -8,7 +8,8 @@
 /* ------------------------------------ *\
   01 - Imports
 \* ------------------------------------ */
-//import Glide from '@glidejs/glide';
+// This import depends on webpack to work.
+// import Glide from '@glidejs/glide';
 /* ------------------------------------ *\
   02 - Functions
   Useful functions for production usage.
