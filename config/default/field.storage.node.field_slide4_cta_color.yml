@@ -1,0 +1,27 @@
+uuid: 8667c4c4-cec7-449b-bf42-1f376aed6200
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_slide4_cta_color
+field_name: field_slide4_cta_color
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: light
+      label: Light
+    -
+      value: dark
+      label: Dark
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

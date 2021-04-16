@@ -1,0 +1,23 @@
+uuid: 6c80e5b4-e617-4e79-9d6d-16fe2cd36215
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slide3_cta_color
+    - node.type.stage_page
+  module:
+    - options
+id: node.stage_page.field_slide3_cta_color
+field_name: field_slide3_cta_color
+entity_type: node
+bundle: stage_page
+label: Color
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: light
+default_value_callback: ''
+settings: {  }
+field_type: list_string
