@@ -43,9 +43,9 @@ content:
     region: content
   content_moderation_control:
     weight: -20
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_block_button:
     weight: 103
     label: above
@@ -105,15 +105,15 @@ content:
   field_icon_four:
     type: entity_reference_entity_view
     weight: 118
-    label: above
+    label: hidden
     settings:
-      view_mode: default
+      view_mode: full
       link: false
     third_party_settings: {  }
     region: content
   field_icon_four_text:
     weight: 119
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -122,15 +122,15 @@ content:
   field_icon_one:
     type: entity_reference_entity_view
     weight: 109
-    label: above
+    label: hidden
     settings:
-      view_mode: default
+      view_mode: full_width_slideshow
       link: false
     third_party_settings: {  }
     region: content
   field_icon_one_text:
     weight: 110
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -139,7 +139,7 @@ content:
   field_icon_three:
     type: entity_reference_entity_view
     weight: 115
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: false
@@ -147,7 +147,7 @@ content:
     region: content
   field_icon_three_text:
     weight: 116
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -156,7 +156,7 @@ content:
   field_icon_two:
     type: entity_reference_entity_view
     weight: 112
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: false
@@ -164,7 +164,7 @@ content:
     region: content
   field_icon_two_text:
     weight: 113
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -180,43 +180,43 @@ content:
   field_slide_four:
     type: entity_reference_entity_view
     weight: 117
-    label: above
+    label: hidden
     settings:
-      view_mode: default
+      view_mode: full_width_slideshow
       link: false
     third_party_settings: {  }
     region: content
   field_slide_one:
     type: entity_reference_entity_view
     weight: 108
-    label: above
+    label: hidden
     settings:
-      view_mode: default
+      view_mode: full_width_slideshow
       link: false
     third_party_settings: {  }
     region: content
   field_slide_three:
     type: entity_reference_entity_view
     weight: 114
-    label: above
+    label: hidden
     settings:
-      view_mode: default
+      view_mode: full_width_slideshow
       link: false
     third_party_settings: {  }
     region: content
   field_slide_two:
     type: entity_reference_entity_view
     weight: 111
-    label: above
+    label: hidden
     settings:
-      view_mode: default
+      view_mode: full_width_slideshow
       link: false
     third_party_settings: {  }
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   search_api_excerpt: true
