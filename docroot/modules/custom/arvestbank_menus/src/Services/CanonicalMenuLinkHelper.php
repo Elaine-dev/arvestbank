@@ -149,4 +149,29 @@ class CanonicalMenuLinkHelper {
 
   }
 
+  /**
+   * Checks if a given menu link has children.
+   *
+   * @param \Drupal\menu_link_content\Entity\MenuLinkContent $menuLink
+   *   The menu link to check for children.
+   *
+   * @return bool
+   *   Indicates weather or not the menu link has children.
+   *
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+   */
+  public function menuLinkHasChildren(MenuLinkContent $menuLink) {
+
+    // Get menu link content storage.
+    $menuContentStorage = \Drupal::entityTypeManager()->getStorage('menu_link_content');
+    // Determine what the parent property value would be for children.
+    $parentPropertyValue = 'menu_link_content:' . $menuLink->uuid();
+    // Get menu links with that parent property.
+    $childrenLinks = $menuContentStorage->loadByProperties(['parent' => $parentPropertyValue]);
+    // Return boolean indicating weather there are children links.
+    return count($childrenLinks) > 0;
+
+  }
+
 }

@@ -7,6 +7,8 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+use Drupal\arvestbank_menus\Plugin\Block\SidebarMenuBlock;
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -47,6 +49,48 @@ function arvestbank_menus_form_menu_link_content_menu_link_content_form_alter(&$
   else {
     // After build function to remove second attribute fieldgroup label.
     $form['#after_build'][] = '_arvestbank_menus_remove_second_attribute_fieldgroup';
+  }
+
+}
+
+/**
+ * Implements hook_block_view_BASE_ID_alter().
+ *
+ * Switches between showing children and siblings in menu blocks.
+ *
+ * @inheritdoc
+ */
+function arvestbank_menus_block_view_menu_block_alter(&$build, &$plugin) {
+
+  // Get current node (if applicable).
+  $node = \Drupal::routeMatch()->getParameter('node');
+
+  // Get menu this is for.
+  $thisMenuName = str_replace('menu_block:','',$plugin->getPluginId());
+
+  // If this block is on a node page and this is one of our sidebar blocks.
+  if (
+    $node
+    && isset(SidebarMenuBlock::MENU_SIDEBAR_BLOCKS[$thisMenuName])
+  ) {
+
+    // Get canonical menu link.
+    $canonicalMenuLinkHelper = \Drupal::service('arvestbank_menus.canonical_menu_link_helper');
+    $canonicalMenuLinkId = $canonicalMenuLinkHelper->getCanonicalMenuLinkIds($node->id(), TRUE);
+    // Load the menu link content entity.
+    $canonicalMenuLink = MenuLinkContent::load($canonicalMenuLinkId);
+
+    // If this node has a canonical menu link with no children.
+    if (
+      $canonicalMenuLink
+      && !$canonicalMenuLinkHelper->menuLinkHasChildren($canonicalMenuLink)
+    ) {
+      // Change the block to show siblings.
+      $menuBlockSettings = $build['#block']->get('settings');
+      $menuBlockSettings['follow_parent'] = 'active';
+      $build['#block']->set('settings', $menuBlockSettings);
+    }
+
   }
 
 }
