@@ -66,7 +66,7 @@ function arvestbank_menus_block_view_menu_block_alter(&$build, &$plugin) {
   $node = \Drupal::routeMatch()->getParameter('node');
 
   // Get menu this is for.
-  $thisMenuName = str_replace('menu_block:','',$plugin->getPluginId());
+  $thisMenuName = str_replace('menu_block:', '', $plugin->getPluginId());
 
   // If this block is on a node page and this is one of our sidebar blocks.
   if (
