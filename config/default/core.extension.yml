@@ -13,6 +13,7 @@ module:
   arvestbank_search: 0
   arvestbank_webforms: 0
   automated_cron: 0
+  better_exposed_filters: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -60,6 +61,10 @@ module:
   image: 0
   imce: 0
   inline_entity_form: 0
+  jquery_ui: 0
+  jquery_ui_datepicker: 0
+  jquery_ui_slider: 0
+  jquery_ui_touch_punch: 0
   jsonapi: 0
   layout_discovery: 0
   link: 0

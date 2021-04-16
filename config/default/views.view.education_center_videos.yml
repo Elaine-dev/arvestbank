@@ -57,6 +57,10 @@ display:
           offset: 0
       style:
         type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
       row:
         type: fields
       fields:
@@ -333,6 +337,7 @@ display:
       displays:
         block_1: block_1
       title: 'Videos Header'
+      enabled: true
     cache_metadata:
       max-age: -1
       contexts:
