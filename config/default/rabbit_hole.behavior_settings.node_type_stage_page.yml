@@ -1,0 +1,14 @@
+uuid: 822d4a8b-4294-407b-84fe-4d9d451b9a1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.stage_page
+id: node_type_stage_page
+entity_type_id: node_type
+entity_id: stage_page
+action: display_page
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

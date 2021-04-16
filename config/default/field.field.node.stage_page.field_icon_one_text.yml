@@ -1,0 +1,19 @@
+uuid: a880d2c0-ff5a-4e28-956f-d1342fc9166b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_icon_one_text
+    - node.type.stage_page
+id: node.stage_page.field_icon_one_text
+field_name: field_icon_one_text
+entity_type: node
+bundle: stage_page
+label: 'Icon One Text'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

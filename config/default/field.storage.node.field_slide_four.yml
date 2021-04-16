@@ -1,0 +1,20 @@
+uuid: f6190906-3820-474a-8a40-1f9a0d2f8ad0
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - node
+id: node.field_slide_four
+field_name: field_slide_four
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

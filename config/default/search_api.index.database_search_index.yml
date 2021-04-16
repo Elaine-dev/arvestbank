@@ -125,6 +125,7 @@ datasource_settings:
         - article_education_article
         - calculators
         - page
+        - stage_page
     languages:
       default: true
       selected: {  }

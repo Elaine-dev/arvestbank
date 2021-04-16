@@ -15,6 +15,7 @@ dependencies:
     - node.type.calculators
     - node.type.page
     - node.type.private_bank_location
+    - node.type.stage_page
   module:
     - content_moderation
 id: editorial
@@ -117,4 +118,5 @@ type_settings:
       - calculators
       - page
       - private_bank_location
+      - stage_page
   default_moderation_state: draft
