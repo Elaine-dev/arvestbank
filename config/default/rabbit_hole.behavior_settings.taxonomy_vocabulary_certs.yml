@@ -1,0 +1,14 @@
+uuid: 8a58973d-af32-4983-bc72-450a9bd61ae8
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.certs
+id: taxonomy_vocabulary_certs
+entity_type_id: taxonomy_vocabulary
+entity_id: certs
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied
