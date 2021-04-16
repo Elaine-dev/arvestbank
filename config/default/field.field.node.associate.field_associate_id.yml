@@ -1,0 +1,19 @@
+uuid: e01883b0-808e-4ca2-8731-86bf3d358c38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_associate_id
+    - node.type.associate
+id: node.associate.field_associate_id
+field_name: field_associate_id
+entity_type: node
+bundle: associate
+label: 'Associate ID'
+description: 'A unique identifier used for migration purposes.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
