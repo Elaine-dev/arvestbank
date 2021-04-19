@@ -3,6 +3,8 @@
 namespace Drupal\arvestbank_menus\Services;
 
 use Drupal\menu_link_content\Entity\MenuLinkContent;
+use Drupal\arvestbank_menus\Plugin\Block\SidebarMenuBlock;
+use Drupal\Core\Database\Database;
 
 /**
  * A service providing canonical menu link helper functions.
@@ -229,6 +231,100 @@ class CanonicalMenuLinkHelper {
     }
 
     return $menuLink->getTitle();
+
+  }
+
+  /**
+   * Used to determine if the current route has a sidebar menu.
+   *
+   * Based largely on logic in SidebarMenuBlock->build().
+   *
+   * Provides value for token [arvestbank_menus:has_sidebar_menu].
+   */
+  public function currentRouteHasSidebarMenu() {
+
+    $hasSidebar = FALSE;
+
+    // Get current node or term.
+    $node = \Drupal::routeMatch()->getParameter('node');
+    $term = \Drupal::routeMatch()->getParameter('taxonomy_term');
+
+    // If this is a node route.
+    if (isset($node)) {
+
+      // Get canonical menu link.
+      $canonicalMenuLinkHelper = \Drupal::service('arvestbank_menus.canonical_menu_link_helper');
+      $canonicalMenuLinkId = $canonicalMenuLinkHelper->getCanonicalMenuLinkIds($node->id(), TRUE);
+
+      // If this node has a canonical menu link.
+      if ($canonicalMenuLinkId) {
+
+        // Load the menu link content entity.
+        $canonicalMenuLink = MenuLinkContent::load($canonicalMenuLinkId);
+        // Get the menu name the canonical menu link belongs to.
+        $canonicalMenuName = $canonicalMenuLink->getMenuName();
+
+        // If we have a sidebar menu block for the canonical menu.
+        if (isset(SidebarMenuBlock::MENU_SIDEBAR_BLOCKS[$canonicalMenuName])) {
+
+          // If this isn't a tier one menu item with no children.
+          if (
+            $canonicalMenuLinkHelper->menuLinkHasChildren($canonicalMenuLink)
+            || $canonicalMenuLink->getParentId()
+          ) {
+            $hasSidebar = TRUE;
+          }
+        }
+
+      }
+
+    }
+    // If this is a term route.
+    elseif (
+      isset($term)
+      && $term->bundle() == 'education_article_category'
+    ) {
+      $hasSidebar = TRUE;
+    }
+
+    return $hasSidebar;
+
+  }
+
+  /**
+   * Mimics non-reliable MenuLinkContent->getParentId().
+   *
+   * @param int $mlid
+   *   The menu link id to get a parent id for.
+   *
+   * @return bool|array
+   *   Returns the parent menu item or FALSE.
+   *
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+   */
+  public function getMenuLinkParent(int $mlid) {
+
+    // Entity query to get menu link parent.
+    $query = Database::getConnection()
+      ->select('menu_link_content_data', 'ml')
+      ->fields('ml', ['parent'])
+      ->condition('ml.id', $mlid, '=');
+
+    $queryResults = $query->execute()->fetchAll();
+    if (count($queryResults)) {
+      $menuLinkParentUuid = str_replace('menu_link_content:', '', $queryResults[0]->parent);
+      if ($menuLinkParentUuid) {
+        $menuLinkParent = \Drupal::entityTypeManager()
+          ->getStorage('menu_link_content')
+          ->loadByProperties(['uuid' => $menuLinkParentUuid]);
+        if ($menuLinkParent && count($menuLinkParent)) {
+          return array_pop($menuLinkParent);
+        }
+      }
+    }
+
+    return FALSE;
 
   }
 

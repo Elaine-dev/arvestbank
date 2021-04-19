@@ -9,7 +9,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\menu_link_content\Entity\MenuLinkContent;
 use Drupal\arvestbank_menus\Plugin\Block\SidebarMenuBlock;
-use Drupal\Core\Entity\EntityStorageException;
+use Drupal\Core\Render\BubbleableMetadata;
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -115,11 +115,10 @@ function arvestbank_menus_block_view_menu_block_alter(&$build, &$plugin) {
       && $menuBlockSettings['follow_parent'] == 'active'
     ) {
 
-      // Get the canonical parent link.
-      $canonicalParentLinkId = $canonicalMenuLink->getParentId();
-      $canonicalParentLink = MenuLinkContent::load($canonicalParentLinkId);
+      // Get the canonical parent link id.
+      $canonicalParentLink = $canonicalMenuLinkHelper->getMenuLinkParent($canonicalMenuLink->id());
 
-      // If the parent is a link (this isn't tier 1)
+      // If the parent is a link we can load (this isn't tier 1)
       if ($canonicalParentLink) {
         // Set the block title to the canonical link's parent's title.
         $build['#configuration']['label'] = $canonicalMenuLinkHelper->getMenuTitleForLink($canonicalParentLink);
@@ -130,8 +129,6 @@ function arvestbank_menus_block_view_menu_block_alter(&$build, &$plugin) {
       }
 
     }
-
-    //@todo if there's not a canonical link
 
     // Update the block settings to be used when rendering.
     $build['#block']->set('settings', $menuBlockSettings);
@@ -311,5 +308,52 @@ function arvestbank_menus_entity_presave(EntityInterface $entity) {
     $canonicalMenuLinkHelper->setOtherNodeLinksToNonCanonical($referencedNodeId, $entity->id());
 
   }
+
+}
+
+/**
+ * Implements hook_token_info().
+ *
+ * Provides token group and token to indicate if a page has a sidebar menu.
+ */
+function arvestbank_menus_token_info() {
+
+  $info = [];
+  // Define token group.
+  $info['types']['arvestbank_menus'] = [
+    'name' => 'Arvest Bank Menus',
+    'description' => 'Tokens related to Arvest Bank Menus',
+  ];
+  // Define token.
+  $info['tokens']['arvestbank_menus']['has_sidebar_menu'] = [
+    'name' => 'Page has sidebar menu.',
+    'description' => 'A token to indicate if the current page has a sidebar menu.',
+  ];
+  return $info;
+
+}
+
+/**
+ * Implements hook_tokens().
+ *
+ * Provides token to indicate if a page has a sidebar menu.
+ *
+ * @inheritDoc
+ */
+function arvestbank_menus_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata) {
+
+  $replacements = [];
+  if (
+    $type == 'arvestbank_menus'
+    && isset($tokens['has_sidebar_menu'])
+  ) {
+    // Get canonical menu link helper service.
+    $canonicalMenuLinkHelper = \Drupal::service('arvestbank_menus.canonical_menu_link_helper');
+    // Get passed token initial value.
+    $tokenInitialValue = $tokens['has_sidebar_menu'];
+    // Return boolean indicating if there is a sidebar menu as replacement.
+    $replacements[$tokenInitialValue] = $canonicalMenuLinkHelper->currentRouteHasSidebarMenu();
+  }
+  return $replacements;
 
 }

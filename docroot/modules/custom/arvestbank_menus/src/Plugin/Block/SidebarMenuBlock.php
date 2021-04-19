@@ -27,6 +27,10 @@ class SidebarMenuBlock extends BlockBase {
   ];
 
   /**
+   * Builds the render array for the sidebar menu block.
+   *
+   * If not showing up check sidebar hide logic in currentRouteHasSidebarMenu().
+   *
    * {@inheritdoc}
    */
   public function build() {

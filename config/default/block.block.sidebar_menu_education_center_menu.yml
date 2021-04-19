@@ -20,7 +20,7 @@ settings:
   label: 'Sidebar Menu - Education Center Menu'
   provider: menu_block
   label_display: visible
-  follow: true
+  follow: false
   follow_parent: child
   level: 1
   depth: 1
