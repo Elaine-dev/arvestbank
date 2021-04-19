@@ -1,0 +1,34 @@
+uuid: 6fc9e358-6bd8-47e6-895c-7886a5be9675
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - cohesion
+    - menu_block
+  theme:
+    - arvestbank_theme
+id: footermenu_2
+theme: arvestbank_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: 'menu_block:footer'
+settings:
+  id: 'menu_block:footer'
+  label: 'Footer Menu'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 1
+  expand: false
+  parent: 'footer:'
+  suggestion: footer
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false
