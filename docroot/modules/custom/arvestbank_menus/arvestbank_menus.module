@@ -9,6 +9,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\menu_link_content\Entity\MenuLinkContent;
 use Drupal\arvestbank_menus\Plugin\Block\SidebarMenuBlock;
+use Drupal\Core\Entity\EntityStorageException;
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -64,18 +65,24 @@ function arvestbank_menus_form_menu_link_content_menu_link_content_form_alter(&$
  */
 function arvestbank_menus_block_view_menu_block_alter(&$build, &$plugin) {
 
-  // Get current node (if applicable).
-  $node = \Drupal::routeMatch()->getParameter('node');
+  // Get current node or term (if applicable).
+  $entity = \Drupal::routeMatch()->getParameter('node');
+  if (!$entity) {
+    $entity = \Drupal::routeMatch()->getParameter('taxonomy_term');
+  }
 
   // Get menu this is for.
   $thisMenuName = str_replace('menu_block:', '', $plugin->getPluginId());
 
-  // If this is one of our sidebar blocks.
-  if (isset(SidebarMenuBlock::MENU_SIDEBAR_BLOCKS[$thisMenuName])) {
+  // If this is one of our sidebar blocks on a node or term.
+  if (
+    $entity
+    && isset(SidebarMenuBlock::MENU_SIDEBAR_BLOCKS[$thisMenuName])
+  ) {
 
     // Get canonical menu link.
     $canonicalMenuLinkHelper = \Drupal::service('arvestbank_menus.canonical_menu_link_helper');
-    $canonicalMenuLinkId = $canonicalMenuLinkHelper->getCanonicalMenuLinkIds($node->id(), TRUE);
+    $canonicalMenuLinkId = $canonicalMenuLinkHelper->getCanonicalMenuLinkIds($entity->id(), TRUE);
 
     // Load the menu link content entity.
     $canonicalMenuLink = MenuLinkContent::load($canonicalMenuLinkId);
@@ -85,7 +92,7 @@ function arvestbank_menus_block_view_menu_block_alter(&$build, &$plugin) {
 
     // If this node has a canonical menu link with no children.
     if (
-      $node
+      $entity
       && $canonicalMenuLink
       && !$canonicalMenuLinkHelper->menuLinkHasChildren($canonicalMenuLink)
     ) {
@@ -149,8 +156,6 @@ function _arvestbank_menus_node_form_submit(array $form, FormStateInterface $for
     $values = $form_state->getValue('menu');
     // If we have a menu link id.
     if ($values['entity_id']) {
-      // Get the node this form is for.
-      $node = $form_state->getFormObject()->getEntity();
       // Get canonical menu link helper service.
       $canonicalMenuLinkHelper = \Drupal::service('arvestbank_menus.canonical_menu_link_helper');
       // Set this menu link as the canonical one.
@@ -181,13 +186,18 @@ function _arvestbank_menus_node_form_canonical_menu_link_alters(array $form, For
 
   // Get canonical menu link helper service.
   $canonicalMenuLinkHelper = \Drupal::service('arvestbank_menus.canonical_menu_link_helper');
-  // Get canonical menu link for this node.
-  $canonicalMenuLinkId = $canonicalMenuLinkHelper->getCanonicalMenuLinkIds($node->id(), TRUE);
+  // If this is node edit as opposed to add.
+  if ($node->id()) {
+    // Get canonical menu link for this node.
+    $canonicalMenuLinkId = $canonicalMenuLinkHelper->getCanonicalMenuLinkIds($node->id(), TRUE);
+  }
 
   // If there is a canonical menu link for this node.
   // And the default menu item shown isn't the canonical menu link.
   if (
-    $canonicalMenuLinkId
+    $node->id()
+    && isset($canonicalMenuLinkId)
+    && $canonicalMenuLinkId
     && $defaultMenuValues['entity_id'] != $canonicalMenuLinkId
   ) {
 
@@ -272,6 +282,8 @@ function arvestbank_menus_entity_presave(EntityInterface $entity) {
     // If this is a menu link.
     $entity->getEntityType()->id() == 'menu_link_content'
 
+    && $entity->unrouted !== NULL
+
     // If this menu link is to a node.
     && $entity->getUrlObject()
     && isset($entity->getUrlObject()->getRouteParameters()['node'])
@@ -295,7 +307,7 @@ function arvestbank_menus_entity_presave(EntityInterface $entity) {
     $canonicalMenuLinkHelper = \Drupal::service('arvestbank_menus.canonical_menu_link_helper');
     // Get referenced node.
     $referencedNodeId = $entity->getUrlObject()->getRouteParameters()['node'];
-    // Get set other menu links to the referenced node as non-canonical.
+    // Set other menu links to the referenced node as non-canonical.
     $canonicalMenuLinkHelper->setOtherNodeLinksToNonCanonical($referencedNodeId, $entity->id());
 
   }

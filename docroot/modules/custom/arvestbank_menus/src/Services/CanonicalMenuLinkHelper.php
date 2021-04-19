@@ -99,17 +99,52 @@ class CanonicalMenuLinkHelper {
     // If we loaded the menu link successfully.
     if ($menuLink) {
 
-      // Get current canonical field value.
-      $currentCanonicalFieldValue = $menuLink->get('field_canonical_menu_item')->getValue();
-      // If this menu link isn't already canonical.
+      // If the menu item doesn't have the canonical field.
+      // For some reason new menu items don't have menu_item_extras fields yet.
       if (
-        !isset($currentCanonicalFieldValue[0]['value'])
-        || !$currentCanonicalFieldValue[0]['value']
+        !$menuLink->hasField('field_canonical_menu_item')
+        && \Drupal::database()->schema()->tableExists('menu_link_content__field_canonical_menu_item')
       ) {
-        // Set canonical field value.
-        $menuLink->set('field_canonical_menu_item', TRUE);
-        // Save menu link.
-        $menuLink->save();
+
+        // Add the field value manually.
+        $query = \Drupal::database()->insert('menu_link_content__field_canonical_menu_item');
+        $query->fields([
+          'bundle',
+          'deleted',
+          'entity_id',
+          'revision_id',
+          'langcode',
+          'delta',
+          'field_canonical_menu_item_value',
+        ]);
+        $query->values([
+          $menuLink->getMenuName(),
+          0,
+          $menuLink->id(),
+          $menuLink->getRevisionId(),
+          $menuLink->language()->getId(),
+          0,
+          1,
+        ]);
+        $query->execute();
+
+      }
+
+      // If the menu link has the canonical field value already.
+      else {
+        // Get current canonical field value.
+        $currentCanonicalFieldValue
+          = $menuLink->get('field_canonical_menu_item')->getValue();
+        // If this menu link isn't already canonical.
+        if (
+          !isset($currentCanonicalFieldValue[0]['value'])
+          || !$currentCanonicalFieldValue[0]['value']
+        ) {
+          // Set canonical field value.
+          $menuLink->set('field_canonical_menu_item', TRUE);
+          // Save menu link.
+          $menuLink->save();
+        }
       }
 
     }
