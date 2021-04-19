@@ -58,6 +58,8 @@ function arvestbank_menus_form_menu_link_content_menu_link_content_form_alter(&$
  *
  * Switches between showing children and siblings in menu blocks.
  *
+ * Switches block title.
+ *
  * @inheritdoc
  */
 function arvestbank_menus_block_view_menu_block_alter(&$build, &$plugin) {
@@ -68,28 +70,64 @@ function arvestbank_menus_block_view_menu_block_alter(&$build, &$plugin) {
   // Get menu this is for.
   $thisMenuName = str_replace('menu_block:', '', $plugin->getPluginId());
 
-  // If this block is on a node page and this is one of our sidebar blocks.
-  if (
-    $node
-    && isset(SidebarMenuBlock::MENU_SIDEBAR_BLOCKS[$thisMenuName])
-  ) {
+  // If this is one of our sidebar blocks.
+  if (isset(SidebarMenuBlock::MENU_SIDEBAR_BLOCKS[$thisMenuName])) {
 
     // Get canonical menu link.
     $canonicalMenuLinkHelper = \Drupal::service('arvestbank_menus.canonical_menu_link_helper');
     $canonicalMenuLinkId = $canonicalMenuLinkHelper->getCanonicalMenuLinkIds($node->id(), TRUE);
+
     // Load the menu link content entity.
     $canonicalMenuLink = MenuLinkContent::load($canonicalMenuLinkId);
 
+    // Get menu block settings.
+    $menuBlockSettings = $build['#block']->get('settings');
+
     // If this node has a canonical menu link with no children.
     if (
-      $canonicalMenuLink
+      $node
+      && $canonicalMenuLink
       && !$canonicalMenuLinkHelper->menuLinkHasChildren($canonicalMenuLink)
     ) {
       // Change the block to show siblings.
-      $menuBlockSettings = $build['#block']->get('settings');
       $menuBlockSettings['follow_parent'] = 'active';
-      $build['#block']->set('settings', $menuBlockSettings);
     }
+
+    // If there is a canonical link and we're showing children.
+    if (
+      $canonicalMenuLink
+      && $menuBlockSettings['follow_parent'] == 'child'
+    ) {
+      // Set the block title to the canonical link title.
+      $build['#configuration']['label'] = $canonicalMenuLinkHelper->getMenuTitleForLink($canonicalMenuLink);
+    }
+
+    // If there's a canonical link and we're showing siblings.
+    if (
+      $canonicalMenuLink
+      && $menuBlockSettings['follow_parent'] == 'active'
+    ) {
+
+      // Get the canonical parent link.
+      $canonicalParentLinkId = $canonicalMenuLink->getParentId();
+      $canonicalParentLink = MenuLinkContent::load($canonicalParentLinkId);
+
+      // If the parent is a link (this isn't tier 1)
+      if ($canonicalParentLink) {
+        // Set the block title to the canonical link's parent's title.
+        $build['#configuration']['label'] = $canonicalMenuLinkHelper->getMenuTitleForLink($canonicalParentLink);
+      }
+      // If this is a tier 1 show own title.
+      else {
+        $build['#configuration']['label'] = $canonicalMenuLinkHelper->getMenuTitleForLink($canonicalMenuLink);
+      }
+
+    }
+
+    //@todo if there's not a canonical link
+
+    // Update the block settings to be used when rendering.
+    $build['#block']->set('settings', $menuBlockSettings);
 
   }
 

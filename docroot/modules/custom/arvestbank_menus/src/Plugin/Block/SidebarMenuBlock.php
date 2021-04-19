@@ -98,19 +98,21 @@ class SidebarMenuBlock extends BlockBase {
    *
    * @param \Drupal\menu_link_content\Entity\MenuLinkContent $menuLink
    *   The canonical menu link for this page.
+   *
+   * @return array
+   *   The default wrapper for the block render array.
    */
   private function getBaseRenderArray(MenuLinkContent $menuLink) {
 
     // Start render array with a container.
-    $renderArray = [
+    return [
       '#type'       => 'container',
       '#attributes' => [
         'class' => ['sidebar-menu'],
       ],
     ];
 
-    // Test markup.
-    $renderArray['test'] = ['#markup' => 'test'];
+
   }
 
 }

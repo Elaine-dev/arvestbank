@@ -174,4 +174,27 @@ class CanonicalMenuLinkHelper {
 
   }
 
+  /**
+   * Gets the menu link title or override if set for a given menu link.
+   *
+   * @param \Drupal\menu_link_content\Entity\MenuLinkContent $menuLink
+   *   The menu link to get a menu title for.
+   *
+   * @return string
+   *   The title to use for the menu.
+   */
+  public function getMenuTitleForLink(MenuLinkContent $menuLink) {
+
+    if (
+      $menuLink->hasField('field_sidebar_menu_title_overrid')
+      && !$menuLink->get('field_sidebar_menu_title_overrid')->isEmpty()
+      && isset($menuLink->get('field_sidebar_menu_title_overrid')->getValue()[0]['value'])
+    ) {
+      return $menuLink->get('field_sidebar_menu_title_overrid')->getValue()[0]['value'];
+    }
+
+    return $menuLink->getTitle();
+
+  }
+
 }

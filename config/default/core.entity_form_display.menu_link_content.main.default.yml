@@ -4,34 +4,37 @@ status: true
 dependencies:
   config:
     - field.field.menu_link_content.main.field_canonical_menu_item
+    - field.field.menu_link_content.main.field_sidebar_menu_title_overrid
     - system.menu.main
   module:
     - link_attributes
-    - menu_item_extras
 id: menu_link_content.main.default
 targetEntityType: menu_link_content
 bundle: main
 mode: default
 content:
   field_canonical_menu_item:
-    weight: 21
+    weight: 2
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
+  field_sidebar_menu_title_overrid:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  view_mode:
-    type: menu_item_extras_view_mode_selector_select
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  view_mode: true

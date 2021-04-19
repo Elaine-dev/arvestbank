@@ -1,0 +1,20 @@
+uuid: b15790fb-0efb-44e0-9f70-5852ecc93129
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.education-center-menu.field_sidebar_menu_title_overrid
+    - system.menu.education-center-menu
+id: menu_link_content.education-center-menu.default
+targetEntityType: menu_link_content
+bundle: education-center-menu
+mode: default
+content:
+  children:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_sidebar_menu_title_overrid: true
+  search_api_excerpt: true

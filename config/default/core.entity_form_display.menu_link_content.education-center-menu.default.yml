@@ -1,25 +1,17 @@
-uuid: f35827ea-9bd8-475f-aaee-ae3f51aa610d
+uuid: e5be3f17-ca28-4d72-9fcf-a4dcdc844010
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.menu_link_content.footer.field_canonical_menu_item
-    - field.field.menu_link_content.footer.field_sidebar_menu_title_overrid
-    - system.menu.footer
+    - field.field.menu_link_content.education-center-menu.field_sidebar_menu_title_overrid
+    - system.menu.education-center-menu
   module:
     - link_attributes
-id: menu_link_content.footer.default
+id: menu_link_content.education-center-menu.default
 targetEntityType: menu_link_content
-bundle: footer
+bundle: education-center-menu
 mode: default
 content:
-  field_canonical_menu_item:
-    weight: 2
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_sidebar_menu_title_overrid:
     weight: 1
     settings:
