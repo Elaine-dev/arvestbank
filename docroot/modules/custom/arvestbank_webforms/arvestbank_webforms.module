@@ -68,16 +68,27 @@ function _arvestbank_webforms_authorized_agent_validate(array &$form, FormStateI
     is_array($form_state->getValue('address'))
     && isset($form_state->getValue('address')['postal_code'])
   ) {
-
     // Get zip code value.
     $zipCode = $form_state->getValue('address')['postal_code'];
-
     // If the zip code is not 5 characters long.
     if (count(str_split($zipCode)) != 5) {
       // Set an error on the zip code field.
       $form_state->setErrorByName('consumer_zip', t('Please enter a valid zip code.'));
     }
+  }
 
+  // If the form has an authorized agent address entered.
+  if (
+    is_array($form_state->getValue('authorized_agent_address'))
+    && isset($form_state->getValue('authorized_agent_address')['postal_code'])
+  ) {
+    // Get zip code value.
+    $zipCode = $form_state->getValue('authorized_agent_address')['postal_code'];
+    // If the zip code is not 5 characters long.
+    if (count(str_split($zipCode)) != 5) {
+      // Set an error on the zip code field.
+      $form_state->setErrorByName('consumer_zip', t('Please enter a valid zip code.'));
+    }
   }
 
 }
