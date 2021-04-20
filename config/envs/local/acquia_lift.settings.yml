@@ -1,0 +1,22 @@
+credential:
+  account_id: ARVESTBANK
+  site_id: arvestlocal
+  assets_url: 'https://builder.lift.acquia.com'
+  decision_api_url: 'https://us-east-1-decisionapi.lift.acquia.com'
+identity:
+  identity_parameter: ''
+  identity_type_parameter: ''
+  default_identity_type: ''
+field_mappings:
+  content_section: ''
+  content_keywords: ''
+  persona: ''
+udf_person_mappings: {  }
+udf_event_mappings: {  }
+udf_touch_mappings: {  }
+visibility:
+  path_patterns: ''
+advanced:
+  bootstrap_mode: auto
+  content_replacement_mode: null
+  cdf_version: 1

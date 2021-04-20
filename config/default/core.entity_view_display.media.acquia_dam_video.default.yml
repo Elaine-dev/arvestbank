@@ -7,9 +7,12 @@ dependencies:
     - field.field.media.acquia_dam_video.field_acquiadam_asset_id
     - field.field.media.acquia_dam_video.field_acquiadam_asset_video
     - field.field.media.acquia_dam_video.field_education_article_category
+    - field.field.media.acquia_dam_video.field_video_subtitle
+    - field.field.media.acquia_dam_video.field_video_time_length
     - media.type.acquia_dam_video
   module:
     - file
+    - text
 _core:
   default_config_hash: 0SfbdPcaaPkcBZkTnnvMgzRcl6mZOmeE9JfH8jBf4a0
 id: media.acquia_dam_video.default
@@ -35,6 +38,21 @@ content:
       muted: false
     third_party_settings: {  }
     type: file_video
+    region: content
+  field_video_subtitle:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_video_time_length:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
 hidden:
   created: true

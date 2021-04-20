@@ -1,0 +1,23 @@
+uuid: cf5b0577-6887-49d0-9a6f-94dac6449d86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slide4_cta_link
+    - node.type.stage_page
+  module:
+    - link
+id: node.stage_page.field_slide4_cta_link
+field_name: field_slide4_cta_link
+entity_type: node
+bundle: stage_page
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

@@ -19,6 +19,7 @@ dependencies:
   module:
     - entity_browser
     - field_group
+    - inline_entity_form
     - link
     - media_library
     - path
@@ -131,10 +132,20 @@ content:
     third_party_settings: {  }
     region: content
   field_featured_videos:
-    type: media_library_widget
+    type: inline_entity_form_complex
     weight: 9
     settings:
-      media_types: {  }
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      revision: false
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
     third_party_settings: {  }
     region: content
   field_subtitle_articles:

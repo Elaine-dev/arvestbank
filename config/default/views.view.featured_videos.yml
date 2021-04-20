@@ -54,6 +54,10 @@ display:
           offset: 0
       style:
         type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
       row:
         type: fields
       fields:
@@ -94,7 +98,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: ''
-          element_class: ''
+          element_class: featured-video
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -108,7 +112,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_entity_view
           settings:
-            view_mode: full
+            view_mode: teaser
           group_column: target_id
           group_columns: {  }
           group_rows: true

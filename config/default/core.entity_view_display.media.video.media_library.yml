@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_mode.media.media_library
     - field.field.media.video.field_education_article_category
     - field.field.media.video.field_media_oembed_video
+    - field.field.media.video.field_video_subtitle
+    - field.field.media.video.field_video_time_length
     - image.style.medium
     - media.type.video
   module:
@@ -33,6 +35,8 @@ hidden:
   created: true
   field_education_article_category: true
   field_media_oembed_video: true
+  field_video_subtitle: true
+  field_video_time_length: true
   name: true
   search_api_excerpt: true
   uid: true
