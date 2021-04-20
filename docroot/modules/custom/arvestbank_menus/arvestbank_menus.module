@@ -85,7 +85,9 @@ function arvestbank_menus_block_view_menu_block_alter(&$build, &$plugin) {
     $canonicalMenuLinkId = $canonicalMenuLinkHelper->getCanonicalMenuLinkIds($entity->id(), TRUE);
 
     // Load the menu link content entity.
-    $canonicalMenuLink = MenuLinkContent::load($canonicalMenuLinkId);
+    if ($canonicalMenuLinkId) {
+      $canonicalMenuLink = MenuLinkContent::load($canonicalMenuLinkId);
+    }
 
     // Get menu block settings.
     $menuBlockSettings = $build['#block']->get('settings');
@@ -93,6 +95,7 @@ function arvestbank_menus_block_view_menu_block_alter(&$build, &$plugin) {
     // If this node has a canonical menu link with no children.
     if (
       $entity
+      && isset($canonicalMenuLink)
       && $canonicalMenuLink
       && !$canonicalMenuLinkHelper->menuLinkHasChildren($canonicalMenuLink)
     ) {
@@ -102,7 +105,8 @@ function arvestbank_menus_block_view_menu_block_alter(&$build, &$plugin) {
 
     // If there is a canonical link and we're showing children.
     if (
-      $canonicalMenuLink
+      isset($canonicalMenuLink)
+      && $canonicalMenuLink
       && $menuBlockSettings['follow_parent'] == 'child'
     ) {
       // Set the block title to the canonical link title.
@@ -111,7 +115,8 @@ function arvestbank_menus_block_view_menu_block_alter(&$build, &$plugin) {
 
     // If there's a canonical link and we're showing siblings.
     if (
-      $canonicalMenuLink
+      isset($canonicalMenuLink)
+      && $canonicalMenuLink
       && $menuBlockSettings['follow_parent'] == 'active'
     ) {
 

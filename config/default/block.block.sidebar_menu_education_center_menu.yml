@@ -17,7 +17,7 @@ provider: null
 plugin: 'menu_block:education-center-menu'
 settings:
   id: 'menu_block:education-center-menu'
-  label: 'Sidebar Menu - Education Center Menu'
+  label: 'Education Center'
   provider: menu_block
   label_display: visible
   follow: false
