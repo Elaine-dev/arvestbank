@@ -54,3 +54,30 @@ function arvestbank_theme_preprocess_menu(&$variables, $hook) {
   }
 
 }
+
+/**
+ * Block - Featured Carousel
+ * - Implements template_preprocess_block().
+ * - @param $variables
+ */
+function arvestbank_theme_preprocess_block_feature_carousel(&$variables) {
+  if (!empty($variables['elements']['content']['#block_content'])) {
+    /** @var \Drupal\block\Entity\Block $block */
+    $block = $variables['elements']['content']['#block_content'];
+    $slides = [];
+    // Build Array for Glider slides
+    if ($block->hasField('field_p_feature_items') && !$block->get('field_p_feature_items')->isEmpty()) {
+      $elements = $block->get('field_p_feature_items');
+      foreach ($elements as $key => $slide) {
+        $media = $slide->entity->field_icon->entity;
+        $view_builder = \Drupal::entityTypeManager()->getViewBuilder('media');
+        $slides[] = [
+          'slide_icon' => $view_builder->view($media, 'x_small_square'),
+          'slide_title' => $slide->entity->field_nav_title->value,
+          'slide_content' => $slide->view('default'),
+        ];
+      }
+      $variables['slides'] = $slides;
+    }
+  }
+}

@@ -15,6 +15,7 @@
         "mocha": "^7.1.0"
     },
     "dependencies": {
+        "@glidejs/glide": "^3.4.1",
         "npm": "^5.7.1"
     }
 }

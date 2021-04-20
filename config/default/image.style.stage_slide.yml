@@ -1,0 +1,15 @@
+uuid: 1a50e865-da58-4bbd-bc95-65865f33f4d9
+langcode: en
+status: true
+dependencies: {  }
+name: stage_slide
+label: 'Stage Slide'
+effects:
+  903dc36f-289a-49b2-a430-1c2fac0649de:
+    uuid: 903dc36f-289a-49b2-a430-1c2fac0649de
+    id: image_scale
+    weight: 1
+    data:
+      width: 1024
+      height: 800
+      upscale: false

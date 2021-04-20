@@ -1,0 +1,10 @@
+uuid: 802525fb-d62f-4b29-9b68-8b8c7e31ae16
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.full_width_slideshow
+label: 'Full Width Slideshow'
+targetEntityType: media
+cache: true
