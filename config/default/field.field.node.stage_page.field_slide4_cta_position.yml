@@ -1,0 +1,23 @@
+uuid: ace6d123-ff27-451f-8179-c815a3af5763
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slide4_cta_position
+    - node.type.stage_page
+  module:
+    - options
+id: node.stage_page.field_slide4_cta_position
+field_name: field_slide4_cta_position
+entity_type: node
+bundle: stage_page
+label: Position
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

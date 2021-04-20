@@ -1,0 +1,23 @@
+uuid: 38456026-d33d-4a84-9b00-5b25bc9a72ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_block_button
+    - node.type.stage_page
+  module:
+    - link
+id: node.stage_page.field_block_button
+field_name: field_block_button
+entity_type: node
+bundle: stage_page
+label: 'Block Button'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

@@ -7,3 +7,12 @@ adobe-fonts:
   css:
     theme:
       'https://use.typekit.net/uhm3box.css': { type: external, minified: false }
+
+slider-debit-cards:
+  css:
+    theme:
+      css/slider.rondell.css: {}
+      css/slider.rondell.arvest.css: {}
+  js:
+    js/slider.rondell.js: {}
+    js/slider.rondell.init.js: {}
