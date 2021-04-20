@@ -1,0 +1,29 @@
+uuid: d67a1e0c-8021-457a-af2d-22d47dcfea64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_icon_one
+    - media.type.icon
+    - node.type.stage_page
+id: node.stage_page.field_icon_one
+field_name: field_icon_one
+entity_type: node
+bundle: stage_page
+label: 'Icon One'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      icon: icon
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -21,6 +21,7 @@ dependencies:
     - field.field.node.associate.field_vanity_url
     - field.field.node.associate.field_website
     - node.type.associate
+    - workflows.workflow.editorial
   module:
     - conditional_fields
     - content_moderation
@@ -129,8 +130,12 @@ content:
             value_form:
               -
                 target_id: '2'
-            effect: show
-            effect_options: {  }
+            effect: slide
+            effect_options:
+              fade:
+                speed: '400'
+              slide:
+                speed: '400'
             selector: ''
           entity_type: node
           bundle: associate
@@ -178,8 +183,12 @@ content:
             value_form:
               -
                 target_id: '1'
-            effect: show
-            effect_options: {  }
+            effect: slide
+            effect_options:
+              fade:
+                speed: '400'
+              slide:
+                speed: '400'
             selector: ''
           entity_type: node
           bundle: associate

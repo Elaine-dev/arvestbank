@@ -60,6 +60,10 @@ Use BLT to setup the site with configuration.
    ```
    $ blt sync
    ```
+   to pull files run
+   ```
+   blt sync:files
+   ```
 
 
 6. Create your local.settings.php file

@@ -1,0 +1,49 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ *
+ * @ingroup themeable
+ */
+#}
+{{ attach_library('arvestbank_theme/slider-debit-cards') }}
+
+<div class="cards-wrap">
+
+  {% if title %}
+    <h3>{{ title }}</h3>
+  {% endif %}
+
+  <div class="card-slider">
+    <div id="rondellCarousel" class="hidden">
+    {% for key,row in rows %}
+      {%
+        set row_classes = [
+        default_row_class ? 'views-row',
+      ]
+      %}
+      <div{{ row.attributes.addClass(row_classes) }}>
+        {{ view.style_plugin.getField(key, 'field_acquiadam_asset_image') }}
+        <div class="slide-caption">
+          {{ view.style_plugin.getField(key, 'field_debit_card_category') }}
+          {{ view.style_plugin.getField(key, 'counter') }} of {{ view.total_rows }}
+          <div class="slide-name">{{ view.style_plugin.getField(key, 'name') }}</div>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,106 @@
+uuid: 5f1e8b39-01ef-4328-8ba8-ff592577011d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.stage_page.body
+    - field.field.node.stage_page.field_block_button
+    - field.field.node.stage_page.field_block_title
+    - field.field.node.stage_page.field_cta_button
+    - field.field.node.stage_page.field_cta_color
+    - field.field.node.stage_page.field_cta_layout_option
+    - field.field.node.stage_page.field_headline
+    - field.field.node.stage_page.field_icon_four
+    - field.field.node.stage_page.field_icon_four_text
+    - field.field.node.stage_page.field_icon_one
+    - field.field.node.stage_page.field_icon_one_text
+    - field.field.node.stage_page.field_icon_three
+    - field.field.node.stage_page.field_icon_three_text
+    - field.field.node.stage_page.field_icon_two
+    - field.field.node.stage_page.field_icon_two_text
+    - field.field.node.stage_page.field_meta_tags
+    - field.field.node.stage_page.field_slide1_cta_color
+    - field.field.node.stage_page.field_slide1_cta_link
+    - field.field.node.stage_page.field_slide1_cta_position
+    - field.field.node.stage_page.field_slide1_cta_text_1
+    - field.field.node.stage_page.field_slide1_cta_text_2
+    - field.field.node.stage_page.field_slide2_cta_color
+    - field.field.node.stage_page.field_slide2_cta_link
+    - field.field.node.stage_page.field_slide2_cta_position
+    - field.field.node.stage_page.field_slide2_cta_text_1
+    - field.field.node.stage_page.field_slide2_cta_text_2
+    - field.field.node.stage_page.field_slide3_cta_color
+    - field.field.node.stage_page.field_slide3_cta_link
+    - field.field.node.stage_page.field_slide3_cta_position
+    - field.field.node.stage_page.field_slide3_cta_text_1
+    - field.field.node.stage_page.field_slide3_cta_text_2
+    - field.field.node.stage_page.field_slide4_cta_color
+    - field.field.node.stage_page.field_slide4_cta_link
+    - field.field.node.stage_page.field_slide4_cta_position
+    - field.field.node.stage_page.field_slide4_cta_text_1
+    - field.field.node.stage_page.field_slide4_cta_text_2
+    - field.field.node.stage_page.field_slide_four
+    - field.field.node.stage_page.field_slide_one
+    - field.field.node.stage_page.field_slide_three
+    - field.field.node.stage_page.field_slide_two
+    - node.type.stage_page
+  module:
+    - user
+id: node.stage_page.teaser
+targetEntityType: node
+bundle: stage_page
+mode: teaser
+content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  field_block_button: true
+  field_block_title: true
+  field_cta_button: true
+  field_cta_color: true
+  field_cta_layout_option: true
+  field_headline: true
+  field_icon_four: true
+  field_icon_four_text: true
+  field_icon_one: true
+  field_icon_one_text: true
+  field_icon_three: true
+  field_icon_three_text: true
+  field_icon_two: true
+  field_icon_two_text: true
+  field_meta_tags: true
+  field_slide1_cta_color: true
+  field_slide1_cta_link: true
+  field_slide1_cta_position: true
+  field_slide1_cta_text_1: true
+  field_slide1_cta_text_2: true
+  field_slide2_cta_color: true
+  field_slide2_cta_link: true
+  field_slide2_cta_position: true
+  field_slide2_cta_text_1: true
+  field_slide2_cta_text_2: true
+  field_slide3_cta_color: true
+  field_slide3_cta_link: true
+  field_slide3_cta_position: true
+  field_slide3_cta_text_1: true
+  field_slide3_cta_text_2: true
+  field_slide4_cta_color: true
+  field_slide4_cta_link: true
+  field_slide4_cta_position: true
+  field_slide4_cta_text_1: true
+  field_slide4_cta_text_2: true
+  field_slide_four: true
+  field_slide_one: true
+  field_slide_three: true
+  field_slide_two: true
+  search_api_excerpt: true
