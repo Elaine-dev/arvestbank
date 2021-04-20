@@ -29,6 +29,7 @@ function arvestbank_webforms_help($route_name, RouteMatchInterface $route_match)
  */
 function arvestbank_webforms_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 
+
   switch ($form_id) {
 
     // Credit Card Dispute Form.
@@ -45,6 +46,12 @@ function arvestbank_webforms_form_alter(&$form, FormStateInterface $form_state, 
       }
       // Add validation function.
       $form['#validate'][] = '_arvestbank_webforms_authorized_agent_validate';
+      break;
+
+    // Auto Warranty Quote Form.
+    case 'webform_submission_auto_warranty_quote_add_form':
+      // Add validation function.
+      $form['#validate'][] = '_arvestbank_webforms_auto_warranty_validate';
       break;
 
   }
@@ -89,6 +96,35 @@ function _arvestbank_webforms_authorized_agent_validate(array &$form, FormStateI
       // Set an error on the zip code field.
       $form_state->setErrorByName('consumer_zip', t('Please enter a valid zip code.'));
     }
+  }
+
+}
+
+/**
+ * Validate function for the Auto Warranty Quote form.
+ *
+ * @param array $form
+ *   The form array passed by reference.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   The form state object.
+ */
+function _arvestbank_webforms_auto_warranty_validate(array &$form, FormStateInterface $form_state) {
+
+  // If the form has a zip code entered.
+  if (
+    is_array($form_state->getValue('address'))
+    && isset($form_state->getValue('address')['postal_code'])
+  ) {
+
+    // Get zip code value.
+    $zipCode = $form_state->getValue('address')['postal_code'];
+
+    // If the zip code is not 5 characters long.
+    if (count(str_split($zipCode)) != 5) {
+      // Set an error on the zip code field.
+      $form_state->setErrorByName('consumer_zip', t('Please enter a valid zip code.'));
+    }
+
   }
 
 }
