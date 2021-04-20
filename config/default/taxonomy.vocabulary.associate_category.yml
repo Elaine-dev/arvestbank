@@ -1,7 +1,13 @@
 uuid: e3185c2e-891e-4cd7-a5af-d1f0b155bd43
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
 name: 'Associate Category'
 vid: associate_category
 description: 'Taxonomy category to classify notes of the associate content type.'

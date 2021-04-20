@@ -1,0 +1,18 @@
+uuid: 9041a369-ab3e-4c67-8b35-ec8096c98c2f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_link_content
+id: menu_link_content.field_canonical_menu_item
+field_name: field_canonical_menu_item
+entity_type: menu_link_content
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

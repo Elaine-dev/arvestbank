@@ -74,6 +74,7 @@ module:
   media_acquiadam: 0
   media_library: 0
   menu_block: 0
+  menu_item_extras: 0
   menu_link_attributes: 0
   menu_link_content: 0
   menu_ui: 0
@@ -115,6 +116,7 @@ module:
   sitemap: 0
   system: 0
   taxonomy: 0
+  taxonomy_menu_ui: 0
   telephone: 0
   text: 0
   token: 0

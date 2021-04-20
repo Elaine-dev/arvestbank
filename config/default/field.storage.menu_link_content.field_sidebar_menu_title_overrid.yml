@@ -1,0 +1,21 @@
+uuid: 563bf22a-ceab-4bfd-b59f-de6deb230785
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_link_content
+id: menu_link_content.field_sidebar_menu_title_overrid
+field_name: field_sidebar_menu_title_overrid
+entity_type: menu_link_content
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

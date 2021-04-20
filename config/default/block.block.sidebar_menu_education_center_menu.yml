@@ -1,0 +1,34 @@
+uuid: ecaa1cea-2136-40e6-809c-01ad7d49b73a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.education-center-menu
+  module:
+    - cohesion
+    - menu_block
+  theme:
+    - arvestbank_theme
+id: sidebar_menu_education_center_menu
+theme: arvestbank_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: 'menu_block:education-center-menu'
+settings:
+  id: 'menu_block:education-center-menu'
+  label: 'Education Center'
+  provider: menu_block
+  label_display: visible
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 1
+  expand: false
+  parent: 'education-center-menu:'
+  suggestion: education_center_menu
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

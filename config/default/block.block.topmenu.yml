@@ -1,0 +1,34 @@
+uuid: c67fe8df-de07-4c22-b1a9-17bc9fb2a0de
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.top-menu
+  module:
+    - cohesion
+    - menu_block
+  theme:
+    - arvestbank_theme
+id: topmenu
+theme: arvestbank_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: 'menu_block:top-menu'
+settings:
+  id: 'menu_block:top-menu'
+  label: 'Top Menu'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 1
+  expand: false
+  parent: 'top-menu:'
+  suggestion: top_menu
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

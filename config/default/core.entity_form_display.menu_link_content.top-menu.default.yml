@@ -1,0 +1,40 @@
+uuid: 301199ab-d7e6-4027-82d6-6fcd9eed10cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.top-menu.field_canonical_menu_item
+    - field.field.menu_link_content.top-menu.field_sidebar_menu_title_overrid
+    - system.menu.top-menu
+  module:
+    - link_attributes
+id: menu_link_content.top-menu.default
+targetEntityType: menu_link_content
+bundle: top-menu
+mode: default
+content:
+  field_canonical_menu_item:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_sidebar_menu_title_overrid:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  view_mode: true

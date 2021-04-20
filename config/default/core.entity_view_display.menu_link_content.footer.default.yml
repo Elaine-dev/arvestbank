@@ -1,0 +1,22 @@
+uuid: 07e988be-351f-43df-8667-147e734979d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.footer.field_canonical_menu_item
+    - field.field.menu_link_content.footer.field_sidebar_menu_title_overrid
+    - system.menu.footer
+id: menu_link_content.footer.default
+targetEntityType: menu_link_content
+bundle: footer
+mode: default
+content:
+  children:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_canonical_menu_item: true
+  field_sidebar_menu_title_overrid: true
+  search_api_excerpt: true

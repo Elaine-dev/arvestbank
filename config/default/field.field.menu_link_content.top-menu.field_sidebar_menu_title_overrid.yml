@@ -1,0 +1,19 @@
+uuid: 07b4ea04-eef2-4d84-8a7d-4dcfe5a71a91
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.menu_link_content.field_sidebar_menu_title_overrid
+    - system.menu.top-menu
+id: menu_link_content.top-menu.field_sidebar_menu_title_overrid
+field_name: field_sidebar_menu_title_overrid
+entity_type: menu_link_content
+bundle: top-menu
+label: 'Sidebar Menu Title Override'
+description: 'By default the menu link title will be used as the sidebar menu title, but an override can be set here.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

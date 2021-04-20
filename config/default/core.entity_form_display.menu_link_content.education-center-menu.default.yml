@@ -1,0 +1,32 @@
+uuid: e5be3f17-ca28-4d72-9fcf-a4dcdc844010
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.education-center-menu.field_sidebar_menu_title_overrid
+    - system.menu.education-center-menu
+  module:
+    - link_attributes
+id: menu_link_content.education-center-menu.default
+targetEntityType: menu_link_content
+bundle: education-center-menu
+mode: default
+content:
+  field_sidebar_menu_title_overrid:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  view_mode: true

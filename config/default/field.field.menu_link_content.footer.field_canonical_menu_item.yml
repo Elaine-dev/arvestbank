@@ -1,0 +1,23 @@
+uuid: 19f9c17b-0758-47d1-92f2-8630d91b3c31
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.menu_link_content.field_canonical_menu_item
+    - system.menu.footer
+id: menu_link_content.footer.field_canonical_menu_item
+field_name: field_canonical_menu_item
+entity_type: menu_link_content
+bundle: footer
+label: 'Canonical Menu Item'
+description: "The canonical menu item indicates where a given page really lives, in which menu and the location in that menu.<br/>\r\nIf the page is in multiple locations or multiple menus this will determine in which sidebar menu items will show up.<br/>\r\nChecking this box and saving will uncheck the box for any other menu items linking to this page.<br/>"
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

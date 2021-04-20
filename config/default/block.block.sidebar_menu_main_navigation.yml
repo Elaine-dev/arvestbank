@@ -1,32 +1,32 @@
-uuid: ff50c5dd-8a94-4fd0-993f-e889d6c36940
+uuid: c5c054ed-2d0e-4a2e-adf3-52d8a638adb3
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.footer
+    - system.menu.main
   module:
     - cohesion
     - menu_block
   theme:
     - arvestbank_theme
-id: footermenu
+id: sidebar_menu_main_navigation
 theme: arvestbank_theme
 region: dx8_hidden
-weight: 0
+weight: 2
 provider: null
-plugin: 'menu_block:footer'
+plugin: 'menu_block:main'
 settings:
-  id: 'menu_block:footer'
-  label: 'Footer Menu'
+  id: 'menu_block:main'
+  label: 'Sidebar Menu - Main Navigation'
   provider: menu_block
-  label_display: '0'
-  follow: false
+  label_display: visible
+  follow: true
   follow_parent: child
   level: 1
   depth: 1
   expand: false
-  parent: 'footer:'
-  suggestion: footer
+  parent: 'main:'
+  suggestion: main
 visibility:
   cohesion_master_template:
     id: cohesion_master_template

@@ -1,0 +1,22 @@
+uuid: 3ea503c0-3fea-4610-a129-1b38cfb13586
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.main.field_canonical_menu_item
+    - field.field.menu_link_content.main.field_sidebar_menu_title_overrid
+    - system.menu.main
+id: menu_link_content.main.default
+targetEntityType: menu_link_content
+bundle: main
+mode: default
+content:
+  children:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_canonical_menu_item: true
+  field_sidebar_menu_title_overrid: true
+  search_api_excerpt: true

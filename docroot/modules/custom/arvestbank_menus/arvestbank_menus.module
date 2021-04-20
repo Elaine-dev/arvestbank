@@ -6,11 +6,32 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+use Drupal\arvestbank_menus\Plugin\Block\SidebarMenuBlock;
+use Drupal\Core\Render\BubbleableMetadata;
 
 /**
  * Implements hook_form_FORM_ID_alter().
  *
- * Removes icon attribute from non-social media menus
+ * Adds afterbuild function for canonical menu link functionality.
+ *
+ * @inheritdoc
+ */
+function arvestbank_menus_form_node_form_alter(&$form, FormStateInterface &$form_state, $form_id) {
+
+  // Add an afterbuild for the menu link altering functionality.
+  $form['#after_build'][] = '_arvestbank_menus_node_form_canonical_menu_link_alters';
+
+  // Add a submit function to make the menu link canonical on save.
+  $form['actions']['submit']['#submit'][] = '_arvestbank_menus_node_form_submit';
+
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Removes icon attribute from non-social-media menu link edit forms
  * and renames form the social media menu.
  *
  * @inheritdoc
@@ -31,6 +52,189 @@ function arvestbank_menus_form_menu_link_content_menu_link_content_form_alter(&$
     $form['#after_build'][] = '_arvestbank_menus_remove_second_attribute_fieldgroup';
   }
 
+}
+
+/**
+ * Implements hook_block_view_BASE_ID_alter().
+ *
+ * Switches between showing children and siblings in menu blocks.
+ *
+ * Switches block title.
+ *
+ * @inheritdoc
+ */
+function arvestbank_menus_block_view_menu_block_alter(&$build, &$plugin) {
+
+  // Get current node or term (if applicable).
+  $entity = \Drupal::routeMatch()->getParameter('node');
+  if (!$entity) {
+    $entity = \Drupal::routeMatch()->getParameter('taxonomy_term');
+  }
+
+  // Get menu this is for.
+  $thisMenuName = str_replace('menu_block:', '', $plugin->getPluginId());
+
+  // If this is one of our sidebar blocks on a node or term.
+  if (
+    $entity
+    && isset(SidebarMenuBlock::MENU_SIDEBAR_BLOCKS[$thisMenuName])
+  ) {
+
+    // Get canonical menu link.
+    $canonicalMenuLinkHelper = \Drupal::service('arvestbank_menus.canonical_menu_link_helper');
+    $canonicalMenuLinkId = $canonicalMenuLinkHelper->getCanonicalMenuLinkIds($entity->id(), TRUE);
+
+    // Load the menu link content entity.
+    if ($canonicalMenuLinkId) {
+      $canonicalMenuLink = MenuLinkContent::load($canonicalMenuLinkId);
+    }
+
+    // Get menu block settings.
+    $menuBlockSettings = $build['#block']->get('settings');
+
+    // If this node has a canonical menu link with no children.
+    if (
+      $entity
+      && isset($canonicalMenuLink)
+      && $canonicalMenuLink
+      && !$canonicalMenuLinkHelper->menuLinkHasChildren($canonicalMenuLink)
+    ) {
+      // Change the block to show siblings.
+      $menuBlockSettings['follow_parent'] = 'active';
+    }
+
+    // If there is a canonical link and we're showing children.
+    if (
+      isset($canonicalMenuLink)
+      && $canonicalMenuLink
+      && $menuBlockSettings['follow_parent'] == 'child'
+    ) {
+      // Set the block title to the canonical link title.
+      $build['#configuration']['label'] = $canonicalMenuLinkHelper->getMenuTitleForLink($canonicalMenuLink);
+    }
+
+    // If there's a canonical link and we're showing siblings.
+    if (
+      isset($canonicalMenuLink)
+      && $canonicalMenuLink
+      && $menuBlockSettings['follow_parent'] == 'active'
+    ) {
+
+      // Get the canonical parent link id.
+      $canonicalParentLink = $canonicalMenuLinkHelper->getMenuLinkParent($canonicalMenuLink->id());
+
+      // If the parent is a link we can load (this isn't tier 1)
+      if ($canonicalParentLink) {
+        // Set the block title to the canonical link's parent's title.
+        $build['#configuration']['label'] = $canonicalMenuLinkHelper->getMenuTitleForLink($canonicalParentLink);
+      }
+      // If this is a tier 1 show own title.
+      else {
+        $build['#configuration']['label'] = $canonicalMenuLinkHelper->getMenuTitleForLink($canonicalMenuLink);
+      }
+
+    }
+
+    // Update the block settings to be used when rendering.
+    $build['#block']->set('settings', $menuBlockSettings);
+
+  }
+
+}
+
+/**
+ * Make the submitted menu link (if any) canonical.
+ *
+ * @param array $form
+ *   The form to alter.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   The formstate.
+ */
+function _arvestbank_menus_node_form_submit(array $form, FormStateInterface $form_state) {
+
+  // If we have form state values for a menu link.
+  if (!$form_state->isValueEmpty('menu')) {
+    // Get values for the menu link.
+    $values = $form_state->getValue('menu');
+    // If we have a menu link id.
+    if ($values['entity_id']) {
+      // Get canonical menu link helper service.
+      $canonicalMenuLinkHelper = \Drupal::service('arvestbank_menus.canonical_menu_link_helper');
+      // Set this menu link as the canonical one.
+      $canonicalMenuLinkHelper->makeLinkCanonical($values['entity_id']);
+    }
+  }
+
+}
+
+/**
+ * Afterbuild function for canonical menu link functionality.
+ *
+ * @param array $form
+ *   The form to alter.
+ * @param Drupal\Core\Form\FormStateInterface $form_state
+ *   The formstate.
+ *
+ * @return array
+ *   Returns the altered form.
+ */
+function _arvestbank_menus_node_form_canonical_menu_link_alters(array $form, FormStateInterface &$form_state) {
+
+  // Get the node this form is for.
+  $node = $form_state->getFormObject()->getEntity();
+
+  // Get menu link values from the form state.
+  $defaultMenuValues = $form_state->getValue('menu');
+
+  // Get canonical menu link helper service.
+  $canonicalMenuLinkHelper = \Drupal::service('arvestbank_menus.canonical_menu_link_helper');
+  // If this is node edit as opposed to add.
+  if ($node->id()) {
+    // Get canonical menu link for this node.
+    $canonicalMenuLinkId = $canonicalMenuLinkHelper->getCanonicalMenuLinkIds($node->id(), TRUE);
+  }
+
+  // If there is a canonical menu link for this node.
+  // And the default menu item shown isn't the canonical menu link.
+  if (
+    $node->id()
+    && isset($canonicalMenuLinkId)
+    && $canonicalMenuLinkId
+    && $defaultMenuValues['entity_id'] != $canonicalMenuLinkId
+  ) {
+
+    // Get field defaults for canonical menu link.
+    $canonicalMenuLinkDefaults = $canonicalMenuLinkHelper->getLinkFieldDefaults($canonicalMenuLinkId);
+
+    // Loop over the default menu values in the form state.
+    foreach ($defaultMenuValues as $defaultMenuValueKey => $defaultMenuValueValue) {
+
+      // If the canonical link also has a value for this.
+      if (isset($canonicalMenuLinkDefaults[$defaultMenuValueKey])) {
+        // Replace the value in the form state with the canonical one.
+        $defaultMenuValues[$defaultMenuValueKey] = $canonicalMenuLinkDefaults[$defaultMenuValueKey];
+      }
+
+      // If there is a form field with a value we can set for this.
+      if (isset($form['menu']['link'][$defaultMenuValueKey]['#value'])) {
+        // Set the value to the canonical one.
+        $form['menu']['link'][$defaultMenuValueKey]['#value'] = $canonicalMenuLinkDefaults[$defaultMenuValueKey];
+      }
+
+      // If there is a form field with a default value we can set for this.
+      if (isset($form['menu']['link'][$defaultMenuValueKey]['#default_value'])) {
+        // Set the value to the canonical one.
+        $form['menu']['link'][$defaultMenuValueKey]['#default_value'] = $canonicalMenuLinkDefaults[$defaultMenuValueKey];
+      }
+
+    }
+
+    // Set the menu link values.
+    $form_state->setValue('menu', $defaultMenuValues);
+
+  }
+
+  return $form;
 }
 
 /**
@@ -65,4 +269,96 @@ function _arvestbank_menus_remove_second_attribute_fieldgroup(array $form, FormS
   // Remove fieldgroup from the form.
   unset($form['options']);
   return $form;
+}
+
+/**
+ * Set canonical field false for other menulinks to same node this one goes to.
+ *
+ * @param Drupal\Core\Entity\EntityInterface $entity
+ *   The entity being saved.
+ */
+function arvestbank_menus_entity_presave(EntityInterface $entity) {
+
+  if (
+
+    // If this is a menu link.
+    $entity->getEntityType()->id() == 'menu_link_content'
+
+    && $entity->unrouted !== NULL
+
+    // If this menu link is to a node.
+    && $entity->getUrlObject()
+    && isset($entity->getUrlObject()->getRouteParameters()['node'])
+
+    // If this menu link is set as canonical.
+    && $entity->hasField('field_canonical_menu_item')
+    && isset($entity->get('field_canonical_menu_item')->getValue()[0]['value'])
+    && $entity->get('field_canonical_menu_item')->getValue()[0]['value']
+
+    // If this menu link was not set to canonical before.
+    // This prevents recursion when links are made non-canonical and saved.
+    && $entity->original->hasField('field_canonical_menu_item')
+    && (
+      !isset($entity->original->get('field_canonical_menu_item')->getValue()[0]['value'])
+      || !$entity->original->get('field_canonical_menu_item')->getValue()[0]['value']
+    )
+
+  ) {
+
+    // Get canonical menu link helper service.
+    $canonicalMenuLinkHelper = \Drupal::service('arvestbank_menus.canonical_menu_link_helper');
+    // Get referenced node.
+    $referencedNodeId = $entity->getUrlObject()->getRouteParameters()['node'];
+    // Set other menu links to the referenced node as non-canonical.
+    $canonicalMenuLinkHelper->setOtherNodeLinksToNonCanonical($referencedNodeId, $entity->id());
+
+  }
+
+}
+
+/**
+ * Implements hook_token_info().
+ *
+ * Provides token group and token to indicate if a page has a sidebar menu.
+ */
+function arvestbank_menus_token_info() {
+
+  $info = [];
+  // Define token group.
+  $info['types']['arvestbank_menus'] = [
+    'name' => 'Arvest Bank Menus',
+    'description' => 'Tokens related to Arvest Bank Menus',
+  ];
+  // Define token.
+  $info['tokens']['arvestbank_menus']['has_sidebar_menu'] = [
+    'name' => 'Page has sidebar menu.',
+    'description' => 'A token to indicate if the current page has a sidebar menu.',
+  ];
+  return $info;
+
+}
+
+/**
+ * Implements hook_tokens().
+ *
+ * Provides token to indicate if a page has a sidebar menu.
+ *
+ * @inheritDoc
+ */
+function arvestbank_menus_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata) {
+
+  $replacements = [];
+  if (
+    $type == 'arvestbank_menus'
+    && isset($tokens['has_sidebar_menu'])
+  ) {
+    // Get canonical menu link helper service.
+    $canonicalMenuLinkHelper = \Drupal::service('arvestbank_menus.canonical_menu_link_helper');
+    // Get passed token initial value.
+    $tokenInitialValue = $tokens['has_sidebar_menu'];
+    // Return boolean indicating if there is a sidebar menu as replacement.
+    $replacements[$tokenInitialValue] = $canonicalMenuLinkHelper->currentRouteHasSidebarMenu();
+  }
+  return $replacements;
+
 }
