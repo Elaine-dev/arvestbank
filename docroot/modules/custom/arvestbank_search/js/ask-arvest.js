@@ -19,7 +19,7 @@ Drupal.behaviors.arvestbankSearchAskArvest = {
       event.target.value = node.item.value;
 
       // Indicate that a suggestion was selected.
-      jQuery(this).parents('form').find('.suggestion-field').val(1);
+      jQuery(this).parents('form').find('.suggestion-field').val(8);
 
       // Submit the search.
       jQuery(this).parents('form').submit();

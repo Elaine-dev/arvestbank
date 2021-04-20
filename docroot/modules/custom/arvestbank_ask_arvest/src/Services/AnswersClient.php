@@ -34,6 +34,21 @@ class AnswersClient {
   protected $httpClient;
 
   /**
+   * The sources we're allowing for queries.
+   *
+   * The key is the opperative part, the value is for reference.
+   *
+   * see https://engage.247.ai/docportal/Content/Answers/APIs/Set-Up-Question-Completion-Own-Servers.htm?Highlight=typeId
+   *
+   * @var array
+   */
+  public $allowedSources = [
+    '0' => 'Manually entered question',
+    '2' => 'From "Suggested Questions" block.',
+    '8' => 'From autocomplete functionality.',
+  ];
+
+  /**
    * Constructs a new AnswersClient object.
    *
    * @param \Drupal\Core\Config\ConfigFactory $configFactory
@@ -51,6 +66,37 @@ class AnswersClient {
 
     // Store http client.
     $this->httpClient = $httpClient;
+
+  }
+
+  /**
+   * Gets top questions from [24]7.ai Answers REST "GET TOP QUESTIONS".
+   */
+  public function getTopQuestions() {
+
+    // Determine endpoint to request.
+    $topQuestionEndpoint = $this->askArvestConfig->get('general_rest_api_endpoint');
+    $topQuestionEndpoint .= '?interfaceID=2&sessionId=' . $this->getUserSessionId();
+    $topQuestionEndpoint .= '&requestType=TopQuestionsRequest';
+
+    try {
+      // Make request.
+      // The interfaceID and requestType could be made config if needed.
+      $request = $this->httpClient->request(
+        'GET',
+        $topQuestionEndpoint
+      );
+      // Get response body.
+      $data = $request->getBody();
+      // Decode and return the json.
+      return Json::decode($data);
+    }
+    catch (RequestException $e) {
+      // Log error.
+      \Drupal::logger('arvestbank_ask_arvest')->error($e->getMessage());
+      // Return empty array.
+      return [];
+    }
 
   }
 
@@ -131,6 +177,7 @@ class AnswersClient {
     ];
 
     // Make request and return result.
+    // The third argument is xml namespace and is a misnomer on [24]7.ai's side.
     return $soapClient->call('ask', $requestArguments, '/com/intelliresponse/search/user', '');
 
   }
@@ -152,6 +199,7 @@ class AnswersClient {
    *   3 - Top Questions
    *   4 - Embedded
    *   ...
+   *   8 - Question completion
    *   @see https://engage.247.ai/docportal/Content/Answers/APIs/Set-Up-Question-Completion-Own-Servers.htm?Highlight=typeId
    *
    * @return \Psr\Http\Message\ResponseInterface
@@ -221,10 +269,10 @@ class AnswersClient {
    *
    * @return string|null
    */
-  private function getUserSessionId(){
+  private function getUserSessionId() {
     // Get session id for user tracking.
     $sessionId = NULL;
-    if(isset($_SESSION['ask_arvest_session_id'])) {
+    if (isset($_SESSION['ask_arvest_session_id'])) {
       $sessionId = $_SESSION['ask_arvest_session_id'];
     }
     return $sessionId;

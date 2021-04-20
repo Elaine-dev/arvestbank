@@ -65,15 +65,22 @@ class RateAnswer extends ControllerBase {
     // Add question to response array.
     $response['question'] = $question;
 
-    // Determine the "source" for the question.
-    if (isset($_GET['suggestion']) && $_GET['suggestion']) {
-      $response['source'] = "Suggested";
-      $source = 2;
+    // If we have a source and it's an allowed value.
+    if (
+      isset($_GET['source'])
+      && isset($this->answersClient->allowedSources[$_GET['source']])
+    ) {
+      // Use the source from the GET variable.
+      $source = $_GET['source'];
     }
+    // Default to the "manually entered" source.
     else {
-      $response['source'] = "General";
+      // Indicates manual question.
       $source = 0;
     }
+
+    // Add source to response.
+    $response['source'] = $source;
 
     // Make rating request.
     $apiResponse = $this->answersClient->rateAnswer($answer, $rating, $question, $source);

@@ -1,0 +1,25 @@
+uuid: 79ea185f-b987-4227-9e44-f6c300da7760
+langcode: en
+status: true
+dependencies:
+  module:
+    - arvestbank_ask_arvest
+    - cohesion
+  theme:
+    - arvestbank_theme
+id: suggestedquestionsblock
+theme: arvestbank_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: suggested_questions_block
+settings:
+  id: suggested_questions_block
+  label: 'Suggested Questions Block'
+  provider: arvestbank_ask_arvest
+  label_display: '0'
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false
