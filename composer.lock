@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "32e198803feb8f8aa985a0f2d2b2dbf3",
+    "content-hash": "ad46b8d8b64f8183544e38c8649725ef",
     "packages": [
         {
             "name": "acquia/blt",
@@ -181,16 +181,16 @@
         },
         {
             "name": "acquia/cohesion",
-            "version": "6.4.3",
+            "version": "6.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/cohesion.git",
-                "reference": "704c75356ea643f830caf63b742711f3819e9f44"
+                "reference": "c257aec0f0b0c8ff162151fcf687aa210d708f4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/cohesion/zipball/704c75356ea643f830caf63b742711f3819e9f44",
-                "reference": "704c75356ea643f830caf63b742711f3819e9f44",
+                "url": "https://api.github.com/repos/acquia/cohesion/zipball/c257aec0f0b0c8ff162151fcf687aa210d708f4b",
+                "reference": "c257aec0f0b0c8ff162151fcf687aa210d708f4b",
                 "shasum": ""
             },
             "require": {
@@ -232,7 +232,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -242,23 +242,20 @@
                 }
             ],
             "description": "Site Studio",
-            "support": {
-                "source": "https://github.com/acquia/cohesion/tree/6.4.3"
-            },
-            "time": "2021-03-09T18:30:49+00:00"
+            "time": "2021-03-23T09:39:11+00:00"
         },
         {
             "name": "acquia/cohesion-theme",
-            "version": "6.4.3",
+            "version": "6.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/cohesion-theme.git",
-                "reference": "8f846c57a0c7c2dfa87ab06d5e8dccf0a72986a0"
+                "reference": "21ac548e9ada843aebc6e52c4d7a114c924c0c08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/cohesion-theme/zipball/8f846c57a0c7c2dfa87ab06d5e8dccf0a72986a0",
-                "reference": "8f846c57a0c7c2dfa87ab06d5e8dccf0a72986a0",
+                "url": "https://api.github.com/repos/acquia/cohesion-theme/zipball/21ac548e9ada843aebc6e52c4d7a114c924c0c08",
+                "reference": "21ac548e9ada843aebc6e52c4d7a114c924c0c08",
                 "shasum": ""
             },
             "type": "drupal-theme",
@@ -274,7 +271,7 @@
                 }
             ],
             "description": "Site Studio minimal theme",
-            "time": "2021-03-09T18:30:57+00:00"
+            "time": "2021-03-23T09:39:29+00:00"
         },
         {
             "name": "acquia/drupal-environment-detector",
@@ -3249,16 +3246,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.1.5",
+            "version": "9.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "075ea2e792edbe573a29f02e80d6edf445f18e14"
+                "reference": "0cbed9e7b0243ccc89a3735853eedb40becf8095"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/075ea2e792edbe573a29f02e80d6edf445f18e14",
-                "reference": "075ea2e792edbe573a29f02e80d6edf445f18e14",
+                "url": "https://api.github.com/repos/drupal/core/zipball/0cbed9e7b0243ccc89a3735853eedb40becf8095",
+                "reference": "0cbed9e7b0243ccc89a3735853eedb40becf8095",
                 "shasum": ""
             },
             "require": {
@@ -3494,11 +3491,11 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2021-03-04T14:36:14+00:00"
+            "time": "2021-04-20T23:05:22+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "9.1.6",
+            "version": "9.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -3545,16 +3542,16 @@
         },
         {
             "name": "drupal/core-recommended",
-            "version": "9.1.5",
+            "version": "9.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "809cd5dd382f95abf1e81abf8910c0eb9c97f012"
+                "reference": "ced38da112867c8fff15d5079926c95e5bcdca5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/809cd5dd382f95abf1e81abf8910c0eb9c97f012",
-                "reference": "809cd5dd382f95abf1e81abf8910c0eb9c97f012",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/ced38da112867c8fff15d5079926c95e5bcdca5b",
+                "reference": "ced38da112867c8fff15d5079926c95e5bcdca5b",
                 "shasum": ""
             },
             "require": {
@@ -3563,7 +3560,7 @@
                 "doctrine/annotations": "1.11.1",
                 "doctrine/lexer": "1.2.1",
                 "doctrine/reflection": "1.2.2",
-                "drupal/core": "9.1.5",
+                "drupal/core": "9.1.7",
                 "egulias/email-validator": "2.1.22",
                 "guzzlehttp/guzzle": "6.5.5",
                 "guzzlehttp/promises": "1.4.0",
@@ -3623,7 +3620,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
-            "time": "2021-03-04T14:36:14+00:00"
+            "time": "2021-04-20T23:05:22+00:00"
         },
         {
             "name": "drupal/critical_css",
