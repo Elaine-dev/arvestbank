@@ -12,7 +12,7 @@ dependencies:
 id: views_block__additional_links_section_block_1
 theme: arvestbank_theme
 region: dx8_hidden
-weight: 0
+weight: -11
 provider: null
 plugin: 'views_block:additional_links_section-block_1'
 settings:

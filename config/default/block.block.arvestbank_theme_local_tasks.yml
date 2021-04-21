@@ -9,7 +9,7 @@ _core:
 id: arvestbank_theme_local_tasks
 theme: arvestbank_theme
 region: dx8_hidden
-weight: 3
+weight: 4
 provider: null
 plugin: local_tasks_block
 settings:

@@ -11,7 +11,7 @@ _core:
 id: arvestbank_theme_messages
 theme: arvestbank_theme
 region: dx8_hidden
-weight: -2
+weight: -12
 provider: null
 plugin: system_messages_block
 settings:

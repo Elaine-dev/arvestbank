@@ -7,12 +7,13 @@ dependencies:
   module:
     - cohesion
     - menu_block
+    - system
   theme:
     - arvestbank_theme
 id: sidebar_menu_main_navigation
 theme: arvestbank_theme
 region: dx8_hidden
-weight: 2
+weight: 7
 provider: null
 plugin: 'menu_block:main'
 settings:
@@ -32,3 +33,7 @@ visibility:
     id: cohesion_master_template
     using_master_template: 0
     negate: false
+  request_path:
+    id: request_path
+    pages: "/education-center\r\n/education-center/*\r\n/education-center/*/*"
+    negate: true

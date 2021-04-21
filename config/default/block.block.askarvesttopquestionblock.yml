@@ -10,7 +10,7 @@ dependencies:
 id: askarvesttopquestionblock
 theme: arvestbank_theme
 region: dx8_hidden
-weight: 0
+weight: -8
 provider: null
 plugin: ask_arvest_top_question_block
 settings:
