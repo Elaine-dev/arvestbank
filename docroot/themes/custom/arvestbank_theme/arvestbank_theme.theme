@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\block\Entity\Block;
 
 /**
  * Implements hook_form_alter().
@@ -15,6 +16,29 @@ function arvestbank_theme_form_alter(&$form, FormStateInterface $form_state, $fo
   if ($form_id === 'search_block_form') {
     $form['keys']['#attributes']['placeholder'] = t('Search');
   }
+}
+
+/**
+ * Implements hook_preprocess_node().
+ *
+ * @inheritDoc
+ */
+function arvestbank_theme_preprocess_node(&$variables) {
+
+  // If this is the homepage and the node is the main homepage one.
+  if (
+    \Drupal::service('path.matcher')->isFrontPage()
+    && $variables['view_mode'] = 'full'
+  ) {
+    // Load external login block.
+    $block = Block::load('homepageexternalloginblock');
+    $renderedBlock = \Drupal::entityTypeManager()
+      ->getViewBuilder('block')
+      ->view($block);
+    // Make the external login block available in node template.
+    $variables['content']['external_login_block'] = $renderedBlock;
+  }
+
 }
 
 /**

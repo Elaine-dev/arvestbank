@@ -1,0 +1,4 @@
+name: Arvest Bank External Login
+type: module
+description: 'Provides functionality in support of external service login blocks.'
+core_version_requirement: ^9
