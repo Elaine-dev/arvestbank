@@ -1,0 +1,23 @@
+uuid: 4aec5c33-20ec-47b5-86a8-eee6f68671bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_button_links
+    - node.type.page
+  module:
+    - link
+id: node.page.field_button_links
+field_name: field_button_links
+entity_type: node
+bundle: page
+label: 'Button Links'
+description: 'Add links to the bottom of the body text that will appear as buttons.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

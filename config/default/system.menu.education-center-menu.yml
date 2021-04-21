@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: education-center-menu
-label: 'Education Center Menu'
+label: 'Sidebar Education Menu'
 description: ''
 locked: false

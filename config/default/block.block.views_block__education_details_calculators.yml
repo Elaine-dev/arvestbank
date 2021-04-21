@@ -12,7 +12,7 @@ dependencies:
 id: views_block__education_details_calculators
 theme: arvestbank_theme
 region: dx8_hidden
-weight: 0
+weight: -5
 provider: null
 plugin: 'views_block:education_details-calculators'
 settings:

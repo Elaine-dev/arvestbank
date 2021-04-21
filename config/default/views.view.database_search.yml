@@ -7,7 +7,6 @@ dependencies:
     - block.block.askarvesttopquestionblock
     - block.block.mostfrequentlyaskedquestionsblock
     - block.block.suggestedquestionsblock
-    - field.storage.media.field_title
     - field.storage.node.body
     - search_api.index.database_search_index
   module:

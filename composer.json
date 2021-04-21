@@ -35,6 +35,7 @@
         "drupal/entity_browser": "^2.5",
         "drupal/entity_embed": "^1.1",
         "drupal/extlink": "^1.6",
+        "drupal/field_formatter_class": "^1.5",
         "drupal/field_group": "^3.1",
         "drupal/gtm": "^1.6",
         "drupal/honeypot": "^2.0",

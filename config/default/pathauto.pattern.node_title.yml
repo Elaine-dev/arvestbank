@@ -9,15 +9,18 @@ label: 'Node Title'
 type: 'canonical_entities:node'
 pattern: '[node:title]'
 selection_criteria:
-  fd95b87b-2993-40bd-862c-3de77688945b:
+  4a14b92b-6f0c-45e5-b14e-ec9906a71749:
     id: node_type
     bundles:
-      private_bank_location: private_bank_location
       cta_phone_number: cta_phone_number
+      landing_page: landing_page
+      page: page
+      private_bank_location: private_bank_location
+      stage_page: stage_page
     negate: false
     context_mapping:
       node: node
-    uuid: 02cf34ca-3621-4c39-ae29-8936a61e312a
+    uuid: 4a14b92b-6f0c-45e5-b14e-ec9906a71749
 selection_logic: and
 weight: -5
 relationships: {  }

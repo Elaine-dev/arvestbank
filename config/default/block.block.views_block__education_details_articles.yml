@@ -12,7 +12,7 @@ dependencies:
 id: views_block__education_details_articles
 theme: arvestbank_theme
 region: dx8_hidden
-weight: 0
+weight: -9
 provider: null
 plugin: 'views_block:education_details-articles'
 settings:
