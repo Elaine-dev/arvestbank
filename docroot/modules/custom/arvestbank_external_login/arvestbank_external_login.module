@@ -10,7 +10,7 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Implements hook_form_BASE_ID_alter().
  *
- * "Cash manager" requires field names incompatible with webforms.
+ * Some services require field names incompatible with webforms.
  *
  * @inheritDoc
  */
@@ -22,6 +22,10 @@ function arvestbank_external_login_form_webform_submission_external_login_form_a
       'cash_manager_hidden_browser_data' => 'pm_fp',
       'javascript_enabled_boolean' => 'TestJavaScript',
       'cash_manager_username' => 'txtUsername',
+    ],
+    'mortgage' => [
+      'mortgage_username' => 'input-field-1',
+      'mortgage_password' => 'input-field-2',
     ],
   ];
 

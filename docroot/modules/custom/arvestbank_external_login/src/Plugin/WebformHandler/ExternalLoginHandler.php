@@ -67,12 +67,21 @@ class ExternalLoginHandler extends WebformHandlerBase {
 
     // If user selected "Arvest Online Banking" login.
     if ($loginSelectValue == 'arvest_online_banking') {
-
+      // @todo online banking.
     }
     // If user selected "Cash Manager".
     elseif ($loginSelectValue == 'cash_manager') {
       // Should not reach this, the action of the form should be changed to go
       // directly to a cash manager endpoint with js when this is selected.
+    }
+    // If user selected "Mortgage".
+    elseif ($loginSelectValue == 'mortgage') {
+      // @todo mortgage.
+    }
+    // If user seleted "Investments - Wealth".
+    elseif ($loginSelectValue == 'investments_wealth') {
+      // Should not reach this, the action of the form should be changed to go
+      // directly to a sso endpoint with js when this is selected.
     }
 
   }

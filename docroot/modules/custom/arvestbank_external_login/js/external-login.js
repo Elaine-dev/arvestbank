@@ -14,7 +14,7 @@ Drupal.behaviors.externalLogin = {
     // Login select change function.
     jQuery('#edit-login-select').change(function () {
 
-      // If cash manager is selected.
+      // If "Cash Manager" is selected.
       if (jQuery(this).val() == 'cash_manager') {
         // Change form action to cashman to directly post there.
         jQuery(this).parents('form').attr(
@@ -22,8 +22,16 @@ Drupal.behaviors.externalLogin = {
           'https://ecash.arvest.com/CorporateBankingWeb/Core/Signin.aspx'
         );
       }
+      // If "Investments - Wealth" is selected.
+      else if (jQuery(this).val() == 'investments_wealth') {
+        // Change form action to cashman to directly post there.
+        jQuery(this).parents('form').attr(
+          'action',
+          'https://sso.arvest.com/idp/startSSO.ping?PartnerSpId=http%3A%2F%2Fwww.netxinvestor.com&ArvBrand=AWM'
+        );
+      }
       else {
-        // Set action to default in case it was switched to cash manager.
+        // Set action to default.
         jQuery(this).parents('form').attr(
           'action',
           '/'
