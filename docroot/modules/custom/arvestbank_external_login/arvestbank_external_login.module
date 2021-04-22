@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * @file
+ * Adds alters related to external login functionality.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_BASE_ID_alter().
+ *
+ * "Cash manager" requires field names incompatible with webforms.
+ *
+ * @inheritDoc
+ */
+function arvestbank_external_login_form_webform_submission_external_login_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  // Define the form field names we have to change.
+  $fieldNameReplacements = [
+    'cash_manager' => [
+      'cash_manager_hidden_browser_data' => 'pm_fp',
+      'javascript_enabled_boolean' => 'TestJavaScript',
+      'cash_manager_username' => 'txtUsername',
+    ],
+  ];
+
+  // Loop over replacements.
+  foreach ($fieldNameReplacements as $fieldNameReplacementKey => $fieldNameReplacementValue) {
+
+    // If replacement value is array.
+    if (is_array($fieldNameReplacementValue)) {
+      // Loop over name replacements.
+      foreach ($fieldNameReplacementValue as $oldName => $newName) {
+        // Switch the name.
+        $form['elements'][$fieldNameReplacementKey][$oldName]['#attributes'] = [
+          'name' => $newName,
+        ];
+      }
+    }
+    // If replacement value is not an array.
+    else {
+      // Switch the name.
+      $form['elements'][$fieldNameReplacementKey]['#attributes'] = [
+        'name' => $fieldNameReplacementValue,
+      ];
+    }
+
+  }
+
+}
