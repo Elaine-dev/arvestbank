@@ -83,6 +83,15 @@ function arvestbank_search_form_views_exposed_form_alter(&$form, FormStateInterf
     && isset($storage['alt_search_block'])
     && $storage['alt_search_block']
   ) {
+
+    // Add a cache context for query args to account for searches.
+    $form['search']['#cache']['contexts'][] = 'url.query_args';
+
+    // Set default value for search based on get variable.
+    if (isset($_GET['search']) && $_GET['search']) {
+      $form['search']['#default_value'] = $_GET['search'];
+    }
+
     // Put heading at beginning.
     $form['title'] = [
       '#markup' => '<h2>Ask a QUESTION or Enter a KEYWORD</h2>',
