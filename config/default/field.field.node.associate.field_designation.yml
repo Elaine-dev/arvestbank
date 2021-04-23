@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_designation
     - node.type.associate
+    - taxonomy.vocabulary.certs
     - taxonomy.vocabulary.designation
 id: node.associate.field_designation
 field_name: field_designation
@@ -20,10 +21,11 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
+      certs: certs
       designation: designation
     sort:
       field: name
       direction: asc
     auto_create: false
-    auto_create_bundle: associate_category
+    auto_create_bundle: certs
 field_type: entity_reference

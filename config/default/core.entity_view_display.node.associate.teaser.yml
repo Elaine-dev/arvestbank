@@ -5,6 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.associate.body
+    - field.field.node.associate.feeds_item
+    - field.field.node.associate.field_appointment
+    - field.field.node.associate.field_associate_id
     - field.field.node.associate.field_associate_type
     - field.field.node.associate.field_branch_nickname
     - field.field.node.associate.field_coconut_appointment
@@ -19,6 +22,7 @@ dependencies:
     - field.field.node.associate.field_nmls_number
     - field.field.node.associate.field_office_number
     - field.field.node.associate.field_private_bank_reference
+    - field.field.node.associate.field_private_banker_location
     - field.field.node.associate.field_vanity_url
     - field.field.node.associate.field_website
     - node.type.associate
@@ -38,12 +42,20 @@ content:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
     third_party_settings: {  }
     region: content
 hidden:
+  feeds_item: true
+  field_appointment: true
+  field_associate_id: true
   field_associate_type: true
   field_branch_nickname: true
   field_coconut_appointment: true
@@ -58,6 +70,7 @@ hidden:
   field_nmls_number: true
   field_office_number: true
   field_private_bank_reference: true
+  field_private_banker_location: true
   field_vanity_url: true
   field_website: true
   search_api_excerpt: true

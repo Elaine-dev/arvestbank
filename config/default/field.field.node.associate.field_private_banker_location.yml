@@ -1,15 +1,15 @@
-uuid: e68f8ca7-ca12-427a-8c45-50f375252c38
+uuid: c9afdffd-5fae-4208-9ffe-bfd9ead414ff
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_nmls_number
+    - field.storage.node.field_private_banker_location
     - node.type.associate
-id: node.associate.field_nmls_number
-field_name: field_nmls_number
+id: node.associate.field_private_banker_location
+field_name: field_private_banker_location
 entity_type: node
 bundle: associate
-label: 'NMLS number'
+label: 'Private Banker Location'
 description: ''
 required: false
 translatable: false
