@@ -58,6 +58,10 @@ class ExternalLoginHandler extends WebformHandlerBase {
   /**
    * Handles non-standard login select values.
    *
+   * Currently both custom non-standard actions are handled in js.
+   *
+   * This could be used for warnings or for functionality that does require php.
+   *
    * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The form state.
    * @param string $loginSelectValue
@@ -65,18 +69,10 @@ class ExternalLoginHandler extends WebformHandlerBase {
    */
   private function handleNonstandardSelection(FormStateInterface &$form_state, string $loginSelectValue) {
 
-    // If user selected "Arvest Online Banking" login.
-    if ($loginSelectValue == 'arvest_online_banking') {
-      // @todo online banking.
-    }
     // If user selected "Cash Manager".
-    elseif ($loginSelectValue == 'cash_manager') {
+    if ($loginSelectValue == 'cash_manager') {
       // Should not reach this, the action of the form should be changed to go
       // directly to a cash manager endpoint with js when this is selected.
-    }
-    // If user selected "Mortgage".
-    elseif ($loginSelectValue == 'mortgage') {
-      // @todo mortgage.
     }
     // If user seleted "Investments - Wealth".
     elseif ($loginSelectValue == 'investments_wealth') {
