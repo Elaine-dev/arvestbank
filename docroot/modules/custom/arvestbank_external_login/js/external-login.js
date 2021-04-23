@@ -7,9 +7,13 @@ Drupal.behaviors.externalLogin = {
   attach: function (context, settings) {
 
     // Populate cashman browser data.
-    jQuery('input[name=pm_fp]').val(encode_deviceprint());
+    jQuery('input[name=pm_fp]').each(function () {
+      jQuery(this).val(encode_deviceprint());
+    });
     // Set cashman javascript indicator to "OK".
-    jQuery('input[name=TestJavaScript]').val('OK');
+    jQuery('input[name=TestJavaScript]').each(function () {
+      jQuery(this).val('OK');
+    });
 
     // Login select change function.
     jQuery('#edit-login-select').change(function () {
