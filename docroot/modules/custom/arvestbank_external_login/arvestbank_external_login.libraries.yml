@@ -1,0 +1,6 @@
+external-login:
+  js:
+    js/cashman-script.js: {}
+    js/external-login.js: {}
+  dependencies:
+    - core/jquery

@@ -1,0 +1,25 @@
+uuid: 17fae0b6-dc3d-4f49-82a2-cee39b53337a
+langcode: en
+status: true
+dependencies:
+  module:
+    - arvestbank_external_login
+    - cohesion
+  theme:
+    - arvestbank_theme
+id: menuexternalloginblock
+theme: arvestbank_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: menu_external_login_block
+settings:
+  id: menu_external_login_block
+  label: 'Menu External Login Block'
+  provider: arvestbank_external_login
+  label_display: visible
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

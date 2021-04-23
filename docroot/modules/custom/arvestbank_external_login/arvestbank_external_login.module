@@ -1,0 +1,128 @@
+<?php
+
+/**
+ * @file
+ * Adds alters related to external login functionality.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+
+/**
+ * Implements hook_form_BASE_ID_alter().
+ *
+ * Some services require field names incompatible with webforms.
+ *
+ * @inheritDoc
+ */
+function arvestbank_external_login_form_webform_submission_external_login_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  _arvestbank_external_login_login_form_alter($form);
+}
+
+/**
+ * Implements hook_form_BASE_ID_alter().
+ *
+ * Some services require field names incompatible with webforms.
+ *
+ * @inheritDoc
+ */
+function arvestbank_external_login_form_webform_submission_external_login_menu_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  _arvestbank_external_login_login_form_alter($form);
+}
+
+/**
+ * Alters for the login blocks.
+ *
+ * @param array $form
+ *   The form array.
+ */
+function _arvestbank_external_login_login_form_alter(array &$form) {
+
+  // Define the form field names we have to change.
+  $fieldNameReplacements = [
+    'cash_manager' => [
+      'cash_manager_hidden_browser_data' => 'pm_fp',
+      'javascript_enabled_boolean' => 'TestJavaScript',
+      'cash_manager_username' => 'txtUsername',
+    ],
+    'mortgage' => [
+      'mortgage_username' => 'input-field-1',
+      'mortgage_password' => 'input-field-2',
+    ],
+  ];
+
+  // Loop over replacements.
+  foreach ($fieldNameReplacements as $fieldNameReplacementKey => $fieldNameReplacementValue) {
+
+    // If replacement value is array.
+    if (is_array($fieldNameReplacementValue)) {
+      // Loop over name replacements.
+      foreach ($fieldNameReplacementValue as $oldName => $newName) {
+        // Switch the name.
+        $form['elements'][$fieldNameReplacementKey][$oldName]['#attributes'] = [
+          'name' => $newName,
+        ];
+      }
+    }
+    // If replacement value is not an array.
+    else {
+      // Switch the name.
+      $form['elements'][$fieldNameReplacementKey]['#attributes'] = [
+        'name' => $fieldNameReplacementValue,
+      ];
+    }
+
+  }
+
+}
+
+/**
+ * Implements hook_form_BASE_ID_alter().
+ *
+ * Add help text for "Login Select" field editing.
+ *
+ * @inheritDoc
+ */
+function arvestbank_external_login_form_webform_ui_element_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  $field_name = \Drupal::routeMatch()->getParameter('key');
+  $webform_id = \Drupal::routeMatch()->getParameter('webform')->id();
+
+  if (
+    $route_name == 'entity.webform_ui.element.edit_form'
+    && $field_name == 'login_select'
+    && (
+      $webform_id == 'external_login'
+      || $webform_id == 'external_login_menu'
+    )
+  ) {
+
+    // If this is the homepage external login form.
+    if ($webform_id == 'external_login') {
+      // Change to more friendly title.
+      $form['#title'] = new TranslatableMarkup('Edit Homepage External Login Options');
+    }
+
+    // If this is the menu external login form.
+    if ($webform_id == 'external_login_menu') {
+      // Change to more friendly title.
+      $form['#title'] = new TranslatableMarkup('Edit Menu External Login Options');
+    }
+
+    // Add help text.
+    $form['help_text'] = [
+      '#markup' =>
+      '
+        The "Element Options" below are the external logins available.<br/>
+        You can add options by entering the login url into "value" and the link text into "text".<br/>
+        You can reorder options by dragging them.<br/>
+        Remember to click "save" after you have made your changes.<br/>
+        The options that have non-url values are special options that provide login fields, support for these are necessarily added in code.<br/><br/>
+      ',
+      '#weight' => -500,
+    ];
+
+  }
+
+}

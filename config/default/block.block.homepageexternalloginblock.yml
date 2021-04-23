@@ -1,0 +1,25 @@
+uuid: 79ddabf1-5bcf-4bdd-b3ac-68be1233c4c9
+langcode: en
+status: true
+dependencies:
+  module:
+    - arvestbank_external_login
+    - cohesion
+  theme:
+    - arvestbank_theme
+id: homepageexternalloginblock
+theme: arvestbank_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: homepage_external_login_block
+settings:
+  id: homepage_external_login_block
+  label: 'Homepage External Login Block'
+  provider: arvestbank_external_login
+  label_display: '0'
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false
