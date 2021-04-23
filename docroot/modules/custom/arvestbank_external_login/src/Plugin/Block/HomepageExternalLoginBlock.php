@@ -22,6 +22,11 @@ class HomepageExternalLoginBlock extends BlockBase {
     $renderArray = [
       '#type' => 'webform',
       '#webform' => 'external_login',
+      '#attached' => [
+        'library' => [
+          'arvestbank_external_login/external-login',
+        ],
+      ],
     ];
 
     return $renderArray;
