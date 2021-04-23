@@ -8,18 +8,15 @@ $env = isset($_ENV['AH_SITE_ENVIRONMENT']) ? $_ENV['AH_SITE_ENVIRONMENT'] : 'loc
 switch ($env) {
   case 'dev2':
   case 'dev':
-    $memcache_servers = [['hostname' => 'staging-4837.prod.hosting.acquia.com']];
+    $memcache_servers = [['hostname' => 'staging-41059.prod.hosting.acquia.com']];
     break;
   case 'test':
-    $memcache_servers = [['hostname' => 'staging-4850.prod.hosting.acquia.com']];
-    break;
-  case 'ra':
-    $memcache_servers = [['hostname' => 'staging-15594.prod.hosting.acquia.com']];
+    $memcache_servers = [['hostname' => 'staging-41059.prod.hosting.acquia.com']];
     break;
   case 'prod':
     $memcache_servers = [
-      ['hostname' => 'ded-1703.prod.hosting.acquia.com'],
-      ['hostname' => 'ded-1704.prod.hosting.acquia.com'],
+      ['hostname' => 'web-41055.prod.hosting.acquia.com'],
+      ['hostname' => 'web-41056.prod.hosting.acquia.com'],
     ];
     break;
   default:
