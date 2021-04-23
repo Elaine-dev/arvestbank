@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.dam_image_entity_browser
     - field.field.node.stage_page.body
     - field.field.node.stage_page.field_block_button
     - field.field.node.stage_page.field_block_title
@@ -43,9 +44,9 @@ dependencies:
     - workflows.workflow.editorial
   module:
     - content_moderation
+    - entity_browser
     - field_group
     - link
-    - media_library
     - metatag
     - path
     - scheduler
@@ -246,10 +247,18 @@ content:
     type: string_textfield
     region: content
   field_icon_four:
-    type: media_library_widget
+    type: entity_browser_entity_reference
     weight: 20
     settings:
-      media_types: {  }
+      entity_browser: dam_image_entity_browser
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: default
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
     third_party_settings: {  }
     region: content
   field_icon_four_text:
@@ -261,10 +270,18 @@ content:
     type: string_textfield
     region: content
   field_icon_one:
-    type: media_library_widget
+    type: entity_browser_entity_reference
     weight: 16
     settings:
-      media_types: {  }
+      entity_browser: dam_image_entity_browser
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: default
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
     third_party_settings: {  }
     region: content
   field_icon_one_text:
@@ -276,10 +293,18 @@ content:
     type: string_textfield
     region: content
   field_icon_three:
-    type: media_library_widget
+    type: entity_browser_entity_reference
     weight: 18
     settings:
-      media_types: {  }
+      entity_browser: dam_image_entity_browser
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: full_width_slideshow
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
     third_party_settings: {  }
     region: content
   field_icon_three_text:
@@ -291,10 +316,18 @@ content:
     type: string_textfield
     region: content
   field_icon_two:
-    type: media_library_widget
+    type: entity_browser_entity_reference
     weight: 17
     settings:
-      media_types: {  }
+      entity_browser: dam_image_entity_browser
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: default
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
     third_party_settings: {  }
     region: content
   field_icon_two_text:
@@ -457,31 +490,63 @@ content:
     type: string_textfield
     region: content
   field_slide_four:
-    type: media_library_widget
+    type: entity_browser_entity_reference
     weight: 18
     settings:
-      media_types: {  }
+      entity_browser: dam_image_entity_browser
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: full_width_slideshow
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
     third_party_settings: {  }
     region: content
   field_slide_one:
-    type: media_library_widget
+    type: entity_browser_entity_reference
     weight: 15
     settings:
-      media_types: {  }
+      entity_browser: dam_image_entity_browser
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: full_width_slideshow
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
     third_party_settings: {  }
     region: content
   field_slide_three:
-    type: media_library_widget
+    type: entity_browser_entity_reference
     weight: 17
     settings:
-      media_types: {  }
+      entity_browser: dam_document_browser
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: full_width_slideshow
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
     third_party_settings: {  }
     region: content
   field_slide_two:
-    type: media_library_widget
+    type: entity_browser_entity_reference
     weight: 16
     settings:
-      media_types: {  }
+      entity_browser: dam_image_entity_browser
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: full_width_slideshow
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
     third_party_settings: {  }
     region: content
   moderation_state:
