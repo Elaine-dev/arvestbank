@@ -3,7 +3,38 @@
  * The configuration of SimpleSAMLphp
  *
  */
-
+$current_path = dirname(__FILE__);
+$env = isset($_ENV['AH_SITE_ENVIRONMENT']) ? $_ENV['AH_SITE_ENVIRONMENT'] : 'local';
+switch ($env) {
+  case 'dev2':
+  case 'dev':
+    $memcache_servers = [['hostname' => 'staging-4837.prod.hosting.acquia.com']];
+    break;
+  case 'test':
+    $memcache_servers = [['hostname' => 'staging-4850.prod.hosting.acquia.com']];
+    break;
+  case 'ra':
+    $memcache_servers = [['hostname' => 'staging-15594.prod.hosting.acquia.com']];
+    break;
+  case 'prod':
+    $memcache_servers = [
+      ['hostname' => 'ded-1703.prod.hosting.acquia.com'],
+      ['hostname' => 'ded-1704.prod.hosting.acquia.com'],
+    ];
+    break;
+  default:
+    $memcache_servers = [['hostname' => 'localhost']];
+    break;
+}
+$host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '';
+$is_ssl = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off');
+if (isset($_ENV['AH_SITE_ENVIRONMENT'])) {
+  $private_path = '/mnt/files/' . $_ENV['AH_SITE_GROUP'] . '.' . $_ENV['AH_SITE_ENVIRONMENT'] . '/sites/default/files-private/' . $_ENV['AH_SITE_ENVIRONMENT'];
+  $is_ssl = TRUE;
+}
+else {
+  $private_path = realpath($current_path . '/../../docroot/sites/default/files/private');
+}
 $config = [
 
     /*******************************
