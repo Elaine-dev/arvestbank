@@ -245,9 +245,11 @@ class CanonicalMenuLinkHelper {
 
     $hasSidebar = FALSE;
 
-    // Get current node or term.
+    // Get current node, term, or view.
     $node = \Drupal::routeMatch()->getParameter('node');
     $term = \Drupal::routeMatch()->getParameter('taxonomy_term');
+    $view_id = \Drupal::routeMatch()->getRouteObject()->getDefault('view_id');
+    $view_display = \Drupal::routeMatch()->getRouteObject()->getDefault('display_id');
 
     // If this is a node route.
     if (isset($node)) {
@@ -278,11 +280,23 @@ class CanonicalMenuLinkHelper {
 
       }
 
+      // If this is an education article.
+      elseif ($node->getType() == 'article_education_article') {
+        $hasSidebar = TRUE;
+      }
+
     }
     // If this is a term route.
     elseif (
       isset($term)
       && $term->bundle() == 'education_article_category'
+    ) {
+      $hasSidebar = TRUE;
+    }
+    // If this is the education center view.
+    elseif (
+      $view_id == 'education_center'
+      && $view_display == 'education_center'
     ) {
       $hasSidebar = TRUE;
     }
