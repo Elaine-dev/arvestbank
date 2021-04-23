@@ -38,9 +38,11 @@ class SidebarMenuBlock extends BlockBase {
     // Instantiate render array to return.
     $renderArray = [];
 
-    // Get current node or term.
+    // Get current node, term, or view.
     $node = \Drupal::routeMatch()->getParameter('node');
     $term = \Drupal::routeMatch()->getParameter('taxonomy_term');
+    $view_id = \Drupal::routeMatch()->getRouteObject()->getDefault('view_id');
+    $view_display = \Drupal::routeMatch()->getRouteObject()->getDefault('display_id');
 
     // If this is a node page.
     if ($node) {
@@ -75,12 +77,31 @@ class SidebarMenuBlock extends BlockBase {
         }
 
       }
+      // If this is an education article.
+      elseif ($node->getType() == 'article_education_article') {
+
+        // Get rendered menu block.
+        $menuBlockId = self::MENU_SIDEBAR_BLOCKS['education-center-menu'];
+        $menuBlock = Block::load($menuBlockId);
+
+        // Add rendered menu block to our block render array.
+        $renderArray['menu_block'] = \Drupal::entityTypeManager()
+          ->getViewBuilder('block')->view($menuBlock);
+
+      }
 
     }
     // If we're on an education article category term page.
+    // Or we're on the education center view.
     elseif (
-      $term
-      && $term->bundle() == 'education_article_category'
+      (
+        $term
+        && $term->bundle() == 'education_article_category'
+      )
+      ||(
+        $view_id == 'education_center'
+        && $view_display == 'education_center'
+      )
     ) {
 
       // Get rendered menu block.

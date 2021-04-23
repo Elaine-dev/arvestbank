@@ -18,10 +18,10 @@ provider: null
 plugin: 'menu_block:education-center-menu'
 settings:
   id: 'menu_block:education-center-menu'
-  label: 'Sidebar Education Menu'
+  label: 'Education Center'
   provider: menu_block
   label_display: visible
-  follow: true
+  follow: false
   follow_parent: child
   level: 1
   depth: 1
