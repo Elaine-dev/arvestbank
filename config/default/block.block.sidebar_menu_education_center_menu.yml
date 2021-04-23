@@ -21,7 +21,7 @@ settings:
   label: 'Sidebar Education Menu'
   provider: menu_block
   label_display: visible
-  follow: false
+  follow: true
   follow_parent: child
   level: 1
   depth: 1
@@ -35,5 +35,5 @@ visibility:
     negate: false
   request_path:
     id: request_path
-    pages: "/education-center\r\n/education-center/*\r\n/education-center/*/*"
-    negate: false
+    pages: ''
+    negate: true
