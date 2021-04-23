@@ -17,7 +17,7 @@ dependencies:
 id: database_search
 label: 'Search Results'
 module: views
-description: ''
+description: 'A View to display the search results from the ask Arvest search bar'
 tag: ''
 base_table: search_api_index_database_search_index
 base_field: search_api_id
