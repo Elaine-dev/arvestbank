@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.associate.body
+    - field.field.node.associate.feeds_item
+    - field.field.node.associate.field_appointment
+    - field.field.node.associate.field_associate_id
     - field.field.node.associate.field_associate_type
     - field.field.node.associate.field_branch_nickname
     - field.field.node.associate.field_coconut_appointment
@@ -18,6 +21,7 @@ dependencies:
     - field.field.node.associate.field_nmls_number
     - field.field.node.associate.field_office_number
     - field.field.node.associate.field_private_bank_reference
+    - field.field.node.associate.field_private_banker_location
     - field.field.node.associate.field_vanity_url
     - field.field.node.associate.field_website
     - node.type.associate
@@ -52,6 +56,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_appointment:
+    weight: 30
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_associate_type:
     weight: 21
     settings: {  }
@@ -113,8 +124,9 @@ content:
     type: inline_entity_form_simple
     region: content
   field_insurance_license_number:
-    weight: 26
+    weight: 28
     settings:
+      size: 60
       placeholder: ''
     third_party_settings:
       conditional_fields:
@@ -139,7 +151,7 @@ content:
             selector: ''
           entity_type: node
           bundle: associate
-    type: number
+    type: string_textfield
     region: content
   field_job_title:
     weight: 14
@@ -202,13 +214,21 @@ content:
     type: telephone_default
     region: content
   field_private_bank_reference:
-    weight: 28
+    weight: 27
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  field_private_banker_location:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_vanity_url:
-    weight: 27
+    weight: 26
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -314,4 +334,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  feeds_item: true
+  field_associate_id: true

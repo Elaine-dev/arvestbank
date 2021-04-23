@@ -1,11 +1,11 @@
-uuid: a532b5fa-0b85-46e1-a406-8ec7b1b077a6
+uuid: 1f9a84f7-9ba4-4c0c-b0b6-4749449e9727
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_insurance_license_number
-field_name: field_insurance_license_number
+id: node.field_private_banker_location
+field_name: field_private_banker_location
 entity_type: node
 type: string
 settings:
