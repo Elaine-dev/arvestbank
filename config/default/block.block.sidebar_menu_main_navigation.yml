@@ -35,5 +35,5 @@ visibility:
     negate: false
   request_path:
     id: request_path
-    pages: "/education-center\r\n/education-center/*\r\n/education-center/*/*"
+    pages: ''
     negate: true
