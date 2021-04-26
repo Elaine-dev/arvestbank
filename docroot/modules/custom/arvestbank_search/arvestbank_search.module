@@ -75,6 +75,15 @@ function arvestbank_search_form_views_exposed_form_alter(&$form, FormStateInterf
       ],
       '#weight' => 1,
     ];
+    // Add hidden field indicating the selected suggestion.
+    $form['suggestion_id'] = [
+      '#type' => 'hidden',
+      '#value' => FALSE,
+      '#attributes' => [
+        'class' => ['suggestion-id'],
+      ],
+      '#weight' => 1,
+    ];
   }
 
   // If this is the alternate search bar block.

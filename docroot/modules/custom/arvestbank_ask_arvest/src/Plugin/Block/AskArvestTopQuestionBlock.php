@@ -97,17 +97,25 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
       $searchTerm = $_GET['search'];
     }
 
-    // If we haven't already made an ask query yet this request.
-    // This is to avoid duplicate calls showing up in [24]7.ai tracking.
-    if (!isset($GLOBALS['ask_query_response'][$searchTerm][$source])) {
-      // Get Answers.
-      $answers = $this->answersClient->askQuery($searchTerm, $source);
-      // Save ask response in globals for use later in the request.
-      $GLOBALS['ask_query_response'][$searchTerm][$source] = $answers;
+    // If a suggested question was used.
+    if (isset($_GET['suggestion_id']) && $_GET['suggestion_id'] != '') {
+      $answers = $this->answersClient->getResponse($_GET['suggestion_id'], $source);
     }
-    // If we've already made this ask query this request.
-    else {
-      $answers = $GLOBALS['ask_query_response'][$searchTerm][$source];
+
+    // If the question was manually entered or the suggestion id was invalid.
+    if (!isset($answers) || !$answers) {
+      // If we haven't already made an ask query yet this request.
+      // This is to avoid duplicate calls showing up in [24]7.ai tracking.
+      if (!isset($GLOBALS['ask_query_response'][$searchTerm][$source])) {
+        // Get Answers.
+        $answers = $this->answersClient->askQuery($searchTerm, $source);
+        // Save ask response in globals for use later in the request.
+        $GLOBALS['ask_query_response'][$searchTerm][$source] = $answers;
+      }
+      // If we've already made this ask query this request.
+      else {
+        $answers = $GLOBALS['ask_query_response'][$searchTerm][$source];
+      }
     }
 
     // Add "Top Question" to render array.
@@ -151,6 +159,7 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
         '#cache'      => [
           'contexts' => [
             'url.query_args:search',
+            'url.query_args:suggestion_id',
           ],
         ],
       ];
