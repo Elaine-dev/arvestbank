@@ -7,6 +7,7 @@ module:
   arvestbank_ask_arvest: 0
   arvestbank_associate_category: 0
   arvestbank_branch_locations: 0
+  arvestbank_browsertest: 0
   arvestbank_calculators: 0
   arvestbank_external_login: 0
   arvestbank_menus: 0
