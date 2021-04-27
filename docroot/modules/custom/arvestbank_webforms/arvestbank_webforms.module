@@ -54,9 +54,100 @@ function arvestbank_webforms_form_alter(&$form, FormStateInterface $form_state, 
       $form['#validate'][] = '_arvestbank_webforms_auto_warranty_validate';
       break;
 
+    // Equipment Finance form and test form.
+    case 'webform_submission_arvest_equipment_finance_credit__add_form':
+    case 'webform_submission_arvest_equipment_finance_credit__test_form':
+      // Add validation function.
+      $form['#validate'][] = '_arvestbank_webforms_equipment_finance_validate';
+      break;
+
   }
 
   return $form;
+
+}
+
+/**
+ * Validate function for the Equipment Finance Form.
+ *
+ * @param array $form
+ *   The form array passed by reference.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   The form state object.
+ */
+function _arvestbank_webforms_equipment_finance_validate(array &$form, FormStateInterface $form_state) {
+
+  // Define custom composite fields for regex validation.
+  $customCompositeFieldRegexValidationDefinitions = [
+    'principal' => [
+      'home_phone' => [
+        'regex' => '/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/',
+        'error_message' => 'Please enter a valid phone number.',
+      ],
+    ],
+    'loans_leases' => [
+      'phone' => [
+        'regex' => '/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/',
+        'error_message' => 'Please enter a valid phone number.',
+      ],
+    ],
+    'bank_references' => [
+      'phone' => [
+        'regex' => '/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/',
+        'error_message' => 'Please enter a valid phone number.',
+      ],
+    ],
+    'trade_references' => [
+      'phone' => [
+        'regex' => '/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/',
+        'error_message' => 'Please enter a valid phone number.',
+      ],
+    ],
+  ];
+
+  // Get values submitted by the user.
+  $enteredValues = $form_state->getValues();
+
+  // Loop over composite fields.
+  foreach ($customCompositeFieldRegexValidationDefinitions as $customCompositeField => $regexValidations) {
+
+    // If this field has values.
+    if (isset($enteredValues[$customCompositeField]) && count($enteredValues[$customCompositeField])) {
+
+      // Loop over the subfields we want to validate.
+      foreach ($regexValidations as $subFieldToValidate => $validationInfo) {
+
+        // Loop over the multiple values for the composite field.
+        foreach ($enteredValues[$customCompositeField] as $compositeFieldIndex => $compositeFieldValue) {
+
+          // If the subfield has a value.
+          if (
+            isset($enteredValues[$customCompositeField][$compositeFieldIndex][$subFieldToValidate])
+            && $enteredValues[$customCompositeField][$compositeFieldIndex][$subFieldToValidate] != ''
+          ) {
+            // Get the value we want to validate.
+            $fieldValueToValidate = $enteredValues[$customCompositeField][$compositeFieldIndex][$subFieldToValidate];
+            // Perform the regex match.
+            preg_match($validationInfo['regex'], $fieldValueToValidate, $matches);
+            // If we didn't get a match on the whole entered value.
+            if (
+              !count($matches)
+              || $matches[0] != $fieldValueToValidate
+            ) {
+              $form_state->setErrorByName(
+                $customCompositeField . '][' . $subFieldToValidate,
+                $validationInfo['error_message']
+              );
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+  }
 
 }
 
