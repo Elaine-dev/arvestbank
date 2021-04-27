@@ -12,7 +12,7 @@ dependencies:
 id: sidebar_menu_top_menu
 theme: arvestbank_theme
 region: dx8_hidden
-weight: 8
+weight: 10
 provider: null
 plugin: 'menu_block:top-menu'
 settings:

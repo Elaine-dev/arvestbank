@@ -10,7 +10,7 @@ dependencies:
 id: branchlocatorform
 theme: arvestbank_theme
 region: dx8_hidden
-weight: -7
+weight: -9
 provider: null
 plugin: branch_locator
 settings:
