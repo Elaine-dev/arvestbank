@@ -35,6 +35,7 @@ modules:
   prod:
     enable: [shield, acquia_connector]
     uninstall: [dblog, devel, views_ui, qa_accounts]
-frontend-reqs:
-    dir: ${docroot}/themes/custom/arvestbank_theme
-    command: 'npm install'
+command-hooks:
+  frontend-reqs:
+    dir: '${repo.root}'
+    command: ./scripts/frontend-setup.sh
