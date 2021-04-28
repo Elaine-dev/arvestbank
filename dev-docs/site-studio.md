@@ -4,16 +4,13 @@ Documentation for the Site Studio Arvest build.
 
 ## Before Development
 
-BLT automatically incorporates the latest Site Studio packages through the [BLT Site Studio plugin](https://github.com/davidtrainer/blt-site-studio). Just ensure you setup or sync before development.
   ```
-  $ blt setup 
-  or 
   $ blt sync
   ``` 
 
 ## After Development
 
-Export your Site Studio packages to commit your changes. Create a new package or edit an existing package.
+Export your Site Studio packages to commit your changes. Create a new package or edit an existing package in the admin UI.
 
 ### New Package
 1. Navigate to 'Sync packages' in the Admin UI: /admin/cohesion/sync/packages
@@ -85,6 +82,15 @@ Export your Site Studio packages to commit your changes. Create a new package or
 9. Add config file(s) to git and commit.
 
 
+
+## Deployment Steps for Site Studio Packages 
+1. After code is merged go to the production site and go to https://arvestbank.prod.acquia-sites.com/admin/cohesion/sync/import
+2. Import all package updates from the code base
+3. packages must have 777 perms so check the perms first
+4. sometimes you have to go into the style/component/template and hit resave or the styles wont show up
+5. sometimes the file wont import `ssh arvestbank.prod@arvestbank.ssh.prod.acquia-sites.com`, navigate to /mnt/tmp/arvestbank and `rm -rf cohesion_sync_package_*`
+
+
 ## More Resources
 - Partial configuration export documentation:
 https://sitestudiodocs.acquia.com/6.5/user-guide/partial-configuration-export
@@ -93,10 +99,7 @@ https://sitestudiodocs.acquia.com/6.5/user-guide/partial-configuration-export
 ### Site Studio Drush Commands
 
 If you need finer control of Site Studio assets, use the commands below.
-* `drush cohesion:import` - Import assets from the API
 * `drush cohesion:rebuild` - Re-save all Site Studio settings, styles and templates.
-* `drush sync:import --overwrite-all` - Imports all configuration from the sync folder and overwrite existing Site Studio configuration.
-* `drush sync:import --keep-all` - Imports all Site Studio configuration from the sync folder and keeps existing Site Studio configuration and only imports new configuration.
 
 
 ## Coding Standards 
