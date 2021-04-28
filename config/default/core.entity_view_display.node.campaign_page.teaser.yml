@@ -1,0 +1,23 @@
+uuid: c67d6024-22a6-4091-b582-5eb79528bb45
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.campaign_page.field_layout_canvas
+    - node.type.campaign_page
+  module:
+    - user
+id: node.campaign_page.teaser
+targetEntityType: node
+bundle: campaign_page
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_layout_canvas: true
+  search_api_excerpt: true
