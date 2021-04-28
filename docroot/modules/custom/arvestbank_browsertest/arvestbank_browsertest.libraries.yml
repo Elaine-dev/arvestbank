@@ -1,0 +1,7 @@
+browsertest_scripts:
+  js:
+    js/browser_detect.js: {}
+    js/browsertest.js: {}
+  css:
+    theme:
+      css/browsertest.css: {}

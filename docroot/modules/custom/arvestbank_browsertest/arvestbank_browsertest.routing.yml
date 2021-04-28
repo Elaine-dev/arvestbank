@@ -1,0 +1,7 @@
+arvestbank_browsertest.browser_test_controller_render:
+  path: '/personal/bank/online/browsertest'
+  defaults:
+    _controller: '\Drupal\arvestbank_browsertest\Controller\BrowserTestController::render'
+    _title: 'Arvest: Personal: Bank: Online Services: Browser Diagnostics'
+  requirements:
+    _permission: 'access content'
