@@ -299,7 +299,7 @@ content:
       entity_browser: dam_image_entity_browser
       field_widget_display: rendered_entity
       field_widget_display_settings:
-        view_mode: full_width_slideshow
+        view_mode: full
       field_widget_edit: true
       field_widget_remove: true
       selection_mode: selection_append
@@ -322,7 +322,7 @@ content:
       entity_browser: dam_image_entity_browser
       field_widget_display: rendered_entity
       field_widget_display_settings:
-        view_mode: default
+        view_mode: full
       field_widget_edit: true
       field_widget_remove: true
       selection_mode: selection_append
@@ -523,7 +523,7 @@ content:
     type: entity_browser_entity_reference
     weight: 17
     settings:
-      entity_browser: dam_document_browser
+      entity_browser: dam_image_entity_browser
       field_widget_display: rendered_entity
       field_widget_display_settings:
         view_mode: full_width_slideshow
