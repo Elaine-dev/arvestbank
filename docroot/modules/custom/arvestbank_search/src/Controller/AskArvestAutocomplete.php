@@ -54,10 +54,11 @@ class AskArvestAutocomplete extends ControllerBase {
 
     // Loop over raw suggestions.
     foreach ($rawSuggestions as $rawSuggestion) {
-      // Add to autocomplete suggestions.
+      // Add to autocomplete suggestion.
+      // Value is replaced with the label in js before displaying.
       $results[] = [
-        'value' => strip_tags($rawSuggestion['label']),
-        'label' => $rawSuggestion['label'],
+        'value' => $rawSuggestion['secret'],
+        'label' => html_entity_decode(strip_tags($rawSuggestion['label'])),
       ];
     }
 

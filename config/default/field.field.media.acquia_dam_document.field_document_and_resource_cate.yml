@@ -12,7 +12,7 @@ entity_type: media
 bundle: acquia_dam_document
 label: 'Document and Resource category'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

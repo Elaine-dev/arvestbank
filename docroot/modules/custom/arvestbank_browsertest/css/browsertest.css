@@ -1,0 +1,14 @@
+#browsertest .browsertest-row {
+  clear: both;
+}
+#browsertest .browsertest-label {
+  display: inline-block;
+  width: 200px;
+}
+#browsertest .browsertest-value {
+  display: inline-block;
+  width: 300px;
+}
+#browsertest .browsertest-value.negative {
+  color: red;
+}

@@ -12,5 +12,5 @@ user-tracking:
   version: 1.x
   js:
     js/track-user.js: {}
-    dependencies:
-      - core/jquery
+  dependencies:
+    - core/jquery

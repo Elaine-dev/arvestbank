@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.dam_document_browser
+    - entity_browser.browser.dam_image_entity_browser
     - field.field.node.page.body
     - field.field.node.page.field_account_disclosure_informa
     - field.field.node.page.field_button_links
@@ -120,7 +120,7 @@ content:
     type: entity_browser_entity_reference
     weight: 2
     settings:
-      entity_browser: dam_document_browser
+      entity_browser: dam_image_entity_browser
       field_widget_display: label
       field_widget_edit: true
       field_widget_remove: true
