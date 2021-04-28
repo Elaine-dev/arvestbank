@@ -149,15 +149,16 @@ class AnswersClient {
   /**
    * Queries the SOAP "ask" endpoint for answers.
    *
-   * @param $question
+   * @param string $question
    *   The question to get answers for.
    * @param int $typeId
    *   Same as "source" from REST API, whence the question came.
-   *   @see https://engage.247.ai/docportal/Content/Answers/APIs/Set-Up-Question-Completion-Own-Servers.htm?Highlight=typeId
+   *   See https://engage.247.ai/docportal/Content/Answers/APIs/Set-Up-Question-Completion-Own-Servers.htm?Highlight=typeId.
    *
    * @return mixed
+   *   The response from the ask SOAP endpoint.
    */
-  public function askQuery($question, $typeId = 0) {
+  public function askQuery(string $question, $typeId = 0) {
 
     // Get soap endpoint from config.
     $intelliresponseEndpoint = $this->askArvestConfig->get('intelliresponse_soap_endpoint');
@@ -179,6 +180,42 @@ class AnswersClient {
     // Make request and return result.
     // The third argument is xml namespace and is a misnomer on [24]7.ai's side.
     return $soapClient->call('ask', $requestArguments, '/com/intelliresponse/search/user', '');
+
+  }
+
+  /**
+   * Gets a "response" from a response id.
+   *
+   * @param int $responseId
+   *   The id of the response you want to retrieve.
+   * @param int $typeId
+   *   Same as "source" from REST API, whence the question came.
+   *
+   * @return mixed
+   *   The response from the ask SOAP endpoint.
+   */
+  public function getResponse(int $responseId, $typeId = 0) {
+
+    // Get soap endpoint from config.
+    $intelliresponseEndpoint = $this->askArvestConfig->get('intelliresponse_soap_endpoint');
+
+    // Create Soap Client.
+    $soapClient = new \nusoap_client($intelliresponseEndpoint);
+    $soapClient->soap_defencoding = 'UTF-8';
+    $soapClient->decode_utf8 = FALSE;
+
+    // Create object containing arguments.
+    $requestArguments = [
+      'interfaceId' => 2,
+      'responseId' => $responseId,
+      'channelId' => 0,
+      'typeId' => $typeId,
+      'sessionId' => $this->getUserSessionId(),
+    ];
+
+    // Make request and return result.
+    // The third argument is xml namespace and is a misnomer on [24]7.ai's side.
+    return $soapClient->call('getResponse', $requestArguments, '/com/intelliresponse/search/user', '');
 
   }
 
