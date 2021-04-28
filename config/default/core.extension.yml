@@ -11,6 +11,7 @@ module:
   arvestbank_external_login: 0
   arvestbank_menus: 0
   arvestbank_search: 0
+  arvestbank_views: 0
   arvestbank_webforms: 0
   automated_cron: 0
   better_exposed_filters: 0

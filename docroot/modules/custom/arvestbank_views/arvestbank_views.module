@@ -1,0 +1,197 @@
+<?php
+
+/**
+ * @file
+ * Contains arvestbank_view.module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Alters the view exposed filters.
+ */
+function arvestbank_views_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // If not the view we are looking, move on
+  $altered_forms = [
+    '/personal/invest/find-a-client-advisor',
+    '/personal/borrow/home-loans/servicing-center/find-a-lender',
+    '/personal/invest/trust-and-estate-services/find-a-trust-professional',
+  ];
+  if (!in_array($form['#action'], $altered_forms)) {
+    return FALSE;
+  }
+
+  // Return nodes based on the associate type.
+  $term_name = NULL;
+  $select_option = NULL;
+  switch ($form['#action']) {
+    case '/personal/invest/find-a-client-advisor':
+      $term_name = 'Advisors';
+      $select_option = 'Select Advisor';
+      break;
+    case '/personal/borrow/home-loans/servicing-center/find-a-lender':
+      $term_name = 'Lenders';
+      $select_option = 'Select Loan Officer';
+      break;
+    case '/personal/invest/trust-and-estate-services/find-a-trust-professional':
+      $term_name = 'Trust Officers';
+      $select_option = 'Select Name...';
+  }
+
+  $term = \Drupal::entityTypeManager()
+    ->getStorage('taxonomy_term')
+    ->loadByProperties(['name' => ($term_name)]);
+  $termId = reset($term)->id();
+
+  // Query nodes
+  $storage = Drupal::getContainer()
+    ->get('entity_type.manager')
+    ->getStorage('node');
+  $nids = $storage->getQuery();
+
+  // Gather published associate nodes and sort by title
+  $nids = $nids->condition('type', 'associate')
+    ->condition('status', 1)
+    ->condition('field_associate_type', $termId, '=')
+    ->sort('title')
+    ->execute();
+
+  // Start building out the options for our select list
+  $associate_options = [];
+  $location_options = [];
+  $locations = [];
+  $field_name = '';
+  $empty_option = NULL;
+  $nodes = $storage->loadMultiple($nids);
+
+  // Push titles into select list
+  if (!empty($nodes)) {
+    foreach ($nodes as $node) {
+      $title = $node->getTitle();
+      $location = $node->get('field_location')->getString();
+      $associate_options[$title] = $title;
+      $locations[$location] = $location;
+    }
+
+    // Format the location.
+    foreach ($locations as $location) {
+      $exploded_location = explode(',', $location);
+      // Convert the state name to the abbreviation.
+      $state = convertState(trim($exploded_location[1]));
+      $location_options[$location] = $state . ' - ' . $exploded_location[0];
+    }
+  }
+
+  $select_fields = [
+    'field_associate',
+    'field_location',
+  ];
+
+  foreach ($select_fields as $select_field) {
+    $options = [];
+    if ($select_field === 'field_associate') {
+      $options = $associate_options;
+      $empty_option = $select_option;
+      $field_name = 'title';
+    }
+    elseif ($select_field === 'field_location') {
+      $options = $location_options;
+      $empty_option = 'Select Location';
+      $field_name = 'field_location_value';
+    }
+
+    // Start building out our new form elements
+    $form[$field_name]['#type'] = 'select';
+    $form[$field_name]['#multiple'] = FALSE;
+
+    // Specify the empty option for our select list
+    $form[$field_name]['#empty_option'] = $empty_option;
+
+    // Add the $options from above to our select list
+    $options = [NULL => $empty_option] + $options;
+    $form[$field_name]['#options'] = $options;
+    unset($form[$field_name]['#size']);
+  }
+}
+
+// Function to convert state names to state abbreviations.
+function convertState($name) {
+  $states = [
+    ['name'=>'Alabama', 'abbr'=>'AL'],
+    ['name'=>'Alaska', 'abbr'=>'AK'],
+    ['name'=>'Arizona', 'abbr'=>'AZ'],
+    ['name'=>'Arkansas', 'abbr'=>'AR'],
+    ['name'=>'California', 'abbr'=>'CA'],
+    ['name'=>'Colorado', 'abbr'=>'CO'],
+    ['name'=>'Connecticut', 'abbr'=>'CT'],
+    ['name'=>'Delaware', 'abbr'=>'DE'],
+    ['name'=>'Florida', 'abbr'=>'FL'],
+    ['name'=>'Georgia', 'abbr'=>'GA'],
+    ['name'=>'Hawaii', 'abbr'=>'HI'],
+    ['name'=>'Idaho', 'abbr'=>'ID'],
+    ['name'=>'Illinois', 'abbr'=>'IL'],
+    ['name'=>'Indiana', 'abbr'=>'IN'],
+    ['name'=>'Iowa', 'abbr'=>'IA'],
+    ['name'=>'Kansas', 'abbr'=>'KS'],
+    ['name'=>'Kentucky', 'abbr'=>'KY'],
+    ['name'=>'Louisiana', 'abbr'=>'LA'],
+    ['name'=>'Maine', 'abbr'=>'ME'],
+    ['name'=>'Maryland', 'abbr'=>'MD'],
+    ['name'=>'Massachusetts', 'abbr'=>'MA'],
+    ['name'=>'Michigan', 'abbr'=>'MI'],
+    ['name'=>'Minnesota', 'abbr'=>'MN'],
+    ['name'=>'Mississippi', 'abbr'=>'MS'],
+    ['name'=>'Missouri', 'abbr'=>'MO'],
+    ['name'=>'Montana', 'abbr'=>'MT'],
+    ['name'=>'Nebraska', 'abbr'=>'NE'],
+    ['name'=>'Nevada', 'abbr'=>'NV'],
+    ['name'=>'New Hampshire', 'abbr'=>'NH'],
+    ['name'=>'New Jersey', 'abbr'=>'NJ'],
+    ['name'=>'New Mexico', 'abbr'=>'NM'],
+    ['name'=>'New York', 'abbr'=>'NY'],
+    ['name'=>'North Carolina', 'abbr'=>'NC'],
+    ['name'=>'North Dakota', 'abbr'=>'ND'],
+    ['name'=>'Ohio', 'abbr'=>'OH'],
+    ['name'=>'Oklahoma', 'abbr'=>'OK'],
+    ['name'=>'Oregon', 'abbr'=>'OR'],
+    ['name'=>'Pennsylvania', 'abbr'=>'PA'],
+    ['name'=>'Rhode Island', 'abbr'=>'RI'],
+    ['name'=>'South Carolina', 'abbr'=>'SC'],
+    ['name'=>'South Dakota', 'abbr'=>'SD'],
+    ['name'=>'Tennessee', 'abbr'=>'TN'],
+    ['name'=>'Texas', 'abbr'=>'TX'],
+    ['name'=>'Utah', 'abbr'=>'UT'],
+    ['name'=>'Vermont', 'abbr'=>'VT'],
+    ['name'=>'Virginia', 'abbr'=>'VA'],
+    ['name'=>'Washington', 'abbr'=>'WA'],
+    ['name'=>'West Virginia', 'abbr'=>'WV'],
+    ['name'=>'Wisconsin', 'abbr'=>'WI'],
+    ['name'=>'Wyoming', 'abbr'=>'WY'],
+    ['name'=>'Virgin Islands', 'abbr'=>'V.I.'],
+    ['name'=>'Guam', 'abbr'=>'GU'],
+    ['name'=>'Puerto Rico', 'abbr'=>'PR']
+  ];
+
+  $return = false;
+  $strlen = strlen($name);
+
+  foreach ($states as $state) :
+    if ($strlen < 2) {
+      return false;
+    } elseif ($strlen == 2) {
+      if (strtolower($state['abbr']) == strtolower($name)) {
+        $return = $state['name'];
+        break;
+      }
+    } else {
+      if (strtolower($state['name']) == strtolower($name)) {
+        $return = strtoupper($state['abbr']);
+        break;
+      }
+    }
+  endforeach;
+
+  return $return;
+}
