@@ -15,23 +15,23 @@ Export your Site Studio packages to commit your changes. Create a new package or
 ### New Package
 1. Navigate to 'Sync packages' in the Admin UI: /admin/cohesion/sync/packages
 2. Click 'Add package' button: admin/cohesion/sync/packages/add
-3. Add helpful title and description. Example:
-    - Title: `Component One Column Layout `
-    - Machine name: `pack_component_one_column_layout`
+3. Add helpful title and description.
+    - Title: `<SITE STUDIO ITEM TYPE> <ITEM TITLE> `. Example: `Component One Column Layout`
+    - Machine name: (Automatic - adjust if necessary). Example: `pack_component_one_column_layout`
     - Description: 
       `A reusuable component for content with a 1 column layout.`
-
-      `Author: <YOUR NAME> / Last update: <CURENT DATE>`
-4. Scroll down to 'Package requirements' and select the Site Studio and Drupal entity to include in the package.
+      `Author: <YOUR NAME> / Last update: <CURRENT DATE>`
+4. Scroll to 'Package requirements' and select the Site Studio entity to include in the package.
 5. Click 'Build package' button. 
-6. Open 'Package contents' and remove all dependencies.
-7. Click 'Save package' button, which will trigger a download.
-8. Rename the downloaded file from `cohesion_base_styles_(heading_1)_heading-1.package.yml`
+6. Open 'Package contents' and only include the single Site Studio item you're exporting. If you have more than one item, create or edit a package for each one.
+7. Click 'Save package' button.
+8. Click 'Export package as file' button beside specific package. 
+9. Rename the downloaded file from `cohesion_sync_package_(pack_component_one_column_layout)_component-one-columnn-layout.package.yml`
   to 
-  `cohesion_base_styles_heading_1.package.yml_` Ensure your file has the trailing underscore.
-9. Place your file in your Site Studio config split directory:
-  `arvestbank/config/site_studio_sync/cohesion_base_styles.heading_1.yml_`
-10. Edit the package .yml file to remove dependencies. It should look similar to:
+  `cohesion_sync_package_component-one-columnn-layout.package.yml_` Ensure your file has the trailing underscore.
+10. Place your file in your Site Studio config split directory:
+  `arvestbank/config/`
+11. Edit the package .yml file to verify it contains no dependencies. It should look similar to:
   ```
   type: cohesion_base_styles
   export:
@@ -48,39 +48,14 @@ Export your Site Studio packages to commit your changes. Create a new package or
     selectable: false
     custom: null
   ```
-11. Add config file(s) to git and commit.
+12. Add config file(s) to git and commit.
 
 ### Existing package
 
 1. Navigate to 'Sync packages' in the Admin UI: /admin/cohesion/sync/packages
-2. Edit the package that will contain the updated code.
-3. Update the description with your name and today's date: `Author: <YOUR NAME> / Last update: <CURENT DATE>`
-4. `Author: <YOUR NAME> / Last update: <CURENT DATE>`
-5. Click 'Save package' button, which will trigger a download.
-6. Rename the downloaded file from `cohesion_base_styles_(heading_1)_heading-1.package.yml`
-  to 
-  `cohesion_base_styles_heading_1.package.yml_` Ensure your file has the trailing underscore.
-7. Place your file in your Site Studio config split directory:
-  `arvestbank/config/site_studio_sync/cohesion_base_styles.heading_1.yml_`
-8. Edit the package .yml file to remove dependencies. It should look similar to:
-  ```
-  type: cohesion_base_styles
-  export:
-    uuid: d5d047c7-041b-4cf5-9969-27c0352e7695
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: heading_1
-    label: 'Heading 1'
-    json_values: '{{ [json string] }}'
-    last_entity_update: entityupdate_0030
-    locked: false
-    modified: true
-    selectable: false
-    custom: null
-  ```
-9. Add config file(s) to git and commit.
-
+2. Edit the package that will contain the updated Site Studio item.
+3. Update the description with your name and today's date: `Author: <YOUR NAME> / Last update: <CURRENT DATE>`
+4. Follow the steps above from step 7.
 
 
 ## Deployment Steps for Site Studio Packages 
