@@ -86,7 +86,7 @@ class FAQBlock extends BlockBase implements ContainerFactoryPluginInterface {
           'max-age' => 0,
         ],
         'title' => [
-          '#markup' => '<h3>Most Frequently Asked Questions</h3>',
+          '#markup' => '<h2>Most Frequently Asked Questions</h2>',
         ],
         'questions' => [
           '#type'       => 'container',
