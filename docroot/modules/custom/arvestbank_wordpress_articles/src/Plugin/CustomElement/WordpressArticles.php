@@ -76,16 +76,37 @@ class WordpressArticles extends CustomElementPluginBase {
 
         // The key for the url field, could be obtained from component config.
         $urlFieldKey = 'afca44d5-3d32-44d3-aaef-d8e7574c26fd';
+        if (isset($componentInstanceFieldValues->$urlFieldKey)) {
+          // Get the selected Url.
+          $componentInstanceUrl = $componentInstanceFieldValues->$urlFieldKey;
+        }
 
-        // Get the selected Url.
-        $componentInstanceUrl = $componentInstanceFieldValues->$urlFieldKey;
+        // The key for the limit field, could be obtained from component config.
+        $limitFieldKey = 'b5204d60-c7d4-47f1-b319-864ce4d148db';
+        if (isset($componentInstanceFieldValues->$limitFieldKey)) {
+          $componentInstanceLimit = $componentInstanceFieldValues->$limitFieldKey;
+        }
+        else {
+          // Default to limit of 5.
+          $componentInstanceLimit = 5;
+        }
+
+        // The key for the title field, could be obtained from component config.
+        $titleFieldKey = '0dee765e-99e4-4ea4-a31a-fb57c3975df1';
+        if (isset($componentInstanceFieldValues->$titleFieldKey)) {
+          $componentInstanceTitle = $componentInstanceFieldValues->$titleFieldKey;
+        }
+        else {
+          // Default to title of "Latest News".
+          $componentInstanceTitle = 'Latest News';
+        }
 
         // If we have an endpoint to fetch.
         if ($componentInstanceUrl) {
           // Get wordpress articles service.
           $wordpressArticlesService = \Drupal::service('arvestbank_wordpress_articles.wordpress_articles_service');
           // Get render array to return.
-          $renderArray = $wordpressArticlesService->getRenderArray('xxx', $componentInstanceUrl, 2);
+          $renderArray = $wordpressArticlesService->getRenderArray($componentInstanceTitle, $componentInstanceUrl, $componentInstanceLimit);
         }
 
       }
