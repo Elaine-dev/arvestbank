@@ -11,13 +11,13 @@ id: media.acquia_dam_document.field_link
 field_name: field_link
 entity_type: media
 bundle: acquia_dam_document
-label: Link
-description: 'Link to a document that is not a pdf upload.'
+label: 'External Link'
+description: 'Link to a document that is not a pdf upload. Utilize this field when the document or resource is not stored in Acquia DAM.'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  link_type: 17
+  link_type: 16
   title: 2
 field_type: link

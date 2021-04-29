@@ -1,0 +1,23 @@
+uuid: 87025ba7-50d3-46d6-bb7c-ce3a3c78bf8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.article_education_article
+  module:
+    - link
+id: node.article_education_article.field_link
+field_name: field_link
+entity_type: node
+bundle: article_education_article
+label: 'External Link'
+description: 'A link to an externally hosted article.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link
