@@ -5,7 +5,10 @@
  * Contains arvestbank_view.module.
  */
 
+use Drupal\Component\Utility\UrlHelper;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -113,6 +116,46 @@ function arvestbank_views_form_views_exposed_form_alter(&$form, FormStateInterfa
     $options = [NULL => $empty_option] + $options;
     $form[$field_name]['#options'] = $options;
     unset($form[$field_name]['#size']);
+  }
+}
+
+/**
+ * Implements hook_views_prerenders().
+ *
+ * Alters the view results.
+ *
+ * @param \Drupal\views\ViewExecutable $view
+ */
+function arvestbank_views_views_post_execute(ViewExecutable $view) {
+  if ($view->id() === 'documents_and_resources' || $view->id() === 'education_details') {
+    foreach ($view->result as $key => $value) {
+      $link = $value->_entity->field_link->getValue();
+      if (!empty($link)) {
+        $link_value = $link[0]['uri'];
+        if (!$external = UrlHelper::isExternal($link_value)) {
+          break;
+        }
+        else {
+          $get_title = NULL;
+          $set_title = NULL;
+          switch($view->id()) {
+            case 'documents_and_resources':
+              $get_title = $value->media_field_data_name;
+              $set_title = 'name';
+              break;
+            case 'education_details':
+              $get_title = $value->node_field_data_title;
+              $set_title = 'title';
+              break;
+          }
+
+          $link_text = $get_title;
+          $url = Url::fromUri($link_value);
+          $updated_link = \Drupal::service('link_generator')->generate($link_text, $url);
+          $value->_entity->set($set_title, $updated_link);
+        }
+      }
+    }
   }
 }
 
