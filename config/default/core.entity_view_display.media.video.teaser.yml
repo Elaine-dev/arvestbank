@@ -10,22 +10,13 @@ dependencies:
     - field.field.media.video.field_video_time_length
     - media.type.video
   module:
-    - media
+    - media_video_micromodal
     - text
 id: media.video.teaser
 targetEntityType: media
 bundle: video
 mode: teaser
 content:
-  field_media_oembed_video:
-    type: oembed
-    label: visually_hidden
-    weight: 0
-    settings:
-      max_width: 0
-      max_height: 0
-    third_party_settings: {  }
-    region: content
   field_video_subtitle:
     type: text_default
     weight: 3
@@ -49,10 +40,17 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+  thumbnail:
+    type: micromodal_field_formatter
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   content_moderation_control: true
   created: true
   field_education_article_category: true
+  field_media_oembed_video: true
   search_api_excerpt: true
-  thumbnail: true
   uid: true

@@ -78,6 +78,7 @@ module:
   media: 0
   media_acquiadam: 0
   media_library: 0
+  media_video_micromodal: 0
   menu_block: 0
   menu_item_extras: 0
   menu_link_attributes: 0
