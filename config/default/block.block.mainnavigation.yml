@@ -23,7 +23,7 @@ settings:
   follow: false
   follow_parent: child
   level: 1
-  depth: 2
+  depth: 3
   expand: false
   parent: 'main:'
   suggestion: main

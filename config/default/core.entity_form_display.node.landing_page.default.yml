@@ -5,13 +5,18 @@ dependencies:
   config:
     - field.field.node.landing_page.body
     - field.field.node.landing_page.field_layout_
+    - field.field.node.landing_page.field_meta_tags
+    - field.field.node.landing_page.field_yoast_seo
     - node.type.landing_page
+    - workflows.workflow.editorial
   module:
     - cohesion_elements
     - content_moderation
+    - metatag
     - path
     - scheduler
     - text
+    - yoast_seo
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -19,7 +24,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 121
+    weight: 11
     settings:
       rows: 9
       summary_rows: 3
@@ -29,63 +34,70 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   field_layout_:
     type: cohesion_layout_builder_widget
-    weight: 122
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_meta_tags:
+    weight: 13
+    settings:
+      sidebar: true
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_yoast_seo:
+    weight: 14
+    settings:
+      body: body
+    third_party_settings: {  }
+    type: yoast_seo_widget
+    region: content
   moderation_state:
     type: moderation_state_default
-    weight: 100
+    weight: 9
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 15
-    region: content
-    third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 20
+    weight: 4
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 10
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 3
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
@@ -93,7 +105,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 1
     settings:
       match_operator: CONTAINS
       size: 60
@@ -103,13 +115,14 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 8
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
-hidden: {  }
+hidden:
+  promote: true

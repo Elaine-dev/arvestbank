@@ -9,5 +9,7 @@ is_admin: null
 permissions:
   - 'access administration pages'
   - 'access sitemap'
+  - 'use editorial transition in_review'
+  - 'use editorial transition unpublished'
   - 'view media'
   - 'view the administration theme'
