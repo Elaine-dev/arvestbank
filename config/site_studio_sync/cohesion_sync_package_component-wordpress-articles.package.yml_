@@ -1,0 +1,53 @@
+-
+  type: cohesion_sync_package
+  export:
+    uuid: 5bf9589f-5e1c-4d3a-8448-1a661d5b51c3
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: pack_component_wp_articles
+    label: 'Component Wordpress Articles'
+    description: 'A component to display wordpress articles.'
+    excluded_entity_types: '[]'
+    settings: '{"87f78e59-5773-4194-b8f4-653f636b7548":{"type":"cohesion_component","items":{"87f78e59-5773-4194-b8f4-653f636b7548":{"type":"cohesion_component"},"e5796afe-7ac5-40fc-9757-799c37368d9c":{"type":"cohesion_component_category"}},"checked":true}}'
+-
+  type: cohesion_component
+  export:
+    uuid: 87f78e59-5773-4194-b8f4-653f636b7548
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: cpt_wordpress_articles
+    label: 'Wordpress Articles'
+    json_values: '{"canvas":[{"type":"item","uid":"site_studio_wordpress_articles_element","isCustom":true,"title":"Wordpress Articles","selected":false,"status":{"collapsed":true},"parentUid":"root","uuid":"1d251ef0-015b-4218-967d-c5b074bc1b9f","isContainer":false,"children":[]}],"componentForm":[{"type":"form-field","uid":"form-input","title":"Input","translate":true,"status":{"collapsed":false},"uuid":"afca44d5-3d32-44d3-aaef-d8e7574c26fd","parentUid":"root","isContainer":false,"children":[]}],"mapper":{"1d251ef0-015b-4218-967d-c5b074bc1b9f":{}},"model":{"1d251ef0-015b-4218-967d-c5b074bc1b9f":{"settings":{}},"afca44d5-3d32-44d3-aaef-d8e7574c26fd":{"settings":{"title":"Wordpress Endpoint","schema":{"type":"string","escape":true,"required":true},"machineName":"wordpress-endpoint","tooltipPlacement":"auto right","placeholder":"https:\/\/share.arvest.com\/feed\/json"},"contextVisibility":{"condition":"ALL"}}},"previewModel":{"afca44d5-3d32-44d3-aaef-d8e7574c26fd":{}},"variableFields":{"afca44d5-3d32-44d3-aaef-d8e7574c26fd":[]},"meta":{"fieldHistory":[{"uuid":"afca44d5-3d32-44d3-aaef-d8e7574c26fd","type":"form-input","machineName":"wordpress-endpoint"}]}}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    category: cpt_cat_dynamic_components
+    preview_image: ''
+    has_quick_edit: true
+    entity_type_access: {  }
+    bundle_access: {  }
+    twig_template: component--cohesion-cpt-wordpress-articles
+    weight: 0
+-
+  type: cohesion_component_category
+  export:
+    uuid: e5796afe-7ac5-40fc-9757-799c37368d9c
+    langcode: en
+    status: true
+    dependencies: {  }
+    _core:
+      default_config_hash: 8oroYAuHNTHgB3x8YPAK3PcwPwTg3ltFUYntoK9iyX4
+    id: cpt_cat_dynamic_components
+    label: 'Dynamic components'
+    json_values: '{}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: false
+    selectable: true
+    class: category-2
+    weight: -5
