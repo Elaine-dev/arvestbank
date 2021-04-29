@@ -10,8 +10,8 @@ dependencies:
     - arvestbank_theme
 id: alternatesearchbarexposedfiltersblock
 theme: arvestbank_theme
-region: content
-weight: 0
+region: dx8_hidden
+weight: -14
 provider: null
 plugin: alt_search_bar_exposed_filters_block
 settings:

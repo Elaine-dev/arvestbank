@@ -11,6 +11,7 @@ dependencies:
     - search_api.index.database_search_index
   module:
     - arvestbank_search
+    - cohesion
     - file
     - search_api
     - text
@@ -69,7 +70,10 @@ display:
             previous: ‹‹
             next: ››
       style:
-        type: default
+        type: cohesion_layout
+        options:
+          views_template: view_tpl_search_results_view_tem
+          master_template: __none__
       row:
         type: fields
         options:
