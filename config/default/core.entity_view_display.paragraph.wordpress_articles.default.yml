@@ -1,0 +1,41 @@
+uuid: 6a3fb915-560e-44c1-bab0-7f33dda8439f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wordpress_articles.field_article_
+    - field.field.paragraph.wordpress_articles.field_feed_url
+    - field.field.paragraph.wordpress_articles.field_title
+    - paragraphs.paragraphs_type.wordpress_articles
+id: paragraph.wordpress_articles.default
+targetEntityType: paragraph
+bundle: wordpress_articles
+mode: default
+content:
+  field_article_:
+    weight: 2
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_feed_url:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

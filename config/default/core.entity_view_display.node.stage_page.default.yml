@@ -39,8 +39,10 @@ dependencies:
     - field.field.node.stage_page.field_slide_one
     - field.field.node.stage_page.field_slide_three
     - field.field.node.stage_page.field_slide_two
+    - field.field.node.stage_page.field_wordpress_articles
     - node.type.stage_page
   module:
+    - entity_reference_revisions
     - link
     - metatag
     - options
@@ -52,19 +54,19 @@ bundle: stage_page
 mode: default
 content:
   body:
-    weight: 102
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   content_moderation_control:
-    weight: -20
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
   field_block_button:
-    weight: 103
+    weight: 4
     label: hidden
     settings:
       trim_length: 80
@@ -76,7 +78,7 @@ content:
     type: link
     region: content
   field_block_title:
-    weight: 101
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
@@ -85,7 +87,7 @@ content:
     region: content
   field_icon_four:
     type: entity_reference_entity_view
-    weight: 118
+    weight: 16
     label: hidden
     settings:
       view_mode: full
@@ -93,7 +95,7 @@ content:
     third_party_settings: {  }
     region: content
   field_icon_four_text:
-    weight: 119
+    weight: 17
     label: hidden
     settings:
       link_to_entity: false
@@ -102,7 +104,7 @@ content:
     region: content
   field_icon_one:
     type: entity_reference_entity_view
-    weight: 109
+    weight: 7
     label: hidden
     settings:
       view_mode: full_width_slideshow
@@ -110,7 +112,7 @@ content:
     third_party_settings: {  }
     region: content
   field_icon_one_text:
-    weight: 110
+    weight: 8
     label: hidden
     settings:
       link_to_entity: false
@@ -119,7 +121,7 @@ content:
     region: content
   field_icon_three:
     type: entity_reference_entity_view
-    weight: 115
+    weight: 13
     label: hidden
     settings:
       view_mode: default
@@ -127,7 +129,7 @@ content:
     third_party_settings: {  }
     region: content
   field_icon_three_text:
-    weight: 116
+    weight: 14
     label: hidden
     settings:
       link_to_entity: false
@@ -136,7 +138,7 @@ content:
     region: content
   field_icon_two:
     type: entity_reference_entity_view
-    weight: 112
+    weight: 10
     label: hidden
     settings:
       view_mode: default
@@ -144,7 +146,7 @@ content:
     third_party_settings: {  }
     region: content
   field_icon_two_text:
-    weight: 113
+    weight: 11
     label: hidden
     settings:
       link_to_entity: false
@@ -152,21 +154,21 @@ content:
     type: string
     region: content
   field_meta_tags:
-    weight: 120
+    weight: 18
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
   field_slide1_cta_color:
-    weight: 124
+    weight: 22
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
   field_slide1_cta_link:
-    weight: 123
+    weight: 21
     label: hidden
     settings:
       trim_length: 80
@@ -178,14 +180,14 @@ content:
     type: link
     region: content
   field_slide1_cta_position:
-    weight: 125
+    weight: 23
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
   field_slide1_cta_text_1:
-    weight: 121
+    weight: 19
     label: hidden
     settings:
       link_to_entity: false
@@ -193,7 +195,7 @@ content:
     type: string
     region: content
   field_slide1_cta_text_2:
-    weight: 122
+    weight: 20
     label: hidden
     settings:
       link_to_entity: false
@@ -201,14 +203,14 @@ content:
     type: string
     region: content
   field_slide2_cta_color:
-    weight: 129
+    weight: 27
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
   field_slide2_cta_link:
-    weight: 128
+    weight: 26
     label: hidden
     settings:
       trim_length: 80
@@ -220,14 +222,14 @@ content:
     type: link
     region: content
   field_slide2_cta_position:
-    weight: 130
+    weight: 28
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
   field_slide2_cta_text_1:
-    weight: 126
+    weight: 24
     label: hidden
     settings:
       link_to_entity: false
@@ -235,7 +237,7 @@ content:
     type: string
     region: content
   field_slide2_cta_text_2:
-    weight: 127
+    weight: 25
     label: hidden
     settings:
       link_to_entity: false
@@ -243,14 +245,14 @@ content:
     type: string
     region: content
   field_slide3_cta_color:
-    weight: 134
+    weight: 32
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
   field_slide3_cta_link:
-    weight: 133
+    weight: 31
     label: hidden
     settings:
       trim_length: 80
@@ -262,14 +264,14 @@ content:
     type: link
     region: content
   field_slide3_cta_position:
-    weight: 135
+    weight: 33
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
   field_slide3_cta_text_1:
-    weight: 131
+    weight: 29
     label: hidden
     settings:
       link_to_entity: false
@@ -277,7 +279,7 @@ content:
     type: string
     region: content
   field_slide3_cta_text_2:
-    weight: 132
+    weight: 30
     label: hidden
     settings:
       link_to_entity: false
@@ -285,14 +287,14 @@ content:
     type: string
     region: content
   field_slide4_cta_color:
-    weight: 139
+    weight: 37
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
   field_slide4_cta_link:
-    weight: 138
+    weight: 36
     label: hidden
     settings:
       trim_length: 80
@@ -304,14 +306,14 @@ content:
     type: link
     region: content
   field_slide4_cta_position:
-    weight: 140
+    weight: 38
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
   field_slide4_cta_text_1:
-    weight: 136
+    weight: 34
     label: hidden
     settings:
       link_to_entity: false
@@ -319,7 +321,7 @@ content:
     type: string
     region: content
   field_slide4_cta_text_2:
-    weight: 137
+    weight: 35
     label: hidden
     settings:
       link_to_entity: false
@@ -328,7 +330,7 @@ content:
     region: content
   field_slide_four:
     type: entity_reference_entity_view
-    weight: 117
+    weight: 15
     label: hidden
     settings:
       view_mode: full_width_slideshow
@@ -337,7 +339,7 @@ content:
     region: content
   field_slide_one:
     type: entity_reference_entity_view
-    weight: 108
+    weight: 6
     label: hidden
     settings:
       view_mode: full_width_slideshow
@@ -346,7 +348,7 @@ content:
     region: content
   field_slide_three:
     type: entity_reference_entity_view
-    weight: 114
+    weight: 12
     label: hidden
     settings:
       view_mode: full_width_slideshow
@@ -355,15 +357,24 @@ content:
     region: content
   field_slide_two:
     type: entity_reference_entity_view
-    weight: 111
+    weight: 9
     label: hidden
     settings:
       view_mode: full_width_slideshow
       link: false
     third_party_settings: {  }
     region: content
+  field_wordpress_articles:
+    type: entity_reference_revisions_entity_view
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   links:
-    weight: 100
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }

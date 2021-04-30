@@ -1,0 +1,19 @@
+uuid: 6ce1988d-7c48-4f3a-ab66-72e05bfd9050
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_feed_url
+    - paragraphs.paragraphs_type.wordpress_articles
+id: paragraph.wordpress_articles.field_feed_url
+field_name: field_feed_url
+entity_type: paragraph
+bundle: wordpress_articles
+label: 'Feed Url'
+description: "Enter the feed url from which to show articles.<br/>\r\nie: https://share.arvest.com/category/community/feed/json"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

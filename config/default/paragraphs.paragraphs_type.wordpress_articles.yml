@@ -1,0 +1,10 @@
+uuid: e2866e9f-f4c1-492c-80f4-33377b69b4ae
+langcode: en
+status: true
+dependencies: {  }
+id: wordpress_articles
+label: 'Wordpress Articles'
+icon_uuid: null
+icon_default: null
+description: 'Outputs links to articles from the share.arvest.com wordpress site.'
+behavior_plugins: {  }

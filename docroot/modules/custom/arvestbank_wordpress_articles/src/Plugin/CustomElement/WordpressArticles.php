@@ -111,10 +111,17 @@ class WordpressArticles extends CustomElementPluginBase {
 
       }
 
-
     }
 
-    $test = '';
+    // Add cache tag to render array.
+    if (isset($cohesionLayoutEntity) && $cohesionLayoutEntity) {
+      $renderArray['#cache'] = [
+        'tags' => [
+          'cohesion_layout:' . $cohesionLayoutEntity->id(),
+        ],
+        'max-age' => 86400,
+      ];
+    }
 
     // Return the render array.
     return $renderArray;
