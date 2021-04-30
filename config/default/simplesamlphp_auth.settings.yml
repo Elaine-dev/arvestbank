@@ -14,7 +14,13 @@ register_users: true
 allow:
   set_drupal_pwd: true
   default_login: true
-  default_login_roles: {  }
+  default_login_roles:
+    reviewer: reviewer
+    authenticated: authenticated
+    contributor: contributor
+    site_editor: site_editor
+    domain_admin: domain_admin
+    enterprise_admin: enterprise_admin
   default_login_users: '1'
 logout_goto_url: ''
 user_register_original: visitors_admin_approval
