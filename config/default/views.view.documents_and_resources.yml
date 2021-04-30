@@ -283,19 +283,14 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.media.field_document_and_resource_cate'
-  documents_and_resources:
-    display_plugin: page
-    id: documents_and_resources
-    display_title: Page
+  block_1:
+    display_plugin: block
+    id: block_1
+    display_title: Block
     position: 1
     display_options:
       display_extenders: {  }
-      path: documents-and-resources
-      menu:
-        type: normal
-        title: 'Documents and Resources'
-        menu_name: footer
-        weight: -47
+      block_description: 'Documents and Resources'
     cache_metadata:
       max-age: -1
       contexts:

@@ -1,0 +1,357 @@
+-
+  type: cohesion_sync_package
+  export:
+    uuid: 08ddec3b-b013-451b-b25d-d3e20059cb84
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: pack_pack_component_doc_reso_blk
+    label: 'Documents and Resources Component'
+    description: "Documents and resources component to display the view block.\r\nAuthor: Scott Earnest / Last update: 04/28/2021"
+    excluded_entity_types: '[]'
+    settings: '{"bb0dbb0d-aeee-4547-a0fe-d83a093b6400":{"type":"cohesion_component","items":{"bb0dbb0d-aeee-4547-a0fe-d83a093b6400":{"type":"cohesion_component"},"a58aa7af-aa5e-466b-acf2-df36074658ae":{"type":"cohesion_component_category"},"3a58648a-f514-405e-b715-304364bcc3b0":{"type":"view"}},"checked":true}}'
+-
+  type: cohesion_component
+  export:
+    uuid: bb0dbb0d-aeee-4547-a0fe-d83a093b6400
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: cpt_documents_and_resources_list
+    label: 'Documents and resources list'
+    json_values: '{"canvas":[{"type":"item","uid":"drupal-block","title":"Block","status":{"collapsed":true},"uuid":"e361bc44-29ff-4c95-b921-f2ee78672540","parentUid":"root","isContainer":false,"children":[]}],"componentForm":[],"mapper":{"e361bc44-29ff-4c95-b921-f2ee78672540":{}},"model":{"e361bc44-29ff-4c95-b921-f2ee78672540":{"settings":{"title":"Block","customStyle":[{"customStyle":""}],"settings":{"theme":"all","customStyle":[{"customStyle":""}]},"theme":"all","block":"views_block__documents_and_resources_block_1"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"block"}}}},"previewModel":{"e361bc44-29ff-4c95-b921-f2ee78672540":{}},"variableFields":{"e361bc44-29ff-4c95-b921-f2ee78672540":[]},"meta":{"fieldHistory":[]}}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    category: cpt_cat_media_components
+    preview_image: ''
+    has_quick_edit: true
+    entity_type_access: {  }
+    bundle_access: {  }
+    twig_template: component--cohesion-cpt-documents-and-resources-list
+    weight: 0
+-
+  type: cohesion_component_category
+  export:
+    uuid: a58aa7af-aa5e-466b-acf2-df36074658ae
+    langcode: en
+    status: true
+    dependencies: {  }
+    _core:
+      default_config_hash: y8SQnGF4oyOEfEO0IrAQ0wh4reR4IQtzZWz733gFyPE
+    id: cpt_cat_media_components
+    label: 'Media components'
+    json_values: '{}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0029
+    locked: false
+    modified: false
+    selectable: true
+    class: category-4
+    weight: -7
+-
+  type: view
+  export:
+    uuid: 3a58648a-f514-405e-b715-304364bcc3b0
+    langcode: en
+    status: true
+    dependencies:
+      config:
+        - field.storage.media.field_document_and_resource_cate
+        - media.type.acquia_dam_document
+        - system.menu.footer
+      module:
+        - media
+        - taxonomy
+        - user
+    id: documents_and_resources
+    label: 'Documents and Resources'
+    module: views
+    description: 'A View to display documents and resources.'
+    tag: ''
+    base_table: media_field_data
+    base_field: mid
+    display:
+      default:
+        display_plugin: default
+        id: default
+        display_title: Master
+        position: 0
+        display_options:
+          access:
+            type: perm
+            options:
+              perm: 'view media'
+          cache:
+            type: tag
+            options: {  }
+          query:
+            type: views_query
+            options:
+              disable_sql_rewrite: false
+              distinct: false
+              replica: false
+              query_comment: ''
+              query_tags: {  }
+          exposed_form:
+            type: basic
+            options:
+              submit_button: Apply
+              reset_button: false
+              reset_button_label: Reset
+              exposed_sorts_label: 'Sort by'
+              expose_sort_order: true
+              sort_asc_label: Asc
+              sort_desc_label: Desc
+          pager:
+            type: none
+            options:
+              items_per_page: null
+              offset: 0
+          style:
+            type: default
+            options:
+              grouping:
+                -
+                  field: field_document_and_resource_cate
+                  rendered: true
+                  rendered_strip: false
+              row_class: ''
+              default_row_class: true
+          row:
+            type: fields
+          fields:
+            field_document_and_resource_cate:
+              id: field_document_and_resource_cate
+              table: media__field_document_and_resource_cate
+              field: field_document_and_resource_cate
+              relationship: none
+              group_type: group
+              admin_label: ''
+              label: ''
+              exclude: true
+              alter:
+                alter_text: false
+                text: ''
+                make_link: false
+                path: ''
+                absolute: false
+                external: false
+                replace_spaces: false
+                path_case: none
+                trim_whitespace: false
+                alt: ''
+                rel: ''
+                link_class: ''
+                prefix: ''
+                suffix: ''
+                target: ''
+                nl2br: false
+                max_length: 0
+                word_boundary: true
+                ellipsis: true
+                more_link: false
+                more_link_text: ''
+                more_link_path: ''
+                strip_tags: false
+                trim: false
+                preserve_tags: ''
+                html: false
+              element_type: ''
+              element_class: ''
+              element_label_type: ''
+              element_label_class: ''
+              element_label_colon: false
+              element_wrapper_type: ''
+              element_wrapper_class: ''
+              element_default_classes: true
+              empty: ''
+              hide_empty: false
+              empty_zero: false
+              hide_alter_empty: true
+              click_sort_column: target_id
+              type: entity_reference_label
+              settings:
+                link: false
+              group_column: target_id
+              group_columns: {  }
+              group_rows: true
+              delta_limit: 0
+              delta_offset: 0
+              delta_reversed: false
+              delta_first_last: false
+              multi_type: separator
+              separator: ', '
+              field_api_classes: false
+              plugin_id: field
+            name:
+              id: name
+              table: media_field_data
+              field: name
+              relationship: none
+              group_type: group
+              admin_label: ''
+              label: ''
+              exclude: false
+              alter:
+                alter_text: false
+                text: ''
+                make_link: false
+                path: ''
+                absolute: false
+                external: false
+                replace_spaces: false
+                path_case: none
+                trim_whitespace: false
+                alt: ''
+                rel: ''
+                link_class: ''
+                prefix: ''
+                suffix: ''
+                target: ''
+                nl2br: false
+                max_length: 0
+                word_boundary: true
+                ellipsis: true
+                more_link: false
+                more_link_text: ''
+                more_link_path: ''
+                strip_tags: false
+                trim: false
+                preserve_tags: ''
+                html: false
+              element_type: ''
+              element_class: ''
+              element_label_type: ''
+              element_label_class: ''
+              element_label_colon: false
+              element_wrapper_type: ''
+              element_wrapper_class: ''
+              element_default_classes: true
+              empty: ''
+              hide_empty: false
+              empty_zero: false
+              hide_alter_empty: true
+              click_sort_column: value
+              type: string
+              settings:
+                link_to_entity: true
+              group_column: value
+              group_columns: {  }
+              group_rows: true
+              delta_limit: 0
+              delta_offset: 0
+              delta_reversed: false
+              delta_first_last: false
+              multi_type: separator
+              separator: ', '
+              field_api_classes: false
+              entity_type: media
+              entity_field: name
+              plugin_id: field
+          filters:
+            status:
+              value: '1'
+              table: media_field_data
+              field: status
+              plugin_id: boolean
+              entity_type: media
+              entity_field: status
+              id: status
+              expose:
+                operator: ''
+                operator_limit_selection: false
+                operator_list: {  }
+              group: 1
+            bundle:
+              id: bundle
+              table: media_field_data
+              field: bundle
+              value:
+                acquia_dam_document: acquia_dam_document
+              entity_type: media
+              entity_field: bundle
+              plugin_id: bundle
+              expose:
+                operator_limit_selection: false
+                operator_list: {  }
+          sorts:
+            weight:
+              id: weight
+              table: taxonomy_term_field_data
+              field: weight
+              relationship: field_document_and_resource_cate
+              group_type: group
+              admin_label: ''
+              order: ASC
+              exposed: false
+              expose:
+                label: ''
+              entity_type: taxonomy_term
+              entity_field: weight
+              plugin_id: standard
+            name:
+              id: name
+              table: media_field_data
+              field: name
+              order: DESC
+              entity_type: media
+              entity_field: name
+              plugin_id: standard
+              relationship: none
+              group_type: group
+              admin_label: ''
+              exposed: false
+              expose:
+                label: ''
+          title: 'Documents and Resources'
+          header:
+            area:
+              id: area
+              table: views
+              field: area
+              relationship: none
+              group_type: group
+              admin_label: ''
+              empty: false
+              tokenize: false
+              content:
+                value: "<h2>Important Documents and Resources Repository</h2>\r\n<p>Looking for a document contained on the Arvest website? All important downloadable documents online are provided here in this repository. For your convenience, items are categorized by subject.</p>"
+                format: full_html
+              plugin_id: text
+          footer: {  }
+          empty: {  }
+          relationships:
+            field_document_and_resource_cate:
+              id: field_document_and_resource_cate
+              table: media__field_document_and_resource_cate
+              field: field_document_and_resource_cate
+              plugin_id: standard
+          arguments: {  }
+          display_extenders: {  }
+        cache_metadata:
+          max-age: -1
+          contexts:
+            - 'languages:language_content'
+            - 'languages:language_interface'
+            - user.permissions
+          tags:
+            - 'config:field.storage.media.field_document_and_resource_cate'
+      block_1:
+        display_plugin: block
+        id: block_1
+        display_title: Block
+        position: 1
+        display_options:
+          display_extenders: {  }
+          block_description: 'Documents and Resources'
+        cache_metadata:
+          max-age: -1
+          contexts:
+            - 'languages:language_content'
+            - 'languages:language_interface'
+            - user.permissions
+          tags:
+            - 'config:field.storage.media.field_document_and_resource_cate'

@@ -13,7 +13,7 @@ dependencies:
 id: sidebar_menu_education_center_menu
 theme: arvestbank_theme
 region: dx8_hidden
-weight: 6
+weight: 8
 provider: null
 plugin: 'menu_block:education-center-menu'
 settings:

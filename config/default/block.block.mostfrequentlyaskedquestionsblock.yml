@@ -10,7 +10,7 @@ dependencies:
 id: mostfrequentlyaskedquestionsblock
 theme: arvestbank_theme
 region: dx8_hidden
-weight: -1
+weight: -2
 provider: null
 plugin: faq_block
 settings:

@@ -12,7 +12,7 @@ _core:
 id: arvestbank_theme_branding
 theme: arvestbank_theme
 region: dx8_hidden
-weight: -13
+weight: -15
 provider: null
 plugin: system_branding_block
 settings:
