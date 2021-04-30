@@ -25,6 +25,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_layout_:
     type: cohesion_entity_reference_revisions_entity_view
     weight: 1
