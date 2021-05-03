@@ -147,9 +147,9 @@ class MicromodalFieldFormatter extends FormatterBase {
    * {@inheritdoc}
    */
   public static function isApplicable(FieldDefinitionInterface $field_definition): bool {
-    return $field_definition->getTargetEntityTypeId() === 'media'
+    return $field_definition->getTargetEntityTypeId() === 'media';
       // && $field_definition->getTargetBundle() === 'video'
-      && $field_definition->getFieldStorageDefinition()->getName() === 'thumbnail';
+      // && $field_definition->getFieldStorageDefinition()->getName() === 'thumbnail';
   }
 
 }
