@@ -1,0 +1,4 @@
+name: Arvest Bank Rates
+type: module
+description: 'Adds Arvest Bank credit card rate functionality.'
+core_version_requirement: ^9

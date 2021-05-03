@@ -1,0 +1,3 @@
+'edit credit card rates':
+  title: 'Edit Credit Card Rates'
+  description: 'Allow users to edit credit card rates at /admin/config/rates.'
