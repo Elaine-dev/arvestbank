@@ -11,6 +11,19 @@ use Drupal\Core\Form\FormStateInterface;
 class RatesForm extends ConfigFormBase {
 
   /**
+   * Define the form value keys not to save to config.
+   *
+   * @var formValueKeysToIgnore
+   */
+  private $formValueKeysToIgnore = [
+    'form_build_id',
+    'form_id',
+    'form_token',
+    'op',
+    'submit',
+  ];
+
+  /**
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
@@ -33,7 +46,6 @@ class RatesForm extends ConfigFormBase {
 
     // Get config.
     $config = $this->config('arvestbank_rates.settings');
-
 
     // REWARDS CARDS CONTAINER.
     $form['rewards_card_rates'] = [
@@ -99,7 +111,6 @@ class RatesForm extends ConfigFormBase {
 
     ];
 
-
     // TRUE RATE CARD RATES CONTAINER.
     $form['true_rate_card_rates'] = [
       '#type' => 'details',
@@ -135,7 +146,6 @@ class RatesForm extends ConfigFormBase {
       ],
 
     ];
-
 
     // Origin Card Rates.
     $form['origin_card_rates'] = [
@@ -173,7 +183,6 @@ class RatesForm extends ConfigFormBase {
 
     ];
 
-
     // Legacy Card Rates.
     $form['legacy_card_rates'] = [
       '#type' => 'details',
@@ -186,7 +195,6 @@ class RatesForm extends ConfigFormBase {
         '#title' => $this->t('Accurate As Of Date'),
         '#default_value' => $config->get('legacy_card_rates__accurate_as_of_date'),
       ],
-
 
       // Legacy Cards - Classic Container.
       'legacy_card_rates__classic_rates' => [
@@ -214,7 +222,6 @@ class RatesForm extends ConfigFormBase {
           '#default_value' => $config->get('legacy_card_rates__classic_rates__apr_for_cash_advances'),
         ],
       ],
-
 
       // Legacy Cards - Gold Container.
       'legacy_card_rates__gold_rates' => [
@@ -272,7 +279,6 @@ class RatesForm extends ConfigFormBase {
 
       ],
 
-
     ];
 
     // Zero Card Rates.
@@ -301,10 +307,15 @@ class RatesForm extends ConfigFormBase {
 
     // Loop over submitted values.
     foreach ($formValues as $formFieldKey => $formFieldValue) {
-      // Save submitted value to config.
-      $this->config('arvestbank_rates.settings')
-        ->set($formFieldKey, $formFieldValue)
-        ->save();
+
+      // If we're not ignoring this value.
+      if(!in_array($formFieldKey,$this->formValueKeysToIgnore)) {
+        // Save submitted value to config.
+        $this->config('arvestbank_rates.settings')
+          ->set($formFieldKey, $formFieldValue)
+          ->save();
+      }
+
     }
 
   }

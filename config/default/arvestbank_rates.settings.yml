@@ -22,8 +22,3 @@ legacy_card_rates__gold_rates__apr_for_cash_advances: 15.40%
 legacy_card_rates__platinum_rates__apr_for_purchases: 12.40%
 legacy_card_rates__platinum_rates__apr_for_balance_transfers: 12.40%
 legacy_card_rates__platinum_rates__apr_for_cash_advances: 12.40%
-submit: 'Save configuration'
-form_build_id: form-GsdYqrGg2M3qeq8Os1bypXLoy1KWm87JpKO6L7p3ES8
-form_token: dgqvwlNhDfs7YTNrccF48mhZ6bKlVVTQNwb0-3kPoFM
-form_id: arvestbank_rates_settings_form
-op: 'Save configuration'
