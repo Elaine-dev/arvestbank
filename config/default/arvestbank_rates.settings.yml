@@ -1,12 +1,11 @@
 rewards_card_rates__accurate_as_of_date: '2020-07-27'
+rewards_card_rates__apr_for_cash_advances: 24.99%
 rewards_card_rates__platinum_rates__apr_for_purchases: '13.24% - 20.24%'
 rewards_card_rates__platinum_rates__apr_for_balance_transfers: '13.24% - 20.24%'
-rewards_card_rates__platinum_rates__apr_for_cash_advances: 24.99%
 rewards_card_rates__signature_rates__apr_for_purchases: '13.24% - 20.24%'
 rewards_card_rates__signature_rates__apr_for_balance_transfers: '13.24% - 20.24%'
-rewards_card_rates__signature_rates__apr_for_cash_advances: ''
 true_rate_card_rates__accurate_as_of_date: '2020-07-27'
-true_rate_card_rates__apr_for_purchases: ' 9.24% - 18.24%'
+true_rate_card_rates__apr_for_purchases: '9.24% - 18.24%'
 true_rate_card_rates__apr_for_balance_transfers: '9.24% - 18.24%'
 true_rate_card_rates__apr_for_cash_advances: 24.99%
 origin_card_rates__accurate_as_of_date: '2020-07-27'
@@ -28,4 +27,3 @@ form_build_id: form-GsdYqrGg2M3qeq8Os1bypXLoy1KWm87JpKO6L7p3ES8
 form_token: dgqvwlNhDfs7YTNrccF48mhZ6bKlVVTQNwb0-3kPoFM
 form_id: arvestbank_rates_settings_form
 op: 'Save configuration'
-rewards_card_rates__apr_for_cash_advances: 24.99%
