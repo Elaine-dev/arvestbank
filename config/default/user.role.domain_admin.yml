@@ -247,6 +247,7 @@ permissions:
   - 'edit any webform'
   - 'edit any webform submission'
   - 'edit calculator code entities'
+  - 'edit credit card rates'
   - 'edit own acquia_dam_document media'
   - 'edit own acquia_dam_image media'
   - 'edit own acquia_dam_video media'
