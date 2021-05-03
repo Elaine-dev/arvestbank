@@ -295,6 +295,48 @@
   margin: 0;
 }
 
+.ui-widget,
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+  font-family: Verdana,Geneva,sans-serif;
+}
+
+.ui-widget.ui-widget-content {
+  padding: 0.5rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ui-menu {
+  width: 12.4375rem;
+}
+
+.ui-menu .ui-menu-item {
+  background-color: #fff;
+}
+
+.ui-menu .ui-menu-item-wrapper {
+  
+  padding: 4px 18px;
+  line-height: normal;
+}
+
+.ui-widget-content a {
+  color: #333;
+  display: block;
+}
+
+.ui-widget-content a:hover,
+.ui-widget-content a:focus,
+.ui-widget-content .ui-state-active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #1a5687;
+  border-color: #fff;
+}
+
 .node-preview-container {
   background-color: #DBDBDB;
 }
