@@ -7,12 +7,12 @@ dependencies:
     - field.field.node.associate.body
     - field.field.node.associate.field_appointment
     - field.field.node.associate.field_associate_id
+    - field.field.node.associate.field_associate_image
     - field.field.node.associate.field_associate_type
     - field.field.node.associate.field_branch_nickname
     - field.field.node.associate.field_designation
     - field.field.node.associate.field_email
     - field.field.node.associate.field_fax_number
-    - field.field.node.associate.field_image
     - field.field.node.associate.field_insurance_license_number
     - field.field.node.associate.field_job_title
     - field.field.node.associate.field_location
@@ -136,6 +136,10 @@ custom_sources:
     label: certs
     value: certs
     machine_name: certs
+  image_01:
+    label: image
+    value: image
+    machine_name: image_01
 mappings:
   -
     target: title
@@ -210,14 +214,6 @@ mappings:
       reference_by: name
       autocreate: false
   -
-    target: field_image
-    map:
-      target_id: image
-    settings:
-      language: null
-      reference_by: name
-      autocreate: false
-  -
     target: field_branch_nickname
     map:
       value: branch
@@ -265,3 +261,14 @@ mappings:
       language: ''
       reference_by: name
       autocreate: '1'
+  -
+    target: field_associate_image
+    map:
+      target_id: image_01
+      alt: ''
+      title: ''
+    settings:
+      existing: 2
+      language: null
+      reference_by: filename
+      autocreate: false
