@@ -8,7 +8,6 @@ use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Field\Plugin\Field\FieldType\StringItem;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
-use Drupal\image\Entity\ImageStyle;
 use Drupal\file\Entity\File;
 use Drupal\image\Plugin\Field\FieldType\ImageItem;
 use Drupal\media\Entity\Media;
@@ -148,6 +147,7 @@ class MicromodalFieldFormatter extends FormatterBase {
           ],
         ])->toString();
 
+        // Implementation for the thumbnail field.
         if ($formatter_type == 'image') {
 
           // Media ID of the thumbnail.
@@ -166,6 +166,7 @@ class MicromodalFieldFormatter extends FormatterBase {
 
         }
 
+        // Implementation for the name field.
         elseif ($formatter_type == 'string') {
 
           if (!empty($this->getSetting('string_classes'))) {
