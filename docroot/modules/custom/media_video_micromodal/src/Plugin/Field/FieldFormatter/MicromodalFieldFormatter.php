@@ -125,74 +125,74 @@ class MicromodalFieldFormatter extends FormatterBase {
       // If the media loaded successfully, continue with the formatting.
       if (!empty($media)) {
 
-        // Grab the remote video URL.
-        $video_url = $media->getFields()['field_media_oembed_video']->getValue()[0]['value'];
+        if (array_key_exists('field_media_oembed_video', $media->getFields())) {
 
-        // Use these to generate the URL for local oembed iframe.
-        $request = new RequestContext($video_url);
-        $private_key = new PrivateKey(\Drupal::state());
-        $url_helper = new IFrameUrlHelper($request, $private_key);
+          // Grab the remote video URL.
+          $video_url = $media->getFields()['field_media_oembed_video']->getValue()[0]['value'];
 
-        // These are needed to create the hash successfully.
-        $max_width = 0;
-        $max_height = 0;
+          // Use these to generate the URL for local oembed iframe.
+          $request = new RequestContext($video_url);
+          $private_key = new PrivateKey(\Drupal::state());
+          $url_helper = new IFrameUrlHelper($request, $private_key);
 
-        // Use parts above to generate the iframe url.
-        $media_oembed_url = Url::fromRoute('media.oembed_iframe', [], [
-          'query' => [
-            'url' => $video_url,
-            'max_width' => 0,
-            'max_height' => 0,
-            'hash' => $url_helper->getHash($video_url, $max_width, $max_height),
-          ],
-        ])->toString();
+          // These are needed to create the hash successfully.
+          $max_width = 0;
+          $max_height = 0;
 
-        // Implementation for the thumbnail field.
-        if ($formatter_type == 'image') {
+          // Use parts above to generate the iframe url.
+          $media_oembed_url = Url::fromRoute('media.oembed_iframe', [], [
+            'query' => [
+              'url' => $video_url,
+              'max_width' => 0,
+              'max_height' => 0,
+              'hash' => $url_helper->getHash($video_url, $max_width, $max_height),
+            ],
+          ])->toString();
 
-          // Media ID of the thumbnail.
-          $thumbnail_id = $media->getFields()['thumbnail']->getValue()[0]['target_id'];
+          // Implementation for the thumbnail field.
+          if ($formatter_type == 'image') {
 
-          // Use the image style setting to style the thumbnail.
-          if (!empty($thumbnail_id)) {
-            $thumbnail_file = File::load($thumbnail_id);
-            $render_thumbnail = [
-              '#theme' => 'image_style',
-              '#style_name' => $this->getSetting('thumbnail_image_style'),
-              '#uri' => $thumbnail_file->uri->value,
+            // Media ID of the thumbnail.
+            $thumbnail_id = $media->getFields()['thumbnail']->getValue()[0]['target_id'];
+
+            // Use the image style setting to style the thumbnail.
+            if (!empty($thumbnail_id)) {
+              $thumbnail_file = File::load($thumbnail_id);
+              $render_thumbnail = [
+                '#theme' => 'image_style',
+                '#style_name' => $this->getSetting('thumbnail_image_style'),
+                '#uri' => $thumbnail_file->uri->value,
+              ];
+              $linked_item = render($render_thumbnail);
+            }
+
+          }
+
+          // Implementation for the name field.
+          elseif ($formatter_type == 'string') {
+
+            if (!empty($this->getSetting('string_classes'))) {
+              $linked_item_render = [
+                '#markup' => '<span class="' . $this->getSetting('string_classes') . '">' . $media->getName() . '</span>',
+              ];
+              $linked_item = render($linked_item_render);
+            }
+            else {
+              $linked_item = $media->getName();
+            }
+          }
+
+          if (!empty($linked_item)) {
+            // This will be used as the value of the div.
+            $modal_id = 'modal-media-' . $media_id;
+            // Send these to the twig template.
+            $elements[$delta] = [
+              '#theme' => 'media_video_micromodal',
+              '#modal_id' => $modal_id,
+              '#linked_item' => $linked_item,
+              '#iframe_src' => $media_oembed_url,
             ];
-            $linked_item = render($render_thumbnail);
           }
-
-        }
-
-        // Implementation for the name field.
-        elseif ($formatter_type == 'string') {
-
-          if (!empty($this->getSetting('string_classes'))) {
-            $linked_item_render = [
-              '#markup' => '<span class="' . $this->getSetting('string_classes') . '">' . $media->getName() . '</span>',
-            ];
-            $linked_item = render($linked_item_render);
-          }
-          else {
-            $linked_item = $media->getName();
-          }
-
-        }
-
-        if (!empty($linked_item)) {
-
-          // This will be used as the value of the div.
-          $modal_id = 'modal-media-' . $media_id;
-
-          // Send these to the twig template.
-          $elements[$delta] = [
-            '#theme' => 'media_video_micromodal',
-            '#modal_id' => $modal_id,
-            '#linked_item' => $linked_item,
-            '#iframe_src' => $media_oembed_url,
-          ];
 
         }
 
