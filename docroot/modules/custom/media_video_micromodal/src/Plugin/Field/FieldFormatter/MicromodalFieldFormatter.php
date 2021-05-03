@@ -169,8 +169,10 @@ class MicromodalFieldFormatter extends FormatterBase {
         elseif ($formatter_type == 'string') {
 
           if (!empty($this->getSetting('string_classes'))) {
-            //$linked_item = '<div class="' . $this->getSetting('string_classes') . '">' . $media->getName() . '</div>';
-            $linked_item = $media->getName();
+            $linked_item_render = [
+              '#markup' => '<span class="' . $this->getSetting('string_classes') . '">' . $media->getName() . '</span>',
+            ];
+            $linked_item = render($linked_item_render);
           }
           else {
             $linked_item = $media->getName();
@@ -214,8 +216,9 @@ class MicromodalFieldFormatter extends FormatterBase {
    * {@inheritdoc}
    */
   public static function isApplicable(FieldDefinitionInterface $field_definition): bool {
-    dump($field_definition->getConfig()->bundle());die();
     return $field_definition->getTargetEntityTypeId() === 'media'
+      // @todo: this always returns "null", maybe b/c of this bug:
+      // https://www.drupal.org/project/drupal/issues/2976795
       // && $field_definition->getTargetBundle() === 'video'
       && ($field_definition->getFieldStorageDefinition()->getName() === 'thumbnail'
       || $field_definition->getFieldStorageDefinition()->getName() === 'name');
