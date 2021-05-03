@@ -2,6 +2,9 @@ field.formatter.settings.micromodal_field_formatter:
   type: field.formatter.settings.image
   label: 'Media thumbnail field display format settings'
   mapping:
+    string_classes:
+      type: string
+      label: 'Additional Classes'
     thumbnail_image_style:
       type: string
       label: 'Thumbnail Image Style'
