@@ -7,6 +7,21 @@
 
 use Drupal\Core\Routing\RouteMatchInterface;
 
+/*
+ * @todo
+ * play image?
+ * x to close
+ * esc not working on close
+ *
+ * best way to include library
+ * isApplicable = video bundle
+ *
+ * CSS
+ *   container width
+ *
+ *
+ */
+
 /**
  * Implements hook_help().
  */

@@ -2,8 +2,7 @@
 
 namespace Drupal\media_video_micromodal\Plugin\Field\FieldFormatter;
 
-use Drupal\Component\Utility\Html;
-use Drupal\Core\Field\FieldItemInterface;
+use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -34,6 +33,7 @@ class MicromodalFieldFormatter extends FormatterBase {
   public static function defaultSettings() {
     return [
       // Implement default settings.
+      'thumbnail_image_style' => '',
     ] + parent::defaultSettings();
   }
 
@@ -43,7 +43,17 @@ class MicromodalFieldFormatter extends FormatterBase {
   public function settingsForm(array $form, FormStateInterface $form_state) {
     return [
       // Implement settings form.
+      'thumbnail_image_style' => [
+        '#title' => t('Video Thumbnail Image Style'),
+        '#type' => 'select',
+        '#options' => image_style_options(FALSE),
+        '#empty_option' => '<' . t('no preview') . '>',
+        '#default_value' => $this->getSetting('thumbnail_image_style'),
+        '#description' => t('Thumbnail for the video, click the thumbnail for the modal window.'),
+        '#weight' => 14,
+      ],
     ] + parent::settingsForm($form, $form_state);
+
   }
 
   /**
@@ -51,7 +61,11 @@ class MicromodalFieldFormatter extends FormatterBase {
    */
   public function settingsSummary() {
     $summary = [];
+
     // Implement settings summary.
+    if (!empty($this->getSetting('thumbnail_image_style'))) {
+      $summary[] = 'Image Style: ' . $this->getSetting('thumbnail_image_style');
+    }
 
     return $summary;
   }
@@ -68,15 +82,19 @@ class MicromodalFieldFormatter extends FormatterBase {
       $media_id = $item->getValue()['target_id'];
       $media = Media::load($media_id);
 
+      // Grab the remote video URL.
       $video_url = $media->getFields()['field_media_oembed_video']->getValue()[0]['value'];
 
+      // Use these to generate the URL for local oembed iframe.
       $request = new RequestContext($video_url);
       $private_key = new PrivateKey(\Drupal::state());
       $url_helper = new IFrameUrlHelper($request, $private_key);
 
+      // These are needed to create the hash successfully.
       $max_width = 0;
       $max_height = 0;
 
+      // Use parts above to generate the iframe url.
       $media_oembed_url = Url::fromRoute('media.oembed_iframe', [], [
         'query' => [
           'url' => $video_url,
@@ -86,12 +104,14 @@ class MicromodalFieldFormatter extends FormatterBase {
         ],
       ])->toString();
 
+      // Media ID of the thumbnail.
       $thumbnail_id = $media->getFields()['thumbnail']->getValue()[0]['target_id'];
 
       // Initialize a default value for the thumbnail.
       $thumbnail_url = '';
 
-      $style = ImageStyle::load('medium');
+      // Use the image style setting to style the thumbnail.
+      $style = ImageStyle::load($this->getSetting('thumbnail_image_style'));
       if (!empty($thumbnail_id)) {
         $thumbnail_file = File::load($thumbnail_id);
         $thumbnail_url = $style->buildUrl($thumbnail_file->uri->value);
@@ -100,6 +120,7 @@ class MicromodalFieldFormatter extends FormatterBase {
       // This will be used as the value of the div.
       $modal_id = 'modal-media-' . $media_id;
 
+      // Send these to the twig template.
       $elements[$delta] = [
         '#theme' => 'media_video_micromodal',
         '#modal_id' => $modal_id,
@@ -123,27 +144,12 @@ class MicromodalFieldFormatter extends FormatterBase {
   }
 
   /**
-   * Generate the output appropriate for one field item.
-   *
-   * @param \Drupal\Core\Field\FieldItemInterface $item
-   *   One field item.
-   *
-   * @return string
-   *   The textual output generated.
-   */
-  protected function viewValue(FieldItemInterface $item) {
-    // The text value has no text format assigned to it, so the user input
-    // should equal the output, including newlines.
-    return nl2br(Html::escape($item->value));
-  }
-
-  /**
    * {@inheritdoc}
    */
-//  public static function isApplicable(FieldDefinitionInterface $field_definition): bool {
-//    return $field_definition->getTargetEntityTypeId() === 'node'
-//      && $field_definition->getTargetBundle() === 'calculators'
-//      && $field_definition->getName() === 'field_calculator';
-//  }
+  public static function isApplicable(FieldDefinitionInterface $field_definition): bool {
+    return $field_definition->getTargetEntityTypeId() === 'media'
+      // && $field_definition->getTargetBundle() === 'video'
+      && $field_definition->getFieldStorageDefinition()->getName() === 'thumbnail';
+  }
 
 }
