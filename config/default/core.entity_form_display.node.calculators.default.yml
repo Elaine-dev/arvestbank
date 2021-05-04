@@ -53,7 +53,7 @@ content:
     type: options_buttons
     region: content
   field_link:
-    weight: 28
+    weight: 16
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -61,14 +61,14 @@ content:
     type: link_default
     region: content
   field_meta_tags:
-    weight: 26
+    weight: 15
     settings:
       sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
     region: content
   field_yoast_seo:
-    weight: 27
+    weight: 17
     settings:
       body: body
     third_party_settings: {  }

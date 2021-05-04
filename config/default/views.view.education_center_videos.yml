@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.media_links
     - field.storage.taxonomy_term.field_subtitle_videos
     - media.type.acquia_dam_video
     - media.type.video
@@ -348,10 +349,10 @@ display:
         css_class: false
         sorts: false
       fields:
-        name:
-          id: name
-          table: media_field_data
-          field: name
+        rendered_entity:
+          id: rendered_entity
+          table: media
+          field: rendered_entity
           relationship: none
           group_type: group
           admin_label: ''
@@ -375,8 +376,8 @@ display:
             target: ''
             nl2br: false
             max_length: 0
-            word_boundary: false
-            ellipsis: false
+            word_boundary: true
+            ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
@@ -385,7 +386,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: ''
-          element_class: coh-style-red-triangle
+          element_class: ''
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -396,23 +397,9 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: true
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
+          view_mode: media_links
           entity_type: media
-          entity_field: media
-          plugin_id: field
+          plugin_id: rendered_entity
       css_class: education-details
       block_hide_empty: true
       sorts:
@@ -433,8 +420,22 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:core.entity_view_display.media.acquia_dam_document.default'
+        - 'config:core.entity_view_display.media.acquia_dam_document.media_library'
+        - 'config:core.entity_view_display.media.acquia_dam_image.default'
+        - 'config:core.entity_view_display.media.acquia_dam_image.full_width_slideshow'
+        - 'config:core.entity_view_display.media.acquia_dam_video.default'
+        - 'config:core.entity_view_display.media.acquia_dam_video.media_library'
+        - 'config:core.entity_view_display.media.acquia_dam_video.teaser'
+        - 'config:core.entity_view_display.media.credit_or_debit_card.default'
+        - 'config:core.entity_view_display.media.credit_or_debit_card.media_library'
+        - 'config:core.entity_view_display.media.icon.default'
+        - 'config:core.entity_view_display.media.icon.full_width_slideshow'
+        - 'config:core.entity_view_display.media.icon.media_library'
+        - 'config:core.entity_view_display.media.video.default'
+        - 'config:core.entity_view_display.media.video.media_library'
+        - 'config:core.entity_view_display.media.video.teaser'
