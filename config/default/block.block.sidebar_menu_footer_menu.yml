@@ -12,7 +12,7 @@ dependencies:
 id: sidebar_menu_footer_menu
 theme: arvestbank_theme
 region: dx8_hidden
-weight: 9
+weight: 11
 provider: null
 plugin: 'menu_block:footer'
 settings:

@@ -10,7 +10,7 @@ dependencies:
 id: suggestedquestionsblock
 theme: arvestbank_theme
 region: dx8_hidden
-weight: 0
+weight: 2
 provider: null
 plugin: suggested_questions_block
 settings:

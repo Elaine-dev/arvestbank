@@ -14,11 +14,12 @@ dependencies:
     - field.storage.node.field_office_number
     - image.style.medium
     - node.type.associate
+    - system.menu.main
     - taxonomy.vocabulary.associate_category
   content:
-    - 'taxonomy_term:associate_category:acb274a2-3bad-40a0-88e8-68f7253f51a6'
-    - 'taxonomy_term:associate_category:c6ffff0a-1784-4341-aae2-8b35e28c7fa9'
-    - 'taxonomy_term:associate_category:fd563083-4f3d-4841-8468-67bdd8fc7a24'
+    - 'taxonomy_term:associate_category:294ce650-2597-4ea3-913a-e7de6a7d72a9'
+    - 'taxonomy_term:associate_category:736c7cdc-6d8a-4b71-aadb-dc41dbc00f6c'
+    - 'taxonomy_term:associate_category:f3bbcba5-29cf-41f1-a125-6caf6dff2451'
   module:
     - media
     - node
@@ -886,7 +887,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            2: 2
+            71: 71
           group: 1
           exposed: false
           expose:
@@ -931,6 +932,15 @@ display:
         groups:
           1: AND
       display_description: ''
+      menu:
+        type: normal
+        title: 'Find a Client Advisor'
+        description: ''
+        expanded: false
+        parent: 'menu_link_content:d0eae2ad-e75f-4e4f-84fa-ccab2732a3da'
+        weight: 0
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:
@@ -1109,7 +1119,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            1: 1
+            66: 66
           group: 1
           exposed: false
           expose:
@@ -1742,6 +1752,15 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+      menu:
+        type: normal
+        title: 'Find a Lender'
+        description: ''
+        expanded: false
+        parent: 'menu_link_content:eceffee7-98b7-4118-8ea6-9be384cf2815'
+        weight: 0
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:
@@ -1920,7 +1939,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            3: 3
+            76: 76
           group: 1
           exposed: false
           expose:
@@ -1982,6 +2001,15 @@ display:
             value: "<div><h1>PRESERVE YOUR WEALTH FOR FUTURE GENERATIONS</h1></div>\r\n\r\n<div><p>No matter your reason, the experienced trust and investment professionals with Arvest will help you make the right financial decisions for your estate.</p></div>\r\n\r\n<div><p>SEARCH YOUR LOCATION OR NAME.</p></div>\r\n"
             format: cohesion
           plugin_id: text
+      menu:
+        type: normal
+        title: 'Find a Trust & Estate Planning Professional'
+        description: ''
+        expanded: false
+        parent: 'menu_link_content:d0eae2ad-e75f-4e4f-84fa-ccab2732a3da'
+        weight: 0
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:

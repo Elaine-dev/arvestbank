@@ -81,22 +81,73 @@
 
 // Search tabs
 #search-tab {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: row;
+    margin: .9375rem 0; // 15px
+  
+    // max-width 564px
+    // Stack tabs at full width
+    @media screen and (max-width: 35.25em) {
+        flex-direction: column;
+    }
 
-  // Hide radios
-  input {
-    display: none;
-  }
+    // Tab
+    .form-item-search-tab {
+        flex: 1 1 auto;
+  
+        // Use label as tab display
+        label {
+            color: #333;
+            background-color: #fbfbfb;
+            font-size: 1rem; 
+            display: flex;
+            justify-content: center;
+            flex-flow: column;
+            text-align: center;
+            text-decoration: none;
+            padding: 0.625rem 0;
+            margin: -1.3125rem 0 0; // Move up -21px to cover hidden input
+            border: 1px solid #e3e3e3;
+            border-left-color: transparent;
+        }
+        &:first-child label {
+            border-left-color: #e3e3e3;
+        }
 
-  // Highlight active tab
-  .active-tab {
-    background-color: #4178b4;
-  }
+        // max-width 564px
+        // Change borders
+        @media screen and (max-width: 35.25em) {
+            label {
+                border-left-color: #e3e3e3;    
+                border-top-color: transparent;
+            }
+            &:first-child label {
+                 border-top-color: #e3e3e3;
+            }
+        }
 
-  // Inline block the tabs
-  .form-item-search-tab {
-    display: inline-block;
-  }
-
+        // Accessibly hide radio input
+        input[type="radio"] {
+            opacity: 0;
+        }
+        
+        /* Radio and label selected, hover, and focus states */
+       input[type="radio"]:checked + label {
+            color: #fff;
+            background-color: #4178b4;
+            border-color: transparent;
+            border-bottom: 2px solid #e60000;
+            outline: 0;
+        }
+        label:hover,
+        label:focus {
+            background: #fbfbfb;
+            text-decoration: underline; // Underline for accessibility
+            color: #4178b4;
+        }
+    }
 }
 
 // For search tabs form.
@@ -147,5 +198,46 @@
 
     input {
         margin: 0;
+    }
+}
+
+
+// ---------------  Search UI Widget  --------------- //
+.ui-widget,
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+    font-family: Verdana,Geneva,sans-serif;
+}
+.ui-widget.ui-widget-content {
+    padding: 0.5rem 0;
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.ui-menu {
+    width: 12.4375rem; // 199px;
+
+    .ui-menu-item {
+        background-color: #fff;
+    }
+    .ui-menu-item-wrapper {
+        /* padding: 3px 1em 3px .4em; */
+        padding: 4px 18px;
+        line-height: normal;
+    }
+}
+.ui-widget-content {
+    a {
+        color: #333;
+        display: block;
+    }
+    a:hover,
+    a:focus,
+    .ui-state-active {
+        color: #fff;
+        text-decoration: none;
+        background-color: #1a5687;
+        border-color: #fff;
     }
 }

@@ -10,7 +10,7 @@ dependencies:
 id: alternateexposedfiltersblock
 theme: arvestbank_theme
 region: dx8_hidden
-weight: -10
+weight: -12
 provider: null
 plugin: alt_exposed_filters_block
 settings:

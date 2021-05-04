@@ -30,7 +30,7 @@ Export your Site Studio packages to commit your changes. Create a new package or
   to 
   `cohesion_sync_package_component-one-columnn-layout.package.yml_` Ensure your file has the trailing underscore.
 10. Place your file in your Site Studio config split directory:
-  `arvestbank/config/`
+  `arvestbank/config/site_studio_sync/`
 11. Edit the package .yml file to verify it contains no dependencies. It should look similar to:
   ```
   type: cohesion_base_styles

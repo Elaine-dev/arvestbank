@@ -10,7 +10,7 @@ dependencies:
 id: sidebarmenublock
 theme: arvestbank_theme
 region: dx8_hidden
-weight: 10
+weight: 12
 provider: null
 plugin: sidebar_menu_block
 settings:

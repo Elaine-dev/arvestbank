@@ -1,28 +1,27 @@
-uuid: eb05953e-4f34-429c-808f-f81c6773dae6
+uuid: d4049e58-3c82-4179-aeb0-4e02ec1fbca9
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.featured_videos
+    - views.view.documents_and_resources
   module:
     - cohesion
     - views
   theme:
     - arvestbank_theme
-id: views_block__featured_videos_block_1
+id: views_block__documents_and_resources_block_1
 theme: arvestbank_theme
 region: dx8_hidden
-weight: -4
+weight: -6
 provider: null
-plugin: 'views_block:featured_videos-block_1'
+plugin: 'views_block:documents_and_resources-block_1'
 settings:
-  id: 'views_block:featured_videos-block_1'
+  id: 'views_block:documents_and_resources-block_1'
   label: ''
   provider: views
-  label_display: visible
+  label_display: '0'
   views_label: ''
   items_per_page: none
-  context_mapping: {  }
 visibility:
   cohesion_master_template:
     id: cohesion_master_template
