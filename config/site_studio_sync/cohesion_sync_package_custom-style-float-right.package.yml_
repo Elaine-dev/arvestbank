@@ -1,0 +1,33 @@
+
+-
+  type: cohesion_sync_package
+  export:
+    uuid: 8642de85-2f7e-4173-89aa-34339450b098
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: pack_custom_style_float_right
+    label: 'Custom Style Float Right'
+    description: ''
+    excluded_entity_types: '[]'
+    settings: '{"a7d5510a-f373-4fe6-9cae-f35ac94438c0":{"type":"cohesion_custom_style","items":{"a7d5510a-f373-4fe6-9cae-f35ac94438c0":{"type":"cohesion_custom_style"}},"checked":true}}'
+-
+  type: cohesion_custom_style
+  export:
+    uuid: a7d5510a-f373-4fe6-9cae-f35ac94438c0
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: 3667cd61
+    label: 'float right'
+    json_values: '{"preview":{"text":"<div class=\"coh-preview\">Default content for ''Layout''.<\/div>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"div","class":"","combinator":"","pseudo":""},"styles":{"xl":{"clearfix":{"value":true},"float":{"value":"right"}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+    json_mapper: '{"styles":{"title":"Layout","selectorType":"topLevel","formDefinition":[{"formKey":"layout","children":[{"formKey":"float","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"float","active":true},{"name":"clear","active":false},{"name":"clearfix","active":true}]}]}],"items":[],"form":null}}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    class_name: .coh-style-float-right
+    custom_style_type: layout
+    available_in_wysiwyg: false
+    parent: null
+    weight: 0
