@@ -43,6 +43,7 @@ settings:
           items:
             - ImceImage
             - Blockquote
+            - creditcardrate
         -
           name: Tools
           items:

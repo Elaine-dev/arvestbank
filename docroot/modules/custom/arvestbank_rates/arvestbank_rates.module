@@ -53,7 +53,6 @@ function arvestbank_rates_token_info() {
 function arvestbank_rates_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata) {
 
   $replacements = [];
-  global $base_root;
 
   // Get Rates config.
   $ratesConfigValues = \Drupal::config('arvestbank_rates.settings')->getOriginal();
