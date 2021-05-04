@@ -23,13 +23,12 @@ settings:
   follow: false
   follow_parent: child
   level: 1
-  depth: 3
+  depth: 1
   expand_all_items: false
   parent: 'main:'
   suggestion: main
   label_type: block
   label_link: false
-  expand: false
 visibility:
   cohesion_master_template:
     id: cohesion_master_template
