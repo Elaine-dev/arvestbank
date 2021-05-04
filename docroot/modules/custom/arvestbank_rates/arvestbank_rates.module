@@ -57,12 +57,32 @@ function arvestbank_rates_tokens($type, $tokens, array $data, array $options, Bu
   // Get Rates config.
   $ratesConfigValues = \Drupal::config('arvestbank_rates.settings')->getOriginal();
 
+  // Define date tokens and what format we want them in.
+  $dateTokenFormats = [
+    'rewards_card_rates__accurate_as_of_date' => 'F j, Y',
+    'true_rate_card_rates__accurate_as_of_date' => 'F j, Y',
+    'origin_card_rates__accurate_as_of_date' => 'F j, Y',
+    'legacy_card_rates__accurate_as_of_date' => 'F j, Y',
+  ];
+
   // Loop over tokens that need replacing.
   foreach ($tokens as $name => $original) {
 
     // If we have a config value with the same name as this token.
     if (isset($ratesConfigValues[$name])) {
-      $replacements[$original] = $ratesConfigValues[$name];
+
+      // If it's a date token.
+      if (isset($dateTokenFormats[$name])) {
+        $replacements[$original] = date(
+          $dateTokenFormats[$name],
+          strtotime($ratesConfigValues[$name])
+        );
+      }
+      // If it's a normal nondate token.
+      else {
+        $replacements[$original] = $ratesConfigValues[$name];
+      }
+
     }
 
   }

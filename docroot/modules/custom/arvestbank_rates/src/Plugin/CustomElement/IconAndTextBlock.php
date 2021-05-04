@@ -119,7 +119,18 @@ class IconAndTextBlock extends CustomElementPluginBase {
           && $componentInstanceFieldValues->$wysiwygFieldKey->text
         ) {
 
-          // Add wysiwyg content.
+          // Load token service.
+          $tokenService = \Drupal::token();
+
+          // Get markup with tokens replaced.
+          $wysiwygMarkup = $tokenService->replace($componentInstanceFieldValues->$wysiwygFieldKey->text);
+
+          // Determine if the text had tokens.
+          if ($wysiwygMarkup != $componentInstanceFieldValues->$wysiwygFieldKey->text) {
+            $replacedTokens = TRUE;
+          }
+
+          // Add wysiwyg content run through the token replacement method.
           $renderArray['wysiwyg_content'] = [
             '#type' => 'container',
             '#attributes' => [
@@ -127,7 +138,7 @@ class IconAndTextBlock extends CustomElementPluginBase {
                 'icon-and-text-block--wysiwyg-content',
               ],
             ],
-            '#markup' => $componentInstanceFieldValues->$wysiwygFieldKey->text,
+            '#markup' => $wysiwygMarkup,
           ];
 
         }
@@ -139,6 +150,7 @@ class IconAndTextBlock extends CustomElementPluginBase {
     // Add cache tag to render array.
     if (isset($cohesionLayoutEntity) && $cohesionLayoutEntity) {
 
+      // Base caching conditions of one day and cohesion_layout entity.
       $renderArray['#cache'] = [
         'tags' => [
           'cohesion_layout:' . $cohesionLayoutEntity->id(),
@@ -150,6 +162,12 @@ class IconAndTextBlock extends CustomElementPluginBase {
       if (isset($mediaEntity) && $mediaEntity) {
         // Add a cache tag for the media entity.
         $renderArray['#cache']['tags'][] = 'media:' . $mediaEntity->id();
+      }
+
+      // If we replaced tokens.
+      if (isset($replacedTokens) && $replacedTokens) {
+        // Add a cache tag for the rates config.
+        $renderArray['#cache']['tags'][] = 'config:arvestbank_rates.settings';
       }
 
     }
