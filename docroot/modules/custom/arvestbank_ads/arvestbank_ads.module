@@ -28,9 +28,6 @@ function arvestbank_ads_help($route_name, RouteMatchInterface $route_match) {
  */
 function arvestbank_ads_theme() {
   return [
-    'arvestbank_ads' => [
-      'render element' => 'children',
-    ],
     'ad_block' => [
       'variables' => [
         'content' => NULL
