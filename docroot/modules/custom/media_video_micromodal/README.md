@@ -24,5 +24,5 @@ Working with Views:
 You can use this module with views by creating or using an existing view mode for the content type and assigning the formatter.  Then inside of the view use "Rendered Entity" and use the content type view mode with the micromodal formatter(s) set.
 
 About micromodal.js:
-https://micromodal.vercel.app/  
+https://micromodal.vercel.app/
 Micromodal.js is a lightweight, configurable and a11y-enabled modal library written in pure JavaScript
