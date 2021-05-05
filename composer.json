@@ -144,6 +144,9 @@
             "drupal/core": "-p2"
         },
         "patches": {
+            "drupal/core": {
+                "FinishResponseSubscriber: Need warning/error when headers exceed 16k": "https://www.drupal.org/files/issues/2021-02-08/finish-response-subscriber--need-warning-error-when-headers-exceed-16k-2844620-34.patch"
+            },
             "drupal/field_group": {
                 "Conditional Fields support": "https://www.drupal.org/files/issues/2019-12-10/field_group-support_conditional_fields-3099051-6.patch"
             },
