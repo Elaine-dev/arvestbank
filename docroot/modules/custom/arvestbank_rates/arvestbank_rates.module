@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Render\BubbleableMetadata;
+use Drupal\Core\Entity\EntityInterface;
 
 /**
  * Implements hook_token_info().
@@ -88,4 +89,37 @@ function arvestbank_rates_tokens($type, $tokens, array $data, array $options, Bu
   }
 
   return $replacements;
+}
+
+/**
+ * Implements hook_entity_presave().
+ *
+ * @inheritDoc
+ */
+function arvestbank_rates_entity_presave(EntityInterface $entity) {
+
+  // If the entity has our "rendered node" field.
+  if ($entity->hasField('field_rendered_node')) {
+
+    // Get render array for node.
+    $nodeRenderArray = \Drupal::entityTypeManager()
+      ->getViewBuilder('node')
+      ->view($entity, 'full');
+
+    // Get the current active theme so we can switch back to it later.
+    $currentActiveTheme = \Drupal::theme()->getActiveTheme();
+    // Get the front end theme as an "ActiveTheme".
+    $activeTheme = \Drupal::service('theme.initialization')->getActiveThemeByName('arvestbank_theme');
+    // Set active theme to front end.
+    \Drupal::theme()->setActiveTheme($activeTheme);
+    // Render node with front end theme.
+    $renderedNode = \Drupal::service('renderer')->render($nodeRenderArray)->__toString();
+    // Set active theme back to what it was.
+    \Drupal::theme()->setActiveTheme($currentActiveTheme);
+
+    // Set the field value.
+    $entity->set('field_rendered_node', $renderedNode);
+
+  }
+
 }

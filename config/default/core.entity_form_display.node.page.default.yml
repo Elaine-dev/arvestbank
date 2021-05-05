@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.page.field_meta_tags
     - field.field.node.page.field_page_type
     - field.field.node.page.field_print_button_text
+    - field.field.node.page.field_rendered_node
     - field.field.node.page.field_schedule_appointment_link
     - field.field.node.page.field_second_callout
     - field.field.node.page.field_yoast_seo
@@ -296,5 +297,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_rendered_node: true
   promote: true
   sticky: true

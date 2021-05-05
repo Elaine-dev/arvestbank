@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.full
     - field.field.node.campaign_page.field_layout_canvas
     - field.field.node.campaign_page.field_meta_tags
+    - field.field.node.campaign_page.field_rendered_node
     - field.field.node.campaign_page.field_yoast_seo
     - node.type.campaign_page
   module:
@@ -32,6 +33,7 @@ content:
     region: content
 hidden:
   field_meta_tags: true
+  field_rendered_node: true
   field_yoast_seo: true
   links: true
   search_api_excerpt: true
