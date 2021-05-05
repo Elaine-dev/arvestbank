@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * @file
+ * Contains arvestbank_ads.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function arvestbank_ads_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the arvestbank_ads module.
+    case 'help.page.arvestbank_ads':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom ads management.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function arvestbank_ads_theme() {
+  return [
+    'arvestbank_ads' => [
+      'render element' => 'children',
+    ],
+    'ad_block' => [
+      'variables' => [
+        'content' => NULL
+      ],
+      'render element' => 'children',
+    ],
+  ];
+}
