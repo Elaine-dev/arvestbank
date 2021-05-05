@@ -37,6 +37,7 @@ settings:
           items:
             - Blockquote
             - DrupalImage
+            - creditcardrate
         -
           name: Tools
           items:

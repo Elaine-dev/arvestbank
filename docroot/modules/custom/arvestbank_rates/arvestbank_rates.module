@@ -98,8 +98,11 @@ function arvestbank_rates_tokens($type, $tokens, array $data, array $options, Bu
  */
 function arvestbank_rates_entity_presave(EntityInterface $entity) {
 
-  // If the entity has our "rendered node" field.
-  if ($entity->hasField('field_rendered_node')) {
+  // If the entity is a node and has our "rendered node" field.
+  if (
+    $entity->getEntityTypeId() == 'node'
+    && $entity->hasField('field_rendered_node')
+  ) {
 
     // Get render array for node.
     $nodeRenderArray = \Drupal::entityTypeManager()
