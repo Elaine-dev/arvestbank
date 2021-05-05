@@ -4,12 +4,4 @@ status: true
 dependencies: {  }
 name: stage_slide
 label: 'Stage Slide'
-effects:
-  903dc36f-289a-49b2-a430-1c2fac0649de:
-    uuid: 903dc36f-289a-49b2-a430-1c2fac0649de
-    id: image_scale
-    weight: 1
-    data:
-      width: 1024
-      height: 800
-      upscale: false
+effects: {  }
