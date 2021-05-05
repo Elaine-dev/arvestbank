@@ -27,6 +27,24 @@
   color: #fff;
 }
 
+.slide-background {
+  background-size: cover;
+  min-height: 55em;
+  background-position-y: top;
+}
+
+.slide-background.position-left {
+  background-position-x: left;
+}
+
+.slide-background.position-center {
+  background-position-x: center;
+}
+
+.slide-background.position-right {
+  background-position-x: right;
+}
+
 .slide-cta {
   position: relative;
   z-index: 1;

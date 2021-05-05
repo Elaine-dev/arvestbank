@@ -23,9 +23,8 @@ content:
     label: hidden
     settings:
       image_style: stage_slide
-      image_link: ''
     third_party_settings: {  }
-    type: image
+    type: image_url
     region: content
 hidden:
   content_moderation_control: true
