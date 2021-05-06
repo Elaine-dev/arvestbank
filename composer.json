@@ -163,6 +163,9 @@
             },
             "drupal/media_acquiadam": {
                 "Module only themed to work with SEVEN": "https://www.drupal.org/files/issues/2021-04-27/module-theming-3210805-1_0.patch"
+            },
+            "drupal/diff": {
+                "Filter Revision Overview By Date": "https://www.drupal.org/files/issues/2021-05-06/filter-revision-overview-by-date-3212653-1.patch"
             }
         }
     },
