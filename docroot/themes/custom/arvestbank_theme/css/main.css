@@ -179,16 +179,71 @@
   float: left;
 }
 
-#search-tab input {
-  display: none;
+#search-tab {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  flex-direction: row;
+  margin: .9375rem 0;
 }
 
-#search-tab .active-tab {
-  background-color: #4178b4;
+@media screen and (max-width: 35.25em) {
+  #search-tab {
+    flex-direction: column;
+  }
 }
 
 #search-tab .form-item-search-tab {
-  display: inline-block;
+  flex: 1 1 auto;
+  
+}
+
+#search-tab .form-item-search-tab label {
+  color: #333;
+  background-color: #fbfbfb;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.625rem 0;
+  margin: -1.3125rem 0 0;
+  border: 1px solid #e3e3e3;
+  border-left-color: transparent;
+}
+
+#search-tab .form-item-search-tab:first-child label {
+  border-left-color: #e3e3e3;
+}
+
+@media screen and (max-width: 35.25em) {
+  #search-tab .form-item-search-tab label {
+    border-left-color: #e3e3e3;
+    border-top-color: transparent;
+  }
+  #search-tab .form-item-search-tab:first-child label {
+    border-top-color: #e3e3e3;
+  }
+}
+
+#search-tab .form-item-search-tab input[type="radio"] {
+  opacity: 0;
+}
+
+#search-tab .form-item-search-tab input[type="radio"]:checked + label {
+  color: #fff;
+  background-color: #4178b4;
+  border-color: transparent;
+  border-bottom: 2px solid #e60000;
+  outline: 0;
+}
+
+#search-tab .form-item-search-tab label:hover,
+#search-tab .form-item-search-tab label:focus {
+  background: #fbfbfb;
+  text-decoration: underline;
+  color: #4178b4;
 }
 
 .tabs-form .form-item-search {
@@ -238,6 +293,48 @@
 
 #search-block-form input {
   margin: 0;
+}
+
+.ui-widget,
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+  font-family: Verdana,Geneva,sans-serif;
+}
+
+.ui-widget.ui-widget-content {
+  padding: 0.5rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ui-menu {
+  width: 12.4375rem;
+}
+
+.ui-menu .ui-menu-item {
+  background-color: #fff;
+}
+
+.ui-menu .ui-menu-item-wrapper {
+  
+  padding: 4px 18px;
+  line-height: normal;
+}
+
+.ui-widget-content a {
+  color: #333;
+  display: block;
+}
+
+.ui-widget-content a:hover,
+.ui-widget-content a:focus,
+.ui-widget-content .ui-state-active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #1a5687;
+  border-color: #fff;
 }
 
 .node-preview-container {

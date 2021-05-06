@@ -44,6 +44,14 @@ $config['auth.adminpassword'] = 'mysupersecret';
  * $port = ':' . $_SERVER['SERVER_PORT'];
  * @endcode
  */
+$protocol = 'http://';
+$port = ':80';
+if (!empty($_ENV['AH_SITE_ENVIRONMENT'])) {
+  $_SERVER['SERVER_PORT'] = 443;
+  $_SERVER['HTTPS'] = 'true';
+  $protocol = 'https://';
+  $port = ':' . $_SERVER['SERVER_PORT'];
+}
 
 /**
  * Cookies No Cache.
@@ -76,7 +84,7 @@ if (!getenv('AH_SITE_ENVIRONMENT')) {
   $config['store.sql.password'] = 'drupal';
   $config['store.sql.prefix'] = 'simplesaml';
   $config['certdir'] = "/var/www/simplesamlphp/cert/";
-  $config['metadatadir'] = "/var/www/simplesamlphp/metadata";
+  $config['metadatadir'] = "/var/www/arvestbank/simplesamlphp/metadata";
   $config['baseurlpath'] = 'simplesaml/';
   $config['loggingdir'] = '/var/www/simplesamlphp/log/';
 
@@ -90,7 +98,7 @@ elseif (getenv('AH_SITE_ENVIRONMENT')) {
   // Set ACE and ACSF sites based on hosting database and site name.
   $ah_site_dir = getenv('AH_SITE_GROUP') . '.' . getenv('AH_SITE_ENVIRONMENT');
   $config['certdir'] = '/mnt/www/html/' . $ah_site_dir . '/simplesamlphp/cert/';
-  $config['metadatadir'] = '/mnt/www/html/' . $ah_site_dir . '/simplesamlphp/metadata';
+  $config['metadatadir'] = "/mnt/www/html/{$_ENV['AH_SITE_GROUP']}.{$_ENV['AH_SITE_ENVIRONMENT']}/simplesamlphp/metadata";
   $config['baseurlpath'] = 'simplesaml/';
   // Setup basic logging.
   $config['logging.handler'] = 'file';

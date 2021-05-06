@@ -118,7 +118,7 @@ class SuggestedQuestionsBlock extends BlockBase implements ContainerFactoryPlugi
             ],
           ],
           'title' => [
-            '#markup' => '<h3>Suggested Questions</h3>',
+            '#markup' => '<h2>Suggested Questions</h2>',
           ],
           'questions' => [
             '#type'       => 'container',

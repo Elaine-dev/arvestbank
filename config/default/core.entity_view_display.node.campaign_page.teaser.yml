@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.campaign_page.field_layout_canvas
+    - field.field.node.campaign_page.field_meta_tags
+    - field.field.node.campaign_page.field_yoast_seo
     - node.type.campaign_page
   module:
     - user
@@ -13,6 +15,11 @@ targetEntityType: node
 bundle: campaign_page
 mode: teaser
 content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
@@ -20,4 +27,6 @@ content:
     region: content
 hidden:
   field_layout_canvas: true
+  field_meta_tags: true
+  field_yoast_seo: true
   search_api_excerpt: true

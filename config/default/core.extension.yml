@@ -11,6 +11,7 @@ module:
   arvestbank_calculators: 0
   arvestbank_external_login: 0
   arvestbank_menus: 0
+  arvestbank_rates: 0
   arvestbank_search: 0
   arvestbank_views: 0
   arvestbank_webforms: 0
@@ -79,6 +80,7 @@ module:
   media: 0
   media_acquiadam: 0
   media_library: 0
+  media_video_micromodal: 0
   menu_block: 0
   menu_item_extras: 0
   menu_link_attributes: 0

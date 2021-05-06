@@ -15,21 +15,25 @@ dependencies:
     - field.field.node.stage_page.field_icon_two
     - field.field.node.stage_page.field_icon_two_text
     - field.field.node.stage_page.field_meta_tags
+    - field.field.node.stage_page.field_slide1_bg_position
     - field.field.node.stage_page.field_slide1_cta_color
     - field.field.node.stage_page.field_slide1_cta_link
     - field.field.node.stage_page.field_slide1_cta_position
     - field.field.node.stage_page.field_slide1_cta_text_1
     - field.field.node.stage_page.field_slide1_cta_text_2
+    - field.field.node.stage_page.field_slide2_bg_position
     - field.field.node.stage_page.field_slide2_cta_color
     - field.field.node.stage_page.field_slide2_cta_link
     - field.field.node.stage_page.field_slide2_cta_position
     - field.field.node.stage_page.field_slide2_cta_text_1
     - field.field.node.stage_page.field_slide2_cta_text_2
+    - field.field.node.stage_page.field_slide3_bg_position
     - field.field.node.stage_page.field_slide3_cta_color
     - field.field.node.stage_page.field_slide3_cta_link
     - field.field.node.stage_page.field_slide3_cta_position
     - field.field.node.stage_page.field_slide3_cta_text_1
     - field.field.node.stage_page.field_slide3_cta_text_2
+    - field.field.node.stage_page.field_slide4_bg_position
     - field.field.node.stage_page.field_slide4_cta_color
     - field.field.node.stage_page.field_slide4_cta_link
     - field.field.node.stage_page.field_slide4_cta_position
@@ -104,8 +108,8 @@ content:
     region: content
   field_icon_one:
     type: entity_reference_entity_view
-    weight: 7
-    label: hidden
+    weight: 109
+    label: above
     settings:
       view_mode: full_width_slideshow
       link: false
@@ -160,6 +164,13 @@ content:
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
+  field_slide1_bg_position:
+    weight: 141
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
   field_slide1_cta_color:
     weight: 22
     label: hidden
@@ -201,6 +212,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_slide2_bg_position:
+    weight: 142
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
     region: content
   field_slide2_cta_color:
     weight: 27
@@ -244,6 +262,13 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_slide3_bg_position:
+    weight: 143
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
   field_slide3_cta_color:
     weight: 32
     label: hidden
@@ -285,6 +310,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_slide4_bg_position:
+    weight: 144
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
     region: content
   field_slide4_cta_color:
     weight: 37

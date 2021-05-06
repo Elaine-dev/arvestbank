@@ -13,6 +13,8 @@ dependencies:
     - node.type.article_education_article
     - node.type.associate
     - node.type.calculators
+    - node.type.campaign_page
+    - node.type.landing_page
     - node.type.page
     - node.type.private_bank_location
     - node.type.stage_page
@@ -116,6 +118,8 @@ type_settings:
       - article_education_article
       - associate
       - calculators
+      - campaign_page
+      - landing_page
       - page
       - private_bank_location
       - stage_page

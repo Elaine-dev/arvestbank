@@ -6,6 +6,7 @@ dependencies:
     - field.storage.media.field_acquiadam_asset_image
     - field.storage.media.field_debit_card_category
     - media.type.credit_or_debit_card
+    - system.menu.main
     - taxonomy.vocabulary.debit_card_category
     - taxonomy.vocabulary.debit_card_keywords
     - taxonomy.vocabulary.school_zip_code
@@ -590,6 +591,15 @@ display:
     display_options:
       display_extenders: {  }
       path: personal/bank/checking/debit-cards/specialty-debit-cards
+      menu:
+        type: normal
+        title: 'Specialty Debit Cards'
+        description: ''
+        expanded: false
+        parent: 'menu_link_content:b4cc445e-b053-4cf7-8047-d11d3ff8e15e'
+        weight: 0
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:

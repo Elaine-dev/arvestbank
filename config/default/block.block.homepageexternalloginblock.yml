@@ -10,7 +10,7 @@ dependencies:
 id: homepageexternalloginblock
 theme: arvestbank_theme
 region: dx8_hidden
-weight: 0
+weight: -1
 provider: null
 plugin: homepage_external_login_block
 settings:

@@ -32,20 +32,22 @@ ssh_home: /var/www/arvestbank
 
 # Multisite installations should configure additional domains here.
 apache_vhosts:
-  # Drupal VM's default domain, evaluating to whatever `vagrant_hostname` is set to (drupalvm.dev by default).
   - servername: "{{ drupal_domain }}"
     serveralias: "www.{{ drupal_domain }}"
     documentroot: "{{ drupal_core_path }}"
-    extra_parameters: "{{ apache_vhost_php_fpm_parameters }}"
-  # Domain for the Drupal VM Dashboard
-  - servername: "dashboard.{{ drupal_domain }}"
-    serveralias: "www.dashboard.{{ drupal_domain }}"
-    documentroot: "/var/www/dashboard"
-    extra_parameters: "{{ apache_vhost_php_fpm_parameters }}"
-  - servername: 'adminer.{{ drupal_domain }}'
-    serveralias: 'www.adminer.{{ drupal_domain }}'
-    documentroot: '{{ adminer_install_dir }}'
-    extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
+
+  - servername: "adminer.{{ vagrant_hostname }}"
+    documentroot: "{{ adminer_install_dir }}"
+
+  - servername: "xhprof.{{ vagrant_hostname }}"
+    documentroot: "{{ php_xhprof_html_dir }}"
+
+  - servername: "pimpmylog.{{ vagrant_hostname }}"
+    documentroot: "{{ pimpmylog_install_dir }}"
+
+  - servername: "{{ vagrant_ip }}"
+    serveralias: "dashboard.{{ vagrant_hostname }}"
+    documentroot: "{{ dashboard_install_dir }}"
 
 #  - servername: "local.second-drupal-site.com"
 #    documentroot: "{{ drupal_core_path }}"
@@ -76,8 +78,8 @@ drupal_install_site: false
 # this variable is 'true'.
 configure_drush_aliases: false
 
-extra_packages: [patchutils, sqlite]
-installed_extras: [adminer, selenium, drush, mailhog, memcached, nodejs, xdebug]
+extra_packages: [patchutils, sqlite, libapache2-mod-php7.4]
+installed_extras: [adminer, drush, memcached, nodejs, xdebug]
 
 # PHP 7.4.
 php_version: "7.4"

@@ -1,0 +1,71 @@
+<?php
+
+/**
+ * @file
+ * Hooks relating to arvestbank rates.
+ */
+
+use Drupal\Core\Render\BubbleableMetadata;
+
+/**
+ * Implements hook_token_info().
+ */
+function arvestbank_rates_token_info() {
+
+  // Instantiate tokens array with token group.
+  $info = [
+    'types' => [
+      'arvestbank_rates' => [
+        'name' => t('Arvest Bank Rates'),
+        'description' => t('Tokens containing credit card rates.'),
+      ],
+    ],
+    'tokens' => [
+      'arvestbank_rates' => [],
+    ],
+  ];
+
+  // Get Rates config.
+  $ratesConfigValues = \Drupal::config('arvestbank_rates.settings')->getOriginal();
+
+  // Loop over config variables.
+  foreach ($ratesConfigValues as $rateConfigKey => $rateConfigValue) {
+
+    // Decide on human name for config variable.
+    $tokenHumanName = ucwords(str_replace(['__', '_'], [' - ', ' '], $rateConfigKey));
+
+    // Add config variable to arvestbank_rates token group.
+    $info['tokens']['arvestbank_rates'][$rateConfigKey] = [
+      'name' => $tokenHumanName,
+      'description' => $tokenHumanName,
+    ];
+
+  }
+
+  return $info;
+}
+
+/**
+ * Implements hook_tokens().
+ *
+ * @inheritDoc
+ */
+function arvestbank_rates_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata) {
+
+  $replacements = [];
+
+  // Get Rates config.
+  $ratesConfigValues = \Drupal::config('arvestbank_rates.settings')->getOriginal();
+
+  // Loop over tokens that need replacing.
+  foreach ($tokens as $name => $original) {
+
+    // If we have a config value with the same name as this token.
+    if (isset($ratesConfigValues[$name])) {
+      $replacements[$original] = $ratesConfigValues[$name];
+    }
+
+  }
+
+  return $replacements;
+}

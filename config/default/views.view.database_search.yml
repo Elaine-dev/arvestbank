@@ -3,14 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block.block.alternateexposedfiltersblock
-    - block.block.askarvesttopquestionblock
     - block.block.mostfrequentlyaskedquestionsblock
     - block.block.suggestedquestionsblock
     - field.storage.node.body
     - search_api.index.database_search_index
   module:
     - arvestbank_search
+    - cohesion
     - file
     - search_api
     - text
@@ -69,14 +68,17 @@ display:
             previous: ‹‹
             next: ››
       style:
-        type: default
+        type: cohesion_layout
+        options:
+          views_template: view_tpl_search_results_view_tem
+          master_template: __none__
       row:
         type: fields
         options:
           default_field_elements: true
           inline: {  }
           separator: ''
-          hide_empty: false
+          hide_empty: true
       fields:
         title:
           id: title
@@ -114,14 +116,14 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
-          element_class: ''
+          element_type: h3
+          element_class: 'coh-style-heading-2-size content-title'
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
+          element_wrapper_type: '0'
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -129,7 +131,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: false
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -185,22 +187,22 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
-          element_class: ''
+          element_type: h3
+          element_class: 'coh-style-heading-2-size media-name'
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
+          element_wrapper_type: '0'
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: false
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -256,13 +258,13 @@ display:
             trim: false
             preserve_tags: ''
             html: true
-          element_type: ''
+          element_type: p
           element_class: ''
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_type: div
+          element_wrapper_class: search-body
           element_default_classes: true
           empty: ''
           hide_empty: false
@@ -337,7 +339,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{% if search_api_excerpt|render is null %}\r\n{{ body }} \r\n{% endif %}"
+            text: "{% if search_api_excerpt|render is null %}\r\n{{ body }}\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -361,15 +363,15 @@ display:
             strip_tags: false
             trim: true
             preserve_tags: ''
-            html: false
-          element_type: ''
+            html: true
+          element_type: '0'
           element_class: ''
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
+          element_wrapper_type: div
+          element_wrapper_class: search-body
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -432,22 +434,22 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
-          element_class: ''
+          element_type: '0'
+          element_class: search-path
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
+          element_wrapper_class: search-path
+          element_default_classes: false
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
           type: file_uri
           settings:
-            link_to_file: false
+            link_to_file: true
             file_download_path: true
           group_column: value
           group_columns: {  }
@@ -503,19 +505,19 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
-          element_class: ''
+          element_type: '0'
+          element_class: search-path
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
+          element_wrapper_class: search-path
+          element_default_classes: false
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
-          link_to_item: false
+          link_to_item: true
           use_highlighting: false
           multi_type: separator
           multi_separator: ', '
@@ -630,32 +632,16 @@ display:
           plugin_id: search_api
       title: 'Search Results'
       header:
-        entity_block_1:
-          id: entity_block_1
+        result:
+          id: result
           table: views
-          field: entity_block
+          field: result
           relationship: none
           group_type: group
           admin_label: ''
-          empty: true
-          tokenize: true
-          target: askarvesttopquestionblock
-          view_mode: default
-          bypass_access: false
-          plugin_id: entity
-        entity_block:
-          id: entity_block
-          table: views
-          field: entity_block
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: true
-          tokenize: true
-          target: alternateexposedfiltersblock
-          view_mode: default
-          bypass_access: false
-          plugin_id: entity
+          empty: false
+          content: 'Your search returned <strong>@total</strong> results. Displaying <strong>@start - @end</strong>.'
+          plugin_id: result
       footer:
         entity_block:
           id: entity_block
@@ -692,11 +678,12 @@ display:
           group_type: group
           admin_label: ''
           empty: true
-          content: 'Your search returned 0 results.'
+          content: 'Your search returned <strong>0</strong> results.'
           plugin_id: result
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      use_ajax: false
     cache_metadata:
       max-age: -1
       contexts:

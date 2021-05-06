@@ -16,21 +16,25 @@ dependencies:
     - field.field.node.stage_page.field_icon_two
     - field.field.node.stage_page.field_icon_two_text
     - field.field.node.stage_page.field_meta_tags
+    - field.field.node.stage_page.field_slide1_bg_position
     - field.field.node.stage_page.field_slide1_cta_color
     - field.field.node.stage_page.field_slide1_cta_link
     - field.field.node.stage_page.field_slide1_cta_position
     - field.field.node.stage_page.field_slide1_cta_text_1
     - field.field.node.stage_page.field_slide1_cta_text_2
+    - field.field.node.stage_page.field_slide2_bg_position
     - field.field.node.stage_page.field_slide2_cta_color
     - field.field.node.stage_page.field_slide2_cta_link
     - field.field.node.stage_page.field_slide2_cta_position
     - field.field.node.stage_page.field_slide2_cta_text_1
     - field.field.node.stage_page.field_slide2_cta_text_2
+    - field.field.node.stage_page.field_slide3_bg_position
     - field.field.node.stage_page.field_slide3_cta_color
     - field.field.node.stage_page.field_slide3_cta_link
     - field.field.node.stage_page.field_slide3_cta_position
     - field.field.node.stage_page.field_slide3_cta_text_1
     - field.field.node.stage_page.field_slide3_cta_text_2
+    - field.field.node.stage_page.field_slide4_bg_position
     - field.field.node.stage_page.field_slide4_cta_color
     - field.field.node.stage_page.field_slide4_cta_link
     - field.field.node.stage_page.field_slide4_cta_position
@@ -75,11 +79,12 @@ third_party_settings:
     group_slide_one:
       children:
         - field_slide_one
+        - field_slide1_bg_position
         - field_icon_one
         - field_icon_one_text
         - group_cta_slide1
       parent_name: ''
-      weight: 3
+      weight: 2
       format_type: details
       region: content
       format_settings:
@@ -92,11 +97,12 @@ third_party_settings:
     group_slide_two:
       children:
         - field_slide_two
+        - field_slide2_bg_position
         - field_icon_two
         - field_icon_two_text
         - group_cta_slide2
       parent_name: ''
-      weight: 4
+      weight: 3
       format_type: details
       region: content
       format_settings:
@@ -109,6 +115,7 @@ third_party_settings:
     group_slide_three:
       children:
         - field_slide_three
+        - field_slide3_bg_position
         - field_icon_three
         - field_icon_three_text
         - group_cta_slide3
@@ -126,6 +133,7 @@ third_party_settings:
     group_slide_four:
       children:
         - field_slide_four
+        - field_slide4_bg_position
         - field_icon_four
         - field_icon_four_text
         - group_cta_slide4
@@ -148,7 +156,7 @@ third_party_settings:
         - field_slide1_cta_color
         - field_slide1_cta_position
       parent_name: group_slide_one
-      weight: 18
+      weight: 19
       format_type: details
       region: content
       format_settings:
@@ -166,7 +174,7 @@ third_party_settings:
         - field_slide2_cta_color
         - field_slide2_cta_position
       parent_name: group_slide_two
-      weight: 20
+      weight: 21
       format_type: details
       region: content
       format_settings:
@@ -184,7 +192,7 @@ third_party_settings:
         - field_slide3_cta_color
         - field_slide3_cta_position
       parent_name: group_slide_three
-      weight: 21
+      weight: 31
       format_type: details
       region: content
       format_settings:
@@ -202,7 +210,7 @@ third_party_settings:
         - field_slide4_cta_color
         - field_slide4_cta_position
       parent_name: group_slide_four
-      weight: 22
+      weight: 44
       format_type: details
       region: content
       format_settings:
@@ -218,7 +226,7 @@ bundle: stage_page
 mode: default
 content:
   body:
-    weight: 14
+    weight: 15
     settings:
       rows: 9
       summary_rows: 3
@@ -234,7 +242,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_block_button:
-    weight: 15
+    weight: 16
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -251,7 +259,7 @@ content:
     region: content
   field_icon_four:
     type: entity_browser_entity_reference
-    weight: 20
+    weight: 42
     settings:
       entity_browser: dam_image_entity_browser
       field_widget_display: rendered_entity
@@ -265,7 +273,7 @@ content:
     third_party_settings: {  }
     region: content
   field_icon_four_text:
-    weight: 21
+    weight: 43
     settings:
       size: 60
       placeholder: ''
@@ -274,7 +282,7 @@ content:
     region: content
   field_icon_one:
     type: entity_browser_entity_reference
-    weight: 16
+    weight: 17
     settings:
       entity_browser: dam_image_entity_browser
       field_widget_display: rendered_entity
@@ -288,7 +296,7 @@ content:
     third_party_settings: {  }
     region: content
   field_icon_one_text:
-    weight: 17
+    weight: 18
     settings:
       size: 60
       placeholder: ''
@@ -296,6 +304,29 @@ content:
     type: string_textfield
     region: content
   field_icon_three:
+    type: entity_browser_entity_reference
+    weight: 29
+    settings:
+      entity_browser: dam_image_entity_browser
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: full
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+    third_party_settings: {  }
+    region: content
+  field_icon_three_text:
+    weight: 30
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_icon_two:
     type: entity_browser_entity_reference
     weight: 18
     settings:
@@ -310,7 +341,7 @@ content:
       open: false
     third_party_settings: {  }
     region: content
-  field_icon_three_text:
+  field_icon_two_text:
     weight: 20
     settings:
       size: 60
@@ -318,44 +349,27 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_icon_two:
-    type: entity_browser_entity_reference
-    weight: 17
-    settings:
-      entity_browser: dam_image_entity_browser
-      field_widget_display: rendered_entity
-      field_widget_display_settings:
-        view_mode: full
-      field_widget_edit: true
-      field_widget_remove: true
-      selection_mode: selection_append
-      field_widget_replace: false
-      open: false
-    third_party_settings: {  }
-    region: content
-  field_icon_two_text:
-    weight: 19
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_meta_tags:
-    weight: 19
+    weight: 18
     settings:
       sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
     region: content
+  field_slide1_bg_position:
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_slide1_cta_color:
-    weight: 23
+    weight: 24
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_slide1_cta_link:
-    weight: 22
+    weight: 23
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -363,7 +377,7 @@ content:
     type: link_default
     region: content
   field_slide1_cta_position:
-    weight: 24
+    weight: 25
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -377,21 +391,27 @@ content:
     type: string_textfield
     region: content
   field_slide1_cta_text_2:
-    weight: 21
+    weight: 22
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_slide2_bg_position:
+    weight: 17
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_slide2_cta_color:
-    weight: 28
+    weight: 29
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_slide2_cta_link:
-    weight: 27
+    weight: 28
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -399,7 +419,7 @@ content:
     type: link_default
     region: content
   field_slide2_cta_position:
-    weight: 29
+    weight: 30
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -420,14 +440,20 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_slide3_bg_position:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_slide3_cta_color:
-    weight: 34
+    weight: 26
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_slide3_cta_link:
-    weight: 32
+    weight: 25
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -435,13 +461,13 @@ content:
     type: link_default
     region: content
   field_slide3_cta_position:
-    weight: 35
+    weight: 27
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_slide3_cta_text_1:
-    weight: 30
+    weight: 22
     settings:
       size: 60
       placeholder: ''
@@ -449,21 +475,27 @@ content:
     type: string_textfield
     region: content
   field_slide3_cta_text_2:
-    weight: 31
+    weight: 23
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_slide4_bg_position:
+    weight: 41
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_slide4_cta_color:
-    weight: 39
+    weight: 43
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_slide4_cta_link:
-    weight: 38
+    weight: 42
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -471,13 +503,13 @@ content:
     type: link_default
     region: content
   field_slide4_cta_position:
-    weight: 40
+    weight: 44
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_slide4_cta_text_1:
-    weight: 35
+    weight: 40
     settings:
       size: 60
       placeholder: ''
@@ -485,7 +517,7 @@ content:
     type: string_textfield
     region: content
   field_slide4_cta_text_2:
-    weight: 37
+    weight: 41
     settings:
       size: 60
       placeholder: ''
@@ -494,12 +526,12 @@ content:
     region: content
   field_slide_four:
     type: entity_browser_entity_reference
-    weight: 18
+    weight: 40
     settings:
       entity_browser: dam_image_entity_browser
       field_widget_display: rendered_entity
       field_widget_display_settings:
-        view_mode: full_width_slideshow
+        view_mode: media_library
       field_widget_edit: true
       field_widget_remove: true
       selection_mode: selection_append
@@ -514,7 +546,7 @@ content:
       entity_browser: dam_image_entity_browser
       field_widget_display: rendered_entity
       field_widget_display_settings:
-        view_mode: full_width_slideshow
+        view_mode: media_library
       field_widget_edit: true
       field_widget_remove: true
       selection_mode: selection_append
@@ -524,12 +556,12 @@ content:
     region: content
   field_slide_three:
     type: entity_browser_entity_reference
-    weight: 17
+    weight: 26
     settings:
       entity_browser: dam_image_entity_browser
       field_widget_display: rendered_entity
       field_widget_display_settings:
-        view_mode: full_width_slideshow
+        view_mode: media_library
       field_widget_edit: true
       field_widget_remove: true
       selection_mode: selection_append
@@ -544,7 +576,7 @@ content:
       entity_browser: dam_image_entity_browser
       field_widget_display: rendered_entity
       field_widget_display_settings:
-        view_mode: full_width_slideshow
+        view_mode: media_library
       field_widget_edit: true
       field_widget_remove: true
       selection_mode: selection_append
@@ -566,13 +598,13 @@ content:
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 17
+    weight: 16
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 13
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -585,12 +617,12 @@ content:
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 14
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 12
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -598,14 +630,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 18
+    weight: 17
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 11
+    weight: 10
     region: content
     third_party_settings: {  }
   title:
@@ -628,12 +660,12 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 15
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 16
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }

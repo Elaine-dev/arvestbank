@@ -1,0 +1,23 @@
+uuid: 2fb708af-e1b0-46c2-9791-2a368825c16f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.calculators
+  module:
+    - link
+id: node.calculators.field_link
+field_name: field_link
+entity_type: node
+bundle: calculators
+label: 'External Link'
+description: 'A link to an externally hosted calculator.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link

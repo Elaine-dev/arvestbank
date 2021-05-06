@@ -12,7 +12,7 @@ dependencies:
 id: sidebar_menu_top_menu
 theme: arvestbank_theme
 region: dx8_hidden
-weight: 8
+weight: 10
 provider: null
 plugin: 'menu_block:top-menu'
 settings:
@@ -24,9 +24,12 @@ settings:
   follow_parent: child
   level: 1
   depth: 1
-  expand: false
+  expand_all_items: false
   parent: 'top-menu:'
   suggestion: top_menu
+  label_type: block
+  label_link: false
+  expand: false
 visibility:
   cohesion_master_template:
     id: cohesion_master_template

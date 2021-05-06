@@ -1,0 +1,9 @@
+arvestbank_rates.admin_settings_form:
+  path: '/admin/config/rates'
+  defaults:
+    _form: '\Drupal\arvestbank_rates\Form\RatesForm'
+    _title: 'Edit Credit Card Rates'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

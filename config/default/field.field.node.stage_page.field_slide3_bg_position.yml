@@ -1,0 +1,23 @@
+uuid: b96cfaca-78ae-436a-937b-ff11deecc0d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slide3_bg_position
+    - node.type.stage_page
+  module:
+    - options
+id: node.stage_page.field_slide3_bg_position
+field_name: field_slide3_bg_position
+entity_type: node
+bundle: stage_page
+label: 'Background Position'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: center
+default_value_callback: ''
+settings: {  }
+field_type: list_string

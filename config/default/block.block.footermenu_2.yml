@@ -12,7 +12,7 @@ dependencies:
 id: footermenu_2
 theme: arvestbank_theme
 region: dx8_hidden
-weight: -2
+weight: -3
 provider: null
 plugin: 'menu_block:footer'
 settings:
@@ -24,9 +24,12 @@ settings:
   follow_parent: child
   level: 1
   depth: 1
-  expand: false
+  expand_all_items: false
   parent: 'footer:'
   suggestion: footer
+  label_type: block
+  label_link: false
+  expand: false
 visibility:
   cohesion_master_template:
     id: cohesion_master_template
