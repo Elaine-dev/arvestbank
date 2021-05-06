@@ -11,7 +11,6 @@ dependencies:
     - media.type.video
     - node.type.ad
     - node.type.article_education_article
-    - node.type.associate
     - node.type.calculators
     - node.type.campaign_page
     - node.type.landing_page
@@ -116,7 +115,6 @@ type_settings:
     node:
       - ad
       - article_education_article
-      - associate
       - calculators
       - campaign_page
       - landing_page
