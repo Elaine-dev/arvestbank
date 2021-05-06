@@ -84,6 +84,7 @@ class MicromodalFieldFormatter extends FormatterBase {
    * {@inheritdoc}
    */
   public function settingsSummary() {
+
     $summary = [];
 
     // Implement settings summary.
@@ -95,12 +96,14 @@ class MicromodalFieldFormatter extends FormatterBase {
     }
 
     return $summary;
+
   }
 
   /**
    * {@inheritdoc}
    */
   public function viewElements(FieldItemListInterface $items, $langcode) {
+
     $elements = [];
 
     foreach ($items as $delta => $item) {

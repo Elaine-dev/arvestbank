@@ -33,20 +33,40 @@ Export your Site Studio packages to commit your changes. Create a new package or
   `arvestbank/config/site_studio_sync/`
 11. Edit the package .yml file to verify it contains no dependencies. It should look similar to:
   ```
-  type: cohesion_base_styles
+-
+  type: cohesion_sync_package
   export:
-    uuid: d5d047c7-041b-4cf5-9969-27c0352e7695
+    uuid: 28ee2d06-24c4-45d9-9edf-2eb9bd19d899
     langcode: en
     status: true
     dependencies: {  }
-    id: heading_1
-    label: 'Heading 1'
+    id: pack_component1_column_layout
+    label: 'Component one column layout'
+    description: "A reusuable component 1 column content layouts.\r\nAuthor: Aaron Parkening / Last update: 5/6/2021"
+    excluded_entity_types: '[]'
+    settings: '{"20b1e0a1-bcdf-4d30-ab99-3f44e192a74b":{"type":"cohesion_component","items":{"20b1e0a1-bcdf-4d30-ab99-3f44e192a74b":{"type":"cohesion_component"}},"checked":true}}'
+-
+  type: cohesion_component
+  export:
+    uuid: 20b1e0a1-bcdf-4d30-ab99-3f44e192a74b
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: cpt_1_column_layout_component
+    label: '1 column layout'
     json_values: '{{ [json string] }}'
+        json_mapper: '{}'
     last_entity_update: entityupdate_0030
     locked: false
     modified: true
-    selectable: false
-    custom: null
+    selectable: true
+    category: cpt_cat_layout_components
+    preview_image: ''
+    has_quick_edit: true
+    entity_type_access: {  }
+    bundle_access: {  }
+    twig_template: component--cohesion-cpt-1-column-layout-component
+    weight: 0
   ```
 12. Add config file(s) to git and commit.
 

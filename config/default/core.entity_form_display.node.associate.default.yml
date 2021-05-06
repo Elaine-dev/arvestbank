@@ -7,13 +7,13 @@ dependencies:
     - field.field.node.associate.feeds_item
     - field.field.node.associate.field_appointment
     - field.field.node.associate.field_associate_id
+    - field.field.node.associate.field_associate_image
     - field.field.node.associate.field_associate_type
     - field.field.node.associate.field_branch_nickname
     - field.field.node.associate.field_coconut_appointment
     - field.field.node.associate.field_designation
     - field.field.node.associate.field_email
     - field.field.node.associate.field_fax_number
-    - field.field.node.associate.field_image
     - field.field.node.associate.field_insurance_license_number
     - field.field.node.associate.field_job_title
     - field.field.node.associate.field_location
@@ -24,12 +24,13 @@ dependencies:
     - field.field.node.associate.field_private_banker_location
     - field.field.node.associate.field_vanity_url
     - field.field.node.associate.field_website
+    - image.style.thumbnail
     - node.type.associate
     - workflows.workflow.editorial
   module:
     - conditional_fields
     - content_moderation
-    - inline_entity_form
+    - image
     - link
     - path
     - scheduler
@@ -62,6 +63,14 @@ content:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
+  field_associate_image:
+    weight: 31
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   field_associate_type:
     weight: 21
@@ -109,19 +118,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: telephone_default
-    region: content
-  field_image:
-    weight: 25
-    settings:
-      form_mode: default
-      revision: false
-      override_labels: false
-      label_singular: ''
-      label_plural: ''
-      collapsible: false
-      collapsed: false
-    third_party_settings: {  }
-    type: inline_entity_form_simple
     region: content
   field_insurance_license_number:
     weight: 28
