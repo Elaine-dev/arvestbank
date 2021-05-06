@@ -47,6 +47,7 @@ module:
   ctools_entity_mask: 0
   datetime: 0
   datetime_range: 0
+  diff: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0
