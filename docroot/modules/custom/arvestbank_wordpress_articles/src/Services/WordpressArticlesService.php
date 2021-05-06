@@ -58,8 +58,32 @@ class WordpressArticlesService {
       // Loop over articles.
       foreach ($articles as $articleIndex => $article) {
 
+        // Add link container and link tags container to render array.
+        $renderArray['article-' . $articleIndex] = [
+          '#type' => 'container',
+          '#attributes' => [
+            'class' => [
+              'wordpress-article-' . $articleIndex,
+            ],
+          ],
+          'tags' => [
+            '#type' => 'container',
+            '#attributes' => [
+              'class' => [
+                'wordpress-article-tags',
+              ],
+            ],
+            '#markup' => '',
+          ],
+        ];
+
+        // Loop over tags.
+        foreach($article['tags'] as $tagIndex => $tagName) {
+          $renderArray['article-' . $articleIndex]['tags']['#markup'] .= '<span class="wordpress-link-tag>' . $tagName . '</span>';
+        }
+
         // Add link to render array.
-        $renderArray['article_' . $articleIndex] = [
+        $renderArray['article_' . $articleIndex]['link'] = [
           '#markup' => '<a class="wordpress-article-link" href="' . $article['url'] . '">' . $article['title'] . '</a>',
         ];
 

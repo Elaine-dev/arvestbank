@@ -119,7 +119,7 @@ class WordpressArticles extends CustomElementPluginBase {
         'tags' => [
           'cohesion_layout:' . $cohesionLayoutEntity->id(),
         ],
-        'max-age' => 86400,
+        'max-age' => 1800,
       ];
     }
 
