@@ -1,0 +1,19 @@
+uuid: 4cf5b3c2-5fda-4941-b40d-5a0733177790
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rendered_node
+    - node.type.campaign_page
+id: node.campaign_page.field_rendered_node
+field_name: field_rendered_node
+entity_type: node
+bundle: campaign_page
+label: 'Rendered Node'
+description: 'This field is to store the rendered node to show changes on the front end when comparing revisions.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
