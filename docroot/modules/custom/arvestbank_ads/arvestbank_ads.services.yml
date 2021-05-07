@@ -1,0 +1,7 @@
+services:
+  logger.channel.arvestbank_ads:
+    parent: logger.channel_base
+    arguments: ['arvestbank_ads']
+  sidebar_field_map:
+    class: Drupal\arvestbank_ads\SidebarFieldMap
+    arguments: []
