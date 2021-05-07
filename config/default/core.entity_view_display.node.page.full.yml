@@ -153,7 +153,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_rendered_node: true
   field_layout_canvas: true
+  field_rendered_node: true
   field_yoast_seo: true
   search_api_excerpt: true
