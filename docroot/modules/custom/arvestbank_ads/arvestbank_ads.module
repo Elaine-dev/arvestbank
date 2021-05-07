@@ -26,7 +26,7 @@ function arvestbank_ads_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_theme().
  */
-function arvestbank_ads_theme() {
+function arvestbank_ads_theme(): array {
   return [
     'ad_block' => [
       'variables' => [
@@ -51,7 +51,7 @@ function arvestbank_ads_form_alter(&$form, \Drupal\Core\Form\FormStateInterface 
     // Loop through this array and set the description to the path(s) (key).
     foreach ($fieldmap as $path => $fieldname) {
       if (!empty($form[$fieldname]['widget'])) {
-        $description = $path;
+        $description = $path . '<br />';
         $form[$fieldname]['widget']['#description'] .= $description;
       }
     }

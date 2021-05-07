@@ -83,23 +83,37 @@ class AdBlock extends BlockBase {
     // Format to just grab the first two parts.
     $current_uri = ltrim($current_uri, '/');
     $current_uri_ar = explode('/', $current_uri);
-    if (count($current_uri_ar) > 2) {
-      $current_uri_ar = array_slice($current_uri_ar, 0, 2);
-    }
-    $menu_path = implode('/', $current_uri_ar);
 
-    // Check if there is a field for this path, if so set the return var.
-    if (array_key_exists($menu_path, $fieldmap)) {
-      $return = $fieldmap[$menu_path];
+    // Set a temp path array to work with.
+    $temp_uri_ar = $current_uri_ar;
+
+    // Only going 4 levels deep - helps prevent from maliciousness.
+    if (count($temp_uri_ar) > 6) {
+      $temp_uri_ar = array_slice($temp_uri_ar, 0, 6);
     }
-    // Else look for a wildcard path.
-    else {
-      $wildcard_path = array_shift($current_uri_ar) . '/*';
-      if (array_key_exists($wildcard_path, $fieldmap)) {
-        $return = $fieldmap[$wildcard_path];
+
+    // Loop over this array, popping off elements until we have a key match
+    // or the array is empty.
+    while (!empty($temp_uri_ar)) {
+
+      // String for the path to check.
+      $path_key = implode('/', $temp_uri_ar);
+
+      // Check if there is a field for this path, if so set the return var.
+      if (array_key_exists($path_key, $fieldmap)) {
+        // This should contain the proper fieldname to use.
+        $return = $fieldmap[$path_key];
+        // Kill this array to exit the loop.
+        $temp_uri_ar = [];
       }
+      else {
+        // Shorten this array.
+        array_pop($temp_uri_ar);
+      }
+
     }
 
+    // Returns FALSE or the fieldname that matches to this path.
     return $return;
 
   }
