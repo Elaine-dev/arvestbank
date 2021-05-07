@@ -1,26 +1,26 @@
-uuid: 08e76300-a8d7-4174-b92a-1b72f242e3fa
+uuid: 48456043-f91a-4383-9438-8c8b870a0094
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
-    - media.type.acquia_dam_image
+    - field.storage.node.field_ad_nav_investments
     - node.type.ad
-id: node.ad.field_image
-field_name: field_image
+    - node.type.ad_campaign
+id: node.ad_campaign.field_ad_nav_investments
+field_name: field_ad_nav_investments
 entity_type: node
-bundle: ad
-label: 'Image (Sidebar)'
+bundle: ad_campaign
+label: 'Investments & Trusts'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:media'
+  handler: 'default:node'
   handler_settings:
     target_bundles:
-      acquia_dam_image: acquia_dam_image
+      ad: ad
     sort:
       field: _none
       direction: ASC

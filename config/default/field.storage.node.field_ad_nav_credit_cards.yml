@@ -1,0 +1,19 @@
+uuid: 3980d72d-7cb7-4c95-a589-e06a34a9cc81
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_ad_nav_credit_cards
+field_name: field_ad_nav_credit_cards
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

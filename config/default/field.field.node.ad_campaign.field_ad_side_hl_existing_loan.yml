@@ -1,26 +1,26 @@
-uuid: 08e76300-a8d7-4174-b92a-1b72f242e3fa
+uuid: 3070c05d-8705-46f1-9697-207980b41a2c
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
-    - media.type.acquia_dam_image
+    - field.storage.node.field_ad_side_hl_existing_loan
     - node.type.ad
-id: node.ad.field_image
-field_name: field_image
+    - node.type.ad_campaign
+id: node.ad_campaign.field_ad_side_hl_existing_loan
+field_name: field_ad_side_hl_existing_loan
 entity_type: node
-bundle: ad
-label: 'Image (Sidebar)'
+bundle: ad_campaign
+label: 'Existing Loan'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:media'
+  handler: 'default:node'
   handler_settings:
     target_bundles:
-      acquia_dam_image: acquia_dam_image
+      ad: ad
     sort:
       field: _none
       direction: ASC

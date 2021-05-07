@@ -1,0 +1,19 @@
+uuid: 63d176c1-0994-4ed2-b801-5ec326941ec1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_ad_side_p_bank
+field_name: field_ad_side_p_bank
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

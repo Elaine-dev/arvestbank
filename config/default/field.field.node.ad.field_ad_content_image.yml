@@ -1,17 +1,17 @@
-uuid: 08e76300-a8d7-4174-b92a-1b72f242e3fa
+uuid: c268ff5d-0301-4c44-8641-ccb09e463c15
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
+    - field.storage.node.field_ad_content_image
     - media.type.acquia_dam_image
     - node.type.ad
-id: node.ad.field_image
-field_name: field_image
+id: node.ad.field_ad_content_image
+field_name: field_ad_content_image
 entity_type: node
 bundle: ad
-label: 'Image (Sidebar)'
-description: ''
+label: 'Image (Content)'
+description: 'This ad image will appear at the bottom of the main content, above the footer.'
 required: false
 translatable: false
 default_value: {  }
