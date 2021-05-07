@@ -1,0 +1,34 @@
+-
+  type: cohesion_sync_package
+  export:
+    uuid: c525e530-7dc5-433d-becb-03ac0440b1e0
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: pack_component_icon_and_text_blo
+    label: 'Component Icon and Text Block'
+    description: 'A Site Studio package for the "Component Icon and Text Block" component.'
+    excluded_entity_types: '[]'
+    settings: '{"0624d17b-f67f-4215-be31-02de9f9403a8":{"type":"cohesion_component","items":{"0624d17b-f67f-4215-be31-02de9f9403a8":{"type":"cohesion_component"}},"checked":true}}'
+-
+  type: cohesion_component
+  export:
+    uuid: 0624d17b-f67f-4215-be31-02de9f9403a8
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: cpt_icon_and_text_block
+    label: 'Icon and Text Block'
+    json_values: '{"canvas":[{"type":"item","uid":"site_studio_icon_and_text_block_element","isCustom":true,"title":"Icon And Text Block","selected":false,"status":{"collapsed":true},"parentUid":"root","uuid":"893b06b2-278e-4309-b48d-15c5aec5e97a","isContainer":false,"children":[]}],"componentForm":[{"type":"form-field","uid":"form-image","title":"Image uploader","status":{"collapsed":false},"parentUid":"root","uuid":"081c32df-d2a2-4692-a5f1-11b2b0282669","isContainer":false,"children":[]},{"type":"form-field","uid":"form-wysiwyg","title":"WYSIWYG","translate":true,"status":{"collapsed":false},"parentUid":"root","uuid":"31a1c3f0-5dd2-40db-a82f-fe16e991b0e9","isContainer":false,"children":[]}],"mapper":{"893b06b2-278e-4309-b48d-15c5aec5e97a":{}},"model":{"893b06b2-278e-4309-b48d-15c5aec5e97a":{"settings":{"title":"Icon And Text Block"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"site_studio_icon_and_text_block_element"}}},"081c32df-d2a2-4692-a5f1-11b2b0282669":{"settings":{"title":"Image uploader","type":"cohFileBrowser","options":{"buttonText":"Select image","imageUploader":false,"allowedDescription":"Allowed: png, gif, jpg, jpeg \nMax file size: 2MB","removeLabel":"Remove"},"isStyle":true,"defaultActive":true,"schema":{"type":"string"},"machineName":"icon","tooltipPlacement":"auto right"},"contextVisibility":{"condition":"ALL"}},"31a1c3f0-5dd2-40db-a82f-fe16e991b0e9":{"settings":{"title":"WYSIWYG","type":"cohWysiwyg","schema":{"type":"object"},"machineName":"wysiwyg","tooltipPlacement":"auto right"},"contextVisibility":{"condition":"ALL"},"model":{}}},"previewModel":{"31a1c3f0-5dd2-40db-a82f-fe16e991b0e9":{},"081c32df-d2a2-4692-a5f1-11b2b0282669":{},"893b06b2-278e-4309-b48d-15c5aec5e97a":{}},"variableFields":{"31a1c3f0-5dd2-40db-a82f-fe16e991b0e9":[],"081c32df-d2a2-4692-a5f1-11b2b0282669":[],"893b06b2-278e-4309-b48d-15c5aec5e97a":[]},"meta":{"fieldHistory":[{"uuid":"31a1c3f0-5dd2-40db-a82f-fe16e991b0e9","type":"form-wysiwyg","machineName":"wysiwyg"},{"uuid":"081c32df-d2a2-4692-a5f1-11b2b0282669","type":"form-image","machineName":"icon"}]}}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    category: cpt_cat_general_components
+    preview_image: ''
+    has_quick_edit: true
+    entity_type_access: {  }
+    bundle_access: {  }
+    twig_template: component--cohesion-cpt-icon-and-text-block
+    weight: 0
