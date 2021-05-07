@@ -37,7 +37,7 @@ class ArvestSplitFieldsDiffLayout extends SplitFieldsDiffLayout {
       '#type' => 'item',
       '#title' => $this->t('Filter'),
       '#wrapper_attributes' => ['class' => 'diff-controls__item'],
-      'options' => $this->buildFilterNavigation($entity, $left_revision, $right_revision, 'split_fields', $active_filter),
+      'options' => $this->buildFilterNavigation($entity, $left_revision, $right_revision, 'arvestbank_split_fields', $active_filter),
     ];
 
     // Build the diff comparison table.
