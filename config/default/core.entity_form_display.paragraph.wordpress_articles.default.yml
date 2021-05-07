@@ -1,0 +1,40 @@
+uuid: e185ee28-b732-4d8f-b2de-121951ca517b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wordpress_articles.field_article_
+    - field.field.paragraph.wordpress_articles.field_feed_url
+    - field.field.paragraph.wordpress_articles.field_title
+    - paragraphs.paragraphs_type.wordpress_articles
+id: paragraph.wordpress_articles.default
+targetEntityType: paragraph
+bundle: wordpress_articles
+mode: default
+content:
+  field_article_:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_feed_url:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

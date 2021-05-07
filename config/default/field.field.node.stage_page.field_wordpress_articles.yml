@@ -1,0 +1,31 @@
+uuid: a4e3d6ac-cee8-44cf-9896-690784709e0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_wordpress_articles
+    - node.type.stage_page
+    - paragraphs.paragraphs_type.wordpress_articles
+  module:
+    - entity_reference_revisions
+id: node.stage_page.field_wordpress_articles
+field_name: field_wordpress_articles
+entity_type: node
+bundle: stage_page
+label: 'Wordpress Articles'
+description: 'Optionally output articles from feeds on the share.arvest.com site.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      wordpress_articles: wordpress_articles
+    target_bundles_drag_drop:
+      wordpress_articles:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

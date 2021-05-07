@@ -318,6 +318,35 @@ class RatesForm extends ConfigFormBase {
 
     }
 
+    // Get basic pages that have rates in body copy.
+    $basicPagesWithRatesQuery = \Drupal::entityQuery('node')
+      ->condition('type', 'page')
+      ->condition('body', '[arvestbank_rates:', 'CONTAINS');
+    $basicPagesWithRatesResults = $basicPagesWithRatesQuery->execute();
+
+    // Get component pages that have rates in a component instance.
+    $campaignPagesWithRatesQuery = \Drupal::entityQuery('node')
+      ->condition('type', 'campaign_page')
+      ->condition('field_layout_canvas.entity:cohesion_layout.json_values', '[arvestbank_rates:', 'CONTAINS');
+    $campaignPagesWithRatesResults = $campaignPagesWithRatesQuery->execute();
+
+    // Combine result arrays.
+    $nodesWithRates = array_merge($basicPagesWithRatesResults, $campaignPagesWithRatesResults);
+    // Load the nodes with rates.
+    $nodesWithRates = \Drupal::entityTypeManager()
+      ->getStorage('node')
+      ->loadMultiple($nodesWithRates);
+
+    // Loop over nodes with rates.
+    foreach ($nodesWithRates as $nodeWithRates) {
+      // Save node, creating revision with updated rate in field_rendered_node.
+      $nodeWithRates->setNewRevision(TRUE);
+      $nodeWithRates->revision_log = 'Programatic Revision To Record Rates Change.';
+      $nodeWithRates->setRevisionCreationTime(REQUEST_TIME);
+      $nodeWithRates->setRevisionUserId(1);
+      $nodeWithRates->save();
+    }
+
   }
 
 }
