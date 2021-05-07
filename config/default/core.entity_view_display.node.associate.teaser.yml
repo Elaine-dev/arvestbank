@@ -8,13 +8,13 @@ dependencies:
     - field.field.node.associate.feeds_item
     - field.field.node.associate.field_appointment
     - field.field.node.associate.field_associate_id
+    - field.field.node.associate.field_associate_image
     - field.field.node.associate.field_associate_type
     - field.field.node.associate.field_branch_nickname
     - field.field.node.associate.field_coconut_appointment
     - field.field.node.associate.field_designation
     - field.field.node.associate.field_email
     - field.field.node.associate.field_fax_number
-    - field.field.node.associate.field_image
     - field.field.node.associate.field_insurance_license_number
     - field.field.node.associate.field_job_title
     - field.field.node.associate.field_location
@@ -56,13 +56,13 @@ hidden:
   feeds_item: true
   field_appointment: true
   field_associate_id: true
+  field_associate_image: true
   field_associate_type: true
   field_branch_nickname: true
   field_coconut_appointment: true
   field_designation: true
   field_email: true
   field_fax_number: true
-  field_image: true
   field_insurance_license_number: true
   field_job_title: true
   field_location: true

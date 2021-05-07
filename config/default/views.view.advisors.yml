@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.body
+    - field.storage.node.field_associate_image
     - field.storage.node.field_branch_nickname
     - field.storage.node.field_designation
     - field.storage.node.field_email
@@ -17,10 +18,11 @@ dependencies:
     - system.menu.main
     - taxonomy.vocabulary.associate_category
   content:
-    - 'taxonomy_term:associate_category:294ce650-2597-4ea3-913a-e7de6a7d72a9'
-    - 'taxonomy_term:associate_category:736c7cdc-6d8a-4b71-aadb-dc41dbc00f6c'
-    - 'taxonomy_term:associate_category:f3bbcba5-29cf-41f1-a125-6caf6dff2451'
+    - 'taxonomy_term:branch_location:4c65445f-adaf-4816-9844-f1b83e439eaf'
+    - 'taxonomy_term:branch_location:7f869a21-d448-416f-b104-4622fc67327b'
+    - 'taxonomy_term:branch_location:b4c03a36-6a62-4317-b416-37be2f647b47'
   module:
+    - image
     - media
     - node
     - taxonomy
@@ -81,10 +83,10 @@ display:
           separator: ''
           hide_empty: false
       fields:
-        field_image:
-          id: field_image
-          table: node__field_image
-          field: field_image
+        field_associate_image:
+          id: field_associate_image
+          table: node__field_associate_image
+          field: field_associate_image
           relationship: none
           group_type: group
           admin_label: ''
@@ -130,11 +132,11 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: media_thumbnail
+          type: image
           settings:
             image_style: medium
             image_link: ''
-          group_column: target_id
+          group_column: ''
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -720,9 +722,9 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_associate_image'
         - 'config:field.storage.node.field_designation'
         - 'config:field.storage.node.field_email'
-        - 'config:field.storage.node.field_image'
         - 'config:field.storage.node.field_insurance_license_number'
         - 'config:field.storage.node.field_job_title'
         - 'config:field.storage.node.field_location'
@@ -952,9 +954,9 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_associate_image'
         - 'config:field.storage.node.field_designation'
         - 'config:field.storage.node.field_email'
-        - 'config:field.storage.node.field_image'
         - 'config:field.storage.node.field_insurance_license_number'
         - 'config:field.storage.node.field_job_title'
         - 'config:field.storage.node.field_location'
@@ -2021,9 +2023,9 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_associate_image'
         - 'config:field.storage.node.field_designation'
         - 'config:field.storage.node.field_email'
-        - 'config:field.storage.node.field_image'
         - 'config:field.storage.node.field_insurance_license_number'
         - 'config:field.storage.node.field_job_title'
         - 'config:field.storage.node.field_location'
