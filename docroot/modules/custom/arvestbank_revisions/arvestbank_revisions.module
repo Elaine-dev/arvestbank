@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Hooks relating to revisions on the Arvest Bank site.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function arvestbank_revisions_form_revision_overview_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  foreach ($form['node_revisions_table'] as $renderArrayChildKey => $renderArrayChildValue) {
+    if (
+      is_numeric($renderArrayChildKey)
+      && isset($renderArrayChildValue['operations']['#links']['delete'])
+    ) {
+      unset($form['node_revisions_table'][$renderArrayChildKey]['operations']['#links']['delete']);
+    }
+  }
+
+}
