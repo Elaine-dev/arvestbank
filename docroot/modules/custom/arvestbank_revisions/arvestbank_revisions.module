@@ -22,3 +22,28 @@ function arvestbank_revisions_form_revision_overview_form_alter(&$form, FormStat
   }
 
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function arvestbank_revisions_form_node_form_alter(&$form, &$form_state, $form_id) {
+
+  // Define the content types to force revisions for.
+  // Workflow does this for bundles under it's controll.
+  $contentTypesToForceRevisionsFor = [
+    'cta_phone_number',
+  ];
+
+  // Get the node this form is for.
+  $node = $form_state->getFormObject()->getEntity();
+
+  if (in_array($node->bundle(), $contentTypesToForceRevisionsFor)) {
+    // Require revisions.
+    // Taken from NodeModerationHandler->enforceRevisionsEntityFormAlter().
+    $form['revision']['#disabled'] = TRUE;
+    $form['revision']['#default_value'] = TRUE;
+    $form['revision']['#description'] = 'Revisions are required.';
+  }
+
+
+}
