@@ -5,7 +5,7 @@ namespace Drupal\arvestbank_ads;
 /**
  * Class SidebarFieldMap.
  */
-class SidebarFieldMap {
+class AdServices {
 
   /**
    * Constructs a new SidebarFieldMap object.
@@ -52,5 +52,17 @@ class SidebarFieldMap {
     ];
 
   }
+
+  /**
+   * @return array
+   */
+  public function adStyleOptions() {
+    return [
+      'sidebar' => 'Sidebar',
+      'navigation' => 'Navigation',
+      'main' => 'Main Content',
+    ];
+  }
+
 
 }

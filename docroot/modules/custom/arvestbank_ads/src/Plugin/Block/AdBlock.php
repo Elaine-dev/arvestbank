@@ -19,17 +19,6 @@ use Drupal\node\Entity\Node;
 class AdBlock extends BlockBase {
 
   /**
-   * @return string[]
-   */
-  private function adStyleOptions() {
-    return [
-      'sidebar' => 'Sidebar',
-      'navigation' => 'Navigation',
-      'main' => 'Main Content',
-    ];
-  }
-
-  /**
    * {@inheritdoc}
    */
   public function blockForm($form, FormStateInterface $form_state) {
@@ -38,10 +27,12 @@ class AdBlock extends BlockBase {
 
     $config = $this->getConfiguration();
 
+    $ad_styles = \Drupal::service('ad_services')->adStyleOptions();
+
     $form['ad_style'] = [
       '#title' => t('Ad Style'),
       '#type' => 'select',
-      '#options' => self::adStyleOptions(),
+      '#options' => $ad_styles,
       '#default_value' => $config['ad_style'] ?? NULL,
       '#description' => t('Style for this block.'),
     ];
