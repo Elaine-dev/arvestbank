@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * @file
+ */
+
+use \Drupal\paragraphs\Entity\Paragraph;
+
+/**
+ * Make wordpress block available if applicable.
+ *
+ * @param array $variables
+ *   The alterable variables.
+ */
+function arvestbank_wordpress_articles_preprocess_node(array &$variables) {
+
+  // If this is the full view mode for a stage page.
+  if (
+     $variables['node']->getType() == 'stage_page'
+     && $variables['view_mode'] == 'full'
+     && !$variables['node']->get('field_wordpress_articles')->isEmpty()
+   ) {
+
+    // Get paragraph.
+    $paragraphId = $variables['node']->get('field_wordpress_articles')->getValue()[0]['target_id'];
+    $paragraph = Paragraph::load($paragraphId);
+
+    // Get wordpress articles service.
+    $wordpressArticlesService = \Drupal::service('arvestbank_wordpress_articles.wordpress_articles_service');
+
+    // Get render array.
+    $renderArray = $wordpressArticlesService->getRenderArray(
+      $paragraph->get('field_title')->getValue()[0]['value'],
+      $paragraph->get('field_feed_url')->getValue()[0]['value'],
+      $paragraph->get('field_article_')->getValue()[0]['value'],
+    );
+
+    // Add caching parameters to render array.
+    $renderArray['#cache'] = [
+      'tags' => [
+        'paragraph:' . $paragraphId,
+      ],
+      'max-age' => 86400,
+    ];
+
+    // Put render array in content in variables.
+    $variables['content']['wordpress_articles'] = $renderArray;
+  }
+
+}

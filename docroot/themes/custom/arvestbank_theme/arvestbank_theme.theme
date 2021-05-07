@@ -105,3 +105,38 @@ function arvestbank_theme_preprocess_block_feature_carousel(&$variables) {
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function arvestbank_theme_preprocess_field__body(&$variables, $hook) {
+
+  // If we have a value that contains a rate token.
+  if (
+    isset($variables['items'][0]['content']['#text'])
+    && strpos($variables['items'][0]['content']['#text'], '[arvestbank_rates:')
+  ) {
+
+    // Load token service.
+    $tokenService = \Drupal::token();
+
+    // Do replacement.
+    $replacedText = $tokenService->replace(
+      $variables['items'][0]['content']['#text']
+    );
+
+    // If we had tokens we replaced.
+    if ($replacedText != $variables['items'][0]['content']['#text']) {
+
+      // Add a cache tag for the rates config.
+      $variables['#cache']['tags'][] = 'config:arvestbank_rates.settings';
+
+      // Add replaced text to render array.
+      $variables['items'][0]['content']['#text'] = $replacedText;
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,25 @@
+uuid: 427a3189-8995-4d49-a979-74c9f3e37344
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_article_
+    - paragraphs.paragraphs_type.wordpress_articles
+id: paragraph.wordpress_articles.field_article_
+field_name: field_article_
+entity_type: paragraph
+bundle: wordpress_articles
+label: 'Article Limit'
+description: 'Enter the maximum number of articles to show or 0 for no-limit.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 5
+default_value_callback: ''
+settings:
+  min: 0
+  max: 10
+  prefix: ''
+  suffix: ''
+field_type: integer
