@@ -1,0 +1,32 @@
+-
+  type: cohesion_sync_package
+  export:
+    uuid: d57eb86d-a834-4292-b82d-2b716ca84fdd
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: pack_custom_style_clear_both_
+    label: 'Custom Style Clear Both '
+    description: 'A custom Stylet just for clear both. Author: Allie Jones / Last update: 05/07/2021'
+    excluded_entity_types: '[]'
+    settings: '{"cb65c7a2-8d28-4d9c-81e2-9b50c98d06dd":{"type":"cohesion_custom_style","items":{"cb65c7a2-8d28-4d9c-81e2-9b50c98d06dd":{"type":"cohesion_custom_style"}},"checked":true}}'
+-
+  type: cohesion_custom_style
+  export:
+    uuid: cb65c7a2-8d28-4d9c-81e2-9b50c98d06dd
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: 532439ea
+    label: 'clear both'
+    json_values: '{"preview":{"text":"<div class=\"coh-preview\">Default content for ''Layout''.<\/div>\n","textFormat":"cohesion"},"sBackgroundColour":"#FFFFFF","styles":{"settings":{"element":"div","class":"","combinator":"","pseudo":""},"styles":{"xl":{"clear":{"value":"both"}}}},"variableFields":[]}'
+    json_mapper: '{"styles":{"title":"Layout","selectorType":"topLevel","formDefinition":[{"formKey":"layout","children":[{"formKey":"float","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"float","active":false},{"name":"clear","active":true},{"name":"clearfix","active":false}]}]}],"items":[],"form":null}}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    class_name: .coh-style-clear-both
+    custom_style_type: layout
+    available_in_wysiwyg: false
+    parent: null
+    weight: 0
