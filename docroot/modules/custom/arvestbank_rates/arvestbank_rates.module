@@ -7,6 +7,7 @@
 
 use Drupal\Core\Render\BubbleableMetadata;
 use Drupal\Core\Entity\EntityInterface;
+use Sunra\PhpSimple\HtmlDomParser;
 
 /**
  * Implements hook_token_info().
@@ -120,8 +121,17 @@ function arvestbank_rates_entity_presave(EntityInterface $entity) {
     // Set active theme back to what it was.
     \Drupal::theme()->setActiveTheme($currentActiveTheme);
 
+    // Load the rendered node markup into the dom parser.
+    $nodeDom = HtmlDomParser::str_get_html($renderedNode);
+
+    // Get content div of the rendered node.
+    $renderedNodeContent = '';
+    foreach ($nodeDom->find('.coh-main-view-content-column') as $element) {
+      $renderedNodeContent .= $element->innertext();
+    }
+
     // Set the field value.
-    $entity->set('field_rendered_node', $renderedNode);
+    $entity->set('field_rendered_node', $renderedNodeContent);
 
   }
 

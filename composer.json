@@ -81,7 +81,8 @@
         "drush/drush": "^10.4",
         "econea/nusoap": "^0.9.11",
         "oomphinc/composer-installers-extender": "^2.0",
-        "smalot/pdfparser": "^0.18.2"
+        "smalot/pdfparser": "^0.18.2",
+        "sunra/php-simple-html-dom-parser": "^1.5"
     },
     "config": {
         "sort-packages": true
@@ -166,6 +167,9 @@
             },
             "drupal/diff": {
                 "Filter Revision Overview By Date": "https://www.drupal.org/files/issues/2021-05-06/filter-revision-overview-by-date-3212653-1.patch"
+            },
+            "sunra/php-simple-html-dom-parser": {
+                "Update simple_html_dom.php": "https://patch-diff.githubusercontent.com/raw/sunra/php-simple-html-dom-parser/pull/78.patch"
             }
         }
     },
