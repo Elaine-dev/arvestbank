@@ -25,7 +25,7 @@ third_party_settings:
     unpublish_revision: false
 name: Calculators
 type: calculators
-description: 'Content type for subpages, basic layouts, and content pulled in via iframe or externally sourced.  ~200 pages.'
+description: 'Content type for subpages, basic layouts, and content pulled in via iframe or externally sourced.'
 help: ''
 new_revision: true
 preview_mode: 1
