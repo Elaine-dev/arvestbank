@@ -85,7 +85,6 @@ permissions:
   - 'delete own video media'
   - 'delete own video media'
   - 'delete own video media'
-  - 'delete stage_page revisions'
   - 'edit any acquia_dam_document media'
   - 'edit any acquia_dam_image media'
   - 'edit any acquia_dam_video media'

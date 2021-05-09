@@ -1,0 +1,5 @@
+services:
+  arvestbank_revisions.route_subscriber:
+    class: Drupal\arvestbank_revisions\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
