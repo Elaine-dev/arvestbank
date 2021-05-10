@@ -7,7 +7,7 @@ Drupal.behaviors.arvestbankSearchAskArvest = {
   attach: function (context, settings) {
 
     // Input focus event.
-    jQuery('.search-form input',context).bind('focus', function (event, node) {
+    jQuery('.search-form .form-autocomplete',context).bind('focus', function (event, node) {
       // Clear text on focus.
       jQuery(this).val('');
     });
