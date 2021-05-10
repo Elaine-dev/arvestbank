@@ -1,0 +1,6 @@
+name: 'Arvest Bank Webtools API'
+type: module
+description: 'Provides connectivity with Arvest webtools endpoints.'
+core_version_requirement: ^9
+package: 'Custom'
+configure: arvestbank_webtools_api.webtools_admin_form

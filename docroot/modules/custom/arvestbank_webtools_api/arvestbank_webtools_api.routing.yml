@@ -1,0 +1,9 @@
+arvestbank_webtools_api.webtools_admin_form:
+  path: '/admin/config/webtool-api-settings'
+  defaults:
+    _form: '\Drupal\arvestbank_webtools_api\Form\WebtoolsAdminForm'
+    _title: 'Webtools API Configuration'
+  requirements:
+    _role: enterprise_admin
+  options:
+    _admin_route: TRUE
