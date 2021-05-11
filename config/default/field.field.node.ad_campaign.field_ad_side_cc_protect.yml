@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_ad_side_cc_protect
-    - node.type.ad
     - node.type.ad_campaign
 id: node.ad_campaign.field_ad_side_cc_protect
 field_name: field_ad_side_cc_protect
@@ -17,13 +16,10 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:node'
+  handler: views
   handler_settings:
-    target_bundles:
-      ad: ad
-    sort:
-      field: _none
-      direction: ASC
-    auto_create: false
-    auto_create_bundle: ''
+    view:
+      view_name: ads
+      display_name: entity_reference_2
+      arguments: {  }
 field_type: entity_reference
