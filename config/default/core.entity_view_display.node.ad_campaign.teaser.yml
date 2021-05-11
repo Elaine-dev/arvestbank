@@ -1,0 +1,73 @@
+uuid: 0ff729b4-01cd-4b85-823b-c5319d1b972b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.ad_campaign.field_ad_active_dates
+    - field.field.node.ad_campaign.field_ad_nav_business
+    - field.field.node.ad_campaign.field_ad_nav_credit_cards
+    - field.field.node.ad_campaign.field_ad_nav_home_loans
+    - field.field.node.ad_campaign.field_ad_nav_investments
+    - field.field.node.ad_campaign.field_ad_nav_personal
+    - field.field.node.ad_campaign.field_ad_side_b_bank
+    - field.field.node.ad_campaign.field_ad_side_b_borrow
+    - field.field.node.ad_campaign.field_ad_side_b_manage
+    - field.field.node.ad_campaign.field_ad_side_b_protect
+    - field.field.node.ad_campaign.field_ad_side_cc_business
+    - field.field.node.ad_campaign.field_ad_side_cc_manage
+    - field.field.node.ad_campaign.field_ad_side_cc_personal
+    - field.field.node.ad_campaign.field_ad_side_cc_protect
+    - field.field.node.ad_campaign.field_ad_side_hl_existing_loan
+    - field.field.node.ad_campaign.field_ad_side_hl_get_started
+    - field.field.node.ad_campaign.field_ad_side_hl_learn_more
+    - field.field.node.ad_campaign.field_ad_side_hl_lending_options
+    - field.field.node.ad_campaign.field_ad_side_it_insurance
+    - field.field.node.ad_campaign.field_ad_side_it_investing
+    - field.field.node.ad_campaign.field_ad_side_it_planning
+    - field.field.node.ad_campaign.field_ad_side_it_trust_estate
+    - field.field.node.ad_campaign.field_ad_side_p_bank
+    - field.field.node.ad_campaign.field_ad_side_p_borrow
+    - field.field.node.ad_campaign.field_ad_side_p_invest
+    - field.field.node.ad_campaign.field_ad_side_p_other
+    - node.type.ad_campaign
+  module:
+    - user
+id: node.ad_campaign.teaser
+targetEntityType: node
+bundle: ad_campaign
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_ad_active_dates: true
+  field_ad_nav_business: true
+  field_ad_nav_credit_cards: true
+  field_ad_nav_home_loans: true
+  field_ad_nav_investments: true
+  field_ad_nav_personal: true
+  field_ad_side_b_bank: true
+  field_ad_side_b_borrow: true
+  field_ad_side_b_manage: true
+  field_ad_side_b_protect: true
+  field_ad_side_cc_business: true
+  field_ad_side_cc_manage: true
+  field_ad_side_cc_personal: true
+  field_ad_side_cc_protect: true
+  field_ad_side_hl_existing_loan: true
+  field_ad_side_hl_get_started: true
+  field_ad_side_hl_learn_more: true
+  field_ad_side_hl_lending_options: true
+  field_ad_side_it_insurance: true
+  field_ad_side_it_investing: true
+  field_ad_side_it_planning: true
+  field_ad_side_it_trust_estate: true
+  field_ad_side_p_bank: true
+  field_ad_side_p_borrow: true
+  field_ad_side_p_invest: true
+  field_ad_side_p_other: true
+  search_api_excerpt: true

@@ -1,0 +1,14 @@
+uuid: 13e25ace-a5fb-42fb-804c-2fe70bfe70cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.ad_campaign
+id: node_type_ad_campaign
+entity_type_id: node_type
+entity_id: ad_campaign
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

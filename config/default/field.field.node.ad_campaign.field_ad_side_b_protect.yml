@@ -1,0 +1,25 @@
+uuid: 1010f78d-d9d2-4acd-bbe2-e2ef3f994ca9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ad_side_b_protect
+    - node.type.ad_campaign
+id: node.ad_campaign.field_ad_side_b_protect
+field_name: field_ad_side_b_protect
+entity_type: node
+bundle: ad_campaign
+label: Protect
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: ads
+      display_name: entity_reference_2
+      arguments: {  }
+field_type: entity_reference

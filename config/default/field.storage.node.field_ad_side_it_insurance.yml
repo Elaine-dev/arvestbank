@@ -1,0 +1,19 @@
+uuid: 68fa167f-66e8-4cc1-8979-65fe494f4226
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_ad_side_it_insurance
+field_name: field_ad_side_it_insurance
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

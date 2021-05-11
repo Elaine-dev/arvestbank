@@ -1,0 +1,25 @@
+uuid: b1666231-f777-4634-b9c2-d11dfcd5a010
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ad_side_p_invest
+    - node.type.ad_campaign
+id: node.ad_campaign.field_ad_side_p_invest
+field_name: field_ad_side_p_invest
+entity_type: node
+bundle: ad_campaign
+label: Invest
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: ads
+      display_name: entity_reference_2
+      arguments: {  }
+field_type: entity_reference

@@ -5,6 +5,7 @@ module:
   admin_toolbar: 0
   admin_toolbar_links_access_filter: 0
   admin_toolbar_tools: 0
+  arvestbank_ads: 0
   arvestbank_ask_arvest: 0
   arvestbank_associate_category: 0
   arvestbank_branch_locations: 0

@@ -1,0 +1,94 @@
+<?php
+
+/**
+ * @file
+ * Contains arvestbank_ads.module.
+ */
+
+use Drupal\Core\Render\Element;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function arvestbank_ads_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the arvestbank_ads module.
+    case 'help.page.arvestbank_ads':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom ads management.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function arvestbank_ads_theme(): array {
+  return [
+    'ad_block' => [
+      'variables' => [
+        'content' => NULL
+      ],
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function arvestbank_ads_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+  // Add descriptions of paths for sidebar ad placement fields.
+  if ($form_id == 'node_ad_campaign_edit_form') {
+
+    // Get the map of paths to fields from the service.
+    $fieldmap = \Drupal::service('ad_services')->getSidebarFieldMap();
+
+    // Loop through this array and set the description to the path(s) (key).
+    foreach ($fieldmap as $path => $fieldname) {
+      if (!empty($form[$fieldname]['widget'])) {
+        $description = $path . '<br />';
+        $form[$fieldname]['widget']['#description'] .= $description;
+      }
+    }
+
+  }
+
+}
+
+function arvestbank_ads_node_view_alter(array &$build, Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display) {
+
+  if (!empty($display->get('third_party_settings')['field_group'])) {
+    $fieldgroups = $display->get('third_party_settings')['field_group'];
+    $children = [];
+    foreach($fieldgroups as $key => $group) {
+      if (!empty($group['children'])) {
+        foreach ($group['children'] as $child) {
+          $children[$child] = $key;
+        }
+      }
+    }
+    if (!empty($children)) {
+      foreach($children as $field => $group) {
+        if (!empty($build[$field]) && !empty($fieldgroups[$group])) {
+          if (empty($fieldgroups[$group]['rendered'])) {
+            $group_markup = '';
+            if ($parent_name = $fieldgroups[$group]['parent_name']) {
+              $group_markup .= '<h2>' . $fieldgroups[$parent_name]['label'] . '</h2>';
+            }
+            $group_markup .= '<h3>' . $fieldgroups[$group]['label'] . '</h3>';
+            $build[$field]['#prefix'] = $group_markup;
+            $fieldgroups[$group]['rendered'] = TRUE;
+
+          }
+        }
+      }
+    }
+  }
+
+}

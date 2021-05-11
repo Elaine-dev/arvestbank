@@ -1,0 +1,21 @@
+uuid: 262ce2d2-4c27-4cc9-8bd0-276d62c89983
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ad_active_dates
+    - node.type.ad_campaign
+  module:
+    - datetime_range
+id: node.ad_campaign.field_ad_active_dates
+field_name: field_ad_active_dates
+entity_type: node
+bundle: ad_campaign
+label: 'Active Dates'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange
