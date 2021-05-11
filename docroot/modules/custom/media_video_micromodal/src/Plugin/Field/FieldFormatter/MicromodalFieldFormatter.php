@@ -39,6 +39,7 @@ class MicromodalFieldFormatter extends FormatterBase {
       // Implement default settings.
       'string_classes' => '',
       'thumbnail_image_style' => '',
+      'thumbnail_override_fieldname' => '',
     ] + parent::defaultSettings();
   }
 
@@ -67,8 +68,31 @@ class MicromodalFieldFormatter extends FormatterBase {
     }
 
     // For thumbnails allow for choices of image styles.
-    elseif ($this->fieldDefinition->getType() == 'image'
-      || $this->fieldDefinition->getType() == 'entity_reference') {
+    // Also specify fieldname of custom thumbnail.
+    elseif ($this->fieldDefinition->getType() == 'image') {
+
+      $settings = [
+        'thumbnail_image_style' => [
+          '#title' => t('Video Thumbnail Image Style'),
+          '#type' => 'select',
+          '#options' => image_style_options(FALSE),
+          '#empty_option' => '<' . t('no preview') . '>',
+          '#default_value' => $this->getSetting('thumbnail_image_style'),
+          '#description' => t('Thumbnail for the video, click the thumbnail for the modal window.'),
+        ],
+        'thumbnail_override_fieldname' => [
+          '#title' => t('Field for Thumbnail Override'),
+          '#type' => 'textfield',
+          '#default_value' => $this->getSetting('thumbnail_override_fieldname'),
+          '#description' => t('Field that should display instead of the auto generated thumbnail.'),
+        ],
+
+      ];
+
+    }
+
+    // For thumbnails allow for choices of image styles.
+    elseif ($this->fieldDefinition->getType() == 'entity_reference') {
 
       $settings = [
         'thumbnail_image_style' => [
@@ -82,6 +106,7 @@ class MicromodalFieldFormatter extends FormatterBase {
       ];
 
     }
+
 
     // Implement settings form.
     return $settings + parent::settingsForm($form, $form_state);
@@ -102,17 +127,12 @@ class MicromodalFieldFormatter extends FormatterBase {
     if (!empty($this->getSetting('thumbnail_image_style'))) {
       $summary[] = 'Image Style: ' . $this->getSetting('thumbnail_image_style');
     }
+    if (!empty($this->getSetting('thumbnail_override_fieldname'))) {
+      $summary[] = 'Thumbnail Override: ' . $this->getSetting('thumbnail_override_fieldname');
+    }
 
     return $summary;
 
-  }
-
-
-  /**
-   * {@inheritdoc}
-   */
-  public function view(FieldItemListInterface $items, $langcode = NULL) {
-    
   }
 
   /**
@@ -127,11 +147,21 @@ class MicromodalFieldFormatter extends FormatterBase {
       // Load the media item.
       // Use this for default oembed thumbnails.
       if ($item instanceof ImageItem) {
-        // Get the media ID of the video.
-        $media_id = $item->getValue()['target_id'];
-        $media = Media::load($media_id);
-        $formatter_type = 'image';
-        $image_fieldname = 'thumbnail';
+        // Check to make sure a custom thumbnail has not bee uploaded.
+        $use_default_thumbnail = TRUE;
+        if (!empty($this->getSetting('thumbnail_override_fieldname'))) {
+          $override_fieldname = $this->getSetting('thumbnail_override_fieldname');
+          if (!empty($item->getParent()->getParent()->get($override_fieldname)->getValue())) {
+            $use_default_thumbnail = FALSE;
+          }
+        }
+        if ($use_default_thumbnail) {
+          // Get the media ID of the video.
+          $media_id = $item->getValue()['target_id'];
+          $media = Media::load($media_id);
+          $formatter_type = 'image';
+          $image_fieldname = 'thumbnail';
+        }
       }
       // Use this for custom uploaded thumbnail.
       elseif ($item instanceof EntityReferenceItem) {

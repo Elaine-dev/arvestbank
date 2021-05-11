@@ -7,6 +7,7 @@ dependencies:
     - field.field.media.video.field_education_article_category
     - field.field.media.video.field_media_oembed_video
     - field.field.media.video.field_video_subtitle
+    - field.field.media.video.field_video_thumbnail
     - field.field.media.video.field_video_time_length
     - image.style.medium
     - media.type.video
@@ -36,6 +37,7 @@ hidden:
   field_education_article_category: true
   field_media_oembed_video: true
   field_video_subtitle: true
+  field_video_thumbnail: true
   field_video_time_length: true
   name: true
   search_api_excerpt: true
