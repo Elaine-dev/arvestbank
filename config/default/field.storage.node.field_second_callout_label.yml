@@ -1,18 +1,17 @@
-uuid: 04af6057-9a80-45e7-8612-06ba3705f067
+uuid: 9f3be302-3ec3-482b-a04a-a59d1098e269
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_cta_text
-field_name: field_cta_text
+    - text
+id: node.field_second_callout_label
+field_name: field_second_callout_label
 entity_type: node
-type: string
+type: text
 settings:
   max_length: 255
-  is_ascii: false
-  case_sensitive: false
-module: core
+module: text
 locked: false
 cardinality: 1
 translatable: true

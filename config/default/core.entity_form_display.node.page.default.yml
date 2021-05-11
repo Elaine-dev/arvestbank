@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.page.field_button_links
     - field.field.node.page.field_callout_layout_optio
     - field.field.node.page.field_callout_title
-    - field.field.node.page.field_cta_text
     - field.field.node.page.field_featured_image
     - field.field.node.page.field_field_callout_phone_number
     - field.field.node.page.field_layout_canvas
@@ -17,8 +16,9 @@ dependencies:
     - field.field.node.page.field_page_type
     - field.field.node.page.field_print_button_text
     - field.field.node.page.field_rendered_node
-    - field.field.node.page.field_schedule_appointment_link
     - field.field.node.page.field_second_callout
+    - field.field.node.page.field_second_callout_label
+    - field.field.node.page.field_second_callout_link
     - field.field.node.page.field_yoast_seo
     - node.type.page
     - workflows.workflow.editorial
@@ -44,18 +44,33 @@ third_party_settings:
         - field_cta_text
         - field_field_callout_phone_number
         - field_second_callout
-        - field_schedule_appointment_link
+        - group_second_call_out_button
       parent_name: ''
       weight: 6
+      format_type: details
+      region: content
+      format_settings:
+        description: ''
+        open: true
+        required_fields: true
+        id: ''
+        classes: ''
+      label: CTA
+    group_second_call_out_button:
+      children:
+        - field_second_callout_label
+        - field_second_callout_link
+      parent_name: group_cta
+      weight: 10
       format_type: details
       region: content
       format_settings:
         id: ''
         classes: ''
         description: ''
-        open: false
-        required_fields: true
-      label: CTA
+        open: true
+        required_fields: false
+      label: 'Second Call out Button'
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -103,15 +118,6 @@ content:
     region: content
   field_callout_title:
     weight: 5
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings:
-      conditional_fields: {  }
-    type: string_textfield
-    region: content
-  field_cta_text:
-    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -196,38 +202,28 @@ content:
           bundle: page
     type: string_textfield
     region: content
-  field_schedule_appointment_link:
-    weight: 10
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings:
-      conditional_fields:
-        97934b67-cdf7-415a-8541-370f6bfbd489:
-          dependee: field_second_callout
-          settings:
-            state: visible
-            condition: value
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              -
-                value: schedule_appointment
-            effect: show
-            effect_options: {  }
-            selector: ''
-          entity_type: node
-          bundle: page
-    type: link_default
-    region: content
   field_second_callout:
     weight: 9
     settings: {  }
     third_party_settings:
       conditional_fields: {  }
     type: options_select
+    region: content
+  field_second_callout_label:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_second_callout_link:
+    weight: 28
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
   field_yoast_seo:
     weight: 19
@@ -261,6 +257,33 @@ content:
           entity_type: node
           bundle: page
     weight: 26
+    settings: {  }
+    region: content
+  group_second_call_out_button:
+    third_party_settings:
+      conditional_fields:
+        33f26b9e-cc33-475c-8aba-ddb3025c0ece:
+          dependee: field_second_callout
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: schedule_appointment
+            effect: show
+            effect_options: {  }
+            selector: ''
+            inheritance:
+              apply_to_parent: '0'
+              recurse: '0'
+              propagate: '0'
+          entity_type: node
+          bundle: page
+    weight: 29
     settings: {  }
     region: content
   moderation_state:
