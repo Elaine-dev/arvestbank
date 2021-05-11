@@ -1,17 +1,17 @@
-uuid: a7dd3c83-2da3-48e4-92c4-edc0b612831b
+uuid: 128e9e60-2277-4f78-9765-519048e39bb6
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_schedule_appointment_link
+    - field.storage.node.field_second_callout_link
     - node.type.page
   module:
     - link
-id: node.page.field_schedule_appointment_link
-field_name: field_schedule_appointment_link
+id: node.page.field_second_callout_link
+field_name: field_second_callout_link
 entity_type: node
 bundle: page
-label: 'Schedule appointment link'
+label: 'Second Callout Link'
 description: ''
 required: false
 translatable: false

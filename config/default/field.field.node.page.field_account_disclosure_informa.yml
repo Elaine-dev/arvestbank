@@ -11,7 +11,7 @@ id: node.page.field_account_disclosure_informa
 field_name: field_account_disclosure_informa
 entity_type: node
 bundle: page
-label: 'Account Disclosure Information'
+label: 'Account Disclosure Information:'
 description: ''
 required: false
 translatable: false

@@ -1,0 +1,24 @@
+rewards_card_rates__accurate_as_of_date: '2020-07-27'
+rewards_card_rates__apr_for_cash_advances: xxx
+rewards_card_rates__platinum_rates__apr_for_purchases: '13.24% - 20.24%'
+rewards_card_rates__platinum_rates__apr_for_balance_transfers: '13.24% - 20.24%'
+rewards_card_rates__signature_rates__apr_for_purchases: '13.24% - 20.24%'
+rewards_card_rates__signature_rates__apr_for_balance_transfers: '13.24% - 20.24%'
+true_rate_card_rates__accurate_as_of_date: '2020-07-27'
+true_rate_card_rates__apr_for_purchases: xxx
+true_rate_card_rates__apr_for_balance_transfers: '9.24% - 18.24%'
+true_rate_card_rates__apr_for_cash_advances: 24.99%
+origin_card_rates__accurate_as_of_date: '2020-07-27'
+origin_card_rates__apr_for_purchases: 22.24%
+origin_card_rates__apr_for_balance_transfers: 22.24%
+origin_card_rates__apr_for_cash_advances: 24.99%
+legacy_card_rates__accurate_as_of_date: '2020-05-12'
+legacy_card_rates__classic_rates__apr_for_purchases: 19.40%
+legacy_card_rates__classic_rates__apr_for_balance_transfers: 19.40%
+legacy_card_rates__classic_rates__apr_for_cash_advances: 19.40%
+legacy_card_rates__gold_rates__apr_for_purchases: 15.40%
+legacy_card_rates__gold_rates__apr_for_balance_transfers: 15.40%
+legacy_card_rates__gold_rates__apr_for_cash_advances: 15.40%
+legacy_card_rates__platinum_rates__apr_for_purchases: 12.40%
+legacy_card_rates__platinum_rates__apr_for_balance_transfers: 12.40%
+legacy_card_rates__platinum_rates__apr_for_cash_advances: 12.40%

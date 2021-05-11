@@ -8,36 +8,38 @@ dependencies:
     - field.field.node.page.field_button_links
     - field.field.node.page.field_callout_layout_optio
     - field.field.node.page.field_callout_title
-    - field.field.node.page.field_cta_text
     - field.field.node.page.field_featured_image
     - field.field.node.page.field_field_callout_phone_number
+    - field.field.node.page.field_layout_canvas
     - field.field.node.page.field_meta_tags
     - field.field.node.page.field_page_type
     - field.field.node.page.field_print_button_text
-    - field.field.node.page.field_schedule_appointment_link
+    - field.field.node.page.field_rendered_node
     - field.field.node.page.field_second_callout
+    - field.field.node.page.field_second_callout_label
+    - field.field.node.page.field_second_callout_link
     - field.field.node.page.field_yoast_seo
     - node.type.page
   module:
+    - cohesion_elements
     - field_group
     - link
-    - options
     - text
     - user
 third_party_settings:
   field_group:
     group_cta:
       children:
+        - field_callout_layout_optio
         - field_callout_title
         - field_cta_text
         - field_field_callout_phone_number
-        - field_callout_layout_optio
-        - field_second_callout
         - field_schedule_appointment_link
+        - field_second_callout
       parent_name: ''
-      weight: 3
+      weight: 13
       format_type: html_element
-      region: content
+      region: hidden
       format_settings:
         element: div
         show_label: false
@@ -63,7 +65,7 @@ content:
     region: content
   field_account_disclosure_informa:
     type: text_default
-    weight: 10
+    weight: 3
     region: content
     label: above
     settings: {  }
@@ -82,32 +84,6 @@ content:
         class: button
     type: link
     region: content
-  field_callout_layout_optio:
-    weight: 7
-    label: hidden
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
-  field_callout_title:
-    weight: 4
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_cta_text:
-    weight: 5
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_featured_image:
     type: entity_reference_entity_view
     weight: 1
@@ -117,17 +93,25 @@ content:
       link: false
     third_party_settings: {  }
     region: content
-  field_field_callout_phone_number:
-    weight: 6
+  field_layout_canvas:
+    weight: 4
     label: hidden
     settings:
-      link: true
+      view_mode: default
+      link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    type: cohesion_entity_reference_revisions_entity_view
     region: content
-  field_schedule_appointment_link:
-    weight: 9
-    label: hidden
+  field_second_callout_label:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_second_callout_link:
+    weight: 15
+    label: above
     settings:
       trim_length: 80
       url_only: false
@@ -137,18 +121,16 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_second_callout:
-    weight: 8
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
 hidden:
   content_moderation_control: true
+  field_callout_layout_optio: true
+  field_callout_title: true
+  field_field_callout_phone_number: true
   field_meta_tags: true
   field_page_type: true
   field_print_button_text: true
+  field_rendered_node: true
+  field_second_callout: true
   field_yoast_seo: true
   links: true
   search_api_excerpt: true

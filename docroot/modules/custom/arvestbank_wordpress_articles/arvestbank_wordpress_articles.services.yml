@@ -1,0 +1,5 @@
+services:
+
+ arvestbank_wordpress_articles.wordpress_articles_service:
+    class: Drupal\arvestbank_wordpress_articles\Services\WordpressArticlesService
+    arguments: ['@http_client']

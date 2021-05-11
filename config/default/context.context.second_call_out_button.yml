@@ -1,0 +1,23 @@
+uuid: 156c453e-57c9-4c6f-9515-0738bffa48d0
+langcode: en
+status: true
+dependencies:
+  module:
+    - context_entity_field
+name: second_call_out_button
+label: 'Second Call Out Button'
+group: 'basic page'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  'entity_field:node':
+    id: 'entity_field:node'
+    field_name: field_second_callout
+    field_state: value
+    field_value: schedule_appointment
+    context_mapping:
+      node: '@node.node_route_context:node'
+    negate: false
+reactions: {  }
+weight: 0

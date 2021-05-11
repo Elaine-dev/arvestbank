@@ -19,6 +19,7 @@
         "cweagans/composer-patches": "^1.6",
         "drupal/acquia_connector": "^3.0",
         "drupal/acquia_lift": "~4.0",
+        "drupal/acquiadam_asset_import": "^1.1",
         "drupal/address": "^1.9",
         "drupal/admin_toolbar": "^3.0",
         "drupal/better_exposed_filters": "^5.0@beta",
@@ -27,10 +28,13 @@
         "drupal/config_ignore": "^2.3",
         "drupal/config_split": "^2.0@beta",
         "drupal/config_split_ignore": "^1.9",
+        "drupal/context": "^4.0@beta",
+        "drupal/context_entity_field": "1.x-dev@dev",
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-recommended": "9.1.7",
         "drupal/critical_css": "^1.17",
         "drupal/devel": "^4.1",
+        "drupal/diff": "^1.0",
         "drupal/easy_breadcrumb": "^1.13",
         "drupal/entity_browser": "^2.5",
         "drupal/entity_embed": "^1.1",
@@ -79,7 +83,8 @@
         "drush/drush": "^10.4",
         "econea/nusoap": "^0.9.11",
         "oomphinc/composer-installers-extender": "^2.0",
-        "smalot/pdfparser": "^0.18.2"
+        "smalot/pdfparser": "^0.18.2",
+        "sunra/php-simple-html-dom-parser": "^1.5"
     },
     "config": {
         "sort-packages": true
@@ -161,6 +166,12 @@
             },
             "drupal/media_acquiadam": {
                 "Module only themed to work with SEVEN": "https://www.drupal.org/files/issues/2021-04-27/module-theming-3210805-1_0.patch"
+            },
+            "drupal/diff": {
+                "Filter Revision Overview By Date": "https://www.drupal.org/files/issues/2021-05-06/filter-revision-overview-by-date-3212653-1.patch"
+            },
+            "sunra/php-simple-html-dom-parser": {
+                "Update simple_html_dom.php": "https://patch-diff.githubusercontent.com/raw/sunra/php-simple-html-dom-parser/pull/78.patch"
             }
         }
     },

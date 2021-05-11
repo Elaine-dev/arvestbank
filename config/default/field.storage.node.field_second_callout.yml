@@ -16,7 +16,7 @@ settings:
       label: 'Find your local Arvest branch'
     -
       value: schedule_appointment
-      label: 'Schedule an appointment'
+      label: 'Call to Action Button'
   allowed_values_function: ''
 module: options
 locked: false

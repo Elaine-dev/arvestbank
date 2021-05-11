@@ -1,0 +1,23 @@
+uuid: d531b427-5023-4491-a2d1-1b6c622f5311
+langcode: en
+status: true
+dependencies:
+  module:
+    - context_entity_field
+name: cta_second_call_out_find_local_branch
+label: 'cta second call out find local branch'
+group: 'basic page'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  'entity_field:node':
+    id: 'entity_field:node'
+    field_name: field_second_callout
+    field_state: value
+    field_value: find_local_branch
+    context_mapping:
+      node: '@node.node_route_context:node'
+    negate: false
+reactions: {  }
+weight: 0

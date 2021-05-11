@@ -1,0 +1,138 @@
+<?php
+
+/**
+ * @file
+ * Hooks relating to arvestbank rates.
+ */
+
+use Drupal\Core\Render\BubbleableMetadata;
+use Drupal\Core\Entity\EntityInterface;
+use Sunra\PhpSimple\HtmlDomParser;
+
+/**
+ * Implements hook_token_info().
+ */
+function arvestbank_rates_token_info() {
+
+  // Instantiate tokens array with token group.
+  $info = [
+    'types' => [
+      'arvestbank_rates' => [
+        'name' => t('Arvest Bank Rates'),
+        'description' => t('Tokens containing credit card rates.'),
+      ],
+    ],
+    'tokens' => [
+      'arvestbank_rates' => [],
+    ],
+  ];
+
+  // Get Rates config.
+  $ratesConfigValues = \Drupal::config('arvestbank_rates.settings')->getOriginal();
+
+  // Loop over config variables.
+  foreach ($ratesConfigValues as $rateConfigKey => $rateConfigValue) {
+
+    // Decide on human name for config variable.
+    $tokenHumanName = ucwords(str_replace(['__', '_'], [' - ', ' '], $rateConfigKey));
+
+    // Add config variable to arvestbank_rates token group.
+    $info['tokens']['arvestbank_rates'][$rateConfigKey] = [
+      'name' => $tokenHumanName,
+      'description' => $tokenHumanName,
+    ];
+
+  }
+
+  return $info;
+}
+
+/**
+ * Implements hook_tokens().
+ *
+ * @inheritDoc
+ */
+function arvestbank_rates_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata) {
+
+  $replacements = [];
+
+  // Get Rates config.
+  $ratesConfigValues = \Drupal::config('arvestbank_rates.settings')->getOriginal();
+
+  // Define date tokens and what format we want them in.
+  $dateTokenFormats = [
+    'rewards_card_rates__accurate_as_of_date' => 'F j, Y',
+    'true_rate_card_rates__accurate_as_of_date' => 'F j, Y',
+    'origin_card_rates__accurate_as_of_date' => 'F j, Y',
+    'legacy_card_rates__accurate_as_of_date' => 'F j, Y',
+  ];
+
+  // Loop over tokens that need replacing.
+  foreach ($tokens as $name => $original) {
+
+    // If we have a config value with the same name as this token.
+    if (isset($ratesConfigValues[$name])) {
+
+      // If it's a date token.
+      if (isset($dateTokenFormats[$name])) {
+        $replacements[$original] = date(
+          $dateTokenFormats[$name],
+          strtotime($ratesConfigValues[$name])
+        );
+      }
+      // If it's a normal nondate token.
+      else {
+        $replacements[$original] = $ratesConfigValues[$name];
+      }
+
+    }
+
+  }
+
+  return $replacements;
+}
+
+/**
+ * Implements hook_entity_presave().
+ *
+ * @inheritDoc
+ */
+function arvestbank_rates_entity_presave(EntityInterface $entity) {
+
+  // If the entity is a node and has our "rendered node" field.
+  if (
+    $entity->getEntityTypeId() == 'node'
+    && $entity->hasField('field_rendered_node')
+  ) {
+
+    // Get render array for node.
+    $nodeRenderArray = \Drupal::entityTypeManager()
+      ->getViewBuilder('node')
+      ->view($entity, 'full');
+
+    // Get the current active theme so we can switch back to it later.
+    $currentActiveTheme = \Drupal::theme()->getActiveTheme();
+    // Get the front end theme as an "ActiveTheme".
+    $activeTheme = \Drupal::service('theme.initialization')->getActiveThemeByName('arvestbank_theme');
+    // Set active theme to front end.
+    \Drupal::theme()->setActiveTheme($activeTheme);
+    // Render node with front end theme.
+    $renderedNode = \Drupal::service('renderer')->render($nodeRenderArray)->__toString();
+    // Set active theme back to what it was.
+    \Drupal::theme()->setActiveTheme($currentActiveTheme);
+
+    // Load the rendered node markup into the dom parser.
+    $nodeDom = HtmlDomParser::str_get_html($renderedNode);
+
+    // Get content div of the rendered node.
+    $renderedNodeContent = '';
+    foreach ($nodeDom->find('.coh-main-view-content-column') as $element) {
+      $renderedNodeContent .= $element->innertext();
+    }
+
+    // Set the field value.
+    $entity->set('field_rendered_node', $renderedNodeContent);
+
+  }
+
+}

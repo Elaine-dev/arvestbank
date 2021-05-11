@@ -1,0 +1,5 @@
+name: 'Arvest Wordpress Articles'
+type: module
+description: 'Provides functionality for outputting articles from wordpress.'
+core_version_requirement: ^9
+package: 'Custom'

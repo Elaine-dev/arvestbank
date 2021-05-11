@@ -24,7 +24,7 @@ third_party_settings:
     unpublish_revision: false
 name: Associate
 type: associate
-description: 'Content type for Associates, Lenders and Advisors, filterably by location or name. 2 display modes - all fields displayed in view, as detail page'
+description: 'Content type for Associates, Lenders and Advisors.'
 help: ''
 new_revision: true
 preview_mode: 1

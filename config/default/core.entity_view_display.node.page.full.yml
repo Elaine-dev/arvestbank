@@ -9,14 +9,16 @@ dependencies:
     - field.field.node.page.field_button_links
     - field.field.node.page.field_callout_layout_optio
     - field.field.node.page.field_callout_title
-    - field.field.node.page.field_cta_text
     - field.field.node.page.field_featured_image
     - field.field.node.page.field_field_callout_phone_number
+    - field.field.node.page.field_layout_canvas
     - field.field.node.page.field_meta_tags
     - field.field.node.page.field_page_type
     - field.field.node.page.field_print_button_text
-    - field.field.node.page.field_schedule_appointment_link
+    - field.field.node.page.field_rendered_node
     - field.field.node.page.field_second_callout
+    - field.field.node.page.field_second_callout_label
+    - field.field.node.page.field_second_callout_link
     - field.field.node.page.field_yoast_seo
     - node.type.page
   module:
@@ -79,14 +81,6 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_cta_text:
-    weight: 8
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_featured_image:
     type: entity_reference_entity_view
     weight: 5
@@ -126,18 +120,6 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_schedule_appointment_link:
-    weight: 7
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: content
   field_second_callout:
     weight: 13
     label: above
@@ -151,5 +133,9 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_layout_canvas: true
+  field_rendered_node: true
+  field_second_callout_label: true
+  field_second_callout_link: true
   field_yoast_seo: true
   search_api_excerpt: true

@@ -44,6 +44,7 @@ dependencies:
     - field.field.node.stage_page.field_slide_one
     - field.field.node.stage_page.field_slide_three
     - field.field.node.stage_page.field_slide_two
+    - field.field.node.stage_page.field_wordpress_articles
     - node.type.stage_page
     - workflows.workflow.editorial
   module:
@@ -52,6 +53,7 @@ dependencies:
     - field_group
     - link
     - metatag
+    - paragraphs
     - path
     - scheduler
     - text
@@ -62,6 +64,7 @@ third_party_settings:
         - field_block_title
         - body
         - field_block_button
+        - field_wordpress_articles
       parent_name: ''
       weight: 1
       format_type: details
@@ -579,6 +582,18 @@ content:
       selection_mode: selection_append
       field_widget_replace: false
       open: false
+    third_party_settings: {  }
+    region: content
+  field_wordpress_articles:
+    type: entity_reference_paragraphs
+    weight: 16
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
     region: content
   moderation_state:
