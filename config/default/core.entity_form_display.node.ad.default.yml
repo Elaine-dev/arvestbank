@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.ad.field_ad_content_image
     - field.field.node.ad.field_ad_nav_image
     - field.field.node.ad.field_cta
-    - field.field.node.ad.field_fallback_image
     - field.field.node.ad.field_image
     - node.type.ad
     - workflows.workflow.editorial
@@ -49,13 +48,6 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
-    region: content
-  field_fallback_image:
-    type: media_library_widget
-    weight: 16
-    settings:
-      media_types: {  }
-    third_party_settings: {  }
     region: content
   field_image:
     type: media_library_widget

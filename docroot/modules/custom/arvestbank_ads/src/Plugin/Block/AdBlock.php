@@ -7,6 +7,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 use Drupal\media\Entity\Media;
 use Drupal\node\Entity\Node;
+use Drupal\views\Views;
 
 /**
  * Provides a 'AdBlock' block.
@@ -54,7 +55,21 @@ class AdBlock extends BlockBase {
    * @return int
    */
   private function getCampaignNid() {
-    return 6959;
+
+    $return = FALSE;
+
+    $view = Views::getView('ad_campaigns');
+    $view->setDisplay('attachment_1');
+    $view->render();
+    if (!empty($view->result[0])) {
+      $result = $view->result[0];
+      if (property_exists($result, 'nid')) {
+        $return = $result->nid;
+      }
+    }
+
+    return $return;
+
   }
 
   /**
@@ -69,7 +84,7 @@ class AdBlock extends BlockBase {
     $current_uri = \Drupal::request()->getRequestUri();
 
     // Get the fieldmap of paths to fieldnames.
-    $fieldmap = \Drupal::service('sidebar_field_map')->getSidebarFieldMap();
+    $fieldmap = \Drupal::service('ad_services')->getSidebarFieldMap();
 
     // Format to just grab the first two parts.
     $current_uri = ltrim($current_uri, '/');
@@ -118,15 +133,17 @@ class AdBlock extends BlockBase {
     $ad_nid = 0;
 
     // Get the current campaign.
-    $ad_campaign_nid = self::getCampaignNid();
+    if ($ad_campaign_nid = self::getCampaignNid()) {
 
-    // If there is a valid campaign proceed.
-    if ($ad_campaign = Node::load($ad_campaign_nid)) {
+      // If there is a valid campaign proceed.
+      if ($ad_campaign = Node::load($ad_campaign_nid)) {
 
-      // Match the current page to a sidebar menu item.
-      if ($fieldname = self::getAdFieldFromPath()) {
-        if (!empty($ad_campaign->get($fieldname)->getValue()[0]['target_id'])) {
-          $ad_nid = $ad_campaign->get($fieldname)->getValue()[0]['target_id'];
+        // Match the current page to a sidebar menu item.
+        if ($fieldname = self::getAdFieldFromPath()) {
+          if (!empty($ad_campaign->get($fieldname)->getValue()[0]['target_id'])) {
+            $ad_nid = $ad_campaign->get($fieldname)->getValue()[0]['target_id'];
+          }
+
         }
 
       }
@@ -152,6 +169,9 @@ class AdBlock extends BlockBase {
     // Set the block style.
     $block_style = $this->getConfiguration()['ad_style'];
 
+    // Get the list of style options.
+    $ad_styles = \Drupal::service('ad_services')->adStyleOptions();
+
     // Storage for node entity types.
     $storage = \Drupal::entityTypeManager()->getStorage('node');
 
@@ -172,7 +192,7 @@ class AdBlock extends BlockBase {
 
           // Get the style for this block,
           // and use the corresponding image and image style.
-          if (array_key_exists($this->getConfiguration()['ad_style'], self::adStyleOptions())) {
+          if (array_key_exists($this->getConfiguration()['ad_style'], $ad_styles)) {
 
             // Set a default image style.
             $image_style = 'medium';

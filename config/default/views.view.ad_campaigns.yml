@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_mode.node.full
     - field.storage.node.field_ad_active_dates
     - node.type.ad_campaign
+  content:
+    - 'block_content:text:2d4ec4fb-8722-4e4e-b4b6-1d7c7571ac2c'
   module:
     - datetime
     - datetime_range
@@ -707,19 +709,19 @@ display:
       display_extenders: {  }
       path: admin/content/ad-campaigns
       header:
-        area:
-          id: area
+        entity_block_content:
+          id: entity_block_content
           table: views
-          field: area
+          field: entity_block_content
           relationship: none
           group_type: group
           admin_label: ''
           empty: false
           tokenize: false
-          content:
-            value: "<a href=\"/node/add/ad?destination=/admin/content/ads\">click here to add an ad</a> | \r\n<a href=\"/media/add/acquia_dam_image?destination=/admin/content/ads\">click here to add media</a> | \r\n<a href=\"/admin/content/ad-campaigns\">click here to update ad campaigns</a> | \r\n<a href=\"/node/add/ad_campaign?destination=/admin/content/ad-campaigns\">click here to add an ad campaign</a>"
-            format: cohesion
-          plugin_id: text
+          target: 2d4ec4fb-8722-4e4e-b4b6-1d7c7571ac2c
+          view_mode: default
+          bypass_access: false
+          plugin_id: entity
       defaults:
         header: false
         fields: false

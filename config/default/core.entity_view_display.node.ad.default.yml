@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.ad.field_ad_content_image
     - field.field.node.ad.field_ad_nav_image
     - field.field.node.ad.field_cta
-    - field.field.node.ad.field_fallback_image
     - field.field.node.ad.field_image
     - node.type.ad
   module:
@@ -60,15 +59,6 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
-    region: content
-  field_fallback_image:
-    type: entity_reference_entity_view
-    weight: 104
-    label: above
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
     region: content
   field_image:
     type: entity_reference_entity_view
