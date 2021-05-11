@@ -7,7 +7,7 @@ dependencies:
     - field.storage.node.field_ad_active_dates
     - node.type.ad_campaign
   content:
-    - 'block_content:text:2d4ec4fb-8722-4e4e-b4b6-1d7c7571ac2c'
+    - 'block_content:text:f8efb98e-8dc7-447b-9cc9-25fc776c0f67'
   module:
     - datetime
     - datetime_range
@@ -716,9 +716,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          empty: false
+          empty: true
           tokenize: false
-          target: 2d4ec4fb-8722-4e4e-b4b6-1d7c7571ac2c
+          target: f8efb98e-8dc7-447b-9cc9-25fc776c0f67
           view_mode: default
           bypass_access: false
           plugin_id: entity

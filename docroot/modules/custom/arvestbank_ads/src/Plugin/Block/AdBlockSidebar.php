@@ -3,77 +3,25 @@
 namespace Drupal\arvestbank_ads\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
-use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 use Drupal\media\Entity\Media;
 use Drupal\node\Entity\Node;
-use Drupal\views\Views;
 
 /**
- * Provides a 'AdBlock' block.
+ * Provides an Ad Block for the Sidebar.
  *
  * @Block(
- *  id = "ad_block",
- *  admin_label = @Translation("Ad block"),
+ *  id = "ad_block_sidebar",
+ *  admin_label = @Translation("Ad Block - Sidebar"),
  * )
  */
-class AdBlock extends BlockBase {
+class AdBlockSidebar extends BlockBase {
 
   /**
-   * {@inheritdoc}
-   */
-  public function blockForm($form, FormStateInterface $form_state) {
-
-    $form = parent::blockForm($form, $form_state);
-
-    $config = $this->getConfiguration();
-
-    $ad_styles = \Drupal::service('ad_services')->adStyleOptions();
-
-    $form['ad_style'] = [
-      '#title' => t('Ad Style'),
-      '#type' => 'select',
-      '#options' => $ad_styles,
-      '#default_value' => $config['ad_style'] ?? NULL,
-      '#description' => t('Style for this block.'),
-    ];
-
-    return $form;
-
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function blockSubmit($form, FormStateInterface $form_state) {
-    parent::blockSubmit($form, $form_state);
-    $values = $form_state->getValues();
-    $this->configuration['ad_style'] = $values['ad_style'];
-  }
-
-  /**
-   * @return int
-   */
-  private function getCampaignNid() {
-
-    $return = FALSE;
-
-    $view = Views::getView('ad_campaigns');
-    $view->setDisplay('attachment_1');
-    $view->render();
-    if (!empty($view->result[0])) {
-      $result = $view->result[0];
-      if (property_exists($result, 'nid')) {
-        $return = $result->nid;
-      }
-    }
-
-    return $return;
-
-  }
-
-  /**
+   * Returns the sidebar field to use based off of the uri path.
+   *
    * @return string
+   *   fieldname
    */
   private function getAdFieldFromPath() {
 
@@ -133,7 +81,7 @@ class AdBlock extends BlockBase {
     $ad_nid = 0;
 
     // Get the current campaign.
-    if ($ad_campaign_nid = self::getCampaignNid()) {
+    if ($ad_campaign_nid = \Drupal::service('ad_services')->getCampaignNid()) {
 
       // If there is a valid campaign proceed.
       if ($ad_campaign = Node::load($ad_campaign_nid)) {
@@ -166,9 +114,6 @@ class AdBlock extends BlockBase {
     // Use /templates/ad-block.html.twig.
     $build['#theme'] = 'ad_block';
 
-    // Set the block style.
-    $block_style = $this->getConfiguration()['ad_style'];
-
     // Get the list of style options.
     $ad_styles = \Drupal::service('ad_services')->adStyleOptions();
 
@@ -194,17 +139,9 @@ class AdBlock extends BlockBase {
           // and use the corresponding image and image style.
           if (array_key_exists($this->getConfiguration()['ad_style'], $ad_styles)) {
 
-            // Set a default image style.
-            $image_style = 'medium';
-
-            // Check for image style for this block style.
-            if (array_key_exists('ad_' . $block_style, image_style_options(TRUE))) {
-              $image_style = 'ad_' . $block_style;
-            }
-
             $ad_content = [
               '#theme' => 'image_style',
-              '#style_name' => $image_style,
+              '#style_name' => 'ad_sidebar',
               '#uri' => $ad_url,
             ];
 
