@@ -5,6 +5,7 @@ namespace Drupal\media_video_micromodal\Plugin\Field\FieldFormatter;
 use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\FormatterBase;
+use Drupal\Core\Field\Plugin\Field\FieldType\EntityReferenceItem;
 use Drupal\Core\Field\Plugin\Field\FieldType\StringItem;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
@@ -23,7 +24,8 @@ use Drupal\Core\PrivateKey;
  *   label = @Translation("Micromodal field formatter"),
  *   field_types = {
  *     "string",
- *     "image"
+ *     "image",
+ *     "entity_reference"
  *   }
  * )
  */
@@ -45,6 +47,10 @@ class MicromodalFieldFormatter extends FormatterBase {
    */
   public function settingsForm(array $form, FormStateInterface $form_state) {
 
+    // Initialize settings variable.
+    $settings = [];
+
+    // For media "name" field, allow for additional classes.
     if ($this->fieldDefinition->getType() == 'string') {
 
       $settings = [
@@ -60,7 +66,9 @@ class MicromodalFieldFormatter extends FormatterBase {
 
     }
 
-    elseif ($this->fieldDefinition->getType() == 'image') {
+    // For thumbnails allow for choices of image styles.
+    elseif ($this->fieldDefinition->getType() == 'image'
+      || $this->fieldDefinition->getType() == 'entity_reference') {
 
       $settings = [
         'thumbnail_image_style' => [
@@ -99,6 +107,14 @@ class MicromodalFieldFormatter extends FormatterBase {
 
   }
 
+
+  /**
+   * {@inheritdoc}
+   */
+  public function view(FieldItemListInterface $items, $langcode = NULL) {
+    
+  }
+
   /**
    * {@inheritdoc}
    */
@@ -109,11 +125,21 @@ class MicromodalFieldFormatter extends FormatterBase {
     foreach ($items as $delta => $item) {
 
       // Load the media item.
-      // Use this for thumbnails.
+      // Use this for default oembed thumbnails.
       if ($item instanceof ImageItem) {
+        // Get the media ID of the video.
         $media_id = $item->getValue()['target_id'];
         $media = Media::load($media_id);
         $formatter_type = 'image';
+        $image_fieldname = 'thumbnail';
+      }
+      // Use this for custom uploaded thumbnail.
+      elseif ($item instanceof EntityReferenceItem) {
+        // Get the media ID of the video.
+        $media_id = $item->getParent()->getParent()->getValue()->id();
+        $media = Media::load($media_id);
+        $formatter_type = 'image';
+        $image_fieldname = $item->getFieldDefinition()->getName();
       }
       // Use this for the media name.
       elseif ($item instanceof StringItem) {
@@ -156,16 +182,55 @@ class MicromodalFieldFormatter extends FormatterBase {
           if ($formatter_type == 'image') {
 
             // Media ID of the thumbnail.
-            $thumbnail_id = $media->getFields()['thumbnail']->getValue()[0]['target_id'];
+            $thumbnail_id = $media->getFields()[$image_fieldname]->getValue()[0]['target_id'];
 
             // Use the image style setting to style the thumbnail.
             if (!empty($thumbnail_id)) {
+
+              // Load the media for the thumbnail.
+              $thumbnail_media = Media::load($thumbnail_id);
+              // Check the file ID and update as necessary.
+              if (method_exists($thumbnail_media, 'get')) {
+                $thumbnail_id = $thumbnail_media->get('thumbnail')->target_id;
+              }
+
+
+//              $file = $thumbnail_media->entityManager;
+//
+//              dump(array_keys($thumbnail_media->getFieldDefinitions()));
+//              dump($file);
+//              dump($item);
+//              dump($thumbnail_media);
+//              //$file_uri = $media->field_media_file->entity->getFileUri();
+//              //dump($file_uri);
+//
+////              dump($thumbnail_media->get('field_media_image'));
+//
+//              //$fid = $thumbnail_media->getSource()->getSourceFieldValue($thumbnail_media);
+//              $fid = $thumbnail_media->field_media_image->target_id;
+//              dump($thumbnail_id);
+//              dump($fid);
+//              dump($thumbnail_media->field_media_image);
+//              dump($thumbnail_media->uri->value);
+//
+//              //$media_field = $thumbnail_media->get('field_media_image')->first()->getValue();
+//              //dump($media_field['target_id']);
+////              $file = File::load($media_field['target_id']);
+////              dump($file);
+//              die();
+//
+
               $thumbnail_file = File::load($thumbnail_id);
+//              dump($thumbnail_file);
               $render_thumbnail = [
                 '#theme' => 'image_style',
                 '#style_name' => $this->getSetting('thumbnail_image_style'),
                 '#uri' => $thumbnail_file->uri->value,
               ];
+
+//              dump($media->getFields()[$image_fieldname]->getValue()[0]['target_id']);
+//              dump($thumbnail_file->uri->value);
+
               $linked_item = render($render_thumbnail);
             }
 
@@ -220,11 +285,13 @@ class MicromodalFieldFormatter extends FormatterBase {
    * {@inheritdoc}
    */
   public static function isApplicable(FieldDefinitionInterface $field_definition): bool {
+
     return $field_definition->getTargetEntityTypeId() === 'media'
       // @todo: this always returns "null", maybe b/c of this bug:
       // https://www.drupal.org/project/drupal/issues/2976795
       // && $field_definition->getTargetBundle() === 'video'
-      && ($field_definition->getFieldStorageDefinition()->getName() === 'thumbnail'
+      && ($field_definition->getTargetEntityTypeId() === 'image'
+      || $field_definition->getFieldStorageDefinition()->getTargetEntityTypeId() === 'media'
       || $field_definition->getFieldStorageDefinition()->getName() === 'name');
   }
 
