@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_icon_two
-    - media.type.icon
+    - media.type.acquia_dam_image
     - node.type.stage_page
 id: node.stage_page.field_icon_two
 field_name: field_icon_two
@@ -20,7 +20,7 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      icon: icon
+      acquia_dam_image: acquia_dam_image
     sort:
       field: _none
       direction: ASC

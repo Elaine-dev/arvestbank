@@ -1,0 +1,13 @@
+
+-
+  type: cohesion_sync_package
+  export:
+    uuid: 2caf785a-c5d6-4311-ad0a-3aa4a298ce56
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: pack_custom_template_basic_page
+    label: 'Custom Template Basic Page'
+    description: 'A custom emplate for the Basic Page Author: Allie Jones / Last update: 5/10/2021'
+    excluded_entity_types: '[]'
+    settings: '[]'

@@ -36,13 +36,6 @@ third_party_settings:
         weight: 0
         label: Explode
         uuid: bb0e1df6-690a-43e5-bb3f-d3fdf0950c34
-      fd9bace4-d88a-4a97-8248-a8a0ec87241f:
-        text: '1'
-        plugin: rewrite
-        source: status
-        weight: 0
-        label: Rewrite
-        uuid: fd9bace4-d88a-4a97-8248-a8a0ec87241f
 id: associates
 label: Associates
 description: ''

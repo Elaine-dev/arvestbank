@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.page.field_button_links
     - field.field.node.page.field_callout_layout_optio
     - field.field.node.page.field_callout_title
-    - field.field.node.page.field_cta_text
     - field.field.node.page.field_featured_image
     - field.field.node.page.field_field_callout_phone_number
     - field.field.node.page.field_layout_canvas
@@ -17,8 +16,9 @@ dependencies:
     - field.field.node.page.field_page_type
     - field.field.node.page.field_print_button_text
     - field.field.node.page.field_rendered_node
-    - field.field.node.page.field_schedule_appointment_link
     - field.field.node.page.field_second_callout
+    - field.field.node.page.field_second_callout_label
+    - field.field.node.page.field_second_callout_link
     - field.field.node.page.field_yoast_seo
     - node.type.page
   module:
@@ -52,7 +52,6 @@ hidden:
   field_button_links: true
   field_callout_layout_optio: true
   field_callout_title: true
-  field_cta_text: true
   field_featured_image: true
   field_field_callout_phone_number: true
   field_layout_canvas: true
@@ -60,7 +59,8 @@ hidden:
   field_page_type: true
   field_print_button_text: true
   field_rendered_node: true
-  field_schedule_appointment_link: true
   field_second_callout: true
+  field_second_callout_label: true
+  field_second_callout_link: true
   field_yoast_seo: true
   search_api_excerpt: true

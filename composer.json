@@ -28,6 +28,8 @@
         "drupal/config_ignore": "^2.3",
         "drupal/config_split": "^2.0@beta",
         "drupal/config_split_ignore": "^1.9",
+        "drupal/context": "^4.0@beta",
+        "drupal/context_entity_field": "1.x-dev@dev",
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-recommended": "9.1.7",
         "drupal/critical_css": "^1.17",
