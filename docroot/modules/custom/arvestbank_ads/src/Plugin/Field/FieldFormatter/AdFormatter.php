@@ -73,24 +73,60 @@ class AdFormatter extends FormatterBase {
 
     $elements = [];
 
-    if (!empty($items[0]->getValue()['target_id'])) {
+    if (method_exists($items[0], 'getValue')) {
 
-      $ad_nid = $items[0]->getValue()['target_id'];
+      if (!empty($items[0]->getValue()['target_id'])) {
 
-      if ($ad = Node::load($ad_nid)) {
-        if ($image_media_id = $ad->get('field_image')[0]->getValue()['target_id']) {
-          $image_media = Media::load($image_media_id);
-          $fid = Media::load($image_media_id)->field_acquiadam_asset_image[0]->getValue()['target_id'];
-          $file = File::load($fid);
-          $elements = [
-            '#theme' => 'image_style',
-            '#style_name' => 'medium', // $this->getSetting('thumbnail_image_style'),
-            '#uri' => $file->uri->value,
-          ];
+        $ad_nid = $items[0]->getValue()['target_id'];
+
+        if ($ad = Node::load($ad_nid)) {
+
+          switch ($this->getSetting('ad_style')) {
+
+            case 'sidebar':
+              $image_fieldname = 'field_image';
+              $image_style = 'ad_sidebar';
+              break;
+
+            case 'navigation':
+              $image_fieldname = 'field_ad_nav_image';
+              $image_style = 'ad_navigation';
+              break;
+
+            case 'main':
+              $image_fieldname = 'field_ad_content_image';
+              $image_style = 'ad_main';
+
+          }
+
+          if (!empty($image_fieldname) && method_exists($ad->get($image_fieldname)[0], 'getValue')) {
+
+            if ($image_media_id = $ad->get($image_fieldname)[0]->getValue()['target_id']) {
+
+              if ($image_media = Media::load($image_media_id)) {
+
+                if ($fid = $image_media->field_acquiadam_asset_image[0]->getValue()['target_id']) {
+
+                  $file = File::load($fid);
+
+                  $elements[] = [
+                    '#theme' => 'image_style',
+                    '#style_name' => $image_style,
+                    '#uri' => $file->uri->value,
+                  ];
+
+                }
+
+              }
+
+            }
+
+          }
 
         }
 
       }
+
     }
 
     return $elements;

@@ -5,6 +5,7 @@
  * Contains arvestbank_ads.module.
  */
 
+use Drupal\Core\Render\Element;
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
@@ -56,6 +57,38 @@ function arvestbank_ads_form_alter(&$form, \Drupal\Core\Form\FormStateInterface 
       }
     }
 
+  }
+
+}
+
+function arvestbank_ads_node_view_alter(array &$build, Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display) {
+
+  if (!empty($display->get('third_party_settings')['field_group'])) {
+    $fieldgroups = $display->get('third_party_settings')['field_group'];
+    $children = [];
+    foreach($fieldgroups as $key => $group) {
+      if (!empty($group['children'])) {
+        foreach ($group['children'] as $child) {
+          $children[$child] = $key;
+        }
+      }
+    }
+    if (!empty($children)) {
+      foreach($children as $field => $group) {
+        if (!empty($build[$field]) && !empty($fieldgroups[$group])) {
+          if (empty($fieldgroups[$group]['rendered'])) {
+            $group_markup = '';
+            if ($parent_name = $fieldgroups[$group]['parent_name']) {
+              $group_markup .= '<h2>' . $fieldgroups[$parent_name]['label'] . '</h2>';
+            }
+            $group_markup .= '<h3>' . $fieldgroups[$group]['label'] . '</h3>';
+            $build[$field]['#prefix'] = $group_markup;
+            $fieldgroups[$group]['rendered'] = TRUE;
+
+          }
+        }
+      }
+    }
   }
 
 }
