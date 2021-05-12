@@ -6,6 +6,7 @@ dependencies:
     - field.field.media.video.field_education_article_category
     - field.field.media.video.field_media_oembed_video
     - field.field.media.video.field_video_subtitle
+    - field.field.media.video.field_video_thumbnail
     - field.field.media.video.field_video_time_length
     - media.type.video
   module:
@@ -22,6 +23,15 @@ content:
     settings:
       max_width: 237
       max_height: 117
+    third_party_settings: {  }
+    region: content
+  field_video_thumbnail:
+    type: entity_reference_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: false
     third_party_settings: {  }
     region: content
 hidden:
