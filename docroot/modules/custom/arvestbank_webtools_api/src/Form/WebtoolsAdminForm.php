@@ -40,6 +40,22 @@ class WebtoolsAdminForm extends ConfigFormBase {
       '#description' => 'Connection info for Ping Federate OAuth.<br/>Used to obtain bearer token for webtool api requests.<br/>Should be autoswitched in secrets.settings.php.',
     ];
 
+    // Add bearer token info to ping federate container description.
+    if (\Drupal::state()->get('arvestbank_webtools_api__bearer_token')) {
+      $form['ping-federate']['#description'] .= '<br/>Current bearer token: <b>'
+        . \Drupal::state()->get('arvestbank_webtools_api__bearer_token')
+        . '</b>';
+      if (
+        \Drupal::state()->get('arvestbank_webtools_api__bearer_token_expiration')
+        && \Drupal::state()->get('arvestbank_webtools_api__bearer_token_expiration') > time()
+      ) {
+        $form['ping-federate']['#description'] .= '(not expired)';
+      }
+      else {
+        $form['ping-federate']['#description'] .= '(expired)';
+      }
+    }
+
     // OAuth Endpoint field.
     $form['ping-federate']['oauth_endpoint'] = [
       '#type' => 'textfield',
@@ -94,7 +110,44 @@ class WebtoolsAdminForm extends ConfigFormBase {
       '#attributes' => ['disabled' => 'disabled'],
     ];
 
-    return parent::buildForm($form, $form_state);
+    // Coppied from ConfigFormBase->buildForm.
+    $form['#theme'] = 'system_config_form';
+
+    $form['actions']['#type'] = 'actions';
+    $form['actions']['test_ping_identity_config'] = [
+      '#type' => 'submit',
+      '#value' => t('Test Ping Identity Config by Gerating New Bearer Token'),
+      '#submit' => [[$this, 'testPingIdentity']],
+    ];
+
+    // Return form.
+    return $form;
+  }
+
+  /**
+   * Submit function to test ping identity config.
+   *
+   * @param array $form
+   *   The form array.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The form state.
+   */
+  public function testPingIdentity(array &$form, FormStateInterface $form_state) {
+
+    // Get Ping Identity Client.
+    $pingIdentityClient = \Drupal::service('arvestbank_webtools_api.ping_identity_client');
+
+    // Attempt to generate a bearer token from ping identity.
+    $requestSuccess = $pingIdentityClient->getNewBearerToken();
+
+    // If the test was successfull.
+    if ($requestSuccess) {
+      $this->messenger()->addMessage('Successfully generated a ping identity bearer token.');
+    }
+    else {
+      $this->messenger()->addError('Could not connect to ping identity.');
+    }
+
   }
 
   /**
@@ -111,18 +164,6 @@ class WebtoolsAdminForm extends ConfigFormBase {
    */
   public function getFormId() {
     return 'arvestbank_webtools_admin_form';
-  }
-
-  /**
-   * Note that we're not saving here config to be set in secrets.settings.php.
-   *
-   * {@inheritdoc}
-   */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-
-    // Run parent submit.
-    parent::submitForm($form, $form_state);
-
   }
 
 }

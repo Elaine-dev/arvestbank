@@ -1,0 +1,4 @@
+services:
+  arvestbank_webtools_api.ping_identity_client:
+    class: Drupal\arvestbank_webtools_api\Services\PingIdentityClient
+    arguments: ['@config.factory','@http_client']
