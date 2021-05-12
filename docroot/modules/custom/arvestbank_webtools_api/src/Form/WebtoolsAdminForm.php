@@ -113,11 +113,21 @@ class WebtoolsAdminForm extends ConfigFormBase {
     // Coppied from ConfigFormBase->buildForm.
     $form['#theme'] = 'system_config_form';
 
+    // Actions.
     $form['actions']['#type'] = 'actions';
+
+    // Test Ping Identity button.
     $form['actions']['test_ping_identity_config'] = [
       '#type' => 'submit',
       '#value' => t('Test Ping Identity Config by Gerating New Bearer Token'),
       '#submit' => [[$this, 'testPingIdentity']],
+    ];
+
+    // Test webtools api button.
+    $form['actions']['test_webtools_config'] = [
+      '#type' => 'submit',
+      '#value' => t('Test Webtools API Config'),
+      '#submit' => [[$this, 'testWebtools']],
     ];
 
     // Return form.
@@ -147,6 +157,24 @@ class WebtoolsAdminForm extends ConfigFormBase {
     else {
       $this->messenger()->addError('Could not connect to ping identity.');
     }
+
+  }
+
+  /**
+   * Form submit function to test webtools config.
+   *
+   * @param array $form
+   *   The form array.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The form state.
+   */
+  public function testWebtools(array &$form, FormStateInterface $form_state) {
+
+    // Get webtools client.
+    $webtoolsClient = \Drupal::service('arvestbank_webtools_api.webtools_client');
+
+    // Test connectivity.
+    $webtoolsClient->testConnectivity();
 
   }
 

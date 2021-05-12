@@ -50,6 +50,35 @@ class PingIdentityClient {
   }
 
   /**
+   * Generates a new bearer token if current one has expired.
+   *
+   * @return bool
+   *   Indicates weather the bearer token is now valid.
+   */
+  public function ensureValidBearerToken() {
+
+    // If the token has expired.
+    if (
+      !\Drupal::state()->get('arvestbank_webtools_api__bearer_token_expiration')
+      || \Drupal::state()->get('arvestbank_webtools_api__bearer_token_expiration') < time()
+    ) {
+      // If we generated a new token successfully.
+      if ($this->getNewBearerToken()) {
+        return TRUE;
+      }
+      // If we failed to generate a new bearer token.
+      else {
+        return FALSE;
+      }
+    }
+    // If the token hasn't expired.
+    else {
+      return TRUE;
+    }
+
+  }
+
+  /**
    * Attempts to retrieve a bearer token from PingIdentity oauth server.
    *
    * Stores responses in state variable "arvestbank_webtools_api__bearer_token".
@@ -58,6 +87,7 @@ class PingIdentityClient {
    *   Indicates weather bearer token was successfully retrieved.
    */
   public function getNewBearerToken() {
+
     // Add GET variables to oauth endpoint.
     $requestEndpoint = $this->webtoolsConfig->get('oauth_endpoint') . '?grant_type=client_credentials&scope=edit';
 
