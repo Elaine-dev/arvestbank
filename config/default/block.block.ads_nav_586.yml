@@ -1,4 +1,4 @@
-uuid: 17474217-1dfe-4360-909e-53bf2fc2cd2e
+uuid: bec063df-c794-48d1-a167-165525e9319f
 langcode: en
 status: true
 dependencies:
@@ -7,15 +7,15 @@ dependencies:
     - cohesion
   theme:
     - arvestbank_theme
-id: adblocknav
+id: ads_nav_586
 theme: arvestbank_theme
 region: dx8_hidden
 weight: 0
 provider: null
-plugin: ad_block_nav
+plugin: 'ad_block_nav:ads_nav_586'
 settings:
-  id: ad_block_nav
-  label: 'Ad Block - Nav'
+  id: 'ad_block_nav:ads_nav_586'
+  label: 'Ads Nav Business'
   provider: arvestbank_ads
   label_display: visible
 visibility:

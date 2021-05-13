@@ -1,4 +1,4 @@
-uuid: fb30d830-8b4a-41fd-af1c-1a4ae24f6fea
+uuid: 844c12ce-3534-44f7-8ad4-b3ce8d2ee7bc
 langcode: en
 status: true
 dependencies:
@@ -7,15 +7,15 @@ dependencies:
     - cohesion
   theme:
     - arvestbank_theme
-id: adblocksidebar
+id: ads_nav_706
 theme: arvestbank_theme
 region: dx8_hidden
 weight: 0
 provider: null
-plugin: ad_block_sidebar
+plugin: 'ad_block_nav:ads_nav_706'
 settings:
-  id: ad_block_sidebar
-  label: 'Ad Block - Sidebar'
+  id: 'ad_block_nav:ads_nav_706'
+  label: 'Ads Nav Credit Cards'
   provider: arvestbank_ads
   label_display: visible
 visibility:

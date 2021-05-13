@@ -1,4 +1,4 @@
-uuid: fb30d830-8b4a-41fd-af1c-1a4ae24f6fea
+uuid: a64176eb-a52e-48f5-b2b4-a790f816bc58
 langcode: en
 status: true
 dependencies:
@@ -7,15 +7,15 @@ dependencies:
     - cohesion
   theme:
     - arvestbank_theme
-id: adblocksidebar
+id: ads_nav_411
 theme: arvestbank_theme
 region: dx8_hidden
 weight: 0
 provider: null
-plugin: ad_block_sidebar
+plugin: 'ad_block_nav:ads_nav_411'
 settings:
-  id: ad_block_sidebar
-  label: 'Ad Block - Sidebar'
+  id: 'ad_block_nav:ads_nav_411'
+  label: 'Ads Nav Personal'
   provider: arvestbank_ads
   label_display: visible
 visibility:
