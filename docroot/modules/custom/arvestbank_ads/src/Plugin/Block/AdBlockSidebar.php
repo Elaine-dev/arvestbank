@@ -74,11 +74,14 @@ class AdBlockSidebar extends BlockBase {
   }
 
   /**
+   * Returns the node id for the ad to use in this context.
+   *
    * @return int
+   *   nid.
    */
-  private function getAdNid() {
+  private function getAdNid(): int {
 
-    // Initalize return variable.
+    // Initialize return variable.
     $ad_nid = 0;
 
     // Get the current campaign.
@@ -89,8 +92,33 @@ class AdBlockSidebar extends BlockBase {
 
         // Match the current page to a sidebar menu item.
         if ($fieldname = self::getAdFieldFromPath()) {
+
           if (!empty($ad_campaign->get($fieldname)->getValue()[0]['target_id'])) {
+
+            // The Node ID for the Ad.
             $ad_nid = $ad_campaign->get($fieldname)->getValue()[0]['target_id'];
+
+            // Get the current URI / path alias.
+            $current_uri = \Drupal::request()->getRequestUri();
+
+            // Storage for node entity types.
+            $storage = \Drupal::entityTypeManager()->getStorage('node');
+
+            // Get the CTA url for this ad.
+            $ad_cta_url = $storage->load($ad_nid)->get('field_cta')[0]->getValue()['uri'] ?? NULL;
+
+            // Check the current path against the CTA url.
+            // If they match look to pull in the alternate ad.
+            $ad_cta_url_path = str_replace('internal:', '', $ad_cta_url);
+            if ($current_uri == $ad_cta_url_path) {
+              if (!empty($storage->load($ad_nid)->get('field_ad_alternate')[0])) {
+                $ad_alt_nid = $storage->load($ad_nid)->get('field_ad_alternate')[0]->getValue()['target_id'] ?? NULL;
+                if (!empty($ad_alt_nid)) {
+                  $ad_nid = $ad_alt_nid;
+                }
+              }
+            }
+
           }
 
         }
@@ -115,14 +143,14 @@ class AdBlockSidebar extends BlockBase {
     // Use /templates/ad-block.html.twig.
     $build['#theme'] = 'ad_block';
 
-    // Get the list of style options.
-    $ad_styles = \Drupal::service('ad_services')->adStyleOptions();
-
-    // Storage for node entity types.
-    $storage = \Drupal::entityTypeManager()->getStorage('node');
-
     // Get the node id of the ad to use with this block instance.
     if ($nid = self::getAdNid()) {
+
+      // Storage for node entity types.
+      $storage = \Drupal::entityTypeManager()->getStorage('node');
+
+      // Get the CTA url for this ad.
+      $ad_cta_url = $storage->load($nid)->get('field_cta')[0]->getValue()['uri'] ?? NULL;
 
       // If the media loaded successfully, continue with the formatting.
       if ($media_id = $storage->load($nid)->get('field_image')[0]->getValue()['target_id']) {
@@ -145,9 +173,6 @@ class AdBlockSidebar extends BlockBase {
               '#style_name' => 'ad_sidebar',
               '#uri' => $ad_image_url,
             ];
-
-            // Get the CTA url for this ad.
-            $ad_cta_url = $storage->load($nid)->get('field_cta')[0]->getValue()['uri'] ?? NULL;
 
             // If there is a CTA, link this image.
             if (!empty($ad_cta_url)) {
@@ -173,6 +198,7 @@ class AdBlockSidebar extends BlockBase {
     // Set the return ad content.
     $build['#content'] = $ad_content;
 
+    // Build array.
     return $build;
 
   }
@@ -180,7 +206,7 @@ class AdBlockSidebar extends BlockBase {
   /**
    * {@inheritdoc}
    */
-  public function getCacheMaxAge() {
+  public function getCacheMaxAge(): int {
     return 0;
   }
 

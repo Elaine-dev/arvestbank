@@ -14,3 +14,7 @@
 .page-node-type-ad-campaign .ad-title:hover .ad-image {
   display: inline-block;
 }
+.page-node-type-ad-campaign .ad-title:hover {
+  color: #f10203;
+  font-weight: bold;
+}
