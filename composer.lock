@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a85efcfa390ccab2f05beb6f0ae739b3",
+    "content-hash": "255d9dbc40c2b73393c8ab1660987018",
     "packages": [
         {
             "name": "acquia/blt",
@@ -3526,6 +3526,50 @@
                 "source": "https://git.drupalcode.org/project/context_entity_field"
             },
             "time": "2020-05-10T06:16:29+00:00"
+        },
+        {
+            "name": "drupal/cookiepro",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/cookiepro.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/cookiepro-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "de4fae49a8ed2975a55b54e3778968188f3c512f"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1614323213",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "cookiepro",
+                    "homepage": "https://www.drupal.org/user/3608242"
+                }
+            ],
+            "description": "Simplify Compliance with GDPR & ePrivacy Cookie Laws",
+            "homepage": "https://www.drupal.org/project/cookiepro",
+            "support": {
+                "source": "https://git.drupalcode.org/project/cookiepro"
+            }
         },
         {
             "name": "drupal/core",
