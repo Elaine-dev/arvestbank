@@ -3,12 +3,9 @@
 namespace Drupal\arvestbank_ads\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\file\Entity\File;
 use Drupal\media\Entity\Media;
 use Drupal\node\Entity\Node;
-use Drupal\views\Views;
 
 /**
  * Provides an Ad Block for the Nav.
@@ -16,34 +13,40 @@ use Drupal\views\Views;
  * @Block(
  *  id = "ad_block_nav",
  *  admin_label = @Translation("Ad Block - Nav"),
+ *  deriver = "Drupal\arvestbank_ads\Plugin\Derivative\AdBlockNavDeriver"
  * )
  */
 class AdBlockNav extends BlockBase {
 
-  //class AdBlockNav extends BlockBase implements BlockPluginInterface {
-//class AdBlockNav extends BlockBase implements ContainerFactoryPluginInterface {
-  // BlockPluginInterface
-
-
   /**
+   * Returns the fieldname from the ad campaign to use with this nav item.
+   *
    * @return string
+   *   fieldname
    */
   private function getAdFieldFromContext() {
 
-    // Initiaize return variable.
+    // Initialize return variable.
     $return = FALSE;
 
+    // This array maps ad block ID's with fieldnames of the ad campaign.
     $fieldnames = [
-      'field_ad_nav_personal',
-      'field_ad_nav_business',
-      'field_ad_nav_credit_cards',
-      'field_ad_nav_home_loans',
-      'field_ad_nav_investments',
+      'ads_nav_411' => 'field_ad_nav_personal',
+      'ads_nav_586' => 'field_ad_nav_business',
+      'ads_nav_706' => 'field_ad_nav_credit_cards',
+      'ads_nav_726' => 'field_ad_nav_home_loans',
+      'ads_nav_746' => 'field_ad_nav_investments',
     ];
 
-    $return = $fieldnames[0];
+    // Get the block derivative id.
+    $block_id = $this->getDerivativeId();
 
-    // Returns FALSE or the fieldname that matches to this path.
+    // Match that block id to the fieldname.
+    if (array_key_exists($block_id, $fieldnames)) {
+      $return = $fieldnames[$block_id];
+    }
+
+    // Returns FALSE or the fieldname that matches to this nav item.
     return $return;
 
   }

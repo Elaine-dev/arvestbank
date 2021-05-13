@@ -3,6 +3,7 @@
 namespace Drupal\arvestbank_ads\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 use Drupal\media\Entity\Media;
 use Drupal\node\Entity\Node;
@@ -135,17 +136,12 @@ class AdBlockSidebar extends BlockBase {
           // This will be the public:// path to the media item.
           $ad_url = $file->getFileUri();
 
-          // Get the style for this block,
-          // and use the corresponding image and image style.
-          if (array_key_exists($this->getConfiguration()['ad_style'], $ad_styles)) {
-
-            $ad_content = [
-              '#theme' => 'image_style',
-              '#style_name' => 'ad_sidebar',
-              '#uri' => $ad_url,
-            ];
-
-          }
+          // Render array for the image.
+          $ad_content = [
+            '#theme' => 'image_style',
+            '#style_name' => 'ad_sidebar',
+            '#uri' => $ad_url,
+          ];
 
         }
 
