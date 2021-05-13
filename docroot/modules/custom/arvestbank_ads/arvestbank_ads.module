@@ -5,7 +5,6 @@
  * Contains arvestbank_ads.module.
  */
 
-use Drupal\Core\Render\Element;
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
@@ -60,18 +59,10 @@ function arvestbank_ads_form_alter(&$form, \Drupal\Core\Form\FormStateInterface 
   }
 
 }
-//
-//function arvestbank_ads_preprocess_menu(&$variables, $hook) {
-//  if ($variables['menu_name'] == 'main') {
-//    //dump($variables);
-//  }
-//}
-//
 
-//function arvestbank_ads_preprocess_menu__cohesion_menu_tpl_main_navigation(&$variables) {
-//  //dump($variables);die();
-//  die('heynow');
-//}
+/**
+ * Implements hook_node_view_alter().
+ */
 
 function arvestbank_ads_node_view_alter(array &$build, Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display) {
 

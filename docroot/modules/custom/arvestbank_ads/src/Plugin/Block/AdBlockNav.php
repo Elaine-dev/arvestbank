@@ -52,9 +52,12 @@ class AdBlockNav extends BlockBase {
   }
 
   /**
+   * Returns the Node ID of the Ad to use.
+   *
    * @return int
+   *   nid.
    */
-  private function getAdNid() {
+  private function getAdNid(): int {
 
     // Initialize return variable.
     $ad_nid = 0;
@@ -65,7 +68,7 @@ class AdBlockNav extends BlockBase {
       // If there is a valid campaign proceed.
       if ($ad_campaign = Node::load($ad_campaign_nid)) {
 
-        // Match the current page to a sidebar menu item.
+        // Match the calling nav item to the correct fieldname.
         if ($fieldname = self::getAdFieldFromContext()) {
           if (!empty($ad_campaign->get($fieldname)->getValue()[0]['target_id'])) {
             $ad_nid = $ad_campaign->get($fieldname)->getValue()[0]['target_id'];
@@ -84,7 +87,7 @@ class AdBlockNav extends BlockBase {
   /**
    * {@inheritdoc}
    */
-  public function build() {
+  public function build(): array {
 
     // Initialize the main build return var, and placeholder for content.
     $build = [];
@@ -135,7 +138,7 @@ class AdBlockNav extends BlockBase {
   /**
    * {@inheritdoc}
    */
-  public function getCacheMaxAge() {
+  public function getCacheMaxAge(): int {
     return 0;
   }
 
