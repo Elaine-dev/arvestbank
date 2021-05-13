@@ -21,8 +21,8 @@ settings:
   ajax_progress_type: ''
   ajax_effect: ''
   ajax_speed: null
-  page: true
-  page_submit_path: /personal/bank/checking/overdraft-coverage-options/OD-form
+  page: false
+  page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
   form_title: both
@@ -114,7 +114,7 @@ settings:
   draft_pending_multiple_message: ''
   confirmation_type: inline
   confirmation_title: ''
-  confirmation_message: "success_remove: Your request to remove all overdraft protection from your account has been accepted and will be effective immediately.</b></p> <p>You have the right to change your overdraft coverage plan at any time.  If you determine in the future that you want to make a change to the overdraft coverage plan you have selected, you may do so by calling us at 866-953-9523, revisiting this form, or by visiting one of our <a href=\"[:: link /branch-locator ::]\">branch locations</a>.\r\n\r\nsuccess_basic: Your request for Basic Overdraft coverage has been accepted and will be effective immediately. You have the right to change your overdraft coverage plan at any time.  If you determine in the future that you want to make a change to the overdraft coverage plan you have selected, you may do so by calling us at 866-953-9523, revisiting this form, or by visiting one of our <a href=\"[:: link /branch-locator ::]\">branch locations\r\n\r\nsuccess_extended: Your request for Extended Overdraft Coverage has been accepted.  The coverage will become effective in three business days. You have the right to change your overdraft coverage plan at any time.  If you determine in the future that you want to make a change to the overdraft coverage plan you have selected, you may do so by calling us at 866-953-9523, revisiting this form, or by visiting one of our <a href=\"[:: link /branch-locator ::]\">branch locations.\r\n\r\nextended_exists: You currently have Extended Overdraft Coverage (or have recently requested it).  No changes have been made to your account at this time.</b></p> <p>You have the right to change your overdraft coverage plan at any time.  If you determine in the future that you want to make a change to the overdraft coverage plan you have selected, you may do so by calling us at 866-953-9523, revisiting this form, or by visiting one of our <a href=\"[:: link /branch-locator ::]\">branch locations"
+  confirmation_message: 'Thank you! The form has been submitted successfully.'
   confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
@@ -191,5 +191,59 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  custom_confirmation:
+    id: settings
+    label: 'Confirmation - Removal'
+    notes: ''
+    handler_id: custom_confirmation
+    status: true
+    conditions:
+      enabled:
+        ':input[name="overdraft_coverage_election"]':
+          value: Remove
+    weight: 0
+    settings:
+      confirmation_message: 'Your request to remove all overdraft protection from your account has been accepted and will be effective immediately. You have the right to change your overdraft coverage plan at any time. If you determine in the future that you want to make a change to the overdraft coverage plan you have selected, you may do so by calling us at 866-953-9523, revisiting this form, or by visiting one of our <a href="https://locations.arvest.com/" target="_blank">branch locations</a>.'
+      debug: ''
+      preview_title: ''
+      preview_message: ''
+      confirmation_url: ''
+      confirmation_title: ''
+  confirmation_basic:
+    id: settings
+    label: 'Confirmation - Basic'
+    notes: ''
+    handler_id: confirmation_basic
+    status: true
+    conditions:
+      enabled:
+        ':input[name="overdraft_coverage_election"]':
+          value: Remove
+    weight: 1
+    settings:
+      confirmation_message: 'Your request for Basic Overdraft coverage has been accepted and will be effective immediately. You have the right to change your overdraft coverage plan at any time.  If you determine in the future that you want to make a change to the overdraft coverage plan you have selected, you may do so by calling us at 866-953-9523, revisiting this form, or by visiting one of our <a href="https://locations.arvest.com/" target="_blank">branch locations</a>.'
+      debug: ''
+      preview_title: ''
+      preview_message: ''
+      confirmation_url: ''
+      confirmation_title: ''
+  confirmation_extended:
+    id: settings
+    label: 'Confirmation - Extended'
+    notes: ''
+    handler_id: confirmation_extended
+    status: true
+    conditions:
+      enabled:
+        ':input[name="overdraft_coverage_election"]':
+          value: Remove
+    weight: 2
+    settings:
+      confirmation_message: 'Your request for Extended Overdraft Coverage has been accepted.  The coverage will become effective in three business days. You have the right to change your overdraft coverage plan at any time.  If you determine in the future that you want to make a change to the overdraft coverage plan you have selected, you may do so by calling us at 866-953-9523, revisiting this form, or by visiting one of our <a href="https://locations.arvest.com/" target="_blank">branch locations</a>.'
+      debug: ''
+      preview_title: ''
+      preview_message: ''
+      confirmation_url: ''
+      confirmation_title: ''
 variants: {  }
