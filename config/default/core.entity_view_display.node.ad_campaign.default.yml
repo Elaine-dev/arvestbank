@@ -31,6 +31,7 @@ dependencies:
     - field.field.node.ad_campaign.field_ad_side_p_other
     - node.type.ad_campaign
   module:
+    - arvestbank_ads
     - datetime_range
     - field_group
     - user
@@ -44,7 +45,7 @@ third_party_settings:
         - group_home_loans
         - group_investments_trusts
       parent_name: ''
-      weight: 8
+      weight: 3
       format_type: html_element
       region: content
       format_settings:
@@ -65,7 +66,7 @@ third_party_settings:
         - field_ad_side_p_invest
         - field_ad_side_p_other
       parent_name: group_side_navigation
-      weight: 20
+      weight: 4
       format_type: fieldset
       region: content
       format_settings:
@@ -80,7 +81,7 @@ third_party_settings:
         - field_ad_side_it_insurance
         - field_ad_side_it_trust_estate
       parent_name: group_side_navigation
-      weight: 24
+      weight: 8
       format_type: fieldset
       region: content
       format_settings:
@@ -95,7 +96,7 @@ third_party_settings:
         - field_ad_side_hl_learn_more
         - field_ad_side_hl_existing_loan
       parent_name: group_side_navigation
-      weight: 23
+      weight: 7
       format_type: fieldset
       region: content
       format_settings:
@@ -110,7 +111,7 @@ third_party_settings:
         - field_ad_side_cc_manage
         - field_ad_side_cc_protect
       parent_name: group_side_navigation
-      weight: 22
+      weight: 6
       format_type: fieldset
       region: content
       format_settings:
@@ -125,7 +126,7 @@ third_party_settings:
         - field_ad_side_b_manage
         - field_ad_side_b_protect
       parent_name: group_side_navigation
-      weight: 21
+      weight: 5
       format_type: fieldset
       region: content
       format_settings:
@@ -171,204 +172,204 @@ content:
     type: daterange_default
     region: content
   field_ad_nav_business:
+    weight: 23
+    label: above
+    settings:
+      ad_style: navigation
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_nav_credit_cards:
+    weight: 24
+    label: above
+    settings:
+      ad_style: navigation
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_nav_home_loans:
     weight: 25
     label: above
     settings:
-      link: true
+      ad_style: navigation
     third_party_settings: {  }
-    type: entity_reference_label
+    type: ad_formatter
     region: content
-  field_ad_nav_credit_cards:
+  field_ad_nav_investments:
     weight: 26
     label: above
     settings:
-      link: true
+      ad_style: navigation
     third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_ad_nav_home_loans:
-    weight: 27
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_ad_nav_investments:
-    weight: 28
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
+    type: ad_formatter
     region: content
   field_ad_nav_personal:
-    weight: 29
+    weight: 22
     label: above
     settings:
-      link: true
+      ad_style: navigation
     third_party_settings: {  }
-    type: entity_reference_label
+    type: ad_formatter
     region: content
   field_ad_side_b_bank:
-    weight: 30
+    weight: 51
     label: above
     settings:
-      link: true
+      ad_style: sidebar
     third_party_settings: {  }
-    type: entity_reference_label
+    type: ad_formatter
     region: content
   field_ad_side_b_borrow:
-    weight: 31
+    weight: 52
     label: above
     settings:
-      link: true
+      ad_style: sidebar
     third_party_settings: {  }
-    type: entity_reference_label
+    type: ad_formatter
     region: content
   field_ad_side_b_manage:
-    weight: 32
+    weight: 53
     label: above
     settings:
-      link: true
+      ad_style: sidebar
     third_party_settings: {  }
-    type: entity_reference_label
+    type: ad_formatter
     region: content
   field_ad_side_b_protect:
-    weight: 33
+    weight: 54
     label: above
     settings:
-      link: true
+      ad_style: sidebar
     third_party_settings: {  }
-    type: entity_reference_label
+    type: ad_formatter
     region: content
   field_ad_side_cc_business:
-    weight: 34
+    weight: 62
     label: above
     settings:
-      link: true
+      ad_style: sidebar
     third_party_settings: {  }
-    type: entity_reference_label
+    type: ad_formatter
     region: content
   field_ad_side_cc_manage:
-    weight: 35
+    weight: 63
     label: above
     settings:
-      link: true
+      ad_style: sidebar
     third_party_settings: {  }
-    type: entity_reference_label
+    type: ad_formatter
     region: content
   field_ad_side_cc_personal:
-    weight: 36
+    weight: 61
     label: above
     settings:
-      link: true
+      ad_style: sidebar
     third_party_settings: {  }
-    type: entity_reference_label
+    type: ad_formatter
     region: content
   field_ad_side_cc_protect:
-    weight: 37
+    weight: 64
     label: above
     settings:
-      link: true
+      ad_style: sidebar
     third_party_settings: {  }
-    type: entity_reference_label
+    type: ad_formatter
     region: content
   field_ad_side_hl_existing_loan:
-    weight: 38
+    weight: 74
     label: above
     settings:
-      link: true
+      ad_style: sidebar
     third_party_settings: {  }
-    type: entity_reference_label
+    type: ad_formatter
     region: content
   field_ad_side_hl_get_started:
-    weight: 39
+    weight: 71
     label: above
     settings:
-      link: true
+      ad_style: sidebar
     third_party_settings: {  }
-    type: entity_reference_label
+    type: ad_formatter
     region: content
   field_ad_side_hl_learn_more:
-    weight: 40
+    weight: 73
     label: above
     settings:
-      link: true
+      ad_style: sidebar
     third_party_settings: {  }
-    type: entity_reference_label
+    type: ad_formatter
     region: content
   field_ad_side_hl_lending_options:
-    weight: 41
+    weight: 72
     label: above
     settings:
-      link: true
+      ad_style: sidebar
     third_party_settings: {  }
-    type: entity_reference_label
+    type: ad_formatter
     region: content
   field_ad_side_it_insurance:
-    weight: 42
+    weight: 83
     label: above
     settings:
-      link: true
+      ad_style: sidebar
     third_party_settings: {  }
-    type: entity_reference_label
+    type: ad_formatter
     region: content
   field_ad_side_it_investing:
-    weight: 43
+    weight: 82
     label: above
     settings:
-      link: true
+      ad_style: sidebar
     third_party_settings: {  }
-    type: entity_reference_label
+    type: ad_formatter
     region: content
   field_ad_side_it_planning:
+    weight: 81
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_side_it_trust_estate:
+    weight: 84
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_side_p_bank:
     weight: 44
     label: above
     settings:
-      link: true
+      ad_style: sidebar
     third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_ad_side_it_trust_estate:
-    weight: 45
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_ad_side_p_bank:
-    weight: 46
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
+    type: ad_formatter
     region: content
   field_ad_side_p_borrow:
     weight: 47
     label: above
     settings:
-      link: true
+      ad_style: sidebar
     third_party_settings: {  }
-    type: entity_reference_label
+    type: ad_formatter
     region: content
   field_ad_side_p_invest:
     weight: 48
     label: above
     settings:
-      link: true
+      ad_style: sidebar
     third_party_settings: {  }
-    type: entity_reference_label
+    type: ad_formatter
     region: content
   field_ad_side_p_other:
     weight: 49
     label: above
     settings:
-      link: true
+      ad_style: sidebar
     third_party_settings: {  }
-    type: entity_reference_label
+    type: ad_formatter
     region: content
   links:
     weight: 1
