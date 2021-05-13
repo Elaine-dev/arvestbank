@@ -79,6 +79,7 @@ class AdFormatter extends FormatterBase {
 
         if ($ad = Node::load($ad_nid)) {
 
+          // Get the correct field base off of the image style for this element.
           switch ($this->getSetting('ad_style')) {
 
             case 'sidebar':
@@ -107,10 +108,18 @@ class AdFormatter extends FormatterBase {
 
                   $file = File::load($fid);
 
+                  // Create render array for this element.
+                  // Show the title, then hover to show the image.
+                  // Supporting CSS added through libraries.
                   $elements[] = [
+                    '#prefix' => '<p class="ad-title">' . $ad->getTitle(),
+                    '#suffix' => '</p>',
                     '#theme' => 'image_style',
                     '#style_name' => $image_style,
                     '#uri' => $file->uri->value,
+                    '#attributes' => [
+                      'class' => 'ad-image',
+                    ],
                   ];
 
                 }
@@ -125,6 +134,15 @@ class AdFormatter extends FormatterBase {
 
       }
 
+    }
+
+    // Attach libraries mostly for image hide / show on hover.
+    if (!empty($elements)) {
+      $elements['#attached'] = [
+        'library' => [
+          'arvestbank_ads/ad_campaign_admin_css',
+        ],
+      ];
     }
 
     return $elements;

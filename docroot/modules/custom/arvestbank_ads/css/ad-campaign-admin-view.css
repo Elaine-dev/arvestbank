@@ -1,0 +1,16 @@
+.field--type-entity-reference {
+  font-weight: bold;
+}
+.page-node-type-ad-campaign .ad-title {
+  position: relative;
+  cursor: pointer;
+}
+.page-node-type-ad-campaign .ad-image {
+  display: none;
+  position: absolute;
+  left: 30%;
+  top: -50px;
+}
+.page-node-type-ad-campaign .ad-title:hover .ad-image {
+  display: inline-block;
+}
