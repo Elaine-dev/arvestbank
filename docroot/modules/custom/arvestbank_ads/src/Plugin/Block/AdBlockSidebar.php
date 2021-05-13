@@ -3,6 +3,7 @@
 namespace Drupal\arvestbank_ads\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Url;
 use Drupal\file\Entity\File;
 use Drupal\media\Entity\Media;
 use Drupal\node\Entity\Node;
@@ -133,14 +134,35 @@ class AdBlockSidebar extends BlockBase {
         if ($file = File::load($fid)) {
 
           // This will be the public:// path to the media item.
-          $ad_url = $file->getFileUri();
+          $ad_image_url = $file->getFileUri();
 
-          // Render array for the image.
-          $ad_content = [
-            '#theme' => 'image_style',
-            '#style_name' => 'ad_sidebar',
-            '#uri' => $ad_url,
-          ];
+          // Continue if there is a url for this ad image.
+          if (!empty($ad_image_url)) {
+
+            // Render array for the image.
+            $ad_image = [
+              '#theme' => 'image_style',
+              '#style_name' => 'ad_sidebar',
+              '#uri' => $ad_image_url,
+            ];
+
+            // Get the CTA url for this ad.
+            $ad_cta_url = $storage->load($nid)->get('field_cta')[0]->getValue()['uri'] ?? NULL;
+
+            // If there is a CTA, link this image.
+            if (!empty($ad_cta_url)) {
+              $ad_content = [
+                '#type' => 'link',
+                '#url' => Url::fromUri($ad_cta_url),
+                '#title' => $ad_image,
+              ];
+            }
+            // Else just return the image.
+            else {
+              $ad_content = $ad_image;
+            }
+
+          }
 
         }
 

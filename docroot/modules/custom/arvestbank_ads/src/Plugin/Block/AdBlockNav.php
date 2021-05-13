@@ -141,32 +141,6 @@ class AdBlockNav extends BlockBase {
               $ad_content = $ad_image;
             }
 
-
-//            $ad_content = [
-//              '#type' => 'link',
-//              '#title' => 'heynow',
-//              '#url' => $ad_url,
-//            ];
-//
-
-            //            $ad_content = [
-//              '#theme' => 'image_style',
-//              '#style_name' => 'ad_navigation',
-//              '#uri' => $ad_url,
-//              '#path' => '/personal/bank/savings',
-//            ];
-//
-//            $ad_content = [
-//              '#theme' => 'image_formatter',
-//              '#image_style' => 'ad_navigation',
-//              '#item' => [
-//                'uri' => $ad_url,
-//              ],
-//              '#path' => [
-//                'path' => '/personal/bank/savings',
-//              ],
-//            ];
-
           }
 
         }
