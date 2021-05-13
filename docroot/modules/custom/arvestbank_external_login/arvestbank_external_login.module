@@ -38,6 +38,14 @@ function arvestbank_external_login_form_webform_submission_external_login_menu_f
  */
 function _arvestbank_external_login_login_form_alter(array &$form) {
 
+  // Decide to show prod or non-prod login select.
+  if (isset($_ENV['AH_SITE_ENVIRONMENT']) && $_ENV['AH_SITE_ENVIRONMENT'] == 'prod') {
+    $form['elements']['login_select_non_prod']['#access'] = FALSE;
+  }
+  else {
+    $form['elements']['login_select']['#access'] = FALSE;
+  }
+
   // Define the form field names we have to change.
   $fieldNameReplacements = [
     'cash_manager' => [
@@ -91,7 +99,10 @@ function arvestbank_external_login_form_webform_ui_element_form_alter(&$form, Fo
 
   if (
     $route_name == 'entity.webform_ui.element.edit_form'
-    && $field_name == 'login_select'
+    && (
+      $field_name == 'login_select'
+      || $field_name == 'login_select_non_prod'
+    )
     && (
       $webform_id == 'external_login'
       || $webform_id == 'external_login_menu'
@@ -99,15 +110,27 @@ function arvestbank_external_login_form_webform_ui_element_form_alter(&$form, Fo
   ) {
 
     // If this is the homepage external login form.
-    if ($webform_id == 'external_login') {
+    if ($webform_id == 'external_login' && $field_name == 'login_select') {
       // Change to more friendly title.
-      $form['#title'] = new TranslatableMarkup('Edit Homepage External Login Options');
+      $form['#title'] = new TranslatableMarkup('Edit Homepage External Login Options For Prod');
     }
 
     // If this is the menu external login form.
-    if ($webform_id == 'external_login_menu') {
+    if ($webform_id == 'external_login_menu' && $field_name == 'login_select') {
       // Change to more friendly title.
-      $form['#title'] = new TranslatableMarkup('Edit Menu External Login Options');
+      $form['#title'] = new TranslatableMarkup('Edit Menu External Login Options For Prod');
+    }
+
+    // If this is the homepage external login form.
+    if ($webform_id == 'external_login' && $field_name == 'login_select_non_prod') {
+      // Change to more friendly title.
+      $form['#title'] = new TranslatableMarkup('Edit Homepage External Login Options For Non-Prod');
+    }
+
+    // If this is the menu external login form.
+    if ($webform_id == 'external_login_menu' && $field_name == 'login_select_non_prod') {
+      // Change to more friendly title.
+      $form['#title'] = new TranslatableMarkup('Edit Menu External Login Options For Non-Prod');
     }
 
     // Add help text.
