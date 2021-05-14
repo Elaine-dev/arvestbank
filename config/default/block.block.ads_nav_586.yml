@@ -1,0 +1,25 @@
+uuid: ef343265-cfce-4503-abfb-5c7ed2be5e94
+langcode: en
+status: true
+dependencies:
+  module:
+    - arvestbank_ads
+    - cohesion
+  theme:
+    - arvestbank_theme
+id: ads_nav_586
+theme: arvestbank_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: 'ad_block_nav:ads_nav_586'
+settings:
+  id: 'ad_block_nav:ads_nav_586'
+  label: 'Ads Nav Business'
+  provider: arvestbank_ads
+  label_display: visible
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

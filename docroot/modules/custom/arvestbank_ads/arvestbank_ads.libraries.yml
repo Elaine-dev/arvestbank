@@ -1,0 +1,4 @@
+ad_campaign_admin_css:
+  css:
+    theme:
+      css/ad-campaign-admin-view.css: {}
