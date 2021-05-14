@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.ad.body
-    - field.field.node.ad.field_ad_alternate
     - field.field.node.ad.field_ad_content_image
     - field.field.node.ad.field_ad_nav_image
     - field.field.node.ad.field_cta
@@ -30,14 +29,6 @@ content:
     weight: -20
     settings: {  }
     third_party_settings: {  }
-    region: content
-  field_ad_alternate:
-    weight: 107
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
     region: content
   field_ad_content_image:
     type: entity_reference_entity_view
