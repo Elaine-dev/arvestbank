@@ -7,6 +7,7 @@ dependencies:
     - field.field.media.video.field_education_article_category
     - field.field.media.video.field_media_oembed_video
     - field.field.media.video.field_video_subtitle
+    - field.field.media.video.field_video_thumbnail
     - field.field.media.video.field_video_time_length
     - media.type.video
   module:
@@ -19,14 +20,24 @@ mode: teaser
 content:
   field_video_subtitle:
     type: text_default
-    weight: 3
+    weight: 4
     region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
+  field_video_thumbnail:
+    type: micromodal_field_formatter
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      thumbnail_image_style: medium
+      string_classes: ''
+      thumbnail_override_fieldname: ''
+    third_party_settings: {  }
   field_video_time_length:
     type: string
-    weight: 2
+    weight: 3
     region: content
     label: hidden
     settings:
@@ -34,7 +45,7 @@ content:
     third_party_settings: {  }
   name:
     type: string
-    weight: 1
+    weight: 2
     region: content
     label: hidden
     settings:
@@ -42,11 +53,12 @@ content:
     third_party_settings: {  }
   thumbnail:
     type: micromodal_field_formatter
-    weight: 0
+    weight: 1
     region: content
     label: hidden
     settings:
       thumbnail_image_style: medium
+      thumbnail_override_fieldname: field_video_thumbnail
       string_classes: ''
     third_party_settings: {  }
 hidden:
