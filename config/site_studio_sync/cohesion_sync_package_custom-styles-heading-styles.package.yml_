@@ -1,4 +1,3 @@
-
 -
   type: cohesion_sync_package
   export:
@@ -8,9 +7,9 @@
     dependencies: {  }
     id: pack_custom_styles_heading_style
     label: 'Custom Styles Heading Styles'
-    description: "A Site studio package for all heading related custom styles.\r\nAuthor: Aaron Parkening / Last update: 5/3/2021"
+    description: "A Site studio package for all heading related custom styles.\r\nUpdated: Aaron Parkening on 5/14/2021"
     excluded_entity_types: '[]'
-    settings: '{"216741e3-d9f0-4299-b6a6-ee5e46997d63":{"type":"cohesion_custom_style","items":{"216741e3-d9f0-4299-b6a6-ee5e46997d63":{"type":"cohesion_custom_style"}},"checked":true},"7ff98709-cb47-4dee-a86e-a100c040822c":{"type":"cohesion_custom_style","items":{"7ff98709-cb47-4dee-a86e-a100c040822c":{"type":"cohesion_custom_style"}},"checked":true}}'
+    settings: '{"216741e3-d9f0-4299-b6a6-ee5e46997d63":{"type":"cohesion_custom_style","items":{"216741e3-d9f0-4299-b6a6-ee5e46997d63":{"type":"cohesion_custom_style"}},"checked":true},"7ff98709-cb47-4dee-a86e-a100c040822c":{"type":"cohesion_custom_style","items":{"7ff98709-cb47-4dee-a86e-a100c040822c":{"type":"cohesion_custom_style"}},"checked":true},"3dd39cc2-14b0-4f73-adce-c4ceb5261ca3":{"type":"cohesion_custom_style","items":{"3dd39cc2-14b0-4f73-adce-c4ceb5261ca3":{"type":"cohesion_custom_style"}},"checked":true}}'
 -
   type: cohesion_custom_style
   export:
@@ -47,6 +46,26 @@
     modified: true
     selectable: true
     class_name: .coh-style-heading-2-size
+    custom_style_type: heading
+    available_in_wysiwyg: false
+    parent: null
+    weight: 0
+-
+  type: cohesion_custom_style
+  export:
+    uuid: 3dd39cc2-14b0-4f73-adce-c4ceb5261ca3
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: c1e62aeb
+    label: 'Icon heading'
+    json_values: '{"preview":{"text":"<h3 class=\"coh-preview\">Default content for ''Heading''.<\/h3>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"h1","class":"","combinator":"","pseudo":""},"styles":{"xl":{"font-family":{"value":"$coh-font-verdana"},"font-weight":{"value":"900"},"color":{"value":{"name":"#333333","uid":"gray-1","value":{"hex":"#333333","rgba":"rgba(51, 51, 51, 1)"},"wysiwyg":true,"class":".coh-color-gray-1","variable":"$coh-color-gray-1","inuse":true,"link":false}},"background-color":{"value":{"value":{"hex":"transparent","rgba":"rgba(0, 0, 0, 0)"},"name":"Transparent","wysiwyg":true,"uid":"dx8-transparent","class":".dx8-transparent","variable":"$coh-dx8-transparent","inuse":true}},"padding":{"padding-left":{"value":"28"}},"font-size":{"value":"14"},"line-height":{"value":"1.75"},"margin":{"margin-equal":{"value":"0"}},"background-image-settings":[{"backgroundLayerType":{"value":"image"},"backgroundImage":{"imageStyle":"","value":"[media-reference:media:21091131-2506-41e9-9c68-2c24076f2867]"},"backgroundImageSize":{"value":"auto"},"backgroundImageRepeat":{"value":"no-repeat"},"backgroundImageAttachment":{"value":"scroll"},"backgroundImagePositionX":{"value":"left"},"backgroundImagePositionY":{"value":"center"},"backgroundImageOrigin":{"value":"border-box"},"backgroundImageClip":{"value":"border-box"}}]}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+    json_mapper: '{"styles":{"title":"Heading","selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]},{"formKey":"font-sizing-and-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-size","active":true},{"name":"line-height","active":true},{"name":"text-align","active":false},{"name":"letter-spacing","active":false},{"name":"word-spacing","active":false},{"name":"text-indent","active":false}]}]},{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":true},{"name":"margin-top","active":false},{"name":"margin-bottom","active":false},{"name":"margin-left","active":false},{"name":"margin-right","active":false},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]},{"formKey":"padding","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"padding-equal","active":false},{"name":"padding-top","active":false},{"name":"padding-bottom","active":false},{"name":"padding-left","active":true},{"name":"padding-right","active":false},{"name":"padding-block-start","active":false},{"name":"padding-block-end","active":false},{"name":"padding-inline-start","active":false},{"name":"padding-inline-end","active":false}]}]},{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]},{"formKey":"background-image-and-gradient","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-image-settings","active":true},{"name":"backgroundLayerType","active":true},{"name":"backgroundImage","active":true},{"name":"backgroundImageGradient","active":true},{"name":"imageStyle","active":true},{"name":"backgroundImageSize","active":true},{"name":"backgroundImageWidth","active":true},{"name":"backgroundImageHeight","active":true},{"name":"backgroundImageRepeat","active":true},{"name":"backgroundImageAttachment","active":true},{"name":"backgroundImagePositionX","active":true},{"name":"backgroundImagePositionXOffset","active":true},{"name":"backgroundImagePositionY","active":true},{"name":"backgroundImagePositionYOffset","active":true},{"name":"backgroundImageOrigin","active":false},{"name":"backgroundImageClip","active":false}]}]}],"items":[],"form":null}}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    class_name: .coh-style-icon-heading
     custom_style_type: heading
     available_in_wysiwyg: false
     parent: null
