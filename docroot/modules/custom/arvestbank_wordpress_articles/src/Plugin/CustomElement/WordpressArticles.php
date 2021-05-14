@@ -76,6 +76,7 @@ class WordpressArticles extends CustomElementPluginBase {
 
         // The key for the url field, could be obtained from component config.
         $urlFieldKey = 'afca44d5-3d32-44d3-aaef-d8e7574c26fd';
+        $componentInstanceUrl = '';
         if (isset($componentInstanceFieldValues->$urlFieldKey)) {
           // Get the selected Url.
           $componentInstanceUrl = $componentInstanceFieldValues->$urlFieldKey;
@@ -101,12 +102,24 @@ class WordpressArticles extends CustomElementPluginBase {
           $componentInstanceTitle = 'Latest News';
         }
 
-        // If we have an endpoint to fetch.
-        if ($componentInstanceUrl) {
+        // Summary field key, could be obtained from component config.
+        $showSummaryFieldKey = '200f3acd-93c8-43da-814e-9a27fc8391dd';
+        if (
+          isset($componentInstanceFieldValues->$showSummaryFieldKey)
+          && $componentInstanceFieldValues->$showSummaryFieldKey
+        ) {
+          $showSummary = TRUE;
+        }
+        else {
+          $showSummary = FALSE;
+        }
+
+        // If we have an endpoint to fetch or are showing a summary.
+        if ($componentInstanceUrl || $showSummary) {
           // Get wordpress articles service.
           $wordpressArticlesService = \Drupal::service('arvestbank_wordpress_articles.wordpress_articles_service');
           // Get render array to return.
-          $renderArray = $wordpressArticlesService->getRenderArray($componentInstanceTitle, $componentInstanceUrl, $componentInstanceLimit);
+          $renderArray = $wordpressArticlesService->getRenderArray($componentInstanceTitle, $componentInstanceUrl, $componentInstanceLimit, $showSummary);
         }
 
       }
