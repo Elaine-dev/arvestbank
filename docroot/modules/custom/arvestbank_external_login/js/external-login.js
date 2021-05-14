@@ -6,7 +6,10 @@
 Drupal.behaviors.externalLogin = {
   attach: function (context, settings) {
 
-
+    // Use "chosen" to make selects styleable sudo-selects.
+    jQuery('#edit-login-select-non-prod,#edit-login-select-non-prod--2,#edit-login-select,#edit-login-select--2').chosen({
+      "disable_search": true
+    });
 
     // Populate cashman browser data.
     jQuery('input[name=pm_fp]').each(function () {
@@ -53,7 +56,7 @@ Drupal.behaviors.externalLogin = {
 
     // Login select change function.
     // For prod login select.
-    jQuery('#edit-login-select').change(function () {
+    jQuery('#edit-login-select').add('#edit-login-select--2').change(function () {
 
       // If "Cash Manager" is selected.
       if (jQuery(this).val() == 'cash_manager') {
