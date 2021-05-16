@@ -94,7 +94,7 @@ content:
     weight: 16
     label: hidden
     settings:
-      view_mode: full
+      view_mode: default
       link: false
     third_party_settings: {  }
     region: content
@@ -109,9 +109,9 @@ content:
   field_icon_one:
     type: entity_reference_entity_view
     weight: 109
-    label: above
+    label: hidden
     settings:
-      view_mode: full_width_slideshow
+      view_mode: default
       link: false
     third_party_settings: {  }
     region: content
@@ -399,7 +399,7 @@ content:
   field_wordpress_articles:
     type: entity_reference_revisions_entity_view
     weight: 5
-    label: hidden
+    label: above
     settings:
       view_mode: default
       link: ''

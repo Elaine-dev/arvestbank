@@ -60,24 +60,6 @@
   right: -25%;
 }
 
-.slide-cta.color-light {
-  color: #fff;
-}
-
-.slide-cta.color-dark {
-  color: #000;
-}
-
-.slide-cta .text1 {
-  font-size: 17px;
-  line-height: 20px;
-}
-
-.slide-cta .text2 {
-  font-size: 14px;
-  line-height: 16px;
-}
-
 .slide-cta .cta-link a {
   width: 80px;
   background-color: #e60000;
