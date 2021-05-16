@@ -12,7 +12,7 @@ id: node.stage_page.field_wordpress_articles
 field_name: field_wordpress_articles
 entity_type: node
 bundle: stage_page
-label: 'Wordpress Articles'
+label: 'Latest News & Videos'
 description: 'Optionally output articles from feeds on the share.arvest.com site.'
 required: false
 translatable: false
