@@ -52,38 +52,42 @@ class AdBlockMain extends BlockBase {
       $ad_cta_url = $storage->load($nid)->get('field_cta')[0]->getValue()['uri'] ?? NULL;
 
       // If the media loaded successfully, continue with the formatting.
-      if ($media_id = $storage->load($nid)->get('field_image')[0]->getValue()['target_id']) {
+      if ($ad_node_field = $storage->load($nid)->get('field_ad_content_image')[0]) {
 
-        // Get the file id for this media item.
-        $fid = Media::load($media_id)->field_acquiadam_asset_image[0]->getValue()['target_id'];
+        if ($media_id = $ad_node_field->getValue()['target_id']) {
 
-        // Load the file from this fid.
-        if ($file = File::load($fid)) {
+          // Get the file id for this media item.
+          $fid = Media::load($media_id)->field_acquiadam_asset_image[0]->getValue()['target_id'];
 
-          // This will be the public:// path to the media item.
-          $ad_image_url = $file->getFileUri();
+          // Load the file from this fid.
+          if ($file = File::load($fid)) {
 
-          // Continue if there is a url for this ad image.
-          if (!empty($ad_image_url)) {
+            // This will be the public:// path to the media item.
+            $ad_image_url = $file->getFileUri();
 
-            // Render array for the image.
-            $ad_image = [
-              '#theme' => 'image_style',
-              '#style_name' => 'ad_main',
-              '#uri' => $ad_image_url,
-            ];
+            // Continue if there is a url for this ad image.
+            if (!empty($ad_image_url)) {
 
-            // If there is a CTA, link this image.
-            if (!empty($ad_cta_url)) {
-              $ad_content = [
-                '#type' => 'link',
-                '#url' => Url::fromUri($ad_cta_url),
-                '#title' => $ad_image,
+              // Render array for the image.
+              $ad_image = [
+                '#theme' => 'image_style',
+                '#style_name' => 'ad_main',
+                '#uri' => $ad_image_url,
               ];
-            }
-            // Else just return the image.
-            else {
-              $ad_content = $ad_image;
+
+              // If there is a CTA, link this image.
+              if (!empty($ad_cta_url)) {
+                $ad_content = [
+                  '#type' => 'link',
+                  '#url' => Url::fromUri($ad_cta_url),
+                  '#title' => $ad_image,
+                ];
+              }
+              // Else just return the image.
+              else {
+                $ad_content = $ad_image;
+              }
+
             }
 
           }
