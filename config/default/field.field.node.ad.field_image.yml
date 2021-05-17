@@ -10,7 +10,7 @@ id: node.ad.field_image
 field_name: field_image
 entity_type: node
 bundle: ad
-label: Image
+label: 'Image (Sidebar)'
 description: ''
 required: false
 translatable: false

@@ -6,7 +6,6 @@ dependencies:
     - field.storage.node.body
     - field.storage.node.field_field_callout_phone_number
     - field.storage.node.field_callout_title
-    - field.storage.node.field_cta_text
     - field.storage.media.field_acquiadam_asset_doc
     - search_api.server.database_search_server
   module:
@@ -47,14 +46,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_callout_title
-  field_cta_text:
-    label: 'CTA text'
-    datasource_id: 'entity:node'
-    property_path: field_cta_text
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.field_cta_text
   media_type:
     label: 'Media type'
     datasource_id: 'entity:media'
@@ -159,7 +150,6 @@ processor_settings:
       - body
       - body_1
       - field_callout_title
-      - field_cta_text
       - saa_field_acquiadam_asset_doc
     title: true
     alt: true
@@ -178,7 +168,6 @@ processor_settings:
       - body
       - body_1
       - field_callout_title
-      - field_cta_text
       - name
       - saa_field_acquiadam_asset_doc
       - title
@@ -193,7 +182,6 @@ processor_settings:
       - body
       - body_1
       - field_callout_title
-      - field_cta_text
       - name
       - saa_field_acquiadam_asset_doc
       - title
@@ -209,7 +197,6 @@ processor_settings:
       - body
       - body_1
       - field_callout_title
-      - field_cta_text
       - name
       - saa_field_acquiadam_asset_doc
       - title
@@ -226,7 +213,6 @@ processor_settings:
       - body
       - body_1
       - field_callout_title
-      - field_cta_text
       - media_type
       - name
       - saa_field_acquiadam_asset_doc

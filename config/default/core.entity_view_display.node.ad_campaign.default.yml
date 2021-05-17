@@ -1,0 +1,380 @@
+uuid: 04c61c28-fd3d-4038-9ea3-14909ed3f20b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ad_campaign.field_ad_active_dates
+    - field.field.node.ad_campaign.field_ad_nav_business
+    - field.field.node.ad_campaign.field_ad_nav_credit_cards
+    - field.field.node.ad_campaign.field_ad_nav_home_loans
+    - field.field.node.ad_campaign.field_ad_nav_investments
+    - field.field.node.ad_campaign.field_ad_nav_personal
+    - field.field.node.ad_campaign.field_ad_side_b_bank
+    - field.field.node.ad_campaign.field_ad_side_b_borrow
+    - field.field.node.ad_campaign.field_ad_side_b_manage
+    - field.field.node.ad_campaign.field_ad_side_b_protect
+    - field.field.node.ad_campaign.field_ad_side_cc_business
+    - field.field.node.ad_campaign.field_ad_side_cc_manage
+    - field.field.node.ad_campaign.field_ad_side_cc_personal
+    - field.field.node.ad_campaign.field_ad_side_cc_protect
+    - field.field.node.ad_campaign.field_ad_side_hl_existing_loan
+    - field.field.node.ad_campaign.field_ad_side_hl_get_started
+    - field.field.node.ad_campaign.field_ad_side_hl_learn_more
+    - field.field.node.ad_campaign.field_ad_side_hl_lending_options
+    - field.field.node.ad_campaign.field_ad_side_it_insurance
+    - field.field.node.ad_campaign.field_ad_side_it_investing
+    - field.field.node.ad_campaign.field_ad_side_it_planning
+    - field.field.node.ad_campaign.field_ad_side_it_trust_estate
+    - field.field.node.ad_campaign.field_ad_side_p_bank
+    - field.field.node.ad_campaign.field_ad_side_p_borrow
+    - field.field.node.ad_campaign.field_ad_side_p_invest
+    - field.field.node.ad_campaign.field_ad_side_p_other
+    - node.type.ad_campaign
+  module:
+    - arvestbank_ads
+    - datetime_range
+    - field_group
+    - user
+third_party_settings:
+  field_group:
+    group_side_navigation:
+      children:
+        - group_personal
+        - group_business
+        - group_credit_cards
+        - group_home_loans
+        - group_investments_trusts
+      parent_name: ''
+      weight: 8
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: true
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+      label: 'Side Navigation'
+    group_personal:
+      children:
+        - field_ad_side_p_bank
+        - field_ad_side_p_borrow
+        - field_ad_side_p_invest
+        - field_ad_side_p_other
+      parent_name: group_side_navigation
+      weight: 20
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: Personal
+    group_investments_trusts:
+      children:
+        - field_ad_side_it_planning
+        - field_ad_side_it_investing
+        - field_ad_side_it_insurance
+        - field_ad_side_it_trust_estate
+      parent_name: group_side_navigation
+      weight: 24
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: 'Investments & Trusts'
+    group_home_loans:
+      children:
+        - field_ad_side_hl_get_started
+        - field_ad_side_hl_lending_options
+        - field_ad_side_hl_learn_more
+        - field_ad_side_hl_existing_loan
+      parent_name: group_side_navigation
+      weight: 23
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: 'Home Loans'
+    group_credit_cards:
+      children:
+        - field_ad_side_cc_personal
+        - field_ad_side_cc_business
+        - field_ad_side_cc_manage
+        - field_ad_side_cc_protect
+      parent_name: group_side_navigation
+      weight: 22
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: 'Credit Cards'
+    group_business:
+      children:
+        - field_ad_side_b_bank
+        - field_ad_side_b_borrow
+        - field_ad_side_b_manage
+        - field_ad_side_b_protect
+      parent_name: group_side_navigation
+      weight: 21
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: Business
+    group_main_navigation:
+      children:
+        - field_ad_nav_personal
+        - field_ad_nav_business
+        - field_ad_nav_credit_cards
+        - field_ad_nav_home_loans
+        - field_ad_nav_investments
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: true
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+      label: 'Main Navigation'
+id: node.ad_campaign.default
+targetEntityType: node
+bundle: ad_campaign
+mode: default
+content:
+  field_ad_active_dates:
+    weight: 0
+    label: above
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_ad_nav_business:
+    weight: 4
+    label: above
+    settings:
+      ad_style: navigation
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_nav_credit_cards:
+    weight: 5
+    label: above
+    settings:
+      ad_style: navigation
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_nav_home_loans:
+    weight: 6
+    label: above
+    settings:
+      ad_style: navigation
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_nav_investments:
+    weight: 7
+    label: above
+    settings:
+      ad_style: navigation
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_nav_personal:
+    weight: 3
+    label: above
+    settings:
+      ad_style: navigation
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_side_b_bank:
+    weight: 10
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_side_b_borrow:
+    weight: 11
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_side_b_manage:
+    weight: 12
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_side_b_protect:
+    weight: 13
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_side_cc_business:
+    weight: 14
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_side_cc_manage:
+    weight: 15
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_side_cc_personal:
+    weight: 13
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_side_cc_protect:
+    weight: 17
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_side_hl_existing_loan:
+    weight: 20
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_side_hl_get_started:
+    weight: 17
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_side_hl_learn_more:
+    weight: 19
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_side_hl_lending_options:
+    weight: 18
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_side_it_insurance:
+    weight: 23
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_side_it_investing:
+    weight: 22
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_side_it_planning:
+    weight: 21
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_side_it_trust_estate:
+    weight: 24
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_side_p_bank:
+    weight: 7
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_side_p_borrow:
+    weight: 8
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_side_p_invest:
+    weight: 9
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_side_p_other:
+    weight: 10
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true

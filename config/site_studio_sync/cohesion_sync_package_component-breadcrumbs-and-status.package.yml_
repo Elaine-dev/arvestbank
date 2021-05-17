@@ -8,7 +8,7 @@
     dependencies: {  }
     id: pack_compontent_breadcrumbs_and
     label: 'Component Breadcrumbs and status'
-    description: "A component to reuse breadcrumbs, Drupal core status and the admin edit tabs.\r\nAuthor: Aaron Parkening / Last update: 5/7/2021"
+    description: "A component to reuse breadcrumbs, Drupal core status and the admin edit tabs.\r\nAuthor: Aaron Parkening / Last update: 5/12/2021"
     excluded_entity_types: '[]'
     settings: '{"e4cf14f5-2984-4d3d-b8b5-803cdc88a9bc":{"type":"cohesion_component","items":{"e4cf14f5-2984-4d3d-b8b5-803cdc88a9bc":{"type":"cohesion_component"}},"checked":true}}'
 -

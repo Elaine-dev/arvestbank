@@ -1,0 +1,29 @@
+uuid: 6d089153-74f0-409e-a10c-485046ef9924
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ad_nav_image
+    - media.type.acquia_dam_image
+    - node.type.ad
+id: node.ad.field_ad_nav_image
+field_name: field_ad_nav_image
+entity_type: node
+bundle: ad
+label: 'Image (Navigation)'
+description: 'This image will appear in the main navigation to the right of the links.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      acquia_dam_image: acquia_dam_image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

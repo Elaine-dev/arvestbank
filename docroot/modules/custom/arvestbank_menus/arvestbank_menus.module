@@ -111,6 +111,7 @@ function arvestbank_menus_block_view_menu_block_alter(&$build, &$plugin) {
     ) {
       // Set the block title to the canonical link title.
       $build['#configuration']['label'] = $canonicalMenuLinkHelper->getMenuTitleForLink($canonicalMenuLink);
+      $menuBlockSettings['label'] = $canonicalMenuLinkHelper->getMenuTitleForLink($canonicalMenuLink);
     }
 
     // If there's a canonical link and we're showing siblings.
@@ -127,10 +128,12 @@ function arvestbank_menus_block_view_menu_block_alter(&$build, &$plugin) {
       if ($canonicalParentLink) {
         // Set the block title to the canonical link's parent's title.
         $build['#configuration']['label'] = $canonicalMenuLinkHelper->getMenuTitleForLink($canonicalParentLink);
+        $menuBlockSettings['label'] = $canonicalMenuLinkHelper->getMenuTitleForLink($canonicalParentLink);
       }
       // If this is a tier 1 show own title.
       else {
         $build['#configuration']['label'] = $canonicalMenuLinkHelper->getMenuTitleForLink($canonicalMenuLink);
+        $menuBlockSettings['label'] = $canonicalMenuLinkHelper->getMenuTitleForLink($canonicalMenuLink);
       }
 
     }

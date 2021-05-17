@@ -28,5 +28,6 @@ export PATH=$repo_root/vendor/bin:$PATH
 cd $repo_root
 
 blt artifact:ac-hooks:post-code-update $site $target_env $source_branch $deployed_tag $repo_url $repo_type --environment=$target_env -v --no-interaction -D drush.ansi=false
+drush cr
 
 set +v

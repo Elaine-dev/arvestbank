@@ -1,0 +1,29 @@
+uuid: f7af255c-ae91-4f32-bc8a-c9530289285a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_video_thumbnail
+    - media.type.acquia_dam_image
+    - media.type.video
+id: media.video.field_video_thumbnail
+field_name: field_video_thumbnail
+entity_type: media
+bundle: video
+label: 'Video Thumbnail'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      acquia_dam_image: acquia_dam_image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
