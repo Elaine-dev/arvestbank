@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.ad_campaign.field_ad_nav_home_loans
     - field.field.node.ad_campaign.field_ad_nav_investments
     - field.field.node.ad_campaign.field_ad_nav_personal
+    - field.field.node.ad_campaign.field_ad_side_about
     - field.field.node.ad_campaign.field_ad_side_b_bank
     - field.field.node.ad_campaign.field_ad_side_b_borrow
     - field.field.node.ad_campaign.field_ad_side_b_manage
@@ -17,6 +18,9 @@ dependencies:
     - field.field.node.ad_campaign.field_ad_side_cc_manage
     - field.field.node.ad_campaign.field_ad_side_cc_personal
     - field.field.node.ad_campaign.field_ad_side_cc_protect
+    - field.field.node.ad_campaign.field_ad_side_contact
+    - field.field.node.ad_campaign.field_ad_side_docs_resources
+    - field.field.node.ad_campaign.field_ad_side_education_center
     - field.field.node.ad_campaign.field_ad_side_hl_existing_loan
     - field.field.node.ad_campaign.field_ad_side_hl_get_started
     - field.field.node.ad_campaign.field_ad_side_hl_learn_more
@@ -44,6 +48,8 @@ third_party_settings:
         - group_credit_cards
         - group_home_loans
         - group_investments_trusts
+        - group_top_links
+        - group_footer_links
       parent_name: ''
       weight: 3
       format_type: html_element
@@ -156,6 +162,32 @@ third_party_settings:
         id: ''
         classes: ''
       label: 'Main Navigation'
+    group_top_links:
+      children:
+        - field_ad_side_about
+        - field_ad_side_contact
+      parent_name: group_side_navigation
+      weight: 9
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: 'Top Links'
+    group_footer_links:
+      children:
+        - field_ad_side_education_center
+        - field_ad_side_docs_resources
+      parent_name: group_side_navigation
+      weight: 10
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: 'Footer Links'
 id: node.ad_campaign.default
 targetEntityType: node
 bundle: ad_campaign
@@ -210,6 +242,14 @@ content:
       ad_style: navigation
     third_party_settings: {  }
     type: ad_formatter
+    region: content
+  field_ad_side_about:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_ad_side_b_bank:
     weight: 51
@@ -274,6 +314,30 @@ content:
       ad_style: sidebar
     third_party_settings: {  }
     type: ad_formatter
+    region: content
+  field_ad_side_contact:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ad_side_docs_resources:
+    weight: 7
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ad_side_education_center:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_ad_side_hl_existing_loan:
     weight: 74
