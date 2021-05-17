@@ -3,77 +3,26 @@
 namespace Drupal\arvestbank_ads\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
-use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
 use Drupal\file\Entity\File;
 use Drupal\media\Entity\Media;
 use Drupal\node\Entity\Node;
-use Drupal\views\Views;
 
 /**
- * Provides a 'AdBlock' block.
+ * Provides an Ad Block for the Sidebar.
  *
  * @Block(
- *  id = "ad_block",
- *  admin_label = @Translation("Ad block"),
+ *  id = "ad_block_sidebar",
+ *  admin_label = @Translation("Ad Block - Sidebar"),
  * )
  */
-class AdBlock extends BlockBase {
+class AdBlockSidebar extends BlockBase {
 
   /**
-   * {@inheritdoc}
-   */
-  public function blockForm($form, FormStateInterface $form_state) {
-
-    $form = parent::blockForm($form, $form_state);
-
-    $config = $this->getConfiguration();
-
-    $ad_styles = \Drupal::service('ad_services')->adStyleOptions();
-
-    $form['ad_style'] = [
-      '#title' => t('Ad Style'),
-      '#type' => 'select',
-      '#options' => $ad_styles,
-      '#default_value' => $config['ad_style'] ?? NULL,
-      '#description' => t('Style for this block.'),
-    ];
-
-    return $form;
-
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function blockSubmit($form, FormStateInterface $form_state) {
-    parent::blockSubmit($form, $form_state);
-    $values = $form_state->getValues();
-    $this->configuration['ad_style'] = $values['ad_style'];
-  }
-
-  /**
-   * @return int
-   */
-  private function getCampaignNid() {
-
-    $return = FALSE;
-
-    $view = Views::getView('ad_campaigns');
-    $view->setDisplay('attachment_1');
-    $view->render();
-    if (!empty($view->result[0])) {
-      $result = $view->result[0];
-      if (property_exists($result, 'nid')) {
-        $return = $result->nid;
-      }
-    }
-
-    return $return;
-
-  }
-
-  /**
+   * Returns the sidebar field to use based off of the uri path.
+   *
    * @return string
+   *   fieldname
    */
   private function getAdFieldFromPath() {
 
@@ -125,23 +74,51 @@ class AdBlock extends BlockBase {
   }
 
   /**
+   * Returns the node id for the ad to use in this context.
+   *
    * @return int
+   *   nid.
    */
-  private function getAdNid() {
+  private function getAdNid(): int {
 
-    // Initalize return variable.
+    // Initialize return variable.
     $ad_nid = 0;
 
     // Get the current campaign.
-    if ($ad_campaign_nid = self::getCampaignNid()) {
+    if ($ad_campaign_nid = \Drupal::service('ad_services')->getCampaignNid()) {
 
       // If there is a valid campaign proceed.
       if ($ad_campaign = Node::load($ad_campaign_nid)) {
 
         // Match the current page to a sidebar menu item.
         if ($fieldname = self::getAdFieldFromPath()) {
+
           if (!empty($ad_campaign->get($fieldname)->getValue()[0]['target_id'])) {
+
+            // The Node ID for the Ad.
             $ad_nid = $ad_campaign->get($fieldname)->getValue()[0]['target_id'];
+
+            // Get the current URI / path alias.
+            $current_uri = \Drupal::request()->getRequestUri();
+
+            // Storage for node entity types.
+            $storage = \Drupal::entityTypeManager()->getStorage('node');
+
+            // Get the CTA url for this ad.
+            $ad_cta_url = $storage->load($ad_nid)->get('field_cta')[0]->getValue()['uri'] ?? NULL;
+
+            // Check the current path against the CTA url.
+            // If they match look to pull in the alternate ad.
+            $ad_cta_url_path = str_replace('internal:', '', $ad_cta_url);
+            if ($current_uri == $ad_cta_url_path) {
+              if (!empty($storage->load($ad_nid)->get('field_ad_alternate')[0])) {
+                $ad_alt_nid = $storage->load($ad_nid)->get('field_ad_alternate')[0]->getValue()['target_id'] ?? NULL;
+                if (!empty($ad_alt_nid)) {
+                  $ad_nid = $ad_alt_nid;
+                }
+              }
+            }
+
           }
 
         }
@@ -166,17 +143,14 @@ class AdBlock extends BlockBase {
     // Use /templates/ad-block.html.twig.
     $build['#theme'] = 'ad_block';
 
-    // Set the block style.
-    $block_style = $this->getConfiguration()['ad_style'];
-
-    // Get the list of style options.
-    $ad_styles = \Drupal::service('ad_services')->adStyleOptions();
-
-    // Storage for node entity types.
-    $storage = \Drupal::entityTypeManager()->getStorage('node');
-
     // Get the node id of the ad to use with this block instance.
     if ($nid = self::getAdNid()) {
+
+      // Storage for node entity types.
+      $storage = \Drupal::entityTypeManager()->getStorage('node');
+
+      // Get the CTA url for this ad.
+      $ad_cta_url = $storage->load($nid)->get('field_cta')[0]->getValue()['uri'] ?? NULL;
 
       // If the media loaded successfully, continue with the formatting.
       if ($media_id = $storage->load($nid)->get('field_image')[0]->getValue()['target_id']) {
@@ -188,25 +162,30 @@ class AdBlock extends BlockBase {
         if ($file = File::load($fid)) {
 
           // This will be the public:// path to the media item.
-          $ad_url = $file->getFileUri();
+          $ad_image_url = $file->getFileUri();
 
-          // Get the style for this block,
-          // and use the corresponding image and image style.
-          if (array_key_exists($this->getConfiguration()['ad_style'], $ad_styles)) {
+          // Continue if there is a url for this ad image.
+          if (!empty($ad_image_url)) {
 
-            // Set a default image style.
-            $image_style = 'medium';
-
-            // Check for image style for this block style.
-            if (array_key_exists('ad_' . $block_style, image_style_options(TRUE))) {
-              $image_style = 'ad_' . $block_style;
-            }
-
-            $ad_content = [
+            // Render array for the image.
+            $ad_image = [
               '#theme' => 'image_style',
-              '#style_name' => $image_style,
-              '#uri' => $ad_url,
+              '#style_name' => 'ad_sidebar',
+              '#uri' => $ad_image_url,
             ];
+
+            // If there is a CTA, link this image.
+            if (!empty($ad_cta_url)) {
+              $ad_content = [
+                '#type' => 'link',
+                '#url' => Url::fromUri($ad_cta_url),
+                '#title' => $ad_image,
+              ];
+            }
+            // Else just return the image.
+            else {
+              $ad_content = $ad_image;
+            }
 
           }
 
@@ -219,6 +198,7 @@ class AdBlock extends BlockBase {
     // Set the return ad content.
     $build['#content'] = $ad_content;
 
+    // Build array.
     return $build;
 
   }
@@ -226,7 +206,7 @@ class AdBlock extends BlockBase {
   /**
    * {@inheritdoc}
    */
-  public function getCacheMaxAge() {
+  public function getCacheMaxAge(): int {
     return 0;
   }
 

@@ -3,12 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - media.type.acquia_dam_document
-    - media.type.acquia_dam_image
-    - media.type.acquia_dam_video
-    - media.type.credit_or_debit_card
-    - media.type.icon
-    - media.type.video
     - node.type.ad
     - node.type.article_education_article
     - node.type.calculators
@@ -105,13 +99,6 @@ type_settings:
       to: published
       weight: 6
   entity_types:
-    media:
-      - acquia_dam_document
-      - acquia_dam_image
-      - acquia_dam_video
-      - credit_or_debit_card
-      - icon
-      - video
     node:
       - ad
       - article_education_article

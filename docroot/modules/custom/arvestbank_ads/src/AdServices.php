@@ -2,6 +2,8 @@
 
 namespace Drupal\arvestbank_ads;
 
+use Drupal\views\Views;
+
 /**
  * Class SidebarFieldMap.
  */
@@ -64,5 +66,28 @@ class AdServices {
     ];
   }
 
+  /**
+   * Returns the node id of the current campaign.
+   *
+   * @return int
+   *   nid.
+   */
+  public function getCampaignNid() {
+
+    $return = FALSE;
+
+    $view = Views::getView('ad_campaigns');
+    $view->setDisplay('attachment_1');
+    $view->render();
+    if (!empty($view->result[0])) {
+      $result = $view->result[0];
+      if (property_exists($result, 'nid')) {
+        $return = $result->nid;
+      }
+    }
+
+    return $return;
+
+  }
 
 }

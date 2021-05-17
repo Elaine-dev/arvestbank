@@ -1,22 +1,22 @@
-uuid: 79ddabf1-5bcf-4bdd-b3ac-68be1233c4c9
+uuid: 897c1147-0fbf-4a55-8d6e-3d3235effb39
 langcode: en
 status: true
 dependencies:
   module:
-    - arvestbank_external_login
+    - arvestbank_ads
     - cohesion
   theme:
     - arvestbank_theme
-id: homepageexternalloginblock
+id: ads_nav_746
 theme: arvestbank_theme
 region: dx8_hidden
-weight: -1
+weight: 0
 provider: null
-plugin: homepage_external_login_block
+plugin: 'ad_block_nav:ads_nav_746'
 settings:
-  id: homepage_external_login_block
-  label: 'My Accounts'
-  provider: arvestbank_external_login
+  id: 'ad_block_nav:ads_nav_746'
+  label: 'Ads Nav Investments'
+  provider: arvestbank_ads
   label_display: visible
 visibility:
   cohesion_master_template:

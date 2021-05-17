@@ -24,6 +24,7 @@ function arvestbank_theme_form_alter(&$form, FormStateInterface $form_state, $fo
  * @inheritDoc
  */
 function arvestbank_theme_preprocess_node(&$variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
 
   // If this is the homepage and the node is the main homepage one.
   if (
@@ -38,7 +39,15 @@ function arvestbank_theme_preprocess_node(&$variables) {
     // Make the external login block available in node template.
     $variables['content']['external_login_block'] = $renderedBlock;
   }
-
+  if($node->getType() == 'stage_page') {
+    // Load local admin tabs block only for stage page content type.
+    $block = Block::load('arvestbank_theme_local_tasks');
+    $renderedBlock = \Drupal::entityTypeManager()
+      ->getViewBuilder('block')
+      ->view($block);
+    // Make the local admin tabs block available in node template.
+    $variables['content']['arvestbank_theme_local_tasks'] = $renderedBlock;
+  }
 }
 
 /**
