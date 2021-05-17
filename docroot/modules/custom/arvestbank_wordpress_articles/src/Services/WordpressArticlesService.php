@@ -11,6 +11,18 @@ use GuzzleHttp\Client;
 class WordpressArticlesService {
 
   /**
+   * Defines the category titles and endpoints to use for summary.
+   *
+   * @var array
+   */
+  const SUMMARY_CATEGORIES = [
+    'News' => 'https://share.arvest.com/category/newsroom/feed/json',
+    'Community' => 'https://share.arvest.com/category/community/feed/json',
+    'Spin On Spending' => 'https://share.arvest.com/category/spin-on-spending/feed/json',
+    'Business' => 'https://share.arvest.com/category/business/feed/json',
+  ];
+
+  /**
    * Http client used to call APIs.
    *
    * @var \GuzzleHttp\Client
@@ -31,13 +43,29 @@ class WordpressArticlesService {
   /**
    * Get a render array showing feed results.
    */
-  public function getRenderArray(string $title, string $endpoint, int $limit = 0){
+  public function getRenderArray(string $title, string $endpoint, int $limit = 0, bool $showSummary = FALSE) {
 
     // Instantiate render array to return.
     $renderArray = [];
 
-    // Get results from endpoint.
-    $articles = $this->getArticles($endpoint, $limit);
+    // If we're not showing the summary and we have an entered endpoint.
+    if ($endpoint && !$showSummary) {
+      // Get results from client entered endpoint.
+      $articles = $this->getArticles($endpoint, $limit);
+    }
+
+    // If we're showing a summary.
+    if ($showSummary) {
+      // Loop over categories compiling list of articles, one from each.
+      $articles = [];
+      foreach ($this::SUMMARY_CATEGORIES as $summaryCategoryTitle => $summaryCategoryEndpoint) {
+        // Get articles.
+        $categoryArticles = $this->getArticles($summaryCategoryEndpoint, 1);
+        if (count($categoryArticles)) {
+          $articles[$summaryCategoryTitle] = array_pop($categoryArticles);
+        }
+      }
+    }
 
     // Only output anything if we got results.
     if ($articles) {
@@ -58,32 +86,28 @@ class WordpressArticlesService {
       // Loop over articles.
       foreach ($articles as $articleIndex => $article) {
 
+        // Determine render array index for article.
+        $articleRenderArrayIndex = 'article-' . str_replace(' ', '_', strtolower($articleIndex));
+
         // Add link container and link tags container to render array.
-        $renderArray['article-' . $articleIndex] = [
+        $renderArray[$articleRenderArrayIndex] = [
           '#type' => 'container',
           '#attributes' => [
             'class' => [
-              'wordpress-article-' . $articleIndex,
+              'wordpress-article-' . $articleRenderArrayIndex,
             ],
-          ],
-          'tags' => [
-            '#type' => 'container',
-            '#attributes' => [
-              'class' => [
-                'wordpress-article-tags',
-              ],
-            ],
-            '#markup' => '',
           ],
         ];
 
-        // Loop over tags.
-        foreach($article['tags'] as $tagIndex => $tagName) {
-          $renderArray['article-' . $articleIndex]['tags']['#markup'] .= '<span class="wordpress-link-tag>' . $tagName . '</span>';
+        // Add Category to Render array if applicable.
+        if (!is_numeric($articleIndex)) {
+          $renderArray[$articleRenderArrayIndex]['category'] = [
+            '#markup' => '<span class="wordpress-category">' . $articleIndex . '</span>',
+          ];
         }
 
         // Add link to render array.
-        $renderArray['article_' . $articleIndex]['link'] = [
+        $renderArray[$articleRenderArrayIndex]['link'] = [
           '#markup' => '<a class="wordpress-article-link" href="' . $article['url'] . '">' . $article['title'] . '</a>',
         ];
 
