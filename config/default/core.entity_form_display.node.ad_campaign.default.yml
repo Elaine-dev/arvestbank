@@ -74,12 +74,12 @@ third_party_settings:
       format_type: details
       region: content
       format_settings:
+        description: ''
+        required_fields: true
         id: ''
         classes: ''
-        description: ''
         open: false
-        required_fields: true
-      label: 'Side Navigation'
+      label: Sidebar
     group_personal:
       children:
         - field_ad_side_p_bank

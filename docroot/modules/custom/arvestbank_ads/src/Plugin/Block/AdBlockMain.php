@@ -26,7 +26,8 @@ class AdBlockMain extends BlockBase {
    */
   private function getAdNid(): int {
 
-    return 12786;
+    // Placeholder function to return the proper ad node id.
+    return 0;
 
   }
 

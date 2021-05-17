@@ -12,8 +12,6 @@ dependencies:
     - image.style.thumbnail
     - node.type.ad
     - system.menu.admin
-  content:
-    - 'block_content:text:f8efb98e-8dc7-447b-9cc9-25fc776c0f67'
   module:
     - link
     - media
@@ -1542,19 +1540,19 @@ display:
         header: false
       arguments: {  }
       header:
-        entity_block_content_1:
-          id: entity_block_content_1
+        area:
+          id: area
           table: views
-          field: entity_block_content
+          field: area
           relationship: none
           group_type: group
           admin_label: ''
           empty: true
           tokenize: false
-          target: f8efb98e-8dc7-447b-9cc9-25fc776c0f67
-          view_mode: default
-          bypass_access: false
-          plugin_id: entity
+          content:
+            value: "<div class=\"action-link\"><a href=\"/node/add/ad?destination=/admin/content/ads\">Add an Ad</a></div>\r\n<div class=\"action-link\"><a href=\"/media/add/acquia_dam_image?destination=/admin/content/ads\">Add Media</a></div>"
+            format: cohesion
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:

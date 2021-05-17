@@ -6,8 +6,7 @@ dependencies:
     - core.entity_view_mode.node.full
     - field.storage.node.field_ad_active_dates
     - node.type.ad_campaign
-  content:
-    - 'block_content:text:2d4ec4fb-8722-4e4e-b4b6-1d7c7571ac2c'
+    - system.menu.admin
   module:
     - datetime
     - datetime_range
@@ -706,22 +705,23 @@ display:
     display_title: Page
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       path: admin/content/ad-campaigns
       header:
-        entity_block_content:
-          id: entity_block_content
+        area:
+          id: area
           table: views
-          field: entity_block_content
+          field: area
           relationship: none
           group_type: group
           admin_label: ''
-          empty: false
+          empty: true
           tokenize: false
-          target: 2d4ec4fb-8722-4e4e-b4b6-1d7c7571ac2c
-          view_mode: default
-          bypass_access: false
-          plugin_id: entity
+          content:
+            value: "<div class=\"action-link\"><a href=\"/node/add/ad_campaign?destination=/admin/content/ad-campaigns\">Add an Ad Campaign</a></div>\r\n"
+            format: cohesion
+          plugin_id: text
       defaults:
         header: false
         fields: false
@@ -976,6 +976,15 @@ display:
           entity_type: node
           entity_field: status
           plugin_id: field
+      menu:
+        type: normal
+        title: 'Ad Campaigns'
+        description: ''
+        expanded: false
+        parent: 'views_view:views.ads.page_1'
+        weight: 0
+        context: '0'
+        menu_name: admin
     cache_metadata:
       max-age: -1
       contexts:
