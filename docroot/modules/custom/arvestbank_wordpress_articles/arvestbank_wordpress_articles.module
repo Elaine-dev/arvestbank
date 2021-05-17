@@ -4,7 +4,7 @@
  * @file
  */
 
-use \Drupal\paragraphs\Entity\Paragraph;
+use Drupal\paragraphs\Entity\Paragraph;
 
 /**
  * Make wordpress block available if applicable.
@@ -28,11 +28,32 @@ function arvestbank_wordpress_articles_preprocess_node(array &$variables) {
     // Get wordpress articles service.
     $wordpressArticlesService = \Drupal::service('arvestbank_wordpress_articles.wordpress_articles_service');
 
+    $title = '';
+    if(isset($paragraph->get('field_title')->getValue()[0]['value'])) {
+      $title = $paragraph->get('field_title')->getValue()[0]['value'];
+    }
+
+    $feedUrl = '';
+    if(isset($paragraph->get('field_feed_url')->getValue()[0]['value'])) {
+      $feedUrl = $paragraph->get('field_feed_url')->getValue()[0]['value'];
+    }
+
+    $limit = 0;
+    if (isset($paragraph->get('field_article_')->getValue()[0]['value'])) {
+      $limit = $paragraph->get('field_article_')->getValue()[0]['value'];
+    }
+
+    $summary = 0;
+    if (isset($paragraph->get('field_show_latest_news_summary')->getValue()[0]['value'])) {
+      $summary = $paragraph->get('field_show_latest_news_summary')->getValue()[0]['value'];
+    }
+
     // Get render array.
     $renderArray = $wordpressArticlesService->getRenderArray(
-      $paragraph->get('field_title')->getValue()[0]['value'],
-      $paragraph->get('field_feed_url')->getValue()[0]['value'],
-      $paragraph->get('field_article_')->getValue()[0]['value'],
+      $title,
+      $feedUrl,
+      $limit,
+      $summary,
     );
 
     // Add caching parameters to render array.

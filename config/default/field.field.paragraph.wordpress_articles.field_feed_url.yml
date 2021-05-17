@@ -11,7 +11,7 @@ entity_type: paragraph
 bundle: wordpress_articles
 label: 'Feed Url'
 description: "Enter the feed url from which to show articles.<br/>\r\nie: https://share.arvest.com/category/community/feed/json"
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
