@@ -4,6 +4,6 @@ arvestbank_webtools_api.webtools_admin_form:
     _form: '\Drupal\arvestbank_webtools_api\Form\WebtoolsAdminForm'
     _title: 'Webtools API Configuration'
   requirements:
-    _role: enterprise_admin
+    _permission: 'restrict access: true'
   options:
     _admin_route: TRUE

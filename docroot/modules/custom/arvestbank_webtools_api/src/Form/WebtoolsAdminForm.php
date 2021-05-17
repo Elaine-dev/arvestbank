@@ -105,8 +105,17 @@ class WebtoolsAdminForm extends ConfigFormBase {
     $form['webtools']['webtools-domain'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Webtools Domain'),
-      '#description' => $this->t('The domain at which webtool api endpoints can be reached.'),
+      '#description' => $this->t('The domain at which webtools api endpoints can be reached.'),
       '#default_value' => $config->get('webtools-domain'),
+      '#attributes' => ['disabled' => 'disabled'],
+    ];
+
+    // Webtools Form Endpoint.
+    $form['webtools']['webtools-form-endpoint'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Webtools Form Endpoint'),
+      '#description' => $this->t('The endpoint at which webtools form api can be reached.'),
+      '#default_value' => $config->get('webtools-form-endpoint'),
       '#attributes' => ['disabled' => 'disabled'],
     ];
 
@@ -119,7 +128,7 @@ class WebtoolsAdminForm extends ConfigFormBase {
     // Test Ping Identity button.
     $form['actions']['test_ping_identity_config'] = [
       '#type' => 'submit',
-      '#value' => t('Test Ping Identity Config by Gerating New Bearer Token'),
+      '#value' => t('Test Ping Identity Config'),
       '#submit' => [[$this, 'testPingIdentity']],
     ];
 
@@ -174,7 +183,14 @@ class WebtoolsAdminForm extends ConfigFormBase {
     $webtoolsClient = \Drupal::service('arvestbank_webtools_api.webtools_client');
 
     // Test connectivity.
-    $webtoolsClient->testConnectivity();
+    $requestSuccess = $webtoolsClient->testConnectivity();
+    // If the test was successfull.
+    if ($requestSuccess) {
+      $this->messenger()->addMessage('Successfully connected to the webtools SaveFormData endpoint.');
+    }
+    else {
+      $this->messenger()->addError('Could not connect to the webtools SaveFormData endpoint.');
+    }
 
   }
 
