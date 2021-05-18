@@ -1,0 +1,10 @@
+uuid: 869cb342-4727-406e-8d92-7ff750fe6f3f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.main_content_ad
+label: 'Main Content Ad'
+targetEntityType: node
+cache: true

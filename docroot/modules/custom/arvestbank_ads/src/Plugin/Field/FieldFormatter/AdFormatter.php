@@ -153,7 +153,8 @@ class AdFormatter extends FormatterBase {
    * {@inheritdoc}
    */
   public static function isApplicable(FieldDefinitionInterface $field_definition): bool {
-    return ($field_definition->getTargetEntityTypeId() === 'node' && $field_definition->getTargetBundle() === 'ad_campaign');
+    return ($field_definition->getTargetEntityTypeId() === 'node'
+      && ($field_definition->getTargetBundle() === 'ad_campaign' || $field_definition->getTargetBundle() === 'ad'));
   }
 
 }
