@@ -29,7 +29,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'access content'
+          perm: 'edit any ad_campaign content'
       cache:
         type: tag
         options: {  }
@@ -366,7 +366,8 @@ display:
     display_title: 'Current Ad Campaign'
     position: 2
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       style:
         type: default
         options:
@@ -381,6 +382,7 @@ display:
         filter_groups: false
         empty: false
         title: false
+        access: false
       row:
         type: fields
         options:
@@ -690,6 +692,10 @@ display:
           plugin_id: text
       title: 'Current Ad Campaign'
       display_description: ''
+      access:
+        type: perm
+        options:
+          perm: 'edit any ad_campaign content'
     cache_metadata:
       max-age: -1
       contexts:
@@ -725,6 +731,7 @@ display:
       defaults:
         header: false
         fields: false
+        access: false
       fields:
         title:
           id: title
@@ -985,6 +992,10 @@ display:
         weight: 0
         context: '0'
         menu_name: admin
+      access:
+        type: perm
+        options:
+          perm: 'edit any ad_campaign content'
     cache_metadata:
       max-age: -1
       contexts:
