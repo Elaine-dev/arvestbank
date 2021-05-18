@@ -9,18 +9,15 @@
 
   {# Left Sidebar #}
   <div class="coh-container-boxed">
-    <div class="coh-style-slider-left-side-blocks">
+    <div class="stage-page-left-side-blocks">
 
       {# External Login Block #}
-      <div class="my-login-block">
+      <div class="coh-style-my-accounts-login-block">
         {{ content.external_login_block }}
       </div>
 
       {# Wordpress Articles #}
-      <div class="wordpress-block">
-        {% if content.wordpress_articles %}
-          <h2>Latest News & Articles</h2>
-        {% endif %}
+      <div class="wordpress-block coh-style-wordpress-feed-block">
         {{ content.wordpress_articles }}
       </div>
 
