@@ -82,12 +82,31 @@ class WebtoolsClient {
   }
 
   /**
+   * Makes a request to save form data.
+   *
+   * @param array $requestOptions
+   *   The Guzzle request options.
+   *
+   * @return bool|string
+   *   Response or FALSE.
+   */
+  public function makeFormSaveRequest(array $requestOptions) {
+    // Get the endpoint to send form data to.
+    $endpoint = $this->webtoolsConfig->get('webtools-form-endpoint');
+    // Make request and return response.
+    return $this->makeRequest($endpoint, $requestOptions);
+  }
+
+  /**
    * Helper function to make a webtools request, deals with authentication.
    *
    * @param string $endpoint
    *   The endpoint to make a request to.
    * @param array $requestOptions
    *   Request (Guzzle) options to be merged into the authentication ones.
+   *
+   * @return bool|string
+   *   Response or FALSE.
    */
   public function makeRequest(string $endpoint, array $requestOptions) {
 

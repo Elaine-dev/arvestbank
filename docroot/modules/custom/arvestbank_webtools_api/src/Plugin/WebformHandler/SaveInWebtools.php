@@ -7,6 +7,7 @@ use Drupal\webform\WebformSubmissionInterface;
 use Drupal\Core\Form\FormStateInterface;
 use GuzzleHttp\RequestOptions;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Spatie\ArrayToXml\ArrayToXml;
 
 /**
  * Create a new node entity from a webform submission.
@@ -55,14 +56,47 @@ class SaveInWebtools extends WebformHandlerBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state, WebformSubmissionInterface $webform_submission) {
 
-    // Define the test request we want to make.
-    $endpoint = $this->webtoolsConfig->get('webtools-form-endpoint');
+    // Build the form data to save.
+    $xmlData = $this->buildFormDataXml($this->configuration['webtools_form_name'], $form_state);
+
+    // Build the Guzzle request options.
     $requestOptions = [
       RequestOptions::JSON => [
-        'FormName' => 'Test Form',
-        'XMLString' => '<request><meta><meta><name>formName</name><value>test</value></meta></meta></request>',
+        'FormName' => $this->configuration['webtools_form_name'],
+        'XMLString' => $xmlData,
       ],
     ];
+
+    // Make request.
+    $this->webtoolsClient->makeFormSaveRequest($requestOptions);
+
+  }
+
+  /**
+   * Populates an xml request from a submitted form state.
+   *
+   * @param string $formName
+   *   The webtools api form name.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The form state containing submitted values.
+   *
+   * @return string
+   *   An xml string to be sent for storage in the webtool endpoint.
+   */
+  private function buildFormDataXml(string $formName, FormStateInterface $form_state) {
+
+    // Base form data array.
+    $requestData = [
+      'meta' => [
+        'meta' => [
+          'name'  => 'formName',
+          'value' => $formName,
+        ],
+      ],
+    ];
+
+    // Return xml string derived from our array.
+    return ArrayToXml::convert($requestData, 'request');
 
   }
 
