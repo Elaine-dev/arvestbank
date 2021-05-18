@@ -1,7 +1,9 @@
 uuid: 90c8a7d9-9326-4f0f-8b68-2d9cd119d4a7
 langcode: en
 status: open
-dependencies: {  }
+dependencies:
+  module:
+    - arvestbank_webforms
 open: null
 close: null
 weight: 0
@@ -112,9 +114,9 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: page
+  confirmation_type: inline
   confirmation_title: ''
-  confirmation_message: ''
+  confirmation_message: 'Thank you!&nbsp; Your browser diagnostics have been sent to us.'
   confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
@@ -199,7 +201,7 @@ handlers:
     handler_id: email
     status: true
     conditions: {  }
-    weight: 0
+    weight: -48
     settings:
       states:
         - completed
@@ -222,11 +224,31 @@ handlers:
       html: false
       attachments: false
       twig: false
-      debug: true
+      debug: false
       reply_to: '[webform_submission:values:email:raw]'
       return_path: ''
       sender_mail: ''
       sender_name: ''
       theme_name: ''
       parameters: {  }
+  _arvest_com_recipient:
+    id: arvestbank_webforms_atarvestrecipient
+    label: '@Arvest.com Recipient'
+    notes: ''
+    handler_id: _arvest_com_recipient
+    status: true
+    conditions: {  }
+    weight: -50
+    settings:
+      atarvest_recipient_fieldname: recipient
+  strip_html:
+    id: arvestbank_webforms_striphtml
+    label: 'Strip HTML'
+    notes: ''
+    handler_id: strip_html
+    status: true
+    conditions: {  }
+    weight: -49
+    settings:
+      striphtml_fieldnames: browser_diagnostics
 variants: {  }
