@@ -32,12 +32,6 @@ function arvestbank_webforms_form_alter(&$form, FormStateInterface $form_state, 
 
   switch ($form_id) {
 
-    // Credit Card Dispute Form.
-    case "webform_submission_credit_card_dispute_add_form":
-      // Attach library.
-      $form['#attached']['library'][] = 'arvestbank_webforms/credit_card_dispute';
-      break;
-
     // Authorized Agent Designation Form.
     case "webform_submission_authorized_agent_designation_for_add_form":
       // Hide back button on second page.
@@ -52,6 +46,18 @@ function arvestbank_webforms_form_alter(&$form, FormStateInterface $form_state, 
     case 'webform_submission_auto_warranty_quote_add_form':
       // Add validation function.
       $form['#validate'][] = '_arvestbank_webforms_auto_warranty_validate';
+      break;
+
+    // Contact Arvest Wealth Management Form.
+    case "webform_submission_contact_arvest_wealth_management_add_form":
+      // Attach library.
+      $form['#attached']['library'][] = 'arvestbank_webforms/contact_arvest_wealth_management';
+      break;
+
+    // Credit Card Dispute Form.
+    case "webform_submission_credit_card_dispute_add_form":
+      // Attach library.
+      $form['#attached']['library'][] = 'arvestbank_webforms/credit_card_dispute';
       break;
 
     // Equipment Finance form and test form.
