@@ -8,7 +8,7 @@
     dependencies: {  }
     id: pack_component_site_header
     label: 'Component Site Header'
-    description: "A Site Studio package for the main site header.\r\nAuthor: Aaron Parkening / Last update: 5/17/2021"
+    description: "A Site Studio package for the main site header.\r\nLast update: 5/17/2021"
     excluded_entity_types: '[]'
     settings: '{"16329a77-4eb7-444d-afce-223589e498e5":{"type":"cohesion_component","items":{"16329a77-4eb7-444d-afce-223589e498e5":{"type":"cohesion_component"}},"checked":true}}'
 -
