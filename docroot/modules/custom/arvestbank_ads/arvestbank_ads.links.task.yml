@@ -1,0 +1,10 @@
+view.ads.page_1:
+  route_name: view.ads.page_1
+  title: All Ads
+  base_route: view.ads.page_1
+
+view.ad_campaigns.page_1:
+  route_name: view.ad_campaigns.page_1
+  title: Ad Campaigns
+  base_route: view.ads.page_1
+  weight: 2

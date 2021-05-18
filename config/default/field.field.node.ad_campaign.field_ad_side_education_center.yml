@@ -1,0 +1,25 @@
+uuid: c56ac5c3-99c1-41b3-a15f-e08157a194bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ad_side_education_center
+    - node.type.ad_campaign
+id: node.ad_campaign.field_ad_side_education_center
+field_name: field_ad_side_education_center
+entity_type: node
+bundle: ad_campaign
+label: 'Education Center'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: ads
+      display_name: entity_reference_2
+      arguments: {  }
+field_type: entity_reference

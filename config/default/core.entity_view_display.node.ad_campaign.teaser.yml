@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.ad_campaign.field_ad_nav_home_loans
     - field.field.node.ad_campaign.field_ad_nav_investments
     - field.field.node.ad_campaign.field_ad_nav_personal
+    - field.field.node.ad_campaign.field_ad_side_about
     - field.field.node.ad_campaign.field_ad_side_b_bank
     - field.field.node.ad_campaign.field_ad_side_b_borrow
     - field.field.node.ad_campaign.field_ad_side_b_manage
@@ -18,6 +19,9 @@ dependencies:
     - field.field.node.ad_campaign.field_ad_side_cc_manage
     - field.field.node.ad_campaign.field_ad_side_cc_personal
     - field.field.node.ad_campaign.field_ad_side_cc_protect
+    - field.field.node.ad_campaign.field_ad_side_contact
+    - field.field.node.ad_campaign.field_ad_side_docs_resources
+    - field.field.node.ad_campaign.field_ad_side_education_center
     - field.field.node.ad_campaign.field_ad_side_hl_existing_loan
     - field.field.node.ad_campaign.field_ad_side_hl_get_started
     - field.field.node.ad_campaign.field_ad_side_hl_learn_more
@@ -50,6 +54,7 @@ hidden:
   field_ad_nav_home_loans: true
   field_ad_nav_investments: true
   field_ad_nav_personal: true
+  field_ad_side_about: true
   field_ad_side_b_bank: true
   field_ad_side_b_borrow: true
   field_ad_side_b_manage: true
@@ -58,6 +63,9 @@ hidden:
   field_ad_side_cc_manage: true
   field_ad_side_cc_personal: true
   field_ad_side_cc_protect: true
+  field_ad_side_contact: true
+  field_ad_side_docs_resources: true
+  field_ad_side_education_center: true
   field_ad_side_hl_existing_loan: true
   field_ad_side_hl_get_started: true
   field_ad_side_hl_learn_more: true

@@ -1,0 +1,25 @@
+uuid: e4880932-1fb7-4507-8eb2-b0bf84232e5a
+langcode: en
+status: true
+dependencies:
+  module:
+    - arvestbank_ads
+    - cohesion
+  theme:
+    - arvestbank_theme
+id: adblockmaincontent
+theme: arvestbank_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: ad_block_main
+settings:
+  id: ad_block_main
+  label: 'Ad Block - Main Content'
+  provider: arvestbank_ads
+  label_display: visible
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

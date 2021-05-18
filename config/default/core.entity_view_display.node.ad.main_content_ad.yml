@@ -1,9 +1,9 @@
-uuid: 1b655f1f-c492-4cd4-b25c-1c745c4732a8
+uuid: 6a6d1131-874b-42a2-abf7-23ced9b72853
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.main_content_ad
     - field.field.node.ad.body
     - field.field.node.ad.field_ad_alternate
     - field.field.node.ad.field_ad_content_image
@@ -12,35 +12,27 @@ dependencies:
     - field.field.node.ad.field_image
     - node.type.ad
   module:
-    - text
+    - arvestbank_ads
     - user
-id: node.ad.teaser
+id: node.ad.main_content_ad
 targetEntityType: node
 bundle: ad
-mode: teaser
+mode: main_content_ad
 content:
-  body:
+  field_ad_content_image:
+    type: ad_formatter
+    weight: 106
+    region: content
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
     settings:
-      trim_length: 600
+      ad_style: main
     third_party_settings: {  }
-    region: content
-  content_moderation_control:
-    weight: -20
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
 hidden:
+  body: true
+  content_moderation_control: true
   field_ad_alternate: true
-  field_ad_content_image: true
   field_ad_nav_image: true
   field_cta: true
   field_image: true
+  links: true
   search_api_excerpt: true

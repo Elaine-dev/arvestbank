@@ -1,0 +1,25 @@
+uuid: e7d3d065-365c-4506-92b7-5dd1a3567957
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ad_alternate
+    - node.type.ad
+id: node.ad.field_ad_alternate
+field_name: field_ad_alternate
+entity_type: node
+bundle: ad
+label: 'Alt Ad'
+description: 'Select another ad to appear in the sidebar, if the CTA link for the ad to display matches the current path.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: ads
+      display_name: entity_reference_2
+      arguments: {  }
+field_type: entity_reference

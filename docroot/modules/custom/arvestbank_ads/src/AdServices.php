@@ -35,8 +35,10 @@ class AdServices {
       'business/protect' => 'field_ad_side_b_protect',
       'personal/bank/credit-cards' => 'field_ad_side_cc_personal',
       'business/borrow/credit-cards' => 'field_ad_side_cc_business',
-      // '' => 'field_ad_side_cc_manage',
-      // '' => 'field_ad_side_cc_protect',
+      'contact/credit-cards' => 'field_ad_side_cc_manage',
+      'personal/bank/credit-cards/dispute' => 'field_ad_side_cc_manage',
+      'personal/bank/credit-cards/visa-checkout' => 'field_ad_side_cc_protect',
+      'personal/bank/credit-cards/visa-purchase-alerts' => 'field_ad_side_cc_protect',
       'personal/borrow/home-loans' => 'field_ad_side_hl_get_started',
       'personal/borrow/home-loans/mortgage-programs' => 'field_ad_side_hl_lending_options',
       'personal/borrow/consumer-loans' => 'field_ad_side_hl_lending_options',
@@ -51,14 +53,21 @@ class AdServices {
       'personal/invest/manage' => 'field_ad_side_it_investing',
       'personal/invest/insurance' => 'field_ad_side_it_insurance',
       'personal/invest/trust-and-estate-services' => 'field_ad_side_it_trust_estate',
+      'about' => 'field_ad_side_about',
+      'contact' => 'field_ad_side_contact',
+      'education-center' => 'field_ad_side_education_center',
+      'documents-and-resources' => 'field_ad_side_docs_resources',
     ];
 
   }
 
   /**
+   * Set array of ad styles.
+   *
    * @return array
+   *   styles.
    */
-  public function adStyleOptions() {
+  public function adStyleOptions(): array {
     return [
       'sidebar' => 'Sidebar',
       'navigation' => 'Navigation',
