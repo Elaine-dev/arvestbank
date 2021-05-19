@@ -58,10 +58,10 @@ class SaveInWebtools extends WebformHandlerBase {
   /**
    * {@inheritdoc}
    */
-  public function submitForm(array &$form, FormStateInterface $form_state, WebformSubmissionInterface $webform_submission) {
+  public function confirmForm(array &$form, FormStateInterface $form_state, WebformSubmissionInterface $webform_submission) {
 
     // Build the form data to save.
-    $xmlData = $this->buildFormDataXml($this->configuration['webtools_form_name'], $form_state, $form);
+    $xmlData = $this->buildFormDataXml($this->configuration['webtools_form_name'], $form_state);
 
     // Build the Guzzle request options.
     $requestOptions = [
@@ -77,19 +77,26 @@ class SaveInWebtools extends WebformHandlerBase {
   }
 
   /**
+   * {@inheritdoc}
+   */
+  public function submitForm(array &$form, FormStateInterface $form_state, WebformSubmissionInterface $webform_submission) {
+
+  }
+
+  /**
    * Populates an xml request from a submitted form state.
    *
    * @param string $formName
    *   The webtools api form name.
    * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The form state containing submitted values.
-   * @param array $form
-   *   The form that was submitted, used here to get human field names.
    *
    * @return string
    *   An xml string to be sent for storage in the webtool endpoint.
+   *
+   * @throws \DOMException
    */
-  private function buildFormDataXml(string $formName, FormStateInterface $form_state, array $form) {
+  private function buildFormDataXml(string $formName, FormStateInterface $form_state) {
 
     // Get submitted form values.
     $submittedValues = $form_state->cleanValues()->getValues();
@@ -235,14 +242,30 @@ class SaveInWebtools extends WebformHandlerBase {
     // Add fields container to xml.
     $requestData['fields']['field'] = [];
 
+    // Get fields on webform containing labels.
+    $webformFields = $form_state->getFormObject()->getEntity()->getWebform()->getElementsInitializedAndFlattened();
+
     // Loop over submitted form fields.
     foreach ($submittedValues as $fieldName => $fieldValue) {
+
+      // If this is a normal field.
+      if (isset($webformFields[$fieldName]['#title'])) {
+        // Get label for field.
+        $fieldLabel = $webformFields[$fieldName]['#title'];
+      }
+      // If this is non-standard field (didn't encounter).
+      else {
+        // Make a label from the field name.
+        $fieldLabel = ucwords(str_replace('_', ' ', $fieldName));
+      }
+
       // Add form field to xml.
       $requestData['fields']['field'][] = [
-        'name' => $fieldName,
-        'label' => $form['elements'][$fieldName]['#title'],
+        'name'  => $fieldName,
+        'label' => $fieldLabel,
         'value' => $fieldValue,
       ];
+
     }
 
     $xmlConverterObject = new ArrayToXml($requestData, 'request');
