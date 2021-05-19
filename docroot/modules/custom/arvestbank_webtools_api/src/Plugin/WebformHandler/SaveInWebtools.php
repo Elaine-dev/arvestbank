@@ -61,7 +61,7 @@ class SaveInWebtools extends WebformHandlerBase {
   public function submitForm(array &$form, FormStateInterface $form_state, WebformSubmissionInterface $webform_submission) {
 
     // Build the form data to save.
-    $xmlData = $this->buildFormDataXml($this->configuration['webtools_form_name'], $form_state);
+    $xmlData = $this->buildFormDataXml($this->configuration['webtools_form_name'], $form_state, $form);
 
     // Build the Guzzle request options.
     $requestOptions = [
@@ -83,11 +83,16 @@ class SaveInWebtools extends WebformHandlerBase {
    *   The webtools api form name.
    * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The form state containing submitted values.
+   * @param array $form
+   *   The form that was submitted, used here to get human field names.
    *
    * @return string
    *   An xml string to be sent for storage in the webtool endpoint.
    */
-  private function buildFormDataXml(string $formName, FormStateInterface $form_state) {
+  private function buildFormDataXml(string $formName, FormStateInterface $form_state, array $form) {
+
+    // Get submitted form values.
+    $submittedValues = $form_state->cleanValues()->getValues();
 
     // Get form storage.
     $storage = $form_state->getStorage();
@@ -136,8 +141,112 @@ class SaveInWebtools extends WebformHandlerBase {
       ],
     ];
 
-    // Return xml string derived from our array.
-    return ArrayToXml::convert($requestData, 'request');
+    // Track if we've settled on the name we'll send.
+    $nameFieldAdded = FALSE;
+
+    // If we have a first name field set.
+    if (
+      isset($this->configuration['first_name_field_machine_name'])
+      && $this->configuration['first_name_field_machine_name']
+      && isset($submittedValues[$this->configuration['first_name_field_machine_name']])
+    ) {
+      // Add first name to xml.
+      $requestData['meta']['meta'][] = [
+        'name'  => 'firstName',
+        'value' => $submittedValues[$this->configuration['first_name_field_machine_name']],
+      ];
+      // Indicate not to use the full name functionality.
+      $nameFieldAdded = TRUE;
+    }
+
+    // If we have a last name field set.
+    if (
+      isset($this->configuration['last_name_field_machine_name'])
+      && $this->configuration['last_name_field_machine_name']
+      && isset($submittedValues[$this->configuration['last_name_field_machine_name']])
+    ) {
+      // Add first name to xml.
+      $requestData['meta']['meta'][] = [
+        'name'  => 'lastName',
+        'value' => $submittedValues[$this->configuration['last_name_field_machine_name']],
+      ];
+      // Indicate not to use the full name functionality.
+      $nameFieldAdded = TRUE;
+    }
+
+    // If we have a full name field set and we didn't already set the name.
+    if (
+      isset($this->configuration['full_name_field_machine_name'])
+      && $this->configuration['full_name_field_machine_name']
+      && isset($submittedValues[$this->configuration['full_name_field_machine_name']])
+      && !$nameFieldAdded
+    ) {
+
+      // Get array of words in the name field.
+      $nameParts = explode(
+        ' ',
+        $submittedValues[$this->configuration['full_name_field_machine_name']]
+      );
+
+      // If there's only one word use that as the first name.
+      if (count($nameParts) === 1) {
+        // Add first name to xml.
+        $requestData['meta']['meta'][] = [
+          'name'  => 'firstName',
+          'value' => array_pop($nameParts),
+        ];
+      }
+      // If we have more than one name part.
+      else {
+        // Get the index of the final name part.
+        $finalNamePartIndex = array_key_last($nameParts);
+        // Use the final name part as the last name.
+        $lastName = $nameParts[$finalNamePartIndex];
+        // Remove the final name part from the name parts array.
+        unset($nameParts[$finalNamePartIndex]);
+        // Use the rest of the name parts as the first name.
+        $firstName = implode(' ', $nameParts);
+        // Add first name to xml.
+        $requestData['meta']['meta'][] = [
+          'name'  => 'firstName',
+          'value' => $firstName,
+        ];
+        // Add last name to xml.
+        $requestData['meta']['meta'][] = [
+          'name'  => 'lastName',
+          'value' => $lastName,
+        ];
+      }
+    }
+
+    // If we have an email field set.
+    if (
+      isset($this->configuration['email_field_machine_name'])
+      && $this->configuration['email_field_machine_name']
+      && isset($submittedValues[$this->configuration['email_field_machine_name']])
+    ) {
+      // Add first name to xml.
+      $requestData['meta']['meta'][] = [
+        'name'  => 'email',
+        'value' => $submittedValues[$this->configuration['email_field_machine_name']],
+      ];
+    }
+
+    // Add fields container to xml.
+    $requestData['fields']['field'] = [];
+
+    // Loop over submitted form fields.
+    foreach ($submittedValues as $fieldName => $fieldValue) {
+      // Add form field to xml.
+      $requestData['fields']['field'][] = [
+        'name' => $fieldName,
+        'label' => $form['elements'][$fieldName]['#title'],
+        'value' => $fieldValue,
+      ];
+    }
+
+    $xmlConverterObject = new ArrayToXml($requestData, 'request');
+    return $xmlConverterObject->prettify()->dropXmlDeclaration()->toXml();
 
   }
 
