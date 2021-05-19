@@ -48,6 +48,10 @@ class SaveInWebtools extends WebformHandlerBase {
   public function defaultConfiguration() {
     return [
       'webtools_form_name' => '',
+      'first_name_field_machine_name' => '',
+      'last_name_field_machine_name' => '',
+      'full_name_field_machine_name' => '',
+      'email_field_machine_name' => '',
     ];
   }
 
@@ -85,12 +89,49 @@ class SaveInWebtools extends WebformHandlerBase {
    */
   private function buildFormDataXml(string $formName, FormStateInterface $form_state) {
 
+    // Get form storage.
+    $storage = $form_state->getStorage();
+
+    // Ensure original form page referer is set.
+    if (!isset($storage['_arvestbank_webtools__referrer'])) {
+      // We don't know the referer to the form page, so use null.
+      $storage['_arvestbank_webtools__referrer'] = '';
+    }
+
+    // Get referer for this request which should be the page form is on.
+    $formPageUrl = '';
+    if (isset($_SERVER['HTTP_REFERER'])) {
+      $formPageUrl = $_SERVER['HTTP_REFERER'];
+    }
+
     // Base form data array.
     $requestData = [
       'meta' => [
         'meta' => [
-          'name'  => 'formName',
-          'value' => $formName,
+          [
+            'name'  => 'formName',
+            'value' => $formName,
+          ],
+          [
+            'name'  => 'datetime',
+            'value' => date('Y-m-d\TH:i:s.v', time()),
+          ],
+          [
+            'name'  => 'formUrl',
+            'value' => $formPageUrl,
+          ],
+          [
+            'name'  => 'referer',
+            'value' => $storage['_arvestbank_webtools__referrer'],
+          ],
+          [
+            'name'  => 'ipaddress',
+            'value' => $_SERVER['REMOTE_ADDR'],
+          ],
+          [
+            'name'  => 'userAgent',
+            'value' => $_SERVER['HTTP_USER_AGENT'],
+          ],
         ],
       ],
     ];
@@ -114,6 +155,38 @@ class SaveInWebtools extends WebformHandlerBase {
       '#required'      => TRUE,
     ];
 
+    // Add field for first name field machine name.
+    $form['first_name_field_machine_name'] = [
+      '#type'          => 'textfield',
+      '#title'         => $this->t('First Name Field'),
+      '#description'   => $this->t('If this form contains a field for first name enter the machine name of that field here.<br/>This field needs to be sent to the API differently.'),
+      '#default_value' => $this->configuration['first_name_field_machine_name'],
+    ];
+
+    // Add field for last name field machine name.
+    $form['last_name_field_machine_name'] = [
+      '#type'          => 'textfield',
+      '#title'         => $this->t('Last Name Field'),
+      '#description'   => $this->t('If this form contains a field for last name enter the machine name of that field here.<br/>This field needs to be sent to the API differently.'),
+      '#default_value' => $this->configuration['last_name_field_machine_name'],
+    ];
+
+    // Add field for full name field machine name.
+    $form['full_name_field_machine_name'] = [
+      '#type'          => 'textfield',
+      '#title'         => $this->t('Full Name Field'),
+      '#description'   => $this->t('If this form contains a field for full name enter the machine name of that field here.<br/>This field needs to be sent to the API differently.'),
+      '#default_value' => $this->configuration['full_name_field_machine_name'],
+    ];
+
+    // Add field for email field machine name.
+    $form['email_field_machine_name'] = [
+      '#type'          => 'textfield',
+      '#title'         => $this->t('Email Field'),
+      '#description'   => $this->t('If this form contains a field for email enter the machine name of that field here.<br/>This field needs to be sent to the API differently.'),
+      '#default_value' => $this->configuration['email_field_machine_name'],
+    ];
+
     return $form;
   }
 
@@ -121,10 +194,18 @@ class SaveInWebtools extends WebformHandlerBase {
    * {@inheritdoc}
    */
   public function submitConfigurationForm(array &$form, FormStateInterface $form_state) {
+
     // Run parent submit config form functionality.
     parent::submitConfigurationForm($form, $form_state);
-    // Save our configuration.
-    $this->configuration['webtools_form_name'] = $form_state->getValue('webtools_form_name');
+
+    // Get the custom config fields for this webform handler.
+    $customFields = $this->defaultConfiguration();
+    // Loop over our custom fields.
+    foreach ($customFields as $customFieldKey => $customFieldDefultValue) {
+      // Save our configuration.
+      $this->configuration[$customFieldKey] = $form_state->getValue($customFieldKey);
+    }
+
   }
 
 }
