@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.stage_page.body
     - field.field.node.stage_page.field_block_button
     - field.field.node.stage_page.field_block_title
+    - field.field.node.stage_page.field_cta_text
     - field.field.node.stage_page.field_icon_four
     - field.field.node.stage_page.field_icon_four_text
     - field.field.node.stage_page.field_icon_one
@@ -88,6 +89,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_cta_text:
+    weight: 145
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_icon_four:
     type: entity_reference_entity_view
