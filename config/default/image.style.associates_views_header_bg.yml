@@ -1,0 +1,14 @@
+uuid: 64294d22-7cd2-4ddb-bd7e-9573d0f057e6
+langcode: en
+status: true
+dependencies: {  }
+name: associates_views_header_bg
+label: 'Associates Views Header BG'
+effects:
+  f13ce521-c978-4cd5-ad31-c4a35be4fe2a:
+    uuid: f13ce521-c978-4cd5-ad31-c4a35be4fe2a
+    id: image_resize
+    weight: 1
+    data:
+      width: 700
+      height: 220
