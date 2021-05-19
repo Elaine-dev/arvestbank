@@ -2,6 +2,8 @@
 
 namespace Drupal\arvestbank_webtools_api\Plugin\WebformHandler;
 
+use Drupal\Component\Utility\Xss;
+use Drupal\Core\Render\Markup;
 use Drupal\webform\Plugin\WebformHandlerBase;
 use Drupal\webform\WebformSubmissionInterface;
 use Drupal\Core\Form\FormStateInterface;
@@ -72,7 +74,13 @@ class SaveInWebtools extends WebformHandlerBase {
     ];
 
     // Make request.
-    $this->webtoolsClient->makeFormSaveRequest($requestOptions);
+    $requestSuccess = $this->webtoolsClient->makeFormSaveRequest($requestOptions);
+
+    // If sending the webform failed.
+    if (!$requestSuccess) {
+      // Alert user of error, error logged in makeFormSaveRequest().
+      $this->messenger()->addError('There was an error processing your submission, please contact support.', FALSE);
+    }
 
   }
 
@@ -257,6 +265,14 @@ class SaveInWebtools extends WebformHandlerBase {
       else {
         // Make a label from the field name.
         $fieldLabel = ucwords(str_replace('_', ' ', $fieldName));
+      }
+
+      // Deal with multivalue fields.
+      if (
+        is_array($fieldValue)
+        && is_numeric(array_keys($fieldValue)[0])
+      ) {
+        $fieldValue = ['value' => $fieldValue];
       }
 
       // Add form field to xml.
