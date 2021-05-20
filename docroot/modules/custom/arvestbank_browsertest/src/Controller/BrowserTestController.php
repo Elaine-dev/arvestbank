@@ -49,6 +49,12 @@ class BrowserTestController extends ControllerBase {
       ],
     ];
 
+    $return[] = [
+      '#type' => 'webform',
+      '#webform' => 'send_browser_diagnostics',
+      //'#default_data' => ['name' => 'Custom Name'],
+    ];
+
     return $return;
 
   }

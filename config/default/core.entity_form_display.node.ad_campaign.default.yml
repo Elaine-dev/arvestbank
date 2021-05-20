@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.ad_campaign.field_ad_nav_home_loans
     - field.field.node.ad_campaign.field_ad_nav_investments
     - field.field.node.ad_campaign.field_ad_nav_personal
+    - field.field.node.ad_campaign.field_ad_side_about
     - field.field.node.ad_campaign.field_ad_side_b_bank
     - field.field.node.ad_campaign.field_ad_side_b_borrow
     - field.field.node.ad_campaign.field_ad_side_b_manage
@@ -17,6 +18,9 @@ dependencies:
     - field.field.node.ad_campaign.field_ad_side_cc_manage
     - field.field.node.ad_campaign.field_ad_side_cc_personal
     - field.field.node.ad_campaign.field_ad_side_cc_protect
+    - field.field.node.ad_campaign.field_ad_side_contact
+    - field.field.node.ad_campaign.field_ad_side_docs_resources
+    - field.field.node.ad_campaign.field_ad_side_education_center
     - field.field.node.ad_campaign.field_ad_side_hl_existing_loan
     - field.field.node.ad_campaign.field_ad_side_hl_get_started
     - field.field.node.ad_campaign.field_ad_side_hl_learn_more
@@ -63,17 +67,19 @@ third_party_settings:
         - group_ad_side_credit_cards
         - group_home_loans
         - group_ad_side_investments_trusts
+        - group_top_links
+        - group_footer_links
       parent_name: ''
       weight: 13
       format_type: details
       region: content
       format_settings:
+        description: ''
+        required_fields: true
         id: ''
         classes: ''
-        description: ''
         open: false
-        required_fields: true
-      label: 'Side Navigation'
+      label: Sidebar
     group_personal:
       children:
         - field_ad_side_p_bank
@@ -159,6 +165,36 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Investments & Trusts'
+    group_top_links:
+      children:
+        - field_ad_side_about
+        - field_ad_side_contact
+      parent_name: group_side_navigation
+      weight: 25
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Top Links'
+    group_footer_links:
+      children:
+        - field_ad_side_education_center
+        - field_ad_side_docs_resources
+      parent_name: group_side_navigation
+      weight: 26
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Footer Links'
 id: node.ad_campaign.default
 targetEntityType: node
 bundle: ad_campaign
@@ -202,6 +238,12 @@ content:
     region: content
   field_ad_nav_personal:
     weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_ad_side_about:
+    weight: 15
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -250,6 +292,24 @@ content:
     region: content
   field_ad_side_cc_protect:
     weight: 37
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_ad_side_contact:
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_ad_side_docs_resources:
+    weight: 18
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_ad_side_education_center:
+    weight: 17
     settings: {  }
     third_party_settings: {  }
     type: options_select

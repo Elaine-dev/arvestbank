@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.ad.body
+    - field.field.node.ad.field_ad_alternate
     - field.field.node.ad.field_ad_content_image
     - field.field.node.ad.field_ad_nav_image
     - field.field.node.ad.field_cta
@@ -37,6 +38,7 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_ad_alternate: true
   field_ad_content_image: true
   field_ad_nav_image: true
   field_cta: true

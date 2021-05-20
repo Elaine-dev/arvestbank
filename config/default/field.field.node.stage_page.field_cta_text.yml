@@ -1,0 +1,21 @@
+uuid: 569fd10c-7aa6-4ca4-b838-ecdc26072b5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cta_text
+    - node.type.stage_page
+  module:
+    - text
+id: node.stage_page.field_cta_text
+field_name: field_cta_text
+entity_type: node
+bundle: stage_page
+label: 'CTA Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

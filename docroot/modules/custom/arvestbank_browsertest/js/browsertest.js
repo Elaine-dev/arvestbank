@@ -128,7 +128,24 @@
 
   }
 
+  // Store the browsertest details in a variable.
+  let browsertest_details = browsertest.displayDetails();
+
   // Replace the div id="browsertest" with the complete browser test details.
-  $('#browsertest').html(browsertest.displayDetails());
+  $('#browsertest').html(browsertest_details);
+
+  // Replace the hidden div for the browsertest form, if available.
+  let webform_diagnostics_field = $('#webform-submission-send-browser-diagnostics-add-form input[name="browser_diagnostics"]');
+  if (webform_diagnostics_field.length) {
+    let browsertest_details_txt = browsertest_details;
+    // Puts some nice carraige returns in.
+    browsertest_details_txt = browsertest_details_txt.replaceAll('<div class="browsertest-row">', "\r\n");
+    // Colon after label.
+    browsertest_details_txt = browsertest_details_txt.replaceAll('</b></span>', ": ");
+    // Strip remaining HTML.
+    browsertest_details_txt = browsertest_details_txt.replace(/(<([^>]+)>)/gi, "");
+    // Set the webform value.
+    webform_diagnostics_field.val(browsertest_details_txt);
+  }
 
 })(jQuery, Drupal, drupalSettings);
