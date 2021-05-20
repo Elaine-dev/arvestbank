@@ -7,7 +7,7 @@ use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
- * Class SearchNotFoundEventSubscriber for 404 message.
+ * Displays status error message for a 404.
  *
  * @package Drupal\arvestbank_search\EventSubscriber
  */
