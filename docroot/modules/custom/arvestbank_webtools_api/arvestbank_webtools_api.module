@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * @file
+ * Hooks related to the webtools api.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Saves referer to the page containing the form to the form state.
+ *
+ * The labyrinthine process here is due to form_state storage not persisting if
+ * set in initial form load.  And original referer not being available when
+ * called again on submission.
+ *
+ * Implements hook_entity_prepare_form().
+ */
+function arvestbank_webtools_api_entity_prepare_form(EntityInterface $entity, $operation, FormStateInterface $form_state) {
+
+  // If this is an initial webform load.
+  if (
+    $entity->getEntityTypeId() == 'webform_submission'
+    && !count($form_state->getUserInput())
+  ) {
+    // Set Referer in session.
+    if (isset($_SERVER['HTTP_REFERER'])) {
+      $_SESSION['_arvestbank_webtools__referrers'][$entity->bundle()] = $_SERVER['HTTP_REFERER'];
+    }
+    else {
+      $_SESSION['_arvestbank_webtools__referrers'][$entity->bundle()] = '';
+    }
+  }
+
+  // If this is a webform being submitted and we have the original referrer.
+  elseif (
+    $entity->getEntityTypeId() == 'webform_submission'
+    && count($form_state->getUserInput())
+    && isset($_SESSION['_arvestbank_webtools__referrers'][$entity->bundle()])
+  ) {
+    // Store referrer in form state.
+    $form_state->set('_arvestbank_webtools__referrer', $_SESSION['_arvestbank_webtools__referrers'][$entity->bundle()]);
+    // Remove referrer from session.
+    unset($_SESSION['_arvestbank_webtools__referrers'][$entity->bundle()]);
+  }
+
+}
