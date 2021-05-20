@@ -7,11 +7,10 @@ dependencies:
     - field.field.media.acquia_dam_document.field_acquiadam_asset_doc
     - field.field.media.acquia_dam_document.field_acquiadam_asset_id
     - field.field.media.acquia_dam_document.field_document_and_resource_cate
+    - field.field.media.acquia_dam_document.field_hide_from_list
     - field.field.media.acquia_dam_document.field_link
     - media.type.acquia_dam_document
-    - workflows.workflow.editorial
   module:
-    - content_moderation
     - link
     - path
 _core:
@@ -22,7 +21,7 @@ bundle: acquia_dam_document
 mode: default
 content:
   field_acquiadam_asset_id:
-    weight: 2
+    weight: 1
     settings:
       placeholder: ''
     third_party_settings: {  }
@@ -33,6 +32,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
+  field_hide_from_list:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_link:
     weight: 4
