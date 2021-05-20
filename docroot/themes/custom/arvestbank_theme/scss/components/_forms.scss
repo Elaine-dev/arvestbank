@@ -253,55 +253,67 @@
 //     z-index: 50;
 //   }
 
+// REM calculator
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
 
 .coh-style-slider-left-side-blocks h2 {
-    padding-left: 20px;
+    padding-left: calculateRem(20px);
     // Remove font size
     font-size: 19px;
 }
 
-
+// Target top login
 .login-wrapper {
-    // Max-width 1170px
-    @media screen and (max-width: 73.125em) {
+    // Max-width 1169px
+    @media screen and (max-width: 73.0625rem) {
         // flex: 1 1 20%;
         .coh-style-login-blocks .chosen-container-single .chosen-single {
-            width: 160px;
+            width: calculateRem(160px);
         }
     }
 
     // Max-width 949px
     @media screen and (max-width: 59.3125rem) {
-        // position: absolute; // Update in SS
-        // .coh-style-login-blocks .chosen-container-single .chosen-single {
-        //     width: 120px;
-        // }
+        .coh-style-login-blocks .chosen-container-single {
+            border: none;
+        }
     }
 
     // Max-width 564px
     @media screen and (max-width: 35.25em) {
         .coh-style-login-blocks .chosen-container-single .chosen-single {
-            width: 120px;
+            width: calculateRem(120px);
             background-image: none;
             span {
                 margin-left: 0; 
-                margin-right: 15px;
+                margin-right: calculateRem(15px);
             }
             div {
-                right: 5px;
+                right: calculateRem(5px);
+            }
+
+            &.chosen-single-with-deselect {
+                abbr {
+                    right: calculateRem(2px);
+                }
             }
         }
     }
 
+    // Vertically stretch and center select list
     div,
     form {
         display: flex;
         flex: 1 1 auto;
     }
+
+    // Cancel flex in the results
     div.results-container,
     div.results-container div {
         display: block;
-        // width: 100%;
         flex: none;
     }
 
@@ -317,86 +329,45 @@
 }
 
 .coh-style-login-blocks {
-
     .sidebar-select,
     .sidebar-container {
-        padding: 10px 20px 0px 20px;
+        padding: calculateRem(10px) calculateRem(20px) calculateRem(0px) calculateRem(20px);
     }
     .sidebar-container { 
-        padding-bottom: 15px;
+        padding-bottom: calculateRem(15px);
     }
-
     .results-container {
-        padding: 15px 10px;
-
+        padding: calculateRem(15px) calculateRem(10px);
         position: absolute;
         right: 0;
         top: 100%;
-        width: 280px;
+        width: calculateRem(280px);
         background: #00457c;
         background: rgba(0,69,124,0.8);
-        // z-index: 10000;
 
+        // Full opacity in small screens
         @media (max-width: 59.3125rem) {
-            & {
-                background: #00457c;
-                // background: rgba(0,69,124,1);
-            }
-        }
-        h3 {
-            color: #ffffff;
-            font-size: 18px;
-            font-weight: 500;
-            margin-top: 0;
-            line-height: 1.2;
+            background: #00457c;
         }
     }
 
-    .form-text,
-    input[type="text"],
-    input[type="password"]
-        {
-        font-size: 12px;
-        width: 100%;
-        padding: 0 0 0 10px;
-        background: #fff;
-        height: 35px;
-        color: #444;
-        border: none;
-        margin: 0 0 10px 0;
-        line-height: normal;
-        border-radius: 0;
-    }
-
-    .coh-style-blue-link-button {
-        border: 0;
-        border-radius: 0;
-        background: #001b44;
-        // padding: 10px 15px;
-        // background-color: rgb(0, 44, 92);
-        &:hover {
-            background: #002c5c;
-        }
-    }
-    
+    // Align link wrappers
     #edit-investments-wealth-links,
     #edit-investments-wealth-links--2,
     #edit-awm-client-point-links,
     #edit-awm-client-point-links--2 {
         position: absolute;
-        // left: 100px;
-        right: 20px;
-        bottom: 10px;
+        right: calculateRem(20px);
+        bottom: calculateRem(10px);
     }
 
+    // Sidebar Chosen-specific styles
     .sidebar-select .chosen-container-single {
         border: 0;
 
         .chosen-single {
-            // height: 35px;
-            font-size: 1.125rem; // 18px
+            font-size: calculateRem(18px);
             line-height: 2.1;
-            // padding: 7px 10px;
             padding-top: 0;
             padding-bottom: 0;
             font-weight: 500;
@@ -407,6 +378,7 @@
         }
     }
 
+    // Chosen-specific styles
     .chosen-container-single {
         flex: 1 1 auto;
         display: flex !important;
@@ -415,31 +387,24 @@
         border-color: #426386;
 
         .chosen-single {
-            // align-self: center; // Vertically center
             text-transform: uppercase;
             flex: 1 1 auto;
             display: flex;
-            // max-width: 220px;
-            width: 220px;
+            width: calculateRem(220px);
             color: #fff;
             border: none;
             border-radius: 0;
-            padding: 15px 10px;
+            padding: calculateRem(15px) calculateRem(10px);
             height: 100%;
             font-size: 0.75rem;
             line-height: 1.0125rem;
-            // padding: 12px 10px;
-            // height: 46px;
-            // font-size: 0.75rem;
-            // line-height: 1.35rem;
             font-weight: 600;
             box-shadow: none;
             // background: url(/themes/custom/arvestbank_theme/images/icon-lock.png) left 0.75rem center no-repeat, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='2 2 12 12'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='square' stroke-linejoin='square' stroke-width='3' d='M2 5l6 6 6-6'/%3e%3c/svg%3e") right 1.25rem center no-repeat;
             // background: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cpath fill='%23ffffff' d='m3,9h1V6a5,5 0 0,1 12,0V9h1v11H3M14,9V6a4,4 0 1,0-8,0v3'/%3E%3C/svg%3E%0A") left 1rem center no-repeat;
             // background-size: 1.375rem 1.25rem;
             background: #4178b4 url(../images/icon-lock.png) left 1rem center no-repeat;
-            background-size: 22px 20px;
-            // background-color: #4178b4;
+            background-size: calculateRem(22px) calculateRem(20px);
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
@@ -449,13 +414,12 @@
                 color: #002c5c;
             }
             span {
-                margin: auto 40px auto 35px;
-                // white-space: normal;
+                margin: auto calculateRem(40px) auto calculateRem(35px);
             }
             div {
-                right: 16px;
-                width: 24px;
-
+                right: 1rem;
+                width: 1.5rem;
+                // SVG arrow
                 b {
                     background: none;
                     background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='2 2 12 12'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='square' stroke-linejoin='square' stroke-width='3' d='M2 5l6 7 6-7'/%3e%3c/svg%3e") center center no-repeat !important;
@@ -463,29 +427,17 @@
                 }
             }
 
-            // Display in 949px and below
-            @media screen and (max-width: 59.3125rem) {
-                // span {
-                //     margin-right: 0;
-                //     margin-left: 30px;
-                // }    
-                // div { 
-                //     display: none;
-                // }
-            }
-
+            // Replace default X and hide arrow
             &.chosen-single-with-deselect {
                 abbr {
-                    right: 12px;
+                    right: calculateRem(12px);
                     top: 0;
-                    // top: 11px;
-                    width: 24px;
+                    width: 1.5rem;
                     display: flex;
-                    // display: block;
                     height: 100%;
                     background: none !important;
                     color: #ffffff;
-                    font-size: 22px;
+                    font-size: calculateRem(22px);
                  
                     &:before {
                         align-self: center;
@@ -516,19 +468,15 @@
         }
 
         .chosen-drop {
-            width: 220px;
+            width: calculateRem(220px);
             right: 0;
             margin-top: 0;
             margin-right: -1px;
-            /* border-radius: 0 0 4px 4px; */
-            // background-clip: padding-box;
             background: #fff;
             color: #4879ad;
-            padding: 16px;
+            padding: 1rem;
             border: 3px solid #acc6e1;
             border-radius: 0;
-            // font-size: 0.75rem;
-            // line-height: 1.35;
         }
 
         .chosen-results {
@@ -538,17 +486,9 @@
         
             li {
                 margin: 0;
-                // padding: 5px 6px;
-                padding: 0 0 5px 0;
-                // list-style: none;
-                // line-height: 15px;
-                // word-wrap: break-word;
-                // -webkit-touch-callout: none;
-                // background: none;
-                // display: block;
+                padding: 0 0 calculateRem(5px) 0;
                 color: #4879ad;
                 line-height: 1.2;
-            
                 // &:first-child {
                 //     display:none; // Hide Log In To... 
                 // }
@@ -556,11 +496,6 @@
                     text-decoration: underline;
                     background: none;
                     color: #4879ad;
-
-                    // background-color: #3875d7;
-                    // background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #3875d7), color-stop(90%, #2a62bc));
-                    // background-image: linear-gradient(#3875d7 20%, #2a62bc 90%);
-                    // color: #fff;
                 }
                 &.result-selected {
                     text-decoration: none; 
