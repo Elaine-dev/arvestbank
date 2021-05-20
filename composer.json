@@ -78,6 +78,7 @@
         "drupal/simplesamlphp_auth": "^3.2",
         "drupal/sitemap": "^2.0@beta",
         "drupal/taxonomy_menu_ui": "^1.4",
+        "drupal/views_autosubmit": "^1.4",
         "drupal/views_block_filter_block": "^1.0",
         "drupal/webform": "^6.0",
         "drupal/workbench": "^1.3",
