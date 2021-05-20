@@ -14,7 +14,7 @@ entity_type: node
 bundle: landing_page
 label: Disclosure
 description: 'Select the disclosure that should appear in the footer.'
-required: false
+required: true
 translatable: true
 default_value:
   -
