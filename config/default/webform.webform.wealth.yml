@@ -204,4 +204,8 @@ handlers:
     weight: 0
     settings:
       webtools_form_name: wealth
+      first_name_field_machine_name: ''
+      last_name_field_machine_name: ''
+      full_name_field_machine_name: ''
+      email_field_machine_name: ''
 variants: {  }
