@@ -12,7 +12,7 @@ dependencies:
 id: globaldisclaimer
 theme: arvestbank_theme
 region: footer
-weight: 0
+weight: -19
 provider: null
 plugin: 'block_content:21b6e4b8-b57c-4621-b36a-fdfedb147766'
 settings:

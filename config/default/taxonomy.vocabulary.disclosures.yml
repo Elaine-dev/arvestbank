@@ -1,0 +1,14 @@
+uuid: 4d70c9da-66b8-4095-be72-de9d05ca9238
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Disclosures
+vid: disclosures
+description: 'Options for specific disclosures in the footer.'
+weight: 0
