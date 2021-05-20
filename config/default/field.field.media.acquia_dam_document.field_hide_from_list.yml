@@ -1,0 +1,23 @@
+uuid: da8a7f6e-8fa0-4ed7-b7d8-b0699c8873d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_hide_from_list
+    - media.type.acquia_dam_document
+id: media.acquia_dam_document.field_hide_from_list
+field_name: field_hide_from_list
+entity_type: media
+bundle: acquia_dam_document
+label: 'Hide From List'
+description: 'Hide this entity from the "Documents and Resources" page.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

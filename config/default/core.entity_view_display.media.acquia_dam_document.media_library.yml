@@ -8,6 +8,7 @@ dependencies:
     - field.field.media.acquia_dam_document.field_acquiadam_asset_doc
     - field.field.media.acquia_dam_document.field_acquiadam_asset_id
     - field.field.media.acquia_dam_document.field_document_and_resource_cate
+    - field.field.media.acquia_dam_document.field_hide_from_list
     - field.field.media.acquia_dam_document.field_link
     - image.style.thumbnail
     - media.type.acquia_dam_document
@@ -40,6 +41,7 @@ hidden:
   field_acquiadam_asset_doc: true
   field_acquiadam_asset_id: true
   field_document_and_resource_cate: true
+  field_hide_from_list: true
   field_link: true
   name: true
   search_api_excerpt: true

@@ -1,0 +1,5 @@
+services:
+  arvestbank_media_alias.route_subscriber:
+    class: 'Drupal\arvestbank_media_alias\Routing\RouteSubscriber'
+    tags:
+      - { name: 'event_subscriber' }
