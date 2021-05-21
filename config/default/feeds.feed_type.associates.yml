@@ -6,11 +6,11 @@ dependencies:
     - core.base_field_override.node.associate.status
     - core.base_field_override.node.associate.title
     - field.field.node.associate.body
-    - field.field.node.associate.field_appointment
     - field.field.node.associate.field_associate_id
     - field.field.node.associate.field_associate_image
     - field.field.node.associate.field_associate_type
     - field.field.node.associate.field_branch_nickname
+    - field.field.node.associate.field_coconut_appointment
     - field.field.node.associate.field_designation
     - field.field.node.associate.field_email
     - field.field.node.associate.field_fax_number
@@ -21,6 +21,7 @@ dependencies:
     - field.field.node.associate.field_nmls_number
     - field.field.node.associate.field_office_number
     - field.field.node.associate.field_private_banker_location
+    - field.field.node.associate.field_website
     - node.type.associate
   module:
     - feeds_tamper
@@ -36,6 +37,20 @@ third_party_settings:
         weight: 0
         label: Explode
         uuid: bb0e1df6-690a-43e5-bb3f-d3fdf0950c34
+      fd9bace4-d88a-4a97-8248-a8a0ec87241f:
+        text: '1'
+        plugin: rewrite
+        source: status
+        weight: 0
+        label: Rewrite
+        uuid: fd9bace4-d88a-4a97-8248-a8a0ec87241f
+      106028f8-1831-47b3-91aa-98d6ec00341c:
+        text: 'SCHEDULE AN APPOINTMENT'
+        plugin: rewrite
+        source: coconut_text
+        weight: 0
+        label: Rewrite
+        uuid: 106028f8-1831-47b3-91aa-98d6ec00341c
 id: associates
 label: Associates
 description: ''
@@ -149,6 +164,22 @@ custom_sources:
     label: status
     value: status
     machine_name: status
+  coconut_appointment:
+    label: coconut_appointment
+    value: coconut_appointment
+    machine_name: coconut_appointment
+  coconut_text:
+    label: coconut_text
+    value: coconut_text
+    machine_name: coconut_text
+  associate_bio:
+    label: associate_bio
+    value: associate_bio
+    machine_name: associate_bio
+  associate_bio_text:
+    label: associate_bio_text
+    value: associate_bio_text
+    machine_name: associate_bio_text
 mappings:
   -
     target: title
@@ -249,12 +280,6 @@ mappings:
     settings:
       language: null
   -
-    target: field_appointment
-    map:
-      value: appointment
-    settings:
-      language: null
-  -
     target: field_associate_id
     map:
       value: id
@@ -285,5 +310,19 @@ mappings:
     target: status
     map:
       value: status
+    settings:
+      language: null
+  -
+    target: field_coconut_appointment
+    map:
+      uri: coconut_appointment
+      title: coconut_text
+    settings:
+      language: null
+  -
+    target: field_website
+    map:
+      uri: associate_bio
+      title: associate_bio_text
     settings:
       language: null
