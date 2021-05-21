@@ -342,49 +342,15 @@
   font-size: 19px;
 }
 
-@media screen and (max-width: 73.0625rem) {
-  .login-wrapper .coh-style-login-blocks .chosen-container-single .chosen-single {
-    width: 10rem;
-  }
-}
-
-@media screen and (max-width: 59.3125rem) {
-  .login-wrapper .coh-style-login-blocks .chosen-container-single {
-    border: none;
-  }
-}
-
-@media screen and (max-width: 35.25em) {
-  .login-wrapper .coh-style-login-blocks .chosen-container-single .chosen-single {
-    width: 7.5rem;
-    background-image: none;
-  }
-  .login-wrapper .coh-style-login-blocks .chosen-container-single .chosen-single span {
-    margin-left: 0;
-    margin-right: 0.9375rem;
-  }
-  .login-wrapper .coh-style-login-blocks .chosen-container-single .chosen-single div {
-    right: 0.3125rem;
-  }
-  .login-wrapper .coh-style-login-blocks .chosen-container-single .chosen-single.chosen-single-with-deselect abbr {
-    right: 0.125rem;
-  }
-}
-
-.login-wrapper div,
-.login-wrapper form {
+.login-wrapper .coh-block,
+.login-wrapper .block,
+.login-wrapper form,
+.login-wrapper .top-select {
   display: flex;
   flex: 1 1 auto;
 }
 
-.login-wrapper div.results-container,
-.login-wrapper div.results-container div {
-  display: block;
-  flex: none;
-}
-
-.login-wrapper #edit-login-select-non-prod,
-.login-wrapper #edit-login-select {
+.coh-style-login-blocks select {
   display: visible;
   position: absolute;
   width: 0px;
@@ -393,15 +359,15 @@
 }
 
 .coh-style-login-blocks .sidebar-select,
-.coh-style-login-blocks .sidebar-container {
+.coh-style-login-blocks .sidebar-login-results {
   padding: 0.625rem 1.25rem 0rem 1.25rem;
 }
 
-.coh-style-login-blocks .sidebar-container {
+.coh-style-login-blocks .sidebar-login-results {
   padding-bottom: 0.9375rem;
 }
 
-.coh-style-login-blocks .results-container {
+.coh-style-login-blocks .login-results {
   padding: 0.9375rem 0.625rem;
   position: absolute;
   right: 0;
@@ -412,8 +378,15 @@
 }
 
 @media (max-width: 59.3125rem) {
-  .coh-style-login-blocks .results-container {
+  .coh-style-login-blocks .login-results {
+    margin-top: 0.125rem;
     background: #00457c;
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .coh-style-login-blocks .login-results {
+    width: 100vw;
   }
 }
 
@@ -421,26 +394,8 @@
 .coh-style-login-blocks #edit-investments-wealth-links--2,
 .coh-style-login-blocks #edit-awm-client-point-links,
 .coh-style-login-blocks #edit-awm-client-point-links--2 {
-  position: absolute;
-  right: 1.25rem;
-  bottom: 0.625rem;
-}
-
-.coh-style-login-blocks .sidebar-select .chosen-container-single {
-  border: 0;
-}
-
-.coh-style-login-blocks .sidebar-select .chosen-container-single .chosen-single {
-  font-size: 1.125rem;
-  line-height: 2.1;
-  padding-top: 0;
-  padding-bottom: 0;
-  font-weight: 500;
-}
-
-.coh-style-login-blocks .sidebar-select .chosen-container-single .chosen-drop {
-  width: 100%;
-  left: 0;
+  float: right;
+  margin-top: -0.25rem;
 }
 
 .coh-style-login-blocks .chosen-container-single {
@@ -563,6 +518,52 @@
 
 .coh-style-login-blocks .chosen-container-single .chosen-results li.result-selected {
   text-decoration: none;
+}
+
+.coh-style-login-blocks .sidebar-select .chosen-container-single {
+  border: 0;
+}
+
+.coh-style-login-blocks .sidebar-select .chosen-container-single .chosen-single {
+  font-size: 1.125rem;
+  line-height: 2.1;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-weight: 500;
+}
+
+.coh-style-login-blocks .sidebar-select .chosen-container-single .chosen-drop {
+  width: 100%;
+  left: 0;
+}
+
+@media screen and (max-width: 73.0625rem) {
+  .coh-style-login-blocks .top-select .chosen-container-single .chosen-single {
+    width: 10rem;
+  }
+}
+
+@media screen and (max-width: 59.3125rem) {
+  .coh-style-login-blocks .top-select .chosen-container-single .chosen-single {
+    border: none;
+  }
+}
+
+@media screen and (max-width: 35.25em) {
+  .coh-style-login-blocks .top-select .chosen-container-single .chosen-single {
+    width: 7.5rem;
+    background-image: none;
+  }
+  .coh-style-login-blocks .top-select .chosen-container-single .chosen-single span {
+    margin-left: 0;
+    margin-right: 0.9375rem;
+  }
+  .coh-style-login-blocks .top-select .chosen-container-single .chosen-single div {
+    right: 0.3125rem;
+  }
+  .coh-style-login-blocks .top-select .chosen-container-single .chosen-single.chosen-single-with-deselect abbr {
+    right: 0.125rem;
+  }
 }
 
 .node-preview-container {
