@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.stage_page.body
     - field.field.node.stage_page.field_block_button
     - field.field.node.stage_page.field_block_title
-    - field.field.node.stage_page.field_cta_text
     - field.field.node.stage_page.field_icon_four
     - field.field.node.stage_page.field_icon_four_text
     - field.field.node.stage_page.field_icon_one
@@ -20,30 +19,26 @@ dependencies:
     - field.field.node.stage_page.field_slide1_cta_color
     - field.field.node.stage_page.field_slide1_cta_link
     - field.field.node.stage_page.field_slide1_cta_position
-    - field.field.node.stage_page.field_slide1_cta_text_1
-    - field.field.node.stage_page.field_slide1_cta_text_2
     - field.field.node.stage_page.field_slide2_bg_position
     - field.field.node.stage_page.field_slide2_cta_color
     - field.field.node.stage_page.field_slide2_cta_link
     - field.field.node.stage_page.field_slide2_cta_position
-    - field.field.node.stage_page.field_slide2_cta_text_1
-    - field.field.node.stage_page.field_slide2_cta_text_2
     - field.field.node.stage_page.field_slide3_bg_position
     - field.field.node.stage_page.field_slide3_cta_color
     - field.field.node.stage_page.field_slide3_cta_link
     - field.field.node.stage_page.field_slide3_cta_position
-    - field.field.node.stage_page.field_slide3_cta_text_1
-    - field.field.node.stage_page.field_slide3_cta_text_2
     - field.field.node.stage_page.field_slide4_bg_position
     - field.field.node.stage_page.field_slide4_cta_color
     - field.field.node.stage_page.field_slide4_cta_link
     - field.field.node.stage_page.field_slide4_cta_position
-    - field.field.node.stage_page.field_slide4_cta_text_1
-    - field.field.node.stage_page.field_slide4_cta_text_2
     - field.field.node.stage_page.field_slide_four
+    - field.field.node.stage_page.field_slide_four_cta_text
     - field.field.node.stage_page.field_slide_one
+    - field.field.node.stage_page.field_slide_one_cta_text
     - field.field.node.stage_page.field_slide_three
+    - field.field.node.stage_page.field_slide_three_cta_text
     - field.field.node.stage_page.field_slide_two
+    - field.field.node.stage_page.field_slide_two_cta_text
     - field.field.node.stage_page.field_wordpress_articles
     - node.type.stage_page
   module:
@@ -89,13 +84,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
-  field_cta_text:
-    weight: 145
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
     region: content
   field_icon_four:
     type: entity_reference_entity_view
@@ -205,22 +193,6 @@ content:
     third_party_settings: {  }
     type: list_key
     region: content
-  field_slide1_cta_text_1:
-    weight: 19
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_slide1_cta_text_2:
-    weight: 20
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_slide2_bg_position:
     weight: 142
     label: hidden
@@ -253,22 +225,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_key
-    region: content
-  field_slide2_cta_text_1:
-    weight: 24
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_slide2_cta_text_2:
-    weight: 25
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
     region: content
   field_slide3_bg_position:
     weight: 143
@@ -303,22 +259,6 @@ content:
     third_party_settings: {  }
     type: list_key
     region: content
-  field_slide3_cta_text_1:
-    weight: 29
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_slide3_cta_text_2:
-    weight: 30
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_slide4_bg_position:
     weight: 144
     label: hidden
@@ -352,22 +292,6 @@ content:
     third_party_settings: {  }
     type: list_key
     region: content
-  field_slide4_cta_text_1:
-    weight: 34
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_slide4_cta_text_2:
-    weight: 35
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_slide_four:
     type: entity_reference_entity_view
     weight: 15
@@ -376,6 +300,13 @@ content:
       view_mode: full_width_slideshow
       link: false
     third_party_settings: {  }
+    region: content
+  field_slide_four_cta_text:
+    weight: 149
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_slide_one:
     type: entity_reference_entity_view
@@ -386,6 +317,13 @@ content:
       link: false
     third_party_settings: {  }
     region: content
+  field_slide_one_cta_text:
+    weight: 146
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_slide_three:
     type: entity_reference_entity_view
     weight: 12
@@ -395,6 +333,13 @@ content:
       link: false
     third_party_settings: {  }
     region: content
+  field_slide_three_cta_text:
+    weight: 148
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_slide_two:
     type: entity_reference_entity_view
     weight: 9
@@ -403,6 +348,13 @@ content:
       view_mode: full_width_slideshow
       link: false
     third_party_settings: {  }
+    region: content
+  field_slide_two_cta_text:
+    weight: 147
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_wordpress_articles:
     type: entity_reference_revisions_entity_view

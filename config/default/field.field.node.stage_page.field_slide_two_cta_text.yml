@@ -1,17 +1,17 @@
-uuid: 569fd10c-7aa6-4ca4-b838-ecdc26072b5a
+uuid: 8ad587a3-b4f5-4e8b-b551-7d456ffd9a98
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_cta_text
+    - field.storage.node.field_slide_two_cta_text
     - node.type.stage_page
   module:
     - text
-id: node.stage_page.field_cta_text
-field_name: field_cta_text
+id: node.stage_page.field_slide_two_cta_text
+field_name: field_slide_two_cta_text
 entity_type: node
 bundle: stage_page
-label: 'CTA Text'
+label: 'Slide Two CTA Text'
 description: ''
 required: false
 translatable: false

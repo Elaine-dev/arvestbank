@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.stage_page.body
     - field.field.node.stage_page.field_block_button
     - field.field.node.stage_page.field_block_title
-    - field.field.node.stage_page.field_cta_text
     - field.field.node.stage_page.field_icon_four
     - field.field.node.stage_page.field_icon_four_text
     - field.field.node.stage_page.field_icon_one
@@ -21,30 +20,26 @@ dependencies:
     - field.field.node.stage_page.field_slide1_cta_color
     - field.field.node.stage_page.field_slide1_cta_link
     - field.field.node.stage_page.field_slide1_cta_position
-    - field.field.node.stage_page.field_slide1_cta_text_1
-    - field.field.node.stage_page.field_slide1_cta_text_2
     - field.field.node.stage_page.field_slide2_bg_position
     - field.field.node.stage_page.field_slide2_cta_color
     - field.field.node.stage_page.field_slide2_cta_link
     - field.field.node.stage_page.field_slide2_cta_position
-    - field.field.node.stage_page.field_slide2_cta_text_1
-    - field.field.node.stage_page.field_slide2_cta_text_2
     - field.field.node.stage_page.field_slide3_bg_position
     - field.field.node.stage_page.field_slide3_cta_color
     - field.field.node.stage_page.field_slide3_cta_link
     - field.field.node.stage_page.field_slide3_cta_position
-    - field.field.node.stage_page.field_slide3_cta_text_1
-    - field.field.node.stage_page.field_slide3_cta_text_2
     - field.field.node.stage_page.field_slide4_bg_position
     - field.field.node.stage_page.field_slide4_cta_color
     - field.field.node.stage_page.field_slide4_cta_link
     - field.field.node.stage_page.field_slide4_cta_position
-    - field.field.node.stage_page.field_slide4_cta_text_1
-    - field.field.node.stage_page.field_slide4_cta_text_2
     - field.field.node.stage_page.field_slide_four
+    - field.field.node.stage_page.field_slide_four_cta_text
     - field.field.node.stage_page.field_slide_one
+    - field.field.node.stage_page.field_slide_one_cta_text
     - field.field.node.stage_page.field_slide_three
+    - field.field.node.stage_page.field_slide_three_cta_text
     - field.field.node.stage_page.field_slide_two
+    - field.field.node.stage_page.field_slide_two_cta_text
     - field.field.node.stage_page.field_wordpress_articles
     - node.type.stage_page
   module:
@@ -68,7 +63,6 @@ hidden:
   body: true
   field_block_button: true
   field_block_title: true
-  field_cta_text: true
   field_icon_four: true
   field_icon_four_text: true
   field_icon_one: true
@@ -82,29 +76,25 @@ hidden:
   field_slide1_cta_color: true
   field_slide1_cta_link: true
   field_slide1_cta_position: true
-  field_slide1_cta_text_1: true
-  field_slide1_cta_text_2: true
   field_slide2_bg_position: true
   field_slide2_cta_color: true
   field_slide2_cta_link: true
   field_slide2_cta_position: true
-  field_slide2_cta_text_1: true
-  field_slide2_cta_text_2: true
   field_slide3_bg_position: true
   field_slide3_cta_color: true
   field_slide3_cta_link: true
   field_slide3_cta_position: true
-  field_slide3_cta_text_1: true
-  field_slide3_cta_text_2: true
   field_slide4_bg_position: true
   field_slide4_cta_color: true
   field_slide4_cta_link: true
   field_slide4_cta_position: true
-  field_slide4_cta_text_1: true
-  field_slide4_cta_text_2: true
   field_slide_four: true
+  field_slide_four_cta_text: true
   field_slide_one: true
+  field_slide_one_cta_text: true
   field_slide_three: true
+  field_slide_three_cta_text: true
   field_slide_two: true
+  field_slide_two_cta_text: true
   field_wordpress_articles: true
   search_api_excerpt: true
