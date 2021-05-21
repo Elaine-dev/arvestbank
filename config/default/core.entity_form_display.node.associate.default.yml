@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.associate.body
     - field.field.node.associate.feeds_item
-    - field.field.node.associate.field_appointment
     - field.field.node.associate.field_associate_id
     - field.field.node.associate.field_associate_image
     - field.field.node.associate.field_associate_type
@@ -26,7 +25,6 @@ dependencies:
     - field.field.node.associate.field_website
     - image.style.thumbnail
     - node.type.associate
-    - workflows.workflow.editorial
   module:
     - conditional_fields
     - content_moderation
@@ -57,13 +55,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_appointment:
-    weight: 30
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_associate_image:
     weight: 31
     settings:
