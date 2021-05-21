@@ -50,6 +50,14 @@ Drupal.behaviors.externalLogin = {
           'https://new17test.arvest.com/personal/signon/logon/'
         );
       }
+      // If "Mortgage" is selected.
+      else if (jQuery(this).val() == 'mortgage') {
+        // Change form action to cashman to directly post there.
+        jQuery(this).parents('form').attr(
+          'action',
+          'https://new17test.arvest.com/personal/sign-on/login'
+        );
+      }
       else {
         // Set action to default.
         jQuery(this).parents('form').attr(
@@ -88,6 +96,14 @@ Drupal.behaviors.externalLogin = {
         jQuery(this).parents('form').attr(
           'action',
           'https://www.arvest.com/personal/signon/logon/'
+        );
+      }
+      // If "Mortgage" is selected.
+      else if (jQuery(this).val() == 'mortgage') {
+        // Change form action to cashman to directly post there.
+        jQuery(this).parents('form').attr(
+          'action',
+          'https://www.arvest.com/personal/sign-on/login'
         );
       }
       else {
