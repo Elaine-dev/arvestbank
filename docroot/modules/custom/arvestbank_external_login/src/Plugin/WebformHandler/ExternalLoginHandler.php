@@ -75,6 +75,11 @@ class ExternalLoginHandler extends WebformHandlerBase {
    */
   private function handleNonstandardSelection(FormStateInterface &$form_state, string $loginSelectValue) {
 
+    // If user selected "Mortgage".
+    if ($loginSelectValue == 'mortgage') {
+      // Should not reach this, the action of the form should be changed to go
+      // directly to a cash manager endpoint with js when this is selected.
+    }
     // If user selected "Arvest Online Banking".
     if ($loginSelectValue == 'arvest_online_banking') {
       // Should not reach this, the action of the form should be changed to go

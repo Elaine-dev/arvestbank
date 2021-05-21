@@ -63,6 +63,15 @@ function _arvestbank_external_login_login_form_alter(array &$form) {
     ],
   ];
 
+  // Determine the supplimental field wrapper for this form.
+  // During styling different wrappers were added.
+  if (isset($form['elements']['results_container'])) {
+    $supplimentalFieldWrapper = 'results_container';
+  }
+  elseif (isset($form['elements']['sidebar_container'])) {
+    $supplimentalFieldWrapper = 'sidebar_container';
+  }
+
   // Loop over replacements.
   foreach ($fieldNameReplacements as $fieldNameReplacementKey => $fieldNameReplacementValue) {
 
@@ -71,7 +80,7 @@ function _arvestbank_external_login_login_form_alter(array &$form) {
       // Loop over name replacements.
       foreach ($fieldNameReplacementValue as $oldName => $newName) {
         // Switch the name.
-        $form['elements'][$fieldNameReplacementKey][$oldName]['#attributes'] = [
+        $form['elements'][$supplimentalFieldWrapper][$fieldNameReplacementKey][$oldName]['#attributes'] = [
           'name' => $newName,
         ];
       }
