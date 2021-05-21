@@ -42,6 +42,14 @@ Drupal.behaviors.externalLogin = {
           'https://sso-tst.arvest.com/idp/startSSO.ping?PartnerSpId=http%3A%2F%2Fwww.netxinvestor.com&ArvBrand=AWM'
         );
       }
+      // If "Arvest Online Banking" is selected.
+      else if (jQuery(this).val() == 'arvest_online_banking') {
+        // Change form action to cashman to directly post there.
+        jQuery(this).parents('form').attr(
+          'action',
+          'https://new17test.arvest.com/personal/signon/logon/'
+        );
+      }
       else {
         // Set action to default.
         jQuery(this).parents('form').attr(
@@ -72,6 +80,14 @@ Drupal.behaviors.externalLogin = {
         jQuery(this).parents('form').attr(
           'action',
           'https://sso.arvest.com/idp/startSSO.ping?PartnerSpId=http%3A%2F%2Fwww.netxinvestor.com&ArvBrand=AWM'
+        );
+      }
+      // If "Arvest Online Banking" is selected.
+      else if (jQuery(this).val() == 'arvest_online_banking') {
+        // Change form action to cashman to directly post there.
+        jQuery(this).parents('form').attr(
+          'action',
+          'https://www.arvest.com/personal/signon/logon/'
         );
       }
       else {

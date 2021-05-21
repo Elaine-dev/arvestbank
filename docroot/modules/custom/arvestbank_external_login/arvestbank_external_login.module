@@ -57,6 +57,9 @@ function _arvestbank_external_login_login_form_alter(array &$form) {
       'mortgage_username' => 'input-field-1',
       'mortgage_password' => 'input-field-2',
     ],
+    'arvest_online_banking' => [
+      'arvest_online_banking_username' => 'j_username',
+    ],
   ];
 
   // Loop over replacements.
