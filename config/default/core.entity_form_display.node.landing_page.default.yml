@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_disclosure
     - field.field.node.landing_page.field_layout_
     - field.field.node.landing_page.field_meta_tags
     - field.field.node.landing_page.field_yoast_seo
@@ -38,6 +39,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_disclosure:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_layout_:
     type: cohesion_layout_builder_widget
     weight: 12

@@ -1,15 +1,16 @@
-uuid: d00d5c40-2613-4487-b550-65eed88ea343
+uuid: a0f55833-bef7-47f5-9d8d-eb805e68f002
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_appointment
-field_name: field_appointment
+    - text
+id: node.field_slide_four_cta_text
+field_name: field_slide_four_cta_text
 entity_type: node
-type: boolean
+type: text_long
 settings: {  }
-module: core
+module: text
 locked: false
 cardinality: 1
 translatable: true

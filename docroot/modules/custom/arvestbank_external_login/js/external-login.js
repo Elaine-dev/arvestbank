@@ -8,7 +8,9 @@ Drupal.behaviors.externalLogin = {
 
     // Use "chosen" to make selects styleable sudo-selects.
     jQuery('#edit-login-select-non-prod,#edit-login-select-non-prod--2,#edit-login-select,#edit-login-select--2').chosen({
-      "disable_search": true
+      "disable_search": true,
+      allow_single_deselect: true,
+      width: "100%"
     });
 
     // Populate cashman browser data.

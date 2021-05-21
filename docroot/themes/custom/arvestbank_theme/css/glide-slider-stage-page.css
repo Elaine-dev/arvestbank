@@ -1,71 +1,7 @@
-.glide__arrows {
-  display: none;
-}
-.glide__slide img {
-  width: 100%;
-}
-.glide_pager {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 118px;
-  height: 100px;
-  cursor: pointer;
-  text-align: center;
-  background: rgba(255,255,255,0.8);
-  color: #00457c;
-  border-radius: 10px;
-  margin: 0 15px;
-  padding: 20px;
-  text-transform: uppercase;
+.page-node-type-stage-page .coh-style-homepage-in-between-block{
+  display:none;
 }
 
-.glide_pager:hover,
-.glide_pager.glide__bullet--active {
-  text-align: center;
-  background: rgba(0,69,124,0.8);
-  color: #fff;
-}
-
-.slide-background {
-  background-size: cover;
-  min-height: 55em;
-  background-position-y: top;
-}
-
-.slide-background.position-left {
-  background-position-x: left;
-}
-
-.slide-background.position-center {
-  background-position-x: center;
-}
-
-.slide-background.position-right {
-  background-position-x: right;
-}
-
-.slide-cta {
-  position: relative;
-  z-index: 20;
-  top: 100px;
-  text-align: center;
-}
-
-.slide-cta.position-left {
-  left: -25%;
-}
-
-.slide-cta.position-right {
-  right: -25%;
-}
-
-.slide-cta .cta-link a {
-  width: 80px;
-  background-color: #e60000;
-  color: #fff;
-  padding: 8px;
-  font-weight: bold;
-  position: relative;
-  top: 10px;
+.path-frontpage.page-node-type-stage-page .coh-style-homepage-in-between-block{
+  display:block;
 }

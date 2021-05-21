@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.stage_page.body
     - field.field.node.stage_page.field_block_button
     - field.field.node.stage_page.field_block_title
-    - field.field.node.stage_page.field_cta_text
+    - field.field.node.stage_page.field_disclosure
     - field.field.node.stage_page.field_icon_four
     - field.field.node.stage_page.field_icon_four_text
     - field.field.node.stage_page.field_icon_one
@@ -21,30 +21,26 @@ dependencies:
     - field.field.node.stage_page.field_slide1_cta_color
     - field.field.node.stage_page.field_slide1_cta_link
     - field.field.node.stage_page.field_slide1_cta_position
-    - field.field.node.stage_page.field_slide1_cta_text_1
-    - field.field.node.stage_page.field_slide1_cta_text_2
     - field.field.node.stage_page.field_slide2_bg_position
     - field.field.node.stage_page.field_slide2_cta_color
     - field.field.node.stage_page.field_slide2_cta_link
     - field.field.node.stage_page.field_slide2_cta_position
-    - field.field.node.stage_page.field_slide2_cta_text_1
-    - field.field.node.stage_page.field_slide2_cta_text_2
     - field.field.node.stage_page.field_slide3_bg_position
     - field.field.node.stage_page.field_slide3_cta_color
     - field.field.node.stage_page.field_slide3_cta_link
     - field.field.node.stage_page.field_slide3_cta_position
-    - field.field.node.stage_page.field_slide3_cta_text_1
-    - field.field.node.stage_page.field_slide3_cta_text_2
     - field.field.node.stage_page.field_slide4_bg_position
     - field.field.node.stage_page.field_slide4_cta_color
     - field.field.node.stage_page.field_slide4_cta_link
     - field.field.node.stage_page.field_slide4_cta_position
-    - field.field.node.stage_page.field_slide4_cta_text_1
-    - field.field.node.stage_page.field_slide4_cta_text_2
     - field.field.node.stage_page.field_slide_four
+    - field.field.node.stage_page.field_slide_four_cta_text
     - field.field.node.stage_page.field_slide_one
+    - field.field.node.stage_page.field_slide_one_cta_text
     - field.field.node.stage_page.field_slide_three
+    - field.field.node.stage_page.field_slide_three_cta_text
     - field.field.node.stage_page.field_slide_two
+    - field.field.node.stage_page.field_slide_two_cta_text
     - field.field.node.stage_page.field_wordpress_articles
     - node.type.stage_page
     - workflows.workflow.editorial
@@ -151,10 +147,9 @@ third_party_settings:
       label: 'Slide Four'
     group_cta_slide1:
       children:
-        - field_slide1_cta_text_1
-        - field_slide1_cta_text_2
-        - field_slide1_cta_link
         - field_slide1_cta_color
+        - field_slide_one_cta_text
+        - field_slide1_cta_link
         - field_slide1_cta_position
       parent_name: group_slide_one
       weight: 19
@@ -169,10 +164,9 @@ third_party_settings:
       label: CTA
     group_cta_slide2:
       children:
-        - field_slide2_cta_text_1
-        - field_slide2_cta_text_2
-        - field_slide2_cta_link
         - field_slide2_cta_color
+        - field_slide_two_cta_text
+        - field_slide2_cta_link
         - field_slide2_cta_position
       parent_name: group_slide_two
       weight: 21
@@ -187,10 +181,9 @@ third_party_settings:
       label: CTA
     group_cta_slide3:
       children:
-        - field_slide3_cta_text_1
-        - field_slide3_cta_text_2
-        - field_slide3_cta_link
         - field_slide3_cta_color
+        - field_slide_three_cta_text
+        - field_slide3_cta_link
         - field_slide3_cta_position
       parent_name: group_slide_three
       weight: 31
@@ -205,10 +198,9 @@ third_party_settings:
       label: CTA
     group_cta_slide4:
       children:
-        - field_slide4_cta_text_1
-        - field_slide4_cta_text_2
-        - field_slide4_cta_link
         - field_slide4_cta_color
+        - field_slide_four_cta_text
+        - field_slide4_cta_link
         - field_slide4_cta_position
       parent_name: group_slide_four
       weight: 44
@@ -258,13 +250,11 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_cta_text:
-    weight: 45
-    settings:
-      rows: 5
-      placeholder: ''
+  field_disclosure:
+    weight: 46
+    settings: {  }
     third_party_settings: {  }
-    type: text_textarea
+    type: options_select
     region: content
   field_icon_four:
     type: entity_browser_entity_reference
@@ -372,13 +362,13 @@ content:
     type: options_select
     region: content
   field_slide1_cta_color:
-    weight: 24
+    weight: 30
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_slide1_cta_link:
-    weight: 23
+    weight: 32
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -386,26 +376,10 @@ content:
     type: link_default
     region: content
   field_slide1_cta_position:
-    weight: 25
+    weight: 33
     settings: {  }
     third_party_settings: {  }
     type: options_select
-    region: content
-  field_slide1_cta_text_1:
-    weight: 20
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_slide1_cta_text_2:
-    weight: 22
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   field_slide2_bg_position:
     weight: 17
@@ -414,13 +388,13 @@ content:
     type: options_select
     region: content
   field_slide2_cta_color:
-    weight: 29
+    weight: 51
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_slide2_cta_link:
-    weight: 28
+    weight: 53
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -428,26 +402,10 @@ content:
     type: link_default
     region: content
   field_slide2_cta_position:
-    weight: 30
+    weight: 54
     settings: {  }
     third_party_settings: {  }
     type: options_select
-    region: content
-  field_slide2_cta_text_1:
-    weight: 25
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_slide2_cta_text_2:
-    weight: 26
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   field_slide3_bg_position:
     weight: 27
@@ -456,13 +414,13 @@ content:
     type: options_select
     region: content
   field_slide3_cta_color:
-    weight: 26
+    weight: 46
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_slide3_cta_link:
-    weight: 25
+    weight: 48
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -470,26 +428,10 @@ content:
     type: link_default
     region: content
   field_slide3_cta_position:
-    weight: 27
+    weight: 49
     settings: {  }
     third_party_settings: {  }
     type: options_select
-    region: content
-  field_slide3_cta_text_1:
-    weight: 22
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_slide3_cta_text_2:
-    weight: 23
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   field_slide4_bg_position:
     weight: 41
@@ -498,13 +440,13 @@ content:
     type: options_select
     region: content
   field_slide4_cta_color:
-    weight: 43
+    weight: 53
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_slide4_cta_link:
-    weight: 42
+    weight: 55
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -512,26 +454,10 @@ content:
     type: link_default
     region: content
   field_slide4_cta_position:
-    weight: 44
+    weight: 56
     settings: {  }
     third_party_settings: {  }
     type: options_select
-    region: content
-  field_slide4_cta_text_1:
-    weight: 40
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_slide4_cta_text_2:
-    weight: 41
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   field_slide_four:
     type: entity_browser_entity_reference
@@ -548,6 +474,14 @@ content:
       open: false
     third_party_settings: {  }
     region: content
+  field_slide_four_cta_text:
+    weight: 54
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
   field_slide_one:
     type: entity_browser_entity_reference
     weight: 15
@@ -562,6 +496,14 @@ content:
       field_widget_replace: false
       open: false
     third_party_settings: {  }
+    region: content
+  field_slide_one_cta_text:
+    weight: 31
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
   field_slide_three:
     type: entity_browser_entity_reference
@@ -578,6 +520,14 @@ content:
       open: false
     third_party_settings: {  }
     region: content
+  field_slide_three_cta_text:
+    weight: 47
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
   field_slide_two:
     type: entity_browser_entity_reference
     weight: 16
@@ -592,6 +542,14 @@ content:
       field_widget_replace: false
       open: false
     third_party_settings: {  }
+    region: content
+  field_slide_two_cta_text:
+    weight: 52
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
   field_wordpress_articles:
     type: entity_reference_paragraphs
