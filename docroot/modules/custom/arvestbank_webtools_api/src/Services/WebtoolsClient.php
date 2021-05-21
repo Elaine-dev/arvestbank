@@ -82,10 +82,7 @@ class WebtoolsClient {
     // Define the test request we want to make.
     $endpoint = $this->webtoolsConfig->get('webtools-mortgage-rates-endpoint');
     $requestOptions = [
-      'headers' => [
-        'Accept' => 'application/json',
-        'Authorization' => '{OATH token: clientid:client secret}'
-      ],
+      RequestOptions::BODY => $this->getMortgageRatesJsonString(),
     ];
 
     // Return boolean for success.
@@ -135,11 +132,13 @@ class WebtoolsClient {
    *   The endpoint to make a request to.
    * @param array $requestOptions
    *   Request (Guzzle) options to be merged into the authentication ones.
+   * @param string $method
+   *   Get or post.
    *
    * @return bool|string
    *   Response or FALSE.
    */
-  public function makeRequest(string $endpoint, array $requestOptions) {
+  public function makeRequest(string $endpoint, array $requestOptions, string $method = 'post') {
 
     // Determine endpoint.
     $requestEndpoint = $this->webtoolsConfig->get('webtools-domain') . $endpoint;
@@ -162,11 +161,23 @@ class WebtoolsClient {
     $postRequestOptions = array_merge($postRequestOptions, $requestOptions);
 
     try {
-      // Make request and get response body contents.
-      $response = $this->httpClient->post(
-        $requestEndpoint,
-        $postRequestOptions
-      )->getBody()->getContents();
+
+      if ($method == 'post') {
+        // Make request and get response body contents.
+        $response = $this->httpClient->post(
+          $requestEndpoint,
+          $postRequestOptions
+        )->getBody()->getContents();
+      }
+      elseif ($method == 'get') {
+        // Make request and get response body contents.
+        $response = $this->httpClient->get(
+          $requestEndpoint,
+          $postRequestOptions
+        )->getBody()->getContents();
+      }
+
+
     }
     catch (BadResponseException $e) {
       $responseCode = $e->getResponse()->getStatusCode();
@@ -185,6 +196,16 @@ class WebtoolsClient {
     // Return response.
     return $response;
 
+  }
+
+  /**
+   * Returns a static json string we were given to request.
+   *
+   * @return string
+   *   A static json string we were given to request.
+   */
+  public function getMortgageRatesJsonString() {
+    return '{"BorrowerInformation":{"AssetDocumentation":"Verified","DebtToIncomeRatio":"40.0","PledgedAssets":"false","Citizenship":"USCitizen","EmploymentDocumentation":"Verified","FICO":"740","FirstName":"John","LastName":"Doe","FirstTimeHomeBuyer":"true","IncomeDocumentation":"Verified","MonthlyIncome":"6000.00","MonthsReserves":"24","SelfEmployed":"true","WaiveEscrows":"false","MortgageLatesX30":"0","MortgageLatesX60":"0","MortgageLatesX90":"0","MortgageLatesX120":"0","MortgageLatesRolling":"0","Bankruptcy":"Never","Foreclosure":"Never","DisclosureDate":"2017-02-06T22:39:44.908-06:00","ApplicationDate":"2017-02-06T22:39:44.908-06:00"},"LoanInformation":{"LoanPurpose":"Purchase","LienType":"First","AmortizationTypes":["Fixed"],"ARMFixedTerms":["FiveYear"],"AutomatedUnderwritingSystem":"NotSpecified","BorrowerPaidMI":"Yes","Buydown":"None","CashOutAmount":"0.0","DesiredLockPeriod":"0","DesiredPrice":"0.0","DesiredRate":"0.0","ExpandedApprovalLevel":"NotApplicable","FHACaseAssigned":"2017-02-06T06:00:00Z","FHACaseEndorsement":"2017-02-06T06:00:00Z","InterestOnly":"false","BaseLoanAmount":"225000.00","CalculateTotalLoanAmount":"true","SecondLienAmount":"0.0","HELOCDrawnAmount":"0.0","HELOCLineAmount":"0.0","LoanTerms":["ThirtyYear"],"LoanType":"Conforming","PrepaymentPenalty":"None","IncludeLOCompensationInPricing":"YesLenderPaid","CurrentServicer":"NotApplicable"},"PropertyInformation":{"AppraisedValue":"225000.00","Occupancy":"PrimaryResidence","PropertyStreetAddress":"123 ABC Dr.","County":"Collin","State":"TX","ZipCode":"75024","PropertyType":"SingleFamily","CorporateRelocation":"false","SalesPrice":"225000.00","NumberOfStories":"1","NumberOfUnits":"OneUnit","Construction":"false"},"RepresentativeFICO":"740","LoanLevelDebtToIncomeRatio":"40.0","CustomerInternalId":"OBSearch","ExemptFromVAFundingFee":"true","VeteranType":"Active Duty","VADisability":"true","VaFirstTimeUse":"true"}';
   }
 
 }
