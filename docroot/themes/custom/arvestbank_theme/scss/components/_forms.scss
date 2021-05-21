@@ -423,7 +423,7 @@
 
         // List of select options container
         .chosen-drop {
-            width: calculateRem(220px);
+            width: calculateRem(222px);
             right: 0;
             margin-top: 0;
             margin-right: -1px;
@@ -432,6 +432,10 @@
             padding: 1rem;
             border: 3px solid #acc6e1;
             border-radius: 0;
+            -webkit-clip-path: none;
+            clip-path: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
         }
 
         // List of select options
