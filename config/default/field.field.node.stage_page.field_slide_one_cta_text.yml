@@ -1,0 +1,21 @@
+uuid: ac23348b-0c3c-4170-a49e-c4a2d46721e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slide_one_cta_text
+    - node.type.stage_page
+  module:
+    - text
+id: node.stage_page.field_slide_one_cta_text
+field_name: field_slide_one_cta_text
+entity_type: node
+bundle: stage_page
+label: 'Slide One CTA text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: 9154be76-ff2a-4659-b364-9ca3342d7bd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slide_three_cta_text
+    - node.type.stage_page
+  module:
+    - text
+id: node.stage_page.field_slide_three_cta_text
+field_name: field_slide_three_cta_text
+entity_type: node
+bundle: stage_page
+label: 'Slide Three CTA Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
