@@ -1,14 +1,16 @@
-uuid: d00d5c40-2613-4487-b550-65eed88ea343
+uuid: 8db857d9-7fb6-4993-a50b-ea6b47b2ca9a
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_appointment
-field_name: field_appointment
+    - taxonomy
+id: node.field_disclosure
+field_name: field_disclosure
 entity_type: node
-type: boolean
-settings: {  }
+type: entity_reference
+settings:
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1

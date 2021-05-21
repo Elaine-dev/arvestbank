@@ -1,0 +1,29 @@
+uuid: 143aa377-a63d-4217-9ad8-1c1526f898ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.trust_and_estate_block
+  module:
+    - cohesion
+    - views
+  theme:
+    - arvestbank_theme
+id: views_block__trust_and_estate_block_block_3
+theme: arvestbank_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: 'views_block:trust_and_estate_block-block_3'
+settings:
+  id: 'views_block:trust_and_estate_block-block_3'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

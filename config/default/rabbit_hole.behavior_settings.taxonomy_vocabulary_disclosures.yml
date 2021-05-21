@@ -1,0 +1,14 @@
+uuid: 645d9e03-b639-48a2-b131-2e94c0ddf887
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.disclosures
+id: taxonomy_vocabulary_disclosures
+entity_type_id: taxonomy_vocabulary
+entity_id: disclosures
+action: page_redirect
+allow_override: 0
+redirect: /<front>
+redirect_code: 301
+redirect_fallback_action: access_denied

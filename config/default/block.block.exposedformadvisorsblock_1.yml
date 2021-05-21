@@ -1,0 +1,28 @@
+uuid: 9cf1197d-ae90-495b-b4a1-7858206245e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.advisors
+  module:
+    - cohesion
+    - views
+  theme:
+    - arvestbank_theme
+id: exposedformadvisorsblock_1
+theme: arvestbank_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:advisors-block_1'
+settings:
+  id: 'views_exposed_filter_block:advisors-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.associate.body
     - field.field.node.associate.feeds_item
-    - field.field.node.associate.field_appointment
     - field.field.node.associate.field_associate_id
     - field.field.node.associate.field_associate_image
     - field.field.node.associate.field_associate_type
@@ -48,16 +47,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_appointment:
-    weight: 20
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
   field_associate_image:
     weight: 21
     label: above

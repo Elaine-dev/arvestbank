@@ -8,6 +8,7 @@ module:
   arvestbank_ads: 0
   arvestbank_ask_arvest: 0
   arvestbank_associate_category: 0
+  arvestbank_blocks: 0
   arvestbank_branch_locations: 0
   arvestbank_browsertest: 0
   arvestbank_calculators: 0
@@ -19,6 +20,7 @@ module:
   arvestbank_search: 0
   arvestbank_views: 0
   arvestbank_webforms: 0
+  arvestbank_webtools_api: 0
   arvestbank_wordpress_articles: 0
   automated_cron: 0
   better_exposed_filters: 0
@@ -147,6 +149,8 @@ module:
   toolbar: 0
   update: 0
   user: 0
+  views_autosubmit: 0
+  views_block_filter_block: 0
   views_ui: 0
   webform: 0
   webform_ui: 0

@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.associate.body
     - field.field.node.associate.feeds_item
-    - field.field.node.associate.field_appointment
     - field.field.node.associate.field_associate_id
     - field.field.node.associate.field_associate_image
     - field.field.node.associate.field_associate_type
@@ -25,8 +24,11 @@ dependencies:
     - field.field.node.associate.field_private_banker_location
     - field.field.node.associate.field_vanity_url
     - field.field.node.associate.field_website
+    - image.style.associate_headshot
     - node.type.associate
   module:
+    - image
+    - link
     - text
     - user
 id: node.associate.teaser
@@ -36,10 +38,9 @@ mode: teaser
 content:
   body:
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
-    settings:
-      trim_length: 600
+    type: text_default
+    weight: 9
+    settings: {  }
     third_party_settings: {  }
     region: content
   content_moderation_control:
@@ -47,30 +48,116 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  links:
-    weight: 100
+  field_associate_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: associate_headshot
+      image_link: ''
+    third_party_settings: {  }
+  field_branch_nickname:
+    type: string
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_coconut_appointment:
+    type: link
+    weight: 12
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  field_designation:
+    type: entity_reference_entity_view
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: false
+      view_mode: default
+    third_party_settings: {  }
+  field_email:
+    type: email_mailto
+    weight: 6
+    region: content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+  field_insurance_license_number:
+    type: string
+    weight: 7
     region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_job_title:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_location:
+    type: string
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_nmls_number:
+    type: string
+    weight: 8
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_office_number:
+    type: string
+    weight: 5
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_website:
+    type: link
+    weight: 11
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  links:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   feeds_item: true
   field_appointment: true
   field_associate_id: true
-  field_associate_image: true
   field_associate_type: true
-  field_branch_nickname: true
-  field_coconut_appointment: true
-  field_designation: true
-  field_email: true
   field_fax_number: true
-  field_insurance_license_number: true
-  field_job_title: true
-  field_location: true
   field_mobile_number: true
-  field_nmls_number: true
-  field_office_number: true
   field_private_bank_reference: true
   field_private_banker_location: true
   field_vanity_url: true
-  field_website: true
   search_api_excerpt: true
