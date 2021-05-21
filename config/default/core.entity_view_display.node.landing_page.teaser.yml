@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_disclosure
     - field.field.node.landing_page.field_layout_
     - field.field.node.landing_page.field_meta_tags
     - field.field.node.landing_page.field_yoast_seo
@@ -36,6 +37,7 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_disclosure: true
   field_layout_: true
   field_meta_tags: true
   field_yoast_seo: true

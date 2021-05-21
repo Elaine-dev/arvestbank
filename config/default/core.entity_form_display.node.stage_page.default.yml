@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.stage_page.field_block_button
     - field.field.node.stage_page.field_block_title
     - field.field.node.stage_page.field_cta_text
+    - field.field.node.stage_page.field_disclosure
     - field.field.node.stage_page.field_icon_four
     - field.field.node.stage_page.field_icon_four_text
     - field.field.node.stage_page.field_icon_one
@@ -265,6 +266,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_disclosure:
+    weight: 46
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_icon_four:
     type: entity_browser_entity_reference
