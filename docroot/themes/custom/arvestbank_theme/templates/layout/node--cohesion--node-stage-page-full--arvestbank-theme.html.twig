@@ -6,45 +6,6 @@
 </div>
 
 <div class="card-slider coh-style-page-node-type-stage-page">
-
-  {# Left Sidebar #}
-  <div class="coh-container-boxed">
-    <div class="stage-page-left-side-blocks">
-
-      {# External Login Block #}
-      <div class="coh-style-my-accounts-login-block">
-        {{ content.external_login_block }}
-      </div>
-
-      {# External Login Block #}
-      <div class="coh-style-homepage-in-between-block">
-        <h3>SWITCH TO ARVEST... IT'S EASY!</h3>
-        <div class="flex-wrapper">
-          <p>We've made switching to Arvest as easy as possible.</p>
-          <div class="button-wrapper">
-            <button>Get Started</button>
-          </div>
-        </div>
-      </div>
-
-      {# Wordpress Articles #}
-      <div class="wordpress-block coh-style-wordpress-feed-block">
-        {{ content.wordpress_articles }}
-      </div>
-
-      {# Stage Page Fields #}
-      {% if content.body|render|trim is not empty %}
-        <h2>{{ content.field_block_title|render }}</h2>
-        <div class="left-block-content">
-          {{ content.body|render }}
-          <button>{{ content.field_block_button|render }}</button>
-        </div>
-      {% endif %}
-
-
-    </div>
-  </div>
-
   <div class="glide">
 
     <div class="glide__track" data-glide-el="track">
@@ -124,6 +85,45 @@
         </div>
       </div>
     </div>
+
+    {# Left Sidebar #}
+    <div class="coh-container-boxed">
+      <div class="stage-page-left-side-blocks">
+
+        {# External Login Block #}
+        <div class="coh-style-my-accounts-login-block">
+          {{ content.external_login_block }}
+        </div>
+
+        {# External Login Block #}
+        <div class="coh-style-homepage-in-between-block">
+          <h3>SWITCH TO ARVEST... IT'S EASY!</h3>
+          <div class="flex-wrapper">
+            <p>We've made switching to Arvest as easy as possible.</p>
+            <div class="button-wrapper">
+              <button>Get Started</button>
+            </div>
+          </div>
+        </div>
+
+        {# Wordpress Articles #}
+        <div class="wordpress-block coh-style-wordpress-feed-block">
+          {{ content.wordpress_articles }}
+        </div>
+
+        {# Stage Page Fields #}
+        {% if content.body|render|trim is not empty %}
+          <h2>{{ content.field_block_title|render }}</h2>
+          <div class="left-block-content">
+            {{ content.body|render }}
+            <button>{{ content.field_block_button|render }}</button>
+          </div>
+        {% endif %}
+
+
+      </div>
+    </div>
+
 
   </div>
 
