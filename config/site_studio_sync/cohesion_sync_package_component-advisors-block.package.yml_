@@ -2,15 +2,15 @@
 -
   type: cohesion_sync_package
   export:
-    uuid: 698fdd17-c5c2-4f54-900c-9d10fff1d295
+    uuid: 0ea7a897-dedf-4af8-8924-067e3d763e90
     langcode: en
     status: true
     dependencies: {  }
-    id: pack_trust_officers_block
-    label: 'Trust Officers block'
-    description: 'Contains the trust officers block component to be placed in a node to render the trust officers view. Author: John Cunningham'
+    id: pack_advisors_block_component
+    label: 'Component Advisors Block'
+    description: 'Contains the advisors block component to be placed in a node to render the advisors view. Author: John Cunningham'
     excluded_entity_types: '[]'
-    settings: '{"23a90036-1b85-4511-a2f8-d971077258ba":{"type":"cohesion_component","items":{"e9da5d21-4612-4d25-acc6-081eb16927c4":{"type":"cohesion_color"},"919b6dd9-168b-462c-9069-1ff5a4e8d197":{"type":"cohesion_color"},"e4641ac8-67f8-4195-b93d-916d94b3c50a":{"type":"cohesion_color"},"9d6a93a4-2979-4e98-9e9f-8266fbb906e6":{"type":"cohesion_color"},"a82e1a3d-1f5b-4be4-8ec9-53ecb466ce36":{"type":"cohesion_color"},"b441d91a-eae8-4d0e-b820-684288168f48":{"type":"cohesion_color"},"b2448f60-2680-483e-bec6-f791edbee910":{"type":"cohesion_color"},"c0c7ba6a-2eba-4d0b-a91c-440f1d2315dd":{"type":"cohesion_color"},"e936898e-d2a0-4879-b81d-c16524094c6c":{"type":"cohesion_color"},"23a90036-1b85-4511-a2f8-d971077258ba":{"type":"cohesion_component"},"f0745755-460f-41c6-a9f9-a67e82e788c4":{"type":"cohesion_component_category"},"449a7bd5-93e2-4ed4-8d28-5688ef6ec840":{"type":"cohesion_custom_style"},"ad2cd4e8-f50b-4d84-b11c-1f4108a41eba":{"type":"cohesion_font_stack"},"aab13d06-c276-4bc2-ac05-676db3039168":{"type":"cohesion_font_stack"},"77ec9f12-cb22-4a09-b4ab-dfc87a592fc3":{"type":"cohesion_master_templates"},"5ea80f90-0a0d-4052-99fa-53af106b4c5b":{"type":"view"}},"checked":true}}'
+    settings: '{"cb4fe448-4171-4931-b94f-b2d52e1aa598":{"type":"cohesion_component","items":{"e9da5d21-4612-4d25-acc6-081eb16927c4":{"type":"cohesion_color"},"919b6dd9-168b-462c-9069-1ff5a4e8d197":{"type":"cohesion_color"},"e4641ac8-67f8-4195-b93d-916d94b3c50a":{"type":"cohesion_color"},"9d6a93a4-2979-4e98-9e9f-8266fbb906e6":{"type":"cohesion_color"},"a82e1a3d-1f5b-4be4-8ec9-53ecb466ce36":{"type":"cohesion_color"},"b441d91a-eae8-4d0e-b820-684288168f48":{"type":"cohesion_color"},"b2448f60-2680-483e-bec6-f791edbee910":{"type":"cohesion_color"},"c0c7ba6a-2eba-4d0b-a91c-440f1d2315dd":{"type":"cohesion_color"},"e936898e-d2a0-4879-b81d-c16524094c6c":{"type":"cohesion_color"},"cb4fe448-4171-4931-b94f-b2d52e1aa598":{"type":"cohesion_component"},"f0745755-460f-41c6-a9f9-a67e82e788c4":{"type":"cohesion_component_category"},"449a7bd5-93e2-4ed4-8d28-5688ef6ec840":{"type":"cohesion_custom_style"},"ad2cd4e8-f50b-4d84-b11c-1f4108a41eba":{"type":"cohesion_font_stack"},"aab13d06-c276-4bc2-ac05-676db3039168":{"type":"cohesion_font_stack"},"6e0113dc-09f8-4183-9677-14ab4c122cb6":{"type":"cohesion_master_templates"},"5ea80f90-0a0d-4052-99fa-53af106b4c5b":{"type":"view"}},"checked":true}}'
 -
   type: cohesion_color
   export:
@@ -158,13 +158,13 @@
 -
   type: cohesion_component
   export:
-    uuid: 23a90036-1b85-4511-a2f8-d971077258ba
+    uuid: cb4fe448-4171-4931-b94f-b2d52e1aa598
     langcode: en
     status: true
     dependencies: {  }
-    id: cpt__associates_trust_officers_b
-    label: ' Associates Trust Officers Block'
-    json_values: '{"canvas":[{"type":"item","uid":"drupal-block","title":"Block","status":{"collapsed":true},"uuid":"2ab1bac4-008b-4bd9-9bf0-18ace18fc111","parentUid":"root","isContainer":false,"children":[]}],"componentForm":[{"type":"form-help","uid":"form-helptext","title":"Help text","status":{"collapsed":false},"uuid":"28b95092-3350-4359-a271-3646c966676d","parentUid":"root","isContainer":false,"children":[]}],"mapper":{"2ab1bac4-008b-4bd9-9bf0-18ace18fc111":{}},"model":{"2ab1bac4-008b-4bd9-9bf0-18ace18fc111":{"settings":{"title":"Block","customStyle":[{"customStyle":""}],"settings":{"theme":"all","customStyle":[{"customStyle":""}]},"theme":"arvestbank_theme","block":"views_block__trust_and_estate_block_block_3"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"block"}}},"28b95092-3350-4359-a271-3646c966676d":{"settings":{"title":"Help text","type":"cohHelpText","options":{"showClose":false,"helpType":"coh-help-text--help","helpText":"The Trust Officers block component, when dropped in the layout builder of a node, will render a view of associates that are tagged with the Trust Officer term. When viewing the view for the first time the results will be empty until a selection is made from one of the two exposed filters. The styling of the results is handled in the Associates teaser content template while the styling\/text of the view header is handled in the Trust Officers view template."}},"contextVisibility":{"condition":"ALL"}}},"previewModel":{"2ab1bac4-008b-4bd9-9bf0-18ace18fc111":{},"28b95092-3350-4359-a271-3646c966676d":{}},"variableFields":{"2ab1bac4-008b-4bd9-9bf0-18ace18fc111":[],"28b95092-3350-4359-a271-3646c966676d":[]},"meta":{"fieldHistory":[]}}'
+    id: cpt_associates_advisors_block
+    label: 'Component Associates Advisors Block'
+    json_values: '{"canvas":[{"type":"item","uid":"drupal-block","title":"Block","status":{"collapsed":true},"uuid":"dc08d054-1531-4638-ab5b-6abcce6d68b5","parentUid":"root","isContainer":false,"children":[]}],"componentForm":[{"type":"form-help","uid":"form-helptext","title":"Help text","status":{"collapsed":false},"uuid":"3f76d9f0-b519-4c61-a65e-4198a2da7c60","parentUid":"root","isContainer":false,"children":[]}],"mapper":{"dc08d054-1531-4638-ab5b-6abcce6d68b5":{}},"model":{"dc08d054-1531-4638-ab5b-6abcce6d68b5":{"settings":{"title":"Block","customStyle":[{"customStyle":""}],"settings":{"theme":"all","customStyle":[{"customStyle":""}]},"theme":"arvestbank_theme","block":"views_block__advisors_block_1"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"block"}}},"3f76d9f0-b519-4c61-a65e-4198a2da7c60":{"settings":{"title":"Help text","type":"cohHelpText","options":{"showClose":false,"helpType":"coh-help-text--help","helpText":"The Advisors block component, when dropped in the layout builder of a node, will render a view of associates that are tagged with the Advisor term. When viewing the view for the first time the results will be empty until a selection is made from one of the two exposed filters. The styling of the results is handled in the Associates teaser content template while the styling\/text of the view header is handled in the advisors view template."}},"contextVisibility":{"condition":"ALL"}}},"previewModel":{"dc08d054-1531-4638-ab5b-6abcce6d68b5":{},"3f76d9f0-b519-4c61-a65e-4198a2da7c60":{}},"variableFields":{"dc08d054-1531-4638-ab5b-6abcce6d68b5":[],"3f76d9f0-b519-4c61-a65e-4198a2da7c60":[]},"meta":{"fieldHistory":[]}}'
     json_mapper: '{}'
     last_entity_update: entityupdate_0031
     locked: false
@@ -175,7 +175,7 @@
     has_quick_edit: true
     entity_type_access: {  }
     bundle_access: {  }
-    twig_template: component--cohesion-cpt--associates-trust-officers-b
+    twig_template: component--cohesion-cpt-associates-advisors-block
     weight: 0
 -
   type: cohesion_component_category
@@ -190,7 +190,7 @@
     label: 'General components'
     json_values: '{}'
     json_mapper: '{}'
-    last_entity_update: entityupdate_0029
+    last_entity_update: entityupdate_0031
     locked: false
     modified: false
     selectable: true
@@ -251,7 +251,7 @@
 -
   type: cohesion_master_templates
   export:
-    uuid: 77ec9f12-cb22-4a09-b4ab-dfc87a592fc3
+    uuid: 6e0113dc-09f8-4183-9677-14ab4c122cb6
     langcode: en
     status: true
     dependencies: {  }
