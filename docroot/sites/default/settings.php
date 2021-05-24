@@ -827,6 +827,7 @@ if (isset($_ENV['AH_SITE_ENVIRONMENT'])) {
   }
 }
 
+$conf['acquia_hosting_settings_autoconnect'] = FALSE;
 
 require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
 /**
@@ -837,3 +838,7 @@ require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
  *
  * @link https://docs.acquia.com/blt/
  */
+
+$databases['default']['default']['init_commands'] = array(
+  'wait_timeout' => "SET SESSION wait_timeout=1200",
+);
