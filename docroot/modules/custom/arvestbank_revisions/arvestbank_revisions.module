@@ -30,9 +30,10 @@ function arvestbank_revisions_form_revision_overview_form_alter(&$form, FormStat
 function arvestbank_revisions_form_node_form_alter(&$form, &$form_state, $form_id) {
 
   // Define the content types to force revisions for.
-  // Workflow does this for bundles under it's controll.
+  // Workflow does this for bundles under it's control.
   $contentTypesToForceRevisionsFor = [
     'cta_phone_number',
+    'associate',
   ];
 
   // Get the node this form is for.
