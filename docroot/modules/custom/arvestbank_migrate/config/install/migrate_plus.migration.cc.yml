@@ -79,6 +79,9 @@ process:
     source: category
   field_debit_card_keywords: keywords
 
+#  date_added,id,category,display,state,city,lat,lon,radius,name,name_catalog,notes,keywords
+
+
 destination:
   plugin: entity:media
   default_bundle: credit_or_debit_card

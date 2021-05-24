@@ -89,6 +89,8 @@ class CCUpdateBatch extends FormBase {
     $context['results'][] = $media->getName();
     $context['message'] = t('Updating @title', array('@title' => $media->getName()));
 
+    sleep(1);
+
   }
 
   public static function finishedCallback($success, $results, $operations) {

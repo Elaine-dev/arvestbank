@@ -1,5 +1,4 @@
 date_added,id,category,display,state,city,lat,lon,radius,name,name_catalog,notes,keywords
-4/16/2020,341,"outdoor, sports",,,,,,,GET A GRIP,,,"Rock, Climbing, Sport, Summer"
 9/30/2013,67,art,,,,,,,Blush,,,pink flower plant abstract
 9/30/2013,69,art,,,,,,,Fresh,,,green flower plant succulent abstract
 9/30/2013,70,art,,,,,,,Splash,,,blue water art abstract
@@ -321,6 +320,7 @@ date_added,id,category,display,state,city,lat,lon,radius,name,name_catalog,notes
 8/15/2019,336,agri,,,,,,,Early Risers,,,"agri, agriculture, farm, chickens, roosters"
 8/15/2019,334,agri,,,,,,,Golden Hayfield,,,"agri, agriculture, farm, hay bale, hay, field, sunset, sunrise"
 8/15/2019,333,agri,,,,,,,Grazing Goat,,,"agri, agriculture, farm, goat"
+4/16/2020,341,"outdoor, sports",,,,,,,GET A GRIP,,,"Rock, Climbing, Sport, Summer"
 4/16/2020,342,"outdoor, sports",,,,,,,KEEP UP,,,"Bike, Trail, Ride, Outdoor, Outdoors, Bicycle, Mountain, Trails, Riding"
 4/16/2020,343,"outdoor, sports",,,,,,,THE RIGHT PATH,,,"Rock, Rocks, Stream, River, Beach, Outdoor, Outdoor"
 4/16/2020,344,"outdoor, sports",,,,,,,MAKING WAVES,,,"Wakeboard, Wakeboarding, Surf, Surfing, Lake, Water, Outdoor, Outdoors, Boa"
