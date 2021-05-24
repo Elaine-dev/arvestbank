@@ -74,6 +74,10 @@ process:
   field_credit_or_debit_card:
     plugin: default_value
     default_value: debit
+  field_debit_card_category:
+    plugin: category
+    source: category
+  field_debit_card_keywords: keywords
 
 destination:
   plugin: entity:media
