@@ -11,6 +11,8 @@ dependencies:
     - field.field.media.credit_or_debit_card.field_credit_or_debit_card
     - field.field.media.credit_or_debit_card.field_debit_card_category
     - field.field.media.credit_or_debit_card.field_debit_card_keywords
+    - field.field.media.credit_or_debit_card.field_geolocation
+    - field.field.media.credit_or_debit_card.field_geolocation_radius
     - image.style.medium
     - media.type.credit_or_debit_card
   module:
@@ -38,6 +40,8 @@ hidden:
   field_credit_or_debit_card: true
   field_debit_card_category: true
   field_debit_card_keywords: true
+  field_geolocation: true
+  field_geolocation_radius: true
   name: true
   search_api_excerpt: true
   uid: true

@@ -69,6 +69,10 @@ process:
     plugin: category
     source: category
   field_debit_card_keywords: keywords
+  field_geolocation:
+    plugin: geolocation
+    source: id
+  field_geolocation_radius: radius
 destination:
   plugin: 'entity:media'
   default_bundle: credit_or_debit_card

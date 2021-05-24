@@ -74,6 +74,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  geolocation: 0
   gtm: 0
   iframe: 0
   image: 0

@@ -10,8 +10,11 @@ dependencies:
     - field.field.media.credit_or_debit_card.field_credit_or_debit_card
     - field.field.media.credit_or_debit_card.field_debit_card_category
     - field.field.media.credit_or_debit_card.field_debit_card_keywords
+    - field.field.media.credit_or_debit_card.field_geolocation
+    - field.field.media.credit_or_debit_card.field_geolocation_radius
     - media.type.credit_or_debit_card
   module:
+    - geolocation
     - image
     - options
 id: media.credit_or_debit_card.default
@@ -65,6 +68,22 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_geolocation:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: geolocation_latlng
+    region: content
+  field_geolocation_radius:
+    weight: 10
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
     region: content
 hidden:
   created: true

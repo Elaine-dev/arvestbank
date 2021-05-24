@@ -1,0 +1,23 @@
+uuid: 42a43c59-871e-4f3e-a01e-5b578cebc511
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_geolocation_radius
+    - media.type.credit_or_debit_card
+id: media.credit_or_debit_card.field_geolocation_radius
+field_name: field_geolocation_radius
+entity_type: media
+bundle: credit_or_debit_card
+label: Radius
+description: 'KM from the location coordinates.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

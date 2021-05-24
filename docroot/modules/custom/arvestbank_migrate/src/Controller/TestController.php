@@ -21,6 +21,12 @@ class TestController extends ControllerBase {
 
     $database = \Drupal::database();
 
+    $mid = 28797;
+    $media = Media::load($mid);
+    dump($media);
+
+    die();
+
     $input = 340;
 
     $queryString = "

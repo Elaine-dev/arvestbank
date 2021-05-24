@@ -78,9 +78,10 @@ process:
     plugin: category
     source: category
   field_debit_card_keywords: keywords
-
-#  date_added,id,category,display,state,city,lat,lon,radius,name,name_catalog,notes,keywords
-
+  field_geolocation:
+    plugin: geolocation
+    source: id
+  field_geolocation_radius: radius
 
 destination:
   plugin: entity:media
