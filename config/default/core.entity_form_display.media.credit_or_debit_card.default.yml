@@ -11,7 +11,6 @@ dependencies:
     - field.field.media.credit_or_debit_card.field_credit_or_debit_card
     - field.field.media.credit_or_debit_card.field_debit_card_category
     - field.field.media.credit_or_debit_card.field_debit_card_keywords
-    - field.field.media.credit_or_debit_card.field_school_zip_code
     - media.type.credit_or_debit_card
   module:
     - entity_browser
@@ -73,24 +72,12 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_debit_card_keywords:
-    weight: 6
+    weight: 26
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_school_zip_code:
-    weight: 7
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: string_textarea
     region: content
   moderation_state:
     type: moderation_state_default

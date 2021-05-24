@@ -64,7 +64,11 @@ process:
     source: id
   field_credit_or_debit_card:
     plugin: default_value
-    default_value: credit
+    default_value: debit
+  field_debit_card_category:
+    plugin: category
+    source: category
+  field_debit_card_keywords: keywords
 destination:
   plugin: 'entity:media'
   default_bundle: credit_or_debit_card

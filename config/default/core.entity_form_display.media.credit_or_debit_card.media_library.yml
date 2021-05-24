@@ -11,7 +11,6 @@ dependencies:
     - field.field.media.credit_or_debit_card.field_credit_or_debit_card
     - field.field.media.credit_or_debit_card.field_debit_card_category
     - field.field.media.credit_or_debit_card.field_debit_card_keywords
-    - field.field.media.credit_or_debit_card.field_school_zip_code
     - media.type.credit_or_debit_card
 id: media.credit_or_debit_card.media_library
 targetEntityType: media
@@ -35,7 +34,6 @@ hidden:
   field_credit_or_debit_card: true
   field_debit_card_category: true
   field_debit_card_keywords: true
-  field_school_zip_code: true
   moderation_state: true
   path: true
   status: true
