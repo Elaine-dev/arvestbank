@@ -25,6 +25,6 @@ export PATH=$repo_root/vendor/bin:$PATH
 cd $repo_root
 
 blt artifact:ac-hooks:post-code-deploy $site $target_env $source_branch $deployed_tag $repo_url $repo_type --environment=$target_env -v --no-interaction -D drush.ansi=false
-drush $target_env cr
+drush @arvestbank.$target_env cr
 
 set +v
