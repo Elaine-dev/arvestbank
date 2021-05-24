@@ -337,11 +337,6 @@
   border-color: #fff;
 }
 
-.coh-style-slider-left-side-blocks h2 {
-  padding-left: 1.25rem;
-  font-size: 19px;
-}
-
 .login-wrapper .coh-block,
 .login-wrapper .block,
 .login-wrapper form,
@@ -388,14 +383,6 @@
   .coh-style-login-blocks .login-results {
     width: 100vw;
   }
-}
-
-.coh-style-login-blocks #edit-investments-wealth-links,
-.coh-style-login-blocks #edit-investments-wealth-links--2,
-.coh-style-login-blocks #edit-awm-client-point-links,
-.coh-style-login-blocks #edit-awm-client-point-links--2 {
-  float: right;
-  margin-top: -0.25rem;
 }
 
 .coh-style-login-blocks .chosen-container-single {

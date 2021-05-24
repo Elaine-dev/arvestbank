@@ -259,13 +259,6 @@
     @return #{$remSize}rem;
 }
 
-// Sidebar headings. Remove after styles inserted elsewhere.
-.coh-style-slider-left-side-blocks h2 {
-    padding-left: calculateRem(20px);
-    // Remove font size
-    font-size: 19px;
-}
-
 // Target top login
 .login-wrapper {
     // Vertically stretch and center styled select list
@@ -317,19 +310,6 @@
         @media (max-width: 47.9375rem) {
             width: 100vw;
         }
-    }
-
-    // Align links wrappers
-    #edit-investments-wealth-links,
-    #edit-investments-wealth-links--2,
-    #edit-awm-client-point-links,
-    #edit-awm-client-point-links--2 {
-        // position: absolute;
-        // right: calculateRem(20px);
-        // bottom: calculateRem(10px);
-        float: right;
-        margin-top: calculateRem(-4px);
-        // margin-right: calculateRem(10px);
     }
 
     // Chosen-specific styles
