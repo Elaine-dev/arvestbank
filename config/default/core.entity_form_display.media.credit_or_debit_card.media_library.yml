@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.media.media_library
-    - field.field.media.credit_or_debit_card.feeds_item
     - field.field.media.credit_or_debit_card.field_acquiadam_asset_descrip
     - field.field.media.credit_or_debit_card.field_acquiadam_asset_id
     - field.field.media.credit_or_debit_card.field_acquiadam_asset_image
@@ -29,7 +28,6 @@ content:
     region: content
 hidden:
   created: true
-  feeds_item: true
   field_acquiadam_asset_descrip: true
   field_acquiadam_asset_id: true
   field_acquiadam_asset_image: true
