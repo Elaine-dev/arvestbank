@@ -107,3 +107,5 @@ apache_vhosts_ssl:
     certificate_key_file: "/vagrant/example.key"
     extra_parameters: |
       ProxyPassMatch ^/(.*\.php(/.*)?)$ "fcgi://127.0.0.1:9000{{ drupal_core_path }}"
+
+max_allowed_packet: 256M
