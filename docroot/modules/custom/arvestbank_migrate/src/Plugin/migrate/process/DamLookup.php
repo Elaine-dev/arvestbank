@@ -18,9 +18,12 @@ use Drupal\migrate\Row;
 class DamLookup extends ProcessPluginBase {
 
   /**
-   * {@inheritdoc}
+   * Returns querystring with filename param set.
+   *
+   * @param $filename
+   *
    */
-  public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
+  private function getDam($filename) : int {
 
     $database = \Drupal::database();
 
@@ -28,8 +31,10 @@ class DamLookup extends ProcessPluginBase {
       SELECT d.field_acquiadam_asset_id_value FROM media_field_data m
       INNER JOIN media_revision__field_acquiadam_asset_id d
       ON (m.vid = d.revision_id)
-      WHERE m.name LIKE '%" . $value . "%'
+      WHERE m.name = '$filename'
       and m.bundle = 'acquia_dam_image'
+      ORDER BY m.changed DESC
+      LIMIT 1;
     ";
 
     $query = $database->query($queryString);
@@ -39,7 +44,32 @@ class DamLookup extends ProcessPluginBase {
       return $result[0]->field_acquiadam_asset_id_value;
     }
     else {
-      $migrate_executable->saveMessage("NO ASSET MATCH: " . $value);
+      return FALSE;
+    }
+
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
+
+    $dam_id = FALSE;
+
+    $filename = $value . '.png';
+
+    $dam_id = $this->getDam($filename);
+
+    if (!$dam_id) {
+      $filename = '0' . $value . '.png';
+      $dam_id = $this->getDam($filename);
+    }
+
+    if ($dam_id) {
+      return $dam_id;
+    }
+    else {
+      $migrate_executable->saveMessage("NO ASSET MATCH: " . $filename);
       return FALSE;
     }
 
