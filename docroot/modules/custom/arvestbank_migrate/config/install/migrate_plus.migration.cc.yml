@@ -1,0 +1,80 @@
+id: cc
+label: Import Credit Cards
+migration_group: default
+
+source:
+  plugin: 'csv'
+  # Full path to the file.
+  path: 'modules/custom/arvestbank_migrate/data/credit-cards.csv'
+  # Column delimiter. Comma (,) by default.
+  delimiter: ','
+  # Field enclosure. Double quotation marks (") by default.
+  enclosure: '"'
+  # The row to be used as the CSV header (indexed from 0),
+  # or null if there is no header row.
+  header_offset: 0
+  # The column(s) to use as a key. Each column specified will
+  # create an index in the migration table and too many columns
+  # may throw an index size error.
+  ids:
+    - id
+  # Here we identify the columns of interest in the source file.
+  # Each numeric key is the 0-based index of the column.
+  # For each column, the key below is the field name assigned to
+  # the data on import, to be used in field mappings below.
+  # The label value is a user-friendly string for display by the
+  # migration UI.
+  fields:
+
+  0:
+    name: date_added
+    label: 'Date Added'
+  1:
+    name: id
+    label: 'ID'
+  2:
+    name: category
+    label: 'Category'
+  3:
+    name: display
+    label: 'Display'
+  4:
+    name: state
+    label: 'State'
+  5:
+    name: city
+    label: 'City'
+  6:
+    name: lat
+    label: 'Latitude'
+  7:
+    name: lon
+    label: 'Longitude'
+  8:
+    name: radius
+    label: 'Radius'
+  9:
+    name: name
+    label: 'Name'
+  10:
+    name: name_catalog
+    label: 'Name Catalog'
+  11:
+    name: notes
+    label: 'Notes'
+  12:
+    name: keywords
+    label: 'Keywords'
+
+process:
+  name: name
+  field_acquiadam_asset_id:
+    plugin: dam_lookup
+    source: id
+  field_credit_or_debit_card:
+    plugin: default_value
+    default_value: debit
+
+destination:
+  plugin: entity:media
+  default_bundle: credit_or_debit_card

@@ -1,0 +1,15 @@
+arvestbank_migrate.test_controller_render:
+  path: '/admin/arvestbank-migrate/test'
+  defaults:
+    _controller: '\Drupal\arvestbank_migrate\Controller\TestController::render'
+    _title: 'render'
+  requirements:
+    _permission: 'access content'
+
+arvestbank_migrate.cc_update_batch:
+  path: '/admin/arvestbank-migrate/cc-update-batch'
+  defaults:
+    _title: 'CC Update Batch'
+    _form: '\Drupal\arvestbank_migrate\Form\CCUpdateBatch'
+  requirements:
+    _permission: 'administer site configuration'
