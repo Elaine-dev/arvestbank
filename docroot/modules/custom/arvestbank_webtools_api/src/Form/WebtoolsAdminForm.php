@@ -90,69 +90,6 @@ class WebtoolsAdminForm extends ConfigFormBase {
       '#submit' => [[$this, 'testPingIdentity']],
     ];
 
-
-
-    // Optimal Blue Azure Token Container.
-    $form['optimal-blue-azure-token'] = [
-      '#type' => 'fieldset',
-      '#collapsible' => FALSE,
-      '#collapsed' => FALSE,
-      '#title' => '"Optimal Blue" Microsoft Azure AD App Security Token Connection Details',
-      '#description' => 'The endpoint for obtaining an "Optimal Blue" App Microsoft Azure AD security token.<br/>This is used for connecting to the Mortgage Rates Webtools endpoint.<br/>Should be autoswitched in secrets.settings.php.',
-    ];
-
-    // Add bearer token info to Optimal Blue container description.
-    if (\Drupal::state()->get('arvestbank_webtools_api__optimal_blue_bearer_token')) {
-      $form['optimal-blue-azure-token']['#description'] .= '<br/>Current bearer token: <b>'
-        . \Drupal::state()->get('arvestbank_webtools_api__optimal_blue_bearer_token')
-        . '</b>';
-      if (
-        \Drupal::state()->get('arvestbank_webtools_api__bearer_token_expiration')
-        && \Drupal::state()->get('arvestbank_webtools_api__optimal_blue_bearer_token_expiration') > time()
-      ) {
-        $form['optimal-blue-azure-token']['#description'] .= '(not expired)';
-      }
-      else {
-        $form['optimal-blue-azure-token']['#description'] .= '(expired)';
-      }
-    }
-
-    // Optimal Blue Azure Token Endpoint field.
-    $form['optimal-blue-azure-token']['optimal_blue_oauth_endpoint'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('OAUTH Endpoint'),
-      '#description' => $this->t('The Optimal Blue App OAuth endpoint to connect to.'),
-      '#default_value' => $config->get('optimal_blue_oauth_endpoint'),
-      '#attributes' => ['disabled' => 'disabled'],
-    ];
-
-    // Optimal Blue Azure Token Client Id field.
-    $form['optimal-blue-azure-token']['optimal_blue_oauth_client_id'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Client ID'),
-      '#description' => $this->t('The Optimal Blue App OAuth client id to use.'),
-      '#default_value' => $config->get('optimal_blue_oauth_client_id'),
-      '#attributes' => ['disabled' => 'disabled'],
-    ];
-
-    // Optimal Blue Azure Token Client Secret field.
-    $form['optimal-blue-azure-token']['optimal_blue_oauth_client_secret'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Client Secret'),
-      '#description' => $this->t('The Optimal Blue App OAuth client secret to use.'),
-      '#default_value' => $config->get('optimal_blue_oauth_client_secret'),
-      '#attributes' => ['disabled' => 'disabled'],
-    ];
-
-    // Test Optimal Blue button.
-    $form['optimal-blue-azure-token']['test_optimal_blue_config'] = [
-      '#type' => 'submit',
-      '#value' => t('Test Optimal Blue Config'),
-      '#submit' => [[$this, 'testOptimalBlue']],
-    ];
-
-
-
     // IBM Client Id.
     $form['webtools']['ibm-client-id'] = [
       '#type' => 'textfield',

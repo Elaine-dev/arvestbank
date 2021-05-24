@@ -43,13 +43,6 @@ class WebtoolsClient {
   protected $pingIdentityClient;
 
   /**
-   * Azure Token client.
-   *
-   * @var \Drupal\arvestbank_webtools_api\Services\PingIdentityClient
-   */
-  protected $azureTokenClient;
-
-  /**
    * Constructs a new WebtoolsClient object.
    *
    * @param \Drupal\Core\Config\ConfigFactory $configFactory
@@ -58,10 +51,8 @@ class WebtoolsClient {
    *   A drupal http client factory.
    * @param \Drupal\arvestbank_webtools_api\Services\PingIdentityClient $pingIdentityClient
    *   The ping identity client service.
-   * @param \Drupal\arvestbank_webtools_api\Services\AzureTokenClient $azureTokenClient
-   *   The azure token client service.
    */
-  public function __construct(ConfigFactory $configFactory, Client $httpClient, PingIdentityClient $pingIdentityClient, AzureTokenClient $azureTokenClient) {
+  public function __construct(ConfigFactory $configFactory, Client $httpClient, PingIdentityClient $pingIdentityClient) {
     // Store config factory for later use.
     $this->configFactory = $configFactory;
     // Load and store config for this module.

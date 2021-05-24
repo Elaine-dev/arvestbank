@@ -4,7 +4,4 @@ services:
     arguments: ['@config.factory','@http_client']
   arvestbank_webtools_api.webtools_client:
     class: Drupal\arvestbank_webtools_api\Services\WebtoolsClient
-    arguments: ['@config.factory','@http_client','@arvestbank_webtools_api.ping_identity_client', '@arvestbank_webtools_api.azure_token_client']
-  arvestbank_webtools_api.azure_token_client:
-    class: Drupal\arvestbank_webtools_api\Services\AzureTokenClient
-    arguments: ['@config.factory','@http_client']
+    arguments: ['@config.factory','@http_client','@arvestbank_webtools_api.ping_identity_client']
