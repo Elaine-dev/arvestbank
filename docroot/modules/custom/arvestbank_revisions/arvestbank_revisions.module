@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use \Drupal\Core\Render\BubbleableMetadata;
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -45,5 +46,23 @@ function arvestbank_revisions_form_node_form_alter(&$form, &$form_state, $form_i
     $form['revision']['#description'] = 'Revisions are required.';
   }
 
+
+}
+
+/**
+ * Implements hook_tokens_alter().
+ */
+function arvestbank_revisions_tokens_alter(array &$replacements, array $context, BubbleableMetadata $bubbleable_metadata) {
+
+  // If this is the current page title token on a revision page.
+  if (
+    isset($context['tokens']['title'])
+    && $context['tokens']['title'] == '[current-page:title]'
+    && \Drupal::request()->get('_raw_variables')
+    && \Drupal::request()->get('_raw_variables')->get('node_revision')
+  ) {
+    // Strip tags from the title.
+    $replacements['[current-page:title]'] = strip_tags($replacements['[current-page:title]']);
+  }
 
 }
