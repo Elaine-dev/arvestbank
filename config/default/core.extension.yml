@@ -15,6 +15,7 @@ module:
   arvestbank_external_login: 0
   arvestbank_media_alias: 0
   arvestbank_menus: 0
+  arvestbank_migrate: 0
   arvestbank_rates: 0
   arvestbank_revisions: 0
   arvestbank_search: 0
@@ -73,6 +74,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  geolocation: 0
   gtm: 0
   iframe: 0
   image: 0
@@ -104,6 +106,10 @@ module:
   metatag_twitter_cards: 0
   metatag_verification: 0
   metatag_views: 0
+  migrate: 0
+  migrate_plus: 0
+  migrate_source_csv: 0
+  migrate_tools: 0
   moderation_dashboard: 0
   node: 0
   options: 0

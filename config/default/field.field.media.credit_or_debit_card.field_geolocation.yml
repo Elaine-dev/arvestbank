@@ -1,0 +1,21 @@
+uuid: 81a8a175-cabb-48dd-97c7-320bfe3dad3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_geolocation
+    - media.type.credit_or_debit_card
+  module:
+    - geolocation
+id: media.credit_or_debit_card.field_geolocation
+field_name: field_geolocation
+entity_type: media
+bundle: credit_or_debit_card
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

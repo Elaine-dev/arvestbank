@@ -1,19 +1,19 @@
-uuid: ab7b3851-c8c9-4d79-84a6-3baf48a18a77
+uuid: 634c00f7-8282-46a2-a152-2f59963649c9
 langcode: en
 status: true
 dependencies:
   module:
     - media
-    - taxonomy
-id: media.field_school_zip_code
-field_name: field_school_zip_code
+id: media.field_geolocation_radius
+field_name: field_geolocation_radius
 entity_type: media
-type: entity_reference
+type: integer
 settings:
-  target_type: taxonomy_term
+  unsigned: false
+  size: normal
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

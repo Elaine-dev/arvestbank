@@ -1,29 +1,19 @@
-uuid: e21de82a-eda5-4d49-b3ab-6ace2c7edfe8
+uuid: f469dd59-b2be-487b-ae3a-df68db9adb25
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.media.field_debit_card_keywords
     - media.type.credit_or_debit_card
-    - taxonomy.vocabulary.debit_card_keywords
 id: media.credit_or_debit_card.field_debit_card_keywords
 field_name: field_debit_card_keywords
 entity_type: media
 bundle: credit_or_debit_card
 label: 'Debit Card Keywords'
-description: ''
+description: 'Enter searchable keywords for the Specialty Debit Cards filter.'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings:
-  handler: 'default:taxonomy_term'
-  handler_settings:
-    target_bundles:
-      debit_card_keywords: debit_card_keywords
-    sort:
-      field: name
-      direction: asc
-    auto_create: false
-    auto_create_bundle: ''
-field_type: entity_reference
+settings: {  }
+field_type: string_long

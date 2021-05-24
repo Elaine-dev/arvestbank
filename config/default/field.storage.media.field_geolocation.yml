@@ -1,16 +1,16 @@
-uuid: 27401923-b80f-4ccd-aaa3-edd0b788cfa8
+uuid: 960d59c9-606c-4949-ba33-8fda317fa8c9
 langcode: en
 status: true
 dependencies:
   module:
+    - geolocation
     - media
-id: media.field_debit_card_keywords
-field_name: field_debit_card_keywords
+id: media.field_geolocation
+field_name: field_geolocation
 entity_type: media
-type: string_long
-settings:
-  case_sensitive: false
-module: core
+type: geolocation
+settings: {  }
+module: geolocation
 locked: false
 cardinality: 1
 translatable: true
