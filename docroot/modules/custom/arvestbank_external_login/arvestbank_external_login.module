@@ -40,9 +40,13 @@ function _arvestbank_external_login_login_form_alter(array &$form) {
 
   // Decide to show prod or non-prod login select.
   if (isset($_ENV['AH_SITE_ENVIRONMENT']) && $_ENV['AH_SITE_ENVIRONMENT'] == 'prod') {
+    $form['elements']['login_select']['#wrapper_attributes']['class'][] = 'active-sidebar-select';
+    $form['elements']['login_select']['#wrapper_attributes']['class'][] = 'active-sidebar-select-prod';
     $form['elements']['login_select_non_prod']['#access'] = FALSE;
   }
   else {
+    $form['elements']['login_select_non_prod']['#wrapper_attributes']['class'][] = 'active-sidebar-select';
+    $form['elements']['login_select_non_prod']['#wrapper_attributes']['class'][] = 'active-sidebar-select-non-prod';
     $form['elements']['login_select']['#access'] = FALSE;
   }
 
