@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Install and update hooks for Arvest Bank Core module.
+ */
+
+
+/**
+ * Bulk publish images.
+ */
+function arvestbank_core_update_9001(&$sandbox) {
+
+  $media_storage = \Drupal::entityTypeManager()->getStorage('media');
+  if (!isset($sandbox['total'])) {
+
+    // Get ids of each image.
+    $image_ids = $media_storage->getQuery()
+      ->condition('bundle', 'acquia_dam_image')
+      ->condition('status', 0)
+      ->execute();
+
+    $sandbox['ids'] = array_values($image_ids);
+    $sandbox['total'] = count($image_ids);
+    $sandbox['progress'] = 0;
+  }
+
+  // Update 25 image entities per batch run at most.
+  $limit = 25;
+  $batch_ids = array_slice($sandbox['ids'], $sandbox['progress'], $limit);
+  $images = $media_storage->loadMultiple($batch_ids);
+  foreach ($images as $image) {
+    $image->setPublished(TRUE);
+    $image->save();
+    $sandbox['progress']++;
+  }
+
+  $sandbox['#finished'] = $sandbox['progress'] / $sandbox['total'];
+}
