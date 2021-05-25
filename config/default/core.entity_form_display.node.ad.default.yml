@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.dam_image_entity_browser
     - field.field.node.ad.body
     - field.field.node.ad.field_ad_alternate
     - field.field.node.ad.field_ad_content_image
@@ -13,8 +14,8 @@ dependencies:
     - workflows.workflow.editorial
   module:
     - content_moderation
+    - entity_browser
     - link
-    - media_library
     - path
     - scheduler
 id: node.ad.default
@@ -35,17 +36,31 @@ content:
     type: options_select
     region: content
   field_ad_content_image:
-    type: media_library_widget
+    type: entity_browser_entity_reference
     weight: 15
     settings:
-      media_types: {  }
+      entity_browser: dam_image_entity_browser
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings: {  }
     third_party_settings: {  }
     region: content
   field_ad_nav_image:
-    type: media_library_widget
+    type: entity_browser_entity_reference
     weight: 13
     settings:
-      media_types: {  }
+      entity_browser: dam_image_entity_browser
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings: {  }
     third_party_settings: {  }
     region: content
   field_cta:
@@ -57,10 +72,17 @@ content:
     type: link_default
     region: content
   field_image:
-    type: media_library_widget
+    type: entity_browser_entity_reference
     weight: 14
     settings:
-      media_types: {  }
+      entity_browser: dam_image_entity_browser
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings: {  }
     third_party_settings: {  }
     region: content
   moderation_state:
