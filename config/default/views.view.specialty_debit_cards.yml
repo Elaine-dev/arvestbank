@@ -923,6 +923,236 @@ display:
           plugin_id: field
       defaults:
         fields: false
+        use_ajax: false
+        pager: false
+        filters: false
+        filter_groups: false
+      use_ajax: true
+      pager:
+        type: none
+        options:
+          offset: 0
+      filters:
+        status:
+          value: '1'
+          table: media_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: media
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        bundle:
+          id: bundle
+          table: media_field_data
+          field: bundle
+          value:
+            credit_or_debit_card: credit_or_debit_card
+          entity_type: media
+          entity_field: bundle
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        field_debit_card_category_target_id:
+          id: field_debit_card_category_target_id
+          table: media__field_debit_card_category
+          field: field_debit_card_category_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_debit_card_category_target_id_op
+            label: Category/Theme
+            description: ''
+            use_operator: false
+            operator: field_debit_card_category_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_debit_card_category_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              reviewer: '0'
+              contributor: '0'
+              site_editor: '0'
+              domain_admin: '0'
+              enterprise_admin: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: debit_card_category
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_debit_card_keywords_value:
+          id: field_debit_card_keywords_value
+          table: media__field_debit_card_keywords
+          field: field_debit_card_keywords_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_debit_card_keywords_value_op
+            label: Keyword
+            description: ''
+            use_operator: false
+            operator: field_debit_card_keywords_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_debit_card_keywords_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              reviewer: '0'
+              contributor: '0'
+              site_editor: '0'
+              domain_admin: '0'
+              enterprise_admin: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+        field_geolocation_proximity:
+          id: field_geolocation_proximity
+          table: media__field_geolocation
+          field: field_geolocation_proximity
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '<='
+          value:
+            min: ''
+            max: ''
+            value: '200'
+            center: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_geolocation_proximity_op
+            label: Proximity
+            description: ''
+            use_operator: false
+            operator: field_geolocation_proximity_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_geolocation_proximity
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              reviewer: '0'
+              contributor: '0'
+              site_editor: '0'
+              domain_admin: '0'
+              enterprise_admin: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          location_input:
+            client_location:
+              weight: 0
+              enable: false
+              location_input_id: client_location
+              settings:
+                auto_submit: false
+                hide_form: false
+            coordinates:
+              enable: true
+              weight: 0
+              location_input_id: coordinates
+            geocoder:
+              weight: 0
+              enable: false
+              location_input_id: geocoder
+            'fixed_value:fixed_value':
+              settings:
+                location_settings:
+                  settings:
+                    latitude: ''
+                    longitude: ''
+                location_plugin_id: fixed_value
+              weight: 0
+              enable: false
+              location_input_id: location_plugins
+            'ipstack:ipstack':
+              settings:
+                location_settings:
+                  settings:
+                    access_key: ''
+                location_plugin_id: ipstack
+              weight: 0
+              enable: false
+              location_input_id: location_plugins
+            'freeogeoip:freeogeoip':
+              weight: 0
+              enable: false
+              location_input_id: location_plugins
+              settings:
+                location_plugin_id: freeogeoip
+          unit: km
+          entity_type: media
+          plugin_id: geolocation_filter_proximity
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:

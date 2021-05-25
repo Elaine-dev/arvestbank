@@ -1,0 +1,7 @@
+services:
+  logger.channel.arvestbank_zipcodes:
+    parent: logger.channel_base
+    arguments: ['arvestbank_zipcodes']
+  arvestbank_zipcodes.geolocate:
+    class: Drupal\arvestbank_zipcodes\ZipGeolocate
+    arguments: []
