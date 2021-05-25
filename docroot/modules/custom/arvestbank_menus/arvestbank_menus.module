@@ -82,7 +82,17 @@ function arvestbank_menus_block_view_menu_block_alter(&$build, &$plugin) {
 
     // Get canonical menu link.
     $canonicalMenuLinkHelper = \Drupal::service('arvestbank_menus.canonical_menu_link_helper');
-    $canonicalMenuLinkId = $canonicalMenuLinkHelper->getCanonicalMenuLinkIds($entity->id(), TRUE);
+
+    // On revision pages $entity is a string.
+    if (is_string($entity)) {
+      // Get canonical link for this entity.
+      $canonicalMenuLinkId = $canonicalMenuLinkHelper->getCanonicalMenuLinkIds($entity, TRUE);
+    }
+    // For non-revision pages $entity is an object.
+    else {
+      // Get canonical link for this entity.
+      $canonicalMenuLinkId = $canonicalMenuLinkHelper->getCanonicalMenuLinkIds($entity->id(), TRUE);
+    }
 
     // Load the menu link content entity.
     if ($canonicalMenuLinkId) {
