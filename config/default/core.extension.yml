@@ -12,6 +12,7 @@ module:
   arvestbank_branch_locations: 0
   arvestbank_browsertest: 0
   arvestbank_calculators: 0
+  arvestbank_core: 0
   arvestbank_external_login: 0
   arvestbank_media_alias: 0
   arvestbank_menus: 0
@@ -145,6 +146,7 @@ module:
   simple_sitemap_engines: 0
   simplesamlphp_auth: 0
   sitemap: 0
+  syslog: 0
   system: 0
   tamper: 0
   taxonomy: 0
