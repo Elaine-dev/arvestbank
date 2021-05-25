@@ -1,4 +1,3 @@
-
 -
   type: cohesion_sync_package
   export:
@@ -8,7 +7,7 @@
     dependencies: {  }
     id: pack_master_template
     label: 'Master Template'
-    description: "A Site Studio package for the Master template.\r\nLast updated: Allie Jones 5/25/2021"
+    description: "A Site Studio package for the Master template with components.\r\nLast updated: Allie Jones 5/25/2021"
     excluded_entity_types: '[]'
     settings: '{"77ec9f12-cb22-4a09-b4ab-dfc87a592fc3":{"type":"cohesion_master_templates","items":{"77ec9f12-cb22-4a09-b4ab-dfc87a592fc3":{"type":"cohesion_master_templates"}},"checked":true}}'
 -
