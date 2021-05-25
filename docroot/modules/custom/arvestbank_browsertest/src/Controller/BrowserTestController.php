@@ -39,7 +39,6 @@ class BrowserTestController extends ControllerBase {
         ],
         'drupalSettings' => [
           'arvestbank_browsertest' => [
-            'agent' => $_SERVER['HTTP_USER_AGENT'] ?? NULL,
             'client' => $_SERVER['HTTP_CLIENT_IP'] ?? NULL,
             'forwarded' => $_SERVER['HTTP_X_FORWARDED_FOR'] ?? NULL,
             'remote_addr' => $_SERVER['REMOTE_ADDR'] ?? NULL,
