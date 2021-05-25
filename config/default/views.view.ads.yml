@@ -1219,7 +1219,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: CTA
+          label: 'Ad Link'
           exclude: false
           alter:
             alter_text: false
