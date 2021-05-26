@@ -203,7 +203,7 @@ handlers:
     conditions: {  }
     weight: 0
     settings:
-      webtools_form_name: wealth
+      webtools_form_name: email_aam
       first_name_field_machine_name: name.first
       last_name_field_machine_name: name.last
       full_name_field_machine_name: ''
