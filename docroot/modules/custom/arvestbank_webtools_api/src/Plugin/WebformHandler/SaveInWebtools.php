@@ -158,17 +158,38 @@ class SaveInWebtools extends WebformHandlerBase {
 
     // Track if we've settled on the name we'll send.
     $nameFieldAdded = FALSE;
+    // Get exploded name parts just in case
+    $explodedNameParts = [
+      'first_name_field_machine_name' => explode('.',$this->configuration['first_name_field_machine_name']),
+      'last_name_field_machine_name' => explode('.',$this->configuration['last_name_field_machine_name']),
+    ];
 
     // If we have a first name field set.
     if (
       isset($this->configuration['first_name_field_machine_name'])
       && $this->configuration['first_name_field_machine_name']
-      && isset($submittedValues[$this->configuration['first_name_field_machine_name']])
+      && (
+        isset($submittedValues[$this->configuration['first_name_field_machine_name']])
+        || (
+          count($explodedNameParts['first_name_field_machine_name']) == 2
+          && isset($submittedValues[$explodedNameParts['first_name_field_machine_name'][0]][$explodedNameParts['first_name_field_machine_name'][1]])
+        )
+      )
     ) {
+
+      // Non nested first name value.
+      if (isset($submittedValues[$this->configuration['first_name_field_machine_name']])) {
+        $firstNameValue = $submittedValues[$this->configuration['first_name_field_machine_name']];
+      }
+      // Nested first name value.
+      else {
+        $firstNameValue = $submittedValues[$explodedNameParts['first_name_field_machine_name'][0]][$explodedNameParts['first_name_field_machine_name'][1]];
+      }
+
       // Add first name to xml.
       $requestData['meta']['meta'][] = [
         'name'  => 'firstName',
-        'value' => $submittedValues[$this->configuration['first_name_field_machine_name']],
+        'value' => $firstNameValue,
       ];
       // Indicate not to use the full name functionality.
       $nameFieldAdded = TRUE;
@@ -178,12 +199,28 @@ class SaveInWebtools extends WebformHandlerBase {
     if (
       isset($this->configuration['last_name_field_machine_name'])
       && $this->configuration['last_name_field_machine_name']
-      && isset($submittedValues[$this->configuration['last_name_field_machine_name']])
+      && (
+        isset($submittedValues[$this->configuration['last_name_field_machine_name']])
+        || (
+          count($explodedNameParts['last_name_field_machine_name']) == 2
+          && isset($submittedValues[$explodedNameParts['last_name_field_machine_name'][0]][$explodedNameParts['last_name_field_machine_name'][1]])
+        )
+      )
     ) {
+
+      // Non nested last name value.
+      if (isset($submittedValues[$this->configuration['last_name_field_machine_name']])) {
+        $lastNameValue = $submittedValues[$this->configuration['last_name_field_machine_name']];
+      }
+      // Nested last name value.
+      else {
+        $lastNameValue = $submittedValues[$explodedNameParts['last_name_field_machine_name'][0]][$explodedNameParts['last_name_field_machine_name'][1]];
+      }
+
       // Add first name to xml.
       $requestData['meta']['meta'][] = [
         'name'  => 'lastName',
-        'value' => $submittedValues[$this->configuration['last_name_field_machine_name']],
+        'value' => $lastNameValue,
       ];
       // Indicate not to use the full name functionality.
       $nameFieldAdded = TRUE;
