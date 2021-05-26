@@ -6,6 +6,7 @@ dependencies:
     - field.storage.media.field_acquiadam_asset_image
     - field.storage.media.field_debit_card_category
     - field.storage.media.field_debit_card_keywords
+    - field.storage.media.field_id_internal
     - image.style.thumbnail
     - media.type.credit_or_debit_card
     - system.menu.admin
@@ -668,7 +669,7 @@ display:
     display_options:
       display_extenders:
         metatag_display_extender: {  }
-      path: personal/bank/checking/debit-cards/specialty-debit-cards
+      path: personal/bank/checking/debit-cards/specialty
       menu:
         type: normal
         title: 'Specialty Debit Cards'
@@ -857,6 +858,69 @@ display:
           hide_alter_empty: true
           counter_start: 1
           plugin_id: counter
+        field_id_internal:
+          id: field_id_internal
+          table: media__field_id_internal
+          field: field_id_internal
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         name:
           id: name
           table: media_field_data
@@ -867,8 +931,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ name }} - {{ field_id_internal }}'
             make_link: false
             path: ''
             absolute: false
@@ -1222,6 +1286,7 @@ display:
       tags:
         - 'config:field.storage.media.field_acquiadam_asset_image'
         - 'config:field.storage.media.field_debit_card_category'
+        - 'config:field.storage.media.field_id_internal'
   page_2:
     display_plugin: page
     id: page_2
@@ -1310,6 +1375,69 @@ display:
             image_style: thumbnail
             image_link: ''
           group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_id_internal:
+          id: field_id_internal
+          table: media__field_id_internal
+          field: field_id_internal
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ID
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -1809,7 +1937,20 @@ display:
         type: fields
         options: {  }
       title: 'Debit Cards Administration'
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: "<div class=\"action-link\"><a href=\"/media/add/credit_or_debit_card?destination=/admin/content/debit-cards\">click here to add a card</a></div>\r\n<div class=\"action-link\"><a href=\"/personal/bank/checking/debit-cards/specialty\">view the output</a></div>"
+            format: cohesion
+          plugin_id: text
       footer: {  }
     cache_metadata:
       max-age: -1
@@ -1823,3 +1964,4 @@ display:
         - 'config:field.storage.media.field_acquiadam_asset_image'
         - 'config:field.storage.media.field_debit_card_category'
         - 'config:field.storage.media.field_debit_card_keywords'
+        - 'config:field.storage.media.field_id_internal'
