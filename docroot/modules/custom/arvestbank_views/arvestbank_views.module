@@ -161,7 +161,20 @@ function arvestbank_views_views_pre_view(\Drupal\views\ViewExecutable $view, $di
     // Get the current filters
     $filters = $view->getExposedInput();
 
-    // Get the map of paths to fields from the service.
+    // Geolocate the zip code.
+    // First try GoogleMap API.
+//    $url = "https://maps.googleapis.com/maps/api/geocode/json?address=".urlencode($zip)."&key=AIzaSyAd57cbqi7q8YBaYjcQR3Iqw6tkjMsjyIA";
+//    $result_string = file_get_contents($url);
+//    $result = json_decode($result_string, true);
+//    dump($result);
+//    $result1[]=$result['results'][0];
+//    $result2[]=$result1[0]['geometry'];
+//    $result3[]=$result2[0]['location'];
+//    dump($result3);die();
+//
+//    return $result3[0];
+
+    // Fallback to the big static array.
     if ($coords = \Drupal::service('arvestbank_zipcodes.geolocate')->zipCoords($zip)) {
       $filters['center']['coordinates'] = $coords;
       $view->setExposedInput($filters);
