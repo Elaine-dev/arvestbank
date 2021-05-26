@@ -13,7 +13,6 @@
         "acquia/blt": "12.4",
         "acquia/blt-simplesamlphp": "dev-master",
         "acquia/blt-site-studio": "dev-develop",
-        "acquia/site_studio_webform": "dev-main",
         "acquia/cohesion": "6.5.1",
         "acquia/cohesion-theme": "6.5.1",
         "composer/installers": "^1.9",
@@ -197,10 +196,6 @@
         "blt-site-studio": {
             "type": "vcs",
             "url": "https://github.com/davidtrainer/blt-site-studio.git"
-        },
-        "site_studio_webform": {
-            "type": "vcs",
-            "url": "https://github.com/pavlosdan/site_studio_webform"
         },
         "chosen": {
             "type": "package",
