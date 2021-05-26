@@ -322,7 +322,7 @@ class SaveInWebtools extends WebformHandlerBase {
     }
 
     $xmlConverterObject = new ArrayToXml($requestData, 'request');
-    return $xmlConverterObject->prettify()->dropXmlDeclaration()->toXml();
+    return $xmlConverterObject->dropXmlDeclaration()->toXml();
 
   }
 
