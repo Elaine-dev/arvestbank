@@ -1,0 +1,33 @@
+
+-
+  type: cohesion_sync_package
+  export:
+    uuid: d7f44952-5301-40e8-9aad-fa88b0596957
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: pack_custom_style_red
+    label: 'Custom Style Red'
+    description: 'A Custom style to add to the main menu to make menu links red. Last Updated: Allie Jones 05/27/2021'
+    excluded_entity_types: '[]'
+    settings: '{"7884b490-e063-43cd-b75e-e0d63908e672":{"type":"cohesion_custom_style","items":{"7884b490-e063-43cd-b75e-e0d63908e672":{"type":"cohesion_custom_style"}},"checked":true}}'
+-
+  type: cohesion_custom_style
+  export:
+    uuid: 7884b490-e063-43cd-b75e-e0d63908e672
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: 901eaa01
+    label: Red
+    json_values: '{"preview":{"text":"<div class=\"coh-preview\">Default content for ''Generic''.<\/div>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"div","class":"","combinator":"","pseudo":""},"styles":{"xl":{"color":{"value":{"link":false,"value":{"hex":"#e60000","rgba":"rgba(230, 0, 0, 1)"},"name":"#e60000 Primary Red","uid":"red-2","class":".coh-color-red-2","variable":"$coh-color-red-2","inuse":true,"wysiwyg":false}}}},"67ed1020-3a42-43de-91c1-b1da77ced24d":{"settings":{"element":"a","class":"","combinator":"","pseudo":""},"styles":{"xl":{"color":{"value":{"link":false,"value":{"hex":"#e60000","rgba":"rgba(230, 0, 0, 1)"},"name":"#e60000 Primary Red","uid":"red-2","class":".coh-color-red-2","variable":"$coh-color-red-2","inuse":true,"wysiwyg":false}}}}},"2cd5b8c4-d0bd-4253-8da5-158556273a23":{"settings":{"element":"","class":"","combinator":"","pseudo":":hover"},"styles":{"xl":{"color":{"value":{"link":false,"value":{"hex":"#e60000","rgba":"rgba(230, 0, 0, 1)"},"name":"#e60000 Primary Red","uid":"red-2","class":".coh-color-red-2","variable":"$coh-color-red-2","inuse":true,"wysiwyg":false}}}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+    json_mapper: '{"styles":{"title":"Layout","selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]}]}],"items":[{"title":":hover","type":"container","items":[],"form":null,"selectorType":"pseudo","uuid":"2cd5b8c4-d0bd-4253-8da5-158556273a23","allowedTypes":["child","pseudo"],"formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]}]}]},{"title":"a","type":"container","items":[],"form":null,"selectorType":"child","model":"a","uuid":"67ed1020-3a42-43de-91c1-b1da77ced24d","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]}]}]}],"form":null}}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    class_name: .coh-style-red
+    custom_style_type: generic
+    available_in_wysiwyg: false
+    parent: null
+    weight: 0
