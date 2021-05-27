@@ -246,18 +246,8 @@
 // ---------------  Login Forms  --------------- //
 
 // Top nav bar
-// Multiple svg backgrounds on select
-// Remining styles in Site Studio Login Blocks custom style
-
-// .coh-container.coh-ce-cpt_site_header-2a933a58 {
-//     z-index: 50;
-//   }
-
-// REM calculator
-@function calculateRem($size) {
-    $remSize: $size / 16px;
-    @return #{$remSize}rem;
-}
+// Remaining styles in Site Studio Login Blocks custom style
+// calculateRem() is in base > _variables.scss
 
 // Target top login
 .login-wrapper {
