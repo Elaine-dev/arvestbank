@@ -6,6 +6,8 @@ dependencies:
     - field.field.node.ad.body
     - field.field.node.ad.field_ad_alternate
     - field.field.node.ad.field_ad_content_image
+    - field.field.node.ad.field_ad_exit_text_ad
+    - field.field.node.ad.field_ad_exit_text_link
     - field.field.node.ad.field_ad_nav_image
     - field.field.node.ad.field_cta
     - field.field.node.ad.field_image
@@ -47,6 +49,26 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
+    region: content
+  field_ad_exit_text_ad:
+    weight: 108
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ad_exit_text_link:
+    weight: 109
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
   field_ad_nav_image:
     type: entity_reference_entity_view
