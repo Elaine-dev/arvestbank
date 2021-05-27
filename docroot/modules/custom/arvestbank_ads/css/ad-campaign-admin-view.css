@@ -22,6 +22,6 @@
   color: #f10203;
   font-weight: bold;
 }
-ul.coh-breadcrumb, div.coh-accordion-tabs {
+ul.coh-breadcrumb, div.coh-accordion-tabs, h1.coh-heading {
   display: none;
 }
