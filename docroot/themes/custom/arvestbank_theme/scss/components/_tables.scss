@@ -47,6 +47,7 @@
     display: block;
     width: 100%;
     border-bottom: 0;
+    padding-top: calculateRem(10px);
   }
 
   .tablesaw-stack thead td,
@@ -56,13 +57,18 @@
 
   .tablesaw-stack tbody td,
   .tablesaw-stack tbody th {
+    padding-top: calculateRem(10px);
+    padding-bottom: calculateRem(10px);
     display: block;
     float: left;
     clear: left;
     width: 100%;
     border: 0;
+    margin-top: -1px;
   }
-
+  .tablesaw-stack tbody td:last-child {
+    padding-bottom: calculateRem(20px);
+  }
   // Duplicate base table zebra striping
   .tablesaw-stack tbody tr:nth-child(odd) td,
   .tablesaw-stack tbody tr:nth-child(odd) th {
