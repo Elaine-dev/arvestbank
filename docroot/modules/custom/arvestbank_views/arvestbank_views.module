@@ -45,6 +45,7 @@ function arvestbank_views_form_views_exposed_form_alter(&$form, FormStateInterfa
       break;
   }
 
+  // Special updates to the Specialty Debit Cards View (early return).
   if ($form['#id'] === 'views-exposed-form-specialty-debit-cards-page-1') {
     module_load_include('inc', 'arvestbank_views', 'inc/arvestbank_views.debit_cards_filter');
     $form = arvestbank_views_debit_cards_filter($form);
