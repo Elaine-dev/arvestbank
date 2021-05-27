@@ -20,7 +20,7 @@ Export your Site Studio packages to commit your changes. Create a new package or
     - Machine name: (Automatic - adjust if necessary). Example: `pack_component_one_column_layout`
     - Description: 
       `A reusuable component for content with a 1 column layout.`
-      `Author: <YOUR NAME> / Last update: <CURRENT DATE>`
+      `Updated: <YOUR NAME> <CURRENT DATE>`
 4. Scroll to 'Package requirements' and select the Site Studio entity to include in the package.
 5. Click 'Build package' button. 
 6. Open 'Package contents' and only include the single Site Studio item you're exporting. If you have more than one item, create or edit a package for each one.
@@ -74,7 +74,7 @@ Export your Site Studio packages to commit your changes. Create a new package or
 
 1. Navigate to 'Sync packages' in the Admin UI: /admin/cohesion/sync/packages
 2. Edit the package that will contain the updated Site Studio item.
-3. Update the description with your name and today's date: `Author: <YOUR NAME> / Last update: <CURRENT DATE>`
+3. Update the description with your name and today's date: `Updated: <YOUR NAME> <CURRENT DATE>`
 4. Follow the steps above from step 7.
 
 
@@ -111,13 +111,13 @@ If you need finer control of Site Studio assets, use the commands below.
 ### Custom Styles 
 
 * All custom styles will get a prefix of `.coh-`. You can then add this markup to templates.
+* Create a custom style when styling can be used elsewhere. Otherwise simply use the styles tab in the template, component, etc. to add in-line styles. (In-line styles aren't as performant as cached Custom Styles css.)
 
-### Templates 
+### Templates and Components
 
-* Keep styles inside a template if they won't be used elsewhere. This helps with maintainability and portability.
-
-
-### Components
+* When using an element with an available custom style, an easy way to encorporate the style is to edit the element and scroll down to 'Custom Style' to select the available style. If 'Custom Style' isn't an available option in the element, select the 'Properties' button and check 'Settings' > 'Custom Style'.
+* When building a component, ensure it has help text in the component form builder, even if there are no editable fields. This gives context to future developers, site builders, and content authors. 
+  * Several Helpers exist in the `Form builder helpers` category to jumpstart the form builder process.
 
 
 
