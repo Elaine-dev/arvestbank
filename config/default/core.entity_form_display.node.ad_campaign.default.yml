@@ -4,6 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.ad_campaign.field_ad_active_dates
+    - field.field.node.ad_campaign.field_ad_exit_application
+    - field.field.node.ad_campaign.field_ad_exit_banking
+    - field.field.node.ad_campaign.field_ad_exit_ccapply
+    - field.field.node.ad_campaign.field_ad_exit_switchkit
     - field.field.node.ad_campaign.field_ad_nav_business
     - field.field.node.ad_campaign.field_ad_nav_credit_cards
     - field.field.node.ad_campaign.field_ad_nav_home_loans
@@ -195,6 +199,23 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Footer Links'
+    group_exit_pages:
+      children:
+        - field_ad_exit_switchkit
+        - field_ad_exit_banking
+        - field_ad_exit_ccapply
+        - field_ad_exit_application
+      parent_name: ''
+      weight: 14
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Exit Pages'
 id: node.ad_campaign.default
 targetEntityType: node
 bundle: ad_campaign
@@ -211,6 +232,30 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: daterange_default
+    region: content
+  field_ad_exit_application:
+    weight: 18
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_ad_exit_banking:
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_ad_exit_ccapply:
+    weight: 17
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_ad_exit_switchkit:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_ad_nav_business:
     weight: 13

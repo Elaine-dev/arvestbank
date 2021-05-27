@@ -630,7 +630,7 @@ display:
           value:
             min: ''
             max: ''
-            value: 'Now -1 day'
+            value: Now
             type: date
           group: 1
           exposed: false
