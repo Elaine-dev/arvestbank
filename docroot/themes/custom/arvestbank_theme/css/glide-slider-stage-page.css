@@ -5,3 +5,23 @@
 .path-frontpage.page-node-type-stage-page .coh-style-homepage-in-between-block{
   display:block;
 }
+
+.node-12971 .coh-style-page-node-type-stage-page .glide__bullets .glide_pager{
+  height: 120px;
+}
+@media (max-width: 59.3125rem){
+  .node-12971 .coh-style-page-node-type-stage-page .glide__bullets .glide_pager{
+    height: 0.625rem;
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .node-12971 .coh-style-page-node-type-stage-page .left-block-padding {
+    top: 13.625rem;
+  }
+}
+@media (max-width: 47.9375rem) {
+  .node-12971 .coh-style-page-node-type-stage-page .glide__bullets {
+    top: 12.25rem;
+  }
+}
