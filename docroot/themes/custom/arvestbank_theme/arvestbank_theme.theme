@@ -146,5 +146,11 @@ function arvestbank_theme_preprocess_field__body(&$variables, $hook) {
 
   }
 
+  // Add background color class for node revisions.
+  $current_route = \Drupal::routeMatch()->getRouteName();
+  if ($current_route == 'entity.node.revision') {
+    $variables['attributes']['class'][] = 'revision-bg-color';
+  }
+
 }
 

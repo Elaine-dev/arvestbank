@@ -151,6 +151,7 @@ permissions:
   - 'use yoast seo'
   - 'view ad revisions'
   - 'view all media revisions'
+  - 'view all revisions'
   - 'view article_education_article revisions'
   - 'view associate revisions'
   - 'view calculators revisions'
