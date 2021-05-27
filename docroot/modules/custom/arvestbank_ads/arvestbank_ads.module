@@ -94,4 +94,14 @@ function arvestbank_ads_node_view_alter(array &$build, Drupal\Core\Entity\Entity
     }
   }
 
+  function arvestbank_ads_views_pre_render(ViewExecutable $view) {
+    switch ($view->id()){
+      case 'ad_campaigns':
+        if ($view->current_display == 'page_2'){
+          $view->setTitle('your CUSTOM TITLE');
+        }
+        break;
+    }
+  }
+
 }
