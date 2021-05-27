@@ -1,0 +1,4 @@
+name: Arvest Bank Core
+type: module
+description: 'Custom functionality for the Arvest Bank site.'
+core_version_requirement: ^9

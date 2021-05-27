@@ -5,13 +5,16 @@ dependencies:
   config:
     - field.storage.media.field_acquiadam_asset_image
     - field.storage.media.field_debit_card_category
+    - field.storage.media.field_debit_card_keywords
+    - field.storage.media.field_id_internal
+    - image.style.thumbnail
     - media.type.credit_or_debit_card
+    - system.menu.admin
     - system.menu.main
     - taxonomy.vocabulary.debit_card_category
-    - taxonomy.vocabulary.debit_card_keywords
-    - taxonomy.vocabulary.school_zip_code
   module:
     - better_exposed_filters
+    - geolocation
     - image
     - media
     - taxonomy
@@ -48,7 +51,7 @@ display:
       exposed_form:
         type: bef
         options:
-          submit_button: Apply
+          submit_button: '>'
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -62,7 +65,7 @@ display:
               autosubmit: true
               autosubmit_exclude_textfield: true
               autosubmit_textfield_delay: 5000
-              autosubmit_hide: true
+              autosubmit_hide: false
               input_required: false
               allow_secondary: false
               secondary_label: 'Advanced options'
@@ -75,18 +78,14 @@ display:
                     filter_rewrite_values: ''
                   collapsible: false
                   is_secondary: false
-              field_debit_card_keywords_target_id:
+              field_debit_card_keywords_value:
                 plugin_id: default
                 advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
                   collapsible: false
                   is_secondary: false
-              field_school_zip_code_target_id:
+              field_geolocation_proximity:
                 plugin_id: default
                 advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
                   collapsible: false
                   is_secondary: false
       pager:
@@ -221,7 +220,7 @@ display:
             link: false
           group_column: target_id
           group_columns: {  }
-          group_rows: true
+          group_rows: false
           delta_limit: 0
           delta_offset: 0
           delta_reversed: false
@@ -371,6 +370,7 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
+          group: 1
         field_debit_card_category_target_id:
           id: field_debit_card_category_target_id
           table: media__field_debit_card_category
@@ -422,26 +422,26 @@ display:
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
-        field_debit_card_keywords_target_id:
-          id: field_debit_card_keywords_target_id
+        field_debit_card_keywords_value:
+          id: field_debit_card_keywords_value
           table: media__field_debit_card_keywords
-          field: field_debit_card_keywords_target_id
+          field: field_debit_card_keywords_value
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
-          value: {  }
+          operator: contains
+          value: ''
           group: 1
           exposed: true
           expose:
-            operator_id: field_debit_card_keywords_target_id_op
+            operator_id: field_debit_card_keywords_value_op
             label: Keyword
             description: ''
             use_operator: false
-            operator: field_debit_card_keywords_target_id_op
+            operator: field_debit_card_keywords_value_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_debit_card_keywords_target_id
+            identifier: field_debit_card_keywords_value
             required: false
             remember: false
             multiple: false
@@ -453,7 +453,7 @@ display:
               site_editor: '0'
               domain_admin: '0'
               enterprise_admin: '0'
-            reduce: false
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -466,33 +466,31 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: false
-          type: textfield
-          limit: true
-          vid: debit_card_keywords
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
-        field_school_zip_code_target_id:
-          id: field_school_zip_code_target_id
-          table: media__field_school_zip_code
-          field: field_school_zip_code_target_id
+          plugin_id: string
+        field_geolocation_proximity:
+          id: field_geolocation_proximity
+          table: media__field_geolocation
+          field: field_geolocation_proximity
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
-          value: {  }
+          operator: '<='
+          value:
+            min: ''
+            max: ''
+            value: '100'
+            center: {  }
           group: 1
           exposed: true
           expose:
-            operator_id: field_school_zip_code_target_id_op
+            operator_id: field_geolocation_proximity_op
             label: 'School Zip Code'
             description: ''
             use_operator: false
-            operator: field_school_zip_code_target_id_op
+            operator: field_geolocation_proximity_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_school_zip_code_target_id
+            identifier: field_geolocation_proximity
             required: false
             remember: false
             multiple: false
@@ -504,7 +502,9 @@ display:
               site_editor: '0'
               domain_admin: '0'
               enterprise_admin: '0'
-            reduce: false
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -517,14 +517,79 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: false
-          type: textfield
-          limit: true
-          vid: school_zip_code
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
-      sorts: {  }
+          location_input:
+            client_location:
+              weight: 0
+              enable: false
+              location_input_id: client_location
+              settings:
+                auto_submit: false
+                hide_form: false
+            coordinates:
+              enable: true
+              weight: 0
+              location_input_id: coordinates
+            geocoder:
+              weight: 0
+              enable: false
+              location_input_id: geocoder
+            'fixed_value:fixed_value':
+              settings:
+                location_settings:
+                  settings:
+                    latitude: ''
+                    longitude: ''
+                location_plugin_id: fixed_value
+              weight: 0
+              enable: false
+              location_input_id: location_plugins
+            'ipstack:ipstack':
+              settings:
+                location_settings:
+                  settings:
+                    access_key: ''
+                location_plugin_id: ipstack
+              weight: 0
+              enable: false
+              location_input_id: location_plugins
+            'freeogeoip:freeogeoip':
+              weight: 0
+              enable: false
+              location_input_id: location_plugins
+              settings:
+                location_plugin_id: freeogeoip
+          unit: km
+          entity_type: media
+          plugin_id: geolocation_filter_proximity
+      sorts:
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: field_debit_card_category
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
+          plugin_id: standard
+        name:
+          id: name
+          table: media_field_data
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: media
+          entity_field: name
+          plugin_id: standard
       title: 'Specialty Debit Cards'
       header:
         area:
@@ -568,10 +633,23 @@ display:
             value: 'No cards match your search terms. Please try again.'
             format: cohesion
           plugin_id: text
-      relationships: {  }
+      relationships:
+        field_debit_card_category:
+          id: field_debit_card_category
+          table: media__field_debit_card_category
+          field: field_debit_card_category
+          relationship: none
+          group_type: group
+          admin_label: 'field_debit_card_category: Taxonomy term'
+          required: false
+          plugin_id: standard
       arguments: {  }
       display_extenders: {  }
       use_ajax: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -586,11 +664,12 @@ display:
   page_1:
     display_plugin: page
     id: page_1
-    display_title: Page
+    display_title: Output
     position: 1
     display_options:
-      display_extenders: {  }
-      path: personal/bank/checking/debit-cards/specialty-debit-cards
+      display_extenders:
+        metatag_display_extender: {  }
+      path: personal/bank/checking/debit-cards/specialty
       menu:
         type: normal
         title: 'Specialty Debit Cards'
@@ -600,6 +679,602 @@ display:
         weight: 0
         context: '0'
         menu_name: main
+      display_description: ''
+      fields:
+        field_acquiadam_asset_image:
+          id: field_acquiadam_asset_image
+          table: media__field_acquiadam_asset_image
+          field: field_acquiadam_asset_image
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_style: ''
+            image_link: ''
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_debit_card_category:
+          id: field_debit_card_category
+          table: media__field_debit_card_category
+          field: field_debit_card_category
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '{{ field_debit_card_category }}:'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: false
+          delta_limit: 1
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        counter:
+          id: counter
+          table: views
+          field: counter
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          counter_start: 1
+          plugin_id: counter
+        field_id_internal:
+          id: field_id_internal
+          table: media__field_id_internal
+          field: field_id_internal
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        name:
+          id: name
+          table: media_field_data
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '{{ name }} - {{ field_id_internal }}'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: media
+          entity_field: name
+          plugin_id: field
+      defaults:
+        fields: false
+        use_ajax: false
+        pager: false
+        filters: false
+        filter_groups: false
+        query: false
+        group_by: false
+        arguments: false
+      use_ajax: true
+      pager:
+        type: none
+        options:
+          offset: 0
+      filters:
+        status:
+          value: '1'
+          table: media_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: media
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        bundle:
+          id: bundle
+          table: media_field_data
+          field: bundle
+          value:
+            credit_or_debit_card: credit_or_debit_card
+          entity_type: media
+          entity_field: bundle
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        field_debit_card_category_target_id:
+          id: field_debit_card_category_target_id
+          table: media__field_debit_card_category
+          field: field_debit_card_category_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_debit_card_category_target_id_op
+            label: Category/Theme
+            description: ''
+            use_operator: false
+            operator: field_debit_card_category_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_debit_card_category_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              reviewer: '0'
+              contributor: '0'
+              site_editor: '0'
+              domain_admin: '0'
+              enterprise_admin: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: debit_card_category
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_debit_card_keywords_value:
+          id: field_debit_card_keywords_value
+          table: media__field_debit_card_keywords
+          field: field_debit_card_keywords_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_debit_card_keywords_value_op
+            label: Keyword
+            description: ''
+            use_operator: false
+            operator: field_debit_card_keywords_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_debit_card_keywords_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              reviewer: '0'
+              contributor: '0'
+              site_editor: '0'
+              domain_admin: '0'
+              enterprise_admin: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+        field_geolocation_proximity:
+          id: field_geolocation_proximity
+          table: media__field_geolocation
+          field: field_geolocation_proximity
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '<='
+          value:
+            min: ''
+            max: ''
+            value: '150'
+            center: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_geolocation_proximity_op
+            label: Proximity
+            description: ''
+            use_operator: false
+            operator: field_geolocation_proximity_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_geolocation_proximity
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              reviewer: '0'
+              contributor: '0'
+              site_editor: '0'
+              domain_admin: '0'
+              enterprise_admin: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          location_input:
+            client_location:
+              weight: 0
+              enable: false
+              location_input_id: client_location
+              settings:
+                auto_submit: false
+                hide_form: false
+            coordinates:
+              enable: true
+              weight: 0
+              location_input_id: coordinates
+            geocoder:
+              weight: 0
+              enable: false
+              location_input_id: geocoder
+            'fixed_value:fixed_value':
+              settings:
+                location_settings:
+                  settings:
+                    latitude: ''
+                    longitude: ''
+                location_plugin_id: fixed_value
+              weight: 0
+              enable: false
+              location_input_id: location_plugins
+            'ipstack:ipstack':
+              settings:
+                location_settings:
+                  settings:
+                    access_key: ''
+                location_plugin_id: ipstack
+              weight: 0
+              enable: false
+              location_input_id: location_plugins
+            'freeogeoip:freeogeoip':
+              weight: 0
+              enable: false
+              location_input_id: location_plugins
+              settings:
+                location_plugin_id: freeogeoip
+          unit: km
+          entity_type: media
+          plugin_id: geolocation_filter_proximity
+        delta:
+          id: delta
+          table: media__field_debit_card_category
+          field: delta
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: '0'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: numeric
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: {  }
+      group_by: false
+      arguments: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -611,3 +1286,682 @@ display:
       tags:
         - 'config:field.storage.media.field_acquiadam_asset_image'
         - 'config:field.storage.media.field_debit_card_category'
+        - 'config:field.storage.media.field_id_internal'
+  page_2:
+    display_plugin: page
+    id: page_2
+    display_title: Admin
+    position: 1
+    display_options:
+      display_extenders:
+        metatag_display_extender: {  }
+      path: admin/content/debit-cards
+      menu:
+        type: normal
+        title: 'Debit Cards'
+        description: ''
+        expanded: false
+        parent: system.admin_content
+        weight: 0
+        context: '0'
+        menu_name: admin
+      display_description: ''
+      access:
+        type: perm
+        options:
+          perm: 'edit any credit_or_debit_card media'
+      defaults:
+        access: false
+        fields: false
+        filters: false
+        filter_groups: false
+        style: false
+        row: false
+        title: false
+        header: false
+        footer: false
+      fields:
+        field_acquiadam_asset_image:
+          id: field_acquiadam_asset_image
+          table: media__field_acquiadam_asset_image
+          field: field_acquiadam_asset_image
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Image
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_style: thumbnail
+            image_link: ''
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_id_internal:
+          id: field_id_internal
+          table: media__field_id_internal
+          field: field_id_internal
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ID
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_debit_card_category:
+          id: field_debit_card_category
+          table: media__field_debit_card_category
+          field: field_debit_card_category
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Category
+          exclude: false
+          alter:
+            alter_text: false
+            text: '{{ field_debit_card_category }}:'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: false
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        name:
+          id: name
+          table: media_field_data
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Name
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: media
+          entity_field: name
+          plugin_id: field
+        edit_media:
+          id: edit_media
+          table: media
+          field: edit_media
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Edit
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: edit
+          output_url_as_text: false
+          absolute: false
+          entity_type: media
+          plugin_id: entity_link_edit
+        status:
+          id: status
+          table: media_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Published
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: default
+            format_custom_true: ''
+            format_custom_false: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: media
+          entity_field: status
+          plugin_id: field
+        changed:
+          id: changed
+          table: taxonomy_term_field_data
+          field: changed
+          relationship: field_debit_card_category
+          group_type: group
+          admin_label: ''
+          label: 'Updated date'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: timestamp
+          settings:
+            date_format: short_date_only
+            custom_date_format: ''
+            timezone: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: taxonomy_term
+          entity_field: changed
+          plugin_id: field
+        field_debit_card_keywords:
+          id: field_debit_card_keywords
+          table: media__field_debit_card_keywords
+          field: field_debit_card_keywords
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Keywords
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: basic_string
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+      filters:
+        bundle:
+          id: bundle
+          table: media_field_data
+          field: bundle
+          value:
+            credit_or_debit_card: credit_or_debit_card
+          entity_type: media
+          entity_field: bundle
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        field_debit_card_category_target_id:
+          id: field_debit_card_category_target_id
+          table: media__field_debit_card_category
+          field: field_debit_card_category_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_debit_card_category_target_id_op
+            label: Category/Theme
+            description: ''
+            use_operator: false
+            operator: field_debit_card_category_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_debit_card_category_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              reviewer: '0'
+              contributor: '0'
+              site_editor: '0'
+              domain_admin: '0'
+              enterprise_admin: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: debit_card_category
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          override: true
+          sticky: false
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            field_acquiadam_asset_image: field_acquiadam_asset_image
+            field_debit_card_category: field_debit_card_category
+            name: name
+          info:
+            field_acquiadam_asset_image:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_debit_card_category:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            name:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: '-1'
+          empty_table: false
+      row:
+        type: fields
+        options: {  }
+      title: 'Debit Cards Administration'
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: "<div class=\"action-link\"><a href=\"/media/add/credit_or_debit_card?destination=/admin/content/debit-cards\">click here to add a card</a></div>\r\n<div class=\"action-link\"><a href=\"/personal/bank/checking/debit-cards/specialty\">view the output</a></div>"
+            format: cohesion
+          plugin_id: text
+      footer: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - user
+        - user.permissions
+      tags:
+        - 'config:field.storage.media.field_acquiadam_asset_image'
+        - 'config:field.storage.media.field_debit_card_category'
+        - 'config:field.storage.media.field_debit_card_keywords'
+        - 'config:field.storage.media.field_id_internal'

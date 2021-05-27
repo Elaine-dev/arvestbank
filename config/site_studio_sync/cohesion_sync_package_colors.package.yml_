@@ -1,3 +1,4 @@
+
 -
   type: cohesion_sync_package
   export:
@@ -7,7 +8,7 @@
     dependencies: {  }
     id: pack_colors
     label: Colors
-    description: 'A Site Studio package for all colors. Last Updated: Jacob Crane 05/27/2021'
+    description: 'A Site Studio package for all colors. Last Updated: Allie Jones 05/27/2021'
     excluded_entity_types: '[]'
     settings: '{"dd308c1a-c263-4c72-8516-f60cd8f1c9d4":{"type":"cohesion_color","items":{"dd308c1a-c263-4c72-8516-f60cd8f1c9d4":{"type":"cohesion_color"}},"checked":true},"e4641ac8-67f8-4195-b93d-916d94b3c50a":{"type":"cohesion_color","items":{"e4641ac8-67f8-4195-b93d-916d94b3c50a":{"type":"cohesion_color"}},"checked":true},"b441d91a-eae8-4d0e-b820-684288168f48":{"type":"cohesion_color","items":{"b441d91a-eae8-4d0e-b820-684288168f48":{"type":"cohesion_color"}},"checked":true},"95626145-3391-4854-8fef-60bb32579739":{"type":"cohesion_color","items":{"95626145-3391-4854-8fef-60bb32579739":{"type":"cohesion_color"}},"checked":true},"e9da5d21-4612-4d25-acc6-081eb16927c4":{"type":"cohesion_color","items":{"e9da5d21-4612-4d25-acc6-081eb16927c4":{"type":"cohesion_color"}},"checked":true},"620009e9-f360-49e0-938f-c3b158e6b0e5":{"type":"cohesion_color","items":{"620009e9-f360-49e0-938f-c3b158e6b0e5":{"type":"cohesion_color"}},"checked":true},"43414b0c-c0d0-4c23-bd43-c20c7b5fa58d":{"type":"cohesion_color","items":{"43414b0c-c0d0-4c23-bd43-c20c7b5fa58d":{"type":"cohesion_color"}},"checked":true},"b7185e79-4788-45ed-a8d6-1f7a78b2470e":{"type":"cohesion_color","items":{"b7185e79-4788-45ed-a8d6-1f7a78b2470e":{"type":"cohesion_color"}},"checked":true},"bce3000b-4a62-405d-b782-d69f6bf2fc99":{"type":"cohesion_color","items":{"bce3000b-4a62-405d-b782-d69f6bf2fc99":{"type":"cohesion_color"}},"checked":true},"b351eb56-944b-4e95-bc62-05252ec8fca7":{"type":"cohesion_color","items":{"b351eb56-944b-4e95-bc62-05252ec8fca7":{"type":"cohesion_color"}},"checked":true},"4293c742-871c-4ca2-8a52-4f96f45bf6cb":{"type":"cohesion_color","items":{"4293c742-871c-4ca2-8a52-4f96f45bf6cb":{"type":"cohesion_color"}},"checked":true},"e936898e-d2a0-4879-b81d-c16524094c6c":{"type":"cohesion_color","items":{"e936898e-d2a0-4879-b81d-c16524094c6c":{"type":"cohesion_color"}},"checked":true},"38d5a642-36d7-48cd-a4a9-d2cfe609762e":{"type":"cohesion_color","items":{"38d5a642-36d7-48cd-a4a9-d2cfe609762e":{"type":"cohesion_color"}},"checked":true},"f445f9ef-ee42-48f7-870e-a7f2d02fbd05":{"type":"cohesion_color","items":{"f445f9ef-ee42-48f7-870e-a7f2d02fbd05":{"type":"cohesion_color"}},"checked":true},"14b52e46-d24a-47bb-83ec-870c62235da6":{"type":"cohesion_color","items":{"14b52e46-d24a-47bb-83ec-870c62235da6":{"type":"cohesion_color"}},"checked":true},"665f9104-989b-429e-9c57-582339f444b9":{"type":"cohesion_color","items":{"665f9104-989b-429e-9c57-582339f444b9":{"type":"cohesion_color"}},"checked":true},"de128762-a075-4e39-b285-8f3a4ade01b":{"type":"cohesion_color","items":{"de128762-a075-4e39-b285-8f3a4ade01b":{"type":"cohesion_color"}},"checked":true},"b2448f60-2680-483e-bec6-f791edbee910":{"type":"cohesion_color","items":{"b2448f60-2680-483e-bec6-f791edbee910":{"type":"cohesion_color"}},"checked":true},"de128762-a075-4e39-b285-8f3a4adce01b":{"type":"cohesion_color","items":{"de128762-a075-4e39-b285-8f3a4adce01b":{"type":"cohesion_color"}},"checked":true},"4f9bd296-ba67-4725-bb0f-811738fcf76a":{"type":"cohesion_color","items":{"4f9bd296-ba67-4725-bb0f-811738fcf76a":{"type":"cohesion_color"}},"checked":true},"ca4d6a37-41d1-49c5-bea8-90b2499eb415":{"type":"cohesion_color","items":{"ca4d6a37-41d1-49c5-bea8-90b2499eb415":{"type":"cohesion_color"}},"checked":true},"dc6b0d53-b46c-42fa-a0de-06099f273361":{"type":"cohesion_color","items":{"dc6b0d53-b46c-42fa-a0de-06099f273361":{"type":"cohesion_color"}},"checked":true},"95535bd5-68b9-4967-b2bf-a61c6f3a628c":{"type":"cohesion_color","items":{"95535bd5-68b9-4967-b2bf-a61c6f3a628c":{"type":"cohesion_color"}},"checked":true},"a0c3d055-2701-43f6-8d38-b3f7cac06c98":{"type":"cohesion_color","items":{"a0c3d055-2701-43f6-8d38-b3f7cac06c98":{"type":"cohesion_color"}},"checked":true},"26316cae-2da6-4cf0-a9e1-f53e5322c684":{"type":"cohesion_color","items":{"26316cae-2da6-4cf0-a9e1-f53e5322c684":{"type":"cohesion_color"}},"checked":true},"919b6dd9-168b-462c-9069-1ff5a4e8d197":{"type":"cohesion_color","items":{"919b6dd9-168b-462c-9069-1ff5a4e8d197":{"type":"cohesion_color"}},"checked":true},"af3bc978-084f-4179-b047-74c204ff96ce":{"type":"cohesion_color","items":{"af3bc978-084f-4179-b047-74c204ff96ce":{"type":"cohesion_color"}},"checked":true},"a35b2744-53a7-40d4-97c7-a740c8fd1fcd":{"type":"cohesion_color","items":{"a35b2744-53a7-40d4-97c7-a740c8fd1fcd":{"type":"cohesion_color"}},"checked":true},"51d2c35e-e8e5-49fb-bf84-349e3d01a998":{"type":"cohesion_color","items":{"51d2c35e-e8e5-49fb-bf84-349e3d01a998":{"type":"cohesion_color"}},"checked":true},"d905688e-e337-4549-baa7-f12e3d3629c9":{"type":"cohesion_color","items":{"d905688e-e337-4549-baa7-f12e3d3629c9":{"type":"cohesion_color"}},"checked":true},"48a3b929-8bac-48e0-9f4c-2dd74bca3b2d":{"type":"cohesion_color","items":{"48a3b929-8bac-48e0-9f4c-2dd74bca3b2d":{"type":"cohesion_color"}},"checked":true},"3f3a629b-8c9b-463c-a3a1-ccfddf8064a0":{"type":"cohesion_color","items":{"3f3a629b-8c9b-463c-a3a1-ccfddf8064a0":{"type":"cohesion_color"}},"checked":true},"f53c1904-ec87-47d3-8ce9-f5efe07b478b":{"type":"cohesion_color","items":{"f53c1904-ec87-47d3-8ce9-f5efe07b478b":{"type":"cohesion_color"}},"checked":true}}'
 -
@@ -77,6 +78,22 @@
 -
   type: cohesion_color
   export:
+    uuid: 48a3b929-8bac-48e0-9f4c-2dd74bca3b2d
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: '252528'
+    label: '252528'
+    json_values: '{"link":true,"value":{"value":{"hex":"#252528","rgba":"rgba(37, 37, 40, 1)"}},"name":"252528","uid":"252528","class":".coh-color-252528","variable":"$coh-color-252528"}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    weight: 36
+-
+  type: cohesion_color
+  export:
     uuid: e9da5d21-4612-4d25-acc6-081eb16927c4
     langcode: en
     status: true
@@ -141,6 +158,22 @@
 -
   type: cohesion_color
   export:
+    uuid: 3f3a629b-8c9b-463c-a3a1-ccfddf8064a0
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: '6e7079'
+    label: '6E7079'
+    json_values: '{"link":true,"value":{"value":{"hex":"#6e7079","rgba":"rgba(110, 112, 121, 1)"}},"name":"6E7079","uid":"6e7079","class":".coh-color-6e7079","variable":"$coh-color-6e7079"}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    weight: 37
+-
+  type: cohesion_color
+  export:
     uuid: bce3000b-4a62-405d-b782-d69f6bf2fc99
     langcode: en
     status: true
@@ -170,6 +203,22 @@
     modified: true
     selectable: true
     weight: 3
+-
+  type: cohesion_color
+  export:
+    uuid: f53c1904-ec87-47d3-8ce9-f5efe07b478b
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: 9395a1
+    label: 9395A1
+    json_values: '{"link":true,"value":{"value":{"hex":"#9395a1","rgba":"rgba(147, 149, 161, 1)"}},"name":"9395A1","uid":"9395a1","class":".coh-color-9395a1","variable":"$coh-color-9395a1"}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    weight: 38
 -
   type: cohesion_color
   export:
@@ -221,6 +270,22 @@
 -
   type: cohesion_color
   export:
+    uuid: a0c3d055-2701-43f6-8d38-b3f7cac06c98
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: black
+    label: Black
+    json_values: '{"name":"Black","uid":"black","value":{"value":{"hex":"#000000","rgba":"rgba(0, 0, 0, 1)"}},"wysiwyg":true,"class":".coh-color-black","variable":"$coh-color-black","inuse":true,"link":true}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    weight: 0
+-
+  type: cohesion_color
+  export:
     uuid: f445f9ef-ee42-48f7-870e-a7f2d02fbd05
     langcode: en
     status: true
@@ -237,6 +302,22 @@
 -
   type: cohesion_color
   export:
+    uuid: af3bc978-084f-4179-b047-74c204ff96ce
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: d8d8d8
+    label: d8d8d8
+    json_values: '{"link":true,"value":{"value":{"hex":"#d8d8d8","rgba":"rgba(216, 216, 216, 1)"}},"name":"d8d8d8","uid":"d8d8d8","class":".coh-color-d8d8d8","variable":"$coh-color-d8d8d8","inuse":true}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    weight: 8
+-
+  type: cohesion_color
+  export:
     uuid: 14b52e46-d24a-47bb-83ec-870c62235da6
     langcode: en
     status: true
@@ -250,6 +331,22 @@
     modified: true
     selectable: true
     weight: 5
+-
+  type: cohesion_color
+  export:
+    uuid: 51d2c35e-e8e5-49fb-bf84-349e3d01a998
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: e4ebe7
+    label: '#E4EBE7'
+    json_values: '{"link":true,"value":{"value":{"hex":"#e4ebe7","rgba":"rgba(228, 235, 231, 1)"}},"name":"#E4EBE7","uid":"e4ebe7","class":".coh-color-e4ebe7","variable":"$coh-color-e4ebe7"}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    weight: 35
 -
   type: cohesion_color
   export:
@@ -365,6 +462,22 @@
 -
   type: cohesion_color
   export:
+    uuid: d905688e-e337-4549-baa7-f12e3d3629c9
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: f8f8f9
+    label: '#F8F8F9'
+    json_values: '{"link":true,"value":{"value":{"hex":"#f8f8f9","rgba":"rgba(248, 248, 249, 1)"}},"name":"#F8F8F9","uid":"f8f8f9","class":".coh-color-f8f8f9","variable":"$coh-color-f8f8f9"}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    weight: 34
+-
+  type: cohesion_color
+  export:
     uuid: 95535bd5-68b9-4967-b2bf-a61c6f3a628c
     langcode: en
     status: true
@@ -378,22 +491,6 @@
     modified: true
     selectable: true
     weight: 10
--
-  type: cohesion_color
-  export:
-    uuid: a0c3d055-2701-43f6-8d38-b3f7cac06c98
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: black
-    label: Black
-    json_values: '{"name":"Black","uid":"black","value":{"value":{"hex":"#000000","rgba":"rgba(0, 0, 0, 1)"}},"wysiwyg":true,"class":".coh-color-black","variable":"$coh-color-black","inuse":true,"link":true}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0031
-    locked: false
-    modified: true
-    selectable: true
-    weight: 0
 -
   type: cohesion_color
   export:
@@ -413,38 +510,6 @@
 -
   type: cohesion_color
   export:
-    uuid: 919b6dd9-168b-462c-9069-1ff5a4e8d197
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: white
-    label: White
-    json_values: '{"link":true,"value":{"value":{"hex":"#ffffff","rgba":"rgba(255, 255, 255, 1)"}},"name":"White","uid":"white","class":".coh-color-white","variable":"$coh-color-white","wysiwyg":true,"inuse":true}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0031
-    locked: false
-    modified: true
-    selectable: true
-    weight: 33
--
-  type: cohesion_color
-  export:
-    uuid: af3bc978-084f-4179-b047-74c204ff96ce
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: d8d8d8
-    label: d8d8d8
-    json_values: '{"link":true,"value":{"value":{"hex":"#d8d8d8","rgba":"rgba(216, 216, 216, 1)"}},"name":"d8d8d8","uid":"d8d8d8","class":".coh-color-d8d8d8","variable":"$coh-color-d8d8d8","inuse":true}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0031
-    locked: false
-    modified: true
-    selectable: true
-    weight: 8
--
-  type: cohesion_color
-  export:
     uuid: a35b2744-53a7-40d4-97c7-a740c8fd1fcd
     langcode: en
     status: true
@@ -461,96 +526,16 @@
 -
   type: cohesion_color
   export:
-    uuid: 51d2c35e-e8e5-49fb-bf84-349e3d01a998
+    uuid: 919b6dd9-168b-462c-9069-1ff5a4e8d197
     langcode: en
     status: true
     dependencies: {  }
-    id: e4ebe7
-    label: '#E4EBE7'
-    json_values: '{"link":true,"value":{"value":{"hex":"#e4ebe7","rgba":"rgba(228, 235, 231, 1)"}},"name":"#E4EBE7","uid":"e4ebe7","class":".coh-color-e4ebe7","variable":"$coh-color-e4ebe7"}'
+    id: white
+    label: White
+    json_values: '{"link":true,"value":{"value":{"hex":"#ffffff","rgba":"rgba(255, 255, 255, 1)"}},"name":"White","uid":"white","class":".coh-color-white","variable":"$coh-color-white","wysiwyg":true,"inuse":true}'
     json_mapper: '{}'
     last_entity_update: entityupdate_0031
     locked: false
     modified: true
     selectable: true
-    weight: 35
--
-  type: cohesion_color
-  export:
-    uuid: d905688e-e337-4549-baa7-f12e3d3629c9
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: f8f8f9
-    label: '#F8F8F9'
-    json_values: '{"link":true,"value":{"value":{"hex":"#f8f8f9","rgba":"rgba(248, 248, 249, 1)"}},"name":"#F8F8F9","uid":"f8f8f9","class":".coh-color-f8f8f9","variable":"$coh-color-f8f8f9"}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0031
-    locked: false
-    modified: true
-    selectable: true
-    weight: 34
--
-  type: cohesion_color
-  export:
-    uuid: 48a3b929-8bac-48e0-9f4c-2dd74bca3b2d
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: '252528'
-    label: '252528'
-    json_values: '{"link":true,"value":{"value":{"hex":"#252528","rgba":"rgba(37, 37, 40, 1)"}},"name":"252528","uid":"252528","class":".coh-color-252528","variable":"$coh-color-252528"}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0031
-    locked: false
-    modified: true
-    selectable: true
-    weight: 36
--
-  type: cohesion_color
-  export:
-    uuid: 3f3a629b-8c9b-463c-a3a1-ccfddf8064a0
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: '6e7079'
-    label: '6E7079'
-    json_values: '{"link":true,"value":{"value":{"hex":"#6e7079","rgba":"rgba(110, 112, 121, 1)"}},"name":"6E7079","uid":"6e7079","class":".coh-color-6e7079","variable":"$coh-color-6e7079"}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0031
-    locked: false
-    modified: true
-    selectable: true
-    weight: 37
--
-  type: cohesion_color
-  export:
-    uuid: f53c1904-ec87-47d3-8ce9-f5efe07b478b
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: 9395a1
-    label: 9395A1
-    json_values: '{"link":true,"value":{"value":{"hex":"#9395a1","rgba":"rgba(147, 149, 161, 1)"}},"name":"9395A1","uid":"9395a1","class":".coh-color-9395a1","variable":"$coh-color-9395a1"}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0031
-    locked: false
-    modified: true
-    selectable: true
-    weight: 38
--
-  type: cohesion_color
-  export:
-    uuid: 642da0bb-fe1b-48d9-ae8f-f0727a7c999b
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: red
-    label: Red
-    json_values: '{"link":true,"value":{"value":{"hex":"#cc0000","rgba":"rgba(204, 0, 0, 1)"}},"name":"Red","uid":"red","class":".coh-color-red","variable":"$coh-color-red","wysiwyg":true}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0031
-    locked: false
-    modified: true
-    selectable: true
-    weight: 27
+    weight: 33

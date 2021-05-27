@@ -1,19 +1,18 @@
-uuid: 5b3920ef-c76b-4ea7-a615-d05d20ce6154
+uuid: 27401923-b80f-4ccd-aaa3-edd0b788cfa8
 langcode: en
 status: true
 dependencies:
   module:
     - media
-    - taxonomy
 id: media.field_debit_card_keywords
 field_name: field_debit_card_keywords
 entity_type: media
-type: entity_reference
+type: string_long
 settings:
-  target_type: taxonomy_term
+  case_sensitive: false
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

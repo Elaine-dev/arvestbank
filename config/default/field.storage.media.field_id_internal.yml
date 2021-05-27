@@ -1,19 +1,20 @@
-uuid: ab7b3851-c8c9-4d79-84a6-3baf48a18a77
+uuid: 750a7e12-e59d-4215-98f3-60d125667b4d
 langcode: en
 status: true
 dependencies:
   module:
     - media
-    - taxonomy
-id: media.field_school_zip_code
-field_name: field_school_zip_code
+id: media.field_id_internal
+field_name: field_id_internal
 entity_type: media
-type: entity_reference
+type: string
 settings:
-  target_type: taxonomy_term
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

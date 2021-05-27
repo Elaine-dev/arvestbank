@@ -21,6 +21,7 @@ function arvestbank_views_form_views_exposed_form_alter(&$form, FormStateInterfa
     'views-exposed-form-advisors-block-1',
     'views-exposed-form-mortgage-loan-officer-block-mortgage-block',
     'views-exposed-form-trust-and-estate-block-block-3',
+    'views-exposed-form-specialty-debit-cards-page-1',
   ];
   if (!in_array($form['#id'], $altered_forms)) {
     return FALSE;
@@ -41,7 +42,16 @@ function arvestbank_views_form_views_exposed_form_alter(&$form, FormStateInterfa
     case 'views-exposed-form-trust-and-estate-block-block-3':
       $term_name = 'Trust Officers';
       $select_option = 'Select Name...';
+      break;
   }
+
+  // Special updates to the Specialty Debit Cards View (early return).
+  if ($form['#id'] === 'views-exposed-form-specialty-debit-cards-page-1') {
+    module_load_include('inc', 'arvestbank_views', 'inc/arvestbank_views.debit_cards_filter');
+    $form = arvestbank_views_debit_cards_filter($form);
+    return $form;
+  }
+
 
   $term = \Drupal::entityTypeManager()
     ->getStorage('taxonomy_term')
@@ -133,6 +143,56 @@ function arvestbank_views_form_views_exposed_form_alter(&$form, FormStateInterfa
   }
 }
 
+
+/**
+ * Implements hook_views_pre_view().
+ *
+ * Alters the view.
+ *
+ * @param \Drupal\views\ViewExecutable $view
+ *   view.
+ */
+function arvestbank_views_views_pre_view(\Drupal\views\ViewExecutable $view, $display_id, array &$args) {
+
+  // Filters by category delta=0.  If searching by category remove this filter.
+  if (!empty($view->getExposedInput()['field_debit_card_category_target_id'])) {
+    if ($view->getExposedInput()['field_debit_card_category_target_id'] != "All") {
+      $view->removeHandler($view->current_display, 'filter', 'delta');
+    }
+  }
+
+  if (!empty($view->getExposedInput()['geolocation_zip'])) {
+
+    // Grab the zip from the filter.
+    $zip = $view->getExposedInput()['geolocation_zip'];
+
+    // Get the current filters
+    $filters = $view->getExposedInput();
+
+    // Geolocate the zip code.
+    // First try GoogleMap API.
+//    $url = "https://maps.googleapis.com/maps/api/geocode/json?address=".urlencode($zip)."&key=AIzaSyAd57cbqi7q8YBaYjcQR3Iqw6tkjMsjyIA";
+//    $result_string = file_get_contents($url);
+//    $result = json_decode($result_string, true);
+//    dump($result);
+//    $result1[]=$result['results'][0];
+//    $result2[]=$result1[0]['geometry'];
+//    $result3[]=$result2[0]['location'];
+//    dump($result3);die();
+//
+//    return $result3[0];
+
+    // Fallback to the big static array.
+    if ($coords = \Drupal::service('arvestbank_zipcodes.geolocate')->zipCoords($zip)) {
+      $filters['center']['coordinates'] = $coords;
+      $view->setExposedInput($filters);
+    }
+
+  }
+
+}
+
+
 /**
  * Implements hook_views_prerenders().
  *
@@ -171,4 +231,5 @@ function arvestbank_views_views_post_execute(ViewExecutable $view) {
       }
     }
   }
+
 }
