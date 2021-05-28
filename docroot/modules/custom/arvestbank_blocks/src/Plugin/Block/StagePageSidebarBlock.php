@@ -9,6 +9,7 @@ use Drupal\Core\Render\Markup;
 use Drupal\Core\Url;
 use Drupal\node\Entity\Node;
 use Drupal\taxonomy\Entity\Term;
+use Drupal\views\Views;
 
 /**
  * Provides a block for the stage page sidebar.  Shows the block or alert.
@@ -39,50 +40,64 @@ class StagePageSidebarBlock extends BlockBase {
         // Initialize the return variable.
         $sidebar_block = [];
 
-        // Sidebar block title.
-        if (!empty($entity->hasField('field_block_title'))) {
-          if (!empty($entity->get('field_block_title')->getValue()[0]['value'])) {
-            $sidebar_block['title'] = [
-              '#markup' => $entity->get('field_block_title')->getValue()[0]['value'],
-              '#prefix' => '<h3>',
-              '#suffix' => '</h3>',
-            ];
-          }
+        // See first if there is an alert.
+        $alert_view = Views::getView('stage_page_sidebar_alert');
+        $alert_view->setDisplay('default');
+        $alert_view->execute();
+
+        if (!empty($alert_view->result)) {
+          $alert = views_embed_view('stage_page_sidebar_alert', 'default');
+          $sidebar_block['alert'] = $alert;
         }
 
-        // Initialize sidebar block conents.
-        $sidebar_block_contents = [];
+        else {
 
-        // Sidebar block body.
-        if (!empty($entity->hasField('body'))) {
-          if (!empty($entity->get('body')->getValue()[0]['value'])) {
-            $sidebar_block_contents['body'] = [
-              '#markup' => $entity->get('body')->getValue()[0]['value'],
-            ];
+          // Sidebar block title.
+          if (!empty($entity->hasField('field_block_title'))) {
+            if (!empty($entity->get('field_block_title')->getValue()[0]['value'])) {
+              $sidebar_block['title'] = [
+                '#markup' => $entity->get('field_block_title')->getValue()[0]['value'],
+                '#prefix' => '<h3>',
+                '#suffix' => '</h3>',
+              ];
+            }
           }
-        }
 
-        // Sidebar block button.
-        if (!empty($entity->hasField('field_block_button'))) {
-          if (!empty($entity->get('field_block_button')->getValue()[0]['uri'])) {
-            $sidebar_block_button = $entity->get('field_block_button')->getValue()[0];
-            $sidebar_button_url = Url::fromUri($sidebar_block_button['uri'], []);
-            $sidebar_button_link = Link::fromTextAndUrl($sidebar_block_button['title'], $sidebar_button_url)->toString();
-            $sidebar_button = [
-              '#markup' => render($sidebar_button_link),
-              '#prefix' => Markup::create('<button>'),
-              '#suffix' => Markup::create('</button>'),
-            ];
-            $sidebar_block_contents['button'] = $sidebar_button;
+          // Initialize sidebar block conents.
+          $sidebar_block_contents = [];
+
+          // Sidebar block body.
+          if (!empty($entity->hasField('body'))) {
+            if (!empty($entity->get('body')->getValue()[0]['value'])) {
+              $sidebar_block_contents['body'] = [
+                '#markup' => $entity->get('body')->getValue()[0]['value'],
+              ];
+            }
           }
-        }
 
-        // If there is sidebar block content, wrap with the flex-wrapper
-        // and add to the sidebar_block.
-        if (!empty($sidebar_block_contents)) {
-          $sidebar_block_contents['#prefix'] = '<div class="flex-wrapper">';
-          $sidebar_block_contents['#suffix'] = '</div>';
-          $sidebar_block[] = $sidebar_block_contents;
+          // Sidebar block button.
+          if (!empty($entity->hasField('field_block_button'))) {
+            if (!empty($entity->get('field_block_button')->getValue()[0]['uri'])) {
+              $sidebar_block_button = $entity->get('field_block_button')->getValue()[0];
+              $sidebar_button_url = Url::fromUri($sidebar_block_button['uri'], []);
+              $sidebar_button_link = Link::fromTextAndUrl($sidebar_block_button['title'], $sidebar_button_url)->toString();
+              $sidebar_button = [
+                '#markup' => render($sidebar_button_link),
+                '#prefix' => Markup::create('<button>'),
+                '#suffix' => Markup::create('</button>'),
+              ];
+              $sidebar_block_contents['button'] = $sidebar_button;
+            }
+          }
+
+          // If there is sidebar block content, wrap with the flex-wrapper
+          // and add to the sidebar_block.
+          if (!empty($sidebar_block_contents)) {
+            $sidebar_block_contents['#prefix'] = '<div class="flex-wrapper">';
+            $sidebar_block_contents['#suffix'] = '</div>';
+            $sidebar_block[] = $sidebar_block_contents;
+          }
+
         }
 
       }
@@ -103,7 +118,8 @@ class StagePageSidebarBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function getCacheMaxAge(): int {
-    return 0;
+    // Set cache to 2 hours (returns seconds).
+    return 60 * 60 * 2;
   }
 
 }
