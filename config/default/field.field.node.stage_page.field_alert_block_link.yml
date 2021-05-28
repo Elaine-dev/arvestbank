@@ -1,0 +1,23 @@
+uuid: dd745ae9-ebab-4486-96b0-dffc9bd871e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alert_block_link
+    - node.type.stage_page
+  module:
+    - link
+id: node.stage_page.field_alert_block_link
+field_name: field_alert_block_link
+entity_type: node
+bundle: stage_page
+label: 'Alert Block Link'
+description: 'Page that the alert block links to.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

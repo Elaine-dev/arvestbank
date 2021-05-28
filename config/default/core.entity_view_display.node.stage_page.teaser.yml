@@ -5,6 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.stage_page.body
+    - field.field.node.stage_page.field_alert_block_body
+    - field.field.node.stage_page.field_alert_block_dates
+    - field.field.node.stage_page.field_alert_block_link
     - field.field.node.stage_page.field_block_button
     - field.field.node.stage_page.field_block_title
     - field.field.node.stage_page.field_disclosure
@@ -58,6 +61,9 @@ content:
     region: content
 hidden:
   body: true
+  field_alert_block_body: true
+  field_alert_block_dates: true
+  field_alert_block_link: true
   field_block_button: true
   field_block_title: true
   field_disclosure: true

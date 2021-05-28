@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.stage_page.body
+    - field.field.node.stage_page.field_alert_block_body
+    - field.field.node.stage_page.field_alert_block_dates
+    - field.field.node.stage_page.field_alert_block_link
     - field.field.node.stage_page.field_block_button
     - field.field.node.stage_page.field_block_title
     - field.field.node.stage_page.field_disclosure
@@ -50,38 +53,11 @@ targetEntityType: node
 bundle: stage_page
 mode: default
 content:
-  body:
-    weight: 3
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
   content_moderation_control:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_block_button:
-    weight: 4
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: content
-  field_block_title:
-    weight: 2
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_icon_four:
     type: entity_reference_entity_view
     weight: 15
@@ -340,5 +316,11 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  body: true
+  field_alert_block_body: true
+  field_alert_block_dates: true
+  field_alert_block_link: true
+  field_block_button: true
+  field_block_title: true
   field_disclosure: true
   search_api_excerpt: true
