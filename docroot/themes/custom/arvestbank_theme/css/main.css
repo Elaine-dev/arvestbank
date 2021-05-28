@@ -528,6 +528,10 @@
   left: 0;
 }
 
+.coh-style-login-blocks .sidebar-select .chosen-container-single .chosen-results li:first-child {
+  display: none;
+}
+
 @media screen and (max-width: 73.0625rem) {
   .coh-style-login-blocks .top-select .chosen-container-single .chosen-single {
     width: 10rem;

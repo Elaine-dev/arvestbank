@@ -459,6 +459,9 @@
             width: 100%;
             left: 0;
         }
+        .chosen-results li:first-child {
+            display: none;
+        }
     }
 
     // Top Chosen-specific styles
