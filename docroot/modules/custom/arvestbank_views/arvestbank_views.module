@@ -154,38 +154,43 @@ function arvestbank_views_form_views_exposed_form_alter(&$form, FormStateInterfa
  */
 function arvestbank_views_views_pre_view(\Drupal\views\ViewExecutable $view, $display_id, array &$args) {
 
-  // Filters by category delta=0.  If searching by category remove this filter.
-  if (!empty($view->getExposedInput()['field_debit_card_category_target_id'])) {
-    if ($view->getExposedInput()['field_debit_card_category_target_id'] != "All") {
-      $view->removeHandler($view->current_display, 'filter', 'delta');
+  // Customizations for the Specialty Debit Cards.
+  if ($view->id() == 'specialty_debit_cards' && $display_id == 'page_1') {
+
+    // Filters by category delta=0.  If searching by category remove this filter.
+    if (!empty($view->getExposedInput()['field_debit_card_category_target_id'])) {
+      if ($view->getExposedInput()['field_debit_card_category_target_id'] != "All") {
+        $view->removeHandler($view->current_display, 'filter', 'delta');
+      }
     }
-  }
 
-  if (!empty($view->getExposedInput()['geolocation_zip'])) {
+    if (!empty($view->getExposedInput()['geolocation_zip'])) {
 
-    // Grab the zip from the filter.
-    $zip = $view->getExposedInput()['geolocation_zip'];
+      // Grab the zip from the filter.
+      $zip = $view->getExposedInput()['geolocation_zip'];
 
-    // Get the current filters
-    $filters = $view->getExposedInput();
+      // Get the current filters
+      $filters = $view->getExposedInput();
 
-    // Geolocate the zip code.
-    // First try GoogleMap API.
-//    $url = "https://maps.googleapis.com/maps/api/geocode/json?address=".urlencode($zip)."&key=AIzaSyAd57cbqi7q8YBaYjcQR3Iqw6tkjMsjyIA";
-//    $result_string = file_get_contents($url);
-//    $result = json_decode($result_string, true);
-//    dump($result);
-//    $result1[]=$result['results'][0];
-//    $result2[]=$result1[0]['geometry'];
-//    $result3[]=$result2[0]['location'];
-//    dump($result3);die();
-//
-//    return $result3[0];
+      // Geolocate the zip code.
+      if ($coords = \Drupal::service('arvestbank_zipcodes.geolocate')->zipCoords($zip)) {
+        $filters['center']['coordinates'] = $coords;
+        $view->setExposedInput($filters);
+      }
 
-    // Fallback to the big static array.
-    if ($coords = \Drupal::service('arvestbank_zipcodes.geolocate')->zipCoords($zip)) {
-      $filters['center']['coordinates'] = $coords;
-      $view->setExposedInput($filters);
+    }
+
+    else {
+
+      // Need to make sure this gets cleared after usage.
+      $filters = $view->getExposedInput();
+      if (!empty($filters['center'])) {
+        unset($filters['field_geolocation_proximity']);
+        unset($filters['geolocation_zip']);
+        unset($filters['center']);
+        $view->setExposedInput($filters);
+      }
+
     }
 
   }
