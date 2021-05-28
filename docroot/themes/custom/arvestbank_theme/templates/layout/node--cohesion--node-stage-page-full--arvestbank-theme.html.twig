@@ -46,6 +46,7 @@
             </div>
           </div>
         </li>
+        {% if content.field_slide_four|render|trim is not empty %}
         <li class="glide__slide">
           <div class="slide-background" style="background-image: url('{{ content.field_slide_four|render|striptags|trim }}')">
             <div class="left-block-padding coh-container-boxed cta-container">
@@ -58,6 +59,7 @@
             </div>
           </div>
         </li>
+        {% endif %}
       </ul>
     </div>
     <div class="left-block-padding glide__bullets" data-glide-el="controls[nav]">
@@ -78,12 +80,14 @@
           {{ content.field_icon_three_text|render }}
         </div>
       </div>
+      {% if content.field_icon_four|render|trim is not empty %}
       <div class="glide_pager" data-glide-dir="=3">
         <div class="only-show-on-desktop">
           {{ content.field_icon_four|render }}
           {{ content.field_icon_four_text|render }}
         </div>
       </div>
+      {% endif %}
     </div>
 
     {# Left Sidebar #}
@@ -116,7 +120,9 @@
           <h2>{{ content.field_block_title|render }}</h2>
           <div class="left-block-content">
             {{ content.body|render }}
-            <button>{{ content.field_block_button|render }}</button>
+            {% if content.field_block_button|render|trim is not empty %}
+              <button>{{ content.field_block_button|render }}</button>
+            {% endif %}
           </div>
         {% endif %}
 
