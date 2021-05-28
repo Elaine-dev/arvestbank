@@ -13,6 +13,20 @@ Drupal.behaviors.externalLogin = {
       width: "100%"
     });
 
+    // Prevent submission of menu login block if select is empty.
+    jQuery('.webform-submission-external-login-menu-add-form').submit(function (e) {
+      var selectIsSet = false;
+      jQuery('.webform-submission-external-login-menu-add-form select').each(function () {
+        if (jQuery(this).value() != '') {
+          selectIsSet = true;
+        }
+      });
+      if (!selectIsSet) {
+        e.preventDefault();
+        return false;
+      }
+    });
+
     // Populate cashman browser data.
     jQuery('input[name=pm_fp]').each(function () {
       jQuery(this).val(encode_deviceprint());
