@@ -995,6 +995,7 @@ display:
         query: false
         group_by: false
         arguments: false
+        cache: false
       use_ajax: true
       pager:
         type: none
@@ -1134,7 +1135,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '150'
+            value: '42'
             center: {  }
           group: 1
           exposed: true
@@ -1275,6 +1276,9 @@ display:
           query_tags: {  }
       group_by: false
       arguments: {  }
+      cache:
+        type: none
+        options: {  }
     cache_metadata:
       max-age: -1
       contexts:

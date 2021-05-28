@@ -11,7 +11,6 @@ dependencies:
     - field.field.media.credit_or_debit_card.field_debit_card_category
     - field.field.media.credit_or_debit_card.field_debit_card_keywords
     - field.field.media.credit_or_debit_card.field_geolocation
-    - field.field.media.credit_or_debit_card.field_geolocation_radius
     - field.field.media.credit_or_debit_card.field_id_internal
     - media.type.credit_or_debit_card
   module:
@@ -105,13 +104,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: geolocation_latlng
-    region: content
-  field_geolocation_radius:
-    weight: 12
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-    type: number
     region: content
   field_id_internal:
     weight: 2
