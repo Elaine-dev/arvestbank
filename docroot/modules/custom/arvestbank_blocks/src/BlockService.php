@@ -10,7 +10,7 @@ use Drupal\Core\Entity\ContentEntityInterface;
 class BlockService {
 
   /**
-   * Helper function to extract the entity for the supplied route.
+   * Helper function to extract the entity for the current route.
    *
    * @return \Drupal\Core\Entity\ContentEntityInterface
    *   The entity.
