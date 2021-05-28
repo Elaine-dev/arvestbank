@@ -1,0 +1,7 @@
+services:
+  logger.channel.arvestbank_blocks:
+    parent: logger.channel_base
+    arguments: ['arvestbank_blocks']
+  arvestbank_blocks.service:
+    class: Drupal\arvestbank_blocks\BlockService
+    arguments: []
