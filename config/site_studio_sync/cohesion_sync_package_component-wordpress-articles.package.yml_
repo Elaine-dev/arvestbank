@@ -1,3 +1,4 @@
+
 -
   type: cohesion_sync_package
   export:
@@ -9,7 +10,7 @@
     label: 'Component Wordpress Articles'
     description: 'A component to display wordpress articles.'
     excluded_entity_types: '[]'
-    settings: '{"87f78e59-5773-4194-b8f4-653f636b7548":{"type":"cohesion_component","items":{"87f78e59-5773-4194-b8f4-653f636b7548":{"type":"cohesion_component"},"e5796afe-7ac5-40fc-9757-799c37368d9c":{"type":"cohesion_component_category"}},"checked":true}}'
+    settings: '{"87f78e59-5773-4194-b8f4-653f636b7548":{"type":"cohesion_component","items":{"87f78e59-5773-4194-b8f4-653f636b7548":{"type":"cohesion_component"}},"checked":true}}'
 -
   type: cohesion_component
   export:

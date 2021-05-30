@@ -1,0 +1,14 @@
+uuid: 0f73997e-bda6-470a-abd7-384b3146d7c2
+langcode: en
+status: true
+dependencies: {  }
+name: associate_headshot
+label: 'Associate Headshot'
+effects:
+  adc283ba-c653-49f4-9684-80f334749bf5:
+    uuid: adc283ba-c653-49f4-9684-80f334749bf5
+    id: image_resize
+    weight: 1
+    data:
+      width: 103
+      height: 124

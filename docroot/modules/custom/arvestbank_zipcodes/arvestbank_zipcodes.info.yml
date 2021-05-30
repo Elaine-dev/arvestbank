@@ -1,0 +1,5 @@
+name: 'Arvest Bank Zip Codes'
+type: module
+description: 'Contains mapping of zip codes to lat/lon.'
+core_version_requirement: ^9
+package: 'Custom'

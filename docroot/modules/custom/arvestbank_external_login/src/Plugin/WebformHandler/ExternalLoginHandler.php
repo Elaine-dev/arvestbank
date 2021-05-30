@@ -43,7 +43,7 @@ class ExternalLoginHandler extends WebformHandlerBase {
     // Get "Login Select" value.
     $loginSelectValue = $form_state->getValue('login_select');
 
-    // If the login select value is empty this is the non-prod login select.
+    // If the login select value is empty try the non-prod login select.
     if (!$loginSelectValue) {
       // Get "Login Select" value.
       $loginSelectValue = $form_state->getValue('login_select_non_prod');
@@ -75,6 +75,16 @@ class ExternalLoginHandler extends WebformHandlerBase {
    */
   private function handleNonstandardSelection(FormStateInterface &$form_state, string $loginSelectValue) {
 
+    // If user selected "Mortgage".
+    if ($loginSelectValue == 'mortgage') {
+      // Should not reach this, the action of the form should be changed to go
+      // directly to a cash manager endpoint with js when this is selected.
+    }
+    // If user selected "Arvest Online Banking".
+    if ($loginSelectValue == 'arvest_online_banking') {
+      // Should not reach this, the action of the form should be changed to go
+      // directly to a cash manager endpoint with js when this is selected.
+    }
     // If user selected "Cash Manager".
     if ($loginSelectValue == 'cash_manager') {
       // Should not reach this, the action of the form should be changed to go

@@ -259,84 +259,40 @@
     @return #{$remSize}rem;
 }
 
-.coh-style-slider-left-side-blocks h2 {
-    padding-left: calculateRem(20px);
-    // Remove font size
-    font-size: 19px;
-}
-
 // Target top login
 .login-wrapper {
-    // Max-width 1169px
-    @media screen and (max-width: 73.0625rem) {
-        // flex: 1 1 20%;
-        .coh-style-login-blocks .chosen-container-single .chosen-single {
-            width: calculateRem(160px);
-        }
-    }
-
-    // Max-width 949px
-    @media screen and (max-width: 59.3125rem) {
-        .coh-style-login-blocks .chosen-container-single {
-            border: none;
-        }
-    }
-
-    // Max-width 564px
-    @media screen and (max-width: 35.25em) {
-        .coh-style-login-blocks .chosen-container-single .chosen-single {
-            width: calculateRem(120px);
-            background-image: none;
-            span {
-                margin-left: 0; 
-                margin-right: calculateRem(15px);
-            }
-            div {
-                right: calculateRem(5px);
-            }
-
-            &.chosen-single-with-deselect {
-                abbr {
-                    right: calculateRem(2px);
-                }
-            }
-        }
-    }
-
-    // Vertically stretch and center select list
-    div,
-    form {
+    // Vertically stretch and center styled select list
+    .coh-block,
+    .block,
+    form,
+    .top-select {
         display: flex;
         flex: 1 1 auto;
     }
+}
 
-    // Cancel flex in the results
-    div.results-container,
-    div.results-container div {
-        display: block;
-        flex: none;
-    }
+.coh-style-login-blocks {
 
     // Continue to hide selects when small screen menu is toggled
-    #edit-login-select-non-prod,
-    #edit-login-select {
+    select {
         display: visible;
         position: absolute;
         width: 0px;
         height: 0px;
         clip: rect(0,0,0,0);
     }
-}
 
-.coh-style-login-blocks {
+    // Sidebar element padding
     .sidebar-select,
-    .sidebar-container {
+    .sidebar-login-results {
         padding: calculateRem(10px) calculateRem(20px) calculateRem(0px) calculateRem(20px);
     }
-    .sidebar-container { 
+    .sidebar-login-results { 
         padding-bottom: calculateRem(15px);
     }
-    .results-container {
+
+    // Top login 
+    .login-results {
         padding: calculateRem(15px) calculateRem(10px);
         position: absolute;
         right: 0;
@@ -345,36 +301,14 @@
         background: #00457c;
         background: rgba(0,69,124,0.8);
 
-        // Full opacity in small screens
+        // Full opacity and in tablet and below screens
         @media (max-width: 59.3125rem) {
+            margin-top: calculateRem(2px);
             background: #00457c;
         }
-    }
-
-    // Align link wrappers
-    #edit-investments-wealth-links,
-    #edit-investments-wealth-links--2,
-    #edit-awm-client-point-links,
-    #edit-awm-client-point-links--2 {
-        position: absolute;
-        right: calculateRem(20px);
-        bottom: calculateRem(10px);
-    }
-
-    // Sidebar Chosen-specific styles
-    .sidebar-select .chosen-container-single {
-        border: 0;
-
-        .chosen-single {
-            font-size: calculateRem(18px);
-            line-height: 2.1;
-            padding-top: 0;
-            padding-bottom: 0;
-            font-weight: 500;
-        }
-        .chosen-drop {
-            width: 100%;
-            left: 0;
+        // Full width in landscape phone and below screens
+        @media (max-width: 47.9375rem) {
+            width: 100vw;
         }
     }
 
@@ -467,8 +401,9 @@
             }
         }
 
+        // List of select options container
         .chosen-drop {
-            width: calculateRem(220px);
+            width: calculateRem(222px);
             right: 0;
             margin-top: 0;
             margin-right: -1px;
@@ -477,8 +412,13 @@
             padding: 1rem;
             border: 3px solid #acc6e1;
             border-radius: 0;
+            -webkit-clip-path: none;
+            clip-path: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
         }
 
+        // List of select options
         .chosen-results {
             max-height: none;
             margin: 0;
@@ -499,6 +439,58 @@
                 }
                 &.result-selected {
                     text-decoration: none; 
+                }
+            }
+        }
+    }
+
+    // Sidebar Chosen-specific styles
+    .sidebar-select .chosen-container-single {
+        border: 0;
+        // Increase size
+        .chosen-single {
+            font-size: calculateRem(18px);
+            line-height: 2.1;
+            padding-top: 0;
+            padding-bottom: 0;
+            font-weight: 500;
+        }
+        .chosen-drop {
+            width: 100%;
+            left: 0;
+        }
+        .chosen-results li:first-child {
+            display: none;
+        }
+    }
+
+    // Top Chosen-specific styles
+    .top-select .chosen-container-single .chosen-single {
+
+        // Max-width 1169px
+        @media screen and (max-width: 73.0625rem) {
+            width: calculateRem(160px); // Reduce width
+        }
+    
+        // Max-width 949px
+        @media screen and (max-width: 59.3125rem) {
+            border: none; // Remove navigation grey border
+        }
+    
+        // Max-width 564px
+        @media screen and (max-width: 35.25em) {
+            width: calculateRem(120px); // Reduce width
+            background-image: none; // remove lock icon
+            span {
+                margin-left: 0; 
+                margin-right: calculateRem(15px);
+            }
+            div {
+                right: calculateRem(5px); // move arrow
+            }
+            &.chosen-single-with-deselect {
+                abbr {
+                    right: calculateRem(2px); // align x with arrow
                 }
             }
         }

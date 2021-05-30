@@ -1,0 +1,19 @@
+uuid: 94437223-5ede-4b73-94e1-dd561ae8b0b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_id_internal
+    - media.type.credit_or_debit_card
+id: media.credit_or_debit_card.field_id_internal
+field_name: field_id_internal
+entity_type: media
+bundle: credit_or_debit_card
+label: 'ID (Internal)'
+description: 'The internal ID for this card.  It should be 3 digits so please prepend 0''s if the number needs it e.g. 043 or 007.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

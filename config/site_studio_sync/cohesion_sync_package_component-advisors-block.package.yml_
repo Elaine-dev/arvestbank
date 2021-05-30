@@ -1,0 +1,35 @@
+
+-
+  type: cohesion_sync_package
+  export:
+    uuid: 0ea7a897-dedf-4af8-8924-067e3d763e90
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: pack_advisors_block_component
+    label: 'Component Advisors Block'
+    description: 'Contains the advisors block component to be placed in a node to render the advisors view. Last Updated: Allie Jones 05/25/2021'
+    excluded_entity_types: '[]'
+    settings: '{"cb4fe448-4171-4931-b94f-b2d52e1aa598":{"type":"cohesion_component","items":{"cb4fe448-4171-4931-b94f-b2d52e1aa598":{"type":"cohesion_component"}},"checked":true}}'
+-
+  type: cohesion_component
+  export:
+    uuid: cb4fe448-4171-4931-b94f-b2d52e1aa598
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: cpt_associates_advisors_block
+    label: 'Component Associates Advisors Block'
+    json_values: '{"canvas":[{"type":"item","uid":"drupal-block","title":"Block","status":{"collapsed":true},"uuid":"dc08d054-1531-4638-ab5b-6abcce6d68b5","parentUid":"root","isContainer":false,"children":[]}],"componentForm":[{"type":"form-help","uid":"form-helptext","title":"Help text","status":{"collapsed":false},"uuid":"3f76d9f0-b519-4c61-a65e-4198a2da7c60","parentUid":"root","isContainer":false,"children":[]}],"mapper":{"dc08d054-1531-4638-ab5b-6abcce6d68b5":{}},"model":{"dc08d054-1531-4638-ab5b-6abcce6d68b5":{"settings":{"title":"Block","customStyle":[{"customStyle":""}],"settings":{"theme":"all","customStyle":[{"customStyle":""}]},"theme":"arvestbank_theme","block":"views_block__advisors_block_1"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"block"}}},"3f76d9f0-b519-4c61-a65e-4198a2da7c60":{"settings":{"title":"Help text","type":"cohHelpText","options":{"showClose":false,"helpType":"coh-help-text--help","helpText":"The Advisors block component, when dropped in the layout builder of a node, will render a view of associates that are tagged with the Advisor term. When viewing the view for the first time the results will be empty until a selection is made from one of the two exposed filters. The styling of the results is handled in the Associates teaser content template while the styling\/text of the view header is handled in the advisors view template."}},"contextVisibility":{"condition":"ALL"}}},"previewModel":{"dc08d054-1531-4638-ab5b-6abcce6d68b5":{},"3f76d9f0-b519-4c61-a65e-4198a2da7c60":{}},"variableFields":{"dc08d054-1531-4638-ab5b-6abcce6d68b5":[],"3f76d9f0-b519-4c61-a65e-4198a2da7c60":[]},"meta":{"fieldHistory":[]}}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    category: cpt_cat_general_components
+    preview_image: ''
+    has_quick_edit: true
+    entity_type_access: {  }
+    bundle_access: {  }
+    twig_template: component--cohesion-cpt-associates-advisors-block
+    weight: 0

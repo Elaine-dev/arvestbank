@@ -1,0 +1,330 @@
+date_added,id,category,display,state,city,lat,lon,radius,name,name_catalog,notes,keywords
+9/30/2013,67,art,,,,,,,Blush,,,pink flower plant abstract
+9/30/2013,69,art,,,,,,,Fresh,,,green flower plant succulent abstract
+9/30/2013,70,art,,,,,,,Splash,,,blue water art abstract
+9/30/2013,68,art,,,,,,,Vivid,,,"abstract heritage woven stripes colors, "
+1/1/2012,19,arvest,0,,,,,,Arvest Private Banking,,should not come up in the search,
+10/15/2013,141,public,,,,,,,Police,,,law badge service public officer emergency responder 911 cop cops
+10/15/2013,142,public,,,,,,,Paramedics,,,paramedic service public ambulance emergency responder 911 emt
+11/29/2016,262,public,,AR,Bentonville,36.36785,-94.21044,30,Bentonville Library,,,bentonville libraries books library education
+10/15/2013,143,public,,,,,,,Medical Services,,,scrubs stethoscope service public emergency responder doctor nurse 911 emt
+10/15/2013,144,public,,,,,,,Fire Rescue,,,helmet fireman firemen service public emergency responder 911
+2/25/2014,93,college,,AR,,,,,Arkansas Tech,,,university college russellville green gold wonder boys
+10/19/2017,272,college,,AR,,,,,Arkansas College of Osteopathic Medicine,,,"arcom, colleges, arkansas colleges, osteopathic medicine, med schools, fort smith"
+8/15/2013,116,college,,AR,,,,,ASU Mountain Home,,,arkansas university
+10/18/2018,312,college,,AR,,,,,ASU Jonesboro Red Wolves,,,"ASU, Arkansas State University, Red Wolves, Jonesboro, Scarlet, Black"
+3/8/2018,284,college,,AR,,,,, Central Baptist College,,,"central baptist college, central baptist, cbc, mustangs, conway, "
+8/15/2013,83,college,,AR,,,,,John Brown University,,,Arkansas JBU  Siloam Springs royal blue gold Golden Eagles
+8/15/2013,119,college,,AR,,,,,Rich Mountain Community College,,,Arkansas College Mena
+8/15/2013,117,college,,AR,,,,,University of Arkansas Fort Smith,,,Arkansas University UAFS navy blue white
+8/28/2015,222,college,,AR,,,,,National Park Community College,,,hot springs arkansas community college national park
+8/15/2013,130,college,,AR,,,,,NORTHARK COLLEGE,,,Arkansas Harrison Berryville
+8/15/2014,180,college,,AR,,,,,NWACC,,,Bentonville Arkansas Northwest Arkansas eagles green community college
+6/26/2015,205,college,,AR,,,,,University of Central Arkansas,,,university central arkansas conway victor bear grey purple
+8/26/2015,213,college,,AR,,,,,Hendrix College,,,Hendrix Conway Arkansas Ivan Warrior black orange
+3/8/2018,285,college,,KS,,,,,Calvary University,,,"calvary university, calvary, kansas city, warriors"
+8/15/2013,35,college,,KS,,,,,Neosho County Community College,,,College Chanute Kansas orange black panthers
+8/15/2013,38,college,,MO,,,,,MSSU,,,Missouri University Joplin green gold lions
+8/15/2013,149,college,,MO,,,,,Crowder College,,,Missouri college Neosho
+11/1/2016,261,college,,MO,,,,,Ozark Christian College,,,ozark christian college ozark ozarks christian joplin missouri colleges university universities ambassadors
+11/3/2014,181,college,,MO KS,,,,,UMKC,,,Kansas City Missouri Kangaroos Kasey UMKC Roos gold royal blue
+11/3/2014,190,college,,MO OK,,,,,NEO A&M College,,,Miami Oklahoma NEO Golden Norsemen Lady Norse blue gold yellow
+8/15/2013,43,college,,OK,,,,,USAO,,,Oklahoma university green gold Drovers
+1/1/2014,169,college,,OK,,,,,Rogers State University,,,Oklahoma college claremore hillcats blue red
+1/12/2015,194,college,,OK,,,,,NSU RIVERHAWKS,,,Tahlequah Oklahoma green gray northeastern state rowdy the riverhawk
+4/7/2016,239,college,,OK,,,,,Carl Albert State College,,,carl albert vikings community college
+6/28/2018,287,college,,OK,,,,,Cameron University,,,"cameron university, cameron, lawton, lawton ok, oklahoma colleges, oklahoma schools, colleges, schools, aggies"
+7/12/2018,295,college,,AR,,,,,UA Cossatot,,,cossatot university of arkansas cossatot de queen southwest arkansas ouachitas arkansas colleges
+3/7/2019,323,college,,OK AR,,,,,Kiamichi Technology Center,,,"Kiamichi, Kiamichi Technology Centers, Kiamichi Tech Center, Tech, Poteau, Fort Smith"
+10/30/2013,73,dest,,,,,,,Hit the Slopes,,,snow ski skiing vacation travel scenic nature
+10/30/2013,72,dest,,,,,,,On the Beach,,,sand ocean water blue vacation travel scenic
+10/30/2013,71,"dest,outdoor",,,,,,,Sunset Peaks,,,sunset peaks mountain vacation travel scenic nature
+10/30/2013,74,"dest,outdoor",,,,,,,"Stream (""Nature Walk"")",Nature Walk,could/should also be in the outdoor category,stream nature wood creek water tree
+2/24/2016,233,"dest,outdoor",,,,,,,BULL SHOALS LAKE SUNSET,,,"bull shoals lake, water, nature, arkansas parks, scenic, lakes, nature, mountain home, ozarks"
+2/24/2016,234,"dest,outdoor",,,,,,,Cotter Bridge,,,"cotter bridge, railroad, nature, foliage, arkansas landmarks, white river, "
+2/24/2016,235,"dest,outdoor",,,,,,,Fall in the Ozarks,,,"fall, ozarks, autumn, foliage, nature, travel, hills, trees, leaves, seasonal"
+8/4/2016,244,dest,,,,,,,Blanchard Springs,,,blanchard springs caverns cave arkansas landmarks underground natural state
+8/4/2016,246,"dest,outdoor",,,,,,,Lake Ouachita,,,lake ouachita lakes arkansas state parks arkansas landmarks water hot springs ouachitas natural state
+8/4/2016,247,"dest, sports",,,,,,,The Ridges,,,the ridges golf course arkansas public golf courses east arkansas wynne natural state
+8/4/2016,248,"dest,outdoor",,,,,,,BUFFALO NATIONAL RIVER,,,buffalo river national river arkansas landmark canoeing floating bluffs ozarks arkansas rivers natural state
+8/4/2016,249,"dest,outdoor",,,,,,,Lake Chicot,,,lake chicot arkansas state parks arkansas landmarks delta southeast arkansas lake village natural state
+8/4/2016,250,"dest,outdoor",,,,,,,Petit Jean,,,petit jean arkansas state parks arkansas landmarks waterfalls hiking ouachitas morrilton mountain natural state
+8/4/2016,251,"dest,outdoor",,,,,,,Whitaker Point,,,whitaker point arkansas landmarks ozarks buffalo river hiking boxley natural state
+5/18/2017,265,"dest,outdoor",,,,,,,Beavers Bend,,,"beavers bend, river, lake, nature, oklahoma, oklahoma state parks, broken bow"
+5/18/2017,266,"dest,outdoor",,,,,,,Boiling Springs,,,"boiling springs, oklahoma, oklahoma state parks, "
+5/18/2017,267,"dest,outdoor",,,,,,,Lake Murray,,,"lake murray, oklahoma, oklahoma state parks, water, jet ski, ardmore, lake"
+5/18/2017,268,"dest,outdoor",,,,,,,Osage Hills,,,"osage hills, oklahoma, oklahoma state parks, bartlesville, forest, cabin, "
+5/18/2017,269,"dest,outdoor",,,,,,,Robbers Cave ,,,"robbers cave, oklahoma, oklahoma state parks, bluffs, hiking, mountains, camping"
+5/18/2017,270,"dest,outdoor",,,,,,,Roman Nose,,,"roman nose, oklahoma, oklahoma state parks, native americans, tent, teepee, tipi, "
+10/19/2017,273,"dest,outdoor",,,,,,,Mississippi River State Park,,,"arkansas, arkansas state parks, mississippi river, marianna, east arkansas, delta, rivers, camping"
+3/12/2020,340,"dest,outdoor",,,,,,,Hot Springs Northwood Trail,,,Hot Springs Northwood Trail Trails Nature Outdoors Arkansas
+10/19/2017,274,dest,,,,,,,Little Rock Downtown,,,"little rock, arkansas, downtown, little rock skyline, bridge, river, city"
+10/19/2017,275,dest,,,,,,,Hot Springs Bathhouse,,,"hot springs, arkansas, bathhouse row, quapaw baths, ozark baths, ouachitas"
+8/14/2016,254,dest,,,,,,,Kansas City Skyline,,,kansas city skyline downtown missouri river convention center riverfront kmco
+12/15/2016,263,dest,,,,,,,Tulsa Skyline,,,tulsa downtown skyline oklahoma city lights
+7/14/2015,207,dest,,AR,,,,,Ben Franklin Wall,,,Siloam Springs Arkansas Ben Franklin bricks store
+7/14/2015,208,dest,,AR,,,,,Clock,,,Siloam Springs Arkansas clock main street downtown
+7/14/2015,209,dest,,AR,,,,,Fountain,,,Siloam Springs Arkansas fountain trees park nature
+7/14/2015,210,dest,,AR,,,,,Gazebo,,,Siloam Springs Arkansas gazebo trees park nature
+7/14/2015,211,dest,,AR,,,,,Springs,,,Siloam Springs Arkansas springs falls water park nature
+8/15/2013,129,dest,,OK,,,,,City Of Bartlesville,,,Oklahoma city
+4/3/2015,197,dest,,AR,,,,,Cathedral,,,sun sunset chapel fountain church
+8/26/2015,214,org,,MO,,,,,Art Feeds,,,art feeds joplin mossouri green blue
+8/15/2013,39,org,,OK,,,,,Cancer Centers of SW Oklahoma,,,hospital Altus Lawton Duncan
+10/30/2013,75,"outdoor, sports",,,,,,,Catch of the Day,,,fish bass fishing angler outdoors bait lake water nature
+10/30/2013,77,outdoor,,,,,,,Deer at Dawn,,,antlers buck outdoors animals hunting sunrise
+10/30/2013,76,outdoor,,,,,,,Flight at Dusk,,,outdoor animal hunting bird duck geese goose flock lake
+10/30/2013,82,outdoor,,,,,,,"Hunting Dog (""On the Wing"")",On the Wing,,dog hunting outdoor animal field canine
+2/24/2016,236,outdoor,,,,,,,Snowy Pass,,,"snow, winter, nature, bridge, trail, seasonal, christmas, cold"
+9/8/2016,255,outdoor,,,,,,,Dock View,,,lake dock sunrise sunset fishing arkansas outdoor adventures lake atkins
+9/8/2016,256,outdoor,,,,,,,Lake Life,,,lake sunset boats boatin outdoor adventures fishing arkansas
+9/8/2016,257,outdoor,,,,,,,Red Rock,,,red rocks moutains west colorado outdoor adventures garden of the gods
+2/25/2014,112,school,,AR,Mena,34.5862,-94.2396,,Acorn Tigers,,,mena arkansas blue gold
+8/15/2013,84,school,,AR,Alma,35.476,-94.2196,40,Alma Airedales,,,Arkansas green gold
+10/29/2014,184,school,,AR,Alpena,36.2917,-93.2951,80,Alpena Leopards,,,Arkansas leopards grey maroon
+9/13/2018,303,school,,AR,Ashdown,33.67444,-94.130981,300,Ashdown Schools,,,"ashdown, panthers, arkansas high schools, southwest arkansas"
+8/15/2013,37,school,,AR,Bentonville,36.3505,-94.1958,30,Bentonville Tigers,,,Arkansas black gold white
+8/14/2016,252,school,,AR,Bentonville,,,30,Bentonville West Wolverines,,,Bentonville west high school nortwest arkansas wolverine sports mascots
+9/3/2015,215,school,,AR,Benton,34.59229,-92.56815,45,Benton Panthers,,,Benton arkansas panthers maroon grey
+8/15/2013,146,school,,AR,Bergman,36.31618,-93.00767,30,Bergman Panthers,,,Arkansas panthers blue gold
+8/15/2013,60,school,,AR,Berryville,36.36998,-93.57592,30,Berryville Bobcats,,,Arkansas purple gold
+7/26/2018,297,school,,AR,Brookland,35.907864,-90.582433,250,BROOKLAND BEARCATS,,,"brookland, bearcats, arkansas schools, northeast arkansas, arkansas high schools"
+1/16/2017,264,school,,AR,Bryant,34.60133,-92.49305,30,Bryant Hornets,,,bryant hornets arkansas high schools little rock high school
+7/14/2015,206,school,,AR,Cabot,34.9804,-92.0337,45,Cabot Panthers,,,Cabot Arkansas Panthers Red White
+1/21/2021,322,school,,AR,Cedarville,35.576097,-94.368786,40,Cedarville,,,"Cedarville, Arkansas, High School, Pirates"
+4/3/2015,199,school,,AR,Conway,35.0763,-92.4613,40,Conway Wampus Cats,,,Arkansas Conway Wampus Cats blue white
+8/15/2013,145,school,,AR,Cotter,36.27117,-92.53544,30,Cotter Warriors,,,Arkansas blue white
+2/25/2014,90,school,,AR,Branch,35.3056,-93.9535,50,County Line Indians,,,Branch Arkansas red grey
+2/25/2014,91,school,,AR,Dardanelle,35.2231,-93.15795,140,Dardanelle Sand Lizards,,larger radius to appear with Fort Smith & Little Rock,Arkansas red white
+9/13/2018,307,school,,AR,Dierks,34.119328,-94.016477,240,Dierks Schools,,,"dierks, outlaws, southwest arkansas, arkansas high schools, deirks"
+8/15/2013,121,school,,AR,Dover,35.40147,-93.1143,115,Dover Pirates,,large radius to appear with Fort Smith,Arkansas black white
+8/15/2013,40,school,,AR,Elkins,36.00522,-94.00891,30,Elkins Elks,,,Arkansas purple white
+4/28/2016,240,school,,AR,Eureka Springs,36.4099,-93.7761,60,Eureka Springs Highlanders,,,Arkansas eureka springs red black sword shield highlanders
+8/15/2013,23,school,,AR,Farmington,36.0393,-94.2536,30,Farmington Cardinals,,,Arkansas cardinals scarlet white
+8/15/2013,58,school,,AR,Fayetteville,36.059,-94.1738,30,Fayetteville Bulldogs,,,Arkansas purple dog purple white
+7/30/2015,212,school,,AR,Fayetteville,36.08391,-94.1114,30,ST. JOSEPH PANTHERS,,,Arkansas fayetteville panthers blue red white
+8/15/2013,110,school,,AR,Fort Smith ,35.38592,-94.39854,30,Southside Mavericks,,,Fort Smith Arkansas columbia blue red mavericks
+8/15/2013,111,school,,AR,Fort Smith ,35.38592,-94.3985,30,Northside Grizzlies,,,Fort Smith Arkansas grizzly bear red white
+8/15/2013,124,school,,AR,Atkins,35.503164,-93.710861,180,Atkins Red Devils,,large radius to appear with Fort Smith,Arkansas scarlet white
+8/15/2013,132,school,,AR,Flippin,36.2798,-92.5996,30,Flippin Bobcats,,,Arkansas red white
+8/15/2013,137,school,,AR,Gentry,36.2675,-94.4846,30,Gentry Pioneers,,,Arkansas maroon white
+8/15/2013,123,school,,AR,Gravette,36.422,-94.4535,30,Gravette Lions,,,Arkansas black orange
+8/15/2013,56,school,,AR,Green Forest,36.3299,-93.4331,30,Green Forest Tigers,,,Arkansas red white
+5/27/2015,201,school,,AR,Greenland,35.9968,-94.1867,30,Greenland Pirates,,,Greenland Arkansas pirates green white
+8/15/2013,100,school,,AR,Greenwood,35.2122,-94.2553,40,Greenwood Bulldogs,,,Arkansas navy blue white
+8/15/2013,101,school,,OK,Coweta,35.95195,-95.6499,40,Coweta Tigers,,,Oklahoma orange black
+8/15/2013,102,school,,MO,Branson,36.64152,-93.218,60,Branson Pirates,,large radius to appear with Springfield,Missouri red black
+2/24/2016,237,school,,AR,Springdale,36.16762,-94.15362,30,Shiloh Saints,,,"shiloh christian, saints, high school, navy, gold, springdale, arkansas "
+8/15/2013,103,school,,AR,Springdale,36.1847,-94.142,30,Springdale Bulldogs,,,Arkansas red white black
+8/15/2013,104,school,,AR,Springdale,36.175,-94.1659,30,Springdale Community,,,Arkansas wildcats
+8/15/2013,105,school,,AR,Springdale,36.18836,-94.1302,30,Springdale Har-Ber Wildcats,,,Arkansas wildcats
+8/15/2013,107,school,,AR,Saint Paul,35.8241,-93.7654,50,Saint Paul Saints,,,Arkansas royal blue white
+8/15/2013,108,school,,OK,Vinita,36.63851,-95.1538,70,Vinita Hornets,,larger radius to appear with Bartlesville,"Oklahoma, hornets, blue, white"
+8/15/2013,109,college,,OK,,,,,Oklahoma Wesleyan University,,,Oklahoma eagles Bartlesville navy maroon
+3/18/2015,198,school,,AR,Hackett,35.18707,-94.40927,40,Hackett Hornets,,,Arkansas Hackett Hornets black gold
+8/15/2013,115,school,,AR,Harrison,36.2386,-93.1337,100,Harrison Goblins,,,Arkansas golden blue gold
+1/1/2014,162,school,,AR,Hector,35.4673,-92.9749,130,Hector Wildcats,,large radius to appear with Fort Smith,Arkansas blue white
+5/27/2015,204,school,,AR,Hot Springs,34.4923,-93.05715,120,HOT SPRINGS SCHOOL DISTRICT,,larger radius to appear with Little Rock,Arkansas Hot Springs Trojans gold black
+11/5/2015,225,school,,AR,Hot Springs,34.474,-92.9995,100,Lakeside Rams,,,Arkansas Hot Springs blue gold Lakeside rams
+8/15/2013,85,school,,AR,Huntsville,36.0823,-93.7346,40,Huntsville Eagles,,,Arkansas maroon white
+11/1/2018,320,school,,AR,Jessieville,34.70121,-93.062807,115,Jessieville Schools,,,"Jessieville High School, Jessieville Elementary, Jessieville Middle School, Arkansas, Lions"
+9/13/2018,308,school,,AR,Jonesboro,35.842402,-90.703414,220,Jonesboro Schools,,,"jonesboro, hurricanes, arkansas high schools, northeast arkansas, golden hurricane"
+12/21/2017,281,school,,AR,Kingston,36.054112,-93.51636,150,Kingston Yellowjackets,,,"kingston, kingston yellow jackets, yellow jackets, yellowjackets, arkansas high schools, arkansas sports, northwest arkansas high schools, bees"
+9/13/2018,305,school,,AR,Leachville,35.939214,-90.260582,300,BUFFALO ISLAND MUSTANGS,,,"buffalo island, mustangs, monette, northeast arkansas, arkansas high schools, "
+1/1/2014,160,school,,AR,Lead Hill,36.4197,-92.9149,40,Lead Hill Tigers ,,,Arkansas red white
+8/15/2013,106,school,,AR,Lamar,35.43541,-93.39519,100,Lamar Warriors,,large radius to appear with Fort Smith,Arkansas warriors black orange
+5/27/2015,202,school,,AR,Lake Hamilton,34.425,-93.089,120,Lake Hamilton Wolves,,larger radius to appear with Little Rock,Lake Hamilton wolves Pearcy Arkansas maroon gold
+8/15/2013,21,school,,AR,Lincoln,35.95633,-94.42129,30,Lincoln Wolves,Lincoln Public Schools,,Arkansas wolfpack maroon white
+4/28/2016,241,school,,AR,Lonoke,34.7908,-91.93917,60,Lonoke Jackrabbits,,,Arkansas lokoke jackrabbits purple black rabbit
+12/17/2014,195,school,,AR,Mansfield,35.26109,-94.31409,40,Mansfield Tigers,,,Arkansas mansfield tigers red white black
+8/15/2013,113,school,,AR,Mena,34.579,-94.2198,90,Mena Bearcats,,,Arkansas black red
+12/17/2015,226,school,,AR,Morrilton,35.1644,-92.7369,90,Morrilton Devildogs,,,morrilton arkansas devildogs school
+8/15/2013,63,school,,AR,Mountain Home,36.3308,-92.394,30,Mountain Home Bombers,,,Arkansas royal blue gold
+9/13/2018,309,school,,AR,Mount Ida,34.556793,-93.634219,150,MOUNT IDA LIONS,,,"mount ida, mt ida, ouachitas, southwest arkansas, western arkansas, lions"
+7/26/2018,298,school,,AR,Nashville,33.957109,-93.851778,230,Nashville Schools,,,"nashville, nashville arkansas, nashville ar, scrappers, southwest arkansas, arkansas high schools"
+11/5/2015,224,school,,AR,Ola,35.0108,-93.34296,150,Two Rivers Gators,,large radius to appear with Fort Smith,Arkansas Ola blue orange Two Rivers gators
+8/15/2013,95,school,,AR,Paris,35.29246,-93.7299,60,Paris Eagles,,large radius to appear with Fort Smith,Arkansas royal blue white
+8/15/2013,30,school,,AR,Pea Ridge,36.4558,-94.124,30,Pea Ridge Blackhawks,,,Arkansas black red white
+8/15/2013,66,school,,AR,Pottsville,35.2385,-93.0286,130,Pottsville Apaches,,large radius to appear with Fort Smith & Little Rock,Arkansas black gold
+8/15/2013,34,school,,AR,Prairie Grove,35.9809,-94.3248,30,Prairie Grove Tigers,,,Arkansas black gold
+1/12/2015,196,school,,AR,Rogers,36.3075,-94.1327,30,Arkansas Arts Academy,,,Arkansas rogers green fine arts academy
+8/15/2013,53,school,,AR,Rogers,36.2998,-94.1468,30,Rogers Mounties,,,Arkansas royal blue white
+8/15/2013,52,school,,AR,Rogers,36.3236,-94.1235,30,Rogers Heritage War Eagles,,,Arkansas navy blue gold
+7/30/2020,348,school,,AR,Rogers,36.289372,-94.186444,30,Providence Academy,,,Providence Classical Christian Academy School Rogers Arkansas high school grammar school
+8/15/2013,99,school,,AR,Russellville,35.2783,-93.1348,140,Russellville Cyclones,,larger radius to appear with Fort Smith & Little Rock,Arkansas crimson black
+8/15/2013,114,school,,AR,Scranton,35.36119,-93.53574,75,Scranton Rockets,,larger radius to appear with Fort Smith,Arkansas purple gold
+8/15/2013,29,school,,AR,Siloam Springs,36.1907,-94.5145,30,Siloam Springs Panthers,,,Arkansas maroon gray
+8/15/2013,88,school,,AR,Subiaco Academy,35.2983,-93.6339,60,Subiaco Academy Trojans,,large radius to appear with Fort Smith,Arkansas blue orange
+8/15/2013,133,school,,AR,Valley Springs,36.15757,-92.99295,30,Valley Springs Tigers,,,Arkansas green white
+8/15/2013,89,school,,AR,Van Buren,35.4367,-94.3487,30,Van Buren Pointers,,,Arkansas kelly green white
+8/15/2013,20,school,,AR,West Fork,35.92131,-94.19122,30,West Fork Tigers,,,Arkansas vegas gold black
+8/15/2013,139,school,,AR,Yellville,36.22835,-92.685056,50,Yellville-Summit Panthers,,,Arkansas panthers green white
+8/15/2013,64,school,,KS,Caney,37.0176,-95.9276,40,Caney Valley Bullpups,,,Oklahoma Ramona
+10/20/2016,259,school,,KS,Gardner,38.81708,-94.941275,70,Gardner Edgerton Schools,,,gardner edgerton trailblazers blue kansas city high school
+7/20/2016,242,school,,KS,Olathe,38.8385,-94.7279,50,Heritage Christian Academy,,,heritage christian academy chargers kansas city schools overland park private
+6/30/2016,243,school,,KS,Ottawa,38.6003,-95.2817,110,Ottawa Cyclones,,,ottawa cyclones kansas high school red black white
+1/1/2014,163,school,,KS,Pittsburg,37.4109,-94.705,45,St. Mary's Colgan Panthers,,,Kansas Pittsburg blue white silver
+8/15/2013,150,school,,KS,Pittsburg,37.41088,-94.70496,45,Pittsburg Dragons,,,Kansas purple white
+8/15/2013,131,school,,AR,Clarksville,35.469898,-93.482723,50,Clarksville Panthers,,,Arkansas red white
+3/4/2016,238,school,,KS,Overland Park,38.8097,-94.72786,50,Blue Valley Timberwolves,,,wolves green trees we see green kansas overland park
+12/1/2014,191,school,,MO,Blue Eye,36.4993,-93.3937,90,Blue Eye Bulldogs,,large radius to appear in Springfield,Missouri black white bulldogs dogs Blue Eye
+11/5/2015,227,school,,MO,Bronaugh,37.69342,-94.472,80,Bronaugh Wildcats,,,Missouri green white wildcats Bronaugh cats
+2/25/2014,118,school,,MO,Carl Junction,37.1767,-94.5655,30,Carl Junction Bulldogs,,,Missouri black red
+1/1/2014,165,school,,MO,Carthage,37.1764,-94.31022,30,Carthage Tigers,,,Missouri blue white
+1/1/2014,168,school,,MO,Cassville,36.677,-93.86881,50,Cassville Wildcats,,,Missouri black gold
+10/19/2015,223,school,,MO,Dora,36.7747,-92.2199,100,Dora Falcons,,,Missouri falcon red white dora
+8/15/2019,330,school,,MO,Exeter,36.674955,-93.937978,150,Exeter Tigers,,,"Missouri, Exeter, Tigers, Exeter R-VI"
+8/15/2013,134,school,,MO,Granby,36.8773,-94.2282,50,East Newton Patriots,,,Missouri Granby red white blue
+8/15/2013,65,school,,MO,Hollister,36.6217,-93.1926,75,Hollister Tigers,,large radius to appear with Springfield,Missouri blue white
+1/1/2014,161,school,,MO,Joplin,37.0842,-94.5132,30,Joplin Eagles,,,Missouri red silver
+2/7/2021,351,school,,MO,Lamar,37.501736,-94.282012,40,Lamar Tigers,,,"Lamar, Lamar Tigers, High School, Lamar Schools, Lamar Public Schools, Lamar High School"
+12/11/2014,193,school,,MO,Golden City,37.39299,-94.0942,60,Golden City Eagles,,,Missouri joplin golden city eagles gold black yellow
+4/1/2015,177,school,,MO,Lebanon,37.6718,-92.6626,100,Lebanon Yellowjackets,,,Missouri Lebanon Yellowjackets black gold
+8/15/2013,97,school,,MO,McDonald County,36.59381,-94.38417,50,McDonald County Mustangs,,large radius to appear with ABC,Missouri Anderson black red
+8/15/2013,147,school,,MO,Monett,36.92895,-93.9277,60,Monett Cubs,,large radius to appear with Joplin,Missouri purple gold
+1/1/2014,152,school,,MO,Mountain Grove,37.1306,-92.26349,90,Mountain Grove Panthers,,large radius to appear with Springfield,Missouri maroon grey
+8/15/2013,138,school,,MO,Nevada,37.952861,-94.335022,105,Nevada Tigers,,large radius to appear with Joplin,Missouri maroon silver
+1/1/2014,153,school,,MO,Pierce City,36.94589,-94.0002,50,Pierce City Eagles,,,Missouri green white
+8/15/2019,328,school,,MO,Purdy,36.815543,-93.919693,150,Purdy Eagles,,,"Missouri, Purdy, Eagles, Purdy R-II"
+8/15/2013,140,school,,MO,Forsyth,36.68506,-93.1199,70,Forsyth Panthers,,large radius to appear with Springfield,Missouri blue white
+11/3/2014,182,school,,MO,Raytown,38.99666,-94.4684,50,Raytown Bluejays,,,Raytown Missouri Bluejays blue white
+11/3/2014,183,school,,MO,Raytown,38.99666,-94.4684,50,Raytown South Cardinals,,,Raytown Missouri Cardinals red white
+1/1/2014,166,school,,MO,Springfield,36.95483,-93.727223,70,Aurora Houn'Dawgs,,,Missouri hound dog black red
+8/15/2013,136,school,,MO,Lockwood,37.3906,-93.9584,70,Lockwood Tigers,,large radius to appear with Joplin,Missouri black red
+8/15/2013,125,school,,MO,Springfield,36.722719,-93.383203,180,Reed Springs Wolves,,large radius to appear with Springfield,Missouri red white
+12/1/2014,192,school,,MO,Washburn,36.5907,-93.9662,50,Southwest Trojans,,,Missouri Washburn red black southwest trojans
+8/15/2013,62,school,,MO,Webb City,37.15175,-94.4741,30,Webb City Cardinals,,,Missouri blue white red
+8/15/2013,126,school,,MO,Joplin,36.877973,-94.380226,120,Neosho Wildcats,,large radius to appear with Joplin,Missouri black gold
+8/15/2013,122,school,,MO,West Plains,36.7281,-91.8524,95,West Plains Zizzers,,large radius to appear with NCA,Missouri red silver
+8/15/2019,329,school,,MO,Wheaton,36.762702,-94.050325,150,Wheaton Bulldogs,,,"Missouri, Wheaton, Bulldogs, Wheaton R-III"
+11/20/2015,229,school,,OK,Adair,36.438,-95.3163,100,Adair Warriors,,large radius to appear with Tulsa,Oklahoma Adair green white warriors
+8/15/2013,22,school,,OK,Broken Arrow,36.0731,-95.7661,40,Broken Arrow Tigers,,,Oklahoma black gold
+8/15/2013,135,school,,OK,Bartlesville,36.769692,-95.980911,30,Bartlesville Bruins,,,Oklahoma blue white
+1/1/2014,167,school,,OK,Bartlesville,36.7258,-95.95318,30,WESLEYAN CHRISTIAN SCHOOL,,,Oklahoma Bartlesville
+7/26/2018,296,school,,OK,Broken Bow,34.034389,-94.740855,250,Broken Bow Schools,,,"broken bow, savages, oklahoma high schools, oklahoma schools, indians, native americans"
+1/9/2020,338,school,,OK,Broken Bow,33.984123,-94.818991,250,Holly Creek Schools,,,"Holly Creek, red hawk, Redhawks, Broken Bow, Oklahoma"
+1/21/2021,232,school,,OK,Chouteau,36.19203,-95.345537,50,Chouteau Wildcats,,,"Chouteau, Wildcats, School, High School, Oklahoma"
+2/25/2014,94,school,,OK,Dewey,36.7959,-95.93553,30,Dewey Bulldoggers,,,Oklahoma cardinal red white
+8/15/2013,17,school,,OK,Elgin,34.78195,-98.28711,40,Elgin Owls,,,Oklahoma red white
+8/15/2013,13,school,,OK,Eufaula,35.28069,-95.584,50,Eufaula Ironheads,,,Oklahoma iron heads maroon
+8/15/2013,51,school,,OK,Grove,36.599,-94.7472,40,Grove Ridgerunners,,,Oklahoma
+10/18/2018,313,school,,OK,Idabel,33.882754,-94.815908,240,Idabel Schools,,,"Idabel Oklahoma, Warriors, Middle School, Elementary School, High School, Scarlet, Black"
+8/15/2013,55,school,,OK,Jay,36.4308,-94.7872,40,Jay Bulldogs,,,Oklahoma black yellow
+8/15/2013,45,school,,OK,Jenks,36.0254,-95.9696,40,JENKS PUBLIC SCHOOLS,,,Oklahoma red white Tulsa
+8/15/2013,61,school,,OK,Kansas,36.2124,-94.8037,40,Kansas Comets,,,Oklahoma black red
+1/21/2021,288,school,,OK,Lawton,34.608115,-98.458127,50,Eisenhower Eagles,,,"Eisenhower, Eagles, High School, Lawton, Oklahoma"
+1/21/2021,289,school,,OK,Lawton,34.617382,-98.403887,50,Lawton Wolverines,,,"Wolverines, Lawton, OK, High School"
+1/21/2021,290,school,,OK,Lawton,34.609365,-98.336866,50,MacArthur Highlanders,,,"MacArthur, Highlanders, Lawton, OK, High School"
+11/8/2018,321,school,,OK,Lukfata,34.095749,-94.773897,40,Lufkata Falcons,,,"Lukfata Public School, Oklahoma, Broken Bow, Falcons"
+8/15/2013,14,school,,OK,McAlester,34.9373,-95.7402,50,McAlester Buffaloes,,,Oklahoma black yellow
+8/15/2013,42,school,,OK,Miami,36.8745,-94.8543,40,Miami Wardogs,,,Oklahoma blue white
+8/15/2013,87,school,,OK,Muskogee,35.69737,-95.37016,40,Hilldale Hornets,,,Oklahoma Muskogee red
+11/29/2016,92,school,,OK,Muskogee,35.77161,-95.32973,30,Muskogee Roughers,,,Oklahoma Muskogee roughers schools oil green high school
+8/15/2013,148,school,,OK,Muldrow,35.406203,-94.59883,30,Muldrow Bulldogs,,,Oklahoma black red
+8/15/2013,57,school,,OK,Nowata,36.6963,-95.6448,40,Nowata Ironmen,,,Oklahoma red white
+8/15/2013,120,school,,OK,Panama,35.1673,-94.6724,40,Panama Razorbacks,,,Oklahoma black red
+8/15/2013,12,school,,OK,Park Hill,35.7886,-94.9693,30,Keys Cougars,,,Oklahoma black red
+8/15/2013,86,school,,OK,Porter,35.86959,-95.5221,30,Porter Pirates,,,Oklahoma blue
+8/15/2013,98,school,,OK,Pryor,36.30697,-95.31378,70,Pryor Tigers,,,Oklahoma blue gold
+1/1/2014,151,school,,OK,Roland,35.42249,-94.5147,30,Roland Rangers,,,Oklahoma black orange
+1/21/2021,326,school,,OK,Sallisaw,35.552214,-94.743616,40,Brushy Mountaineers,,,"Brushy, School, Mountaineers, Sallisaw, Oklahoma"
+10/20/2016,258,school,,OK,Sallisaw,35.4507837,-94.82136,40,Sallisaw Schools,,,sallisaw oklahoma orange black diamonds
+8/22/2019,337,school,,OK,Sallisaw,35.448555,-94.707456,30,Central Schools Tigers,,,"Central Schools, Central Public School, Central Tigers, Tigers, Central, Sallisaw"
+2/25/2014,128,school,,OK,Spiro,35.2412,-94.6199,40,Spiro Bulldogs,,,Oklahoma Fighting white
+1/1/2014,170,school,,OK,Stilwell,35.8145,-94.6285,45,Stilwell Indians,,,Oklahoma red white
+1/1/2014,154,school,,OK,South Coffeyville,36.9945,-95.6203,50,Oklahoma Union,,,Oklahoma Coffeyville cougar maroon silver
+8/15/2013,16,school,,OK,Tahlequah,35.9201,-94.9809,40,Tahlequah Tigers,,,Oklahoma orange white
+11/17/2015,230,school,,OK,Tulsa,36.1073,-95.9102,30,Bishop Kelley Comets,,,Oklahoma Bishop Kelley comets Tulsa red white
+8/15/2013,15,school,,OK,Tulsa,36.07,-95.9681,20,Metro Christian Academy,,,Oklahoma Tulsa blue
+8/15/2013,54,school,,OK,Tulsa,36.0655,-95.8706,40,TULSA UNION PUBLIC SCHOOLS,,,"Tulsa, Union, Tulsa Union High School, OK, Oklahoma, School"
+8/15/2013,41,school,,OK,Tulsa,36.0524,-95.9596,20,Victory Christian School,,,Oklahoma Tulsa  blue gold conquerors
+8/15/2013,59,school,,OK,Wagoner,35.9594,-95.377,30,Wagoner Bulldogs,,,Oklahoma red black
+8/15/2013,28,school,,OK,Walters,34.3589,-98.3078,40,Walters Blue Devils,,,Oklahoma blue white
+3/25/2014,173,school,,OK,Westville,35.9926,-94.56799,40,Westville Yellow Jackets,,,Oklahoma Gold Purple Yellowjackets
+5/13/2014,164,school,,AR,Coal Hill,35.438344,-93.670475,40,Westside Rebels,,,Westside rebels west side Coal Hill Arkansas blue white
+5/27/2014,176,school,,OK,Fort Gibson,35.7976,-95.2505,45,Fort Gibson Tigers,,,Oklahoma Fort Gibson Tigers red white
+8/15/2013,27,school,,OK,Tulsa,36.1523,-95.878,40,Noah Jaguars,,,Oklahoma Tulsa royal blue black white jaguars noah
+8/15/2013,127,school,,OK,Fort Smith ,34.978252,-94.636459,140,Howe Lions,,large radius to appear with Fort Smith,Oklahoma red white
+4/23/2018,286,school,,OK,Sapulpa,35.999394,-96.114047,40,Sapulpa Chieftains,,,Oklahoma tulsa sapulpa chieftains
+7/12/2018,291,school,,AR,Riverside,35.2943,-91.241215,40,RIVERSIDE SCHOOLS,,,riverside rebels lake city northeast arkansas arkansas high schools
+7/12/2018,292,school,,AR,Kirby,34.251409,-93.641384,40,Kirby Trojans,,,kirby trojans southwest arkansas arkansas high schools
+7/12/2018,293,school,,AR,Norman,34.479247,-93.681096,40,Caddo Hills Indians,,,caddo hills norman indians southwest arkansas ouachitas arkansas high schools
+7/12/2018,294,school,,AR,Waldron,34.974633,-94.086766,40,Waldron Bulldogs,,,waldron bulldogs arkansas high schools western arkansas ouachitas
+9/27/2018,310,school,,AR,Horatio,33.948251,-94.347544,40,Horatio Lions,,,"horatio, lion, southwest arkansas, arkansas, junior senior high school, elementary"
+10/4/2018,311,school,,AR,Bay,35.747666,-90.566736,40,Bay Yellow Jackets,,,"Purple, Gold, High School, Elementary, Yellow Jackets, Bay, Arkansas"
+1/21/2021,349,school,,MO,Joplin,37.0992,-94.45304,40,College Heights Christian School,,"Joplin, MO, MIssouri, School, High School, College Heights, College Heights Christian School",
+5/27/2015,200,sports,,AR,,,,,Northwest Arkansas Naturals,,,Northwest Arkansas NWA Naturals baseball black sports mlb
+8/14/2016,253,sports,,KS MO,Lee's Summit,,,,Sporting Lee's Summit,,,soccer sporting lee's summit kansas city recreational kids
+10/20/2013,36,usa,,,,,,,Air Force,,,military patriotic american service veterans airplane plane fighter jet raptor
+10/20/2013,26,usa,,,,,,,Army,,,military patriotic american service veterans flag soldier uniform camo
+10/20/2013,31,usa,,,,,,,Coast Guard,,,military patriotic american service veterans ship
+10/20/2013,32,usa,,,,,,,Marines,,,military patriotic american service veterans sword soldier uniform
+10/20/2013,25,usa,,,,,,,Navy Air,,,military patriotic american service veterans f-18 hornet jet plane airplane
+10/20/2013,33,usa,,,,,,,Navy Water,,,military patriotic american service veterans ship carrier
+10/20/2013,24,usa,,,,,,,USA Pride,,,military patriotic american service veterans flag eagle red white blue stars stripes
+3/1/2018,283,"usa,org",,,,,,,Armed Services YMCA,,,"ymca, armed services, armed services ymca, asymca, military, army, flag, patriotic, usa, army, crayon"
+11/1/2013,80,"whimsical,food",,,,,,,Bacon,,,whimsical food pork meat pig
+11/1/2013,81,"whimsical,food",,,,,,,Chocolate Bar,,,whimsical food sweet candy
+11/1/2013,78,whimsical,,,,,,,Mr.,,,whimsical mister mustache yellow
+11/1/2013,79,whimsical,,,,,,,Ms.,,,whimsical miss misses lips red lipstick pucker kiss blue
+11/2/2017,276,"whimsical,art",,,,,,,Flowers,,,"flowers, floral, roses, fall, autumn"
+11/2/2017,277,"whimsical,art",,,,,,,Lighthearted,,,"lighthearted, hearts, lights, love"
+11/2/2017,278,"whimsical,art",,,,,,,Watercolor,,,"watercolor, art, artistic, artsy, hearts, love, paint, painting"
+11/2/2017,279,"whimsical,art",,,,,,,Script,,,"love, black, purple"
+11/15/2013,159,food,,,,,,,Popcorn,,,food butter arvest Friday snack
+11/15/2013,155,food,,,,,,,Coffee,,,food cappucino beans mug drink
+11/15/2013,156,food,,,,,,,Cupcakes,,,food sweet dessert cake sprinkles
+11/15/2013,157,food,,,,,,,Hamburger,,,food cheeseburger burger
+11/15/2013,158,food,,,,,,,Hotdog,,,food mustard hot dog
+3/5/2014,171,college,,KS,Pittsburg,37.41088,-94.70496,45,Pittsburg State University,,,Pitt State PSU Kansas Gus Gorilla Gorilla Crimson Gold
+3/5/2014,172,school,,MO,Nixa,37.048814,-93.294892,30,Nixa Eagles,,,Missouri scarlet grey red
+7/2/2014,178,school,,AR,Ozark,35.503562,-93.842476,30,Ozark Hillbillies,,,Ozark Hillbillies Franklin County Arkansas purple gold
+7/29/2014,179,college,,AR,Clarksville,35.476101,-93.466279,45,University of the Ozarks,,,University College Ozarks Clarksville Arkansas  Purple Gold Eagles
+10/20/2016,260,college,,AR,Little Rock,,,,UALR TROJANS,,,ualr little rock trojans arkansas college maroon grey
+11/1/2014,185,fashion,,,,,,,Chevron Spice,,,fashion chevron colors
+11/1/2014,187,fashion,,,,,,,On the Catwalk,,,fashion leopard print
+11/1/2014,188,fashion,,,,,,,Simple Elegance,,,fashion pearls jewelry
+11/1/2014,189,fashion,,,,,,,Stiletto Meadow,,,fashion shoe high heels
+1/2/2015,186,fashion,,,,,,,Old School,,,converse shoes basketball green white fashion old school
+5/27/2015,203,"fashion,outdoor",,,,,,,Camouflage,,,camo camouflage green brown hunting
+11/17/2015,228,org,,AR,,,,,Downtown Bentonville,,,Arkansas Bentonville red white blue
+12/17/2015,231,org,,AR,,,,,RUSSELLVILLE DOWNTOWN,,,downtown russellville main city arkansas
+3/5/2020,339,org,,AR,,,,,SPRINGDALE CHAMBER,,,Springdale Arkansas Chamber Commerce City
+8/29/2017,271,org,,AR,,,,,Early Childhood Initiatives Center,,,"early childhood initiatives center, kids, children, northwest arkansas"
+8/28/2015,216,pets,,,,,,,Dog 1,,,dog canine mutt pup white dogs nose
+8/28/2015,217,pets,,,,,,,Dog 2,,,dog canine puppy pup boston bulldog french terrior black white
+8/28/2015,218,pets,,,,,,,Horse,,,horse equestrian white brown
+8/28/2015,219,pets,,,,,,,Kitten,,,kitten cat tabby orange white
+8/28/2015,220,pets,,,,,,,Kitten & Puppy,,,kitten cat puppy dog canine husky white black
+8/28/2015,221,pets,,,,,,,Snake,,,snake rattlesnake brown white
+8/30/2016,245,dest,,AR,,,,,Crystal Bridges,,,Crystal Bridges art museum Natural State Northwest Arkansas Arkansas landmarks architecture american art bentonville
+8/13/2018,280,school,,OK,Cache,34.623314,-98.625072,40,Cache Bulldogs,,,"cache, bulldogs, southwest oklahoma, lawton, oklahoma schools"
+8/13/2018,299,school,,AR,DeQueen,34.029067,-94.358865,40,DeQueen Leopards,,,"dequeen, de queen, leopards, southwest arkansas, ouachitas, arkansas high schools"
+8/13/2018,300,school,,AR,Centerpoint,34.287698,-93.511726,40,Centerpoint Knights,,,"centerpoint, knights, southwest arkansas, ouachitas, arkansas high schools"
+8/13/2018,301,school,,OK,Lawton,34.620115,-98.404131,40,Lawton Eagles,,,"lawton, oklahoma schools, eisenhower, eagles, wolverines, highlanders, southwest oklahoma"
+8/13/2018,302,school,,AR,Manila,35.879811,-90.15695,40,Manila Lions,,,"manila, lions, northeast arkansas, arkansas high schools"
+8/13/2018,304,school,,MO,Marshfield,37.338944,-92.888039,40,Marshfield Blue Jays,,,"marshfield, blue jays, southern missouri, missouri high schools"
+8/13/2018,306,school,,AR,Valley View,35.76991,-90.737892,40,Valley View Blazers,,,"valley view, blazers, jonesboro, northeast arkansas, arkansas high schools"
+10/24/2018,314,sports,,,,,,,Baseball,,,"sports,baseball"
+10/24/2018,315,sports,,,,,,,Basketball,,,"sports,basketball"
+10/24/2018,316,sports,,,,,,,Football,,,"sports,football"
+10/24/2018,317,sports,,,,,,,GOLF BALL,,,"sports,golf"
+10/24/2018,318,sports,,,,,,,SOCCER BALL,,,"sports,soccer"
+10/24/2018,319,sports,,,,,,,TENNIS BALL,,,"sports,tennis"
+2/28/2019,324,school,,AR,Haskell,34.510086,-92.643731,40,Harmony Grove Cardinals,,,"Benton, Saline County, Harmony Grove, Haskell, Schools, Cardinals, Cards"
+3/13/2019,325,school,,AR,Rogers,36.2998,-94.1468,40,Mounties & War Eagles,,,"Rogers, Rogers Heritage, Benton County, WarEagles, Mounties, Schools, Cards"
+8/15/2019,327,dest,,OK,,,,,Muskogee,,,"Muskogee, Oklahoma, downtown, sunset"
+8/15/2019,331,agri,,,,,,,Baby Chicks,,,"agri, agriculture, farm, chicks, chickens, baby"
+8/15/2019,332,agri,,,,,,,Black Angus,,,"agri, agriculture, farm, angus, black angus, cows, cattle"
+8/15/2019,335,agri,,,,,,,Cozy Calf,,,"agri, agriculture, farm, calf, cow, cattle, baby cow"
+8/15/2019,336,agri,,,,,,,Early Risers,,,"agri, agriculture, farm, chickens, roosters"
+8/15/2019,334,agri,,,,,,,Golden Hayfield,,,"agri, agriculture, farm, hay bale, hay, field, sunset, sunrise"
+8/15/2019,333,agri,,,,,,,Grazing Goat,,,"agri, agriculture, farm, goat"
+4/16/2020,341,"outdoor, sports",,,,,,,GET A GRIP,,,"Rock, Climbing, Sport, Summer"
+4/16/2020,342,"outdoor, sports",,,,,,,KEEP UP,,,"Bike, Trail, Ride, Outdoor, Outdoors, Bicycle, Mountain, Trails, Riding"
+4/16/2020,343,"outdoor, sports",,,,,,,THE RIGHT PATH,,,"Rock, Rocks, Stream, River, Beach, Outdoor, Outdoor"
+4/16/2020,344,"outdoor, sports",,,,,,,MAKING WAVES,,,"Wakeboard, Wakeboarding, Surf, Surfing, Lake, Water, Outdoor, Outdoors, Boa"
+4/16/2020,345,"outdoor, sports",,,,,,,ON THE WATER,,,"Kayak, Kayaking, Canoe, Canoeing, Lake, River, Outdoor, Outdoors, Boa"
+4/16/2020,346,"outdoor, sports",,,,,,,TRAIL BLAZER,,,"Run, Running, Outdoor, Outdoors, Trail, Marathon, Race, Cross, Country"
+7/23/2020,347,"outdoor, sports",,,,,,,OZ TRAILS NWA,,,"Bicycle, Bike, Trail, Ozarks, NWA, Arkansas, Bentonville, Outdoor, Trails, Outdoors"
+1/28/2021,350,outdoor,,,,,,,COLER MOUNTAIN BIKE,,,"Coler, Coler MTB Preserve, Coler Mountain Bike Preserve, Mountain, Bike, Bicycle, Trail, Ride, Outdoor, Sport, Cycle"

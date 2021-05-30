@@ -60,9 +60,20 @@ class ArvestbankMenusActiveTrail extends MenuActiveTrail {
 
     // If we're on a node page.
     $node = \Drupal::routeMatch()->getParameter('node');
+
     if ($node) {
-      // Get canonical link for this node.
-      $canonicalLinkId = $this->canonicalMenuLinkHelper->getCanonicalMenuLinkIds($node->id(), TRUE);
+
+      // On revision pages $node is a string.
+      if (is_string($node)) {
+        // Get canonical link for this node.
+        $canonicalLinkId = $this->canonicalMenuLinkHelper->getCanonicalMenuLinkIds($node, TRUE);
+      }
+      // For non-revision pages $node is an object.
+      else {
+        // Get canonical link for this node.
+        $canonicalLinkId = $this->canonicalMenuLinkHelper->getCanonicalMenuLinkIds($node->id(), TRUE);
+      }
+
       // If we have a canonical link for this node.
       if ($canonicalLinkId) {
 

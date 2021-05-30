@@ -1,0 +1,19 @@
+uuid: 4b14f1fe-5ca8-4e55-b0e6-5fdf30efab55
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_slide_one_cta_text
+field_name: field_slide_one_cta_text
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

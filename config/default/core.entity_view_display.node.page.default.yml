@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.page.field_button_links
     - field.field.node.page.field_callout_layout_optio
     - field.field.node.page.field_callout_title
+    - field.field.node.page.field_disclosure
     - field.field.node.page.field_featured_image
     - field.field.node.page.field_field_callout_phone_number
     - field.field.node.page.field_layout_canvas
@@ -32,12 +33,10 @@ third_party_settings:
       children:
         - field_callout_layout_optio
         - field_callout_title
-        - field_cta_text
         - field_field_callout_phone_number
-        - field_schedule_appointment_link
         - field_second_callout
       parent_name: ''
-      weight: 13
+      weight: 16
       format_type: html_element
       region: hidden
       format_settings:
@@ -103,14 +102,14 @@ content:
     type: cohesion_entity_reference_revisions_entity_view
     region: content
   field_second_callout_label:
-    weight: 14
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_second_callout_link:
-    weight: 15
+    weight: 6
     label: above
     settings:
       trim_length: 80
@@ -125,6 +124,7 @@ hidden:
   content_moderation_control: true
   field_callout_layout_optio: true
   field_callout_title: true
+  field_disclosure: true
   field_field_callout_phone_number: true
   field_meta_tags: true
   field_page_type: true

@@ -49,7 +49,15 @@ class SidebarMenuBlock extends BlockBase {
 
       // Get canonical menu link.
       $canonicalMenuLinkHelper = \Drupal::service('arvestbank_menus.canonical_menu_link_helper');
-      $canonicalMenuLinkId = $canonicalMenuLinkHelper->getCanonicalMenuLinkIds($node->id(), TRUE);
+
+      // On revision pages $node is a string.
+      if (is_string($node)) {
+        $canonicalMenuLinkId = $canonicalMenuLinkHelper->getCanonicalMenuLinkIds($node, TRUE);
+      }
+      // On non-revision pages $node is an object.
+      else {
+        $canonicalMenuLinkId = $canonicalMenuLinkHelper->getCanonicalMenuLinkIds($node->id(), TRUE);
+      }
 
       // If this node has a canonical menu link.
       if ($canonicalMenuLinkId) {
