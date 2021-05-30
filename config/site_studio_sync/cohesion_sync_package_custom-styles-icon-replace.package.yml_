@@ -1,0 +1,53 @@
+
+-
+  type: cohesion_sync_package
+  export:
+    uuid: c13f60dc-eca9-4cd6-944f-ab3b6b14dfa5
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: pack_custom_styles_icon_replace
+    label: 'Custom Styles Icon Replace'
+    description: 'Styles to replace yes and no with icons. Used in tables. Updated: Aaron Parkening on 5/27/2021'
+    excluded_entity_types: '[]'
+    settings: '{"eeef6750-f51b-4b59-9262-a644e5e3d46a":{"type":"cohesion_custom_style","items":{"eeef6750-f51b-4b59-9262-a644e5e3d46a":{"type":"cohesion_custom_style"}},"checked":true},"42e24d6d-5d6b-4abf-a29f-25bfbb1a5e92":{"type":"cohesion_custom_style","items":{"42e24d6d-5d6b-4abf-a29f-25bfbb1a5e92":{"type":"cohesion_custom_style"}},"checked":true}}'
+-
+  type: cohesion_custom_style
+  export:
+    uuid: eeef6750-f51b-4b59-9262-a644e5e3d46a
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: 3c6f2254
+    label: 'Icon - replace no'
+    json_values: '{"preview":{"text":"<div class=\"coh-preview coh-style-icon---yes\">Default content for ''Generic''.<\/div>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"div","class":"","combinator":"","pseudo":""},"b87febd3-a6c5-426a-9047-b7be19d221c8":{"settings":{"element":"","class":"","combinator":"","pseudo":":after"},"styles":{"xl":{"content-string":{"contentType":{"value":"custom"},"customString":{"value":"\"\\D7\""}},"background-color":{"value":{"value":{"hex":"#ec1c24","rgba":"rgba(236, 28, 36, 1)"}}},"font-weight":{"value":"bold"},"font-size":{"value":"22"}}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+    json_mapper: '{"styles":{"title":"Layout","selectorType":"topLevel","formDefinition":[],"items":[{"title":":after","type":"container","items":[],"form":null,"selectorType":"pseudo","uuid":"b87febd3-a6c5-426a-9047-b7be19d221c8","allowedTypes":["child","pseudo"],"formDefinition":[{"formKey":"content","children":[{"formKey":"strings-counters-quotes-urls-and-attributes","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"contentType","active":true},{"name":"contentString","active":true},{"name":"counterString","active":true},{"name":"customString","active":true}]}]},{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]},{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":false},{"name":"font-weight","active":true},{"name":"color","active":false}]},{"formKey":"font-sizing-and-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-size","active":true},{"name":"line-height","active":false},{"name":"text-align","active":false},{"name":"letter-spacing","active":false},{"name":"word-spacing","active":false},{"name":"text-indent","active":false}]}]}]}],"form":null}}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    class_name: .coh-style-icon---no
+    custom_style_type: generic
+    available_in_wysiwyg: true
+    parent: .coh-style-icon---yes
+    weight: 0
+-
+  type: cohesion_custom_style
+  export:
+    uuid: 42e24d6d-5d6b-4abf-a29f-25bfbb1a5e92
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: dd984084
+    label: 'Icon - replace yes'
+    json_values: '{"preview":{"text":"<div class=\"coh-preview\">Default content for ''Generic''.<\/div>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"div","class":"","combinator":"","pseudo":""},"styles":{"xl":{"custom-css":[{"customCssProperty":{"value":"visibility"},"customCss":{"value":"hidden"}}],"position":{"value":"relative"}}},"f57f5eb9-1c45-487c-a14a-05927bca46a0":{"settings":{"element":"","class":"","combinator":"","pseudo":":after"},"styles":{"xl":{"content-string":{"contentType":{"value":"custom"},"customString":{"value":"\"\\2713\""}},"color":{"value":{"link":true,"value":{"hex":"#ffffff","rgba":"rgba(255, 255, 255, 1)"},"name":"White","uid":"white","class":".coh-color-white","variable":"$coh-color-white","wysiwyg":true,"inuse":true}},"font-size":{"value":"21"},"height":{"value":"21"},"width":{"value":"21"},"position":{"value":"absolute"},"top":{"value":"0"},"left":{"value":"0"},"display":{"value":"inline-block"},"visibility":{"value":"visible"},"border-radius":{"value":"50%"},"flex-container":{"justify-content":{},"align-items":{}},"background-color":{"value":{"value":{"hex":"#37b34a","rgba":"rgba(55, 179, 74, 1)"}}},"text-align":{"value":"center"},"line-height":{"value":"20"}}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+    json_mapper: '{"styles":{"title":"Layout","selectorType":"topLevel","formDefinition":[{"formKey":"layout","children":[{"formKey":"position","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"position","active":true},{"name":"top","active":true},{"name":"bottom","active":true},{"name":"left","active":true},{"name":"right","active":true},{"name":"z-index","active":true}]}]},{"formKey":"custom-css","children":[{"formKey":"css-property-and-css-value","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"custom-css","active":true},{"name":"customCssProperty","active":true},{"name":"customCss","active":true}]}]}],"items":[{"title":":after","type":"container","items":[],"form":null,"selectorType":"pseudo","uuid":"f57f5eb9-1c45-487c-a14a-05927bca46a0","allowedTypes":["child","pseudo"],"formDefinition":[{"formKey":"content","children":[{"formKey":"strings-counters-quotes-urls-and-attributes","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"contentType","active":true},{"name":"contentString","active":true},{"name":"counterString","active":true},{"name":"customString","active":true}]}]},{"formKey":"layout","children":[{"formKey":"height","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"min-height","active":false},{"name":"max-height","active":false},{"name":"height","active":true}]},{"formKey":"width","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"min-width","active":false},{"name":"max-width","active":false},{"name":"width","active":true}]},{"formKey":"display","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"display","active":true},{"name":"visibility","active":true},{"name":"overflow","active":false},{"name":"overflow-x","active":false},{"name":"overflow-y","active":false}]},{"formKey":"position","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"position","active":true},{"name":"top","active":true},{"name":"bottom","active":true},{"name":"left","active":true},{"name":"right","active":true},{"name":"z-index","active":true}]},{"formKey":"flex-container","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"flex-direction","active":false},{"name":"flex-wrap","active":false},{"name":"justify-content","active":true},{"name":"justify-content-safety","active":true},{"name":"align-content","active":false},{"name":"align-content-safety","active":true},{"name":"align-items","active":true},{"name":"align-items-safety","active":true}]}]},{"formKey":"border-and-outline","children":[{"formKey":"border-radius","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"border-radius","active":true},{"name":"border-top-left-radius","active":false},{"name":"border-top-right-radius","active":false},{"name":"border-bottom-left-radius","active":false},{"name":"border-bottom-right-radius","active":false}]}]},{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":false},{"name":"font-weight","active":false},{"name":"color","active":true}]},{"formKey":"font-sizing-and-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-size","active":true},{"name":"line-height","active":true},{"name":"text-align","active":true},{"name":"letter-spacing","active":false},{"name":"word-spacing","active":false},{"name":"text-indent","active":false}]},{"formKey":"font-style-and-wrapping","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-style","active":true},{"name":"text-transform","active":true},{"name":"text-decoration","active":true},{"name":"word-wrap","active":true},{"name":"direction","active":true}]}]},{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]}]}],"form":null}}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    class_name: .coh-style-icon---yes
+    custom_style_type: generic
+    available_in_wysiwyg: true
+    parent: null
+    weight: 0

@@ -127,6 +127,7 @@ module:
   redirect_404: 0
   redirect_domain: 0
   responsive_image: 0
+  responsive_tables_filter: 0
   rest: 0
   rh_media: 0
   rh_node: 0
