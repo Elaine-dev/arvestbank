@@ -16,19 +16,15 @@ dependencies:
     - field.field.node.stage_page.field_icon_two
     - field.field.node.stage_page.field_icon_two_text
     - field.field.node.stage_page.field_meta_tags
-    - field.field.node.stage_page.field_slide1_bg_position
     - field.field.node.stage_page.field_slide1_cta_color
     - field.field.node.stage_page.field_slide1_cta_link
     - field.field.node.stage_page.field_slide1_cta_position
-    - field.field.node.stage_page.field_slide2_bg_position
     - field.field.node.stage_page.field_slide2_cta_color
     - field.field.node.stage_page.field_slide2_cta_link
     - field.field.node.stage_page.field_slide2_cta_position
-    - field.field.node.stage_page.field_slide3_bg_position
     - field.field.node.stage_page.field_slide3_cta_color
     - field.field.node.stage_page.field_slide3_cta_link
     - field.field.node.stage_page.field_slide3_cta_position
-    - field.field.node.stage_page.field_slide4_bg_position
     - field.field.node.stage_page.field_slide4_cta_color
     - field.field.node.stage_page.field_slide4_cta_link
     - field.field.node.stage_page.field_slide4_cta_position
@@ -161,13 +157,6 @@ content:
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
-  field_slide1_bg_position:
-    weight: 39
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
   field_slide1_cta_color:
     weight: 21
     label: hidden
@@ -189,13 +178,6 @@ content:
     region: content
   field_slide1_cta_position:
     weight: 22
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
-  field_slide2_bg_position:
-    weight: 40
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -227,13 +209,6 @@ content:
     third_party_settings: {  }
     type: list_key
     region: content
-  field_slide3_bg_position:
-    weight: 41
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
   field_slide3_cta_color:
     weight: 31
     label: hidden
@@ -255,13 +230,6 @@ content:
     region: content
   field_slide3_cta_position:
     weight: 32
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
-  field_slide4_bg_position:
-    weight: 42
     label: hidden
     settings: {  }
     third_party_settings: {  }

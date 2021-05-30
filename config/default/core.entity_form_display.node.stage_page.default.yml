@@ -17,19 +17,15 @@ dependencies:
     - field.field.node.stage_page.field_icon_two
     - field.field.node.stage_page.field_icon_two_text
     - field.field.node.stage_page.field_meta_tags
-    - field.field.node.stage_page.field_slide1_bg_position
     - field.field.node.stage_page.field_slide1_cta_color
     - field.field.node.stage_page.field_slide1_cta_link
     - field.field.node.stage_page.field_slide1_cta_position
-    - field.field.node.stage_page.field_slide2_bg_position
     - field.field.node.stage_page.field_slide2_cta_color
     - field.field.node.stage_page.field_slide2_cta_link
     - field.field.node.stage_page.field_slide2_cta_position
-    - field.field.node.stage_page.field_slide3_bg_position
     - field.field.node.stage_page.field_slide3_cta_color
     - field.field.node.stage_page.field_slide3_cta_link
     - field.field.node.stage_page.field_slide3_cta_position
-    - field.field.node.stage_page.field_slide4_bg_position
     - field.field.node.stage_page.field_slide4_cta_color
     - field.field.node.stage_page.field_slide4_cta_link
     - field.field.node.stage_page.field_slide4_cta_position
@@ -355,12 +351,6 @@ content:
     third_party_settings: {  }
     type: metatag_firehose
     region: content
-  field_slide1_bg_position:
-    weight: 16
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_slide1_cta_color:
     weight: 30
     settings: {  }
@@ -377,12 +367,6 @@ content:
     region: content
   field_slide1_cta_position:
     weight: 33
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_slide2_bg_position:
-    weight: 17
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -407,12 +391,6 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  field_slide3_bg_position:
-    weight: 27
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_slide3_cta_color:
     weight: 46
     settings: {  }
@@ -429,12 +407,6 @@ content:
     region: content
   field_slide3_cta_position:
     weight: 49
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_slide4_bg_position:
-    weight: 41
     settings: {  }
     third_party_settings: {  }
     type: options_select

@@ -17,19 +17,15 @@ dependencies:
     - field.field.node.stage_page.field_icon_two
     - field.field.node.stage_page.field_icon_two_text
     - field.field.node.stage_page.field_meta_tags
-    - field.field.node.stage_page.field_slide1_bg_position
     - field.field.node.stage_page.field_slide1_cta_color
     - field.field.node.stage_page.field_slide1_cta_link
     - field.field.node.stage_page.field_slide1_cta_position
-    - field.field.node.stage_page.field_slide2_bg_position
     - field.field.node.stage_page.field_slide2_cta_color
     - field.field.node.stage_page.field_slide2_cta_link
     - field.field.node.stage_page.field_slide2_cta_position
-    - field.field.node.stage_page.field_slide3_bg_position
     - field.field.node.stage_page.field_slide3_cta_color
     - field.field.node.stage_page.field_slide3_cta_link
     - field.field.node.stage_page.field_slide3_cta_position
-    - field.field.node.stage_page.field_slide4_bg_position
     - field.field.node.stage_page.field_slide4_cta_color
     - field.field.node.stage_page.field_slide4_cta_link
     - field.field.node.stage_page.field_slide4_cta_position
@@ -74,19 +70,15 @@ hidden:
   field_icon_two: true
   field_icon_two_text: true
   field_meta_tags: true
-  field_slide1_bg_position: true
   field_slide1_cta_color: true
   field_slide1_cta_link: true
   field_slide1_cta_position: true
-  field_slide2_bg_position: true
   field_slide2_cta_color: true
   field_slide2_cta_link: true
   field_slide2_cta_position: true
-  field_slide3_bg_position: true
   field_slide3_cta_color: true
   field_slide3_cta_link: true
   field_slide3_cta_position: true
-  field_slide4_bg_position: true
   field_slide4_cta_color: true
   field_slide4_cta_link: true
   field_slide4_cta_position: true

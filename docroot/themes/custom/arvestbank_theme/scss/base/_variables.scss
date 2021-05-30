@@ -8,3 +8,9 @@ $dx8-grey-3: #CECECE;
 $dx8-grey-4: #BFBFBF;
 $dx8-grey-5: #B3B3B3;
 $dx8-black: #000;
+
+// REM calculator
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}

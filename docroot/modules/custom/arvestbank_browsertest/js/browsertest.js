@@ -70,9 +70,6 @@
       val = '* Not Recognized *';
     }
     details += browsertest.displayRow('Browser Name and Version', val, valclass);
-    if (bdMessage !== "") {
-      details += browsertest.displayMessage(bdMessage);
-    }
 
     // Check user's screen resolution
     val = screen.width + ' x ' + screen.height;
