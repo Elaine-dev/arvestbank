@@ -5,6 +5,9 @@ dependencies:
   config:
     - entity_browser.browser.dam_image_entity_browser
     - field.field.node.stage_page.body
+    - field.field.node.stage_page.field_alert_block_body
+    - field.field.node.stage_page.field_alert_block_dates
+    - field.field.node.stage_page.field_alert_block_link
     - field.field.node.stage_page.field_block_button
     - field.field.node.stage_page.field_block_title
     - field.field.node.stage_page.field_disclosure
@@ -42,6 +45,7 @@ dependencies:
     - workflows.workflow.editorial
   module:
     - content_moderation
+    - datetime_range
     - entity_browser
     - field_group
     - link
@@ -54,10 +58,9 @@ third_party_settings:
   field_group:
     group_left_block:
       children:
-        - field_block_title
-        - body
-        - field_block_button
-        - field_wordpress_articles
+        - group_sidebar_block
+        - group_alert_block
+        - group_latest_news_videos
       parent_name: ''
       weight: 1
       format_type: details
@@ -72,7 +75,6 @@ third_party_settings:
     group_slide_one:
       children:
         - field_slide_one
-        - field_slide1_bg_position
         - field_icon_one
         - field_icon_one_text
         - group_cta_slide1
@@ -90,7 +92,6 @@ third_party_settings:
     group_slide_two:
       children:
         - field_slide_two
-        - field_slide2_bg_position
         - field_icon_two
         - field_icon_two_text
         - group_cta_slide2
@@ -108,12 +109,11 @@ third_party_settings:
     group_slide_three:
       children:
         - field_slide_three
-        - field_slide3_bg_position
         - field_icon_three
         - field_icon_three_text
         - group_cta_slide3
       parent_name: ''
-      weight: 5
+      weight: 4
       format_type: details
       region: content
       format_settings:
@@ -126,12 +126,11 @@ third_party_settings:
     group_slide_four:
       children:
         - field_slide_four
-        - field_slide4_bg_position
         - field_icon_four
         - field_icon_four_text
         - group_cta_slide4
       parent_name: ''
-      weight: 6
+      weight: 5
       format_type: details
       region: content
       format_settings:
@@ -209,13 +208,59 @@ third_party_settings:
         open: false
         required_fields: true
       label: CTA
+    group_sidebar_block:
+      children:
+        - field_block_title
+        - body
+        - field_block_button
+      parent_name: group_left_block
+      weight: 20
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Sidebar Block'
+    group_alert_block:
+      children:
+        - field_alert_block_body
+        - field_alert_block_link
+        - field_alert_block_dates
+      parent_name: group_left_block
+      weight: 21
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Alert Block'
+    group_latest_news_videos:
+      children:
+        - field_wordpress_articles
+      parent_name: group_left_block
+      weight: 22
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Latest News & Videos'
 id: node.stage_page.default
 targetEntityType: node
 bundle: stage_page
 mode: default
 content:
   body:
-    weight: 15
+    weight: 8
     settings:
       rows: 9
       summary_rows: 3
@@ -230,8 +275,30 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_alert_block_body:
+    weight: 20
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_alert_block_dates:
+    weight: 22
+    settings: {  }
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_alert_block_link:
+    weight: 21
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   field_block_button:
-    weight: 16
+    weight: 9
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -239,7 +306,7 @@ content:
     type: link_default
     region: content
   field_block_title:
-    weight: 13
+    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -247,7 +314,7 @@ content:
     type: string_textfield
     region: content
   field_disclosure:
-    weight: 46
+    weight: 19
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -525,7 +592,7 @@ content:
     region: content
   field_wordpress_articles:
     type: entity_reference_paragraphs
-    weight: 16
+    weight: 26
     settings:
       title: Paragraph
       title_plural: Paragraphs

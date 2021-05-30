@@ -18,31 +18,6 @@ use Drupal\taxonomy\Entity\Term;
 class DisclosureBlock extends BlockBase {
 
   /**
-   * Helper function to extract the entity for the supplied route.
-   *
-   * @return \Drupal\Core\Entity\ContentEntityInterface
-   *   The entity.
-   */
-  private function getRouteEntity() {
-    $route_match = \Drupal::routeMatch();
-    // Entity will be found in the route parameters.
-    if (($route = $route_match->getRouteObject()) && ($parameters = $route->getOption('parameters'))) {
-      // Determine if the current route represents an entity.
-      foreach ($parameters as $name => $options) {
-        if (isset($options['type']) && strpos($options['type'], 'entity:') === 0) {
-          $entity = $route_match->getParameter($name);
-          if ($entity instanceof ContentEntityInterface && $entity->hasLinkTemplate('canonical')) {
-            return $entity;
-          }
-
-          // Since entity was found, no need to iterate further.
-          return NULL;
-        }
-      }
-    }
-  }
-
-  /**
    * {@inheritdoc}
    */
   public function build() {
@@ -65,7 +40,8 @@ class DisclosureBlock extends BlockBase {
     }
 
     // Get the current entity with the helper function.
-    $entity = $this->getRouteEntity();
+    $entity = \Drupal::service('arvestbank_blocks.service')->getRouteEntity();
+
     // Check for Node.
     if ($entity instanceof Node) {
       // Check that it has the correct field.

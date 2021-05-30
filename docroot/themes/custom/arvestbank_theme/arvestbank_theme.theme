@@ -59,6 +59,15 @@ function arvestbank_theme_preprocess_node(&$variables) {
       ->view($block);
     // Make the local admin tabs block available in node template.
     $variables['content']['arvestbank_theme_local_tasks'] = $renderedBlock;
+    // Load the sidebar block.
+    $block = Block::load('stagepagesidebarblock');
+    if (!empty($block)) {
+      $renderedBlock = \Drupal::entityTypeManager()
+        ->getViewBuilder('block')
+        ->view($block);
+      // Make the external login block available in node template.
+      $variables['content']['stagepage_sidebar_block'] = $renderedBlock;
+    }
   }
 }
 

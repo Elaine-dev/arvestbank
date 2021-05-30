@@ -99,16 +99,12 @@
           {{ content.external_login_block }}
         </div>
 
-        {# External Login Block #}
-        <div class="coh-style-homepage-in-between-block">
-          <h3>SWITCH TO ARVEST... IT'S EASY!</h3>
-          <div class="flex-wrapper">
-            <p>We've made switching to Arvest as easy as possible.</p>
-            <div class="button-wrapper">
-              <button>Get Started</button>
-            </div>
+        {# Sidebar / Alert Block #}
+        {% if content.stagepage_sidebar_block|render|trim is not empty %}
+          <div class="coh-style-homepage-in-between-block">
+            {{ content.stagepage_sidebar_block }}
           </div>
-        </div>
+        {% endif %}
 
         {# Wordpress Articles #}
         <div class="wordpress-block coh-style-wordpress-feed-block">
