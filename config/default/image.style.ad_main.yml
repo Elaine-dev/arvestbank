@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: ad_main
-label: 'Ad Main Content'
+label: 'Ad Exit Page'
 effects:
   255ac3e3-4496-4696-81f4-1ba35a2afbca:
     uuid: 255ac3e3-4496-4696-81f4-1ba35a2afbca

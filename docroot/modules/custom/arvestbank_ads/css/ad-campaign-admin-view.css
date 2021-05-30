@@ -1,21 +1,27 @@
 .field--type-entity-reference {
   font-weight: bold;
 }
-.page-node-type-ad-campaign .ad-title {
+.view-id-ad_campaigns.view-display-id-page_2 .ad-title {
   position: relative;
   cursor: pointer;
+  margin-top: 0px;
+  font-size: 20px;
+  font-weight: normal;
 }
-.page-node-type-ad-campaign .ad-image {
+.view-id-ad_campaigns.view-display-id-page_2 .ad-image {
   display: none;
   position: absolute;
   left: 30%;
   top: -50px;
   z-index: 1;
 }
-.page-node-type-ad-campaign .ad-title:hover .ad-image {
+.view-id-ad_campaigns.view-display-id-page_2 .ad-title:hover .ad-image {
   display: inline-block;
 }
-.page-node-type-ad-campaign .ad-title:hover {
+.view-id-ad_campaigns.view-display-id-page_2 .ad-title:hover {
   color: #f10203;
   font-weight: bold;
+}
+ul.coh-breadcrumb, div.coh-accordion-tabs, h1.coh-heading {
+  display: none;
 }

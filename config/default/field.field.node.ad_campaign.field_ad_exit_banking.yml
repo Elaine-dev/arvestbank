@@ -1,0 +1,25 @@
+uuid: 2be961ee-cf20-461f-bfd6-f453cceda184
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ad_exit_banking
+    - node.type.ad_campaign
+id: node.ad_campaign.field_ad_exit_banking
+field_name: field_ad_exit_banking
+entity_type: node
+bundle: ad_campaign
+label: Banking
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: ads
+      display_name: entity_reference_3
+      arguments: {  }
+field_type: entity_reference

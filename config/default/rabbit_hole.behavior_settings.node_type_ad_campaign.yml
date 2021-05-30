@@ -7,8 +7,8 @@ dependencies:
 id: node_type_ad_campaign
 entity_type_id: node_type
 entity_id: ad_campaign
-action: display_page
-allow_override: 1
+action: page_not_found
+allow_override: 0
 redirect: ''
 redirect_code: 301
 redirect_fallback_action: access_denied
