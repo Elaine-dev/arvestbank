@@ -47,18 +47,18 @@
           </div>
         </li>
         {% if content.field_slide_four|render|trim is not empty %}
-        <li class="glide__slide">
-          <div class="slide-background" style="background-image: url('{{ content.field_slide_four|render|striptags|trim }}')">
-            <div class="left-block-padding coh-container-boxed cta-container">
-              <div class="slide-cta color-{{ content.field_slide4_cta_color.0 }} position-{{ content.field_slide4_cta_position.0 }}">
-                <span class="text1">{{ content.field_slide_four_cta_text|render }}</span>
-                {% if content.field_slide4_cta_link|render|trim is not empty %}
-                  <button>{{ content.field_slide4_cta_link|render }}</button>
-                {% endif %}
+          <li class="glide__slide">
+            <div class="slide-background" style="background-image: url('{{ content.field_slide_four|render|striptags|trim }}')">
+              <div class="left-block-padding coh-container-boxed cta-container">
+                <div class="slide-cta color-{{ content.field_slide4_cta_color.0 }} position-{{ content.field_slide4_cta_position.0 }}">
+                  <span class="text1">{{ content.field_slide_four_cta_text|render }}</span>
+                  {% if content.field_slide4_cta_link|render|trim is not empty %}
+                    <button>{{ content.field_slide4_cta_link|render }}</button>
+                  {% endif %}
+                </div>
               </div>
             </div>
-          </div>
-        </li>
+          </li>
         {% endif %}
       </ul>
     </div>
@@ -81,12 +81,12 @@
         </div>
       </div>
       {% if content.field_icon_four|render|trim is not empty %}
-      <div class="glide_pager" data-glide-dir="=3">
-        <div class="only-show-on-desktop">
-          {{ content.field_icon_four|render }}
-          {{ content.field_icon_four_text|render }}
+        <div class="glide_pager" data-glide-dir="=3">
+          <div class="only-show-on-desktop">
+            {{ content.field_icon_four|render }}
+            {{ content.field_icon_four_text|render }}
+          </div>
         </div>
-      </div>
       {% endif %}
     </div>
 
@@ -95,9 +95,11 @@
       <div class="stage-page-left-side-blocks">
 
         {# External Login Block #}
-        <div class="coh-style-my-accounts-login-block">
-          {{ content.external_login_block }}
-        </div>
+        {% if content.external_login_block|render|trim is not empty %}
+          <div class="coh-style-my-accounts-login-block">
+            {{ content.external_login_block }}
+          </div>
+        {% endif %}
 
         {# Sidebar / Alert Block #}
         {% if content.stagepage_sidebar_block|render|trim is not empty %}
@@ -107,18 +109,22 @@
         {% endif %}
 
         {# Wordpress Articles #}
-        <div class="wordpress-block coh-style-wordpress-feed-block">
-          {{ content.wordpress_articles }}
-        </div>
+        {% if content.wordpress_articles|render|trim is not empty %}
+          <div class="wordpress-block coh-style-wordpress-feed-block">
+            {{ content.wordpress_articles }}
+          </div>
+        {% endif %}
 
         {# Stage Page Fields #}
         {% if content.body|render|trim is not empty %}
-          <h2>{{ content.field_block_title|render }}</h2>
-          <div class="left-block-content">
-            {{ content.body|render }}
-            {% if content.field_block_button|render|trim is not empty %}
-              <button>{{ content.field_block_button|render }}</button>
-            {% endif %}
+          <div class="left-block-content-wrapper">
+            <h2>{{ content.field_block_title|render }}</h2>
+            <div class="left-block-content">
+              {{ content.body|render }}
+              {% if content.field_block_button|render|trim is not empty %}
+                <button>{{ content.field_block_button|render }}</button>
+              {% endif %}
+            </div>
           </div>
         {% endif %}
 
