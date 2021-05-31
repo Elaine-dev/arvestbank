@@ -60,14 +60,6 @@ filters:
     weight: 0
     settings:
       title: true
-  filter_responsive_tables_filter:
-    id: filter_responsive_tables_filter
-    provider: responsive_tables_filter
-    status: true
-    weight: 0
-    settings:
-      tablesaw_type: stack
-      tablesaw_persist: '1'
   media_embed:
     id: media_embed
     provider: media
@@ -77,3 +69,11 @@ filters:
       default_view_mode: default
       allowed_media_types: {  }
       allowed_view_modes: {  }
+  filter_responsive_tables_filter:
+    id: filter_responsive_tables_filter
+    provider: responsive_tables_filter
+    status: true
+    weight: 0
+    settings:
+      tablesaw_type: stack
+      tablesaw_persist: '1'
