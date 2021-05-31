@@ -262,7 +262,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: "<h2>Important Documents and Resources Repository</h2>\r\n\r\n<p>Looking for a document contained on the Arvest website? All important downloadable documents online are provided here in this repository. For your convenience, items are categorized by subject.</p>"
+            value: "<h2>Important Documents and Resources Repository</h2>\r\n<p>Looking for a document contained on the Arvest website? All important downloadable documents online are provided here in this repository. For your convenience, items are categorized by subject.</p>"
             format: full_html
           plugin_id: text
       footer: {  }
