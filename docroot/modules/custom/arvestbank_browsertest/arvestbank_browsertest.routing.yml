@@ -3,7 +3,5 @@ arvestbank_browsertest.browser_test_controller_render:
   defaults:
     _controller: '\Drupal\arvestbank_browsertest\Controller\BrowserTestController::render'
     _title: 'Arvest: Personal: Bank: Online Services: Browser Diagnostics'
-  options:
-    cohesion_master_template: 'custom_controller_maste'
   requirements:
     _permission: 'access content'
