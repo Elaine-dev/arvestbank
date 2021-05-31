@@ -25,3 +25,8 @@
     top: 12.25rem;
   }
 }
+
+
+.path-frontpage .left-block-content-wrapper{
+  display:none;
+}

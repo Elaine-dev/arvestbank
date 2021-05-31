@@ -63,7 +63,7 @@ class StagePageSidebarBlock extends BlockBase {
             }
           }
 
-          // Initialize sidebar block conents.
+          // Initialize sidebar block contents.
           $sidebar_block_contents = [];
 
           // Sidebar block body.
