@@ -25,7 +25,3 @@
     top: 12.25rem;
   }
 }
-
-.toolbar .toolbar-bar .toolbar-tab > .toolbar-icon:before{
-  boder:none;
-}

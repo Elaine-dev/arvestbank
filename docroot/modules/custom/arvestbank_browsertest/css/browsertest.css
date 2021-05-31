@@ -12,3 +12,7 @@
 #browsertest .browsertest-value.negative {
   color: red;
 }
+
+#browsertest{
+  margin-top:10px;
+}
