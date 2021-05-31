@@ -40,3 +40,5 @@ command-hooks:
   frontend-reqs:
     dir: '${repo.root}'
     command: ./scripts/frontend-setup.sh
+cm:
+  allow-overrides: true
