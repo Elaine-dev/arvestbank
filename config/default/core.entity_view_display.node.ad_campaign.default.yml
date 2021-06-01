@@ -4,6 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.ad_campaign.field_ad_active_dates
+    - field.field.node.ad_campaign.field_ad_exit_application
+    - field.field.node.ad_campaign.field_ad_exit_banking
+    - field.field.node.ad_campaign.field_ad_exit_ccapply
+    - field.field.node.ad_campaign.field_ad_exit_switchkit
     - field.field.node.ad_campaign.field_ad_nav_business
     - field.field.node.ad_campaign.field_ad_nav_credit_cards
     - field.field.node.ad_campaign.field_ad_nav_home_loans
@@ -188,6 +192,27 @@ third_party_settings:
         classes: ''
         description: ''
       label: 'Footer Links'
+    group_exit_pages:
+      children:
+        - field_ad_exit_switchkit
+        - field_ad_exit_banking
+        - field_ad_exit_ccapply
+        - field_ad_exit_application
+      parent_name: ''
+      weight: 11
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Exit Pages'
 id: node.ad_campaign.default
 targetEntityType: node
 bundle: ad_campaign
@@ -202,6 +227,38 @@ content:
       timezone_override: ''
     third_party_settings: {  }
     type: daterange_default
+    region: content
+  field_ad_exit_application:
+    weight: 114
+    label: above
+    settings:
+      ad_style: main
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_exit_banking:
+    weight: 112
+    label: above
+    settings:
+      ad_style: main
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_exit_ccapply:
+    weight: 113
+    label: above
+    settings:
+      ad_style: main
+    third_party_settings: {  }
+    type: ad_formatter
+    region: content
+  field_ad_exit_switchkit:
+    weight: 111
+    label: above
+    settings:
+      ad_style: main
+    third_party_settings: {  }
+    type: ad_formatter
     region: content
   field_ad_nav_business:
     weight: 23

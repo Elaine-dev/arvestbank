@@ -78,6 +78,7 @@ permissions:
   - 'use text format full_html'
   - 'use yoast seo'
   - 'view all media revisions'
+  - 'view all revisions'
   - 'view article_education_article revisions'
   - 'view conditional fields'
   - 'view media'

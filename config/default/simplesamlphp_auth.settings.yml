@@ -2,13 +2,13 @@ langcode: en
 activate: true
 mail_attr: 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'
 unique_id: 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'
-user_name: 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'
+user_name: 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress'
 auth_source: default-sp
 login_link_show: true
 login_link_display_name: 'Federated login'
 header_no_cache: true
 role:
-  population: 'enterprise_admin:http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name,=,dharper@ARVTEST.COM|reviewer:http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name,~=,@ARVTEST.COM'
+  population: "enterprise_admin:http://schemas.xmlsoap.org/ws/2005/05/identity/claims/assigned.role,~=,enterprise_admin\r\ndomain_admin:http://schemas.xmlsoap.org/ws/2005/05/identity/claims/assigned.role,~=,domain_admin\r\nsite_editor://schemas.xmlsoap.org/ws/2005/05/identity/claims/assigned.role,~=,site_editor\r\ncontributor:http://schemas.xmlsoap.org/ws/2005/05/identity/claims/assigned.role,~=,contributor\r\nreviewer:http://schemas.xmlsoap.org/ws/2005/05/identity/claims/assigned.role,~=,reviewer"
   eval_every_time: false
 register_users: true
 allow:

@@ -7,9 +7,8 @@ dependencies:
     - scheduler
 third_party_settings:
   menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
+    available_menus: {  }
+    parent: ''
   scheduler:
     expand_fieldset: when_required
     fields_display_mode: vertical_tab
@@ -25,8 +24,8 @@ third_party_settings:
     unpublish_revision: false
 name: 'Ad Campaign'
 type: ad_campaign
-description: ''
+description: 'Ad Campaigns define the placement of ads throughout the site.  Campaigns are active by date range.'
 help: ''
 new_revision: true
 preview_mode: 1
-display_submitted: true
+display_submitted: false

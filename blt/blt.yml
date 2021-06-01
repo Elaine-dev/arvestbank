@@ -11,6 +11,7 @@ git:
     - 'arvestbank@svn-37631.prod.hosting.acquia.com:arvestbank.git'
 disable-targets:
   tests:
+    security-drupal: true
     security-composer: true
 simplesamlphp: true
 drush:
@@ -38,4 +39,6 @@ modules:
 command-hooks:
   frontend-reqs:
     dir: '${repo.root}'
-    command: ./scripts/frontend-setup.sh
+    command: ./scripts/frontend-setup.sh; drush cr
+cm:
+  allow-overrides: true

@@ -1,0 +1,29 @@
+uuid: 1fd30feb-406d-479f-9a5b-ff4e34a5b730
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.specialty_debit_cards
+  module:
+    - cohesion
+    - views
+  theme:
+    - arvestbank_theme
+id: views_block__specialty_debit_cards_specialty_debit_card_block
+theme: arvestbank_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: 'views_block:specialty_debit_cards-specialty_debit_card_block'
+settings:
+  id: 'views_block:specialty_debit_cards-specialty_debit_card_block'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.stage_page.body
+    - field.field.node.stage_page.field_alert_block_body
+    - field.field.node.stage_page.field_alert_block_dates
+    - field.field.node.stage_page.field_alert_block_link
     - field.field.node.stage_page.field_block_button
     - field.field.node.stage_page.field_block_title
     - field.field.node.stage_page.field_disclosure
@@ -16,19 +19,15 @@ dependencies:
     - field.field.node.stage_page.field_icon_two
     - field.field.node.stage_page.field_icon_two_text
     - field.field.node.stage_page.field_meta_tags
-    - field.field.node.stage_page.field_slide1_bg_position
     - field.field.node.stage_page.field_slide1_cta_color
     - field.field.node.stage_page.field_slide1_cta_link
     - field.field.node.stage_page.field_slide1_cta_position
-    - field.field.node.stage_page.field_slide2_bg_position
     - field.field.node.stage_page.field_slide2_cta_color
     - field.field.node.stage_page.field_slide2_cta_link
     - field.field.node.stage_page.field_slide2_cta_position
-    - field.field.node.stage_page.field_slide3_bg_position
     - field.field.node.stage_page.field_slide3_cta_color
     - field.field.node.stage_page.field_slide3_cta_link
     - field.field.node.stage_page.field_slide3_cta_position
-    - field.field.node.stage_page.field_slide4_bg_position
     - field.field.node.stage_page.field_slide4_cta_color
     - field.field.node.stage_page.field_slide4_cta_link
     - field.field.node.stage_page.field_slide4_cta_position
@@ -55,19 +54,21 @@ bundle: stage_page
 mode: default
 content:
   body:
-    weight: 3
+    type: text_default
+    weight: 32
+    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
-    region: content
   content_moderation_control:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
   field_block_button:
-    weight: 4
+    type: link
+    weight: 34
+    region: content
     label: hidden
     settings:
       trim_length: 80
@@ -76,51 +77,15 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
-    region: content
   field_block_title:
-    weight: 2
+    type: string
+    weight: 33
+    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
-    region: content
   field_icon_four:
-    type: entity_reference_entity_view
-    weight: 15
-    label: hidden
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    region: content
-  field_icon_four_text:
-    weight: 16
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_icon_one:
-    type: entity_reference_entity_view
-    weight: 38
-    label: hidden
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    region: content
-  field_icon_one_text:
-    weight: 7
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_icon_three:
     type: entity_reference_entity_view
     weight: 12
     label: hidden
@@ -129,7 +94,7 @@ content:
       link: false
     third_party_settings: {  }
     region: content
-  field_icon_three_text:
+  field_icon_four_text:
     weight: 13
     label: hidden
     settings:
@@ -137,7 +102,24 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_icon_two:
+  field_icon_one:
+    type: entity_reference_entity_view
+    weight: 27
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_icon_one_text:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_icon_three:
     type: entity_reference_entity_view
     weight: 9
     label: hidden
@@ -146,7 +128,7 @@ content:
       link: false
     third_party_settings: {  }
     region: content
-  field_icon_two_text:
+  field_icon_three_text:
     weight: 10
     label: hidden
     settings:
@@ -154,29 +136,39 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_icon_two:
+    type: entity_reference_entity_view
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_icon_two_text:
+    weight: 7
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_meta_tags:
-    weight: 17
+    weight: 14
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
-  field_slide1_bg_position:
-    weight: 39
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
   field_slide1_cta_color:
-    weight: 21
+    weight: 16
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
   field_slide1_cta_link:
-    weight: 20
+    weight: 15
     label: hidden
     settings:
       trim_length: 80
@@ -188,28 +180,21 @@ content:
     type: link
     region: content
   field_slide1_cta_position:
-    weight: 22
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
-  field_slide2_bg_position:
-    weight: 40
+    weight: 17
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
   field_slide2_cta_color:
-    weight: 26
+    weight: 19
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
   field_slide2_cta_link:
-    weight: 25
+    weight: 18
     label: hidden
     settings:
       trim_length: 80
@@ -221,28 +206,21 @@ content:
     type: link
     region: content
   field_slide2_cta_position:
-    weight: 27
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
-  field_slide3_bg_position:
-    weight: 41
+    weight: 20
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
   field_slide3_cta_color:
-    weight: 31
+    weight: 22
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
   field_slide3_cta_link:
-    weight: 30
+    weight: 21
     label: hidden
     settings:
       trim_length: 80
@@ -254,28 +232,21 @@ content:
     type: link
     region: content
   field_slide3_cta_position:
-    weight: 32
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
-  field_slide4_bg_position:
-    weight: 42
+    weight: 23
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
   field_slide4_cta_color:
-    weight: 36
+    weight: 25
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
   field_slide4_cta_link:
-    weight: 35
+    weight: 24
     label: hidden
     settings:
       trim_length: 80
@@ -287,45 +258,13 @@ content:
     type: link
     region: content
   field_slide4_cta_position:
-    weight: 37
+    weight: 26
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
   field_slide_four:
-    type: entity_reference_entity_view
-    weight: 14
-    label: hidden
-    settings:
-      view_mode: full_width_slideshow
-      link: false
-    third_party_settings: {  }
-    region: content
-  field_slide_four_cta_text:
-    weight: 149
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_slide_one:
-    type: entity_reference_entity_view
-    weight: 6
-    label: hidden
-    settings:
-      view_mode: full_width_slideshow
-      link: false
-    third_party_settings: {  }
-    region: content
-  field_slide_one_cta_text:
-    weight: 146
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_slide_three:
     type: entity_reference_entity_view
     weight: 11
     label: hidden
@@ -334,14 +273,30 @@ content:
       link: false
     third_party_settings: {  }
     region: content
-  field_slide_three_cta_text:
-    weight: 148
+  field_slide_four_cta_text:
+    weight: 31
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_slide_two:
+  field_slide_one:
+    type: entity_reference_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: full_width_slideshow
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_slide_one_cta_text:
+    weight: 28
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_slide_three:
     type: entity_reference_entity_view
     weight: 8
     label: hidden
@@ -350,8 +305,24 @@ content:
       link: false
     third_party_settings: {  }
     region: content
+  field_slide_three_cta_text:
+    weight: 30
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_slide_two:
+    type: entity_reference_entity_view
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: full_width_slideshow
+      link: false
+    third_party_settings: {  }
+    region: content
   field_slide_two_cta_text:
-    weight: 147
+    weight: 29
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -359,7 +330,7 @@ content:
     region: content
   field_wordpress_articles:
     type: entity_reference_revisions_entity_view
-    weight: 5
+    weight: 2
     label: above
     settings:
       view_mode: default
@@ -372,5 +343,8 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_alert_block_body: true
+  field_alert_block_dates: true
+  field_alert_block_link: true
   field_disclosure: true
   search_api_excerpt: true

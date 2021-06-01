@@ -1,0 +1,19 @@
+uuid: 9f236853-9dfa-4dc7-a312-e9d73e7eb4a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_ad_exit_text_link
+field_name: field_ad_exit_text_link
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

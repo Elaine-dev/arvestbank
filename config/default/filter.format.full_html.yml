@@ -8,6 +8,7 @@ dependencies:
     - editor
     - entity_embed
     - media
+    - responsive_tables_filter
 name: 'Full HTML'
 format: full_html
 weight: -9
@@ -55,3 +56,11 @@ filters:
     status: true
     weight: 100
     settings: {  }
+  filter_responsive_tables_filter:
+    id: filter_responsive_tables_filter
+    provider: responsive_tables_filter
+    status: true
+    weight: 0
+    settings:
+      tablesaw_type: stack
+      tablesaw_persist: '1'

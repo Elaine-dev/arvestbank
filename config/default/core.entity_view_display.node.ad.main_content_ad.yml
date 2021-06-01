@@ -7,6 +7,8 @@ dependencies:
     - field.field.node.ad.body
     - field.field.node.ad.field_ad_alternate
     - field.field.node.ad.field_ad_content_image
+    - field.field.node.ad.field_ad_exit_text_ad
+    - field.field.node.ad.field_ad_exit_text_link
     - field.field.node.ad.field_ad_nav_image
     - field.field.node.ad.field_cta
     - field.field.node.ad.field_image
@@ -31,6 +33,8 @@ hidden:
   body: true
   content_moderation_control: true
   field_ad_alternate: true
+  field_ad_exit_text_ad: true
+  field_ad_exit_text_link: true
   field_ad_nav_image: true
   field_cta: true
   field_image: true

@@ -11,7 +11,7 @@ dependencies:
     - field.field.media.credit_or_debit_card.field_debit_card_category
     - field.field.media.credit_or_debit_card.field_debit_card_keywords
     - field.field.media.credit_or_debit_card.field_geolocation
-    - field.field.media.credit_or_debit_card.field_geolocation_radius
+    - field.field.media.credit_or_debit_card.field_id_internal
     - media.type.credit_or_debit_card
 id: media.credit_or_debit_card.media_library
 targetEntityType: media
@@ -35,7 +35,7 @@ hidden:
   field_debit_card_category: true
   field_debit_card_keywords: true
   field_geolocation: true
-  field_geolocation_radius: true
+  field_id_internal: true
   moderation_state: true
   path: true
   status: true

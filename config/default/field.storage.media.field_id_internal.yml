@@ -1,16 +1,17 @@
-uuid: 634c00f7-8282-46a2-a152-2f59963649c9
+uuid: 750a7e12-e59d-4215-98f3-60d125667b4d
 langcode: en
 status: true
 dependencies:
   module:
     - media
-id: media.field_geolocation_radius
-field_name: field_geolocation_radius
+id: media.field_id_internal
+field_name: field_id_internal
 entity_type: media
-type: integer
+type: string
 settings:
-  unsigned: false
-  size: normal
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

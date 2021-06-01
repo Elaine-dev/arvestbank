@@ -19,6 +19,19 @@ function arvestbank_theme_form_alter(&$form, FormStateInterface $form_state, $fo
 }
 
 /**
+ * Implements hook_preprocess_html().
+ *
+ * @inheritDoc
+ */
+function arvestbank_theme_preprocess_html(&$variables) {
+  // Add node ID to the body class.
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if (is_object($node)) {
+    $variables['attributes']['class'][] = 'node-' . $node->id();
+  }
+}
+
+/**
  * Implements hook_preprocess_node().
  *
  * @inheritDoc
@@ -46,6 +59,15 @@ function arvestbank_theme_preprocess_node(&$variables) {
       ->view($block);
     // Make the local admin tabs block available in node template.
     $variables['content']['arvestbank_theme_local_tasks'] = $renderedBlock;
+    // Load the sidebar block.
+    $block = Block::load('stagepagesidebarblock');
+    if (!empty($block)) {
+      $renderedBlock = \Drupal::entityTypeManager()
+        ->getViewBuilder('block')
+        ->view($block);
+      // Make the external login block available in node template.
+      $variables['content']['stagepage_sidebar_block'] = $renderedBlock;
+    }
   }
 }
 
@@ -144,6 +166,12 @@ function arvestbank_theme_preprocess_field__body(&$variables, $hook) {
 
     }
 
+  }
+
+  // Add background color class for node revisions.
+  $current_route = \Drupal::routeMatch()->getRouteName();
+  if ($current_route == 'entity.node.revision') {
+    $variables['attributes']['class'][] = 'revision-bg-color';
   }
 
 }

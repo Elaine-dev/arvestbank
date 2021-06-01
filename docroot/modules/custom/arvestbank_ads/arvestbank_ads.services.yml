@@ -1,4 +1,10 @@
 services:
+
   ad_services:
-    class: Drupal\arvestbank_ads\AdServices
+    class: 'Drupal\arvestbank_ads\AdServices'
     arguments: []
+
+  ad_services.cron_permissions:
+    class: 'Drupal\arvestbank_ads\Routing\RouteSubscriber'
+    tags:
+      - { name: 'event_subscriber' }

@@ -69,6 +69,9 @@ process:
     plugin: category
     source: category
   field_debit_card_keywords: keywords
+  field_id_internal:
+    plugin: id_internal
+    source: id
   field_geolocation:
     plugin: geolocation
     source: id

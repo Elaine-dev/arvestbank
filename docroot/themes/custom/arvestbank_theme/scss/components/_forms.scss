@@ -244,26 +244,15 @@
 
 
 // ---------------  Login Forms  --------------- //
-
-// Top nav bar
-// Multiple svg backgrounds on select
-// Remining styles in Site Studio Login Blocks custom style
-
-// .coh-container.coh-ce-cpt_site_header-2a933a58 {
-//     z-index: 50;
-//   }
-
-// REM calculator
-@function calculateRem($size) {
-    $remSize: $size / 16px;
-    @return #{$remSize}rem;
-}
+// Remaining styles in Site Studio Login Blocks custom style
+// calculateRem() is in base > _variables.scss
 
 // Target top login
 .login-wrapper {
     // Vertically stretch and center styled select list
     .coh-block,
     .block,
+    .coh-style-webforms,
     form,
     .top-select {
         display: flex;
@@ -271,6 +260,7 @@
     }
 }
 
+// Target sidebar and top logins
 .coh-style-login-blocks {
 
     // Continue to hide selects when small screen menu is toggled
@@ -458,6 +448,9 @@
         .chosen-drop {
             width: 100%;
             left: 0;
+        }
+        .chosen-results li:first-child {
+            display: none;
         }
     }
 

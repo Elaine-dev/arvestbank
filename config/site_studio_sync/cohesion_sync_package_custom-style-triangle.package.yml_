@@ -8,7 +8,7 @@
     dependencies: {  }
     id: pack_custom_style_triangle
     label: 'Custom Style Triangle'
-    description: 'Base triangle style. Mostly used in links. Updated: Aaron Parkening 5/24/2021'
+    description: 'Base triangle style. Mostly used in links. Updated: Aaron Parkening 5/27/2021'
     excluded_entity_types: '[]'
     settings: '{"3053a813-8eac-41ce-abba-a4eaebbdb81a":{"type":"cohesion_custom_style","items":{"3053a813-8eac-41ce-abba-a4eaebbdb81a":{"type":"cohesion_custom_style"}},"checked":true}}'
 -
@@ -28,6 +28,6 @@
     selectable: true
     class_name: .coh-style-triangle
     custom_style_type: generic
-    available_in_wysiwyg: true
+    available_in_wysiwyg: false
     parent: null
     weight: 0

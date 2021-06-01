@@ -3,5 +3,6 @@ ignored_config_entities:
   - 'cohesion_*.*'
   - acquia_connector.settings
   - shield.settings
+  - arvestbank_rates.settings
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
