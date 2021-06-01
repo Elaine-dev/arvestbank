@@ -37,3 +37,31 @@ function arvestbank_core_update_9001(&$sandbox) {
 
   $sandbox['#finished'] = $sandbox['progress'] / $sandbox['total'];
 }
+
+/**
+ * Set imported pdf files to correct bundle type.
+ */
+function arvestbank_core_update_9002() {
+  // Get id's pf documents that need to be updated.
+  $database = \Drupal::database();
+  $ids = \Drupal::entityQuery('media')
+    ->condition('name', '%.pdf', 'LIKE');
+
+  $mids = $ids->execute();
+
+  // Update media_field_data table.
+  $database->update('media_field_data')
+    ->fields([
+      'bundle' => 'acquia_dam_document'
+    ])
+    ->condition('mid', $mids, 'IN')
+    ->execute();
+
+  // Update media table.
+  $database->update('media')
+    ->fields([
+      'bundle' => 'acquia_dam_document'
+    ])
+    ->condition('mid', $mids, 'IN')
+    ->execute();
+}
