@@ -1,0 +1,51 @@
+#toolbar-administration,
+div.site-container > div.site-header,
+div.footer-menu,
+#block-disclosureblock {
+  display: none;
+}
+
+div.site-container > div.site-content {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+div.site-container > div.site-content::before {
+  content: url("../images/arvest-blue-logo.png");
+  margin: 0 auto;
+}
+
+div.site-container > div.site-content > div.coh-container,
+div.site-container > div.site-content div.coh-accordion-tabs,
+div.site-container > div.site-content div.coh-sidebar {
+  display: none;
+}
+
+h1.coh-heading {
+  color: #000;
+  background-color: #fff;
+  padding-left: 0;
+}
+
+ol li::marker,
+ul li::before,
+.site-content .coh-main-view-content-column ul li:before {
+  color: #000;
+}
+
+div.site-footer {
+  background-color: #fff;
+  padding-top: 0;
+}
+
+div.site-footer span.coh-color-white {
+  color: #000;
+}
+
+div.site-footer div.coh-style-float-right {
+  content: url("../images/print-footer-logos.png");
+}
+div.site-footer div.coh-style-float-right img {
+  display: none;
+}
+
