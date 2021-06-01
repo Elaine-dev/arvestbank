@@ -183,8 +183,22 @@ function arvestbank_theme_preprocess_field__body(&$variables, $hook) {
 function arvestbank_theme_preprocess_field__field_print_button_text(&$variables, $hook) {
   // Wrap the print text in button and javascript window print.
   if (!empty($variables['items'][0]['content'])) {
-    $variables['items'][0]['content']['#prefix'] = Markup::create('<button onClick="window.print();">');
-    $variables['items'][0]['content']['#suffix'] = Markup::create('</button>');
+    if ($node = $variables['element']['#object']) {
+      if ($node->hasField('field_page_type')) {
+        $page_type = $node->get('field_page_type')->getValue();
+        // Check that the page type is "Disclosure".
+        if (!empty($page_type[0]['value'])
+          && $page_type[0]['value'] == 'disclosure')
+        {
+          $variables['items'][0]['content']['#prefix'] = Markup::create('<button onClick="window.print();">');
+          $variables['items'][0]['content']['#suffix'] = Markup::create('</button>');
+        }
+        else {
+          // If this is not a disclosure page, remove the print button text.
+          unset($variables['items'][0]);
+        }
+      }
+    }
   }
 }
 
