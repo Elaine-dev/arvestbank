@@ -244,8 +244,6 @@
 
 
 // ---------------  Login Forms  --------------- //
-
-// Top nav bar
 // Remaining styles in Site Studio Login Blocks custom style
 // calculateRem() is in base > _variables.scss
 
@@ -254,6 +252,7 @@
     // Vertically stretch and center styled select list
     .coh-block,
     .block,
+    .coh-style-webforms,
     form,
     .top-select {
         display: flex;
@@ -261,6 +260,7 @@
     }
 }
 
+// Target sidebar and top logins
 .coh-style-login-blocks {
 
     // Continue to hide selects when small screen menu is toggled
