@@ -718,3 +718,6 @@
 #toolbar-administration button:before{
   border: none;
 }
+.site-content .coh-main-view-content-column .pager__items li:before{
+  content: none;
+}

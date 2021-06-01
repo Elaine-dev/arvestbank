@@ -4,3 +4,7 @@
 #toolbar-administration button:before{
   border: none;
 }
+
+.pager__items li:before{
+  content: none;
+}
