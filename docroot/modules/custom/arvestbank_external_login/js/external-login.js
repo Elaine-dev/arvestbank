@@ -7,7 +7,7 @@ Drupal.behaviors.externalLogin = {
   attach: function (context, settings) {
 
     // Use "chosen" to make selects styleable sudo-selects.
-    jQuery('#edit-login-select-non-prod,#edit-login-select-non-prod--2,#edit-login-select,#edit-login-select--2').chosen({
+    jQuery('select[name="login_select_non_prod"],select[name="login_select"]').chosen({
       "disable_search": true,
       allow_single_deselect: true,
       width: "100%"
@@ -38,21 +38,23 @@ Drupal.behaviors.externalLogin = {
 
     // Unrequire sidebar login select on load
     // To be re-required on change.
-    jQuery('#block-homepageexternalloginblock #edit-login-select-non-prod')
-      .add('#block-homepageexternalloginblock #edit-login-select')
+    jQuery('.block-homepage-external-login-block #edit-login-select-non-prod')
+      .add('.block-homepage-external-login-block #edit-login-select-non-prod--2')
+      .add('.block-homepage-external-login-block #edit-login-select')
+      .add('.block-homepage-external-login-block #edit-login-select--2')
       .removeAttr('required');
 
     // Default sidebar form action non prod.
-    if (jQuery('#block-homepageexternalloginblock .active-sidebar-select-non-prod').length) {
-      jQuery('#block-homepageexternalloginblock form').attr(
+    if (jQuery('.block-homepage-external-login-block .active-sidebar-select-non-prod').length) {
+      jQuery('.block-homepage-external-login-block form').attr(
         'action',
         'https://new17test.arvest.com/personal/signon/logon/'
       );
     }
 
     // Default sidebar form action prod.
-    if (jQuery('#block-homepageexternalloginblock .active-sidebar-select-prod').length) {
-      jQuery('#block-homepageexternalloginblock form').attr(
+    if (jQuery('.block-homepage-external-login-block .active-sidebar-select-prod').length) {
+      jQuery('.block-homepage-external-login-block form').attr(
         'action',
         'https://www.arvest.com/personal/signon/logon/'
       );
@@ -63,29 +65,31 @@ Drupal.behaviors.externalLogin = {
     // For prod or non prod sidebar select
     // To hide/show online banking field container and re-require select
     // Doing this here to prevent hiding on load.
-    jQuery('#block-homepageexternalloginblock #edit-login-select-non-prod')
-      .add('#block-homepageexternalloginblock #edit-login-select')
+    jQuery('.block-homepage-external-login-block #edit-login-select-non-prod')
+      .add('.block-homepage-external-login-block #edit-login-select-non-prod--2')
+      .add('.block-homepage-external-login-block #edit-login-select')
+      .add('.block-homepage-external-login-block #edit-login-select--2')
       .change(function () {
-
-      // Remove empty option on change.
-      if (jQuery(this).find("option[value='']").length) {
-        jQuery(this).find("option[value='']").remove();
-        jQuery(this).trigger("chosen:updated");
-      }
 
       // Require select again.
       jQuery(this).attr('required','required');
 
       // If the online banking container should be shown.
       if (jQuery(this).val() == 'arvest_online_banking') {
-        jQuery('#edit-arvest-online-banking').show();
+        jQuery('.block-homepage-external-login-block #edit-arvest-online-banking')
+          .add('.block-homepage-external-login-block #edit-arvest-online-banking--2')
+          .show();
       }
       // If the online banking container should be hidden.
       else {
         // Hide container.
-        jQuery('#block-homepageexternalloginblock #edit-arvest-online-banking').hide();
+        jQuery('.block-homepage-external-login-block #edit-arvest-online-banking')
+          .add('.block-homepage-external-login-block #edit-arvest-online-banking--2')
+          .hide();
         // Set value of contained fields to null.
-        jQuery('#block-homepageexternalloginblock #edit-arvest-online-banking input').each(function () {
+        jQuery('.block-homepage-external-login-block #edit-arvest-online-banking input')
+          .add('.block-homepage-external-login-block #edit-arvest-online-banking--2 input')
+          .each(function () {
           jQuery(this).val('');
         });
       }
@@ -190,5 +194,3 @@ Drupal.behaviors.externalLogin = {
 
   }
 };
-
-
