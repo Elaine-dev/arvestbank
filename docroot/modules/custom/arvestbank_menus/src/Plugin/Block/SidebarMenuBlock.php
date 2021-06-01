@@ -36,7 +36,7 @@ class SidebarMenuBlock extends BlockBase {
   public function build() {
 
     // Instantiate render array to return.
-    $renderArray = [];
+    $renderArray = $this->getBaseRenderArray();
 
     // Get current node, term, or view.
     $node = \Drupal::routeMatch()->getParameter('node');
@@ -70,9 +70,6 @@ class SidebarMenuBlock extends BlockBase {
 
         // If we have a sidebar menu block for the canonical menu.
         if (isset(self::MENU_SIDEBAR_BLOCKS[$canonicalMenuName])) {
-
-          // Get base render array for this block.
-          $renderArray = $this->getBaseRenderArray($canonicalMenuLink);
 
           // Get menu block.
           $menuBlockId = self::MENU_SIDEBAR_BLOCKS[$canonicalMenuName];
@@ -129,19 +126,31 @@ class SidebarMenuBlock extends BlockBase {
   /**
    * Get the base render array for this block.
    *
-   * @param \Drupal\menu_link_content\Entity\MenuLinkContent $menuLink
-   *   The canonical menu link for this page.
-   *
    * @return array
    *   The default wrapper for the block render array.
    */
-  private function getBaseRenderArray(MenuLinkContent $menuLink) {
+  private function getBaseRenderArray() {
 
     // Start render array with a container.
     return [
       '#type'       => 'container',
       '#attributes' => [
         'class' => ['sidebar-menu'],
+      ],
+      '#cache' => [
+        'tags' => [
+          'config:system.menu.top-menu',
+          'config:system.menu.main',
+          'config:system.menu.footer',
+          'config:system.menu.education-center-menu',
+        ],
+        'contexts' => [
+          'url.path',
+          'route.menu_active_trails:top-menu',
+          'route.menu_active_trails:main',
+          'route.menu_active_trails:footer',
+          'route.menu_active_trails:education-center-menu',
+        ],
       ],
     ];
 

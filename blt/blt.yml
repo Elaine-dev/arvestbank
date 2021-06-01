@@ -39,6 +39,6 @@ modules:
 command-hooks:
   frontend-reqs:
     dir: '${repo.root}'
-    command: ./scripts/frontend-setup.sh
+    command: ./scripts/frontend-setup.sh; drush cr
 cm:
   allow-overrides: true
