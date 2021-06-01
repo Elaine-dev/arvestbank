@@ -7,6 +7,7 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\block\Entity\Block;
+use Drupal\Core\Render\Markup;
 
 /**
  * Implements hook_form_alter().
@@ -175,4 +176,16 @@ function arvestbank_theme_preprocess_field__body(&$variables, $hook) {
   }
 
 }
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function arvestbank_theme_preprocess_field__field_print_button_text(&$variables, $hook) {
+  // Wrap the print text in button and javascript window print.
+  if (!empty($variables['items'][0]['content'])) {
+    $variables['items'][0]['content']['#prefix'] = Markup::create('<button onClick="window.print();">');
+    $variables['items'][0]['content']['#suffix'] = Markup::create('</button>');
+  }
+}
+
 

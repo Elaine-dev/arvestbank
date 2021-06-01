@@ -1,7 +1,7 @@
 #toolbar-administration,
 div.site-container > div.site-header,
 div.footer-menu,
-#block-disclosureblock {
+.field--name-field-print-button-text {
   display: none;
 }
 
