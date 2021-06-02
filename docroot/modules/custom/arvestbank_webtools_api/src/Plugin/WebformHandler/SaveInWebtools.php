@@ -10,6 +10,7 @@ use Drupal\Core\Form\FormStateInterface;
 use GuzzleHttp\RequestOptions;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Spatie\ArrayToXml\ArrayToXml;
+use Drupal\taxonomy\Entity\Term;
 
 /**
  * Create a new node entity from a webform submission.
@@ -107,7 +108,7 @@ class SaveInWebtools extends WebformHandlerBase {
   private function buildFormDataXml(string $formName, FormStateInterface $form_state) {
 
     // Get submitted form values.
-    $submittedValues = $form_state->cleanValues()->getValues();
+    $submittedValues = $this->getSubmittedValues($formName, $form_state);
 
     // Get form storage.
     $storage = $form_state->getStorage();
@@ -130,7 +131,7 @@ class SaveInWebtools extends WebformHandlerBase {
         'meta' => [
           [
             'name'  => 'formName',
-            'value' => $formName,
+            'value' => $this->formNameAlter($formName, $submittedValues),
           ],
           [
             'name'  => 'datetime',
@@ -158,7 +159,7 @@ class SaveInWebtools extends WebformHandlerBase {
 
     // Track if we've settled on the name we'll send.
     $nameFieldAdded = FALSE;
-    // Get exploded name parts just in case
+    // Get exploded name parts just in case.
     $explodedNameParts = [
       'first_name_field_machine_name' => explode('.',$this->configuration['first_name_field_machine_name']),
       'last_name_field_machine_name' => explode('.',$this->configuration['last_name_field_machine_name']),
@@ -327,6 +328,75 @@ class SaveInWebtools extends WebformHandlerBase {
   }
 
   /**
+   * Gets submitted values and titles from reference fields.
+   *
+   * Currently only webform_term_select is supported as that's all we use.
+   *
+   * Others are entity_autocomplete, webform_entity_checkboxes,
+   * webform_entity_radios, webform_entity_select, webform_term_checkboxes.
+   *
+   * @param string $formName
+   *   The webtools api form name.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The form state containing submitted values.
+   *
+   * @return array
+   *   The submitted values.
+   */
+  private function getSubmittedValues(string $formName, FormStateInterface $form_state) {
+
+    // Get submitted form values.
+    $submittedValues = $form_state->cleanValues()->getValues();
+
+    // Get form fields.
+    $formFields = $form_state->getCompleteForm()['elements'];
+
+    // Loop over form fields looking for reference fields.
+    foreach ($formFields as $formFieldKey => $formFieldInfo) {
+
+      // If we found a term reference field we have a value set for.
+      if (
+        isset($formFieldInfo['#webform_plugin_id'])
+        && $formFieldInfo['#webform_plugin_id'] == 'webform_term_select'
+        && isset($submittedValues[$formFieldKey])
+        && is_numeric($submittedValues[$formFieldKey])
+      ) {
+        // Get term name.
+        $termName = Term::load($submittedValues[$formFieldKey])->getName();
+        // Replace tid in field value with term name.
+        $submittedValues[$formFieldKey] = $termName;
+      }
+
+    }
+
+    return $submittedValues;
+  }
+
+  /**
+   * Allows altering of a webtools form name allowing for dynamic values.
+   *
+   * @param string $formName
+   *   The form name.
+   * @param array $submittedValues
+   *   The submitted values.
+   *
+   * @return string
+   *   Returns the altered form name.
+   */
+  private function formNameAlter(string $formName, array $submittedValues) {
+
+    // If this is the small business connect form.
+    if ($formName == 'smbus_connect') {
+      $branchLocation = $submittedValues['branch_location'];
+    }
+    // For all other forms return form name unaltered.
+    else {
+      return $formName;
+    }
+
+  }
+
+  /**
    * {@inheritdoc}
    */
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
@@ -373,6 +443,7 @@ class SaveInWebtools extends WebformHandlerBase {
     ];
 
     return $form;
+
   }
 
   /**
