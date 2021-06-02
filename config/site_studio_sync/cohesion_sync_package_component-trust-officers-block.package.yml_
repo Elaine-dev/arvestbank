@@ -8,7 +8,7 @@
     dependencies: {  }
     id: pack_trust_officers_block
     label: 'Component Trust Officers block'
-    description: 'Contains the trust officers block component to be placed in a node to render the trust officers view. Last Updated: Allie Jones 05/25/2021'
+    description: 'Contains the trust officers block component to be placed in a node to render the trust officers view. Last Updated: Allie Jones 06/02/2021'
     excluded_entity_types: '[]'
     settings: '{"23a90036-1b85-4511-a2f8-d971077258ba":{"type":"cohesion_component","items":{"23a90036-1b85-4511-a2f8-d971077258ba":{"type":"cohesion_component"}},"checked":true}}'
 -
@@ -26,7 +26,7 @@
     locked: false
     modified: true
     selectable: true
-    category: cpt_cat_general_components
+    category: cpt_cat_drupal_blocks
     preview_image: ''
     has_quick_edit: true
     entity_type_access: {  }

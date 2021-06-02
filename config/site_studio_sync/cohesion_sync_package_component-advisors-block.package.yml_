@@ -8,7 +8,7 @@
     dependencies: {  }
     id: pack_advisors_block_component
     label: 'Component Advisors Block'
-    description: 'Contains the advisors block component to be placed in a node to render the advisors view. Last Updated: Allie Jones 05/25/2021'
+    description: 'Contains the advisors block component to be placed in a node to render the advisors view. Last Updated: Allie Jones 06/02/2021'
     excluded_entity_types: '[]'
     settings: '{"cb4fe448-4171-4931-b94f-b2d52e1aa598":{"type":"cohesion_component","items":{"cb4fe448-4171-4931-b94f-b2d52e1aa598":{"type":"cohesion_component"}},"checked":true}}'
 -
@@ -26,7 +26,7 @@
     locked: false
     modified: true
     selectable: true
-    category: cpt_cat_general_components
+    category: cpt_cat_drupal_blocks
     preview_image: ''
     has_quick_edit: true
     entity_type_access: {  }
