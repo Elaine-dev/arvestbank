@@ -58,19 +58,19 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 0
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_account_disclosure_informa:
     type: text_default
-    weight: 3
+    weight: 4
     region: content
     label: above
     settings: {  }
     third_party_settings: {  }
   field_button_links:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       trim_length: null
@@ -85,7 +85,7 @@ content:
     region: content
   field_featured_image:
     type: entity_reference_entity_view
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       view_mode: default
@@ -93,7 +93,7 @@ content:
     third_party_settings: {  }
     region: content
   field_layout_canvas:
-    weight: 4
+    weight: 5
     label: hidden
     settings:
       view_mode: default
@@ -101,15 +101,23 @@ content:
     third_party_settings: {  }
     type: cohesion_entity_reference_revisions_entity_view
     region: content
+  field_print_button_text:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   field_second_callout_label:
-    weight: 5
+    weight: 6
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_second_callout_link:
-    weight: 6
+    weight: 7
     label: above
     settings:
       trim_length: 80
@@ -128,7 +136,6 @@ hidden:
   field_field_callout_phone_number: true
   field_meta_tags: true
   field_page_type: true
-  field_print_button_text: true
   field_rendered_node: true
   field_second_callout: true
   field_yoast_seo: true

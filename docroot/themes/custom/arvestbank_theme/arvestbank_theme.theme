@@ -7,6 +7,7 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\block\Entity\Block;
+use Drupal\Core\Render\Markup;
 
 /**
  * Implements hook_form_alter().
@@ -175,4 +176,42 @@ function arvestbank_theme_preprocess_field__body(&$variables, $hook) {
   }
 
 }
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function arvestbank_theme_preprocess_field__field_print_button_text(&$variables, $hook) {
+
+  // Initialize a variable to return something at all be pessimistic.
+  $show_print = FALSE;
+
+  // Wrap the print text in button and javascript window print.
+  if (!empty($variables['items'][0]['content'])) {
+    if ($node = $variables['element']['#object']) {
+      if ($node->hasField('field_page_type')) {
+        $page_type = $node->get('field_page_type')->getValue();
+        // Check that the page type is "Disclosure".
+        if (!empty($page_type[0]['value'])
+          && $page_type[0]['value'] == 'disclosure')
+        {
+          $show_print = TRUE;
+        }
+      }
+      else if ($node->getType() === 'calculators') {
+        $show_print = TRUE;
+      }
+    }
+  }
+
+  // Check our show print, and button wrap if TRUE or unset.
+  if ($show_print) {
+    $variables['items'][0]['content']['#prefix'] = Markup::create('<button onClick="window.print();">');
+    $variables['items'][0]['content']['#suffix'] = Markup::create('</button>');
+  }
+  else {
+    unset($variables['items'][0]);
+  }
+
+}
+
 

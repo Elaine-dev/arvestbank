@@ -1,18 +1,18 @@
-uuid: d393564c-a0b4-4699-a330-9fd328c0df9f
+uuid: efb3ac99-a17c-4357-aee3-9e8d6a04d203
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_print_button_text
-    - node.type.page
-id: node.page.field_print_button_text
+    - node.type.calculators
+id: node.calculators.field_print_button_text
 field_name: field_print_button_text
 entity_type: node
-bundle: page
+bundle: calculators
 label: 'Print Button Text'
-description: ''
+description: 'Displays a button with this text that will click to open the print page dialog.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
