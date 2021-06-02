@@ -387,7 +387,20 @@ class SaveInWebtools extends WebformHandlerBase {
 
     // If this is the small business connect form.
     if ($formName == 'smbus_connect') {
-      $branchLocation = $submittedValues['branch_location'];
+      // Look for state abbreviation in branch location option title.
+      preg_match_all('/^([^ ]*) -/', $submittedValues['branch_location'], $matches);
+      // If we found a state abbreviation.
+      if (count($matches) == 2 && isset($matches[1][0])) {
+        // Return the form name.
+        return 'smbus_connect_' . strtolower($matches[1][0]);
+      }
+      // If the state abbreviation is malformed.
+      else {
+        // Log error.
+        \Drupal::logger('arvestbank_webtools_api')->error('Branch location name found to be non-standard in form submission, defaulting to Arkansas (smbus_connect_ar).  Given non-standard branch location name: ' . $submittedValues['branch_location']);
+        // Default to Arkansas.
+        return 'smbus_connect_ar';
+      }
     }
     // For all other forms return form name unaltered.
     else {
