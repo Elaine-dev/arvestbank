@@ -45,8 +45,8 @@ third_party_settings:
         - field_field_callout_phone_number
         - field_second_callout
         - group_second_call_out_button
-      parent_name: ''
-      weight: 6
+      parent_name: group_basic_page_fields
+      weight: 4
       format_type: details
       region: content
       format_settings:
@@ -61,7 +61,7 @@ third_party_settings:
         - field_second_callout_label
         - field_second_callout_link
       parent_name: group_cta
-      weight: 10
+      weight: 9
       format_type: details
       region: content
       format_settings:
@@ -71,6 +71,28 @@ third_party_settings:
         open: true
         required_fields: false
       label: 'Second Call out Button'
+    group_basic_page_fields:
+      children:
+        - field_featured_image
+        - group_cta
+        - field_button_links
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        effect: none
+        speed: fast
+        attributes: ''
+      label: 'Basic Page Fields'
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -78,7 +100,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 4
+    weight: 5
     settings:
       rows: 9
       summary_rows: 3
@@ -88,12 +110,12 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   field_account_disclosure_informa:
-    weight: 7
+    weight: 8
     settings:
       rows: 5
       placeholder: ''
@@ -126,14 +148,14 @@ content:
     type: string_textfield
     region: content
   field_disclosure:
-    weight: 30
+    weight: 21
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_featured_image:
     type: entity_browser_entity_reference
-    weight: 2
+    weight: 3
     settings:
       entity_browser: dam_image_entity_browser
       field_widget_display: label
@@ -146,7 +168,7 @@ content:
     third_party_settings: {  }
     region: content
   field_field_callout_phone_number:
-    weight: 8
+    weight: 7
     settings:
       form_mode: default
       label_singular: ''
@@ -164,13 +186,13 @@ content:
     type: inline_entity_form_complex
     region: content
   field_layout_canvas:
-    weight: 8
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: cohesion_layout_builder_widget
     region: content
   field_meta_tags:
-    weight: 9
+    weight: 10
     settings:
       sidebar: true
     third_party_settings: {  }
@@ -183,7 +205,7 @@ content:
     type: options_buttons
     region: content
   field_print_button_text:
-    weight: 3
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -209,7 +231,7 @@ content:
     type: string_textfield
     region: content
   field_second_callout:
-    weight: 9
+    weight: 8
     settings: {  }
     third_party_settings:
       conditional_fields: {  }
@@ -232,19 +254,19 @@ content:
     type: link_default
     region: content
   field_yoast_seo:
-    weight: 19
+    weight: 20
     settings:
       body: body
     third_party_settings: {  }
     type: yoast_seo_widget
     region: content
-  group_cta:
+  group_basic_page_fields:
     third_party_settings:
       conditional_fields:
-        cd861df8-fab3-4f4b-99a0-2820974c78c7:
+        017d7110-3c2e-4654-9806-46eec90596b7:
           dependee: field_page_type
           settings:
-            state: '!visible'
+            state: visible
             condition: value
             grouping: AND
             values_set: 1
@@ -252,16 +274,18 @@ content:
             values: {  }
             value_form:
               -
-                value: disclosure
+                value: basic_page
             effect: show
             effect_options: {  }
             selector: ''
-            inheritance:
-              apply_to_parent: '0'
-              recurse: '0'
-              propagate: '0'
           entity_type: node
           bundle: page
+    weight: 30
+    settings: {  }
+    region: content
+  group_cta:
+    third_party_settings:
+      conditional_fields: {  }
     weight: 26
     settings: {  }
     region: content
@@ -294,24 +318,24 @@ content:
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 17
+    weight: 18
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 13
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 14
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 12
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -319,7 +343,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 18
+    weight: 19
     region: content
     third_party_settings: {  }
   title:
@@ -332,7 +356,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 10
+    weight: 11
     settings:
       match_operator: CONTAINS
       size: 60
@@ -342,12 +366,12 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 15
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 16
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
