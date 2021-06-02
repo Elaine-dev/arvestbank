@@ -23,8 +23,10 @@ extlink_font_awesome_classes:
   mailto: 'fa fa-envelope-o'
 extlink_icon_placement: '0'
 whitelisted_domains:
+  - '([a-zA-Z]*\.arvest\.com)'
+  - '([a-zA-Z]*\.arvestbank\.com)'
   - arvestmoneyskills.com
-  - '*.arvest.com'
-  - '*.arvestbank.com'
+  - www.arvestmoneyskills.com
+  - www.arvestcentralmortgage.com
 _core:
   default_config_hash: vOaSYBgSyTzn8_p0MSY8B-ygp9V0Nc6qnX0vy9KYGeo
