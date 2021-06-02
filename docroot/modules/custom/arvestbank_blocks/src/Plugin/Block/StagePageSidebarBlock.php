@@ -118,8 +118,8 @@ class StagePageSidebarBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function getCacheMaxAge(): int {
-    // Set cache to 2 hours (returns seconds).
-    return 60 * 60 * 2;
+    // Set to not cache.
+    return 0;
   }
 
 }
