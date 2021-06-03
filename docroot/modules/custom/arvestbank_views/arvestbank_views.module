@@ -21,7 +21,7 @@ function arvestbank_views_form_views_exposed_form_alter(&$form, FormStateInterfa
     'views-exposed-form-advisors-block-1',
     'views-exposed-form-mortgage-loan-officer-block-mortgage-block',
     'views-exposed-form-trust-and-estate-block-block-3',
-    'views-exposed-form-specialty-debit-cards-page-1',
+    'views-exposed-form-specialty-debit-cards-specialty-debit-card-block',
   ];
   if (!in_array($form['#id'], $altered_forms)) {
     return FALSE;
@@ -46,12 +46,11 @@ function arvestbank_views_form_views_exposed_form_alter(&$form, FormStateInterfa
   }
 
   // Special updates to the Specialty Debit Cards View (early return).
-  if ($form['#id'] === 'views-exposed-form-specialty-debit-cards-page-1') {
+  if ($form['#id'] === 'views-exposed-form-specialty-debit-cards-specialty-debit-card-block') {
     module_load_include('inc', 'arvestbank_views', 'inc/arvestbank_views.debit_cards_filter');
     $form = arvestbank_views_debit_cards_filter($form);
     return $form;
   }
-
 
   $term = \Drupal::entityTypeManager()
     ->getStorage('taxonomy_term')
