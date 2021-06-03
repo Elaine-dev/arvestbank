@@ -138,7 +138,7 @@ settings:
   purge: none
   purge_days: null
   results_disabled: true
-  results_disabled_ignore: false
+  results_disabled_ignore: true
   results_customize: false
   token_view: false
   token_update: false
