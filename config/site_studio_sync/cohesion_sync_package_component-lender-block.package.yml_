@@ -8,7 +8,7 @@
     dependencies: {  }
     id: pack_lender_block_component
     label: 'Component Lender Block'
-    description: 'Contains the lenders block component to be placed in a node to render the lenders view. Last Updated: Allie Jones 05/25/2021'
+    description: 'Contains the lenders block component to be placed in a node to render the lenders view. Last Updated: Allie Jones 06/02/2021'
     excluded_entity_types: '[]'
     settings: '{"b96973ae-c8a4-42f0-9b3b-cdb58ebdc199":{"type":"cohesion_component","items":{"b96973ae-c8a4-42f0-9b3b-cdb58ebdc199":{"type":"cohesion_component"}},"checked":true}}'
 -
@@ -26,7 +26,7 @@
     locked: false
     modified: true
     selectable: true
-    category: cpt_cat_general_components
+    category: cpt_cat_drupal_blocks
     preview_image: ''
     has_quick_edit: true
     entity_type_access: {  }

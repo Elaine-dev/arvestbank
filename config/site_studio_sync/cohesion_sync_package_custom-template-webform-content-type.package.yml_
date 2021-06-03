@@ -1,0 +1,34 @@
+
+-
+  type: cohesion_sync_package
+  export:
+    uuid: a299b75f-e97a-4d39-8295-d422b56729d6
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: pack_custom_template_webform_con
+    label: 'Custom Template Webform Content Type'
+    description: 'A Custom Template for the Webform content type. Last Updated: Allie Jones 06/02/2021'
+    excluded_entity_types: '[]'
+    settings: '{"7823ec5d-30bc-4c88-88dc-4c2d586d1ece":{"type":"cohesion_content_templates","items":{"7823ec5d-30bc-4c88-88dc-4c2d586d1ece":{"type":"cohesion_content_templates"}},"checked":true}}'
+-
+  type: cohesion_content_templates
+  export:
+    uuid: 7823ec5d-30bc-4c88-88dc-4c2d586d1ece
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: node_webform_full
+    label: 'Full content (Node, Webform)'
+    json_values: '{"canvas":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"d2f8112a-0599-4e64-b78f-d2a3f38d8915","parentUid":"root","isContainer":true,"children":[{"uid":"cpt_main_content_and_sidebar","type":"component","title":"Main content and sidebar","enabled":true,"category":"category-5","componentId":"cpt_main_content_and_sidebar","componentType":"container","uuid":"ca901f81-88c6-4a25-be9b-22d02fd2fb79","parentUid":"container","isContainer":1,"status":{"collapsed":false},"children":[{"type":"container","uid":"component-drop-zone","mimicParent":true,"parentUid":"cpt_main_content_and_sidebar","title":"Component drop zone","selected":false,"status":{"collapsed":false,"disabled":false},"uuid":"111ea445-21cd-498e-a799-6f50fc84806a","dropzoneId":"59cc97b1-180f-4bcd-b63c-d0a988391fb3","isContainer":true,"children":[{"type":"container","uid":"heading","title":"Heading","status":{"collapsed":true},"uuid":"5df693ef-88c7-41bd-9796-874b54b17e1e","parentUid":"component-drop-zone","isContainer":true,"children":[]},{"type":"item","uid":"drupal-content","title":"Content","status":{"collapsed":true},"uuid":"acaf46cc-b908-48fc-8790-b607bc0f3a03","parentUid":"component-drop-zone","isContainer":false,"children":[]}]}]}]}],"mapper":{"d2f8112a-0599-4e64-b78f-d2a3f38d8915":{"settings":{"formDefinition":[{"formKey":"container-settings","children":[{"formKey":"container-width","breakpoints":[],"activeFields":[{"name":"width","active":true}]},{"formKey":"common-link-animation","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"linkAnimation","active":true},{"name":"animationType","active":true},{"name":"animationScope","active":true},{"name":"animationParent","active":true},{"name":"animationTarget","active":true},{"name":"animationScale","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDirection","active":true},{"name":"animationDistance","active":true},{"name":"animationPieces","active":true},{"name":"animationOrigin","active":true},{"name":"animationFoldHeight","active":true},{"name":"animationHorizontalFirst","active":true},{"name":"animationIterations","active":true},{"name":"animationEasing","active":true},{"name":"animationDuration","active":true}]},{"formKey":"common-link-modifier","breakpoints":[],"activeFields":[{"name":"modifier","active":true},{"name":"modifierType","active":true},{"name":"interactionScope","active":true},{"name":"interactionParent","active":true},{"name":"interactionTarget","active":true},{"name":"modifierName","active":true}]},{"formKey":"container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]},"styles":{"formDefinition":[],"selectorType":"topLevel","items":[],"form":null},"markup":{"formDefinition":[{"formKey":"tab-markup-classes-and-ids","children":[{"formKey":"tab-markup-add-classes","breakpoints":[],"activeFields":[{"name":"classes","active":true}]}]}],"title":"Markup","selectorType":"topLevel","form":null,"items":[]}},"acaf46cc-b908-48fc-8790-b607bc0f3a03":{},"5df693ef-88c7-41bd-9796-874b54b17e1e":{}},"model":{"d2f8112a-0599-4e64-b78f-d2a3f38d8915":{"settings":{"title":"Container","width":"fluid","customStyle":[{"customStyle":""}],"settings":{"width":"fluid","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"container"}},"markup":{"classes":"coh-style-webforms"}},"ca901f81-88c6-4a25-be9b-22d02fd2fb79":{},"111ea445-21cd-498e-a799-6f50fc84806a":{"settings":{"title":"Add main content","dropzoneHideSelector":""}},"5df693ef-88c7-41bd-9796-874b54b17e1e":{"settings":{"title":"Heading","element":"h1","customStyle":[{"customStyle":""}],"settings":{"element":"h1","customStyle":[{"customStyle":""}]},"content":"[current-page:title]"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"heading"}}}},"previewModel":{"d2f8112a-0599-4e64-b78f-d2a3f38d8915":{},"5df693ef-88c7-41bd-9796-874b54b17e1e":{}},"variableFields":{"d2f8112a-0599-4e64-b78f-d2a3f38d8915":[],"5df693ef-88c7-41bd-9796-874b54b17e1e":["settings.content"]},"meta":{"fieldHistory":[]}}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    modified: true
+    selectable: true
+    custom: false
+    twig_template: node--cohesion--node-webform-full
+    default: true
+    entity_type: node
+    bundle: webform
+    view_mode: full
+    master_template: __none__

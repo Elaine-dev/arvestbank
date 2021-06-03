@@ -39,10 +39,10 @@
   .dx8-tabs li {
     display: block;
     float: left;
-    
+
     vertical-align: bottom;
     margin: 0 1px 0 0;
-    
+
   }
   [dir="rtl"] .dx8-tabs li {
     margin: 0 0 0 1px;
@@ -306,7 +306,7 @@
 
 #search-tab .form-item-search-tab {
   flex: 1 1 auto;
-  
+
 }
 
 #search-tab .form-item-search-tab label {
@@ -429,7 +429,7 @@
 }
 
 .ui-menu .ui-menu-item-wrapper {
-  
+
   padding: 4px 18px;
   line-height: normal;
 }
@@ -716,10 +716,25 @@
   font-size: 16px;
 }
 
+
+/* Site Studio Overrides */
+
+/* Red menu links in the main navigation */
+.main-menu-wrapper .red{
+  color: #e60000;
+}
+
+/* Remove button border from admin toolbar */
 #toolbar-administration button:before {
   border: none;
 }
 
-.pager__items li:before {
+/* remove list items from content area */
+.pager__items li:before, .chosen-results ul li:before, .site-content .chosen-container .chosen-results li:before{
   content: none;
+}
+
+/* flex style for webforms */
+.coh-style-flex-50 .webform-flex{
+  flex: 0 1 50%;
 }
