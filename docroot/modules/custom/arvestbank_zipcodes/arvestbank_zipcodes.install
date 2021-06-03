@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * Create new database table to hold zip mapping.
+ */
+function arvestbank_zipcodes_update_8001() {
+
+  $database = \Drupal::database();
+  $schema = $database->schema();
+  $table_name = 'zipcodes';
+
+  $table_schema = [
+    'description' => 'Use for mapping zip codes to latitude/longitude',
+    'fields' => [
+      'zip' => [
+        'description' => 'Zip Code.',
+        'type' => 'varchar',
+        'length' => 5,
+        'not null' => TRUE,
+      ],
+      'lat' => [
+        'description' => 'Latitude',
+        'type' => 'float',
+        'not null' => TRUE,
+        'precision' => 5,
+        'scale' => 2,
+      ],
+      'lng' => [
+        'description' => 'Longitude',
+        'type' => 'float',
+        'not null' => TRUE,
+        'precision' => 5,
+        'scale' => 2,
+      ],
+    ],
+    'primary key' => ['zip'],
+  ];
+
+  $schema->createTable($table_name, $table_schema);
+
+}
+
+/**
+ * Populates the zipcodes table in the database.
+ */
+function arvestbank_zipcodes_update_8002() {
+  \Drupal::service('arvestbank_zipcodes.geolocate')->zipInit();
+}
+

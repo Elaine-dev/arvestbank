@@ -155,7 +155,7 @@ function arvestbank_views_form_views_exposed_form_alter(&$form, FormStateInterfa
 function arvestbank_views_views_pre_view(\Drupal\views\ViewExecutable $view, $display_id, array &$args) {
 
   // Customizations for the Specialty Debit Cards.
-  if ($view->id() == 'specialty_debit_cards' && $display_id == 'page_1') {
+  if ($view->id() == 'specialty_debit_cards' && $display_id == 'specialty_debit_card_block') {
 
     // Filters by category delta=0.  If searching by category remove this filter.
     if (!empty($view->getExposedInput()['field_debit_card_category_target_id'])) {
