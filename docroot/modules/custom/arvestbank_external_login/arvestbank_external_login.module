@@ -71,7 +71,7 @@ function _arvestbank_external_login_login_form_alter(array &$form, string $form_
       'remember_my_computer' => 'remember',
     ],
     'arvest_online_banking' => [
-      'arvest_online_banking_username' => 'j_username',
+      'arvest_online_banking_username' => 'username',
     ],
   ];
 
