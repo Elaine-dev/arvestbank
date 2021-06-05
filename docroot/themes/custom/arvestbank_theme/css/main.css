@@ -39,10 +39,10 @@
   .dx8-tabs li {
     display: block;
     float: left;
-    
+
     vertical-align: bottom;
     margin: 0 1px 0 0;
-    
+
   }
   [dir="rtl"] .dx8-tabs li {
     margin: 0 0 0 1px;
@@ -306,7 +306,7 @@
 
 #search-tab .form-item-search-tab {
   flex: 1 1 auto;
-  
+
 }
 
 #search-tab .form-item-search-tab label {
@@ -429,7 +429,7 @@
 }
 
 .ui-menu .ui-menu-item-wrapper {
-  
+
   padding: 4px 18px;
   line-height: normal;
 }
@@ -733,8 +733,8 @@
   border: none;
 }
 
-
-.pager__items li:before, .chosen-results ul li:before, .site-content .chosen-container .chosen-results li:before {
+/* remove list items from content area */
+body .site-content .pager__items li:before, .chosen-results ul li:before, .site-content .chosen-container .chosen-results li:before, body .site-content .webform-progress-tracker li:before{
   content: none;
 }
 

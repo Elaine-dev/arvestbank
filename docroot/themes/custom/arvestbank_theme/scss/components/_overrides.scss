@@ -14,7 +14,7 @@
 }
 
 /* remove list items from content area */
-.pager__items li:before, .chosen-results ul li:before, .site-content .chosen-container .chosen-results li:before{
+body .site-content .pager__items li:before, .chosen-results ul li:before, .site-content .chosen-container .chosen-results li:before, body .site-content .webform-progress-tracker li:before{
   content: none;
 }
 
