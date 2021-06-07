@@ -716,15 +716,19 @@
   font-size: 16px;
 }
 
+.coh-campaign-card {
+  background: url(../images/bucket-med-ft.png) no-repeat scroll left bottom #fff;
+  background-size: 100% 10px;
+  padding-bottom: 10px;
+}
 
-/* Site Studio Overrides */
 
-/* Red menu links in the main navigation */
-.main-menu-wrapper .red{
+
+.main-menu-wrapper .red {
   color: #e60000;
 }
 
-/* Remove button border from admin toolbar */
+
 #toolbar-administration button:before {
   border: none;
 }
@@ -738,6 +742,7 @@ body .site-content .pager__items li:before, .chosen-results ul li:before, .site-
 .webform-submission-external-login-menu-form .coh-style-triangle.webform-submit-input:before{
   content: none;
 }
+
 /* flex style for webforms */
 .coh-style-flex-50 .webform-flex{
   flex: 0 1 50%;
