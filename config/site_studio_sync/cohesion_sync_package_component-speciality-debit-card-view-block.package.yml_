@@ -1,0 +1,35 @@
+
+-
+  type: cohesion_sync_package
+  export:
+    uuid: 2289eaa9-321e-4ae0-822f-fed88ecd4775
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: pack_component_speciality_debit_
+    label: 'Component Speciality Debit Card View Block'
+    description: 'A component for the Speciality Debit Card View Block. Last Updated: Allie Jones 06/02/2021'
+    excluded_entity_types: '[]'
+    settings: '{"a5e3900a-6e4f-4374-b1da-b4ab15983ce5":{"type":"cohesion_component","items":{"a5e3900a-6e4f-4374-b1da-b4ab15983ce5":{"type":"cohesion_component"}},"checked":true}}'
+-
+  type: cohesion_component
+  export:
+    uuid: a5e3900a-6e4f-4374-b1da-b4ab15983ce5
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: cpt_specialty_debit_cards_view_b
+    label: 'Specialty Debit Cards View Block'
+    json_values: '{"canvas":[{"type":"item","uid":"drupal-block","title":"Block","status":{"collapsed":true},"uuid":"fc20186c-e8fa-418b-8d0e-7f463f28929a","parentUid":"root","isContainer":false,"children":[]}],"componentForm":[{"type":"form-container","uid":"form-tab-item","title":"Tab item","status":{"collapsed":false},"options":{"formBuilder":true},"uuid":"c1640d4c-5fa1-4f1c-b494-0a95eca023fe","parentUid":"root","isContainer":true,"children":[{"type":"form-container","uid":"form-section","title":"Field group","status":{"collapsed":false},"options":{"formBuilder":true},"uuid":"c2c89162-f6f5-4b50-b834-0c713d1cbb83","parentUid":"form-tab-item","isContainer":true,"children":[{"type":"form-help","uid":"form-helptext","title":"Help text","status":{"collapsed":false},"uuid":"2ede7c64-bdc0-43d2-b141-66c02d4e7100","parentUid":"form-section","isContainer":false,"children":[]}]}]}],"mapper":{"fc20186c-e8fa-418b-8d0e-7f463f28929a":{}},"model":{"fc20186c-e8fa-418b-8d0e-7f463f28929a":{"settings":{"title":"Speciality Debit Cards","customStyle":[{"customStyle":""}],"settings":{"theme":"all","customStyle":[{"customStyle":""}]},"theme":"arvestbank_theme","block":"views_block__specialty_debit_cards_specialty_debit_card_block"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"block"}}},"c1640d4c-5fa1-4f1c-b494-0a95eca023fe":{"settings":{"title":"Help","type":"cohTabItem","breakpointIcon":""},"contextVisibility":{"condition":"ALL"}},"c2c89162-f6f5-4b50-b834-0c713d1cbb83":{"settings":{"title":"Help and information","type":"cohSection","hideRowHeading":0,"removePadding":0,"columnCount":"coh-component-field-group-1-col","breakpointIcon":"","breakpoints":false,"propertiesMenu":false,"disableScrollbar":true,"disableEllipsisMenu":true,"isOpen":true},"contextVisibility":{"condition":"ALL"}},"2ede7c64-bdc0-43d2-b141-66c02d4e7100":{"settings":{"title":"Help text","type":"cohHelpText","options":{"showClose":false,"helpType":"coh-help-text--help","helpText":"This component on the speciality debit card landing page. \n\nThis component displays the contents of the speciality debit card view block"}},"contextVisibility":{"condition":"ALL"}}},"previewModel":{"fc20186c-e8fa-418b-8d0e-7f463f28929a":{},"c1640d4c-5fa1-4f1c-b494-0a95eca023fe":{},"c2c89162-f6f5-4b50-b834-0c713d1cbb83":{},"2ede7c64-bdc0-43d2-b141-66c02d4e7100":{}},"variableFields":{"fc20186c-e8fa-418b-8d0e-7f463f28929a":[],"c1640d4c-5fa1-4f1c-b494-0a95eca023fe":[],"c2c89162-f6f5-4b50-b834-0c713d1cbb83":[],"2ede7c64-bdc0-43d2-b141-66c02d4e7100":[]},"meta":{"fieldHistory":[]}}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    category: cpt_cat_drupal_blocks
+    preview_image: ''
+    has_quick_edit: true
+    entity_type_access: {  }
+    bundle_access: {  }
+    twig_template: component--cohesion-cpt-specialty-debit-cards-view-b
+    weight: 0

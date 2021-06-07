@@ -10,6 +10,7 @@ use Drupal\Core\Form\FormStateInterface;
 use GuzzleHttp\RequestOptions;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Spatie\ArrayToXml\ArrayToXml;
+use Drupal\taxonomy\Entity\Term;
 
 /**
  * Create a new node entity from a webform submission.
@@ -107,7 +108,7 @@ class SaveInWebtools extends WebformHandlerBase {
   private function buildFormDataXml(string $formName, FormStateInterface $form_state) {
 
     // Get submitted form values.
-    $submittedValues = $form_state->cleanValues()->getValues();
+    $submittedValues = $this->getSubmittedValues($formName, $form_state);
 
     // Get form storage.
     $storage = $form_state->getStorage();
@@ -130,7 +131,7 @@ class SaveInWebtools extends WebformHandlerBase {
         'meta' => [
           [
             'name'  => 'formName',
-            'value' => $formName,
+            'value' => $this->formNameAlter($formName, $submittedValues),
           ],
           [
             'name'  => 'datetime',
@@ -158,17 +159,38 @@ class SaveInWebtools extends WebformHandlerBase {
 
     // Track if we've settled on the name we'll send.
     $nameFieldAdded = FALSE;
+    // Get exploded name parts just in case.
+    $explodedNameParts = [
+      'first_name_field_machine_name' => explode('.',$this->configuration['first_name_field_machine_name']),
+      'last_name_field_machine_name' => explode('.',$this->configuration['last_name_field_machine_name']),
+    ];
 
     // If we have a first name field set.
     if (
       isset($this->configuration['first_name_field_machine_name'])
       && $this->configuration['first_name_field_machine_name']
-      && isset($submittedValues[$this->configuration['first_name_field_machine_name']])
+      && (
+        isset($submittedValues[$this->configuration['first_name_field_machine_name']])
+        || (
+          count($explodedNameParts['first_name_field_machine_name']) == 2
+          && isset($submittedValues[$explodedNameParts['first_name_field_machine_name'][0]][$explodedNameParts['first_name_field_machine_name'][1]])
+        )
+      )
     ) {
+
+      // Non nested first name value.
+      if (isset($submittedValues[$this->configuration['first_name_field_machine_name']])) {
+        $firstNameValue = $submittedValues[$this->configuration['first_name_field_machine_name']];
+      }
+      // Nested first name value.
+      else {
+        $firstNameValue = $submittedValues[$explodedNameParts['first_name_field_machine_name'][0]][$explodedNameParts['first_name_field_machine_name'][1]];
+      }
+
       // Add first name to xml.
       $requestData['meta']['meta'][] = [
         'name'  => 'firstName',
-        'value' => $submittedValues[$this->configuration['first_name_field_machine_name']],
+        'value' => $firstNameValue,
       ];
       // Indicate not to use the full name functionality.
       $nameFieldAdded = TRUE;
@@ -178,12 +200,28 @@ class SaveInWebtools extends WebformHandlerBase {
     if (
       isset($this->configuration['last_name_field_machine_name'])
       && $this->configuration['last_name_field_machine_name']
-      && isset($submittedValues[$this->configuration['last_name_field_machine_name']])
+      && (
+        isset($submittedValues[$this->configuration['last_name_field_machine_name']])
+        || (
+          count($explodedNameParts['last_name_field_machine_name']) == 2
+          && isset($submittedValues[$explodedNameParts['last_name_field_machine_name'][0]][$explodedNameParts['last_name_field_machine_name'][1]])
+        )
+      )
     ) {
+
+      // Non nested last name value.
+      if (isset($submittedValues[$this->configuration['last_name_field_machine_name']])) {
+        $lastNameValue = $submittedValues[$this->configuration['last_name_field_machine_name']];
+      }
+      // Nested last name value.
+      else {
+        $lastNameValue = $submittedValues[$explodedNameParts['last_name_field_machine_name'][0]][$explodedNameParts['last_name_field_machine_name'][1]];
+      }
+
       // Add first name to xml.
       $requestData['meta']['meta'][] = [
         'name'  => 'lastName',
-        'value' => $submittedValues[$this->configuration['last_name_field_machine_name']],
+        'value' => $lastNameValue,
       ];
       // Indicate not to use the full name functionality.
       $nameFieldAdded = TRUE;
@@ -285,7 +323,89 @@ class SaveInWebtools extends WebformHandlerBase {
     }
 
     $xmlConverterObject = new ArrayToXml($requestData, 'request');
-    return $xmlConverterObject->prettify()->dropXmlDeclaration()->toXml();
+    return $xmlConverterObject->dropXmlDeclaration()->toXml();
+
+  }
+
+  /**
+   * Gets submitted values and titles from reference fields.
+   *
+   * Currently only webform_term_select is supported as that's all we use.
+   *
+   * Others are entity_autocomplete, webform_entity_checkboxes,
+   * webform_entity_radios, webform_entity_select, webform_term_checkboxes.
+   *
+   * @param string $formName
+   *   The webtools api form name.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The form state containing submitted values.
+   *
+   * @return array
+   *   The submitted values.
+   */
+  private function getSubmittedValues(string $formName, FormStateInterface $form_state) {
+
+    // Get submitted form values.
+    $submittedValues = $form_state->cleanValues()->getValues();
+
+    // Get form fields.
+    $formFields = $form_state->getCompleteForm()['elements'];
+
+    // Loop over form fields looking for reference fields.
+    foreach ($formFields as $formFieldKey => $formFieldInfo) {
+
+      // If we found a term reference field we have a value set for.
+      if (
+        isset($formFieldInfo['#webform_plugin_id'])
+        && $formFieldInfo['#webform_plugin_id'] == 'webform_term_select'
+        && isset($submittedValues[$formFieldKey])
+        && is_numeric($submittedValues[$formFieldKey])
+      ) {
+        // Get term name.
+        $termName = Term::load($submittedValues[$formFieldKey])->getName();
+        // Replace tid in field value with term name.
+        $submittedValues[$formFieldKey] = $termName;
+      }
+
+    }
+
+    return $submittedValues;
+  }
+
+  /**
+   * Allows altering of a webtools form name allowing for dynamic values.
+   *
+   * @param string $formName
+   *   The form name.
+   * @param array $submittedValues
+   *   The submitted values.
+   *
+   * @return string
+   *   Returns the altered form name.
+   */
+  private function formNameAlter(string $formName, array $submittedValues) {
+
+    // If this is the small business connect form.
+    if ($formName == 'smbus_connect') {
+      // Look for state abbreviation in branch location option title.
+      preg_match_all('/^([^ ]*) -/', $submittedValues['branch_location'], $matches);
+      // If we found a state abbreviation.
+      if (count($matches) == 2 && isset($matches[1][0])) {
+        // Return the form name.
+        return 'smbus_connect_' . strtolower($matches[1][0]);
+      }
+      // If the state abbreviation is malformed.
+      else {
+        // Log error.
+        \Drupal::logger('arvestbank_webtools_api')->error('Branch location name found to be non-standard in form submission, defaulting to Arkansas (smbus_connect_ar).  Given non-standard branch location name: ' . $submittedValues['branch_location']);
+        // Default to Arkansas.
+        return 'smbus_connect_ar';
+      }
+    }
+    // For all other forms return form name unaltered.
+    else {
+      return $formName;
+    }
 
   }
 
@@ -336,6 +456,7 @@ class SaveInWebtools extends WebformHandlerBase {
     ];
 
     return $form;
+
   }
 
   /**

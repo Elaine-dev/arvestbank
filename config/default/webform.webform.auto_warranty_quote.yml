@@ -1,7 +1,9 @@
 uuid: 888a1e90-48d2-44ca-b944-1fcf7488782f
 langcode: en
 status: open
-dependencies: {  }
+dependencies:
+  module:
+    - arvestbank_webtools_api
 open: null
 close: null
 weight: 0
@@ -12,7 +14,7 @@ id: auto_warranty_quote
 title: 'Route 66 Auto Service Contract Quote'
 description: 'Route 66 Auto Service Contract Rate Quote Request'
 category: ''
-elements: "heading:\n  '#type': webform_markup\n  '#markup': |\n    <h3>Customized Rate Quote</h3>\n    \n    <p>For a free, no obligation Auto Service Contract Rate Quote, please fill out and submit the form below.</p>\n    \n    <p>Request your free rate quote and an Arvest lender will contact you with pricing options specific to your vehicle. Your lender is happy to answer any questions you have before you purchase. Your service contract can be purchased by check or financed (credit considerations apply).</p>\n    \ncustomer_information:\n  '#type': fieldset\n  '#title': 'Customer Information'\n  name_flexbox:\n    '#type': webform_flexbox\n    first_name:\n      '#type': textfield\n      '#title': 'First Name'\n      '#required': true\n    mi:\n      '#type': textfield\n      '#title': MI\n      '#size': 2\n    last_name:\n      '#type': textfield\n      '#title': 'Last Name'\n      '#required': true\n  address:\n    '#type': webform_address\n    '#title': Address\n    '#address__title': 'Street Address'\n    '#address__required': true\n    '#address_2__access': false\n    '#city__title': City\n    '#city__required': true\n    '#state_province__title': State\n    '#state_province__required': true\n    '#postal_code__title': ZIP\n    '#postal_code__required': true\n    '#country__access': false\n    '#required': true\n  email_address:\n    '#type': email\n    '#title': 'Email Address'\n    '#required': true\n  contact_flexbox:\n    '#type': webform_flexbox\n    phone_number:\n      '#type': tel\n      '#title': 'Phone Number'\n      '#placeholder': '(nnn) nnn-nnnn'\n      '#required': true\n      '#pattern': '^(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}$'\n      '#pattern_error': 'Please enter a valid phone number.'\n    contact_me_with_quote_by_:\n      '#type': radios\n      '#title': 'Contact me with quote by:'\n      '#options':\n        Phone: Phone\n        Email: Email\n      '#required': true\nvehicle_information:\n  '#type': fieldset\n  '#title': 'Vehicle Information'\n  vehicle_flexbox:\n    '#type': webform_flexbox\n    year:\n      '#type': number\n      '#title': Year\n      '#required': true\n      '#min': 1900\n      '#max': 2050\n    make:\n      '#type': textfield\n      '#title': Make\n      '#required': true\n    exact_model:\n      '#type': textfield\n      '#title': 'Exact Model'\n      '#required': true\n  vin:\n    '#type': textfield\n    '#title': VIN\n    '#required': true\n  exact_odometer:\n    '#type': textfield\n    '#title': 'Exact Odometer'\n    '#required': true\n  check_all_that_apply:\n    '#type': checkboxes\n    '#title': 'Check all that apply'\n    '#options':\n      '1-Ton Vehicle': '1-Ton Vehicle'\n      '4 Wheel Drive': '4 Wheel Drive'\n      '4 Wheel Steering': '4 Wheel Steering'\n      'Commercial Use': 'Commercial Use'\n      Diesel: Diesel\n      'Dual Wheel Truck': 'Dual Wheel Truck'\n      'Super/Turbo Charger': 'Super/Turbo Charger'\n      'Wear and Tear': 'Wear and Tear'\nbranch_location:\n  '#type': webform_term_select\n  '#title': 'Branch Location'\n  '#vocabulary': branch_location\n  '#breadcrumb_delimiter': ''\n  '#required': true"
+elements: "heading:\n  '#type': webform_markup\n  '#markup': |-\n    <h2>Customized Rate Quote</h2>\n\n    <p>For a free, no obligation Auto Service Contract Rate Quote, please fill out and submit the form below.</p>\n\n    <p>Request your free rate quote and an Arvest lender will contact you with pricing options specific to your vehicle. Your lender is happy to answer any questions you have before you purchase. Your service contract can be purchased by check or financed (credit considerations apply).</p>\ncustomer_information:\n  '#type': fieldset\n  '#title': 'Customer Information'\n  name_flexbox:\n    '#type': webform_flexbox\n    first_name:\n      '#type': textfield\n      '#title': 'First Name'\n      '#required': true\n      '#flex': 4\n    mi:\n      '#type': textfield\n      '#title': MI\n      '#maxlength': 5\n      '#flex': 0\n    last_name:\n      '#type': textfield\n      '#title': 'Last Name'\n      '#required': true\n      '#flex': 4\n  address:\n    '#type': webform_address\n    '#title': Address\n    '#address__title': 'Street Address'\n    '#address__required': true\n    '#address_2__access': false\n    '#city__title': City\n    '#city__required': true\n    '#state_province__title': State\n    '#state_province__required': true\n    '#postal_code__title': ZIP\n    '#postal_code__required': true\n    '#country__access': false\n    '#required': true\n  flexbox_email:\n    '#type': webform_flexbox\n    email_address:\n      '#type': email\n      '#title': 'Email Address'\n      '#required': true\n  contact_flexbox:\n    '#type': webform_flexbox\n    phone_number:\n      '#type': tel\n      '#title': 'Phone Number'\n      '#placeholder': '(nnn) nnn-nnnn'\n      '#required': true\n      '#pattern': '^(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}$'\n      '#pattern_error': 'Please enter a valid phone number.'\n    contact_me_with_quote_by_:\n      '#type': radios\n      '#title': 'Contact me with quote by:'\n      '#options':\n        Phone: Phone\n        Email: Email\n      '#required': true\n    branch_location:\n      '#type': webform_term_select\n      '#title': 'Branch Location'\n      '#vocabulary': branch_location\n      '#breadcrumb_delimiter': ''\n      '#required': true\nvehicle_information:\n  '#type': fieldset\n  '#title': 'Vehicle Information'\n  vehicle_flexbox:\n    '#type': webform_flexbox\n    year:\n      '#type': number\n      '#title': Year\n      '#required': true\n      '#min': 1900\n      '#max': 2050\n    make:\n      '#type': textfield\n      '#title': Make\n      '#required': true\n    exact_model:\n      '#type': textfield\n      '#title': 'Exact Model'\n      '#required': true\n  flexbox_vin:\n    '#type': webform_flexbox\n    vin:\n      '#type': textfield\n      '#title': VIN\n      '#required': true\n    exact_odometer:\n      '#type': textfield\n      '#title': 'Exact Odometer'\n      '#required': true\n  check_all_that_apply:\n    '#type': checkboxes\n    '#title': 'Check all that apply'\n    '#options':\n      '1-Ton Vehicle': '1-Ton Vehicle'\n      '4 Wheel Drive': '4 Wheel Drive'\n      '4 Wheel Steering': '4 Wheel Steering'\n      'Commercial Use': 'Commercial Use'\n      Diesel: Diesel\n      'Dual Wheel Truck': 'Dual Wheel Truck'\n      'Super/Turbo Charger': 'Super/Turbo Charger'\n      'Wear and Tear': 'Wear and Tear'\n    '#options_display': two_columns"
 css: ''
 javascript: ''
 settings:
@@ -138,7 +140,7 @@ settings:
   purge: none
   purge_days: null
   results_disabled: true
-  results_disabled_ignore: false
+  results_disabled_ignore: true
   results_customize: false
   token_view: false
   token_update: false
@@ -191,5 +193,19 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  save_submissions_in_webtools:
+    id: 'Save Submissions In Webtools'
+    label: 'Save Submissions In Webtools'
+    notes: ''
+    handler_id: save_submissions_in_webtools
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      webtools_form_name: auto_warranty_quote
+      first_name_field_machine_name: first_name
+      last_name_field_machine_name: last_name
+      full_name_field_machine_name: ''
+      email_field_machine_name: email_address
 variants: {  }

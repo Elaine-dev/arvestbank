@@ -1,7 +1,9 @@
 uuid: 40c59085-3921-451f-aaa6-0eb2d1f7a8f4
 langcode: en
 status: open
-dependencies: {  }
+dependencies:
+  module:
+    - arvestbank_webtools_api
 open: null
 close: null
 weight: 0
@@ -12,7 +14,7 @@ id: email_acc_consumer
 title: 'Email acc Consumer'
 description: 'A form for consumer account specialists'
 category: ''
-elements: "markup:\n  '#type': webform_markup\n  '#markup': |\n    <p data-renderer-start-pos=\"253\">ARVEST CREDIT CARD DIVISION</p>\n\n    <p data-renderer-start-pos=\"282\">Have a question about your Arvest Bank credit card? Use the email form below to contact a customer service support professional.</p>\n\n    <p data-renderer-start-pos=\"412\">Please note, inquiries related to account-specific topics such as credit card balance, address, transactions, passwords and rewards point balances cannot be answered using the automated email form below. Call (800) 356-8085 to speak to one of our customer service representatives if you have questions about your account.</p>\nflexbox:\n  '#type': webform_flexbox\n  first_name:\n    '#type': textfield\n    '#title': 'First Name'\n    '#title_display': before\n    '#required': true\n    '#flex': 4\n  mi:\n    '#type': textfield\n    '#title': MI\n    '#title_display': before\n    '#maxlength': 5\n    '#flex': 0\n    '#attributes':\n      style: 'width: 100px'\n  last_name:\n    '#type': textfield\n    '#title': 'Last Name'\n    '#title_display': before\n    '#required': true\n    '#flex': 4\n    '#attributes':\n      style: 'left-align: 15px'\nflexbox_01:\n  '#type': webform_flexbox\n  city:\n    '#type': textfield\n    '#title': City\n    '#title_display': before\n    '#required': true\n    '#flex': 4\n  state_select:\n    '#type': select\n    '#title': State\n    '#options': state_names\n    '#required': true\n    '#flex': 2\nemail:\n  '#type': email\n  '#title': 'Email address'\n  '#title_display': before\n  '#required': true\nphone_number:\n  '#type': tel\n  '#title': 'Phone Number'\n  '#title_display': before\n  '#placeholder': '(nnn) nnn-nnnn'\n  '#required': true\n  '#pattern': '^(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}$'\n  '#pattern_error': 'Please enter a valid phone number.'\nbranch_location:\n  '#type': webform_term_select\n  '#title': 'Branch Location'\n  '#title_display': before\n  '#required': true\n  '#vocabulary': branch_location\n  '#breadcrumb_delimiter': ''\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#title_display': before\n  '#required': true\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\nconsent:\n  '#type': webform_markup\n  '#markup': '<em data-renderer-mark=\"true\">By clicking the Submit button above, you expressly consent to be contacted by Arvest at the telephone number or email address you have provided. You agree Arvest may contact you in any way, including calls delivered by an automatic telephone dialing system. Note &ndash; please ensure that you have spam blocking enabled and add </em><a data-renderer-mark=\"true\" href=\"http://arvest.com/\" title=\"http://arvest.com\"><em data-renderer-mark=\"true\">arvest.com</em></a><em data-renderer-mark=\"true\"> to your email client&#39;s approved safe list.</em>'"
+elements: "markup:\n  '#type': webform_markup\n  '#markup': |\n    <p data-renderer-start-pos=\"253\">ARVEST CREDIT CARD DIVISION</p>\n\n    <p data-renderer-start-pos=\"282\">Have a question about your Arvest Bank credit card? Use the email form below to contact a customer service support professional.</p>\n\n    <p data-renderer-start-pos=\"412\">Please note, inquiries related to account-specific topics such as credit card balance, address, transactions, passwords and rewards point balances cannot be answered using the automated email form below. Call (800) 356-8085 to speak to one of our customer service representatives if you have questions about your account.</p>\nflexbox:\n  '#type': webform_flexbox\n  first_name:\n    '#type': textfield\n    '#title': 'First Name'\n    '#title_display': before\n    '#required': true\n    '#flex': 4\n  mi:\n    '#type': textfield\n    '#title': MI\n    '#title_display': before\n    '#maxlength': 5\n    '#flex': 0\n  last_name:\n    '#type': textfield\n    '#title': 'Last Name'\n    '#title_display': before\n    '#required': true\n    '#flex': 4\n    '#attributes':\n      style: 'left-align: 15px'\nflexbox_01:\n  '#type': webform_flexbox\n  city:\n    '#type': textfield\n    '#title': City\n    '#title_display': before\n    '#required': true\n    '#flex': 4\n  state_select:\n    '#type': select\n    '#title': State\n    '#options': state_names\n    '#required': true\n    '#flex': 2\nemail:\n  '#type': email\n  '#title': 'Email address'\n  '#title_display': before\n  '#required': true\nphone_number:\n  '#type': tel\n  '#title': 'Phone Number'\n  '#title_display': before\n  '#placeholder': '(nnn) nnn-nnnn'\n  '#required': true\n  '#pattern': '^(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}$'\n  '#pattern_error': 'Please enter a valid phone number.'\nbranch_location:\n  '#type': webform_term_select\n  '#title': 'Branch Location'\n  '#title_display': before\n  '#required': true\n  '#vocabulary': branch_location\n  '#breadcrumb_delimiter': ''\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#title_display': before\n  '#required': true\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\nconsent:\n  '#type': webform_markup\n  '#markup': '<em data-renderer-mark=\"true\">By clicking the Submit button above, you expressly consent to be contacted by Arvest at the telephone number or email address you have provided. You agree Arvest may contact you in any way, including calls delivered by an automatic telephone dialing system. Note &ndash; please ensure that you have spam blocking enabled and add </em><a data-renderer-mark=\"true\" href=\"http://arvest.com/\" title=\"http://arvest.com\"><em data-renderer-mark=\"true\">arvest.com</em></a><em data-renderer-mark=\"true\"> to your email client&#39;s approved safe list.</em>'"
 css: ''
 javascript: ''
 settings:
@@ -138,7 +140,7 @@ settings:
   purge: none
   purge_days: null
   results_disabled: true
-  results_disabled_ignore: false
+  results_disabled_ignore: true
   results_customize: false
   token_view: false
   token_update: false
@@ -191,5 +193,19 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  save_submissions_in_webtools:
+    id: 'Save Submissions In Webtools'
+    label: 'Save Submissions In Webtools'
+    notes: ''
+    handler_id: save_submissions_in_webtools
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      webtools_form_name: email_acc_consumer
+      first_name_field_machine_name: first_name
+      last_name_field_machine_name: last_name
+      full_name_field_machine_name: ''
+      email_field_machine_name: email
 variants: {  }
