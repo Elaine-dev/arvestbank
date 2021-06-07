@@ -32,6 +32,9 @@ Drupal.behaviors.externalLogin = {
       // Get the online banking username element for the submitted form.
       var $onlineBankingUsernameField = jQuery(this).find('input[name="username"]');
 
+      // Get the mortgage username element for the submitted form.
+      var $mortgageUsernameField = jQuery(this).find('input[name="userid"]');
+
       // Determine the domain of the corresponding online banking site.
       if ($activeSelect.attr('name') == 'login_select_non_prod') {
         var onlineBankingDomain = 'https://new17test.arvest.com';
@@ -66,23 +69,56 @@ Drupal.behaviors.externalLogin = {
         }).done(function () {
 
           // Redirect, same as submitting form, but we already prevented that.
-          /*url_redirect({url: onlineBankingDomain + "/personal/signon/logon/authenticate",
+          post_redirect({url: onlineBankingDomain + "/personal/signon/logon/authenticate",
             method: "post",
-            data: {"usererr": username}
-          });*/
+            data: {"username": $onlineBankingUsernameField.val()}
+          });
 
-        });;
+        });
 
       }
 
-      // Prevent submission of menu login block if select is empty.
-      var selectIsSet = false;
-      jQuery('.webform-submission-external-login-menu-add-form select').each(function () {
-        if (jQuery(this).value() != '') {
-          selectIsSet = true;
+
+      // If we're submitting the mortgage form and have a username set.
+      if (
+        $activeSelect.val() == 'mortgage'
+        // If username field is set.
+        && $mortgageUsernameField.val()
+      ) {
+
+        // Prevent submission.
+        e.preventDefault();
+
+        // Determine post variables to send.
+        var postVariables = {
+          "userid": $mortgageUsernameField.val(),
+          "password": jQuery(this).find('input[name="password"]').val(),
+        };
+
+        // Add value for "remember" if checked.
+        if (jQuery(this).find('input[name="remember"]').is(':checked')) {
+          postVariables.rememberVal = "on";
         }
+
+        // Send cleaner version of submission.
+        post_redirect({url: jQuery(this).attr('action'),
+          method: "post",
+          data: postVariables,
+        });
+      }
+
+
+
+      // Determine if menu login block if select is empty.
+      var menuSelectIsSet = false;
+      jQuery('.webform-submission-external-login-menu-add-form select').each(function () {
+          if (jQuery(this).val() != '') {
+            menuSelectIsSet = true;
+          }
       });
-      if (!selectIsSet) {
+
+      // If this is the menu form and that select isn't set.
+      if (!menuSelectIsSet && !sidebarForm) {
         e.preventDefault();
         return false;
       }
@@ -252,7 +288,19 @@ Drupal.behaviors.externalLogin = {
 
     });
 
+    function post_redirect(options){
+      var $form = jQuery("<form />");
 
+      $form.attr("action",options.url);
+      $form.attr("method",options.method);
+
+      for (var data in options.data) {
+        $form.append('<input type="hidden" name="' + data + '" value="' + options.data[data] + '" />');
+      }
+
+      jQuery("body").append($form);
+      $form.submit();
+    }
 
   }
 };
