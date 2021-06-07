@@ -78,12 +78,11 @@ Drupal.behaviors.externalLogin = {
 
       }
 
-
       // If we're submitting the mortgage form and have a username set.
       if (
         $activeSelect.val() == 'mortgage'
         // If username field is set.
-        && $mortgageUsernameField.val()
+        && $mortgageUsernameField.val() != ''
       ) {
 
         // Prevent submission.
@@ -118,7 +117,7 @@ Drupal.behaviors.externalLogin = {
       });
 
       // If this is the menu form and that select isn't set.
-      if (!menuSelectIsSet && !sidebarForm) {
+      if (!menuSelectIsSet || !sidebarForm) {
         e.preventDefault();
         return false;
       }
@@ -196,7 +195,7 @@ Drupal.behaviors.externalLogin = {
 
     // Login select change function.
     // For non-prod login select.
-    jQuery('#edit-login-select-non-prod').add('#edit-login-select-non-prod--2').change(function () {
+    jQuery('select[name="login_select_non_prod"]').change(function () {
 
       // If "Cash Manager" is selected.
       if (jQuery(this).val() == 'cash_manager') {
@@ -244,7 +243,7 @@ Drupal.behaviors.externalLogin = {
 
     // Login select change function.
     // For prod login select.
-    jQuery('#edit-login-select').add('#edit-login-select--2').change(function () {
+    jQuery('select[name="login_select"]').change(function () {
 
       // If "Cash Manager" is selected.
       if (jQuery(this).val() == 'cash_manager') {
