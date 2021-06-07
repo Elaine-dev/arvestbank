@@ -29,7 +29,6 @@ function arvestbank_webforms_help($route_name, RouteMatchInterface $route_match)
  */
 function arvestbank_webforms_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 
-
   switch ($form_id) {
 
     // Authorized Agent Designation Form.
@@ -58,6 +57,12 @@ function arvestbank_webforms_form_alter(&$form, FormStateInterface $form_state, 
     case "webform_submission_credit_card_dispute_add_form":
       // Attach library.
       $form['#attached']['library'][] = 'arvestbank_webforms/credit_card_dispute';
+      break;
+
+    // Credit Card Dispute Form.
+    case "webform_submission_verifiable_consumer_request_form_add_form":
+      // Attach library.
+      $form['#attached']['library'][] = 'arvestbank_webforms/verifiable_consumer_request';
       break;
 
     // Equipment Finance form and test form.

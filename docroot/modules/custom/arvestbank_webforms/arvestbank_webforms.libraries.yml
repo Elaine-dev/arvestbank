@@ -5,3 +5,7 @@ credit_card_dispute:
 contact_arvest_wealth_management:
   js:
     js/contact_arvest_wealth_management.js: {}
+
+verifiable_consumer_request:
+  js:
+    js/verifiable_consumer_request.js: {}

@@ -48,6 +48,8 @@ class StagePageSidebarBlock extends BlockBase {
         if (!empty($alert_view->result)) {
           $alert = views_embed_view('stage_page_sidebar_alert', 'default');
           $sidebar_block['alert'] = $alert;
+          $sidebar_block['alert']['#prefix'] = '<div class="coh-style-alert">';
+          $sidebar_block['alert']['#suffix'] = '</div>';
         }
 
         else {
@@ -57,7 +59,7 @@ class StagePageSidebarBlock extends BlockBase {
             if (!empty($entity->get('field_block_title')->getValue()[0]['value'])) {
               $sidebar_block['title'] = [
                 '#markup' => $entity->get('field_block_title')->getValue()[0]['value'],
-                '#prefix' => '<h3>',
+                '#prefix' => '<div class="stage-page-callout"><h3>',
                 '#suffix' => '</h3>',
               ];
             }
@@ -94,7 +96,7 @@ class StagePageSidebarBlock extends BlockBase {
           // and add to the sidebar_block.
           if (!empty($sidebar_block_contents)) {
             $sidebar_block_contents['#prefix'] = '<div class="flex-wrapper">';
-            $sidebar_block_contents['#suffix'] = '</div>';
+            $sidebar_block_contents['#suffix'] = '</div> </div>';
             $sidebar_block[] = $sidebar_block_contents;
           }
 

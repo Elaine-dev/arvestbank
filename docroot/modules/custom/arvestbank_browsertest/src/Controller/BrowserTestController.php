@@ -50,6 +50,8 @@ class BrowserTestController extends ControllerBase {
 
     $return[] = [
       '#type' => 'webform',
+      '#prefix' => '<div class="coh-style-webforms">',
+      '#suffix' => '</div>',
       '#webform' => 'send_browser_diagnostics',
       //'#default_data' => ['name' => 'Custom Name'],
     ];

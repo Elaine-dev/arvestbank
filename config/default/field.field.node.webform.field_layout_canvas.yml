@@ -1,0 +1,24 @@
+uuid: 15f93b93-c1e3-4523-9689-ce98f66df669
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_layout_canvas
+    - node.type.webform
+  module:
+    - cohesion_elements
+id: node.webform.field_layout_canvas
+field_name: field_layout_canvas
+entity_type: node
+bundle: webform
+label: 'Layout Canvas'
+description: 'Sidebar Content Cards'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:cohesion_layout'
+  access_elements: '0'
+  handler_settings: {  }
+field_type: cohesion_entity_reference_revisions

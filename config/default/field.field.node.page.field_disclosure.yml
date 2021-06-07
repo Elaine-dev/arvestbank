@@ -7,7 +7,7 @@ dependencies:
     - node.type.page
     - taxonomy.vocabulary.disclosures
   content:
-    - 'taxonomy_term:disclosures:0c42ed81-62d7-4a82-af68-28232045eb3d'
+    - 'taxonomy_term:disclosures:76b79900-2f8b-455f-bab5-535ce8520c45'
 id: node.page.field_disclosure
 field_name: field_disclosure
 entity_type: node
@@ -18,7 +18,7 @@ required: true
 translatable: true
 default_value:
   -
-    target_uuid: 0c42ed81-62d7-4a82-af68-28232045eb3d
+    target_uuid: 76b79900-2f8b-455f-bab5-535ce8520c45
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'

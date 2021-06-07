@@ -13,8 +13,12 @@
   border: none;
 }
 
-/* remove list items from content area */
-body .site-content .pager__items li:before, .chosen-results ul li:before, .site-content .chosen-container .chosen-results li:before, body .site-content .webform-progress-tracker li:before{
+/* remove list item bullets or triangles from content area */
+body .site-content .pager__items li:before, .chosen-results ul li:before, .site-content .chosen-container .chosen-results li:before, body .site-content .webform-progress-tracker li:before, .body .site-content .pager__items li:before, .chosen-results ul li:before, .site-content .chosen-container .chosen-results li:before, body .site-content .webform-progress-tracker li:before,
+.webform-submission-external-login-form .coh-style-triangle.webform-submit-input:before,
+.block-views-exposed-filter-blockdatabase-search-page-1 .coh-style-triangle.webform-submit-input:before,
+.block-arvestbank-branch-locations .coh-style-triangle.webform-submit-input:before,
+.webform-submission-external-login-menu-form .coh-style-triangle.webform-submit-input:before{
   content: none;
 }
 
@@ -22,3 +26,5 @@ body .site-content .pager__items li:before, .chosen-results ul li:before, .site-
 .coh-style-flex-50 .webform-flex{
   flex: 0 1 50%;
 }
+
+
