@@ -8,9 +8,9 @@
     dependencies: {  }
     id: pack_colors
     label: Colors
-    description: 'A Site Studio package for all colors. Last Updated: Jacob Crane 05/27/2021'
+    description: 'A Site Studio package for all colors. Last Updated: Aaron Parkening 06/7/2021'
     excluded_entity_types: '[]'
-    settings: '{"dd308c1a-c263-4c72-8516-f60cd8f1c9d4":{"type":"cohesion_color","items":{"dd308c1a-c263-4c72-8516-f60cd8f1c9d4":{"type":"cohesion_color"}},"checked":true},"e4641ac8-67f8-4195-b93d-916d94b3c50a":{"type":"cohesion_color","items":{"e4641ac8-67f8-4195-b93d-916d94b3c50a":{"type":"cohesion_color"}},"checked":true},"b441d91a-eae8-4d0e-b820-684288168f48":{"type":"cohesion_color","items":{"b441d91a-eae8-4d0e-b820-684288168f48":{"type":"cohesion_color"}},"checked":true},"95626145-3391-4854-8fef-60bb32579739":{"type":"cohesion_color","items":{"95626145-3391-4854-8fef-60bb32579739":{"type":"cohesion_color"}},"checked":true},"e9da5d21-4612-4d25-acc6-081eb16927c4":{"type":"cohesion_color","items":{"e9da5d21-4612-4d25-acc6-081eb16927c4":{"type":"cohesion_color"}},"checked":true},"620009e9-f360-49e0-938f-c3b158e6b0e5":{"type":"cohesion_color","items":{"620009e9-f360-49e0-938f-c3b158e6b0e5":{"type":"cohesion_color"}},"checked":true},"43414b0c-c0d0-4c23-bd43-c20c7b5fa58d":{"type":"cohesion_color","items":{"43414b0c-c0d0-4c23-bd43-c20c7b5fa58d":{"type":"cohesion_color"}},"checked":true},"b7185e79-4788-45ed-a8d6-1f7a78b2470e":{"type":"cohesion_color","items":{"b7185e79-4788-45ed-a8d6-1f7a78b2470e":{"type":"cohesion_color"}},"checked":true},"bce3000b-4a62-405d-b782-d69f6bf2fc99":{"type":"cohesion_color","items":{"bce3000b-4a62-405d-b782-d69f6bf2fc99":{"type":"cohesion_color"}},"checked":true},"b351eb56-944b-4e95-bc62-05252ec8fca7":{"type":"cohesion_color","items":{"b351eb56-944b-4e95-bc62-05252ec8fca7":{"type":"cohesion_color"}},"checked":true},"4293c742-871c-4ca2-8a52-4f96f45bf6cb":{"type":"cohesion_color","items":{"4293c742-871c-4ca2-8a52-4f96f45bf6cb":{"type":"cohesion_color"}},"checked":true},"e936898e-d2a0-4879-b81d-c16524094c6c":{"type":"cohesion_color","items":{"e936898e-d2a0-4879-b81d-c16524094c6c":{"type":"cohesion_color"}},"checked":true},"38d5a642-36d7-48cd-a4a9-d2cfe609762e":{"type":"cohesion_color","items":{"38d5a642-36d7-48cd-a4a9-d2cfe609762e":{"type":"cohesion_color"}},"checked":true},"f445f9ef-ee42-48f7-870e-a7f2d02fbd05":{"type":"cohesion_color","items":{"f445f9ef-ee42-48f7-870e-a7f2d02fbd05":{"type":"cohesion_color"}},"checked":true},"14b52e46-d24a-47bb-83ec-870c62235da6":{"type":"cohesion_color","items":{"14b52e46-d24a-47bb-83ec-870c62235da6":{"type":"cohesion_color"}},"checked":true},"665f9104-989b-429e-9c57-582339f444b9":{"type":"cohesion_color","items":{"665f9104-989b-429e-9c57-582339f444b9":{"type":"cohesion_color"}},"checked":true},"de128762-a075-4e39-b285-8f3a4ade01b":{"type":"cohesion_color","items":{"de128762-a075-4e39-b285-8f3a4ade01b":{"type":"cohesion_color"}},"checked":true},"b2448f60-2680-483e-bec6-f791edbee910":{"type":"cohesion_color","items":{"b2448f60-2680-483e-bec6-f791edbee910":{"type":"cohesion_color"}},"checked":true},"de128762-a075-4e39-b285-8f3a4adce01b":{"type":"cohesion_color","items":{"de128762-a075-4e39-b285-8f3a4adce01b":{"type":"cohesion_color"}},"checked":true},"4f9bd296-ba67-4725-bb0f-811738fcf76a":{"type":"cohesion_color","items":{"4f9bd296-ba67-4725-bb0f-811738fcf76a":{"type":"cohesion_color"}},"checked":true},"ca4d6a37-41d1-49c5-bea8-90b2499eb415":{"type":"cohesion_color","items":{"ca4d6a37-41d1-49c5-bea8-90b2499eb415":{"type":"cohesion_color"}},"checked":true},"dc6b0d53-b46c-42fa-a0de-06099f273361":{"type":"cohesion_color","items":{"dc6b0d53-b46c-42fa-a0de-06099f273361":{"type":"cohesion_color"}},"checked":true},"95535bd5-68b9-4967-b2bf-a61c6f3a628c":{"type":"cohesion_color","items":{"95535bd5-68b9-4967-b2bf-a61c6f3a628c":{"type":"cohesion_color"}},"checked":true},"a0c3d055-2701-43f6-8d38-b3f7cac06c98":{"type":"cohesion_color","items":{"a0c3d055-2701-43f6-8d38-b3f7cac06c98":{"type":"cohesion_color"}},"checked":true},"26316cae-2da6-4cf0-a9e1-f53e5322c684":{"type":"cohesion_color","items":{"26316cae-2da6-4cf0-a9e1-f53e5322c684":{"type":"cohesion_color"}},"checked":true},"919b6dd9-168b-462c-9069-1ff5a4e8d197":{"type":"cohesion_color","items":{"919b6dd9-168b-462c-9069-1ff5a4e8d197":{"type":"cohesion_color"}},"checked":true},"af3bc978-084f-4179-b047-74c204ff96ce":{"type":"cohesion_color","items":{"af3bc978-084f-4179-b047-74c204ff96ce":{"type":"cohesion_color"}},"checked":true},"a35b2744-53a7-40d4-97c7-a740c8fd1fcd":{"type":"cohesion_color","items":{"a35b2744-53a7-40d4-97c7-a740c8fd1fcd":{"type":"cohesion_color"}},"checked":true},"d905688e-e337-4549-baa7-f12e3d3629c9":{"type":"cohesion_color","items":{"d905688e-e337-4549-baa7-f12e3d3629c9":{"type":"cohesion_color"}},"checked":true},"48a3b929-8bac-48e0-9f4c-2dd74bca3b2d":{"type":"cohesion_color","items":{"48a3b929-8bac-48e0-9f4c-2dd74bca3b2d":{"type":"cohesion_color"}},"checked":true},"3f3a629b-8c9b-463c-a3a1-ccfddf8064a0":{"type":"cohesion_color","items":{"3f3a629b-8c9b-463c-a3a1-ccfddf8064a0":{"type":"cohesion_color"}},"checked":true},"f53c1904-ec87-47d3-8ce9-f5efe07b478b":{"type":"cohesion_color","items":{"f53c1904-ec87-47d3-8ce9-f5efe07b478b":{"type":"cohesion_color"}},"checked":true},"00282f58-192b-4eb7-8d31-fd85eb128d0c":{"type":"cohesion_color","items":{"00282f58-192b-4eb7-8d31-fd85eb128d0c":{"type":"cohesion_color"}},"checked":true}}'
+    settings: '{"dd308c1a-c263-4c72-8516-f60cd8f1c9d4":{"type":"cohesion_color","items":{"dd308c1a-c263-4c72-8516-f60cd8f1c9d4":{"type":"cohesion_color"}},"checked":true},"e4641ac8-67f8-4195-b93d-916d94b3c50a":{"type":"cohesion_color","items":{"e4641ac8-67f8-4195-b93d-916d94b3c50a":{"type":"cohesion_color"}},"checked":true},"b441d91a-eae8-4d0e-b820-684288168f48":{"type":"cohesion_color","items":{"b441d91a-eae8-4d0e-b820-684288168f48":{"type":"cohesion_color"}},"checked":true},"95626145-3391-4854-8fef-60bb32579739":{"type":"cohesion_color","items":{"95626145-3391-4854-8fef-60bb32579739":{"type":"cohesion_color"}},"checked":true},"e9da5d21-4612-4d25-acc6-081eb16927c4":{"type":"cohesion_color","items":{"e9da5d21-4612-4d25-acc6-081eb16927c4":{"type":"cohesion_color"}},"checked":true},"620009e9-f360-49e0-938f-c3b158e6b0e5":{"type":"cohesion_color","items":{"620009e9-f360-49e0-938f-c3b158e6b0e5":{"type":"cohesion_color"}},"checked":true},"43414b0c-c0d0-4c23-bd43-c20c7b5fa58d":{"type":"cohesion_color","items":{"43414b0c-c0d0-4c23-bd43-c20c7b5fa58d":{"type":"cohesion_color"}},"checked":true},"b7185e79-4788-45ed-a8d6-1f7a78b2470e":{"type":"cohesion_color","items":{"b7185e79-4788-45ed-a8d6-1f7a78b2470e":{"type":"cohesion_color"}},"checked":true},"bce3000b-4a62-405d-b782-d69f6bf2fc99":{"type":"cohesion_color","items":{"bce3000b-4a62-405d-b782-d69f6bf2fc99":{"type":"cohesion_color"}},"checked":true},"b351eb56-944b-4e95-bc62-05252ec8fca7":{"type":"cohesion_color","items":{"b351eb56-944b-4e95-bc62-05252ec8fca7":{"type":"cohesion_color"}},"checked":true},"4293c742-871c-4ca2-8a52-4f96f45bf6cb":{"type":"cohesion_color","items":{"4293c742-871c-4ca2-8a52-4f96f45bf6cb":{"type":"cohesion_color"}},"checked":true},"e936898e-d2a0-4879-b81d-c16524094c6c":{"type":"cohesion_color","items":{"e936898e-d2a0-4879-b81d-c16524094c6c":{"type":"cohesion_color"}},"checked":true},"38d5a642-36d7-48cd-a4a9-d2cfe609762e":{"type":"cohesion_color","items":{"38d5a642-36d7-48cd-a4a9-d2cfe609762e":{"type":"cohesion_color"}},"checked":true},"f445f9ef-ee42-48f7-870e-a7f2d02fbd05":{"type":"cohesion_color","items":{"f445f9ef-ee42-48f7-870e-a7f2d02fbd05":{"type":"cohesion_color"}},"checked":true},"14b52e46-d24a-47bb-83ec-870c62235da6":{"type":"cohesion_color","items":{"14b52e46-d24a-47bb-83ec-870c62235da6":{"type":"cohesion_color"}},"checked":true},"665f9104-989b-429e-9c57-582339f444b9":{"type":"cohesion_color","items":{"665f9104-989b-429e-9c57-582339f444b9":{"type":"cohesion_color"}},"checked":true},"de128762-a075-4e39-b285-8f3a4ade01b":{"type":"cohesion_color","items":{"de128762-a075-4e39-b285-8f3a4ade01b":{"type":"cohesion_color"}},"checked":true},"b2448f60-2680-483e-bec6-f791edbee910":{"type":"cohesion_color","items":{"b2448f60-2680-483e-bec6-f791edbee910":{"type":"cohesion_color"}},"checked":true},"de128762-a075-4e39-b285-8f3a4adce01b":{"type":"cohesion_color","items":{"de128762-a075-4e39-b285-8f3a4adce01b":{"type":"cohesion_color"}},"checked":true},"4f9bd296-ba67-4725-bb0f-811738fcf76a":{"type":"cohesion_color","items":{"4f9bd296-ba67-4725-bb0f-811738fcf76a":{"type":"cohesion_color"}},"checked":true},"ca4d6a37-41d1-49c5-bea8-90b2499eb415":{"type":"cohesion_color","items":{"ca4d6a37-41d1-49c5-bea8-90b2499eb415":{"type":"cohesion_color"}},"checked":true},"dc6b0d53-b46c-42fa-a0de-06099f273361":{"type":"cohesion_color","items":{"dc6b0d53-b46c-42fa-a0de-06099f273361":{"type":"cohesion_color"}},"checked":true},"95535bd5-68b9-4967-b2bf-a61c6f3a628c":{"type":"cohesion_color","items":{"95535bd5-68b9-4967-b2bf-a61c6f3a628c":{"type":"cohesion_color"}},"checked":true},"a0c3d055-2701-43f6-8d38-b3f7cac06c98":{"type":"cohesion_color","items":{"a0c3d055-2701-43f6-8d38-b3f7cac06c98":{"type":"cohesion_color"}},"checked":true},"26316cae-2da6-4cf0-a9e1-f53e5322c684":{"type":"cohesion_color","items":{"26316cae-2da6-4cf0-a9e1-f53e5322c684":{"type":"cohesion_color"}},"checked":true},"919b6dd9-168b-462c-9069-1ff5a4e8d197":{"type":"cohesion_color","items":{"919b6dd9-168b-462c-9069-1ff5a4e8d197":{"type":"cohesion_color"}},"checked":true},"af3bc978-084f-4179-b047-74c204ff96ce":{"type":"cohesion_color","items":{"af3bc978-084f-4179-b047-74c204ff96ce":{"type":"cohesion_color"}},"checked":true},"a35b2744-53a7-40d4-97c7-a740c8fd1fcd":{"type":"cohesion_color","items":{"a35b2744-53a7-40d4-97c7-a740c8fd1fcd":{"type":"cohesion_color"}},"checked":true},"d905688e-e337-4549-baa7-f12e3d3629c9":{"type":"cohesion_color","items":{"d905688e-e337-4549-baa7-f12e3d3629c9":{"type":"cohesion_color"}},"checked":true},"48a3b929-8bac-48e0-9f4c-2dd74bca3b2d":{"type":"cohesion_color","items":{"48a3b929-8bac-48e0-9f4c-2dd74bca3b2d":{"type":"cohesion_color"}},"checked":true},"3f3a629b-8c9b-463c-a3a1-ccfddf8064a0":{"type":"cohesion_color","items":{"3f3a629b-8c9b-463c-a3a1-ccfddf8064a0":{"type":"cohesion_color"}},"checked":true},"f53c1904-ec87-47d3-8ce9-f5efe07b478b":{"type":"cohesion_color","items":{"f53c1904-ec87-47d3-8ce9-f5efe07b478b":{"type":"cohesion_color"}},"checked":true},"00282f58-192b-4eb7-8d31-fd85eb128d0c":{"type":"cohesion_color","items":{"00282f58-192b-4eb7-8d31-fd85eb128d0c":{"type":"cohesion_color"}},"checked":true},"598ec417-3023-49db-8ea7-f2c8f0ea388f":{"type":"cohesion_color","items":{"598ec417-3023-49db-8ea7-f2c8f0ea388f":{"type":"cohesion_color"}},"checked":true},"ccf28b07-caa1-4336-95be-59118af2e282":{"type":"cohesion_color","items":{"ccf28b07-caa1-4336-95be-59118af2e282":{"type":"cohesion_color"}},"checked":true},"51d2c35e-e8e5-49fb-bf84-349e3d01a998":{"type":"cohesion_color","items":{"51d2c35e-e8e5-49fb-bf84-349e3d01a998":{"type":"cohesion_color"}},"checked":true},"642da0bb-fe1b-48d9-ae8f-f0727a7c999b":{"type":"cohesion_color","items":{"642da0bb-fe1b-48d9-ae8f-f0727a7c999b":{"type":"cohesion_color"}},"checked":true},"c0c7ba6a-2eba-4d0b-a91c-440f1d2315dd":{"type":"cohesion_color","items":{"c0c7ba6a-2eba-4d0b-a91c-440f1d2315dd":{"type":"cohesion_color"}},"checked":true},"5f65ddb7-d1e8-4023-b2d9-ca9f9a676f81":{"type":"cohesion_color","items":{"5f65ddb7-d1e8-4023-b2d9-ca9f9a676f81":{"type":"cohesion_color"}},"checked":true},"a82e1a3d-1f5b-4be4-8ec9-53ecb466ce36":{"type":"cohesion_color","items":{"a82e1a3d-1f5b-4be4-8ec9-53ecb466ce36":{"type":"cohesion_color"}},"checked":true},"ece2b206-bc5a-4278-ae21-3e80a3b41e6f":{"type":"cohesion_color","items":{"ece2b206-bc5a-4278-ae21-3e80a3b41e6f":{"type":"cohesion_color"}},"checked":true},"af99fe7f-2885-4905-b577-466420c9f777":{"type":"cohesion_color","items":{"af99fe7f-2885-4905-b577-466420c9f777":{"type":"cohesion_color"}},"checked":true},"9d6a93a4-2979-4e98-9e9f-8266fbb906e6":{"type":"cohesion_color","items":{"9d6a93a4-2979-4e98-9e9f-8266fbb906e6":{"type":"cohesion_color"}},"checked":true}}'
 -
   type: cohesion_color
   export:
@@ -26,7 +26,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 23
+    weight: 25
 -
   type: cohesion_color
   export:
@@ -42,7 +42,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 13
+    weight: 16
 -
   type: cohesion_color
   export:
@@ -58,7 +58,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 12
+    weight: 15
 -
   type: cohesion_color
   export:
@@ -74,7 +74,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 16
+    weight: 19
 -
   type: cohesion_color
   export:
@@ -90,7 +90,23 @@
     locked: false
     modified: true
     selectable: true
-    weight: 36
+    weight: 38
+-
+  type: cohesion_color
+  export:
+    uuid: 598ec417-3023-49db-8ea7-f2c8f0ea388f
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: '266190'
+    label: '266190'
+    json_values: '{"link":true,"value":{"value":{"hex":"#266190","rgba":"rgba(38, 97, 144, 1)"}},"name":"266190","uid":"266190","class":".coh-color-266190","variable":"$coh-color-266190","tags":[{"label":"Featured","value":"featured"}],"inuse":true}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    weight: 11
 -
   type: cohesion_color
   export:
@@ -106,7 +122,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 18
+    weight: 20
 -
   type: cohesion_color
   export:
@@ -122,7 +138,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 21
+    weight: 23
 -
   type: cohesion_color
   export:
@@ -138,7 +154,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 22
+    weight: 24
 -
   type: cohesion_color
   export:
@@ -154,7 +170,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 19
+    weight: 21
 -
   type: cohesion_color
   export:
@@ -170,7 +186,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 37
+    weight: 39
 -
   type: cohesion_color
   export:
@@ -218,7 +234,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 38
+    weight: 40
 -
   type: cohesion_color
   export:
@@ -234,7 +250,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 20
+    weight: 22
 -
   type: cohesion_color
   export:
@@ -250,7 +266,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 25
+    weight: 27
 -
   type: cohesion_color
   export:
@@ -266,7 +282,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 24
+    weight: 26
 -
   type: cohesion_color
   export:
@@ -283,6 +299,70 @@
     modified: true
     selectable: true
     weight: 0
+-
+  type: cohesion_color
+  export:
+    uuid: c0c7ba6a-2eba-4d0b-a91c-440f1d2315dd
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: blue-2
+    label: 'Blue 2'
+    json_values: '{"link":false,"value":{"value":{"hex":"#002c5c","rgba":"rgba(0, 44, 92, 1)"}},"name":"#002c5c","uid":"blue-2","class":".coh-color-blue-2","variable":"$coh-color-blue-2","inuse":true}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    weight: 17
+-
+  type: cohesion_color
+  export:
+    uuid: 5f65ddb7-d1e8-4023-b2d9-ca9f9a676f81
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: blue-3
+    label: 'Blue 3'
+    json_values: '{"name":"Blue 3","uid":"blue-3","value":{"value":{"hex":"#003162","rgba":"rgba(0, 49, 98, 1)"}},"wysiwyg":false,"class":".coh-color-blue-3","variable":"$coh-color-blue-3","inuse":true,"link":true}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    weight: 18
+-
+  type: cohesion_color
+  export:
+    uuid: a82e1a3d-1f5b-4be4-8ec9-53ecb466ce36
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: blue-4
+    label: 'Blue 4'
+    json_values: '{"link":false,"value":{"value":{"hex":"#00457c","rgba":"rgba(0, 69, 124, 1)"}},"name":"#00457c","uid":"blue-4","class":".coh-color-blue-4","variable":"$coh-color-blue-4","inuse":true}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    weight: 14
+-
+  type: cohesion_color
+  export:
+    uuid: ece2b206-bc5a-4278-ae21-3e80a3b41e6f
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: blue-6
+    label: 'Blue 6'
+    json_values: '{"link":false,"value":{"value":{"hex":"#1a6ac0","rgba":"rgba(26, 106, 192, 1)"}},"name":"#1a6ac0","uid":"blue-6","class":".coh-color-blue-6","variable":"$coh-color-blue-6","inuse":true,"wysiwyg":true}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    weight: 28
 -
   type: cohesion_color
   export:
@@ -334,19 +414,35 @@
 -
   type: cohesion_color
   export:
+    uuid: 51d2c35e-e8e5-49fb-bf84-349e3d01a998
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: e4ebe7
+    label: '#E4EBE7'
+    json_values: '{"link":true,"value":{"value":{"hex":"#e4ebe7","rgba":"rgba(228, 235, 231, 1)"}},"name":"#E4EBE7","uid":"e4ebe7","class":".coh-color-e4ebe7","variable":"$coh-color-e4ebe7","inuse":true}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    weight: 37
+-
+  type: cohesion_color
+  export:
     uuid: 00282f58-192b-4eb7-8d31-fd85eb128d0c
     langcode: en
     status: true
     dependencies: {  }
     id: e4ebf7
     label: '#E4EBF7'
-    json_values: '{"link":true,"value":{"value":{"hex":"#e4ebf7","rgba":"rgba(228, 235, 247, 1)"}},"name":"#E4EBF7","uid":"e4ebf7","class":".coh-color-e4ebf7","variable":"$coh-color-e4ebf7"}'
+    json_values: '{"link":true,"value":{"value":{"hex":"#e4ebf7","rgba":"rgba(228, 235, 247, 1)"}},"name":"#E4EBF7","uid":"e4ebf7","class":".coh-color-e4ebf7","variable":"$coh-color-e4ebf7","inuse":true}'
     json_mapper: '{}'
     last_entity_update: entityupdate_0031
     locked: false
     modified: true
     selectable: true
-    weight: 39
+    weight: 41
 -
   type: cohesion_color
   export:
@@ -362,7 +458,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 27
+    weight: 29
 -
   type: cohesion_color
   export:
@@ -394,7 +490,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 28
+    weight: 30
 -
   type: cohesion_color
   export:
@@ -426,7 +522,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 29
+    weight: 31
 -
   type: cohesion_color
   export:
@@ -458,7 +554,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 30
+    weight: 32
 -
   type: cohesion_color
   export:
@@ -474,7 +570,7 @@
     locked: false
     modified: true
     selectable: true
-    weight: 34
+    weight: 36
 -
   type: cohesion_color
   export:
@@ -494,6 +590,38 @@
 -
   type: cohesion_color
   export:
+    uuid: af99fe7f-2885-4905-b577-466420c9f777
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: gray-1
+    label: 'Gray 1'
+    json_values: '{"name":"#333333","uid":"gray-1","value":{"value":{"hex":"#333333","rgba":"rgba(51, 51, 51, 1)"}},"wysiwyg":true,"class":".coh-color-gray-1","variable":"$coh-color-gray-1","inuse":true,"link":false}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    weight: 1
+-
+  type: cohesion_color
+  export:
+    uuid: 642da0bb-fe1b-48d9-ae8f-f0727a7c999b
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: red
+    label: Red
+    json_values: '{"link":true,"value":{"value":{"hex":"#cc0000","rgba":"rgba(204, 0, 0, 1)"}},"name":"Red","uid":"red","class":".coh-color-red","variable":"$coh-color-red","wysiwyg":true,"inuse":true}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    weight: 33
+-
+  type: cohesion_color
+  export:
     uuid: 26316cae-2da6-4cf0-a9e1-f53e5322c684
     langcode: en
     status: true
@@ -506,7 +634,23 @@
     locked: false
     modified: true
     selectable: true
-    weight: 31
+    weight: 34
+-
+  type: cohesion_color
+  export:
+    uuid: 9d6a93a4-2979-4e98-9e9f-8266fbb906e6
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: red-2
+    label: 'Red 2'
+    json_values: '{"link":false,"value":{"value":{"hex":"#e60000","rgba":"rgba(230, 0, 0, 1)"}},"name":"#e60000 Primary Red","uid":"red-2","class":".coh-color-red-2","variable":"$coh-color-red-2","inuse":true,"wysiwyg":false}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    weight: 35
 -
   type: cohesion_color
   export:
@@ -516,13 +660,29 @@
     dependencies: {  }
     id: transparent-blue
     label: 'transparent blue'
-    json_values: '{"link":true,"value":{"value":{"hex":"#00457c","rgba":"rgba(0, 69, 124, 0.8)"}},"name":"transparent blue","uid":"transparent-blue","class":".coh-color-transparent-blue","variable":"$coh-color-transparent-blue","wysiwyg":true,"inuse":true}'
+    json_values: '{"link":false,"value":{"value":{"hex":"#00457c","rgba":"rgba(0, 69, 124, 0.8)"}},"name":"Transparent Dark Blue","uid":"transparent-blue","class":".coh-color-transparent-blue","variable":"$coh-color-transparent-blue","wysiwyg":true,"inuse":true,"tags":[{"label":"Transparent","value":"transparent"}]}'
     json_mapper: '{}'
     last_entity_update: entityupdate_0031
     locked: false
     modified: true
     selectable: true
-    weight: 11
+    weight: 13
+-
+  type: cohesion_color
+  export:
+    uuid: ccf28b07-caa1-4336-95be-59118af2e282
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: transparent-light-blue
+    label: 'Transparent Light Blue'
+    json_values: '{"link":true,"value":{"value":{"hex":"#00457c","rgba":"rgba(0, 69, 124, 0.7)"}},"name":"Transparent Light Blue","uid":"transparent-light-blue","class":".coh-color-transparent-light-blue","variable":"$coh-color-transparent-light-blue","tags":[{"label":"Transparent","value":"transparent"}],"inuse":true}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    weight: 12
 -
   type: cohesion_color
   export:
@@ -538,20 +698,4 @@
     locked: false
     modified: true
     selectable: true
-    weight: 33
--
-  type: cohesion_color
-  export:
-    uuid: 642da0bb-fe1b-48d9-ae8f-f0727a7c999b
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: red
-    label: Red
-    json_values: '{"link":true,"value":{"value":{"hex":"#cc0000","rgba":"rgba(204, 0, 0, 1)"}},"name":"Red","uid":"red","class":".coh-color-red","variable":"$coh-color-red","wysiwyg":true}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0031
-    locked: false
-    modified: true
-    selectable: true
-    weight: 27
+    weight: 42
