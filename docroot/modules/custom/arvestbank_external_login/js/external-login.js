@@ -13,18 +13,115 @@ Drupal.behaviors.externalLogin = {
       width: "100%"
     });
 
-    // Prevent submission of menu login block if select is empty.
-    jQuery('.webform-submission-external-login-menu-add-form').submit(function (e) {
-      var selectIsSet = false;
-      jQuery('.webform-submission-external-login-menu-add-form select').each(function () {
-        if (jQuery(this).value() != '') {
-          selectIsSet = true;
+    // Form submit function.
+    jQuery('.webform-submission-external-login-menu-add-form,.webform-submission-external-login-add-form').submit(function (e) {
+
+      // Determine if this is menu or sidebar form.
+      if (jQuery(this).hasClass('.webform-submission-external-login-menu-add-form')) {
+        var sidebarForm = false;
+      }
+      else {
+        var sidebarForm = true;
+      }
+
+      // Get the active select element for the submitted form.
+      var $activeSelect = jQuery(this).find(
+        '.active-sidebar-select select[name="login_select_non_prod"],select[name="login_select"]'
+      );
+
+      // Get the online banking username element for the submitted form.
+      var $onlineBankingUsernameField = jQuery(this).find('input[name="username"]');
+
+      // Get the mortgage username element for the submitted form.
+      var $mortgageUsernameField = jQuery(this).find('input[name="userid"]');
+
+      // Determine the domain of the corresponding online banking site.
+      if ($activeSelect.attr('name') == 'login_select_non_prod') {
+        var onlineBankingDomain = 'https://new17test.arvest.com';
+      }
+      else {
+        var onlineBankingDomain = 'https://www.arvest.com';
+      }
+
+      // Ajax POST before redirect if online banking is selected.
+      // or nothing is selected (meaning we're defulting to online banking)
+      // and username is filled.
+      if (
+        // If online banking or nothing is selected and it's the sidebar form.
+        (
+          $activeSelect.val() == 'arvest_online_banking'
+          || (
+            $activeSelect.val() == null
+            && sidebarForm
+          )
+        )
+        // If username field is set.
+        && $onlineBankingUsernameField.val()
+      ) {
+        // Prevent submission.
+        e.preventDefault();
+
+        jQuery.ajax({
+          async: false,
+          url: onlineBankingDomain + "/personal/signon/logon",
+          type: "POST",
+          data: {"username": $onlineBankingUsernameField.val(), "q": ''  },
+        }).done(function () {
+
+          // Redirect, same as submitting form, but we already prevented that.
+          post_redirect({url: onlineBankingDomain + "/personal/signon/logon/authenticate",
+            method: "post",
+            data: {"username": $onlineBankingUsernameField.val()}
+          });
+
+        });
+
+      }
+
+      // If we're submitting the mortgage form and have a username set.
+      if (
+        $activeSelect.val() == 'mortgage'
+        // If username field is set.
+        && $mortgageUsernameField.val() != ''
+      ) {
+
+        // Prevent submission.
+        e.preventDefault();
+
+        // Determine post variables to send.
+        var postVariables = {
+          "userid": $mortgageUsernameField.val(),
+          "password": jQuery(this).find('input[name="password"]').val(),
+        };
+
+        // Add value for "remember" if checked.
+        if (jQuery(this).find('input[name="remember"]').is(':checked')) {
+          postVariables.rememberVal = "on";
         }
+
+        // Send cleaner version of submission.
+        post_redirect({url: jQuery(this).attr('action'),
+          method: "post",
+          data: postVariables,
+        });
+      }
+
+
+
+      // Determine if menu login block if select is empty.
+      var menuSelectIsSet = false;
+      jQuery('.webform-submission-external-login-menu-add-form select').each(function () {
+          if (jQuery(this).val() != '') {
+            menuSelectIsSet = true;
+          }
       });
-      if (!selectIsSet) {
+
+      // If this is the menu form and that select isn't set.
+      if (!menuSelectIsSet || !sidebarForm) {
         e.preventDefault();
         return false;
       }
+
     });
 
     // Populate cashman browser data.
@@ -48,7 +145,7 @@ Drupal.behaviors.externalLogin = {
     if (jQuery('.block-homepage-external-login-block .active-sidebar-select-non-prod').length) {
       jQuery('.block-homepage-external-login-block form').attr(
         'action',
-        'https://new17test.arvest.com/personal/signon/logon/'
+        'https://new17test.arvest.com/personal/signon/logon/authenticate'
       );
     }
 
@@ -56,7 +153,7 @@ Drupal.behaviors.externalLogin = {
     if (jQuery('.block-homepage-external-login-block .active-sidebar-select-prod').length) {
       jQuery('.block-homepage-external-login-block form').attr(
         'action',
-        'https://www.arvest.com/personal/signon/logon/'
+        'https://www.arvest.com/personal/signon/logon/authenticate'
       );
     }
 
@@ -98,7 +195,7 @@ Drupal.behaviors.externalLogin = {
 
     // Login select change function.
     // For non-prod login select.
-    jQuery('#edit-login-select-non-prod').add('#edit-login-select-non-prod--2').change(function () {
+    jQuery('select[name="login_select_non_prod"]').change(function () {
 
       // If "Cash Manager" is selected.
       if (jQuery(this).val() == 'cash_manager') {
@@ -121,7 +218,7 @@ Drupal.behaviors.externalLogin = {
         // Change form action.
         jQuery(this).parents('form').attr(
           'action',
-          'https://new17test.arvest.com/personal/signon/logon/'
+          'https://new17test.arvest.com/personal/signon/logon'
         );
       }
       // If "Mortgage" is selected.
@@ -146,7 +243,7 @@ Drupal.behaviors.externalLogin = {
 
     // Login select change function.
     // For prod login select.
-    jQuery('#edit-login-select').add('#edit-login-select--2').change(function () {
+    jQuery('select[name="login_select"]').change(function () {
 
       // If "Cash Manager" is selected.
       if (jQuery(this).val() == 'cash_manager') {
@@ -169,7 +266,7 @@ Drupal.behaviors.externalLogin = {
         // Change form action.
         jQuery(this).parents('form').attr(
           'action',
-          'https://www.arvest.com/personal/signon/logon/'
+          'https://www.arvest.com/personal/signon/logon'
         );
       }
       // If "Mortgage" is selected.
@@ -190,7 +287,19 @@ Drupal.behaviors.externalLogin = {
 
     });
 
+    function post_redirect(options){
+      var $form = jQuery("<form />");
 
+      $form.attr("action",options.url);
+      $form.attr("method",options.method);
+
+      for (var data in options.data) {
+        $form.append('<input type="hidden" name="' + data + '" value="' + options.data[data] + '" />');
+      }
+
+      jQuery("body").append($form);
+      $form.submit();
+    }
 
   }
 };
