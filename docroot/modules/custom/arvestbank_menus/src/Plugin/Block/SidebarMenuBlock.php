@@ -83,8 +83,10 @@ class SidebarMenuBlock extends BlockBase {
 
       }
       // If this is an education article.
-      elseif ($node->getType() == 'article_education_article') {
-
+      elseif (
+        method_exists($node, 'getType') &&
+        $node->getType() == 'article_education_article'
+      ) {
         // Get rendered menu block.
         $menuBlockId = self::MENU_SIDEBAR_BLOCKS['education-center-menu'];
         $menuBlock = Block::load($menuBlockId);
