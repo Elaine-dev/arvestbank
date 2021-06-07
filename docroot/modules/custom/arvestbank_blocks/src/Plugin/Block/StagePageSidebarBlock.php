@@ -48,6 +48,8 @@ class StagePageSidebarBlock extends BlockBase {
         if (!empty($alert_view->result)) {
           $alert = views_embed_view('stage_page_sidebar_alert', 'default');
           $sidebar_block['alert'] = $alert;
+          $sidebar_block['alert']['#prefix'] = '<div class="coh-style-alert">';
+          $sidebar_block['alert']['#suffix'] = '</div>';
         }
 
         else {

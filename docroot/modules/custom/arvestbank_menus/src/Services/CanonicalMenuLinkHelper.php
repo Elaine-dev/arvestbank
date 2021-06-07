@@ -289,7 +289,10 @@ class CanonicalMenuLinkHelper {
       }
 
       // If this is an education article.
-      elseif ($node->getType() == 'article_education_article') {
+      elseif (
+        method_exists($node, 'getType') &&
+        $node->getType() == 'article_education_article'
+      ) {
         $hasSidebar = TRUE;
       }
 
