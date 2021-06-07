@@ -218,7 +218,7 @@ Drupal.behaviors.externalLogin = {
         // Change form action.
         jQuery(this).parents('form').attr(
           'action',
-          'https://www.arvest.com/personal/signon/logon'
+          'https://new17test.arvest.com/personal/signon/logon'
         );
       }
       // If "Mortgage" is selected.
