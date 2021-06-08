@@ -60,8 +60,8 @@ class PhoneNumber extends CKEditorPluginBase {
 
       // Add to array.
       $config['phonenumber_tokens'][] = [
-        'number' => $phoneNumberEntity->getTitle(),
-        'token' => '[arvestbank_phone_numbers:nid=' . $phoneNumberEntity->id() . ']',
+        $phoneNumberEntity->getTitle(),
+        '[arvestbank_phone_numbers:nid=' . $phoneNumberEntity->id() . ']',
       ];
     }
 
