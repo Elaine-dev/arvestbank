@@ -1,0 +1,14 @@
+uuid: b672421d-f572-4899-84a0-d2582c4896a7
+langcode: en
+status: true
+dependencies: {  }
+name: private_banker_location_image
+label: 'Private Banker Location Image'
+effects:
+  d6b7b329-772d-4bc2-b20b-19a36fdb27ea:
+    uuid: d6b7b329-772d-4bc2-b20b-19a36fdb27ea
+    id: image_resize
+    weight: 1
+    data:
+      width: 270
+      height: 180
