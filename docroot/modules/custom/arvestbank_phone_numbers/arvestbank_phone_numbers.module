@@ -34,7 +34,7 @@ function arvestbank_phone_numbers_token_info() {
   // Loop over phone numbers.
   foreach ($phoneNumbers as $phoneNumberRevisionId => $phoneNumberEntityId) {
 
-    // Decide on human name for config variable.
+    // Load phone number entity.
     $phoneNumberEntity = \Drupal::entityTypeManager()
       ->getStorage('node')
       ->load($phoneNumberEntityId);

@@ -38,6 +38,7 @@ settings:
             - Blockquote
             - DrupalImage
             - creditcardrate
+            - phonenumber
         -
           name: Tools
           items:
