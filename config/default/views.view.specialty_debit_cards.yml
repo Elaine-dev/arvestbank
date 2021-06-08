@@ -51,7 +51,7 @@ display:
       exposed_form:
         type: bef
         options:
-          submit_button: Search
+          submit_button: Filter
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -630,7 +630,7 @@ display:
           empty: true
           tokenize: false
           content:
-            value: 'No cards match your search terms. Please try again.'
+            value: '<div class="card-slider"><h2 class="no-results">No cards match your filter terms. Please try again.</h2></div>'
             format: cohesion
           plugin_id: text
       relationships:
