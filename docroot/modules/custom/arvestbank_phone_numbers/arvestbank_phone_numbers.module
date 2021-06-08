@@ -1,0 +1,96 @@
+<?php
+
+/**
+ * @file
+ * Hooks relating to arvestbank phone numbers.
+ */
+
+use Drupal\Core\Render\BubbleableMetadata;
+
+/**
+ * Implements hook_token_info().
+ */
+function arvestbank_phone_numbers_token_info() {
+
+  // Instantiate tokens array with token group.
+  $info = [
+    'types' => [
+      'arvestbank_phone_numbers' => [
+        'name' => t('Arvest Bank Phone Numbers'),
+        'description' => t('Tokens containing phone numbers.'),
+      ],
+    ],
+    'tokens' => [
+      'arvestbank_phone_numbers' => [],
+    ],
+  ];
+
+  // Get published nodes in cta_phone_number bundle.
+  $phoneNumbersQuery = \Drupal::entityQuery('node')
+    ->condition('type', 'cta_phone_number')
+    ->condition('status', 1);
+  $phoneNumbers = $phoneNumbersQuery->execute();
+
+  // Loop over phone numbers.
+  foreach ($phoneNumbers as $phoneNumberRevisionId => $phoneNumberEntityId) {
+
+    // Decide on human name for config variable.
+    $phoneNumberEntity = \Drupal::entityTypeManager()
+      ->getStorage('node')
+      ->load($phoneNumberEntityId);
+
+    // Add config variable to arvestbank_rates token group.
+    // Numeric keys here would cause ids to be incorrect when tokens are loaded.
+    $info['tokens']['arvestbank_phone_numbers']['nid=' . $phoneNumberEntity->id()] = [
+      'name' => $phoneNumberEntity->getTitle(),
+      'description' => 'A token representing the phone number currently with the value "' . $phoneNumberEntity->getTitle() . '"',
+    ];
+
+  }
+
+  return $info;
+}
+
+/**
+ * Implements hook_tokens().
+ *
+ * @inheritDoc
+ */
+function arvestbank_phone_numbers_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata) {
+
+  $replacements = [];
+
+  // Loop over tokens that need replacing.
+  foreach ($tokens as $name => $original) {
+
+    // If this is a phone number token.
+    if ($type == 'arvestbank_phone_numbers') {
+
+      // Initially set the value to null in case we can't load the node.
+      $replacements[$original] = '';
+
+      // Get phone number nid from token.
+      $phoneNumberNid = str_replace(['[arvestbank_phone_numbers:nid=', ']'], '', $original);
+
+      // If we have a valid nid to try to load.
+      if ($phoneNumberNid && is_numeric($phoneNumberNid)) {
+
+        // Attempt loading phone number field.
+        $phoneNumberNode = \Drupal::entityTypeManager()
+          ->getStorage('node')
+          ->load($phoneNumberNid);
+
+        // If we loaded the node.
+        if ($phoneNumberNode) {
+          // Replace with the phone number.
+          $replacements[$original] = $phoneNumberNode->getTitle();
+        }
+
+      }
+
+    }
+
+  }
+
+  return $replacements;
+}
