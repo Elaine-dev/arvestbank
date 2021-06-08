@@ -9,3 +9,9 @@ contact_arvest_wealth_management:
 verifiable_consumer_request:
   js:
     js/verifiable_consumer_request.js: {}
+
+webform_chosen:
+  js:
+    js/webform-chosen.js: {}
+  dependencies:
+    - chosen/drupal.chosen
