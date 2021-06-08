@@ -84,11 +84,6 @@ function arvestbank_webforms_form_alter(&$form, FormStateInterface $form_state, 
 
   }
 
-  // Adds chosen library to select elements with class "webform-chosen".
-  if (substr($form_id, 0, 18) == "webform_submission") {
-    $form['#attached']['library'][] = 'arvestbank_webforms/webform_chosen';
-  }
-
   return $form;
 
 }
