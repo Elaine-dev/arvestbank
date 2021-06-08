@@ -22,9 +22,18 @@ function arvestbank_views_form_views_exposed_form_alter(&$form, FormStateInterfa
     'views-exposed-form-mortgage-loan-officer-block-mortgage-block',
     'views-exposed-form-trust-and-estate-block-block-3',
     'views-exposed-form-specialty-debit-cards-specialty-debit-card-block',
+    'views-exposed-form-specialty-debit-cards-page-1',
+    'views-exposed-form-private-banker-block-private-banker-block',
   ];
   if (!in_array($form['#id'], $altered_forms)) {
     return FALSE;
+  }
+
+  // Special updates to the Specialty Debit Cards View (early return).
+  if ($form['#id'] === 'views-exposed-form-specialty-debit-cards-specialty-debit-card-block') {
+    module_load_include('inc', 'arvestbank_views', 'inc/arvestbank_views.debit_cards_filter');
+    $form = arvestbank_views_debit_cards_filter($form);
+    return $form;
   }
 
   // Return nodes based on the associate type.
@@ -43,13 +52,10 @@ function arvestbank_views_form_views_exposed_form_alter(&$form, FormStateInterfa
       $term_name = 'Trust Officers';
       $select_option = 'Select Name...';
       break;
-  }
-
-  // Special updates to the Specialty Debit Cards View (early return).
-  if ($form['#id'] === 'views-exposed-form-specialty-debit-cards-specialty-debit-card-block') {
-    module_load_include('inc', 'arvestbank_views', 'inc/arvestbank_views.debit_cards_filter');
-    $form = arvestbank_views_debit_cards_filter($form);
-    return $form;
+    case 'views-exposed-form-private-banker-block-private-banker-block':
+      $term_name = 'Private Bankers';
+      $select_option = 'Select Location';
+      break;
   }
 
   $term = \Drupal::entityTypeManager()
@@ -96,7 +102,7 @@ function arvestbank_views_form_views_exposed_form_alter(&$form, FormStateInterfa
         $location_options[$location] = $state . ' - ' . $exploded_location[0];
       }
       else {
-        $location_options[$location] = $location;
+        $location_options[$location] = ucfirst($location);
       }
     }
   }
@@ -114,6 +120,11 @@ function arvestbank_views_form_views_exposed_form_alter(&$form, FormStateInterfa
     'field_associate',
     'field_location',
   ];
+
+  // Remove the associates name select field for private banker view.
+  if ($form['#id'] === 'views-exposed-form-private-banker-block-private-banker-block') {
+    unset($select_fields[0]);
+  }
 
   foreach ($select_fields as $select_field) {
     $options = [];
