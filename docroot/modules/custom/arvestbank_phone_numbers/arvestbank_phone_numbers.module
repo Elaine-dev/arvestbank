@@ -80,8 +80,8 @@ function arvestbank_phone_numbers_tokens($type, $tokens, array $data, array $opt
           ->getStorage('node')
           ->load($phoneNumberNid);
 
-        // If we loaded the node.
-        if ($phoneNumberNode) {
+        // If we loaded the node and it's published.
+        if ($phoneNumberNode && $phoneNumberNode->isPublished()) {
           // Replace with the phone number.
           $replacements[$original] = $phoneNumberNode->getTitle();
         }
