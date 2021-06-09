@@ -25,6 +25,7 @@ function arvestbank_views_debit_cards_filter(array &$form) {
     '#title' => 'School Zip Code',
     '#size' => 10,
     '#maxlength' => 5,
+    '#placeholder' => 'Enter Zip Code',
   ];
 
   return $form;

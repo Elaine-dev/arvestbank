@@ -51,7 +51,7 @@ display:
       exposed_form:
         type: bef
         options:
-          submit_button: '>'
+          submit_button: Filter
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -75,7 +75,7 @@ display:
                 plugin_id: default
                 advanced:
                   rewrite:
-                    filter_rewrite_values: ''
+                    filter_rewrite_values: '- Any -|All Categories'
                   collapsible: false
                   is_secondary: false
               field_debit_card_keywords_value:
@@ -630,7 +630,7 @@ display:
           empty: true
           tokenize: false
           content:
-            value: 'No cards match your search terms. Please try again.'
+            value: '<div class="card-slider"><h2 class="no-results">No cards match your filter terms. Please try again.</h2></div>'
             format: cohesion
           plugin_id: text
       relationships:
@@ -2295,6 +2295,8 @@ display:
         group_by: false
         arguments: false
         cache: false
+        header: false
+        footer: false
       use_ajax: true
       pager:
         type: none
@@ -2409,7 +2411,7 @@ display:
               site_editor: '0'
               domain_admin: '0'
               enterprise_admin: '0'
-            placeholder: ''
+            placeholder: 'Enter Keyword'
           is_grouped: false
           group_info:
             label: ''
@@ -2458,7 +2460,7 @@ display:
               site_editor: '0'
               domain_admin: '0'
               enterprise_admin: '0'
-            placeholder: ''
+            placeholder: 'Enter Zip Code'
             min_placeholder: ''
             max_placeholder: ''
           is_grouped: false
@@ -2578,6 +2580,8 @@ display:
       cache:
         type: none
         options: {  }
+      header: {  }
+      footer: {  }
     cache_metadata:
       max-age: -1
       contexts:
