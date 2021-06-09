@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Render\BubbleableMetadata;
+use Drupal\Core\Entity\EntityInterface;
 
 /**
  * Implements hook_token_info().
@@ -93,4 +94,33 @@ function arvestbank_phone_numbers_tokens($type, $tokens, array $data, array $opt
   }
 
   return $replacements;
+}
+
+
+/**
+ * Implements hook_entity_presave().
+ *
+ * Trigger save for entities referencing phone number when it gets updated.
+ *
+ * @inheritDoc
+ */
+function arvestbank_phone_numbers_entity_presave(EntityInterface $entity) {
+
+  // If the entity is a "CTA Phone Number" node.
+  if (
+    $entity->getEntityTypeId() == 'node'
+    && $entity->bundle() == 'cta_phone_number'
+  ) {
+
+    // Get token reference helper service.
+    $tokenReferenceHelper = \Drupal::service('arvestbank_revisions.token_reference_helper');
+
+    // Get token we want to look for.
+    $token = 'arvestbank_phone_numbers:nid=' . $entity->id();
+
+    // Create new revision for nodes referencing rates tokens.
+    $tokenReferenceHelper->createRevisionsForReferencingNodes($token, 'Programatic Revision To Record Phone Number Change.');
+
+  }
+
 }

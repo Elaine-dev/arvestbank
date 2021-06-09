@@ -309,7 +309,7 @@ class RatesForm extends ConfigFormBase {
     foreach ($formValues as $formFieldKey => $formFieldValue) {
 
       // If we're not ignoring this value.
-      if(!in_array($formFieldKey,$this->formValueKeysToIgnore)) {
+      if (!in_array($formFieldKey, $this->formValueKeysToIgnore)) {
         // Save submitted value to config.
         $this->config('arvestbank_rates.settings')
           ->set($formFieldKey, $formFieldValue)
@@ -318,34 +318,11 @@ class RatesForm extends ConfigFormBase {
 
     }
 
-    // Get basic pages that have rates in body copy.
-    $basicPagesWithRatesQuery = \Drupal::entityQuery('node')
-      ->condition('type', 'page')
-      ->condition('body', '[arvestbank_rates:', 'CONTAINS');
-    $basicPagesWithRatesResults = $basicPagesWithRatesQuery->execute();
+    // Get token reference helper service.
+    $tokenReferenceHelper = \Drupal::service('arvestbank_revisions.token_reference_helper');
 
-    // Get component pages that have rates in a component instance.
-    $campaignPagesWithRatesQuery = \Drupal::entityQuery('node')
-      ->condition('type', 'campaign_page')
-      ->condition('field_layout_canvas.entity:cohesion_layout.json_values', '[arvestbank_rates:', 'CONTAINS');
-    $campaignPagesWithRatesResults = $campaignPagesWithRatesQuery->execute();
-
-    // Combine result arrays.
-    $nodesWithRates = array_merge($basicPagesWithRatesResults, $campaignPagesWithRatesResults);
-    // Load the nodes with rates.
-    $nodesWithRates = \Drupal::entityTypeManager()
-      ->getStorage('node')
-      ->loadMultiple($nodesWithRates);
-
-    // Loop over nodes with rates.
-    foreach ($nodesWithRates as $nodeWithRates) {
-      // Save node, creating revision with updated rate in field_rendered_node.
-      $nodeWithRates->setNewRevision(TRUE);
-      $nodeWithRates->revision_log = 'Programatic Revision To Record Rates Change.';
-      $nodeWithRates->setRevisionCreationTime(REQUEST_TIME);
-      $nodeWithRates->setRevisionUserId(1);
-      $nodeWithRates->save();
-    }
+    // Create new revision for nodes referencing rates tokens.
+    $tokenReferenceHelper->createRevisionsForReferencingNodes('arvestbank_rates', 'Programatic Revision To Record Rates Change.');
 
   }
 
