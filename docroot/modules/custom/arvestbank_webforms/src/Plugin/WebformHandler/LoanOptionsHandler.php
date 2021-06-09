@@ -3,6 +3,7 @@
 namespace Drupal\arvestbank_webforms\Plugin\WebformHandler;
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\views\Views;
 use Drupal\webform\Plugin\WebformHandlerBase;
 use Drupal\Component\Utility\Html;
 use Drupal\webform\WebformSubmissionInterface;
@@ -35,19 +36,19 @@ class LoanOptionsHandler extends WebformHandlerBase {
 //    dump($webform_submission);
 //    die();
 
-    $entity_type = 'node';
-    $entity_id = '13391';
-    $view_mode = 'teaser';
+    $financing = views_embed_view('financing', 'default', 13391);
 
-    $entity = \Drupal::entityTypeManager()->getStorage($entity_type)->load($entity_id);
-    $view_builder = \Drupal::entityTypeManager()->getViewBuilder($entity_type);
-    $pre_render = $view_builder->view($entity, $view_mode);
+//    $entity_type = 'node';
+//    $entity_id = '13391';
+//    $view_mode = 'teaser';
+//
+//    $entity = \Drupal::entityTypeManager()->getStorage($entity_type)->load($entity_id);
+//    $view_builder = \Drupal::entityTypeManager()->getViewBuilder($entity_type);
+//    $pre_render = $view_builder->view($entity, $view_mode);
+//
+//    dump($pre_render);die();
 
-    dump($pre_render);die();
-
-    $build[] = $pre_render;
-
-    dump($build);die();
+    $build[] = $financing;
 
     $this->getWebform()->setSettingOverride('confirmation_message', render($build));
 
