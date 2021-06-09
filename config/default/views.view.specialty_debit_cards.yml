@@ -9,6 +9,7 @@ dependencies:
     - field.storage.media.field_id_internal
     - image.style.thumbnail
     - media.type.credit_or_debit_card
+    - responsive_image.styles.debit_cards
     - system.menu.admin
     - system.menu.main
     - taxonomy.vocabulary.debit_card_category
@@ -17,6 +18,7 @@ dependencies:
     - geolocation
     - image
     - media
+    - responsive_image
     - taxonomy
     - user
 id: specialty_debit_cards
@@ -2029,9 +2031,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: image
+          type: responsive_image
           settings:
-            image_style: ''
+            responsive_image_style: debit_cards
             image_link: ''
           group_column: ''
           group_columns: {  }
