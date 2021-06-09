@@ -13,16 +13,16 @@ use Drupal\Core\StringTranslation\StringTranslationTrait;
  * Webform validate handler.
  *
  * @WebformHandler(
- *   id = "arvestbank_webforms_loanoptions",
- *   label = @Translation("Loan Options"),
+ *   id = "arvestbank_webforms_financing",
+ *   label = @Translation("Financing Options"),
  *   category = @Translation("Settings"),
- *   description = @Translation("Displays loan options based off of form selections."),
+ *   description = @Translation("Displays financing options based off of form selections."),
  *   cardinality = \Drupal\webform\Plugin\WebformHandlerInterface::CARDINALITY_SINGLE,
  *   results = \Drupal\webform\Plugin\WebformHandlerInterface::RESULTS_PROCESSED,
  *   submission = \Drupal\webform\Plugin\WebformHandlerInterface::SUBMISSION_OPTIONAL,
  * )
  */
-class LoanOptionsHandler extends WebformHandlerBase {
+class FinancingHandler extends WebformHandlerBase {
 
   use StringTranslationTrait;
 
@@ -31,22 +31,11 @@ class LoanOptionsHandler extends WebformHandlerBase {
    */
   public function preSave(WebformSubmissionInterface $webform_submission) {
 
-    $build = [];
+      $build = [];
 
-//    dump($webform_submission);
-//    die();
+// https://www.drupal.org/docs/8/modules/webform/webform-cookbook/how-to-programmatically-skip-pages-in-wizard-forms
 
     $financing = views_embed_view('financing', 'default', 13391);
-
-//    $entity_type = 'node';
-//    $entity_id = '13391';
-//    $view_mode = 'teaser';
-//
-//    $entity = \Drupal::entityTypeManager()->getStorage($entity_type)->load($entity_id);
-//    $view_builder = \Drupal::entityTypeManager()->getViewBuilder($entity_type);
-//    $pre_render = $view_builder->view($entity, $view_mode);
-//
-//    dump($pre_render);die();
 
     $build[] = $financing;
 

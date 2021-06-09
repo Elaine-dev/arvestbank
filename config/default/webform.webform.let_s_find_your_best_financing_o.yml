@@ -119,7 +119,7 @@ settings:
   confirmation_message: 'Thank you!'
   confirmation_url: ''
   confirmation_attributes: {  }
-  confirmation_back: true
+  confirmation_back: false
   confirmation_back_label: ''
   confirmation_back_attributes: {  }
   confirmation_exclude_query: false
@@ -194,11 +194,11 @@ access:
     users: {  }
     permissions: {  }
 handlers:
-  loan_options:
-    id: arvestbank_webforms_loanoptions
-    label: 'Loan Options'
+  financing_options:
+    id: arvestbank_webforms_financing
+    label: 'Financing Options'
     notes: ''
-    handler_id: loan_options
+    handler_id: financing_options
     status: true
     conditions: {  }
     weight: 0
