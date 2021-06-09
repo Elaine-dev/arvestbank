@@ -84,6 +84,14 @@ function arvestbank_webforms_form_alter(&$form, FormStateInterface $form_state, 
 
   }
 
+  // Use <none> as the previous button label to hide it.
+  if (
+    !empty($form['actions']['wizard_prev']['#value'])
+    && $form['actions']['wizard_prev']['#value'] === '<none>'
+  ) {
+    $form['actions']['wizard_prev']['#access'] = FALSE;
+  }
+
   return $form;
 
 }
