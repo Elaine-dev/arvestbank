@@ -26,10 +26,39 @@
           radius = 100;
         }
 
+        // Set default sizes for desktop.
+        let position_top = 170;
+        let size_height = 390;
+        let item_size_focus_width = 300;
+        let item_size_focus_height = 400;
+        let item_prop_size_width = 300;
+        let item_prop_size_height = 185;
+        let item_prop_size_focused_width = 389;
+        let item_prop_size_focused_height = 244;
+        let visible_items = 1;
+
+        // If mobile, or really less than tablet, update the dimensions.
+        if (width < 565) {
+          // Set a number to reduce the above sizes for mobile.
+          let mobile_modifier = .65;
+          // Scale all of these back by the modifier.
+          radius = radius * mobile_modifier;
+          position_top = position_top * mobile_modifier;
+          size_height = size_height * mobile_modifier;
+          item_size_focus_width = item_size_focus_width * mobile_modifier;
+          item_size_focus_height = item_size_focus_height * mobile_modifier;
+          item_prop_size_width = item_prop_size_width * mobile_modifier;
+          item_prop_size_height = item_prop_size_height * mobile_modifier;
+          item_prop_size_focused_width = item_prop_size_focused_width * mobile_modifier;
+          item_prop_size_focused_height = item_prop_size_focused_height * mobile_modifier;
+          // Static adjustments.
+          visible_items = 0;
+        }
+
         var options = {
           alwaysShowCaption: true,
           center: {
-            top: 170,
+            top: position_top,
             left: width / 2
           },
           controls: {
@@ -37,13 +66,14 @@
             fadeTime: 0,
             margin: {
               x: 0,
-              y: 160
+              y: position_top - 10
             }
           },
           currentLayer: 1, // 0 will set to middle
+
           item_size_focus:{
-            width: 300,
-            height: 400
+            width: item_size_focus_width,
+            height: item_size_focus_height
           },
           fadeTime: 100,
           keyDelay: 100,
@@ -51,12 +81,12 @@
             delay: 100,
             cssClass: 'rondellItem',
             size: {
-              width: 300,
-              height: 185
+              width: item_prop_size_width,
+              height: item_prop_size_height
             },
             sizeFocused: {
-              width: 389,
-              height: 244
+              width: item_prop_size_focused_width,
+              height: item_prop_size_focused_height
             }
           },
           lightbox: {
@@ -69,14 +99,14 @@
           repeating: true,
           size: {
             width:  width,  // 380
-            height: 390
+            height: size_height
           },
           touch: {
             enabled: true,
             preventDefaults: true,
             threshold: 50
           },
-          visibleItems: 1,
+          visibleItems: visible_items,
           funcOpacity: function (l, r, i) {
             /**
              * Lazy Load hack!
