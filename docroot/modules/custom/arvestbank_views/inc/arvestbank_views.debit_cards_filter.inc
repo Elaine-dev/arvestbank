@@ -13,6 +13,12 @@
  */
 function arvestbank_views_debit_cards_filter(array &$form) {
 
+  // Add second submit button.
+  $form['second_submit_button'] = [
+    '#type' => 'submit',
+    '#value' => t('Filter'),
+  ];
+
   // Hide the geolocation fields from the exposed form.
   // We need to alter them later so can't set to #access=FALSE in this case.
   $form['center']['coordinates']['#attributes'] = ['style' => 'display:none;'];
