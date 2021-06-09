@@ -17,6 +17,7 @@ module:
   arvestbank_media_alias: 0
   arvestbank_menus: 0
   arvestbank_migrate: 0
+  arvestbank_phone_numbers: 0
   arvestbank_rates: 0
   arvestbank_revisions: 0
   arvestbank_search: 0
