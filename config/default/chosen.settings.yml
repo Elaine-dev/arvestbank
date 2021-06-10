@@ -6,7 +6,7 @@ use_relative_width: true
 jquery_selector: select
 search_contains: false
 disable_search: false
-allow_single_deselect: false
+allow_single_deselect: true
 placeholder_text_multiple: 'Choose some options'
 placeholder_text_single: 'Choose an option'
 no_results_text: 'No results match'
