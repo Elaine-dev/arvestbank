@@ -37,10 +37,13 @@
         let item_prop_size_focused_height = 244;
         let visible_items = 1;
 
-        // If mobile, or really less than tablet, update the dimensions.
-        if (width < 565) {
-          // Set a number to reduce the above sizes for mobile.
-          let mobile_modifier = .65;
+        // Update dimensions with ratios for smaller screens.
+        if (width < 400) {
+          let mobile_modifier = .65; // Looks good until below ~420px screen devices
+          if (width < 276) {
+            mobile_modifier = .4;
+            size_height = 1.15 * size_height; // Allow more space below slides for captions
+          }
           // Scale all of these back by the modifier.
           radius = radius * mobile_modifier;
           position_top = position_top * mobile_modifier;
