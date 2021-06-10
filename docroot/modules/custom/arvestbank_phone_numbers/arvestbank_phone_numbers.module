@@ -7,6 +7,7 @@
 
 use Drupal\Core\Render\BubbleableMetadata;
 use Drupal\Core\Entity\EntityInterface;
+use \Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_token_info().
@@ -96,7 +97,6 @@ function arvestbank_phone_numbers_tokens($type, $tokens, array $data, array $opt
   return $replacements;
 }
 
-
 /**
  * Implements hook_entity_presave().
  *
@@ -137,5 +137,50 @@ function arvestbank_phone_numbers_form_node_form_alter(&$form, &$form_state, $fo
     ];
     array_push($form, $helpText);
   }
+
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function arvestbank_phone_numbers_form_node_cta_phone_number_delete_form_alter(&$form, FormStateInterface &$form_state, $form_id) {
+  $form['#validate'][] = '_arvestbank_phone_numbers_validate_no_references';
+}
+
+/**
+ * Validation function to prevent deletion of referenced numbers.
+ */
+function _arvestbank_phone_numbers_validate_no_references(&$form, FormStateInterface $form_state){
+
+  // Get node we're trying to delete.
+  $node = $form_state->getFormObject()->getEntity();
+
+  // Load Token Reference Helper Service.
+  $tokenReferenceHelper = \Drupal::service('arvestbank_revisions.token_reference_helper');
+
+  // Determine token for this phone number.
+  $phoneNumberToken = 'arvestbank_phone_numbers:nid=' . $node->id();
+
+  // Check for references to this phone number.
+  $tokenReferences = $tokenReferenceHelper->getNodesWithReferencesToTokenGroup($phoneNumberToken);
+
+  // If there are references.
+  if (is_array($tokenReferences) &&count($tokenReferences)) {
+
+    // Build error message.
+    $errorMessage = [
+      '#markup' => 'There are pages referencing this phone number.<br/>Please remove these tokens before deleting this phone number.<br/>',
+    ];
+
+    // Loop over token references.
+    foreach ($tokenReferences as $tokenReference) {
+      $errorMessage['#markup'] .= 'Edit page: <a href="/node/' . $tokenReference->id() . '/edit" target="_blank"><b>"' . $tokenReference->getTitle() . '"</b></a>';
+    }
+
+    // Set error message.
+    $form_state->setError($form['confirm'], $errorMessage);
+
+  }
+
 
 }
