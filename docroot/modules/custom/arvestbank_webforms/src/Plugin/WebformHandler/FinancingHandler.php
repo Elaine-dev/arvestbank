@@ -135,6 +135,7 @@ class FinancingHandler extends WebformHandlerBase {
     // Overwrite the confirmation message with this nice build array.
     $this->getWebform()->setSettingOverride('confirmation_message', render($build));
 
+    
     // https://www.drupal.org/docs/8/modules/webform/webform-cookbook/how-to-programmatically-skip-pages-in-wizard-forms
 
   }
