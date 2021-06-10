@@ -140,6 +140,7 @@ module:
   search_api_attachments: 0
   search_api_attachments_php: 0
   search_api_db: 0
+  seckit: 0
   serialization: 0
   settings_tray: 0
   shield: 0

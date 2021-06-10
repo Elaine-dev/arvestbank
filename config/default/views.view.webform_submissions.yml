@@ -1434,7 +1434,8 @@ display:
     display_title: 'Embed: Default'
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       display_description: 'Display submissions.'
       defaults:
         fields: true
@@ -1442,6 +1443,7 @@ display:
         row: false
         filters: true
         filter_groups: true
+        access: false
       style:
         type: table
         options:
@@ -1504,6 +1506,10 @@ display:
           separator: ''
           hide_empty: false
           default_field_elements: true
+      access:
+        type: perm
+        options:
+          perm: 'view any webform submission'
     cache_metadata:
       max-age: -1
       contexts:
@@ -1512,6 +1518,7 @@ display:
         - url
         - url.query_args
         - user
+        - user.permissions
       tags: {  }
   embed_manage:
     display_plugin: embed
