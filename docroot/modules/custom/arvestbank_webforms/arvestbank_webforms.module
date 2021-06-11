@@ -82,6 +82,18 @@ function arvestbank_webforms_form_alter(&$form, FormStateInterface $form_state, 
       $form['#validate'][] = '_arvestbank_webforms_equipment_finance_validate';
       break;
 
+    // Financing Options "Help Me Decide" Form.
+    case "webform_submission_financing_options_add_form":
+    case "webform_submission_financing_options_test_form":
+      $webform_input = $form_state->getUserInput();
+      if (array_key_exists('loan_other_purpose', $webform_input)) {
+        if ($webform_input['loan_other_purpose'] == 'education') {
+          unset($form['elements']['page4']['loan_secure']['#options']['vehicle']);
+          unset($form['elements']['page4']['loan_secure']['#options']['marine_boat']);
+        }
+      }
+      break;
+
   }
 
   // Use <none> as the previous button label to hide it.

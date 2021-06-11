@@ -8,7 +8,7 @@ namespace Drupal\arvestbank_webforms;
 class FinancingOptionsService {
 
   /**
-   * Constructs a new FinancingOptionsService object.
+   * Map of financing options.
    */
   public function financingOptions($key) {
 
@@ -93,10 +93,29 @@ class FinancingOptionsService {
       'marine_boat||unsecured||all_once' => 'unsecured|heloc|ploc',
       'marine_boat||unsecured||over_time' => 'ploc|auto|cd_loc',
       'marine_boat||marine_boat||' => 'marine_boat|heloc|cd_loc',
+    ];
 
+    if (array_key_exists($key, $financing_options_mapping)) {
+      $return = $financing_options_mapping[$key];
+    }
+    else {
+      $return = [];
+    }
 
+    return $return;
 
+  }
 
+  /**
+   * Map of financing options for the "other" path.
+   */
+  public function financingOptionsOther($key) {
+
+    // Format of this mapping:
+    // loan_type_1|loan_other_purpose|loan_secure|loan_veh_type|loan_secure_home
+    // (fieldnames from the webform).
+    $financing_options_mapping = [
+      'other|hvac_oth|vehicle|car_truck|' => 'auto|heloc|cd_install',
     ];
 
     if (array_key_exists($key, $financing_options_mapping)) {
