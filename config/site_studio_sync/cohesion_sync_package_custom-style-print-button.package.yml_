@@ -1,4 +1,3 @@
-
 -
   type: cohesion_sync_package
   export:
@@ -8,7 +7,7 @@
     dependencies: {  }
     id: pack_custom_style_print_button
     label: 'Custom Style Print Button'
-    description: 'A custom style for the Print Button on basic pages and calculators. Last Updated: Allie Jones 06/09/21'
+    description: 'A custom style for the Print Button on basic pages and calculators. Last Updated: Allie Jones 06/10/21'
     excluded_entity_types: '[]'
     settings: '{"f694aea3-8b43-4297-b7ca-43ca25aaadcc":{"type":"cohesion_custom_style","items":{"f694aea3-8b43-4297-b7ca-43ca25aaadcc":{"type":"cohesion_custom_style"}},"checked":true}}'
 -
