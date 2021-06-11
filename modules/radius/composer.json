@@ -1,9 +1,9 @@
 {
-    "name": "simplesamlphp/simplesamlphp-module-sqlauth",
-    "description": "This is a authentication module for authenticating a user against a SQL database",
+    "name": "simplesamlphp/simplesamlphp-module-radius",
+    "description": "A module that is able perform authentication against a RADIUS server",
     "type": "simplesamlphp-module",
-    "keywords": ["simplesamlphp", "sqlauth"],
-    "license": "LGPL-2.1-or-later",
+    "keywords": ["simplesamlphp", "radius"],
+    "license": "LGPL-3.0-or-later",
     "authors": [
         {
             "name": "Olav Morken",
@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "SimpleSAML\\Module\\sqlauth\\": "lib/"
+            "SimpleSAML\\Module\\radius\\": "lib/"
         }
     },
     "autoload-dev": {
@@ -31,12 +31,12 @@
         "simplesamlphp/composer-module-installer": "~1.1"
     },
     "require-dev": {
-        "phpunit/phpunit": "~5.7",
         "simplesamlphp/simplesamlphp": "^1.17",
-        "webmozart/assert": "^1.4 <1.7"
+        "simplesamlphp/simplesamlphp-test-framework": "^0.0.7",
+        "phpunit/phpunit": "~5.7"
     },
     "support": {
-        "issues": "https://github.com/tvdijen/simplesamlphp-module-sqlauth/issues",
-        "source": "https://github.com/tvdijen/simplesamlphp-module-sqlauth"
+        "issues": "https://github.com/tvdijen/simplesamlphp-module-radius/issues",
+        "source": "https://github.com/tvdijen/simplesamlphp-module-radius"
     }
 }
