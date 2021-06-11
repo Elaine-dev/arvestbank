@@ -45,6 +45,7 @@ settings:
             - ImceImage
             - Blockquote
             - creditcardrate
+            - phonenumber
         -
           name: Tools
           items:

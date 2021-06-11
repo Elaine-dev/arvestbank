@@ -3,3 +3,6 @@ services:
     class: Drupal\arvestbank_revisions\Routing\RouteSubscriber
     tags:
       - { name: event_subscriber }
+  arvestbank_revisions.token_reference_helper:
+    class: Drupal\arvestbank_revisions\TokenReferenceHelper
+    arguments: []

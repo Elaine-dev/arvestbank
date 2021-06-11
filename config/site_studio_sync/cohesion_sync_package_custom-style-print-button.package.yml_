@@ -1,0 +1,33 @@
+
+-
+  type: cohesion_sync_package
+  export:
+    uuid: 169ea75a-ea18-4a52-8f69-dc798312541a
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: pack_custom_style_print_button
+    label: 'Custom Style Print Button'
+    description: 'A custom style for the Print Button on basic pages and calculators. Last Updated: Allie Jones 06/09/21'
+    excluded_entity_types: '[]'
+    settings: '{"f694aea3-8b43-4297-b7ca-43ca25aaadcc":{"type":"cohesion_custom_style","items":{"f694aea3-8b43-4297-b7ca-43ca25aaadcc":{"type":"cohesion_custom_style"}},"checked":true}}'
+-
+  type: cohesion_custom_style
+  export:
+    uuid: f694aea3-8b43-4297-b7ca-43ca25aaadcc
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: b8e20799
+    label: 'Print Button'
+    json_values: '{"preview":{"text":"<div class=\"coh-preview\">Default content for ''Layout''.<\/div>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"div","class":"","combinator":"","pseudo":""},"68603e65-a5bb-4e58-9ccf-bac9b52889e9":{"settings":{"element":".field--name-field-print-button-text","class":"","combinator":"","pseudo":""},"styles":{"xl":{"margin":{"margin-top":{"value":"$sm"},"margin-bottom":{"value":"$sm"},"margin-left":{"value":"$sm"}},"float":{"value":"right"},"position":{"value":"absolute"},"right":{"value":"10"}},"ps":{"position":{"value":"relative"}}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+    json_mapper: '{"styles":{"title":"Layout","selectorType":"topLevel","formDefinition":[],"items":[{"title":".field--name-field-print-button-text","type":"container","items":[],"form":null,"selectorType":"child","model":".field--name-field-print-button-text","uuid":"68603e65-a5bb-4e58-9ccf-bac9b52889e9","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":true},{"name":"margin-bottom","active":true},{"name":"margin-left","active":true},{"name":"margin-right","active":false},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]},{"formKey":"float","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"float","active":true},{"name":"clear","active":false},{"name":"clearfix","active":false}]},{"formKey":"position","breakpoints":[{"name":"xl"},{"name":"ps"}],"activeFields":[{"name":"position","active":true},{"name":"top","active":true},{"name":"bottom","active":true},{"name":"left","active":true},{"name":"right","active":true},{"name":"z-index","active":true}]}]}]}],"form":null}}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    class_name: .coh-style-print-button
+    custom_style_type: layout
+    available_in_wysiwyg: false
+    parent: null
+    weight: 0

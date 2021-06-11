@@ -13,7 +13,9 @@ label: 'Print Button Text'
 description: 'Displays a button with this text that will click to open the print page dialog.'
 required: false
 translatable: true
-default_value: {  }
+default_value:
+  -
+    value: Print
 default_value_callback: ''
 settings: {  }
 field_type: string

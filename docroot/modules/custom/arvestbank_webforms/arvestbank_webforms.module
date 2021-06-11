@@ -84,9 +84,12 @@ function arvestbank_webforms_form_alter(&$form, FormStateInterface $form_state, 
 
   }
 
-  // Adds chosen library to select elements with class "webform-chosen".
-  if (substr($form_id, 0, 18) == "webform_submission") {
-    $form['#attached']['library'][] = 'arvestbank_webforms/webform_chosen';
+  // Use <none> as the previous button label to hide it.
+  if (
+    !empty($form['actions']['wizard_prev']['#value'])
+    && $form['actions']['wizard_prev']['#value'] === '<none>'
+  ) {
+    $form['actions']['wizard_prev']['#access'] = FALSE;
   }
 
   return $form;

@@ -1,0 +1,24 @@
+uuid: 15544cfb-a3eb-48af-b6cd-c868cbe1100d
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.debit_card
+    - image.style.debit_card_mobile
+  theme:
+    - arvestbank_theme
+id: debit_cards
+label: 'Debit Cards'
+image_style_mappings:
+  -
+    breakpoint_id: arvestbank_theme.phone_landscape
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: debit_card
+  -
+    breakpoint_id: arvestbank_theme.phone
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: debit_card_mobile
+breakpoint_group: arvestbank_theme
+fallback_image_style: debit_card

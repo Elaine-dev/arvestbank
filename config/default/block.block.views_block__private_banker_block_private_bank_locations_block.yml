@@ -1,0 +1,29 @@
+uuid: 56151ac0-4b57-4706-abfd-95cf827eb992
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.private_banker_block
+  module:
+    - cohesion
+    - views
+  theme:
+    - arvestbank_theme
+id: views_block__private_banker_block_private_bank_locations_block
+theme: arvestbank_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: 'views_block:private_banker_block-private_bank_locations_block'
+settings:
+  id: 'views_block:private_banker_block-private_bank_locations_block'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false
