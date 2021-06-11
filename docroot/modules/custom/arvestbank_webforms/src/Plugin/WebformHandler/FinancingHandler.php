@@ -112,6 +112,7 @@ class FinancingHandler extends WebformHandlerBase {
     // Holder for the rendered financing options, to be added to build later.
     $financing = [];
 
+    // If we have results, add embedded views to an array.
     if (!empty($results)) {
       $results_ar = explode('|', $results);
       foreach ($results_ar as $option) {
@@ -121,7 +122,7 @@ class FinancingHandler extends WebformHandlerBase {
       }
     }
 
-    // If there are finanainc options add to the build array.
+    // If there are financing options add to the build array.
     if (count($financing)) {
 
       // Beginning Markup.
@@ -155,6 +156,9 @@ class FinancingHandler extends WebformHandlerBase {
 
     else {
 
+// other|buy_home||
+//We’re glad you’re interested in buying  a home with Arvest. Visit arvest.com/homeloan to apply or learn more from our mortgage division.
+
       // Sorry no results.
       $build[] = [
         '#type' => 'markup',
@@ -165,8 +169,6 @@ class FinancingHandler extends WebformHandlerBase {
 
     // Overwrite the confirmation message with this nice build array.
     $this->getWebform()->setSettingOverride('confirmation_message', render($build));
-
-    // https://www.drupal.org/docs/8/modules/webform/webform-cookbook/how-to-programmatically-skip-pages-in-wizard-forms
 
   }
 
