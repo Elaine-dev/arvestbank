@@ -71,6 +71,32 @@ class FinancingOptionsService {
       'home_imp|spa_pool|unsecured||all_once' => 'unsecured_home_imp',
       'home_imp|spa_pool|unsecured||over_time' => 'ploc|unsecured|cd_loc',
       'home_imp|spa_pool|marine_boat||' => 'marine_boat|auto|rv',
+      'debt_consol||vehicle|car_truck|' => 'auto|heloc|cd_install',
+      'debt_consol||vehicle|motorcycle|' => 'motorcycle|heloc|cd_install',
+      'debt_consol||vehicle|atv_utv|' => 'atv_utv|heloc|cd_install',
+      'debt_consol||vehicle|rv|' => 'rv|heloc|cd_install',
+      'debt_consol||home_re||all_once' => 'he_loan|he_arm',
+      'debt_consol||home_re||over_time' => 'heloc|he_loan|he_arm',
+      'debt_consol||cash_acct_sec||all_once' => 'cd_install|he_loan',
+      'debt_consol||cash_acct_sec||over_time' => 'cd_loc|heloc',
+      'debt_consol||unsecured||all_once' => 'unsecured|heloc|ploc',
+      'debt_consol||unsecured||over_time' => 'ploc|auto',
+      'debt_consol||marine_boat||' => 'marine_boat|heloc|cd_loc',
+      'marine_boat||vehicle|car_truck|' => 'auto|heloc|cd_install',
+      'marine_boat||vehicle|motorcycle|' => 'motorcycle|heloc|cd_install',
+      'marine_boat||vehicle|atv_utv|' => 'atv_utv|heloc|cd_install',
+      'marine_boat||vehicle|rv|' => 'rv|heloc|cd_install',
+      'marine_boat||home_re||all_once' => 'he_loan|he_arm',
+      'marine_boat||home_re||over_time' => 'heloc|he_loan|he_arm',
+      'marine_boat||cash_acct_sec||all_once' => 'cd_install|he_loan',
+      'marine_boat||cash_acct_sec||over_time' => 'cd_loc|heloc',
+      'marine_boat||unsecured||all_once' => 'unsecured|heloc|ploc',
+      'marine_boat||unsecured||over_time' => 'ploc|auto|cd_loc',
+      'marine_boat||marine_boat||' => 'marine_boat|heloc|cd_loc',
+
+
+
+
     ];
 
     if (array_key_exists($key, $financing_options_mapping)) {
