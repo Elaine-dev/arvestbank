@@ -62,14 +62,31 @@ class FinancingHandler extends WebformHandlerBase {
       'unsecured_home_imp' => 13436,
     ];
 
-    // These are the webform fieldnames used to determine the result.
-    $fieldnames = [
-      'loan_type_1',
-      'loan_home_imp_type',
-      'loan_secure',
-      'loan_veh_type',
-      'loan_secure_home',
-    ];
+    // Grab the webform data.
+    $webform_data = $webform_submission->getData();
+
+    // Standard route - anything but "other" on the first question.
+    if ($webform_data['loan_type_1'] != 'other') {
+      // These are the webform fieldnames used to determine the result.
+      $fieldnames = [
+        'loan_type_1',
+        'loan_home_imp_type',
+        'loan_secure',
+        'loan_veh_type',
+        'loan_secure_home',
+      ];
+    }
+    // Else, they selected "Other Purposes" for "like money for...".
+    else {
+      // Webform fieldnames used to determine the result on the "other" path.
+      $fieldnames = [
+        'loan_type_1',
+        'loan_other_purpose',
+        'loan_secure',
+        'loan_veh_type',
+        'loan_secure_home',
+      ];
+    }
 
     // Holder for the form values.
     $values = [];
@@ -83,11 +100,19 @@ class FinancingHandler extends WebformHandlerBase {
     $results_key = implode('|', $values);
 
     // This will return an array with $node_mapping keys.
-    $results = \Drupal::service('arvestbank_webforms.financing_options')->financingOptions($results_key);
+    if ($webform_data['loan_type_1'] != 'other') {
+      $results = \Drupal::service('arvestbank_webforms.financing_options')
+        ->financingOptions($results_key);
+    }
+    else {
+      $results = \Drupal::service('arvestbank_webforms.financing_options')
+        ->financingOptionsOther($results_key);
+    }
 
     // Holder for the rendered financing options, to be added to build later.
     $financing = [];
 
+    // If we have results, add embedded views to an array.
     if (!empty($results)) {
       $results_ar = explode('|', $results);
       foreach ($results_ar as $option) {
@@ -97,22 +122,29 @@ class FinancingHandler extends WebformHandlerBase {
       }
     }
 
-    // If there are finanainc options add to the build array.
+    // If there are financing options add to the build array.
     if (count($financing)) {
 
       // Beginning Markup.
       $build[] = [
         '#type' => 'markup',
-        '#markup' => 'WE HAVE LOANS FOR YOU THIS IS THE BEST',
+        '#markup' => '<h2>Your Recommendation</h2>Based on your answers, this should be what you need!',
       ];
 
       for ($i = 0; $i <= 2; $i++) {
         if (!empty($financing[$i])) {
           // If this is the second option add the "more options" text.
           if ($i == 1) {
+            if (!empty($financing[2])) {
+              $option_text = "two options";
+            }
+            else {
+              $option_text = "option";
+            }
+            $message = "We understand each customer's financial situation and financing needs are different. With that in mind, we have an additional $option_text that could also help you.";
             $build[] = [
               '#type' => 'markup',
-              '#markup' => 'HERE ARE OTHER OPTIONS',
+              '#markup' => $message,
             ];
           }
           // Add embeded view to the build array.
@@ -124,19 +156,19 @@ class FinancingHandler extends WebformHandlerBase {
 
     else {
 
+// other|buy_home||
+//We’re glad you’re interested in buying  a home with Arvest. Visit arvest.com/homeloan to apply or learn more from our mortgage division.
+
       // Sorry no results.
       $build[] = [
         '#type' => 'markup',
-        '#markup' => 'SORRY NO LOANS AVAILABLE',
+        '#markup' => 'Thank you for your interest in this loan from Arvest! Unfortunately, we do not take online applications for this type of loan at this time. To learn more about the loan and apply, please call (866) 952-9523 or visit your local branch.',
       ];
 
     }
 
     // Overwrite the confirmation message with this nice build array.
     $this->getWebform()->setSettingOverride('confirmation_message', render($build));
-
-    
-    // https://www.drupal.org/docs/8/modules/webform/webform-cookbook/how-to-programmatically-skip-pages-in-wizard-forms
 
   }
 
