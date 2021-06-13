@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.page.field_print_button_text
     - field.field.node.page.field_rendered_node
     - field.field.node.page.field_second_callout
+    - field.field.node.page.field_second_callout_icon
     - field.field.node.page.field_second_callout_label
     - field.field.node.page.field_second_callout_link
     - field.field.node.page.field_yoast_seo
@@ -50,15 +51,16 @@ third_party_settings:
       region: content
       format_settings:
         description: ''
+        open: true
         required_fields: true
         id: ''
         classes: ''
-        open: false
       label: CTA
     group_second_call_out_button:
       children:
         - field_second_callout_label
         - field_second_callout_link
+        - field_second_callout_icon
       parent_name: group_cta
       weight: 9
       format_type: details
@@ -73,12 +75,12 @@ third_party_settings:
     group_basic_page_fields:
       children:
         - field_featured_image
-        - group_button
+        - field_button_links
         - group_cta
         - field_account_disclosure_informa
       parent_name: ''
       weight: 4
-      format_type: details
+      format_type: fieldset
       region: content
       format_settings:
         id: ''
@@ -92,36 +94,7 @@ third_party_settings:
         effect: none
         speed: fast
         attributes: ''
-        open: false
       label: 'Basic Page Fields'
-    group_place_blocks_or_cards_in_n:
-      children:
-        - field_layout_canvas
-      parent_name: ''
-      weight: 7
-      format_type: details
-      region: content
-      format_settings:
-        description: 'This is a space for additional blocks or cards that will display at the bottom of a basic page.'
-        required_fields: true
-        id: ''
-        classes: ''
-        open: false
-      label: 'Add Additional Blocks or Cards in Needed'
-    group_button:
-      children:
-        - field_button_links
-      parent_name: group_basic_page_fields
-      weight: 4
-      format_type: details
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        open: false
-        required_fields: true
-      label: Button
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -152,7 +125,7 @@ content:
     type: text_textarea
     region: content
   field_button_links:
-    weight: 5
+    weight: 4
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -214,7 +187,7 @@ content:
     type: cohesion_layout_builder_widget
     region: content
   field_meta_tags:
-    weight: 6
+    weight: 7
     settings:
       sidebar: true
     third_party_settings: {  }
@@ -258,6 +231,13 @@ content:
     third_party_settings:
       conditional_fields: {  }
     type: options_select
+    region: content
+  field_second_callout_icon:
+    type: media_library_widget
+    weight: 29
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
     region: content
   field_second_callout_label:
     weight: 27

@@ -1,0 +1,29 @@
+uuid: 261f4b11-d46e-4012-82d9-520ead43d441
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_second_callout_icon
+    - media.type.icon
+    - node.type.page
+id: node.page.field_second_callout_icon
+field_name: field_second_callout_icon
+entity_type: node
+bundle: page
+label: 'Second Callout Icon'
+description: 'An icon to replace the pin point on the CTA.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      icon: icon
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
