@@ -103,7 +103,7 @@ function arvestbank_search_form_views_exposed_form_alter(&$form, FormStateInterf
 
     // Put heading at beginning.
     $form['title'] = [
-      '#markup' => '<h2>Ask a QUESTION or Enter a KEYWORD</h2>',
+      '#markup' => '<h1>Ask a QUESTION or Enter a KEYWORD</h1>',
       '#weight' => 0,
     ];
     // Change placeholder text for search bar.
@@ -112,7 +112,7 @@ function arvestbank_search_form_views_exposed_form_alter(&$form, FormStateInterf
     $form['actions']['#weight'] = 3;
     // Put help text at the end.
     $form['help-text'] = [
-      '#markup' => '<p>Example Question: What is my routing number?</p><p>Example Keyword: routing number</p>',
+      '#markup' => '<div class="examples"><p>Example Question: What is my routing number?</p><p>Example Keyword: routing number</p></div>',
       '#weight' => 4,
     ];
   }

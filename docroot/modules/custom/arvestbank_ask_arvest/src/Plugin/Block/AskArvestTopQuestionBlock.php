@@ -119,10 +119,14 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
     }
 
     // Add "Top Question" to render array.
-    $renderArray['top_question'] = $this->getTopQuestion($answers);
+    $renderArray['question_answer']['top_question'] = $this->getTopQuestion($answers);
 
     // Add "Best Answer" to render array.
-    $renderArray['best_answer'] = $this->getBestAnswer($answers);
+    $renderArray['question_answer']['best_answer'] = $this->getBestAnswer($answers);
+
+    // Add wrapper around "Top Question" and "Best Answer".
+    $renderArray['question_answer']['#prefix'] = '<dl class="question-and-answer">';
+    $renderArray['question_answer']['#suffix'] = '</dl>';
 
     // Add Rating Widget.
     $renderArray['rating_widget'] = $this->getRatingWidget($answers);
@@ -139,7 +143,7 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
    *
    * @return mixed
    *   Render array.
-   */
+   */ 
   private function getRatingWidget(array $answers) {
 
     // If we have a Best Answer to rate.
@@ -166,7 +170,7 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
 
       // Add a title.
       $renderArray['title'] = [
-        '#markup' => '<h4>Please rate this response.</h4>',
+        '#markup' => '<h3>Please rate this response</h3>',
       ];
 
       // Add a div to use for the rating widget.
@@ -176,7 +180,7 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
 
       // Add help text.
       $renderArray['help_text'] = [
-        '#markup' => '<span class="rating-help-text">click on a star to rate</span>',
+        '#markup' => '<span class="rating-help-text">Click on a star to rate</span>',
       ];
 
       return $renderArray;
@@ -200,7 +204,7 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
     // Add best answer label.
     $renderArray['best_answer_label'] = [
       '#type' => 'html_tag',
-      '#tag' => 'span',
+      '#tag' => 'dt',
       '#value' => $this->t('Best Answer:'),
       '#attributes' => [
         'class' => [
@@ -226,7 +230,7 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
     // Add response "body" to the render array.
     $renderArray['best_answer_content'] = [
       '#type' => 'html_tag',
-      '#tag' => 'span',
+      '#tag' => 'dd',
       '#value' => $bestAnswer,
       '#attributes' => [
         'class' => [
@@ -258,7 +262,7 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
     // Add top question label.
     $renderArray['top_question_label'] = [
       '#type' => 'html_tag',
-      '#tag' => 'span',
+      '#tag' => 'dt',
       '#value' => $this->t('Top Question:'),
       '#attributes' => [
         'class' => [
@@ -283,7 +287,7 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
 
     $renderArray['top_question_content'] = [
       '#type' => 'html_tag',
-      '#tag' => 'span',
+      '#tag' => 'dd',
       '#value' => $questionText,
       '#attributes' => [
         'class' => [
