@@ -32,7 +32,7 @@
     entity_type_access: {  }
     bundle_access: {  }
     twig_template: component--cohesion-cpt-hub-content-card
-    weight: 0
+    weight: 6
 -
   type: file
   export:

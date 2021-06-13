@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.dam_image_entity_browser
     - field.field.node.page.body
     - field.field.node.page.field_account_disclosure_informa
     - field.field.node.page.field_button_links
@@ -18,6 +17,7 @@ dependencies:
     - field.field.node.page.field_print_button_text
     - field.field.node.page.field_rendered_node
     - field.field.node.page.field_second_callout
+    - field.field.node.page.field_second_callout_icon
     - field.field.node.page.field_second_callout_label
     - field.field.node.page.field_second_callout_link
     - field.field.node.page.field_yoast_seo
@@ -27,10 +27,10 @@ dependencies:
     - cohesion_elements
     - conditional_fields
     - content_moderation
-    - entity_browser
     - field_group
     - inline_entity_form
     - link
+    - media_library
     - metatag
     - path
     - scheduler
@@ -60,6 +60,7 @@ third_party_settings:
       children:
         - field_second_callout_label
         - field_second_callout_link
+        - field_second_callout_icon
       parent_name: group_cta
       weight: 9
       format_type: details
@@ -155,17 +156,10 @@ content:
     type: options_select
     region: content
   field_featured_image:
-    type: entity_browser_entity_reference
+    type: media_library_widget
     weight: 3
     settings:
-      entity_browser: dam_image_entity_browser
-      field_widget_display: label
-      field_widget_edit: true
-      field_widget_remove: true
-      selection_mode: selection_append
-      field_widget_replace: false
-      open: false
-      field_widget_display_settings: {  }
+      media_types: {  }
     third_party_settings: {  }
     region: content
   field_field_callout_phone_number:
@@ -237,6 +231,13 @@ content:
     third_party_settings:
       conditional_fields: {  }
     type: options_select
+    region: content
+  field_second_callout_icon:
+    type: media_library_widget
+    weight: 29
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
     region: content
   field_second_callout_label:
     weight: 27

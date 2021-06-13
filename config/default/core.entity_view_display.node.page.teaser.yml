@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.page.field_print_button_text
     - field.field.node.page.field_rendered_node
     - field.field.node.page.field_second_callout
+    - field.field.node.page.field_second_callout_icon
     - field.field.node.page.field_second_callout_label
     - field.field.node.page.field_second_callout_link
     - field.field.node.page.field_yoast_seo
@@ -62,6 +63,7 @@ hidden:
   field_print_button_text: true
   field_rendered_node: true
   field_second_callout: true
+  field_second_callout_icon: true
   field_second_callout_label: true
   field_second_callout_link: true
   field_yoast_seo: true

@@ -21,6 +21,7 @@ settings:
             - Italic
             - Underline
             - RemoveFormat
+            - Superscript
         -
           name: Layout
           items:
@@ -42,7 +43,7 @@ settings:
           name: Media
           items:
             - Table
-            - ImceImage
+            - DrupalMediaLibrary
             - Blockquote
             - creditcardrate
             - phonenumber
