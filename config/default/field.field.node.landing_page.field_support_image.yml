@@ -1,0 +1,29 @@
+uuid: 9eae11f2-76df-410e-84e9-5c24e044e0d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_support_image
+    - media.type.acquia_dam_image
+    - node.type.landing_page
+id: node.landing_page.field_support_image
+field_name: field_support_image
+entity_type: node
+bundle: landing_page
+label: 'Support Image'
+description: 'This will provide an image to the Support Card component beneath the sidebar navigation on the left.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      acquia_dam_image: acquia_dam_image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
