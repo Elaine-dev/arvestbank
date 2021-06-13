@@ -171,7 +171,8 @@
                 "fix roles": "https://www.drupal.org/files/issues/2020-07-13/simplesamlphp_auth-role_assignment-2894945-11.patch"
             },
             "drupal/media_acquiadam": {
-                "Module only themed to work with SEVEN": "https://www.drupal.org/files/issues/2021-04-27/module-theming-3210805-1_0.patch"
+                "Module only themed to work with SEVEN": "https://www.drupal.org/files/issues/2021-04-27/module-theming-3210805-1_0.patch",
+                "Acquia DAM auth breaks when SameSite is enforced": "https://www.drupal.org/files/issues/2021-06-08/3217950-4.patch"
             },
             "drupal/diff": {
                 "Filter Revision Overview By Date": "https://www.drupal.org/files/issues/2021-05-06/filter-revision-overview-by-date-3212653-1.patch"
