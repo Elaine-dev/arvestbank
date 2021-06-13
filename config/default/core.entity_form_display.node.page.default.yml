@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.dam_image_entity_browser
     - field.field.node.page.body
     - field.field.node.page.field_account_disclosure_informa
     - field.field.node.page.field_button_links
@@ -27,10 +26,10 @@ dependencies:
     - cohesion_elements
     - conditional_fields
     - content_moderation
-    - entity_browser
     - field_group
     - inline_entity_form
     - link
+    - media_library
     - metatag
     - path
     - scheduler
@@ -51,10 +50,10 @@ third_party_settings:
       region: content
       format_settings:
         description: ''
-        open: true
         required_fields: true
         id: ''
         classes: ''
+        open: false
       label: CTA
     group_second_call_out_button:
       children:
@@ -74,12 +73,12 @@ third_party_settings:
     group_basic_page_fields:
       children:
         - field_featured_image
-        - field_button_links
+        - group_button
         - group_cta
         - field_account_disclosure_informa
       parent_name: ''
       weight: 4
-      format_type: fieldset
+      format_type: details
       region: content
       format_settings:
         id: ''
@@ -93,7 +92,36 @@ third_party_settings:
         effect: none
         speed: fast
         attributes: ''
+        open: false
       label: 'Basic Page Fields'
+    group_place_blocks_or_cards_in_n:
+      children:
+        - field_layout_canvas
+      parent_name: ''
+      weight: 7
+      format_type: details
+      region: content
+      format_settings:
+        description: 'This is a space for additional blocks or cards that will display at the bottom of a basic page.'
+        required_fields: true
+        id: ''
+        classes: ''
+        open: false
+      label: 'Add Additional Blocks or Cards in Needed'
+    group_button:
+      children:
+        - field_button_links
+      parent_name: group_basic_page_fields
+      weight: 4
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Button
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -124,7 +152,7 @@ content:
     type: text_textarea
     region: content
   field_button_links:
-    weight: 4
+    weight: 5
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -155,17 +183,10 @@ content:
     type: options_select
     region: content
   field_featured_image:
-    type: entity_browser_entity_reference
+    type: media_library_widget
     weight: 3
     settings:
-      entity_browser: dam_image_entity_browser
-      field_widget_display: label
-      field_widget_edit: true
-      field_widget_remove: true
-      selection_mode: selection_append
-      field_widget_replace: false
-      open: false
-      field_widget_display_settings: {  }
+      media_types: {  }
     third_party_settings: {  }
     region: content
   field_field_callout_phone_number:
@@ -193,7 +214,7 @@ content:
     type: cohesion_layout_builder_widget
     region: content
   field_meta_tags:
-    weight: 7
+    weight: 6
     settings:
       sidebar: true
     third_party_settings: {  }
