@@ -1,6 +1,6 @@
 uuid: 267d9274-7a74-4d46-9df7-766bcd3ee167
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.media.media_library
@@ -41,9 +41,9 @@ filters:
     weight: 100
     settings:
       default_view_mode: media_library
-      allowed_media_types: {  }
       allowed_view_modes:
         default: default
+      allowed_media_types: {  }
   editor_file_reference:
     id: editor_file_reference
     provider: editor
