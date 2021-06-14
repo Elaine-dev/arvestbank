@@ -7,7 +7,7 @@ punctuation:
   comma: 0
   period: 2
   hyphen: 1
-  underscore: 0
+  underscore: 2
   colon: 0
   semicolon: 0
   pipe: 0
