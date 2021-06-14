@@ -63,24 +63,34 @@ class SaveInWebtools extends WebformHandlerBase {
    */
   public function confirmForm(array &$form, FormStateInterface $form_state, WebformSubmissionInterface $webform_submission) {
 
-    // Build the form data to save.
-    $xmlData = $this->buildFormDataXml($this->configuration['webtools_form_name'], $form_state);
+    // To avoid site studio induced multiple submissions check global variable.
+    if (!isset($GLOBALS['sent_webform_submission_this_request'])) {
 
-    // Build the Guzzle request options.
-    $requestOptions = [
-      RequestOptions::JSON => [
-        'FormName' => $this->configuration['webtools_form_name'],
-        'XMLString' => $xmlData,
-      ],
-    ];
+      // Indicate we're sending the submission now.
+      $GLOBALS['sent_webform_submission_this_request'] = TRUE;
 
-    // Make request.
-    $requestSuccess = $this->webtoolsClient->makeFormSaveRequest($requestOptions);
+      // Build the form data to save.
+      $xmlData
+        = $this->buildFormDataXml($this->configuration['webtools_form_name'],
+        $form_state);
 
-    // If sending the webform failed.
-    if (!$requestSuccess) {
-      // Alert user of error, error logged in makeFormSaveRequest().
-      $this->messenger()->addError('There was an error processing your submission, please contact support.', FALSE);
+      // Build the Guzzle request options.
+      $requestOptions = [
+        RequestOptions::JSON => [
+          'FormName' => $this->configuration['webtools_form_name'],
+          'XMLString' => $xmlData,
+        ],
+      ];
+
+      // Make request.
+      $requestSuccess = $this->webtoolsClient->makeFormSaveRequest($requestOptions);
+
+      // If sending the webform failed.
+      if (!$requestSuccess) {
+        // Alert user of error, error logged in makeFormSaveRequest().
+        $this->messenger()->addError('There was an error processing your submission, please contact support.', FALSE);
+      }
+
     }
 
   }
