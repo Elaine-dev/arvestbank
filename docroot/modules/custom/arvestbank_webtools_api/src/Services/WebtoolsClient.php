@@ -132,9 +132,6 @@ class WebtoolsClient {
 
     try {
 
-      // Log notice of request.
-      \Drupal::logger('arvestbank_webtools_api')->notice('Making webtools request to ' . $requestEndpoint);
-
       // Make request and get response body contents.
       $response = $this->httpClient->post(
         $requestEndpoint,
