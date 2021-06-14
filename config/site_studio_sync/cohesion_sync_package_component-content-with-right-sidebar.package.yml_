@@ -8,7 +8,7 @@
     dependencies: {  }
     id: pack_component_content_with_righ
     label: 'Component Content with Right Sidebar'
-    description: 'A reusable component for content with a right sidebar. Last Updated: Aaron Parkening 5/27/2021.'
+    description: 'A reusable component for content with a right sidebar. Last Updated: Allie Jones 06/13/2021'
     excluded_entity_types: '[]'
     settings: '{"f55110ca-d412-48a4-9992-245427b7c0ba":{"type":"cohesion_component","items":{"f55110ca-d412-48a4-9992-245427b7c0ba":{"type":"cohesion_component"}},"checked":true}}'
 -
@@ -26,10 +26,10 @@
     locked: false
     modified: true
     selectable: true
-    category: cpt_cat_page_components
+    category: cpt_cat_layout_components
     preview_image: ''
     has_quick_edit: true
     entity_type_access: {  }
     bundle_access: {  }
     twig_template: component--cohesion-cpt-content-with-right-sidebar
-    weight: 0
+    weight: 5
