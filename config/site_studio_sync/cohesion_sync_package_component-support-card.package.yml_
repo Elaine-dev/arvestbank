@@ -35,7 +35,7 @@
       -
         - landing_page
     twig_template: component--cohesion-cpt-support-card
-    weight: 0
+    weight: 6
 -
   type: file
   export:

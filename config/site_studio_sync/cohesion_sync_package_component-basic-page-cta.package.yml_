@@ -8,7 +8,7 @@
     dependencies: {  }
     id: pack_component_basic_page_cta
     label: 'Component Basic Page CTA'
-    description: "A component for the Basic Page CTA.\r\nLast Updated: Aaron Parkening 5/26/2021"
+    description: "A component for the Basic Page CTA.\r\nLast Updated: Allie Jones 06/13/2021"
     excluded_entity_types: '[]'
     settings: '{"4c4d92b0-be89-4599-b397-a764d6a58e15":{"type":"cohesion_component","items":{"4c4d92b0-be89-4599-b397-a764d6a58e15":{"type":"cohesion_component"},"2fc786cb-5655-423a-8076-f614ba3eef6b":{"type":"file"}},"checked":true}}'
 -
@@ -26,11 +26,14 @@
     locked: false
     modified: true
     selectable: true
-    category: cpt_cat_page_components
+    category: cpt_cat_layout_components
     preview_image: 'public://element-preview-images/basic page cta.png'
     has_quick_edit: true
-    entity_type_access: {  }
-    bundle_access: {  }
+    entity_type_access:
+      - dx8_templates
+    bundle_access:
+      -
+        - dx8_templates
     twig_template: component--cohesion-cpt-basic-page-cta
     weight: 0
 -

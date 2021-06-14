@@ -46,4 +46,4 @@
     entity_type_access: {  }
     bundle_access: {  }
     twig_template: component--cohesion-cpt-hub-callout-card
-    weight: 7
+    weight: 1

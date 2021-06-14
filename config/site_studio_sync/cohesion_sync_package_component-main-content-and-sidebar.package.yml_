@@ -26,10 +26,10 @@
     locked: false
     modified: true
     selectable: true
-    category: cpt_cat_page_components
+    category: cpt_cat_layout_components
     preview_image: ''
     has_quick_edit: true
     entity_type_access: {  }
     bundle_access: {  }
     twig_template: component--cohesion-cpt-main-content-and-sidebar
-    weight: 4
+    weight: 7
