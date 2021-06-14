@@ -221,7 +221,7 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
     // The body contains a no results message.
     // Only providing a fallback in case SOAP request failed.
     if (isset($answers['body'])) {
-      $bestAnswer = strip_tags($answers['body'], '<img><a><b><strong><ul><ol><li>');
+      $bestAnswer = strip_tags($answers['body'], '<img><a><b><strong><ul><ol><li><br>');
     }
     else {
       $bestAnswer = 'We did not find a best response. Please try rephrasing your question. If that doesn\'t help, please call our Customer Service at (866) 952-9523 for assistance.';
