@@ -272,15 +272,16 @@ class AnswersClient {
 
   /**
    * Create a [24]7.ai Answers API session id for a user.
-   * Categories enumerated at /json/answers.jsp?interfaceID=2&requestType=CategoryRequest.
+   *
+   * Category list: /json/answers.jsp?interfaceID=2&requestType=CategoryRequest.
    */
-  public function getSessionId(){
+  public function getSessionId() {
 
     // Get REST endpoint from config.
     $intelliresponseEndpoint = $this->askArvestConfig->get('general_rest_api_endpoint');
 
     // Add request vars to endpoint.
-    // It's unclear if category is needed, the documentation has internal inconsistencies.
+    // Unclear if category needed, documentation has internal inconsistencies.
     $intelliresponseEndpoint .= 'answers.jsp?interfaceID=2&category=132';
 
     // Make request and return session id.
