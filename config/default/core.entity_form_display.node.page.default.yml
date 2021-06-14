@@ -46,15 +46,15 @@ third_party_settings:
         - field_second_callout
         - group_second_call_out_button
       parent_name: group_basic_page_fields
-      weight: 5
+      weight: 22
       format_type: details
       region: content
       format_settings:
         description: ''
-        open: true
         required_fields: true
         id: ''
         classes: ''
+        open: false
       label: CTA
     group_second_call_out_button:
       children:
@@ -74,13 +74,13 @@ third_party_settings:
       label: 'Second Call out Button'
     group_basic_page_fields:
       children:
-        - field_featured_image
-        - field_button_links
+        - group_featured_image
+        - group_button
         - group_cta
-        - field_account_disclosure_informa
+        - group_account_disclosure
       parent_name: ''
-      weight: 4
-      format_type: fieldset
+      weight: 5
+      format_type: details
       region: content
       format_settings:
         id: ''
@@ -94,7 +94,64 @@ third_party_settings:
         effect: none
         speed: fast
         attributes: ''
+        open: false
       label: 'Basic Page Fields'
+    group_add_additional_card:
+      children:
+        - field_layout_canvas
+      parent_name: ''
+      weight: 6
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: 'Add addtional card at the bottom of this basic page.'
+        open: false
+        required_fields: true
+      label: 'Add Additional Card'
+    group_button:
+      children:
+        - field_button_links
+      parent_name: group_basic_page_fields
+      weight: 21
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Button
+    group_featured_image:
+      children:
+        - field_featured_image
+      parent_name: group_basic_page_fields
+      weight: 20
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Featured Image'
+    group_account_disclosure:
+      children:
+        - field_account_disclosure_informa
+      parent_name: group_basic_page_fields
+      weight: 23
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Account Disclosure'
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -102,7 +159,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 3
+    weight: 4
     settings:
       rows: 9
       summary_rows: 3
@@ -117,7 +174,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_account_disclosure_informa:
-    weight: 6
+    weight: 24
     settings:
       rows: 5
       placeholder: ''
@@ -125,7 +182,7 @@ content:
     type: text_textarea
     region: content
   field_button_links:
-    weight: 4
+    weight: 5
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -157,7 +214,7 @@ content:
     region: content
   field_featured_image:
     type: media_library_widget
-    weight: 3
+    weight: 21
     settings:
       media_types: {  }
     third_party_settings: {  }
@@ -181,7 +238,7 @@ content:
     type: inline_entity_form_complex
     region: content
   field_layout_canvas:
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: cohesion_layout_builder_widget
@@ -200,7 +257,7 @@ content:
     type: options_buttons
     region: content
   field_print_button_text:
-    weight: 5
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -234,7 +291,7 @@ content:
     region: content
   field_second_callout_icon:
     type: media_library_widget
-    weight: 29
+    weight: 30
     settings:
       media_types: {  }
     third_party_settings: {  }
@@ -248,7 +305,7 @@ content:
     type: text_textfield
     region: content
   field_second_callout_link:
-    weight: 28
+    weight: 29
     settings:
       placeholder_url: ''
       placeholder_title: ''
