@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.article_education_article.body
+    - field.field.node.article_education_article.field_disclosure
     - field.field.node.article_education_article.field_education_article_category
     - field.field.node.article_education_article.field_link
     - field.field.node.article_education_article.field_meta_tags
@@ -31,6 +32,7 @@ content:
     region: content
 hidden:
   body: true
+  field_disclosure: true
   field_education_article_category: true
   field_link: true
   field_meta_tags: true
