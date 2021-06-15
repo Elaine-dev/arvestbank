@@ -1,0 +1,7 @@
+arvestbank_core.media_update_batch:
+  path: '/admin/config/media/media-update-batch'
+  defaults:
+    _title: 'Media Update Batch'
+    _form: '\Drupal\arvestbank_core\Form\MediaUpdateBatch'
+  requirements:
+    _permission: 'administer site configuration'
