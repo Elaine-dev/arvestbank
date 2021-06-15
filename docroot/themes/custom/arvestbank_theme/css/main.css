@@ -290,10 +290,6 @@
   float: left;
 }
 
-.coh-style-ask-question-block {
-  background-image: url(../images/nathan_lg.png);
-}
-
 #search-tab {
   display: flex;
   flex-wrap: nowrap;
