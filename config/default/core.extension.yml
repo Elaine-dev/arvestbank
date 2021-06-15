@@ -81,6 +81,7 @@ module:
   gtm: 0
   iframe: 0
   image: 0
+  imageapi_optimize: 0
   imce: 0
   inline_entity_form: 0
   jquery_ui: 0
