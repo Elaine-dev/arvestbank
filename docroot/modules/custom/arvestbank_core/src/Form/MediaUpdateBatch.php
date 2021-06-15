@@ -30,6 +30,7 @@ class MediaUpdateBatch extends FormBase {
     $form['update_action'] = [
       '#title' => 'Update Action:',
       '#type' => 'select',
+      '#default_value' => '',
       '#options' => [
         '' => '--- select ---',
         'publish' => 'Set unpublished media to published',
@@ -216,7 +217,7 @@ class MediaUpdateBatch extends FormBase {
     }
 
     // Use this for testing.
-    $query->range(0, 100);
+    // $query->range(0, 10);
 
     return $query->execute()->fetchAll();
 
