@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Contains arvestbank_core.module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function arvestbank_core_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  // Updates for the "Yoast" / "Real-time SEO for drupal" details set.
+  if (!empty($form['field_yoast_seo'])) {
+
+    // Move the Yoast details to the sidebar.
+    $form['field_yoast_seo']['#group'] = 'advanced';
+
+    // And close it up.
+    $form['field_yoast_seo']['widget'][0]['yoast_seo']['#open'] = FALSE;
+
+    // This will style it to look like the other sidebar items.
+    $form['#attached']['library'][] = 'arvestbank_core/yoast_admin';
+
+  }
+
+}

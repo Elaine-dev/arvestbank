@@ -41,6 +41,7 @@ dependencies:
     - field.field.node.stage_page.field_slide_two
     - field.field.node.stage_page.field_slide_two_cta_text
     - field.field.node.stage_page.field_wordpress_articles
+    - field.field.node.stage_page.field_yoast_seo
     - node.type.stage_page
   module:
     - user
@@ -97,4 +98,5 @@ hidden:
   field_slide_two: true
   field_slide_two_cta_text: true
   field_wordpress_articles: true
+  field_yoast_seo: true
   search_api_excerpt: true

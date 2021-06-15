@@ -40,8 +40,8 @@ dependencies:
     - field.field.node.stage_page.field_slide_two
     - field.field.node.stage_page.field_slide_two_cta_text
     - field.field.node.stage_page.field_wordpress_articles
+    - field.field.node.stage_page.field_yoast_seo
     - node.type.stage_page
-    - workflows.workflow.editorial
   module:
     - content_moderation
     - datetime_range
@@ -53,6 +53,7 @@ dependencies:
     - path
     - scheduler
     - text
+    - yoast_seo
 third_party_settings:
   field_group:
     group_left_block:
@@ -536,6 +537,13 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
+    region: content
+  field_yoast_seo:
+    weight: 57
+    settings:
+      body: body
+    third_party_settings: {  }
+    type: yoast_seo_widget
     region: content
   moderation_state:
     type: moderation_state_default

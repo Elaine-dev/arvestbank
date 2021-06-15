@@ -1,0 +1,4 @@
+yoast_admin:
+  css:
+    theme:
+      css/yoast.css: {}
