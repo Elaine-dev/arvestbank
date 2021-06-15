@@ -15,21 +15,6 @@ use Drupal\Core\Database\Connection;
 class MediaUpdateBatch extends FormBase {
 
   /**
-   * Database connection.
-   *
-   * @var \Drupal\Core\Database\Connection
-   */
-  protected Connection $database;
-
-  /**
-   * MediaUpdateBatch constructor.
-   */
-  public function __construct() {
-    $database = \Drupal::database();
-    $this->database = $database;
-  }
-
-  /**
    * {@inheritdoc}
    */
   public function getFormId() : string {
@@ -137,7 +122,9 @@ class MediaUpdateBatch extends FormBase {
    */
   public function mediaResults() {
 
-    $query = $this->database->select('media_field_revision', 'r');
+    $database = \Drupal::database();
+
+    $query = $database->select('media_field_revision', 'r');
     $query->join('media', 'm', 'r.vid = m.vid');
     $query->condition('r.status', '0', '=');
     $query->fields('m', ['mid']);
