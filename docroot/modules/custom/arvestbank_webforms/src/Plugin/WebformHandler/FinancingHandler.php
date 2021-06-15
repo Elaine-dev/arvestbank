@@ -156,13 +156,18 @@ class FinancingHandler extends WebformHandlerBase {
 
     else {
 
-// other|buy_home||
-//We’re glad you’re interested in buying  a home with Arvest. Visit arvest.com/homeloan to apply or learn more from our mortgage division.
+      // Set the default response for no options.
+      $message = "Thank you for your interest in this loan from Arvest! Unfortunately, we do not take online applications for this type of loan at this time. To learn more about the loan and apply, please call (866) 952-9523 or visit your local branch.";
+
+      // This is the only exception.  If others are found make this a switch.
+      if ($results_key === 'other|buy_home|||') {
+        $message = "We’re glad you’re interested in buying  a home with Arvest. Visit <a href=\"/homeloan\">arvest.com/homeloan</a> to apply or learn more from our mortgage division.";
+      }
 
       // Sorry no results.
       $build[] = [
         '#type' => 'markup',
-        '#markup' => 'Thank you for your interest in this loan from Arvest! Unfortunately, we do not take online applications for this type of loan at this time. To learn more about the loan and apply, please call (866) 952-9523 or visit your local branch.',
+        '#markup' => $message,
       ];
 
     }
