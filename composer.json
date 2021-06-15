@@ -50,6 +50,7 @@
         "drupal/http_cache_control": "^2.0",
         "drupal/iframe": "^2.8",
         "drupal/imageapi_optimize": "^4.0@beta",
+        "drupal/imageapi_optimize_resmushit": "^2.0@beta",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/link_attributes": "^1.11",
         "drupal/linkit": "5.0.0-beta12",
