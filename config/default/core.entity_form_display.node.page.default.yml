@@ -28,7 +28,6 @@ dependencies:
     - conditional_fields
     - content_moderation
     - field_group
-    - inline_entity_form
     - link
     - media_library
     - metatag
@@ -221,21 +220,10 @@ content:
     region: content
   field_field_callout_phone_number:
     weight: 7
-    settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      revision: false
-      override_labels: false
-      collapsible: false
-      collapsed: false
-      allow_duplicate: false
+    settings: {  }
     third_party_settings:
       conditional_fields: {  }
-    type: inline_entity_form_complex
+    type: options_select
     region: content
   field_layout_canvas:
     weight: 7
