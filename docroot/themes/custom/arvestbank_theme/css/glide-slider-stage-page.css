@@ -26,7 +26,18 @@
   }
 }
 
+.path-frontpage .left-block-content-wrapper {
+  display: none;
+}
 
-.path-frontpage .left-block-content-wrapper{
-  display:none;
+div.title-container {
+  position: relative;
+}
+
+div.title-container > h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  color: #fff;
 }

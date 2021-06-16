@@ -1,5 +1,10 @@
 {{ attach_library('arvestbank_theme/slider-splash-page') }}
 
+{# Hidden H1 tag for SEO #}
+{% if label|render|trim is not empty %}
+  <div class="title-container"><h1>{{ label }}</h1></div>
+{% endif %}
+
 {# Local admin tabs #}
 <div class="coh-container-boxed">
   {{ content.arvestbank_theme_local_tasks }}
