@@ -49,7 +49,7 @@ class MediaUpdateBatch extends FormBase {
     ];
 
     // Change the text if the update logic is different.
-    $message_text = "Select an action to apply to media:";
+    $message_text = "Select an action to apply to media.";
 
     $form['action'] = [
       '#prefix' => '<div id="update-action-wrapper">',
@@ -164,11 +164,13 @@ class MediaUpdateBatch extends FormBase {
         break;
 
       case "alttags":
-        $alt_text = $this::getAltFromName($media->getName());
-        $image_array = $media->get('field_acquiadam_asset_image')->getValue();
-        $image_array[0]['alt'] = $alt_text;
-        $image_array[0]['title'] = $alt_text;
-        $media->set('field_acquiadam_asset_image', $image_array);
+        if ($media->hasField('field_acquiadam_asset_image')) {
+          $image_array = $media->get('field_acquiadam_asset_image')->getValue();
+          $alt_text = $this::getAltFromName($media->getName());
+          $image_array[0]['alt'] = $alt_text;
+          $image_array[0]['title'] = $alt_text;
+          $media->set('field_acquiadam_asset_image', $image_array);
+        }
         break;
 
     }
@@ -210,7 +212,12 @@ class MediaUpdateBatch extends FormBase {
 
       case "alttags":
         $query = $database->select('media__field_acquiadam_asset_image', 'i');
-        $query->condition('i.field_acquiadam_asset_image_alt', 'NULL', 'IS NULL');
+        $query->join('media_field_data', 'm', 'i.entity_id = m.mid');
+        $query->condition('m.bundle', 'acquia_dam_image', '=');
+        $orGroup = $query->orConditionGroup()
+          ->isNull('i.field_acquiadam_asset_image_alt')
+          ->condition('i.field_acquiadam_asset_image_alt', '', '=');
+        $query->condition($orGroup);
         $query->addField('i', 'entity_id', 'mid');
         break;
 
