@@ -1,0 +1,33 @@
+uuid: 56102bc1-30dd-4c8e-8c69-3cd831f42119
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_disclosure
+    - node.type.campaign_page
+    - taxonomy.vocabulary.disclosures
+  content:
+    - 'taxonomy_term:disclosures:76b79900-2f8b-455f-bab5-535ce8520c45'
+id: node.campaign_page.field_disclosure
+field_name: field_disclosure
+entity_type: node
+bundle: campaign_page
+label: Disclosure
+description: 'Select the disclosure that should appear in the footer.'
+required: true
+translatable: true
+default_value:
+  -
+    target_uuid: 76b79900-2f8b-455f-bab5-535ce8520c45
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      disclosures: disclosures
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

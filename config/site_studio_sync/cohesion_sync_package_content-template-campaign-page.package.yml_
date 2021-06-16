@@ -1,0 +1,34 @@
+
+-
+  type: cohesion_sync_package
+  export:
+    uuid: bf3214b9-b911-443f-8c50-1eaf62e47341
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: pack_content_template_campaign_p
+    label: 'Content Template Campaign Page'
+    description: 'Content template for the Campaign Page content type. Updated: Aaron Parkening 6/16/2021'
+    excluded_entity_types: '[]'
+    settings: '{"69dc0b19-ed5c-4b0e-b0b3-46b2c9891c1e":{"type":"cohesion_content_templates","items":{"69dc0b19-ed5c-4b0e-b0b3-46b2c9891c1e":{"type":"cohesion_content_templates"}},"checked":true}}'
+-
+  type: cohesion_content_templates
+  export:
+    uuid: 69dc0b19-ed5c-4b0e-b0b3-46b2c9891c1e
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: node_campaign_page_full
+    label: 'Full content (Node, Campaign Page)'
+    json_values: '{"canvas":[{"type":"item","uid":"drupal-content","title":"Content","status":{"collapsed":true},"uuid":"d161bf94-eee6-494b-b6d7-4a4a28417c99","parentUid":"root","isContainer":false,"children":[]}],"mapper":{"d161bf94-eee6-494b-b6d7-4a4a28417c99":{}},"model":[],"previewModel":{},"variableFields":{},"meta":{"fieldHistory":[]}}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    modified: true
+    selectable: true
+    custom: false
+    twig_template: node--cohesion--node-campaign-page-full
+    default: true
+    entity_type: node
+    bundle: campaign_page
+    view_mode: full
+    master_template: mstr_tpl_campaign_template

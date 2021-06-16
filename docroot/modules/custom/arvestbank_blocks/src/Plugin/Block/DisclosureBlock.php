@@ -63,8 +63,8 @@ class DisclosureBlock extends BlockBase {
     // If there is disclosure text add it to the markup.
     if (!empty($disclosure_text)) {
       $build['disclosure_block'] = [
-        '#prefix' => '<div class="coh-style-footer-styles"><div class="text-align-center"><span class="coh-color-white">',
-        '#suffix' => '</span></div></div>',
+        '#prefix' => '<div class="coh-style-footer-styles"><div class="text-align-center">',
+        '#suffix' => '</div></div>',
         '#markup' => $disclosure_text,
       ];
     }

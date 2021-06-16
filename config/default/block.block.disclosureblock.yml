@@ -10,7 +10,7 @@ dependencies:
 id: disclosureblock
 theme: arvestbank_theme
 region: footer
-weight: -18
+weight: -23
 provider: null
 plugin: disclosure_block
 settings:
