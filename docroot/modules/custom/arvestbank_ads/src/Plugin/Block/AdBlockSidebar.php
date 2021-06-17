@@ -93,30 +93,35 @@ class AdBlockSidebar extends BlockBase {
         // Match the current page to a sidebar menu item.
         if ($fieldname = self::getAdFieldFromPath()) {
 
-          if (!empty($ad_campaign->get($fieldname)->getValue()[0]['target_id'])) {
+          // Check that the target fieldname exists on the entity.
+          if ($ad_campaign->hasField($fieldname)) {
 
-            // The Node ID for the Ad.
-            $ad_nid = $ad_campaign->get($fieldname)->getValue()[0]['target_id'];
+            if (!empty($ad_campaign->get($fieldname)->getValue()[0]['target_id'])) {
 
-            // Get the current URI / path alias.
-            $current_uri = \Drupal::request()->getRequestUri();
+              // The Node ID for the Ad.
+              $ad_nid = $ad_campaign->get($fieldname)->getValue()[0]['target_id'];
 
-            // Storage for node entity types.
-            $storage = \Drupal::entityTypeManager()->getStorage('node');
+              // Get the current URI / path alias.
+              $current_uri = \Drupal::request()->getRequestUri();
 
-            // Get the CTA url for this ad.
-            $ad_cta_url = $storage->load($ad_nid)->get('field_cta')[0]->getValue()['uri'] ?? NULL;
+              // Storage for node entity types.
+              $storage = \Drupal::entityTypeManager()->getStorage('node');
 
-            // Check the current path against the CTA url.
-            // If they match look to pull in the alternate ad.
-            $ad_cta_url_path = str_replace('internal:', '', $ad_cta_url);
-            if ($current_uri == $ad_cta_url_path) {
-              if (!empty($storage->load($ad_nid)->get('field_ad_alternate')[0])) {
-                $ad_alt_nid = $storage->load($ad_nid)->get('field_ad_alternate')[0]->getValue()['target_id'] ?? NULL;
-                if (!empty($ad_alt_nid)) {
-                  $ad_nid = $ad_alt_nid;
+              // Get the CTA url for this ad.
+              $ad_cta_url = $storage->load($ad_nid)->get('field_cta')[0]->getValue()['uri'] ?? NULL;
+
+              // Check the current path against the CTA url.
+              // If they match look to pull in the alternate ad.
+              $ad_cta_url_path = str_replace('internal:', '', $ad_cta_url);
+              if ($current_uri == $ad_cta_url_path) {
+                if (!empty($storage->load($ad_nid)->get('field_ad_alternate')[0])) {
+                  $ad_alt_nid = $storage->load($ad_nid)->get('field_ad_alternate')[0]->getValue()['target_id'] ?? NULL;
+                  if (!empty($ad_alt_nid)) {
+                    $ad_nid = $ad_alt_nid;
+                  }
                 }
               }
+
             }
 
           }
