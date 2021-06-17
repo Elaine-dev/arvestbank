@@ -145,7 +145,10 @@ function arvestbank_theme_preprocess_field__body(&$variables, $hook) {
   // If we have a value that contains a rate token.
   if (
     isset($variables['items'][0]['content']['#text'])
-    && strpos($variables['items'][0]['content']['#text'], '[arvestbank_rates:')
+    && (
+      strpos($variables['items'][0]['content']['#text'], '[arvestbank_rates:')
+      || strpos($variables['items'][0]['content']['#text'], '[arvestbank_phone_numbers:')
+    )
   ) {
 
     // Load token service.
