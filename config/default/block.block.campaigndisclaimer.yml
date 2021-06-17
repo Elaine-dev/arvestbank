@@ -1,9 +1,9 @@
-uuid: 7293d097-5ce5-4c8a-835a-17cb35e57456
+uuid: 89ce7bad-1d86-44fd-819b-fbc77a698cea
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:text:f0870ca1-c738-4ed9-90f5-075dd29784d1'
+    - 'block_content:text:5f63c9f9-87ec-4234-98f2-b08739411f5d'
   module:
     - block_content
     - cohesion
@@ -15,9 +15,9 @@ theme: arvestbank_theme
 region: footer
 weight: -24
 provider: null
-plugin: 'block_content:f0870ca1-c738-4ed9-90f5-075dd29784d1'
+plugin: 'block_content:5f63c9f9-87ec-4234-98f2-b08739411f5d'
 settings:
-  id: 'block_content:f0870ca1-c738-4ed9-90f5-075dd29784d1'
+  id: 'block_content:5f63c9f9-87ec-4234-98f2-b08739411f5d'
   label: 'Campaign Disclaimer'
   provider: block_content
   label_display: visible
