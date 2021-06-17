@@ -1,4 +1,3 @@
-
 -
   type: cohesion_sync_package
   export:
@@ -8,7 +7,7 @@
     dependencies: {  }
     id: pack_custom_style_webforms
     label: 'Custom Style Webforms'
-    description: 'A custom style for all webforms. Last updated: Aaron Parkening 06/09/2021'
+    description: 'A custom style for all webforms. Last updated: Allie Jones 06/17/2021'
     excluded_entity_types: '[]'
     settings: '{"c8959ad9-781b-4e07-bac8-00686cf1966a":{"type":"cohesion_custom_style","items":{"c8959ad9-781b-4e07-bac8-00686cf1966a":{"type":"cohesion_custom_style"}},"checked":true}}'
 -
