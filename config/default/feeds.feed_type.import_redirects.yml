@@ -1,0 +1,94 @@
+uuid: 4029d772-c939-4e95-ae37-4972b849d00c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.redirect.redirect.feeds_item
+  module:
+    - feeds_tamper
+    - redirect
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      ae1e926c-1482-48fa-8431-996dbee1c954:
+        find: /^(\/)/
+        replace: ''
+        limit: 1
+        plugin: find_replace_regex
+        source: url
+        weight: 0
+        label: 'Find replace REGEX'
+        uuid: ae1e926c-1482-48fa-8431-996dbee1c954
+      8c57b674-2766-4a13-b575-e20e32c9efa9:
+        text: '301'
+        plugin: rewrite
+        source: dummy_source
+        weight: 0
+        label: Rewrite
+        uuid: 8c57b674-2766-4a13-b575-e20e32c9efa9
+id: import_redirects
+label: 'Import Redirects'
+description: 'Imports Redirects'
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: csv
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:redirect'
+processor_configuration:
+  langcode: en
+  update_existing: 2
+  update_non_existent: _delete
+  expire: -1
+  skip_hash_check: false
+  values:
+    type: redirect
+  owner_id: 0
+  authorize: false
+  owner_feed_author: false
+custom_sources:
+  redirect_destination:
+    label: 'redirect destination'
+    value: 'redirect destination'
+    machine_name: redirect_destination
+  url:
+    label: url
+    value: url
+    machine_name: url
+  dummy_source:
+    label: dummy_source
+    value: dummy_source
+    machine_name: dummy_source
+mappings:
+  -
+    target: redirect_redirect
+    map:
+      uri: redirect_destination
+      title: ''
+    settings: {  }
+  -
+    target: redirect_source
+    map:
+      path: url
+      query: ''
+    settings: {  }
+  -
+    target: feeds_item
+    map:
+      url: ''
+      guid: url
+    unique:
+      guid: '1'
+    settings: {  }
+  -
+    target: status_code
+    map:
+      value: dummy_source
+    unique: {  }
+    settings: {  }

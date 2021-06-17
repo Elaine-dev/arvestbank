@@ -179,6 +179,12 @@
             },
             "sunra/php-simple-html-dom-parser": {
                 "Update simple_html_dom.php": "https://patch-diff.githubusercontent.com/raw/sunra/php-simple-html-dom-parser/pull/78.patch"
+            },
+            "drupal/feeds": {
+                "Undefined Index: allowed_extensions AJAX error when creating feed types.": "https://www.drupal.org/files/issues/2019-02-06/3031019-undefined-index-ajax-2.patch"
+            },
+            "drupal/redirect": {
+                "Feeds: redirects_source field target class.": "https://www.drupal.org/files/issues/2019-04-09/redirect-feeds-target-3046873-1-8.patch"
             }
         }
     },
