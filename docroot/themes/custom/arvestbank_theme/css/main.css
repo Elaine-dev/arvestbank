@@ -746,3 +746,11 @@ body .site-content .pager__items li:before, .chosen-results ul li:before, .site-
 .coh-style-flex-50 .webform-flex {
   flex: 0 1 50%;
 }
+
+.coh-style-white-link{
+  color: #ffffff !important;
+}
+
+.contextual-component.coh-ce-cpt_support_card-4bca671d br{
+  display:none;
+}
