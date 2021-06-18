@@ -1,0 +1,6 @@
+conditional-article-fields:
+  version: 1.x
+  js:
+    js/conditionalArticleFields.js: {}
+  dependencies:
+    - core/jquery

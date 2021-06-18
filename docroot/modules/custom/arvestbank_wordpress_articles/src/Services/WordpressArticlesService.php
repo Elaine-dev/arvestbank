@@ -11,7 +11,7 @@ use GuzzleHttp\Client;
 class WordpressArticlesService {
 
   /**
-   * Defines the category titles and endpoints to use for summary.
+   * Defines the category titles and endpoints to use for category summary.
    *
    * @var array
    */
@@ -20,6 +20,18 @@ class WordpressArticlesService {
     'Community' => 'https://share.arvest.com/category/community/feed/json',
     'Spin On Spending' => 'https://share.arvest.com/category/spin-on-spending/feed/json',
     'Business' => 'https://share.arvest.com/category/business/feed/json',
+  ];
+
+  /**
+   * Defines the category titles and endpoints to use for tag summary.
+   *
+   * @var array
+   */
+  const SUMMARY_TAGS = [
+    'News' => 'https://share.arvest.com/tag/news/feed/json',
+    'Community' => 'https://share.arvest.com/tag/community/feed/json',
+    'Spin On Spending' => 'https://share.arvest.com/tag/spin-on-spending/feed/json',
+    'Business' => 'https://share.arvest.com/tag/business/feed/json',
   ];
 
   /**
@@ -43,28 +55,39 @@ class WordpressArticlesService {
   /**
    * Get a render array showing feed results.
    */
-  public function getRenderArray(string $title, string $endpoint, int $limit = 0, bool $showSummary = FALSE) {
+  public function getRenderArray(string $title, string $endpoint, int $limit = 0, string $display = 'categories') {
 
     // Instantiate render array to return.
     $renderArray = [];
 
     // If we're not showing the summary and we have an entered endpoint.
-    if ($endpoint && !$showSummary) {
+    if ($endpoint && $display == 'endpoint') {
       // Get results from client entered endpoint.
       $articles = $this->getArticles($endpoint, $limit);
     }
 
     // If we're showing a summary.
-    if ($showSummary) {
+    if (
+      $display == 'categories'
+      || $display == 'tags'
+    ) {
+
+      // Decide on endpoints in summary.
+      $summaryEndpoints = $this::SUMMARY_CATEGORIES;
+      if ($display == 'tags') {
+        $summaryEndpoints = $this::SUMMARY_TAGS;
+      }
+
       // Loop over categories compiling list of articles, one from each.
       $articles = [];
-      foreach ($this::SUMMARY_CATEGORIES as $summaryCategoryTitle => $summaryCategoryEndpoint) {
+      foreach ($summaryEndpoints as $summaryCategoryTitle => $summaryCategoryEndpoint) {
         // Get articles.
         $categoryArticles = $this->getArticles($summaryCategoryEndpoint, 1);
         if (count($categoryArticles)) {
           $articles[$summaryCategoryTitle] = array_pop($categoryArticles);
         }
       }
+
     }
 
     // Only output anything if we got results.

@@ -1,0 +1,30 @@
+uuid: 2d5db746-4eef-4367-8674-e5811849eec8
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_display
+field_name: field_display
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: categories
+      label: 'Summary of Articles in Categories'
+    -
+      value: tags
+      label: 'Summary of Articles with Tags'
+    -
+      value: endpoint
+      label: 'Articles from Endpoint'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

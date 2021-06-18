@@ -130,7 +130,7 @@ function arvestbank_phone_numbers_entity_presave(EntityInterface $entity) {
  */
 function arvestbank_phone_numbers_form_node_form_alter(&$form, &$form_state, $form_id) {
 
-  if ($form_id == 'node_cta_phone_number_form') {
+  if ($form_id == 'node_cta_phone_number_form' || $form_id == 'node_cta_phone_number_edit_form') {
     $helpText = [
       '#markup' => 'A list of all current CTA Phone Numbers and where they\'re referenced is available '
       . '<a href="/admin/phone-number-usage">here</a>.',
