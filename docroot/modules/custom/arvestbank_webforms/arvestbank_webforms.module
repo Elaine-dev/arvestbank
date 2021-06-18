@@ -85,8 +85,10 @@ function arvestbank_webforms_form_alter(&$form, FormStateInterface $form_state, 
     // Financing Options "Help Me Decide" Form.
     case "webform_submission_financing_options_add_form":
     case "webform_submission_financing_options_test_form":
+    case "webform_submission_financing_options_node_13156_add_form":
       $webform_input = $form_state->getUserInput();
       if (array_key_exists('loan_other_purpose', $webform_input)) {
+        // These options need to be hidden just for this route.
         if ($webform_input['loan_other_purpose'] == 'education') {
           unset($form['elements']['page4']['loan_secure']['#options']['vehicle']);
           unset($form['elements']['page4']['loan_secure']['#options']['marine_boat']);
