@@ -1,0 +1,21 @@
+uuid: 1e555dd2-9c6c-4c59-b80e-4489e0b89ff6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display
+    - paragraphs.paragraphs_type.wordpress_articles
+  module:
+    - options
+id: paragraph.wordpress_articles.field_display
+field_name: field_display
+entity_type: paragraph
+bundle: wordpress_articles
+label: Display
+description: "Select the articles to show.<br/>\r\nNote if you select \"Articles from Endpoint\" that currently the wordpress endpoints are all limited to 1 result each."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

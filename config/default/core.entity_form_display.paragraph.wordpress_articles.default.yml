@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.wordpress_articles.field_article_
+    - field.field.paragraph.wordpress_articles.field_display
     - field.field.paragraph.wordpress_articles.field_feed_url
-    - field.field.paragraph.wordpress_articles.field_show_latest_news_summary
     - field.field.paragraph.wordpress_articles.field_title
     - paragraphs.paragraphs_type.wordpress_articles
 id: paragraph.wordpress_articles.default
@@ -20,6 +20,12 @@ content:
     third_party_settings: {  }
     type: number
     region: content
+  field_display:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_feed_url:
     weight: 2
     settings:
@@ -27,13 +33,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_show_latest_news_summary:
-    weight: 1
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
     region: content
   field_title:
     weight: 0
