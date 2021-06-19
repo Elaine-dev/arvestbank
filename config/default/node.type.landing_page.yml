@@ -25,7 +25,7 @@ third_party_settings:
     unpublish_enable: true
     unpublish_required: false
     unpublish_revision: false
-name: 'Landing Page'
+name: 'Hub Landing Page'
 type: landing_page
 description: 'A catch all for Site Studio Pages'
 help: ''
