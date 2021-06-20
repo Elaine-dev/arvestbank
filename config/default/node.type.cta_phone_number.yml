@@ -22,7 +22,7 @@ third_party_settings:
     unpublish_enable: false
     unpublish_required: false
     unpublish_revision: false
-name: 'CTA Phone Number'
+name: 'Phone Number'
 type: cta_phone_number
 description: 'Contact information for blocks. (for example 888 numbers)'
 help: ''
