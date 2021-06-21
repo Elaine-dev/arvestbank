@@ -9,7 +9,12 @@ label: 'Authenticated user'
 weight: -8
 is_admin: false
 permissions:
+  - 'access component content'
+  - 'access components'
   - 'access content'
+  - 'access elements'
+  - 'access fields'
+  - 'access helpers'
   - 'access sitemap'
   - 'access toolbar'
   - 'administer external link popup'
