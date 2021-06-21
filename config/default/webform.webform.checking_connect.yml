@@ -14,7 +14,63 @@ id: checking_connect
 title: 'Checking Account Specialist Connection'
 description: 'Connect with Arvest about our checking account options.'
 category: ''
-elements: "header:\n  '#type': webform_markup\n  '#markup': |\n    <h2 class=\"sub-header\">Connect With Us About Our Flexible Checking Account Options</h2>\n\n    <p>Interested in opening or learning more about a checking account with Arvest? Call us at (855) 662-5626 to get started or fill out the form below to have us contact you!</p>\nflexbox_name:\n  '#type': webform_flexbox\n  name:\n    '#type': webform_name\n    '#title': Name\n    '#title__access': false\n    '#first__title': 'First Name'\n    '#first__required': true\n    '#middle__access': false\n    '#last__title': 'Last Name'\n    '#last__required': true\n    '#suffix__access': false\n    '#degree__access': false\n    '#required': true\naddress:\n  '#type': webform_address\n  '#title': Address\n  '#address__access': false\n  '#address_2__access': false\n  '#city__title': City\n  '#city__required': true\n  '#state_province__title': State\n  '#state_province__required': true\n  '#state_province__options': state_province_codes\n  '#postal_code__access': false\n  '#country__access': false\nflexbox__phone:\n  '#type': webform_flexbox\n  email_address:\n    '#type': email\n    '#title': 'Email address'\n    '#required': true\n  phone_number:\n    '#type': tel\n    '#title': 'Phone Number'\n    '#placeholder': '(nnn) nnn-nnnn'\n    '#required': true\n    '#pattern': '^(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}$'\n    '#pattern_error': 'Please enter a valid phone number.'\nexisting_arvest_customer:\n  '#type': radios\n  '#title': 'Existing Arvest customer?'\n  '#options': yes_no\n  '#required': true\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\nfooter_markup:\n  '#type': webform_markup\n  '#markup': '<em>You expressly consent to be contacted by Arvest at the telephone number you have provided.  You agree Arvest may contact you in any way, including calls delivered by an automatic telephone dialing system.</em>'"
+elements: |-
+  header:
+    '#type': webform_markup
+    '#markup': |
+      <h2 class="sub-header">Connect With Us About Our Flexible Checking Account Options</h2>
+
+      <p>Interested in opening or learning more about a checking account with Arvest? Call us at (855) 662-5626 to get started or fill out the form below to have us contact you!</p>
+  flexbox_name:
+    '#type': webform_flexbox
+    name:
+      '#type': webform_name
+      '#title': Name
+      '#title__access': false
+      '#first__title': 'First Name'
+      '#first__required': true
+      '#middle__access': false
+      '#last__title': 'Last Name'
+      '#last__required': true
+      '#suffix__access': false
+      '#degree__access': false
+      '#required': true
+  address:
+    '#type': webform_address
+    '#title': Address
+    '#address__access': false
+    '#address_2__access': false
+    '#city__title': City
+    '#city__required': true
+    '#state_province__title': State
+    '#state_province__required': true
+    '#state_province__options': state_province_codes
+    '#postal_code__access': false
+    '#country__access': false
+  flexbox__phone:
+    '#type': webform_flexbox
+    email_address:
+      '#type': email
+      '#title': 'Email address'
+      '#required': true
+    phone_number:
+      '#type': tel
+      '#title': 'Phone Number'
+      '#placeholder': '(nnn) nnn-nnnn'
+      '#required': true
+      '#pattern': '^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$'
+      '#pattern_error': 'Please enter a valid phone number.'
+  existing_arvest_customer:
+    '#type': radios
+    '#title': 'Existing Arvest customer?'
+    '#options': yes_no
+    '#required': true
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+  footer_markup:
+    '#type': webform_markup
+    '#markup': '<em>You expressly consent to be contacted by Arvest at the telephone number you have provided.  You agree Arvest may contact you in any way, including calls delivered by an automatic telephone dialing system.</em>'
 css: ''
 javascript: ''
 settings:
