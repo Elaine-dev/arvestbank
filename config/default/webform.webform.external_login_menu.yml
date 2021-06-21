@@ -14,7 +14,357 @@ id: external_login_menu
 title: 'External Login - Menu'
 description: 'Provides a top navigation form for logging in to services external to the drupal site.'
 category: ''
-elements: "'#attributes':\n  class:\n    - coh-style-login-blocks\nlogin_select:\n  '#type': select\n  '#title': 'Login Select'\n  '#title_display': invisible\n  '#options':\n    arvest_online_banking: 'Arvest Online Banking'\n    cash_manager: 'Cash Manager'\n    'https://smartpay.profitstars.com/sts/Account/Login?ReturnUrl=%2fsts%2fissue%2fwsfed%3fwa%3dwsignin1.0%26wtrealm%3dhttps%253a%252f%252fsmartpay.profitstars.com%252fbusiness%26wctx%3drm%253d0%2526id%253dpassive%2526ru%253d%25252fbusiness%25252flogin%25252fa': 'Remote Deposit Capture'\n    mortgage: Mortgage\n    'https://arvest.cardmanager.com': 'Credit Card: Personal'\n    'https://www.centresuite.com/Centre/Public/Logon/Index?ReturnUrl=/Centre/?arvest&arvest': 'Credit Card: Business'\n    'https://arvest.cardmanager.com/': 'Flex Rewards: Personal'\n    'https://arvestflexrewards.com/externalLogin.htm?product=AVST01/AVST01COMM&ext_cat=SBCcomm': 'Flex Rewards: Business'\n    'https://epayables.arvest.com/?_gl=1*1crqwrb*_ga*MTQ2MTExNjcwOS4xNjE2Nzc0MzEy*_ga_GRH26TKW0W*MTYxOTAzNjgwNC43OC4xLjE2MTkwMzc1NDEuNTU.': ePayables\n    'https://clientpoint.fisglobal.com/tdcb/main/UserLogon?bankNumber=8F&subProduct=': 'AWM Client Point'\n    investments_wealth: 'Investments - Wealth'\n  '#wrapper_attributes':\n    class:\n      - top-select\n  '#attributes':\n    data-placeholder: 'LOG IN TO...'\nlogin_select_non_prod:\n  '#type': select\n  '#title': 'Login Select - Non Prod'\n  '#title_display': invisible\n  '#options':\n    arvest_online_banking: 'Arvest Online Banking'\n    cash_manager: 'Cash Manager'\n    'https://smartpay.profitstars.com/sts/Account/Login?ReturnUrl=%2fsts%2fissue%2fwsfed%3fwa%3dwsignin1.0%26wtrealm%3dhttps%253a%252f%252fsmartpay.profitstars.com%252fbusiness%26wctx%3drm%253d0%2526id%253dpassive%2526ru%253d%25252fbusiness%25252flogin%25252fa': 'Remote Deposit Capture'\n    mortgage: Mortgage\n    'https://arvest.cardmanager.com': 'Credit Card: Personal'\n    'https://www.centresuite.com/Centre/Public/Logon/Index?ReturnUrl=/Centre/?arvest&arvest': 'Credit Card: Business'\n    'https://arvest.cardmanager.com/': 'Flex Rewards: Personal'\n    'https://arvestflexrewards.com/externalLogin.htm?product=AVST01/AVST01COMM&ext_cat=SBCcomm': 'Flex Rewards: Business'\n    'https://epayables.arvest.com/?_gl=1*1crqwrb*_ga*MTQ2MTExNjcwOS4xNjE2Nzc0MzEy*_ga_GRH26TKW0W*MTYxOTAzNjgwNC43OC4xLjE2MTkwMzc1NDEuNTU.': ePayables\n    'https://clientpoint.fisglobal.com/tdcb/main/UserLogon?bankNumber=8F&subProduct=': 'AWM Client Point'\n    investments_wealth: 'Investments - Wealth'\n  '#wrapper_attributes':\n    class:\n      - top-select\n  '#attributes':\n    data-placeholder: 'LOG IN TO...'\nresults_container:\n  '#type': container\n  '#states':\n    visible:\n      - ':input[name=\"login_select\"]':\n          filled: true\n      - or\n      - ':input[name=\"login_select_non_prod\"]':\n          filled: true\n    invisible:\n      - ':input[name=\"login_select\"]':\n          empty: true\n      - or\n      - ':input[name=\"login_select_non_prod\"]':\n          empty: true\n  '#attributes':\n    class:\n      - login-results\n  arvest_online_banking:\n    '#type': container\n    '#states':\n      visible:\n        - ':input[name=\"login_select\"]':\n            value: arvest_online_banking\n        - or\n        - ':input[name=\"login_select_non_prod\"]':\n            value: arvest_online_banking\n      invisible:\n        ':input[name=\"login_select\"]':\n          '!value': arvest_online_banking\n        ':input[name=\"login_select_non_prod\"]':\n          '!value': arvest_online_banking\n    arvest_online_title:\n      '#type': webform_markup\n      '#markup': '<h3>Arvest Online Banking</h3>'\n    arvest_online_banking_username:\n      '#type': textfield\n      '#title': 'Arvest Online Banking Username'\n      '#title_display': invisible\n      '#placeholder': 'Enter Your Login ID'\n    markup:\n      '#type': webform_markup\n      '#wrapper_attributes':\n        class:\n          - wide-links\n      '#markup': '<a class=\"coh-style-triangle\" href=\"/user/password\">Forgot Login ID or password?</a>'\n  cash_manager:\n    '#type': container\n    '#states':\n      visible:\n        - ':input[name=\"login_select\"]':\n            value: cash_manager\n        - or\n        - ':input[name=\"login_select_non_prod\"]':\n            value: cash_manager\n      invisible:\n        ':input[name=\"login_select\"]':\n          '!value': cash_manager\n        ':input[name=\"login_select_non_prod\"]':\n          '!value': cash_manager\n    cash_manager_title:\n      '#type': webform_markup\n      '#markup': '<h3>Cash Manager</h3>'\n    cash_manager_hidden_browser_data:\n      '#type': hidden\n      '#title': 'Cash Manager Hidden Browse Data'\n    javascript_enabled_boolean:\n      '#type': hidden\n      '#title': 'Javascript Enabled Boolean'\n    cash_manager_username:\n      '#type': textfield\n      '#title': 'Cash Manager Username'\n      '#title_display': invisible\n      '#placeholder': 'Cashman Login ID'\n  mortgage:\n    '#type': container\n    '#states':\n      visible:\n        - ':input[name=\"login_select\"]':\n            value: mortgage\n        - or\n        - ':input[name=\"login_select_non_prod\"]':\n            value: mortgage\n      invisible:\n        ':input[name=\"login_select\"]':\n          '!value': mortgage\n        ':input[name=\"login_select_non_prod\"]':\n          '!value': mortgage\n    mortgage_title:\n      '#type': webform_markup\n      '#markup': '<h3>Mortgage</h3>'\n    mortgage_username:\n      '#type': email\n      '#title': 'Mortgage Username'\n      '#title_display': invisible\n      '#placeholder': email\n    mortgage_password:\n      '#type': textfield\n      '#title': 'Mortgage Password'\n      '#title_display': invisible\n      '#placeholder': password\n      '#input_hide': true\n    remember_my_computer:\n      '#type': checkbox\n      '#title': 'Remember My Computer'\n      '#wrapper_attributes':\n        class:\n          - login-links\n    mortgage_links:\n      '#type': webform_markup\n      '#wrapper_attributes':\n        class:\n          - login-links\n      '#markup': |-\n        <a href=\"/personal/sign-on/login/signup\">Sign up for access</a><br />\n        <a href=\"/personal/sign-on/login/forgot\">Forgot your password?</a>\n  awm_client_point:\n    '#type': container\n    '#states':\n      visible:\n        - ':input[name=\"login_select\"]':\n            value: 'https://clientpoint.fisglobal.com/tdcb/main/UserLogon?bankNumber=8F&subProduct='\n        - or\n        - ':input[name=\"login_select_non_prod\"]':\n            value: 'https://clientpoint.fisglobal.com/tdcb/main/UserLogon?bankNumber=8F&subProduct='\n      invisible:\n        ':input[name=\"login_select\"]':\n          '!value': 'https://clientpoint.fisglobal.com/tdcb/main/UserLogon?bankNumber=8F&subProduct='\n        ':input[name=\"login_select_non_prod\"]':\n          '!value': 'https://clientpoint.fisglobal.com/tdcb/main/UserLogon?bankNumber=8F&subProduct='\n    client_point_title:\n      '#type': webform_markup\n      '#markup': '<h3>AWM Client Point</h3>'\n    awm_client_point_links:\n      '#type': webform_markup\n      '#wrapper_attributes':\n        class:\n          - login-links\n      '#markup': |-\n        <a href=\"/pdfs/aam/AWMClientPointGettingStartedGuide.pdf\">Getting Started</a><br />\n        <a href=\"/pdfs/aam/AAMClientPointSecureSignOnFAQ.pdf\">FAQ</a>\n  remote_deposit_capture:\n    '#type': container\n    '#states':\n      visible:\n        - ':input[name=\"login_select\"]':\n            value: 'https://smartpay.profitstars.com/sts/Account/Login?ReturnUrl=%2fsts%2fissue%2fwsfed%3fwa%3dwsignin1.0%26wtrealm%3dhttps%253a%252f%252fsmartpay.profitstars.com%252fbusiness%26wctx%3drm%253d0%2526id%253dpassive%2526ru%253d%25252fbusiness%25252flogin%25252fa'\n        - or\n        - ':input[name=\"login_select_non_prod\"]':\n            value: 'https://smartpay.profitstars.com/sts/Account/Login?ReturnUrl=%2fsts%2fissue%2fwsfed%3fwa%3dwsignin1.0%26wtrealm%3dhttps%253a%252f%252fsmartpay.profitstars.com%252fbusiness%26wctx%3drm%253d0%2526id%253dpassive%2526ru%253d%25252fbusiness%25252flogin%25252fa'\n      invisible:\n        ':input[name=\"login_select\"]':\n          '!value': 'https://smartpay.profitstars.com/sts/Account/Login?ReturnUrl=%2fsts%2fissue%2fwsfed%3fwa%3dwsignin1.0%26wtrealm%3dhttps%253a%252f%252fsmartpay.profitstars.com%252fbusiness%26wctx%3drm%253d0%2526id%253dpassive%2526ru%253d%25252fbusiness%25252flogin%25252fa'\n        ':input[name=\"login_select_non_prod\"]':\n          '!value': 'https://smartpay.profitstars.com/sts/Account/Login?ReturnUrl=%2fsts%2fissue%2fwsfed%3fwa%3dwsignin1.0%26wtrealm%3dhttps%253a%252f%252fsmartpay.profitstars.com%252fbusiness%26wctx%3drm%253d0%2526id%253dpassive%2526ru%253d%25252fbusiness%25252flogin%25252fa'\n    remote_deposit_title:\n      '#type': webform_markup\n      '#markup': '<h3>Remote Deposit Capture</h3>'\n  cc_personal:\n    '#type': container\n    '#states':\n      visible:\n        - ':input[name=\"login_select\"]':\n            value: 'https://arvest.cardmanager.com'\n        - or\n        - ':input[name=\"login_select_non_prod\"]':\n            value: 'https://arvest.cardmanager.com'\n      invisible:\n        ':input[name=\"login_select\"]':\n          '!value': 'https://arvest.cardmanager.com'\n        ':input[name=\"login_select_non_prod\"]':\n          '!value': 'https://arvest.cardmanager.com'\n    cc_personal_title:\n      '#type': webform_markup\n      '#markup': '<h3>Credit Card: Personal</h3>'\n  cc_business:\n    '#type': container\n    '#states':\n      visible:\n        - ':input[name=\"login_select\"]':\n            value: 'https://www.centresuite.com/Centre/Public/Logon/Index?ReturnUrl=/Centre/?arvest&arvest'\n        - or\n        - ':input[name=\"login_select_non_prod\"]':\n            value: 'https://www.centresuite.com/Centre/Public/Logon/Index?ReturnUrl=/Centre/?arvest&arvest'\n      invisible:\n        ':input[name=\"login_select\"]':\n          '!value': 'https://www.centresuite.com/Centre/Public/Logon/Index?ReturnUrl=/Centre/?arvest&arvest'\n        ':input[name=\"login_select_non_prod\"]':\n          '!value': 'https://www.centresuite.com/Centre/Public/Logon/Index?ReturnUrl=/Centre/?arvest&arvest'\n    cc_business_title:\n      '#type': webform_markup\n      '#markup': '<h3>Credit Card: Business</h3>'\n  fr_personal:\n    '#type': container\n    '#states':\n      visible:\n        - ':input[name=\"login_select\"]':\n            value: 'https://arvest.cardmanager.com/'\n        - or\n        - ':input[name=\"login_select_non_prod\"]':\n            value: 'https://arvest.cardmanager.com/'\n      invisible:\n        ':input[name=\"login_select\"]':\n          '!value': 'https://arvest.cardmanager.com/'\n        ':input[name=\"login_select_non_prod\"]':\n          '!value': 'https://arvest.cardmanager.com/'\n    fr_personal_title:\n      '#type': webform_markup\n      '#markup': '<h3>Flex Rewards: Personal</h3>'\n  fr_business:\n    '#type': container\n    '#states':\n      visible:\n        - ':input[name=\"login_select\"]':\n            value: 'https://arvestflexrewards.com/externalLogin.htm?product=AVST01/AVST01COMM&ext_cat=SBCcomm'\n        - or\n        - ':input[name=\"login_select_non_prod\"]':\n            value: 'https://arvestflexrewards.com/externalLogin.htm?product=AVST01/AVST01COMM&ext_cat=SBCcomm'\n      invisible:\n        ':input[name=\"login_select\"]':\n          '!value': 'https://arvestflexrewards.com/externalLogin.htm?product=AVST01/AVST01COMM&ext_cat=SBCcomm'\n        ':input[name=\"login_select_non_prod\"]':\n          '!value': 'https://arvestflexrewards.com/externalLogin.htm?product=AVST01/AVST01COMM&ext_cat=SBCcomm'\n    fr_business_title:\n      '#type': webform_markup\n      '#markup': '<h3>Flex Rewards: Business</h3>'\n  epayables:\n    '#type': container\n    '#states':\n      visible:\n        - ':input[name=\"login_select\"]':\n            value: 'https://epayables.arvest.com/?_gl=1*1crqwrb*_ga*MTQ2MTExNjcwOS4xNjE2Nzc0MzEy*_ga_GRH26TKW0W*MTYxOTAzNjgwNC43OC4xLjE2MTkwMzc1NDEuNTU.'\n        - or\n        - ':input[name=\"login_select_non_prod\"]':\n            value: 'https://epayables.arvest.com/?_gl=1*1crqwrb*_ga*MTQ2MTExNjcwOS4xNjE2Nzc0MzEy*_ga_GRH26TKW0W*MTYxOTAzNjgwNC43OC4xLjE2MTkwMzc1NDEuNTU.'\n      invisible:\n        ':input[name=\"login_select\"]':\n          '!value': 'https://epayables.arvest.com/?_gl=1*1crqwrb*_ga*MTQ2MTExNjcwOS4xNjE2Nzc0MzEy*_ga_GRH26TKW0W*MTYxOTAzNjgwNC43OC4xLjE2MTkwMzc1NDEuNTU.'\n        ':input[name=\"login_select_non_prod\"]':\n          '!value': 'https://epayables.arvest.com/?_gl=1*1crqwrb*_ga*MTQ2MTExNjcwOS4xNjE2Nzc0MzEy*_ga_GRH26TKW0W*MTYxOTAzNjgwNC43OC4xLjE2MTkwMzc1NDEuNTU.'\n    epayables_title:\n      '#type': webform_markup\n      '#markup': '<h3>Flex Rewards: Business</h3>'\n  investments_wealth:\n    '#type': container\n    '#states':\n      visible:\n        - ':input[name=\"login_select\"]':\n            value: investments_wealth\n        - or\n        - ':input[name=\"login_select_non_prod\"]':\n            value: investments_wealth\n      invisible:\n        ':input[name=\"login_select\"]':\n          '!value': investments_wealth\n        ':input[name=\"login_select_non_prod\"]':\n          '!value': investments_wealth\n    investments_wealth_title:\n      '#type': webform_markup\n      '#markup': '<h3>Investments - Wealth</h3>'\n    investments_wealth_username:\n      '#type': textfield\n      '#title': 'Investments Wealth Username'\n      '#title_display': invisible\n      '#placeholder': 'Login ID'\n    investments_wealth_password:\n      '#type': textfield\n      '#title': 'Investments Wealth Password'\n      '#title_display': invisible\n      '#placeholder': Password\n      '#input_hide': true\n      '#attributes':\n        class:\n          - form-text\n    investments_wealth_links:\n      '#type': webform_markup\n      '#wrapper_attributes':\n        class:\n          - login-links\n      '#markup': |-\n        <a href=\"https://sso.arvest.com/ext/idrecovery/Recover?AdapterId=HTMLPingDirectoryAdapter&amp;TargetResource=https%3A%2F%2Fsso.arvest.com%2Fidp%2Fc5uL8%2FresumeSAML20%2Fidp%2FstartSSO.ping&amp;_gl=1*1h3rq5i*_ga*MTQ2MTExNjcwOS4xNjE2Nzc0MzEy*_ga_GRH26TKW0W*MTYxOTAzNjgwNC43OC4xLjE2MTkwMzg5ODguNTc.\">Forgot Login ID</a><br />\n        <a href=\"https://sso.arvest.com/ext/pwdreset/Identify?AdapterId=HTMLPingDirectoryAdapter&amp;TargetResource=https%3A%2F%2Fsso.arvest.com%2Fidp%2FB2jpw%2FresumeSAML20%2Fidp%2FstartSSO.ping\">Forgot password</a>\n  actions:\n    '#type': webform_actions\n    '#title': 'Submit button(s)'\n    '#states':\n      visible:\n        - ':input[name=\"login_select\"]':\n            filled: true\n        - or\n        - ':input[name=\"login_select_non_prod\"]':\n            filled: true\n      invisible:\n        - ':input[name=\"login_select\"]':\n            empty: true\n        - or\n        - ':input[name=\"login_select_non_prod\"]':\n            empty: true\n    '#attributes':\n      class:\n        - 'messages messages--warning'\n    '#submit__label': 'LOG IN'\n    '#submit__attributes':\n      class:\n        - coh-style-blue-link-button"
+elements: |-
+  '#attributes':
+    class:
+      - coh-style-login-blocks
+  login_select:
+    '#type': select
+    '#title': 'Login Select'
+    '#title_display': invisible
+    '#options':
+      arvest_online_banking: 'Arvest Online Banking'
+      cash_manager: 'Cash Manager'
+      'https://smartpay.profitstars.com/sts/Account/Login?ReturnUrl=%2fsts%2fissue%2fwsfed%3fwa%3dwsignin1.0%26wtrealm%3dhttps%253a%252f%252fsmartpay.profitstars.com%252fbusiness%26wctx%3drm%253d0%2526id%253dpassive%2526ru%253d%25252fbusiness%25252flogin%25252fa': 'Remote Deposit Capture'
+      mortgage: Mortgage
+      'https://arvest.cardmanager.com': 'Credit Card: Personal'
+      'https://www.centresuite.com/Centre/Public/Logon/Index?ReturnUrl=/Centre/?arvest&arvest': 'Credit Card: Business'
+      'https://arvest.cardmanager.com/': 'Flex Rewards: Personal'
+      'https://arvestflexrewards.com/externalLogin.htm?product=AVST01/AVST01COMM&ext_cat=SBCcomm': 'Flex Rewards: Business'
+      'https://epayables.arvest.com/?_gl=1*1crqwrb*_ga*MTQ2MTExNjcwOS4xNjE2Nzc0MzEy*_ga_GRH26TKW0W*MTYxOTAzNjgwNC43OC4xLjE2MTkwMzc1NDEuNTU.': ePayables
+      'https://clientpoint.fisglobal.com/tdcb/main/UserLogon?bankNumber=8F&subProduct=': 'AWM Client Point'
+      investments_wealth: 'Investments - Wealth'
+    '#wrapper_attributes':
+      class:
+        - top-select
+    '#attributes':
+      data-placeholder: 'LOG IN TO...'
+  login_select_non_prod:
+    '#type': select
+    '#title': 'Login Select - Non Prod'
+    '#title_display': invisible
+    '#options':
+      arvest_online_banking: 'Arvest Online Banking'
+      cash_manager: 'Cash Manager'
+      'https://smartpay.profitstars.com/sts/Account/Login?ReturnUrl=%2fsts%2fissue%2fwsfed%3fwa%3dwsignin1.0%26wtrealm%3dhttps%253a%252f%252fsmartpay.profitstars.com%252fbusiness%26wctx%3drm%253d0%2526id%253dpassive%2526ru%253d%25252fbusiness%25252flogin%25252fa': 'Remote Deposit Capture'
+      mortgage: Mortgage
+      'https://arvest.cardmanager.com': 'Credit Card: Personal'
+      'https://www.centresuite.com/Centre/Public/Logon/Index?ReturnUrl=/Centre/?arvest&arvest': 'Credit Card: Business'
+      'https://arvest.cardmanager.com/': 'Flex Rewards: Personal'
+      'https://arvestflexrewards.com/externalLogin.htm?product=AVST01/AVST01COMM&ext_cat=SBCcomm': 'Flex Rewards: Business'
+      'https://epayables.arvest.com/?_gl=1*1crqwrb*_ga*MTQ2MTExNjcwOS4xNjE2Nzc0MzEy*_ga_GRH26TKW0W*MTYxOTAzNjgwNC43OC4xLjE2MTkwMzc1NDEuNTU.': ePayables
+      'https://clientpoint.fisglobal.com/tdcb/main/UserLogon?bankNumber=8F&subProduct=': 'AWM Client Point'
+      investments_wealth: 'Investments - Wealth'
+    '#wrapper_attributes':
+      class:
+        - top-select
+    '#attributes':
+      data-placeholder: 'LOG IN TO...'
+  results_container:
+    '#type': container
+    '#states':
+      visible:
+        - ':input[name="login_select"]':
+            filled: true
+        - or
+        - ':input[name="login_select_non_prod"]':
+            filled: true
+      invisible:
+        - ':input[name="login_select"]':
+            empty: true
+        - or
+        - ':input[name="login_select_non_prod"]':
+            empty: true
+    '#attributes':
+      class:
+        - login-results
+    arvest_online_banking:
+      '#type': container
+      '#states':
+        visible:
+          - ':input[name="login_select"]':
+              value: arvest_online_banking
+          - or
+          - ':input[name="login_select_non_prod"]':
+              value: arvest_online_banking
+        invisible:
+          ':input[name="login_select"]':
+            '!value': arvest_online_banking
+          ':input[name="login_select_non_prod"]':
+            '!value': arvest_online_banking
+      arvest_online_title:
+        '#type': webform_markup
+        '#markup': '<h3>Arvest Online Banking</h3>'
+      arvest_online_banking_username:
+        '#type': textfield
+        '#title': 'Arvest Online Banking Username'
+        '#title_display': invisible
+        '#placeholder': 'Enter Your Login ID'
+      markup:
+        '#type': webform_markup
+        '#wrapper_attributes':
+          class:
+            - wide-links
+        '#markup': '<a class="coh-style-triangle" href="/user/password">Forgot Login ID or password?</a>'
+    cash_manager:
+      '#type': container
+      '#states':
+        visible:
+          - ':input[name="login_select"]':
+              value: cash_manager
+          - or
+          - ':input[name="login_select_non_prod"]':
+              value: cash_manager
+        invisible:
+          ':input[name="login_select"]':
+            '!value': cash_manager
+          ':input[name="login_select_non_prod"]':
+            '!value': cash_manager
+      cash_manager_title:
+        '#type': webform_markup
+        '#markup': '<h3>Cash Manager</h3>'
+      cash_manager_hidden_browser_data:
+        '#type': hidden
+        '#title': 'Cash Manager Hidden Browse Data'
+      javascript_enabled_boolean:
+        '#type': hidden
+        '#title': 'Javascript Enabled Boolean'
+      cash_manager_username:
+        '#type': textfield
+        '#title': 'Cash Manager Username'
+        '#title_display': invisible
+        '#placeholder': 'Cashman Login ID'
+    mortgage:
+      '#type': container
+      '#states':
+        visible:
+          - ':input[name="login_select"]':
+              value: mortgage
+          - or
+          - ':input[name="login_select_non_prod"]':
+              value: mortgage
+        invisible:
+          ':input[name="login_select"]':
+            '!value': mortgage
+          ':input[name="login_select_non_prod"]':
+            '!value': mortgage
+      mortgage_title:
+        '#type': webform_markup
+        '#markup': '<h3>Mortgage</h3>'
+      mortgage_username:
+        '#type': email
+        '#title': 'Mortgage Username'
+        '#title_display': invisible
+        '#placeholder': email
+      mortgage_password:
+        '#type': textfield
+        '#title': 'Mortgage Password'
+        '#title_display': invisible
+        '#placeholder': password
+        '#input_hide': true
+      remember_my_computer:
+        '#type': checkbox
+        '#title': 'Remember My Computer'
+        '#wrapper_attributes':
+          class:
+            - login-links
+      mortgage_links:
+        '#type': webform_markup
+        '#wrapper_attributes':
+          class:
+            - login-links
+        '#markup': |-
+          <a href="/personal/sign-on/login/signup">Sign up for access</a><br />
+          <a href="/personal/sign-on/login/forgot">Forgot your password?</a>
+    awm_client_point:
+      '#type': container
+      '#states':
+        visible:
+          - ':input[name="login_select"]':
+              value: 'https://clientpoint.fisglobal.com/tdcb/main/UserLogon?bankNumber=8F&subProduct='
+          - or
+          - ':input[name="login_select_non_prod"]':
+              value: 'https://clientpoint.fisglobal.com/tdcb/main/UserLogon?bankNumber=8F&subProduct='
+        invisible:
+          ':input[name="login_select"]':
+            '!value': 'https://clientpoint.fisglobal.com/tdcb/main/UserLogon?bankNumber=8F&subProduct='
+          ':input[name="login_select_non_prod"]':
+            '!value': 'https://clientpoint.fisglobal.com/tdcb/main/UserLogon?bankNumber=8F&subProduct='
+      client_point_title:
+        '#type': webform_markup
+        '#markup': '<h3>AWM Client Point</h3>'
+      awm_client_point_links:
+        '#type': webform_markup
+        '#wrapper_attributes':
+          class:
+            - login-links
+        '#markup': |-
+          <a href="/pdfs/aam/AWMClientPointGettingStartedGuide.pdf">Getting Started</a><br />
+          <a href="/pdfs/aam/AAMClientPointSecureSignOnFAQ.pdf">FAQ</a>
+    remote_deposit_capture:
+      '#type': container
+      '#states':
+        visible:
+          - ':input[name="login_select"]':
+              value: 'https://smartpay.profitstars.com/sts/Account/Login?ReturnUrl=%2fsts%2fissue%2fwsfed%3fwa%3dwsignin1.0%26wtrealm%3dhttps%253a%252f%252fsmartpay.profitstars.com%252fbusiness%26wctx%3drm%253d0%2526id%253dpassive%2526ru%253d%25252fbusiness%25252flogin%25252fa'
+          - or
+          - ':input[name="login_select_non_prod"]':
+              value: 'https://smartpay.profitstars.com/sts/Account/Login?ReturnUrl=%2fsts%2fissue%2fwsfed%3fwa%3dwsignin1.0%26wtrealm%3dhttps%253a%252f%252fsmartpay.profitstars.com%252fbusiness%26wctx%3drm%253d0%2526id%253dpassive%2526ru%253d%25252fbusiness%25252flogin%25252fa'
+        invisible:
+          ':input[name="login_select"]':
+            '!value': 'https://smartpay.profitstars.com/sts/Account/Login?ReturnUrl=%2fsts%2fissue%2fwsfed%3fwa%3dwsignin1.0%26wtrealm%3dhttps%253a%252f%252fsmartpay.profitstars.com%252fbusiness%26wctx%3drm%253d0%2526id%253dpassive%2526ru%253d%25252fbusiness%25252flogin%25252fa'
+          ':input[name="login_select_non_prod"]':
+            '!value': 'https://smartpay.profitstars.com/sts/Account/Login?ReturnUrl=%2fsts%2fissue%2fwsfed%3fwa%3dwsignin1.0%26wtrealm%3dhttps%253a%252f%252fsmartpay.profitstars.com%252fbusiness%26wctx%3drm%253d0%2526id%253dpassive%2526ru%253d%25252fbusiness%25252flogin%25252fa'
+      remote_deposit_title:
+        '#type': webform_markup
+        '#markup': '<h3>Remote Deposit Capture</h3>'
+    cc_personal:
+      '#type': container
+      '#states':
+        visible:
+          - ':input[name="login_select"]':
+              value: 'https://arvest.cardmanager.com'
+          - or
+          - ':input[name="login_select_non_prod"]':
+              value: 'https://arvest.cardmanager.com'
+        invisible:
+          ':input[name="login_select"]':
+            '!value': 'https://arvest.cardmanager.com'
+          ':input[name="login_select_non_prod"]':
+            '!value': 'https://arvest.cardmanager.com'
+      cc_personal_title:
+        '#type': webform_markup
+        '#markup': '<h3>Credit Card: Personal</h3>'
+    cc_business:
+      '#type': container
+      '#states':
+        visible:
+          - ':input[name="login_select"]':
+              value: 'https://www.centresuite.com/Centre/Public/Logon/Index?ReturnUrl=/Centre/?arvest&arvest'
+          - or
+          - ':input[name="login_select_non_prod"]':
+              value: 'https://www.centresuite.com/Centre/Public/Logon/Index?ReturnUrl=/Centre/?arvest&arvest'
+        invisible:
+          ':input[name="login_select"]':
+            '!value': 'https://www.centresuite.com/Centre/Public/Logon/Index?ReturnUrl=/Centre/?arvest&arvest'
+          ':input[name="login_select_non_prod"]':
+            '!value': 'https://www.centresuite.com/Centre/Public/Logon/Index?ReturnUrl=/Centre/?arvest&arvest'
+      cc_business_title:
+        '#type': webform_markup
+        '#markup': '<h3>Credit Card: Business</h3>'
+    fr_personal:
+      '#type': container
+      '#states':
+        visible:
+          - ':input[name="login_select"]':
+              value: 'https://arvest.cardmanager.com/'
+          - or
+          - ':input[name="login_select_non_prod"]':
+              value: 'https://arvest.cardmanager.com/'
+        invisible:
+          ':input[name="login_select"]':
+            '!value': 'https://arvest.cardmanager.com/'
+          ':input[name="login_select_non_prod"]':
+            '!value': 'https://arvest.cardmanager.com/'
+      fr_personal_title:
+        '#type': webform_markup
+        '#markup': '<h3>Flex Rewards: Personal</h3>'
+    fr_business:
+      '#type': container
+      '#states':
+        visible:
+          - ':input[name="login_select"]':
+              value: 'https://arvestflexrewards.com/externalLogin.htm?product=AVST01/AVST01COMM&ext_cat=SBCcomm'
+          - or
+          - ':input[name="login_select_non_prod"]':
+              value: 'https://arvestflexrewards.com/externalLogin.htm?product=AVST01/AVST01COMM&ext_cat=SBCcomm'
+        invisible:
+          ':input[name="login_select"]':
+            '!value': 'https://arvestflexrewards.com/externalLogin.htm?product=AVST01/AVST01COMM&ext_cat=SBCcomm'
+          ':input[name="login_select_non_prod"]':
+            '!value': 'https://arvestflexrewards.com/externalLogin.htm?product=AVST01/AVST01COMM&ext_cat=SBCcomm'
+      fr_business_title:
+        '#type': webform_markup
+        '#markup': '<h3>Flex Rewards: Business</h3>'
+    epayables:
+      '#type': container
+      '#states':
+        visible:
+          - ':input[name="login_select"]':
+              value: 'https://epayables.arvest.com/?_gl=1*1crqwrb*_ga*MTQ2MTExNjcwOS4xNjE2Nzc0MzEy*_ga_GRH26TKW0W*MTYxOTAzNjgwNC43OC4xLjE2MTkwMzc1NDEuNTU.'
+          - or
+          - ':input[name="login_select_non_prod"]':
+              value: 'https://epayables.arvest.com/?_gl=1*1crqwrb*_ga*MTQ2MTExNjcwOS4xNjE2Nzc0MzEy*_ga_GRH26TKW0W*MTYxOTAzNjgwNC43OC4xLjE2MTkwMzc1NDEuNTU.'
+        invisible:
+          ':input[name="login_select"]':
+            '!value': 'https://epayables.arvest.com/?_gl=1*1crqwrb*_ga*MTQ2MTExNjcwOS4xNjE2Nzc0MzEy*_ga_GRH26TKW0W*MTYxOTAzNjgwNC43OC4xLjE2MTkwMzc1NDEuNTU.'
+          ':input[name="login_select_non_prod"]':
+            '!value': 'https://epayables.arvest.com/?_gl=1*1crqwrb*_ga*MTQ2MTExNjcwOS4xNjE2Nzc0MzEy*_ga_GRH26TKW0W*MTYxOTAzNjgwNC43OC4xLjE2MTkwMzc1NDEuNTU.'
+      epayables_title:
+        '#type': webform_markup
+        '#markup': '<h3>Flex Rewards: Business</h3>'
+    investments_wealth:
+      '#type': container
+      '#states':
+        visible:
+          - ':input[name="login_select"]':
+              value: investments_wealth
+          - or
+          - ':input[name="login_select_non_prod"]':
+              value: investments_wealth
+        invisible:
+          ':input[name="login_select"]':
+            '!value': investments_wealth
+          ':input[name="login_select_non_prod"]':
+            '!value': investments_wealth
+      investments_wealth_title:
+        '#type': webform_markup
+        '#markup': '<h3>Investments - Wealth</h3>'
+      investments_wealth_username:
+        '#type': textfield
+        '#title': 'Investments Wealth Username'
+        '#title_display': invisible
+        '#placeholder': 'Login ID'
+      investments_wealth_password:
+        '#type': textfield
+        '#title': 'Investments Wealth Password'
+        '#title_display': invisible
+        '#placeholder': Password
+        '#input_hide': true
+        '#attributes':
+          class:
+            - form-text
+      investments_wealth_links:
+        '#type': webform_markup
+        '#wrapper_attributes':
+          class:
+            - login-links
+        '#markup': |-
+          <a href="https://sso.arvest.com/ext/idrecovery/Recover?AdapterId=HTMLPingDirectoryAdapter&amp;TargetResource=https%3A%2F%2Fsso.arvest.com%2Fidp%2Fc5uL8%2FresumeSAML20%2Fidp%2FstartSSO.ping&amp;_gl=1*1h3rq5i*_ga*MTQ2MTExNjcwOS4xNjE2Nzc0MzEy*_ga_GRH26TKW0W*MTYxOTAzNjgwNC43OC4xLjE2MTkwMzg5ODguNTc.">Forgot Login ID</a><br />
+          <a href="https://sso.arvest.com/ext/pwdreset/Identify?AdapterId=HTMLPingDirectoryAdapter&amp;TargetResource=https%3A%2F%2Fsso.arvest.com%2Fidp%2FB2jpw%2FresumeSAML20%2Fidp%2FstartSSO.ping">Forgot password</a>
+    actions:
+      '#type': webform_actions
+      '#title': 'Submit button(s)'
+      '#states':
+        visible:
+          - ':input[name="login_select"]':
+              filled: true
+          - or
+          - ':input[name="login_select_non_prod"]':
+              filled: true
+        invisible:
+          - ':input[name="login_select"]':
+              empty: true
+          - or
+          - ':input[name="login_select_non_prod"]':
+              empty: true
+      '#attributes':
+        class:
+          - 'messages messages--warning'
+      '#submit__label': 'LOG IN'
+      '#submit__attributes':
+        class:
+          - coh-style-blue-link-button
 css: ''
 javascript: ''
 settings:
