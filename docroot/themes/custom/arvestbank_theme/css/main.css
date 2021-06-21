@@ -756,11 +756,11 @@ body .site-content .pager__items li:before, .chosen-results ul li:before, .site-
 }
 
 /* main navigation overrides*/
-.li.coh-menu-list-item.coh-ce-a69b2abe.js-coh-menu-item:nth-child(6), .li.coh-menu-list-item.coh-ce-a69b2abe.js-coh-menu-item:nth-child(7) {
+li.coh-menu-list-item.coh-ce-a69b2abe.js-coh-menu-item:nth-child(6), li.coh-menu-list-item.coh-ce-a69b2abe.js-coh-menu-item:nth-child(7) {
   display:none;
 }
 @media (max-width: 59.3125rem){
-  .li.coh-menu-list-item.coh-ce-a69b2abe.js-coh-menu-item:nth-child(6), .li.coh-menu-list-item.coh-ce-a69b2abe.js-coh-menu-item:nth-child(7) {
+  li.coh-menu-list-item.coh-ce-a69b2abe.js-coh-menu-item:nth-child(6), li.coh-menu-list-item.coh-ce-a69b2abe.js-coh-menu-item:nth-child(7) {
     display:block;
   }
 }
