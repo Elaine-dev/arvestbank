@@ -44,7 +44,10 @@ function arvestbank_wordpress_articles_preprocess_node(array &$variables) {
     }
 
     $display = 'categories';
-    if (isset($paragraph->get('field_display')->getValue()[0]['value'])) {
+    if (
+      $paragraph->hasField('field_display') &&
+      isset($paragraph->get('field_display')->getValue()[0]['value'])
+    ) {
       $display = $paragraph->get('field_display')->getValue()[0]['value'];
     }
 
