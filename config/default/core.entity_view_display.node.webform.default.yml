@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.webform.body
+    - field.field.node.webform.field_disclosure
     - field.field.node.webform.field_layout_canvas
     - field.field.node.webform.field_meta_tags
     - field.field.node.webform.field_yoast_seo
@@ -24,12 +25,17 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_layout_canvas:
-    weight: 3
+    weight: 4
     label: hidden
     settings:
       view_mode: default
@@ -38,12 +44,12 @@ content:
     type: cohesion_entity_reference_revisions_entity_view
     region: content
   links:
-    weight: 0
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
   webform:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       source_entity: true
@@ -51,6 +57,7 @@ content:
     type: webform_entity_reference_entity_view
     region: content
 hidden:
+  field_disclosure: true
   field_meta_tags: true
   field_yoast_seo: true
   search_api_excerpt: true

@@ -103,23 +103,21 @@ class WordpressArticles extends CustomElementPluginBase {
         }
 
         // Summary field key, could be obtained from component config.
-        $showSummaryFieldKey = '200f3acd-93c8-43da-814e-9a27fc8391dd';
-        if (
-          isset($componentInstanceFieldValues->$showSummaryFieldKey)
-          && $componentInstanceFieldValues->$showSummaryFieldKey
-        ) {
-          $showSummary = TRUE;
+        $displayFieldKey = '9c861fcf-9aff-40c1-b12b-8ac7a2ea41e6';
+        if (isset($componentInstanceFieldValues->$displayFieldKey)) {
+          $displaySelection = $componentInstanceFieldValues->$displayFieldKey;
         }
         else {
-          $showSummary = FALSE;
+          // Default to displaying categories.
+          $displaySelection = 'categories';
         }
 
         // If we have an endpoint to fetch or are showing a summary.
-        if ($componentInstanceUrl || $showSummary) {
+        if ($componentInstanceUrl || $displaySelection != 'endpoint') {
           // Get wordpress articles service.
           $wordpressArticlesService = \Drupal::service('arvestbank_wordpress_articles.wordpress_articles_service');
           // Get render array to return.
-          $renderArray = $wordpressArticlesService->getRenderArray($componentInstanceTitle, $componentInstanceUrl, $componentInstanceLimit, $showSummary);
+          $renderArray = $wordpressArticlesService->getRenderArray($componentInstanceTitle, $componentInstanceUrl, $componentInstanceLimit, $displaySelection);
         }
 
       }
