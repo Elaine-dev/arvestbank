@@ -117,7 +117,7 @@
                     "overwrite": false
                 },
                 "[web-root]/.htaccess": {
-                    "append": "patches/htaccess-ssl.txt"
+                    "append": "patches/htaccessappend.txt"
                 }
             },
             "gitignore": true
