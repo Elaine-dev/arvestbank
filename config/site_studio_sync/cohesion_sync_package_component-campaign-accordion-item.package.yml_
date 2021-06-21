@@ -26,7 +26,7 @@
     locked: false
     modified: true
     selectable: true
-    category: cpt_cat_interactive_components
+    category: cpt_cat_campaign_components
     preview_image: 'public://element-preview-images/accordion-item.png'
     has_quick_edit: false
     entity_type_access: {  }
