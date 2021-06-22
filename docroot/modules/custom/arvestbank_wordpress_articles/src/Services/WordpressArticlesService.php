@@ -3,6 +3,7 @@
 namespace Drupal\arvestbank_wordpress_articles\Services;
 
 use Drupal\Component\Serialization\Json;
+use Drupal\views\Views;
 use GuzzleHttp\Client;
 
 /**
@@ -90,11 +91,14 @@ class WordpressArticlesService {
 
     }
 
-    // Only output anything if we got results.
-    if ($articles) {
+    // Get the News Alert.
+    $news_alert = $this->getNewsAlert();
+
+    // Output the block header if we have an alert or articles.
+    if (!empty($news_alert) || !empty($articles)) {
 
       // Add base render array with container and title.
-      $renderArray = [
+      $renderArray[] = [
         '#type' => 'container',
         '#attributes' => [
           'class' => [
@@ -105,6 +109,16 @@ class WordpressArticlesService {
           '#markup' => '<h3>' . $title . '</h3>',
         ],
       ];
+
+    }
+
+    // Add in the alert if there is one.
+    if (!empty($news_alert)) {
+      $renderArray[] = $news_alert;
+    }
+
+    // Only output anything if we got results.
+    if (!empty($articles)) {
 
       // Loop over articles.
       foreach ($articles as $articleIndex => $article) {
@@ -139,6 +153,35 @@ class WordpressArticlesService {
     }
 
     return $renderArray;
+
+  }
+
+  /**
+   * Returns a render array of the news alert block.
+   *
+   * @return array
+   *   News alert render array.
+   */
+  private function getNewsAlert() : array {
+
+    // Initialize the render array.
+    $news_alert = [];
+
+    // See first if there is an alert.
+    $alert_view = Views::getView('stage_page_sidebar_news_alert');
+    $alert_view->setDisplay('default');
+    $alert_view->execute();
+
+    // If there is an active alert embed the view.
+    if (!empty($alert_view->result)) {
+      $alert = views_embed_view('stage_page_sidebar_news_alert', 'default');
+      $news_alert['alert'] = $alert;
+      $news_alert['alert']['#prefix'] = '<div class="coh-style-alert">';
+      $news_alert['alert']['#suffix'] = '</div>';
+    }
+
+    // Return the news alert render array.
+    return $news_alert;
 
   }
 

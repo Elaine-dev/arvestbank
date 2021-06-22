@@ -1,0 +1,21 @@
+uuid: cb3a8f54-168b-4799-b8ac-32d00cefaa51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_alert_block_dates
+    - node.type.stage_page
+  module:
+    - datetime_range
+id: node.stage_page.field_news_alert_block_dates
+field_name: field_news_alert_block_dates
+entity_type: node
+bundle: stage_page
+label: 'News Alert Block Dates'
+description: 'Schedule the alert block to show during this time period.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange
