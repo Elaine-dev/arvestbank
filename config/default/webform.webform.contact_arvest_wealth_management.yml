@@ -85,13 +85,6 @@ elements: |-
     '#type': fieldset
     '#title': 'Form Fields'
     '#title_display': invisible
-    '#states':
-      visible:
-        - ':input[name="email_investments"]':
-            checked: true
-        - or
-        - ':input[name="email_insurance"]':
-            checked: true
     branch_location:
       '#type': webform_term_select
       '#title': 'Branch Location'
