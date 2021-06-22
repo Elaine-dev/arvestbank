@@ -45,6 +45,7 @@ class StagePageSidebarBlock extends BlockBase {
         $alert_view->setDisplay('default');
         $alert_view->execute();
 
+        // If there is an active alert embed the view.
         if (!empty($alert_view->result)) {
           $alert = views_embed_view('stage_page_sidebar_alert', 'default');
           $sidebar_block['alert'] = $alert;
