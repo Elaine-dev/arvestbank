@@ -189,6 +189,9 @@ AddEncoding gzip svgz
   RewriteCond %{HTTP_HOST} !^local.arvestbank.com$
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# rewrite rules for ask arvest search
+<IfModule mod_rewrite.c>
   # Redirect old search to new search maintaining search term
   RewriteCond %{QUERY_STRING} [&?]q=(.*)$
   RewriteRule ^askarvest /search?search=%1 [L,R=301]
+</IfModule>
