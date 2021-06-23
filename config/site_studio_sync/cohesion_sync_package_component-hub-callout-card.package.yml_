@@ -8,7 +8,7 @@
     dependencies: {  }
     id: pack_component_hub_callout_card
     label: 'Component Hub Callout Card'
-    description: 'This component is a hub call out card. Typically this card is in a three column layout. Last Updated: Allie Jones 06/13/2021'
+    description: 'This component is a hub call-out card. Typically this card is found in a three-column layout. Last Updated: Allie Jones 06/21/2021'
     excluded_entity_types: '[]'
     settings: '{"d16f1601-9725-4ae6-bb28-2cb1734b6cae":{"type":"cohesion_component","items":{"fe14af23-608e-40e3-aa90-5257122f4393":{"type":"file"},"d16f1601-9725-4ae6-bb28-2cb1734b6cae":{"type":"cohesion_component"}},"checked":true}}'
 -
