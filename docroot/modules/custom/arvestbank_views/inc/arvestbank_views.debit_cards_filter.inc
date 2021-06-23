@@ -16,7 +16,7 @@ function arvestbank_views_debit_cards_filter(array &$form) {
   // Add second submit button.
   $form['second_submit_button'] = [
     '#type' => 'submit',
-    '#value' => t('Filter'),
+    '#value' => t('Search'),
     '#prefix' => '<div class="form-actions">',
     '#suffix' => '</div>',
   ];
@@ -35,6 +35,9 @@ function arvestbank_views_debit_cards_filter(array &$form) {
     '#maxlength' => 5,
     '#placeholder' => 'Enter Zip Code',
   ];
+
+  // Attach supporting library.
+  $form['#attached']['library'][] = 'arvestbank_views/debit_cards';
 
   return $form;
 

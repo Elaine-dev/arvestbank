@@ -283,7 +283,7 @@ function arvestbank_views_views_query_alter(ViewExecutable $view, QueryPluginBas
           }
         }
         // Keyword search if used should have populated the local variable.
-        // Set the value of this condition to that of the keyword search.
+        // Set value of the media name condition to that of the keyword search.
         else if (
           $condition['field'] === 'media_field_data.name'
           && !empty($keyword_search)
