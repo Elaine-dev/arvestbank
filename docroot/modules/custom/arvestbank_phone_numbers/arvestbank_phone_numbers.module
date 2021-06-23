@@ -98,13 +98,13 @@ function arvestbank_phone_numbers_tokens($type, $tokens, array $data, array $opt
 }
 
 /**
- * Implements hook_entity_presave().
+ * Implements hook_entity_update().
  *
  * Trigger save for entities referencing phone number when it gets updated.
  *
  * @inheritDoc
  */
-function arvestbank_phone_numbers_entity_presave(EntityInterface $entity) {
+function arvestbank_phone_numbers_entity_update(EntityInterface $entity) {
 
   // If the entity is a "CTA Phone Number" node.
   if (

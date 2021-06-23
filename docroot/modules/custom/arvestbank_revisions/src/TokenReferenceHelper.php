@@ -55,9 +55,27 @@ class TokenReferenceHelper {
   public function getNodesWithReferencesToTokenGroup($token_group) {
 
     // Get pages that have a token in given group in body copy.
-    $basicPagesWithTokenQuery = \Drupal::entityQuery('node')
-      ->condition('type', ['page', 'landing_page'], 'IN')
-      ->condition('body', '[' . $token_group, 'CONTAINS');
+    $basicPagesWithTokenQuery = \Drupal::entityQuery('node');
+    $fieldConditionGroup = $basicPagesWithTokenQuery->orConditionGroup()
+      ->condition('body', '[' . $token_group, 'CONTAINS')
+      ->condition('field_alert_block_body', '[' . $token_group, 'CONTAINS')
+      ->condition('field_slide_one_cta_text', '[' . $token_group, 'CONTAINS')
+      ->condition('field_slide_two_cta_text', '[' . $token_group, 'CONTAINS')
+      ->condition('field_slide_three_cta_text', '[' . $token_group, 'CONTAINS')
+      ->condition('field_slide_four_cta_text', '[' . $token_group, 'CONTAINS');
+    $basicPagesWithTokenQuery
+      ->condition('type',
+        [
+          'page',
+          'landing_page',
+          'article_education_article',
+          'associate',
+          'calculators',
+          'stage_page',
+        ],
+        'IN'
+      )
+      ->condition($fieldConditionGroup);
     $basicPagesWithTokenResults = $basicPagesWithTokenQuery->execute();
 
     // Get pages that have a token in group in a component instance.
@@ -66,7 +84,7 @@ class TokenReferenceHelper {
       ->condition('field_layout_canvas.entity:cohesion_layout.json_values', '[' . $token_group, 'CONTAINS')
       ->condition('field_layout_.entity:cohesion_layout.json_values', '[' . $token_group, 'CONTAINS');
     $campaignPagesWithTokenQuery
-      ->condition('type', ['campaign_page', 'landing_page'], 'IN')
+      ->condition('type', ['campaign_page', 'landing_page', 'page'], 'IN')
       ->condition($fieldConditionGroup);
     $campaignPagesWithTokenResults = $campaignPagesWithTokenQuery->execute();
 

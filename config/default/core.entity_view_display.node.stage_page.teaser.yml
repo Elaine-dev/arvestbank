@@ -20,6 +20,7 @@ dependencies:
     - field.field.node.stage_page.field_icon_two
     - field.field.node.stage_page.field_icon_two_text
     - field.field.node.stage_page.field_meta_tags
+    - field.field.node.stage_page.field_rendered_node
     - field.field.node.stage_page.field_slide1_cta_color
     - field.field.node.stage_page.field_slide1_cta_link
     - field.field.node.stage_page.field_slide1_cta_position
@@ -77,6 +78,7 @@ hidden:
   field_icon_two: true
   field_icon_two_text: true
   field_meta_tags: true
+  field_rendered_node: true
   field_slide1_cta_color: true
   field_slide1_cta_link: true
   field_slide1_cta_position: true

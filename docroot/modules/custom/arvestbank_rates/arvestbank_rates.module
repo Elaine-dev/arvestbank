@@ -8,6 +8,7 @@
 use Drupal\Core\Render\BubbleableMetadata;
 use Drupal\Core\Entity\EntityInterface;
 use Sunra\PhpSimple\HtmlDomParser;
+use Drupal\Core\Cache\Cache;
 
 /**
  * Implements hook_token_info().
@@ -116,6 +117,8 @@ function arvestbank_rates_entity_presave(EntityInterface $entity) {
     $activeTheme = \Drupal::service('theme.initialization')->getActiveThemeByName('arvestbank_theme');
     // Set active theme to front end.
     \Drupal::theme()->setActiveTheme($activeTheme);
+    // Before we render the node invalidate cache tags so we get new data.
+    Cache::invalidateTags($entity->getCacheTagsToInvalidate());
     // Render node with front end theme.
     $renderedNode = \Drupal::service('renderer')->render($nodeRenderArray)->__toString();
     // Set active theme back to what it was.
@@ -128,6 +131,11 @@ function arvestbank_rates_entity_presave(EntityInterface $entity) {
     $renderedNodeContent = '';
     foreach ($nodeDom->find('.coh-main-view-content-column') as $element) {
       $renderedNodeContent .= $element->innertext();
+    }
+
+    // If we didn't find content that way save the whole thing.
+    if ($renderedNodeContent == '') {
+      $renderedNodeContent = $renderedNode;
     }
 
     // Set the field value.
