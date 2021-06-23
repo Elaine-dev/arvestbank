@@ -7,7 +7,8 @@
         $('select[name="field_debit_card_category_target_id"]').change(function () {
           $('input[name="field_debit_card_keywords_value"]').val('');
           $('input[name="geolocation_zip"]').val('');
-          $('#views-exposed-form-specialty-debit-cards-specialty-debit-card-block input[value="Filter"].form-submit').trigger('click');
+          // Auto-submit - hopefully just on one submit button, we will use the extra-submit.
+          $('#views-exposed-form-specialty-debit-cards-specialty-debit-card-block input.extra-submit.form-submit').trigger('click');
         });
         // Change Keywords.
         $('input[name="field_debit_card_keywords_value"]').change(function () {
