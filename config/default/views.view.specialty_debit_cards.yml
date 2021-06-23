@@ -64,7 +64,7 @@ display:
           text_input_required_format: cohesion
           bef:
             general:
-              autosubmit: true
+              autosubmit: false
               autosubmit_exclude_textfield: true
               autosubmit_textfield_delay: 5000
               autosubmit_hide: false
@@ -80,12 +80,12 @@ display:
                     filter_rewrite_values: '- Any -|All Categories'
                   collapsible: false
                   is_secondary: false
-              field_debit_card_keywords_value:
+              field_geolocation_proximity:
                 plugin_id: default
                 advanced:
                   collapsible: false
                   is_secondary: false
-              field_geolocation_proximity:
+              field_debit_card_keywords_value:
                 plugin_id: default
                 advanced:
                   collapsible: false
@@ -2346,6 +2346,7 @@ display:
         cache: false
         header: false
         footer: false
+        exposed_form: false
       use_ajax: true
       pager:
         type: none
@@ -2473,100 +2474,6 @@ display:
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
-        field_geolocation_proximity:
-          id: field_geolocation_proximity
-          table: media__field_geolocation
-          field: field_geolocation_proximity
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '<='
-          value:
-            min: ''
-            max: ''
-            value: '42'
-            center: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_geolocation_proximity_op
-            label: Proximity
-            description: ''
-            use_operator: false
-            operator: field_geolocation_proximity_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_geolocation_proximity
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              reviewer: '0'
-              contributor: '0'
-              site_editor: '0'
-              domain_admin: '0'
-              enterprise_admin: '0'
-            placeholder: 'Enter Zip Code'
-            min_placeholder: ''
-            max_placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          location_input:
-            client_location:
-              weight: 0
-              enable: false
-              location_input_id: client_location
-              settings:
-                auto_submit: false
-                hide_form: false
-            coordinates:
-              enable: true
-              weight: 0
-              location_input_id: coordinates
-            geocoder:
-              weight: 0
-              enable: false
-              location_input_id: geocoder
-            'fixed_value:fixed_value':
-              settings:
-                location_settings:
-                  settings:
-                    latitude: ''
-                    longitude: ''
-                location_plugin_id: fixed_value
-              weight: 0
-              enable: false
-              location_input_id: location_plugins
-            'ipstack:ipstack':
-              settings:
-                location_settings:
-                  settings:
-                    access_key: ''
-                location_plugin_id: ipstack
-              weight: 0
-              enable: false
-              location_input_id: location_plugins
-            'freeogeoip:freeogeoip':
-              weight: 0
-              enable: false
-              location_input_id: location_plugins
-              settings:
-                location_plugin_id: freeogeoip
-          unit: km
-          entity_type: media
-          plugin_id: geolocation_filter_proximity
         field_debit_card_keywords_value:
           id: field_debit_card_keywords_value
           table: media__field_debit_card_keywords
@@ -2653,11 +2560,106 @@ display:
           entity_type: media
           entity_field: name
           plugin_id: string
+        field_geolocation_proximity:
+          id: field_geolocation_proximity
+          table: media__field_geolocation
+          field: field_geolocation_proximity
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '<='
+          value:
+            min: ''
+            max: ''
+            value: '42'
+            center: {  }
+          group: 3
+          exposed: true
+          expose:
+            operator_id: field_geolocation_proximity_op
+            label: Proximity
+            description: ''
+            use_operator: false
+            operator: field_geolocation_proximity_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_geolocation_proximity
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              reviewer: '0'
+              contributor: '0'
+              site_editor: '0'
+              domain_admin: '0'
+              enterprise_admin: '0'
+            placeholder: 'Enter Zip Code'
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          location_input:
+            client_location:
+              weight: 0
+              enable: false
+              location_input_id: client_location
+              settings:
+                auto_submit: false
+                hide_form: false
+            coordinates:
+              enable: true
+              weight: 0
+              location_input_id: coordinates
+            geocoder:
+              weight: 0
+              enable: false
+              location_input_id: geocoder
+            'fixed_value:fixed_value':
+              settings:
+                location_settings:
+                  settings:
+                    latitude: ''
+                    longitude: ''
+                location_plugin_id: fixed_value
+              weight: 0
+              enable: false
+              location_input_id: location_plugins
+            'ipstack:ipstack':
+              settings:
+                location_settings:
+                  settings:
+                    access_key: ''
+                location_plugin_id: ipstack
+              weight: 0
+              enable: false
+              location_input_id: location_plugins
+            'freeogeoip:freeogeoip':
+              weight: 0
+              enable: false
+              location_input_id: location_plugins
+              settings:
+                location_plugin_id: freeogeoip
+          unit: km
+          entity_type: media
+          plugin_id: geolocation_filter_proximity
       filter_groups:
         operator: AND
         groups:
           1: AND
           2: OR
+          3: AND
       query:
         type: views_query
         options:
@@ -2673,6 +2675,16 @@ display:
         options: {  }
       header: {  }
       footer: {  }
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Filter
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: false
+          sort_asc_label: Asc
+          sort_desc_label: Desc
     cache_metadata:
       max-age: -1
       contexts:
