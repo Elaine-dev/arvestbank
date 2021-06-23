@@ -36,7 +36,7 @@ for example
 $ git checkout -b ab-34-basic-page-content-type
 ```
 
-### Run blt setup (wait for site studio config to load, this can take a while)
+### Run blt sync (wait for site studio config to load, this can take a while)
 ```
 $ blt sync
 ```
