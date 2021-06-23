@@ -3,7 +3,6 @@
 namespace Drupal\arvestbank_blocks\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
-use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\node\Entity\Node;
 use Drupal\taxonomy\Entity\Term;
 
