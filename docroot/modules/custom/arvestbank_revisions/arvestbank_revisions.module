@@ -6,13 +6,14 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
-use \Drupal\Core\Render\BubbleableMetadata;
+use Drupal\Core\Render\BubbleableMetadata;
 
 /**
  * Implements hook_form_FORM_ID_alter().
  */
 function arvestbank_revisions_form_revision_overview_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 
+  // Remove delete links from revisions overview form.
   foreach ($form['node_revisions_table'] as $renderArrayChildKey => $renderArrayChildValue) {
     if (
       is_numeric($renderArrayChildKey)

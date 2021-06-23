@@ -1,0 +1,19 @@
+uuid: 63aaf675-d9c2-4c8d-b546-ba1d83c5b91e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rendered_node
+    - node.type.stage_page
+id: node.stage_page.field_rendered_node
+field_name: field_rendered_node
+entity_type: node
+bundle: stage_page
+label: 'Rendered Node'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
