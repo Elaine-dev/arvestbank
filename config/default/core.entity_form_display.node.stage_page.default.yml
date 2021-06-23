@@ -21,7 +21,6 @@ dependencies:
     - field.field.node.stage_page.field_meta_tags
     - field.field.node.stage_page.field_news_alert_block_body
     - field.field.node.stage_page.field_news_alert_block_dates
-    - field.field.node.stage_page.field_news_alert_block_link
     - field.field.node.stage_page.field_slide1_cta_color
     - field.field.node.stage_page.field_slide1_cta_link
     - field.field.node.stage_page.field_slide1_cta_position
@@ -420,14 +419,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: daterange_default
-    region: content
-  field_news_alert_block_link:
-    weight: 19
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
     region: content
   field_slide1_cta_color:
     weight: 30
