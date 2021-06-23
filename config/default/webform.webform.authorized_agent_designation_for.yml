@@ -14,7 +14,110 @@ id: authorized_agent_designation_for
 title: 'Authorized Agent Designation Form'
 description: 'Allows a user to authorize a natural person or business entity to act on thier behalf.'
 category: ''
-elements: "authorized_agent_designation_form:\n  '#type': webform_wizard_page\n  '#title': 'Authorized Agent Designation Form'\n  '#next_button_label': Continue\n  markup:\n    '#type': webform_markup\n    '#markup': |\n      <p>The California Consumer Privacy Act permits California residents to designate an authorized agent to submit a request to delete personal information or a request to know about personal information collected by a business. An authorized agent may be either a natural person or a business entity registered with the Secretary of State to conduct business in California. You can initiate the process of designating an authorized agent by completing and submitting this form to us at arvest.com or by calling (866) 952-9523. We may request additional supporting documentation if necessary and may require the authorized agent to provide appropriate legal documentation demonstrating permission to request personal data on behalf of a California resident. Authorized agents with a power of attorney may submit requests directly on behalf of that consumer without submitting this form but the authorized agent may be required to submit evidence of the power of attorney.</p>\n\n      <p>Once you have authorized a natural person or business entity to act on your behalf, you can revoke their designation as an authorized agent (Monday through Friday from 8:00 a.m. to 8:00 p.m) by contacting us at (866) 952-9523.</p>\n\n      <p>Please note that we may contact you directly to verify your identity. We will deny a request from an agent who is not authorized by you to make a request. We also will deny a request from an agent who does not provide sufficient evidence to demonstrate that it has permission to request personal information on your behalf.</p>\nauthorized_agent_designation_form_2:\n  '#type': webform_wizard_page\n  '#title': 'Authorized Agent Designation Form'\n  consumer:\n    '#type': container\n    consumer_title:\n      '#type': webform_markup\n      '#markup': '<strong>Consumer</strong>'\n    flexbox_name:\n      '#type': webform_flexbox\n      name:\n        '#type': textfield\n        '#title': Name\n        '#required': true\n      email_address:\n        '#type': email\n        '#title': 'Email Address'\n        '#required': true\n    address:\n      '#type': webform_address\n      '#title': Address\n      '#address__required': true\n      '#address_2__access': false\n      '#city__title': City\n      '#city__required': true\n      '#state_province__title': State\n      '#state_province__required': true\n      '#postal_code__title': Zipcode\n      '#postal_code__required': true\n      '#country__access': false\n      '#required': true\n    phone_number:\n      '#type': tel\n      '#title': 'Phone Number'\n      '#placeholder': '(nnn) nnn-nnnn'\n      '#required': true\n      '#pattern': '^(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}$'\n      '#pattern_error': 'Please enter a valid phone number.'\n  autorized_agent:\n    '#type': container\n    authorized_agent_title:\n      '#type': webform_markup\n      '#markup': '<strong>Information Regarding Authorized Agent</strong>'\n    flexbox_auth_agent_name:\n      '#type': webform_flexbox\n      authorized_agent_name:\n        '#type': textfield\n        '#title': Name\n        '#required': true\n      authorized_agent_email_address:\n        '#type': email\n        '#title': 'Email Address'\n        '#required': true\n    authorized_agent_address:\n      '#type': webform_address\n      '#title': Address\n      '#required': true\n      '#address__required': true\n      '#address_2__access': false\n      '#city__title': City\n      '#city__required': true\n      '#state_province__title': State\n      '#state_province__required': true\n      '#postal_code__title': Zipcode\n      '#postal_code__required': true\n      '#country__access': false\n    flexbox_authorized_agent_cal:\n      '#type': webform_flexbox\n      authorized_agent_registration_number:\n        '#type': textfield\n        '#title': 'Authorized Agent California Secretary of State Registration Number/ID (if applicable):'\n        '#description': '<em>If the person you wish to designate as an authorized agent is a business entity, we may request further information regarding the business entity&rsquo;s registration with the Secretary of State to conduct business in California.</em>'\n  information_delivery:\n    '#type': checkboxes\n    '#title': 'Should information requested by the authorized agent be delivered to the agent and/or you?'\n    '#options':\n      authorized_agent: 'Authorized Agent'\n      me: Me\n      both: 'Authorized Agent and Me'\n    '#required': true\n  authorizations:\n    '#type': checkboxes\n    '#title': 'By signing below, I authorize the authorized agent identified above to make the following requests on my behalf:'\n    '#options':\n      personal_information_requests: 'Requests to know about personal information Arvest has collected about me, including specific pieces of personal information collected.'\n      personal_information_delete_requests: 'Requests to delete personal information Arvest has collected about me.'\n    '#required': true\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#wizard_prev_hide': true"
+elements: |-
+  authorized_agent_designation_form:
+    '#type': webform_wizard_page
+    '#title': 'Authorized Agent Designation Form'
+    '#next_button_label': Continue
+    markup:
+      '#type': webform_markup
+      '#markup': |
+        <p>The California Consumer Privacy Act permits California residents to designate an authorized agent to submit a request to delete personal information or a request to know about personal information collected by a business. An authorized agent may be either a natural person or a business entity registered with the Secretary of State to conduct business in California. You can initiate the process of designating an authorized agent by completing and submitting this form to us at arvest.com or by calling (866) 952-9523. We may request additional supporting documentation if necessary and may require the authorized agent to provide appropriate legal documentation demonstrating permission to request personal data on behalf of a California resident. Authorized agents with a power of attorney may submit requests directly on behalf of that consumer without submitting this form but the authorized agent may be required to submit evidence of the power of attorney.</p>
+
+        <p>Once you have authorized a natural person or business entity to act on your behalf, you can revoke their designation as an authorized agent (Monday through Friday from 8:00 a.m. to 8:00 p.m) by contacting us at (866) 952-9523.</p>
+
+        <p>Please note that we may contact you directly to verify your identity. We will deny a request from an agent who is not authorized by you to make a request. We also will deny a request from an agent who does not provide sufficient evidence to demonstrate that it has permission to request personal information on your behalf.</p>
+  authorized_agent_designation_form_2:
+    '#type': webform_wizard_page
+    '#title': 'Authorized Agent Designation Form'
+    consumer:
+      '#type': container
+      consumer_title:
+        '#type': webform_markup
+        '#markup': '<strong>Consumer</strong>'
+      flexbox_name:
+        '#type': webform_flexbox
+        name:
+          '#type': textfield
+          '#title': Name
+          '#required': true
+        email_address:
+          '#type': email
+          '#title': 'Email Address'
+          '#required': true
+      address:
+        '#type': webform_address
+        '#title': Address
+        '#address__required': true
+        '#address_2__access': false
+        '#city__title': City
+        '#city__required': true
+        '#state_province__title': State
+        '#state_province__required': true
+        '#postal_code__title': Zipcode
+        '#postal_code__required': true
+        '#country__access': false
+        '#required': true
+      phone_number:
+        '#type': tel
+        '#title': 'Phone Number'
+        '#placeholder': '(nnn) nnn-nnnn'
+        '#required': true
+        '#pattern': '^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$'
+        '#pattern_error': 'Please enter a valid phone number.'
+    autorized_agent:
+      '#type': container
+      authorized_agent_title:
+        '#type': webform_markup
+        '#markup': '<strong>Information Regarding Authorized Agent</strong>'
+      flexbox_auth_agent_name:
+        '#type': webform_flexbox
+        authorized_agent_name:
+          '#type': textfield
+          '#title': Name
+          '#required': true
+        authorized_agent_email_address:
+          '#type': email
+          '#title': 'Email Address'
+          '#required': true
+      authorized_agent_address:
+        '#type': webform_address
+        '#title': Address
+        '#required': true
+        '#address__required': true
+        '#address_2__access': false
+        '#city__title': City
+        '#city__required': true
+        '#state_province__title': State
+        '#state_province__required': true
+        '#postal_code__title': Zipcode
+        '#postal_code__required': true
+        '#country__access': false
+      flexbox_authorized_agent_cal:
+        '#type': webform_flexbox
+        authorized_agent_registration_number:
+          '#type': textfield
+          '#title': 'Authorized Agent California Secretary of State Registration Number/ID (if applicable):'
+          '#description': '<em>If the person you wish to designate as an authorized agent is a business entity, we may request further information regarding the business entity&rsquo;s registration with the Secretary of State to conduct business in California.</em>'
+    information_delivery:
+      '#type': checkboxes
+      '#title': 'Should information requested by the authorized agent be delivered to the agent and/or you?'
+      '#options':
+        authorized_agent: 'Authorized Agent'
+        me: Me
+        both: 'Authorized Agent and Me'
+      '#required': true
+    authorizations:
+      '#type': checkboxes
+      '#title': 'By signing below, I authorize the authorized agent identified above to make the following requests on my behalf:'
+      '#options':
+        personal_information_requests: 'Requests to know about personal information Arvest has collected about me, including specific pieces of personal information collected.'
+        personal_information_delete_requests: 'Requests to delete personal information Arvest has collected about me.'
+      '#required': true
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#wizard_prev_hide': true
 css: ''
 javascript: ''
 settings:

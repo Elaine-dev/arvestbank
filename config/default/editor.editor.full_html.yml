@@ -27,6 +27,7 @@ settings:
           items:
             - DrupalLink
             - DrupalUnlink
+            - ButtonLink
         -
           name: Lists
           items:

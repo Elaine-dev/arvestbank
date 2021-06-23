@@ -11,7 +11,7 @@ remove_repeated_segments: true
 term_hierarchy: false
 absolute_paths: false
 hide_single_home_item: false
-title_from_page_when_available: false
+title_from_page_when_available: true
 capitalizator_mode: ucwords
 capitalizator_ignored_words:
   - of

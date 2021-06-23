@@ -27,3 +27,7 @@ slider-splash-page:
   js:
     js/glidejs/glide/dist/glide.js: {}
     js/glide-sliders.js: {}
+
+main:
+  js:
+    js/main.js: {}

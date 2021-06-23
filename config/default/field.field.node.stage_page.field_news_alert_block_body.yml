@@ -1,0 +1,21 @@
+uuid: 974bdb40-2832-4273-b40f-bcae13231af5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_alert_block_body
+    - node.type.stage_page
+  module:
+    - text
+id: node.stage_page.field_news_alert_block_body
+field_name: field_news_alert_block_body
+entity_type: node
+bundle: stage_page
+label: 'News Alert Block'
+description: 'Schedule this latest news alert block to appear at the top of the Latest News & Videos sidebar element on the homepage.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

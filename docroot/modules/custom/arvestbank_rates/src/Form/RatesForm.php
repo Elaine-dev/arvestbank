@@ -281,6 +281,76 @@ class RatesForm extends ConfigFormBase {
 
     ];
 
+    // Business Elite Credit Card Rates
+    $form['business_elite_rates'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Business Elite Credit Card Rates'),
+      '#open' => TRUE,
+
+      // Accurate As Of Date.
+      'business_elite_rates__accurate_as_of_date' => [
+        '#type' => 'date',
+        '#title' => $this->t('Accurate As Of Date'),
+        '#default_value' => $config->get('business_elite_rates__accurate_as_of_date'),
+      ],
+      // APR for Purchases.
+      'business_elite_rates__apr_for_purchases' => [
+        '#type' => 'textfield',
+        '#title' => $this->t('APR for Purchases'),
+        '#default_value' => $config->get('business_elite_rates__apr_for_purchases'),
+      ],
+
+      // APR for Balance Transfers.
+      'business_elite_rates__apr_for_balance_transfers' => [
+        '#type' => 'textfield',
+        '#title' => $this->t('APR for Balance Transfers'),
+        '#default_value' => $config->get('business_elite_rates__apr_for_balance_transfers'),
+      ],
+
+      // APR for Cash Advances.
+      'business_elite_rates__apr_for_cash_advances' => [
+        '#type' => 'textfield',
+        '#title' => $this->t('APR for Cash Advances'),
+        '#default_value' => $config->get('business_elite_rates__apr_for_cash_advances'),
+      ],
+
+      ];
+
+    // Business Premier Credit Card Rates
+    $form['business_premier_card_rates'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Business Premier Credit Card Rates'),
+      '#open' => TRUE,
+
+      // Accurate As Of Date.
+      'business_premier_card_rates__accurate_as_of_date' => [
+        '#type' => 'date',
+        '#title' => $this->t('Accurate As Of Date'),
+        '#default_value' => $config->get('business_premier_card_rates__accurate_as_of_date'),
+      ],
+      // APR for Purchases.
+      'business_premier_card_rates__apr_for_purchases' => [
+        '#type' => 'textfield',
+        '#title' => $this->t('APR for Purchases'),
+        '#default_value' => $config->get('business_premier_card_rates__apr_for_purchases'),
+      ],
+
+      // APR for Balance Transfers.
+      'business_premier_card_rates__apr_for_balance_transfers' => [
+        '#type' => 'textfield',
+        '#title' => $this->t('APR for Balance Transfers'),
+        '#default_value' => $config->get('business_premier_card_rates__apr_for_balance_transfers'),
+      ],
+
+      // APR for Cash Advances.
+      'business_premier_card_rates__apr_for_cash_advances' => [
+        '#type' => 'textfield',
+        '#title' => $this->t('APR for Cash Advances'),
+        '#default_value' => $config->get('business_premier_card_rates__apr_for_cash_advances'),
+      ],
+
+    ];
+
     // Zero Card Rates.
     $form['zero_card_rates'] = [
       '#type' => 'details',
