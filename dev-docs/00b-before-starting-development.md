@@ -38,7 +38,7 @@ $ git checkout -b ab-34-basic-page-content-type
 
 ### Run blt setup (wait for site studio config to load, this can take a while)
 ```
-$ blt setup
+$ blt sync
 ```
 
 ### If you want to log into the site 
