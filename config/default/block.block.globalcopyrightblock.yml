@@ -1,4 +1,4 @@
-uuid: 6dbf5d71-64c9-45be-a7dc-414fb4b0e444
+uuid: 1f3f1a55-2eae-45a0-ad65-28e89314625d
 langcode: en
 status: true
 dependencies:
@@ -7,15 +7,15 @@ dependencies:
     - cohesion
   theme:
     - arvestbank_theme
-id: disclosureblock
+id: globalcopyrightblock
 theme: arvestbank_theme
 region: footer
-weight: -22
+weight: -25
 provider: null
-plugin: disclosure_block
+plugin: global_copyright_block
 settings:
-  id: disclosure_block
-  label: 'Disclosure Block'
+  id: global_copyright_block
+  label: 'Global Copyright Block'
   provider: arvestbank_blocks
   label_display: visible
 visibility:
