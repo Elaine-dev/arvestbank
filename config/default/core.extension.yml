@@ -11,6 +11,7 @@ module:
   arvestbank_blocks: 0
   arvestbank_branch_locations: 0
   arvestbank_browsertest: 0
+  arvestbank_buttons: 0
   arvestbank_calculators: 0
   arvestbank_core: 0
   arvestbank_external_login: 0
@@ -81,6 +82,8 @@ module:
   gtm: 0
   iframe: 0
   image: 0
+  imageapi_optimize: 0
+  imageapi_optimize_resmushit: 0
   imce: 0
   inline_entity_form: 0
   jquery_ui: 0

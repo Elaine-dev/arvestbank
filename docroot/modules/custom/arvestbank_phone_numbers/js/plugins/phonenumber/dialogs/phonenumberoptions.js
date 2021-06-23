@@ -4,8 +4,6 @@
 
 CKEDITOR.dialog.add('phoneNumberOptionsDialog', function (editor) {
 
-  console.log(editor.config.phonenumber_tokens);
-
   return {
     title: 'Select a Phone Number to Insert',
     minWidth: 400,

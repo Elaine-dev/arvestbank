@@ -7,8 +7,9 @@ core_version_requirement: ^8.8.0 || ^9
 base theme: cohesion_theme
 
 libraries:
-  - arvestbank_theme/global-stylingwan
+  - arvestbank_theme/global-styling
   - arvestbank_theme/adobe-fonts
+  - arvestbank_theme/main
 
 
 cohesion: true
