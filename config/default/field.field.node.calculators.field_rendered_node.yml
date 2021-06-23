@@ -1,0 +1,19 @@
+uuid: 579e506d-f1d4-48c5-816a-5fb009a14732
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rendered_node
+    - node.type.calculators
+id: node.calculators.field_rendered_node
+field_name: field_rendered_node
+entity_type: node
+bundle: calculators
+label: 'Rendered Node'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

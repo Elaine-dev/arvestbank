@@ -6,8 +6,10 @@
  */
 
 use Drupal\Component\Utility\UrlHelper;
+use Drupal\Core\Database\Query\Condition;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
 use Drupal\views\ViewExecutable;
 
 /**
@@ -245,6 +247,54 @@ function arvestbank_views_views_post_execute(ViewExecutable $view) {
         }
       }
     }
+  }
+
+}
+
+/**
+ * Implements hook_views_query_alter().
+ *
+ * @param \Drupal\views\ViewExecutable $view
+ * @param \Drupal\views\Plugin\views\query\QueryPluginBase $query
+ */
+function arvestbank_views_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+
+  // Adjustments for keyword search on debit cards.
+  if (
+    $view->id() == 'specialty_debit_cards'
+    && !empty($view->exposed_raw_input['field_debit_card_keywords_value'])
+  ) {
+
+    // Traverse through the 'where' part of the query.
+    foreach ($query->where as &$condition_group) {
+
+      // Loop though each conditions as pass by reference also.
+      foreach ($condition_group['conditions'] as &$condition) {
+
+        // The value of the keyword search will be in here.
+        if ($condition['field'] instanceof Condition) {
+          if (!empty($condition['field']->conditions()[0])) {
+            $this_condition = $condition['field']->conditions()[0];
+            if ($this_condition['field'] === 'media__field_debit_card_keywords.field_debit_card_keywords_value') {
+              if ($this_condition['value'] != '%%') {
+                $keyword_search = $this_condition['value'];
+              }
+            }
+          }
+        }
+        // Keyword search if used should have populated the local variable.
+        // Set value of the media name condition to that of the keyword search.
+        else if (
+          $condition['field'] === 'media_field_data.name'
+          && !empty($keyword_search)
+        ) {
+          $condition['value'] = $keyword_search;
+        }
+
+      }
+
+    }
+
   }
 
 }

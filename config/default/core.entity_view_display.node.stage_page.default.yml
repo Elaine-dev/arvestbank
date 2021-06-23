@@ -19,9 +19,9 @@ dependencies:
     - field.field.node.stage_page.field_icon_two
     - field.field.node.stage_page.field_icon_two_text
     - field.field.node.stage_page.field_meta_tags
+    - field.field.node.stage_page.field_rendered_node
     - field.field.node.stage_page.field_news_alert_block_body
     - field.field.node.stage_page.field_news_alert_block_dates
-    - field.field.node.stage_page.field_news_alert_block_link
     - field.field.node.stage_page.field_slide1_cta_color
     - field.field.node.stage_page.field_slide1_cta_link
     - field.field.node.stage_page.field_slide1_cta_position
@@ -359,7 +359,7 @@ hidden:
   field_alert_block_dates: true
   field_alert_block_link: true
   field_disclosure: true
+  field_rendered_node: true
   field_news_alert_block_body: true
   field_news_alert_block_dates: true
-  field_news_alert_block_link: true
   search_api_excerpt: true

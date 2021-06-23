@@ -3,6 +3,7 @@
 namespace Drupal\arvestbank_ads\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Cache\Cache;
 use Drupal\Core\Url;
 use Drupal\file\Entity\File;
 use Drupal\media\Entity\Media;
@@ -211,8 +212,9 @@ class AdBlockSidebar extends BlockBase {
   /**
    * {@inheritdoc}
    */
-  public function getCacheMaxAge(): int {
-    return 0;
+  public function getCacheContexts(): array {
+    // Block should be cached on a per page (route) level.
+    return Cache::mergeContexts(parent::getCacheContexts(), ['route']);
   }
 
 }

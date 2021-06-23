@@ -19,6 +19,9 @@ function arvestbank_views_debit_cards_filter(array &$form) {
     '#value' => t('Filter'),
     '#prefix' => '<div class="form-actions">',
     '#suffix' => '</div>',
+    '#attributes' => [
+      'class' => ['extra-submit'],
+    ],
   ];
 
   // Hide the geolocation fields from the exposed form.
@@ -35,6 +38,9 @@ function arvestbank_views_debit_cards_filter(array &$form) {
     '#maxlength' => 5,
     '#placeholder' => 'Enter Zip Code',
   ];
+
+  // Attach supporting library.
+  $form['#attached']['library'][] = 'arvestbank_views/debit_cards';
 
   return $form;
 

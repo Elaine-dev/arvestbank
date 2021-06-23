@@ -1,0 +1,3 @@
+debit_cards:
+  js:
+    js/debit_cards.js: {}
