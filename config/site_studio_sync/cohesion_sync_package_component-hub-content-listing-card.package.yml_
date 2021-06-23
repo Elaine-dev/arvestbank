@@ -8,7 +8,7 @@
     dependencies: {  }
     id: pack_component_hub_content_card
     label: 'Component Hub Content Listing Card'
-    description: 'A component for the hub content listing pages. Typically this component has icons and is on a listing page. Last Updated: Allie Jones 06/21/2021'
+    description: 'A component for the hub content listing pages. Typically this component has icons and is on a listing page. Last Updated: Allie Jones 06/23/2021'
     excluded_entity_types: '[]'
     settings: '{"6bc271ee-01a6-41dc-b369-cfafa86056ad":{"type":"cohesion_component","items":{"6bc271ee-01a6-41dc-b369-cfafa86056ad":{"type":"cohesion_component"},"737ceb5d-a752-47b2-93b8-fb3223ff9048":{"type":"file"}},"checked":true}}'
 -
