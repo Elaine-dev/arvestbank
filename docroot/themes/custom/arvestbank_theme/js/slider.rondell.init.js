@@ -17,7 +17,7 @@
          */
         var radius = ( width / 2 ) - 100;	// 209
         if ( totalSlides > 100 ) {
-          radius = 300;
+          radius = 400;
         }
         if ( totalSlides < 25 ) {
           radius = 150;
