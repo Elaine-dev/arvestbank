@@ -1159,7 +1159,7 @@ display:
           entity_field: status
           plugin_id: field
       menu:
-        type: normal
+        type: none
         title: 'Ad Campaigns'
         description: ''
         expanded: false
