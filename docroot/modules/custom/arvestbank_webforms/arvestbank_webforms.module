@@ -70,6 +70,7 @@ function arvestbank_webforms_form_alter(&$form, FormStateInterface $form_state, 
     // Verifiable Consumer Request Form.
     case "webform_submission_verifiable_consumer_request_form_add_form":
     case "webform_submission_verifiable_consumer_request_form_test_form":
+    case "webform_submission_verifiable_consumer_request_form_node_13481_add_form":
       // Attach library.
       $form['#attached']['library'][] = 'arvestbank_webforms/verifiable_consumer_request';
       break;
