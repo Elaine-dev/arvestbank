@@ -56,12 +56,12 @@ class MicromodalFieldFormatter extends FormatterBase {
 
       $settings = [
         'string_classes' => [
-          '#title' => t('Additional Classes'),
+          '#title' => $this->t('Additional Classes'),
           '#type' => 'textfield',
           '#size' => 60,
           '#maxlength' => 255,
           '#default_value' => $this->getSetting('string_classes'),
-          '#description' => t('Add additional classes to the text link, separate by spaces.'),
+          '#description' => $this->t('Add additional classes to the text link, separate by spaces.'),
         ],
       ];
 
@@ -73,18 +73,18 @@ class MicromodalFieldFormatter extends FormatterBase {
 
       $settings = [
         'thumbnail_image_style' => [
-          '#title' => t('Video Thumbnail Image Style'),
+          '#title' => $this->t('Video Thumbnail Image Style'),
           '#type' => 'select',
           '#options' => image_style_options(FALSE),
-          '#empty_option' => '<' . t('no preview') . '>',
+          '#empty_option' => '<' . $this->t('no preview') . '>',
           '#default_value' => $this->getSetting('thumbnail_image_style'),
-          '#description' => t('Thumbnail for the video, click the thumbnail for the modal window.'),
+          '#description' => $this->t('Thumbnail for the video, click the thumbnail for the modal window.'),
         ],
         'thumbnail_override_fieldname' => [
-          '#title' => t('Field for Thumbnail Override'),
+          '#title' => $this->t('Field for Thumbnail Override'),
           '#type' => 'textfield',
           '#default_value' => $this->getSetting('thumbnail_override_fieldname'),
-          '#description' => t('Field that should display instead of the auto generated thumbnail.'),
+          '#description' => $this->t('Field that should display instead of the auto generated thumbnail.'),
         ],
 
       ];
@@ -96,17 +96,16 @@ class MicromodalFieldFormatter extends FormatterBase {
 
       $settings = [
         'thumbnail_image_style' => [
-          '#title' => t('Video Thumbnail Image Style'),
+          '#title' => $this->t('Video Thumbnail Image Style'),
           '#type' => 'select',
           '#options' => image_style_options(FALSE),
-          '#empty_option' => '<' . t('no preview') . '>',
+          '#empty_option' => '<' . $this->t('no preview') . '>',
           '#default_value' => $this->getSetting('thumbnail_image_style'),
-          '#description' => t('Thumbnail for the video, click the thumbnail for the modal window.'),
+          '#description' => $this->t('Thumbnail for the video, click the thumbnail for the modal window.'),
         ],
       ];
 
     }
-
 
     // Implement settings form.
     return $settings + parent::settingsForm($form, $form_state);
@@ -224,42 +223,13 @@ class MicromodalFieldFormatter extends FormatterBase {
                 $thumbnail_id = $thumbnail_media->get('thumbnail')->target_id;
               }
 
-
-//              $file = $thumbnail_media->entityManager;
-//
-//              dump(array_keys($thumbnail_media->getFieldDefinitions()));
-//              dump($file);
-//              dump($item);
-//              dump($thumbnail_media);
-//              //$file_uri = $media->field_media_file->entity->getFileUri();
-//              //dump($file_uri);
-//
-////              dump($thumbnail_media->get('field_media_image'));
-//
-//              //$fid = $thumbnail_media->getSource()->getSourceFieldValue($thumbnail_media);
-//              $fid = $thumbnail_media->field_media_image->target_id;
-//              dump($thumbnail_id);
-//              dump($fid);
-//              dump($thumbnail_media->field_media_image);
-//              dump($thumbnail_media->uri->value);
-//
-//              //$media_field = $thumbnail_media->get('field_media_image')->first()->getValue();
-//              //dump($media_field['target_id']);
-////              $file = File::load($media_field['target_id']);
-////              dump($file);
-//              die();
-//
-
               $thumbnail_file = File::load($thumbnail_id);
-//              dump($thumbnail_file);
+
               $render_thumbnail = [
                 '#theme' => 'image_style',
                 '#style_name' => $this->getSetting('thumbnail_image_style'),
                 '#uri' => $thumbnail_file->uri->value,
               ];
-
-//              dump($media->getFields()[$image_fieldname]->getValue()[0]['target_id']);
-//              dump($thumbnail_file->uri->value);
 
               $linked_item = render($render_thumbnail);
             }

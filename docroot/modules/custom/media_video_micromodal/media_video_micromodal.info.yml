@@ -1,7 +1,7 @@
-name: 'Media Micromodal'
+name: 'Media Video Micromodal'
 type: module
 description: 'Displays core media remote videos in a modal popup using micromodal.js.'
 core_version_requirement: ^8 || ^9
-package: 'Custom'
+package: 'Media'
 dependencies:
-  - media
+  - drupal:media
