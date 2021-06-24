@@ -4,7 +4,7 @@ view.ads.page_1:
   base_route: view.ads.page_1
 
 view.ad_campaigns.page_1:
-  route_name: view.ad_campaigns.page_1
+  route_name: view.ad_campaigns.ad_campaigns_admin
   title: Ad Campaigns
   base_route: view.ads.page_1
   weight: 2
