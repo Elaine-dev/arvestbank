@@ -11,6 +11,7 @@ module:
   acquia_connector: 0
   shield: 0
   syslog: 0
+  simplesamlphp_auth: 0
 theme: {  }
 blacklist: {  }
 graylist:

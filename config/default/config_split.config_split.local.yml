@@ -11,6 +11,7 @@ module:
   dblog: 0
   devel: 0
   qa_accounts: 0
+  simplesamlphp_auth: 0
 theme: {  }
 blacklist:
   - dblog.settings
