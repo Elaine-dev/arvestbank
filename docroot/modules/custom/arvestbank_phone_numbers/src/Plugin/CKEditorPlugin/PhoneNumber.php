@@ -42,7 +42,8 @@ class PhoneNumber extends CKEditorPluginBase {
     // Get phone numbers.
     $phoneNumbersQuery = \Drupal::entityQuery('node')
       ->condition('type', 'cta_phone_number')
-      ->condition('status', 1);
+      ->condition('status', 1)
+      ->sort('title');
     $phoneNumbers = $phoneNumbersQuery->execute();
 
     // Add token array to drupalSettings.
