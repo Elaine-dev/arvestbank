@@ -13,6 +13,7 @@ module:
   devel: 0
   shield: 0
   qa_accounts: 0
+  simplesamlphp_auth: 0
 theme: {  }
 blacklist: {  }
 graylist:
