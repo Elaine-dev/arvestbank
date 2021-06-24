@@ -137,7 +137,7 @@ elements: |-
         '#required': true
     nature_of_dispute_merchandise_not_receieved:
       '#type': radios
-      '#title': 'Nature of Dispute Merchandise Not Receieved'
+      '#title': 'Nature of Dispute Merchandise Not Received'
       '#title_display': none
       '#options':
         'merchandise not receieved': 'Merchandise or Services Not Receieved'
@@ -170,11 +170,12 @@ elements: |-
       nod_no_merch_date_cancelled:
         '#type': date
         '#title': 'Date Cancelled'
-        '#required': true
+        '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+        '#date_date_format': ''
       nod_no_merch_cancellation_confirmation_number:
         '#type': textfield
         '#title': 'Cancellation Confirmation Number'
-        '#required': true
+        '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
       nod_no_merch_cancel_no:
         '#type': radios
         '#title': nod_no_merch_cancel_no
@@ -193,7 +194,6 @@ elements: |-
       nod_no_merch_details:
         '#type': textfield
         '#title': 'You must list in detail what merchandise or services were ordered'
-        '#required': true
       nod_no_merch_footer_markup:
         '#type': webform_markup
         '#markup': 'Include the merchant''s response below in the Descriptions of Transactions section'
