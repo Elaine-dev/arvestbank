@@ -795,12 +795,15 @@ li.coh-menu-list-item.coh-ce-a69b2abe.js-coh-menu-item:nth-child(6), li.coh-menu
   column-count: 4;
   column-gap: 3em;
 }
+.sitemap .coh-style-white-text{
+  color: #1a6ac0;
+}
 .sitemap .menu-item.menu-item--expanded span {
   font-size: 17px;
 }
 
 @media (max-width: 59.3125rem) {
-  .sitemap .menu.menu-level-0 {
+  .sitemap {
     column-count: 2;
   }
 }
