@@ -1,7 +1,9 @@
 uuid: 7b00ebfe-60f7-47c2-ad67-7a76cc4be66c
 langcode: en
 status: open
-dependencies: {  }
+dependencies:
+  module:
+    - arvestbank_webtools_api
 open: null
 close: null
 weight: 0
@@ -318,5 +320,19 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  save_submissions_in_webtools:
+    id: 'Save Submissions In Webtools'
+    label: 'Save Submissions In Webtools'
+    notes: ''
+    handler_id: save_submissions_in_webtools
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      webtools_form_name: email_amc
+      first_name_field_machine_name: ''
+      last_name_field_machine_name: ''
+      full_name_field_machine_name: name
+      email_field_machine_name: email
 variants: {  }
