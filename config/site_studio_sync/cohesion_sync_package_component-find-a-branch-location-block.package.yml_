@@ -1,0 +1,34 @@
+-
+  type: cohesion_sync_package
+  export:
+    uuid: 87166f96-3d5d-4214-a2fa-93ec5d0db71b
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: pack_component_find_a_branch_loc
+    label: 'Component Find a Branch location block'
+    description: 'A component for the find a branch location block.'
+    excluded_entity_types: '[]'
+    settings: '{"9026a0a7-44d6-4172-ab24-0f4bd0a99a86":{"type":"cohesion_component","items":{"9026a0a7-44d6-4172-ab24-0f4bd0a99a86":{"type":"cohesion_component"}},"checked":true}}'
+-
+  type: cohesion_component
+  export:
+    uuid: 9026a0a7-44d6-4172-ab24-0f4bd0a99a86
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: cpt_branch_location
+    label: 'Branch Location'
+    json_values: '{"canvas":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"09e71e15-dc29-4d32-8b53-32229bd6fcec","parentUid":"root","isContainer":true,"children":[{"type":"item","uid":"drupal-block","title":"Block","status":{"collapsed":true},"uuid":"ae7a8aa9-cacd-4c9c-8e95-3882118fe740","parentUid":"container","isContainer":false,"children":[]}]}],"componentForm":[],"mapper":{"09e71e15-dc29-4d32-8b53-32229bd6fcec":{},"ae7a8aa9-cacd-4c9c-8e95-3882118fe740":{}},"model":{"09e71e15-dc29-4d32-8b53-32229bd6fcec":{"settings":{"width":"fluid"}},"ae7a8aa9-cacd-4c9c-8e95-3882118fe740":{"settings":{"title":"Branch locator","customStyle":[{"customStyle":""}],"settings":{"theme":"all","customStyle":[{"customStyle":""}]},"theme":"all","block":"branchlocatorform"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"block"}}}},"previewModel":{"ae7a8aa9-cacd-4c9c-8e95-3882118fe740":{}},"variableFields":{"ae7a8aa9-cacd-4c9c-8e95-3882118fe740":[]},"meta":{"fieldHistory":[]}}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    category: cpt_cat_drupal_blocks
+    preview_image: ''
+    has_quick_edit: true
+    entity_type_access: {  }
+    bundle_access: {  }
+    twig_template: component--cohesion-cpt-branch-location
+    weight: 0

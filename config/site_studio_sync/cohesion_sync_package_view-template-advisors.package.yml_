@@ -8,7 +8,7 @@
     dependencies: {  }
     id: pack_view_template_associates
     label: 'View Template Advisors'
-    description: 'Contains the advisors layout and view specific styling. Last Updated: Allie Jones 05/25/2021'
+    description: 'Contains the advisors layout and view specific styling. Last Updated: Allie Jones  06/23/2021'
     excluded_entity_types: '[]'
     settings: '{"ee64a9c5-f0cd-4f42-82be-4b0cbb066b69":{"type":"cohesion_view_templates","items":{"ee64a9c5-f0cd-4f42-82be-4b0cbb066b69":{"type":"cohesion_view_templates"}},"checked":true}}'
 -
