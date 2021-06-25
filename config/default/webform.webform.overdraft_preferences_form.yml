@@ -1,7 +1,9 @@
 uuid: 3de28a6c-8851-475d-8f66-ee6799d124b6
 langcode: en
 status: open
-dependencies: {  }
+dependencies:
+  module:
+    - arvestbank_webtools_api
 open: null
 close: null
 weight: 0
@@ -322,4 +324,18 @@ handlers:
       preview_message: ''
       confirmation_url: ''
       confirmation_title: ''
+  save_submissions_in_webtools:
+    id: 'Save Submissions In Webtools'
+    label: 'Save Submissions In Webtools'
+    notes: ''
+    handler_id: save_submissions_in_webtools
+    status: true
+    conditions: {  }
+    weight: 2
+    settings:
+      webtools_form_name: overdraft
+      first_name_field_machine_name: name.first
+      last_name_field_machine_name: name.last
+      full_name_field_machine_name: ''
+      email_field_machine_name: email_address
 variants: {  }
