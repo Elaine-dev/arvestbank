@@ -74,10 +74,12 @@ function arvestbank_menus_block_view_menu_block_alter(&$build, &$plugin) {
   // Get menu this is for.
   $thisMenuName = str_replace('menu_block:', '', $plugin->getPluginId());
 
-  // If this is one of our sidebar blocks on a node or term.
+  // If this is one of our sidebar blocks on a node or term
+  // and it's not the education center menu which we don't want to alter.
   if (
     $entity
     && isset(SidebarMenuBlock::MENU_SIDEBAR_BLOCKS[$thisMenuName])
+    && $thisMenuName != 'education-center-menu'
   ) {
 
     // Get canonical menu link.
@@ -102,7 +104,7 @@ function arvestbank_menus_block_view_menu_block_alter(&$build, &$plugin) {
     // Get menu block settings.
     $menuBlockSettings = $build['#block']->get('settings');
 
-    // If this node has a canonical menu link with no children.
+    // If this entity has a canonical menu link with no children.
     if (
       $entity
       && isset($canonicalMenuLink)
