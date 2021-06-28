@@ -61,7 +61,7 @@ elements: |-
       investments_wealth: 'Investments - Wealth'
     '#empty_option': 'LOG IN TO...'
     '#required': true
-    '#default_value': 'https://new17test.arvest.com/personal/signon/logon/'
+    '#default_value': 'https://www-test.arvest.com/personal/signon/logon/'
     '#wrapper_attributes':
       class:
         - sidebar-select
