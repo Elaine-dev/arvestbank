@@ -10,3 +10,6 @@
   RewriteCond %{QUERY_STRING} [&?]q=(.*)$
   RewriteRule ^askarvest /search?search=%1 [L,R=301]
 </IfModule>
+
+# increase allowed number of post vars
+php_value max_input_vars 2000

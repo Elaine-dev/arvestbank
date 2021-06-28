@@ -20,8 +20,12 @@ use Drupal\Core\Render\BubbleableMetadata;
  */
 function arvestbank_menus_form_node_form_alter(&$form, FormStateInterface &$form_state, $form_id) {
 
-  // Add an afterbuild for the menu link altering functionality.
-  $form['#after_build'][] = '_arvestbank_menus_node_form_canonical_menu_link_alters';
+  // Add an afterbuild for the menu link altering functionality
+  // if form hasn't been submitted.
+  // $form_state->isSubmitted() and form storage aren't working here.
+  if (!isset($_POST) || !count($_POST)) {
+    $form['#after_build'][] = '_arvestbank_menus_node_form_canonical_menu_link_alters';
+  }
 
   // Add a submit function to make the menu link canonical on save.
   $form['actions']['submit']['#submit'][] = '_arvestbank_menus_node_form_submit';
