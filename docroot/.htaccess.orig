@@ -195,4 +195,6 @@ AddEncoding gzip svgz
 </IfModule>
 
 # increase allowed number of post vars
+<IfModule mod_php7.c>
 php_value max_input_vars 2000
+</IfModule>
