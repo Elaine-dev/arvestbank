@@ -98,11 +98,12 @@ class WordpressArticlesService {
     if (!empty($news_alert) || !empty($articles)) {
 
       // Add base render array with container and title.
-      $renderArray[] = [
+      $renderArray = [
         '#type' => 'container',
         '#attributes' => [
           'class' => [
             'wordpress-articles-container',
+            'coh-style-wordpress-feed-block',
           ],
         ],
         'title' => [
