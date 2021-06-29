@@ -43,7 +43,7 @@ const sliders = {
   'card-slider': {
     selector: '.glide__slide',
     options: {
-      type: 'carousel',
+      type: 'slider',
       startAt: Math.floor(Math.random() * 4),
       gap: 0,
       perView: 1,
