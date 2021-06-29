@@ -85,6 +85,16 @@ class AdBlockSidebar extends BlockBase {
     // Initialize return variable.
     $ad_nid = 0;
 
+    // Some nodes can switch off the sidebar ad on a per node basis.
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+      if ($node->hasField('field_disable_sidebar_ad')) {
+        if (!empty($node->get('field_disable_sidebar_ad')->getValue()[0]['value'])) {
+          // If "Disable Sidebar Ad" is checked, return early with nothing.
+          return FALSE;
+        }
+      }
+    }
+
     // Get the current campaign.
     if ($ad_campaign_nid = \Drupal::service('ad_services')->getCampaignNid()) {
 
@@ -207,6 +217,21 @@ class AdBlockSidebar extends BlockBase {
     // Build array.
     return $build;
 
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getCacheTags() {
+    // With this when your node change your block will rebuild.
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+      // If there is node add its cachetag.
+      return Cache::mergeTags(parent::getCacheTags(), ['node:' . $node->id()]);
+    }
+    else {
+      // Return default tags instead.
+      return parent::getCacheTags();
+    }
   }
 
   /**
