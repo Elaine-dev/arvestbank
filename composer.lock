@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e608dc1da78caea62532b561058f183",
+    "content-hash": "95166c234836f8ef8f06ba98d04d490f",
     "packages": [
         {
             "name": "acquia/blt",
@@ -2719,17 +2719,17 @@
         },
         {
             "name": "drupal/better_exposed_filters",
-            "version": "5.0.0-beta1",
+            "version": "5.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/better_exposed_filters.git",
-                "reference": "8.x-5.0-beta1"
+                "reference": "8.x-5.0-beta2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/better_exposed_filters-8.x-5.0-beta1.zip",
-                "reference": "8.x-5.0-beta1",
-                "shasum": "bc5ce873fa699ee584fdeb2fd28ad6c5cb456b03"
+                "url": "https://ftp.drupal.org/files/projects/better_exposed_filters-8.x-5.0-beta2.zip",
+                "reference": "8.x-5.0-beta2",
+                "shasum": "3899191ee3fa383abe0162cc6701ddba86bae252"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9",
@@ -2741,8 +2741,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-5.0-beta1",
-                    "datestamp": "1594141892",
+                    "version": "8.x-5.0-beta2",
+                    "datestamp": "1624554647",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -2751,7 +2751,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -2763,8 +2763,8 @@
                     "homepage": "https://www.drupal.org/u/etroid"
                 },
                 {
-                    "name": "chr.fritsch",
-                    "homepage": "https://www.drupal.org/user/2103716"
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/u/neslee-canil-pinto"
                 },
                 {
                     "name": "jkopel",
@@ -6058,17 +6058,17 @@
         },
         {
             "name": "drupal/media_acquiadam",
-            "version": "1.47.0",
+            "version": "1.48.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/media_acquiadam.git",
-                "reference": "8.x-1.47"
+                "reference": "8.x-1.48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/media_acquiadam-8.x-1.47.zip",
-                "reference": "8.x-1.47",
-                "shasum": "68a67299e7519f2e8a8825a7db595985b478cd85"
+                "url": "https://ftp.drupal.org/files/projects/media_acquiadam-8.x-1.48.zip",
+                "reference": "8.x-1.48",
+                "shasum": "951ae08661d6afb6ff7d0e57d27cdf0e38426dc3"
             },
             "require": {
                 "cweagans/php-webdam-client": "^1.0.1",
@@ -6090,8 +6090,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.47",
-                    "datestamp": "1606923747",
+                    "version": "8.x-1.48",
+                    "datestamp": "1624560891",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6104,11 +6104,7 @@
                     "pre-commit": "vendor/bin/phpcs",
                     "pre-push": "vendor/bin/phpcs"
                 },
-                "phpcodesniffer-search-depth": 5,
-                "patches_applied": {
-                    "Module only themed to work with SEVEN": "https://www.drupal.org/files/issues/2021-04-27/module-theming-3210805-1_0.patch",
-                    "Acquia DAM auth breaks when SameSite is enforced": "https://www.drupal.org/files/issues/2021-06-08/3217950-4.patch"
-                }
+                "phpcodesniffer-search-depth": 5
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "scripts": {
@@ -6142,12 +6138,8 @@
                     "email": "sales@acquia.com"
                 },
                 {
-                    "name": "acquia",
-                    "homepage": "https://www.drupal.org/user/1231722"
-                },
-                {
-                    "name": "cweagans",
-                    "homepage": "https://www.drupal.org/user/404732"
+                    "name": "japerry",
+                    "homepage": "https://www.drupal.org/user/45640"
                 },
                 {
                     "name": "jmoreira",
@@ -6172,6 +6164,78 @@
                 "source": "https://cgit.drupalcode.org/media_acquiadam",
                 "issues": "https://drupal.org/project/issues/media_acquiadam"
             }
+        },
+        {
+            "name": "drupal/memcache",
+            "version": "dev-2.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/memcache.git",
+                "reference": "f8a1f7f086cfcbe0fb7734439b274cb6bf8d7122"
+            },
+            "require": {
+                "drupal/core": "^8.9 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev",
+                    "dev-8.x-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.2+4-dev",
+                    "datestamp": "1614802157",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Fabianx",
+                    "homepage": "https://www.drupal.org/user/693738"
+                },
+                {
+                    "name": "Jeremy",
+                    "homepage": "https://www.drupal.org/user/409"
+                },
+                {
+                    "name": "bdragon",
+                    "homepage": "https://www.drupal.org/user/53081"
+                },
+                {
+                    "name": "catch",
+                    "homepage": "https://www.drupal.org/user/35733"
+                },
+                {
+                    "name": "damiankloip",
+                    "homepage": "https://www.drupal.org/user/1037976"
+                },
+                {
+                    "name": "japerry",
+                    "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "jvandyk",
+                    "homepage": "https://www.drupal.org/user/2375"
+                },
+                {
+                    "name": "robertDouglass",
+                    "homepage": "https://www.drupal.org/user/5449"
+                }
+            ],
+            "description": "High performance integration with memcache.",
+            "homepage": "http://drupal.org/project/memcache",
+            "support": {
+                "source": "https://git.drupalcode.org/project/memcache",
+                "issues": "https://www.drupal.org/project/issues/memcache"
+            },
+            "time": "2021-03-03T20:08:53+00:00"
         },
         {
             "name": "drupal/menu_admin_per_menu",
@@ -7173,6 +7237,62 @@
                 "source": "https://git.drupalcode.org/project/pathauto_menu_link"
             },
             "time": "2020-06-26T21:46:02+00:00"
+        },
+        {
+            "name": "drupal/purge",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/purge.git",
+                "reference": "8.x-3.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/purge-8.x-3.0.zip",
+                "reference": "8.x-3.0",
+                "shasum": "e7113e9927dbdbbd5c2f4edc2649a14676e14f34"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9",
+                "php": ">=7.2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-3.0",
+                    "datestamp": "1590744318",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "branch-alias": {
+                    "dev-8.x-3.x": "3.x-dev"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Niels van Mourik",
+                    "homepage": "http://www.nielsvm.org"
+                },
+                {
+                    "name": "djbobbydrake",
+                    "homepage": "https://www.drupal.org/user/336378"
+                },
+                {
+                    "name": "nielsvm",
+                    "homepage": "https://www.drupal.org/user/163285"
+                }
+            ],
+            "description": "Provides a generic external cache invalidation API and queue service.",
+            "homepage": "https://www.drupal.org/project/purge",
+            "support": {
+                "source": "https://git.drupalcode.org/project/purge"
+            }
         },
         {
             "name": "drupal/qa_accounts",
@@ -16680,6 +16800,7 @@
         "drupal/imageapi_optimize_resmushit": 10,
         "drupal/inline_entity_form": 5,
         "drupal/masquerade": 10,
+        "drupal/memcache": 20,
         "drupal/moderation_dashboard": 10,
         "drupal/mysql56": 10,
         "drupal/pathauto_menu_link": 20,

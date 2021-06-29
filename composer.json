@@ -55,7 +55,8 @@
         "drupal/link_attributes": "^1.11",
         "drupal/linkit": "5.0.0-beta12",
         "drupal/masquerade": "^2.0@beta",
-        "drupal/media_acquiadam": "^1.47",
+        "drupal/media_acquiadam": "^1.48",
+        "drupal/memcache": "2.x-dev@dev",
         "drupal/menu_admin_per_menu": "^1.3",
         "drupal/menu_block": "^1.6",
         "drupal/menu_item_extras": "^2.14",
@@ -69,6 +70,7 @@
         "drupal/paragraphs": "^1.12",
         "drupal/pathauto": "^1.8",
         "drupal/pathauto_menu_link": "1.x-dev",
+        "drupal/purge": "^3.0",
         "drupal/qa_accounts": "1.x-dev@dev",
         "drupal/rabbit_hole": "^1.0@beta",
         "drupal/recaptcha": "^3.0",
@@ -171,10 +173,6 @@
             },
             "drupal/simplesamlphp_auth": {
                 "fix roles": "https://www.drupal.org/files/issues/2020-07-13/simplesamlphp_auth-role_assignment-2894945-11.patch"
-            },
-            "drupal/media_acquiadam": {
-                "Module only themed to work with SEVEN": "https://www.drupal.org/files/issues/2021-04-27/module-theming-3210805-1_0.patch",
-                "Acquia DAM auth breaks when SameSite is enforced": "https://www.drupal.org/files/issues/2021-06-08/3217950-4.patch"
             },
             "drupal/diff": {
                 "Filter Revision Overview By Date": "https://www.drupal.org/files/issues/2021-05-06/filter-revision-overview-by-date-3212653-1.patch"

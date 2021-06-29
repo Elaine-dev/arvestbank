@@ -830,15 +830,19 @@ if (isset($_ENV['AH_SITE_ENVIRONMENT'])) {
 $conf['acquia_hosting_settings_autoconnect'] = FALSE;
 
 require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
-/**
- * IMPORTANT.
- *
- * Do not include additional settings here. Instead, add them to settings
- * included by `blt.settings.php`. See BLT's documentation for more detail.
- *
- * @link https://docs.acquia.com/blt/
- */
+
+
 
 $databases['default']['default']['init_commands'] = array(
   'wait_timeout' => "SET SESSION wait_timeout=1200",
 );
+
+// Memcache Settings
+if (file_exists('/var/www/site-php')) {
+ // require('/var/www/site-php/arvestbank/arvestbank-settings.inc');
+
+  // Memcached settings for Acquia Hosting
+  if (file_exists(DRUPAL_ROOT . '/sites/default/cloud-memcache-d8+.php')) {
+    require(DRUPAL_ROOT . '/sites/default/cloud-memcache-d8+.php');
+  }
+}
