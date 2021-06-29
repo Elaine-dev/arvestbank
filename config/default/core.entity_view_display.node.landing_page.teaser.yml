@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.landing_page.field_disable_sidebar_ad
     - field.field.node.landing_page.field_disclosure
     - field.field.node.landing_page.field_layout_
     - field.field.node.landing_page.field_meta_tags
@@ -31,6 +32,7 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_disable_sidebar_ad: true
   field_disclosure: true
   field_layout_: true
   field_meta_tags: true
