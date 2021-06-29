@@ -829,6 +829,21 @@ if (isset($_ENV['AH_SITE_ENVIRONMENT'])) {
 
 $conf['acquia_hosting_settings_autoconnect'] = FALSE;
 
+
+// Memcache Settings
+if (file_exists('/var/www/site-php')) {
+  //require('/var/www/site-php/arvestbank/arvestbank-settings.inc');
+
+  // Memcached settings for Acquia Hosting
+  if (file_exists(DRUPAL_ROOT . '/sites/default/cloud-memcache-d8+.php')) {
+    require(DRUPAL_ROOT . '/sites/default/cloud-memcache-d8+.php');
+  }
+}
+
+$databases['default']['default']['init_commands'] = array(
+  'wait_timeout' => "SET SESSION wait_timeout=1200",
+);
+
 require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
 /**
  * IMPORTANT.
@@ -838,7 +853,3 @@ require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
  *
  * @link https://docs.acquia.com/blt/
  */
-
-$databases['default']['default']['init_commands'] = array(
-  'wait_timeout' => "SET SESSION wait_timeout=1200",
-);

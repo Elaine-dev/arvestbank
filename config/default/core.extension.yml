@@ -27,7 +27,6 @@ module:
   arvestbank_webtools_api: 0
   arvestbank_wordpress_articles: 0
   arvestbank_zipcodes: 0
-  automated_cron: 0
   better_exposed_filters: 0
   block: 0
   block_content: 0
@@ -80,6 +79,7 @@ module:
   filter: 0
   geolocation: 0
   gtm: 0
+  http_cache_control: 0
   iframe: 0
   image: 0
   imageapi_optimize: 0
@@ -100,6 +100,7 @@ module:
   media_acquiadam: 0
   media_library: 0
   media_video_micromodal: 0
+  memcache: 0
   menu_block: 0
   menu_item_extras: 0
   menu_link_attributes: 0
@@ -119,12 +120,18 @@ module:
   moderation_dashboard: 0
   node: 0
   options: 0
-  page_cache: 0
   page_manager: 0
   panels: 0
   path: 0
   path_alias: 0
   pathauto_menu_link: 0
+  purge: 0
+  purge_drush: 0
+  purge_processor_cron: 0
+  purge_purger_http: 0
+  purge_queuer_coretags: 0
+  purge_tokens: 0
+  purge_ui: 0
   rabbit_hole: 0
   rdf: 0
   redirect: 0
