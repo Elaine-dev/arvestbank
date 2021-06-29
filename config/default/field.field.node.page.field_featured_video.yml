@@ -1,0 +1,29 @@
+uuid: 0fe9975e-24a6-4bc8-975a-aca8d2b38e6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured_video
+    - media.type.video
+    - node.type.page
+id: node.page.field_featured_video
+field_name: field_featured_video
+entity_type: node
+bundle: page
+label: 'Featured Video'
+description: 'You must add the Featured video to the media library first by going to /media/add/video . You can see all media here /admin/content/media-grid'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
