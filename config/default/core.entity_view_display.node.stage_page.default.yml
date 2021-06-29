@@ -362,4 +362,5 @@ hidden:
   field_rendered_node: true
   field_news_alert_block_body: true
   field_news_alert_block_dates: true
+  field_rendered_node: true
   search_api_excerpt: true

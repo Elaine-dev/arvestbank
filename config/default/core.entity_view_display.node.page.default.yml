@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.page.field_disable_sidebar_ad
     - field.field.node.page.field_disclosure
     - field.field.node.page.field_featured_image
+    - field.field.node.page.field_featured_video
     - field.field.node.page.field_field_callout_phone_number
     - field.field.node.page.field_layout_canvas
     - field.field.node.page.field_meta_tags
@@ -66,13 +67,13 @@ content:
     region: content
   field_account_disclosure_informa:
     type: text_default
-    weight: 4
+    weight: 5
     region: content
     label: above
     settings: {  }
     third_party_settings: {  }
   field_button_links:
-    weight: 3
+    weight: 4
     label: hidden
     settings:
       trim_length: null
@@ -94,8 +95,17 @@ content:
       link: false
     third_party_settings: {  }
     region: content
+  field_featured_video:
+    type: entity_reference_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: thumbnail_overlay
+      link: false
+    third_party_settings: {  }
+    region: content
   field_layout_canvas:
-    weight: 5
+    weight: 6
     label: hidden
     settings:
       view_mode: default
@@ -113,7 +123,7 @@ content:
     third_party_settings: {  }
   field_second_callout_icon:
     type: entity_reference_entity_view
-    weight: 8
+    weight: 9
     label: above
     settings:
       view_mode: default
@@ -121,14 +131,14 @@ content:
     third_party_settings: {  }
     region: content
   field_second_callout_label:
-    weight: 6
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_second_callout_link:
-    weight: 7
+    weight: 8
     label: above
     settings:
       trim_length: 80
