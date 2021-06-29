@@ -1,0 +1,23 @@
+uuid: a6efbe03-0232-4a5e-8766-57367915bccb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_disable_sidebar_ad
+    - node.type.landing_page
+id: node.landing_page.field_disable_sidebar_ad
+field_name: field_disable_sidebar_ad
+entity_type: node
+bundle: landing_page
+label: 'Disable Sidebar Ad'
+description: 'Check this box to hide the ad that appears below the sidebar on this page.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

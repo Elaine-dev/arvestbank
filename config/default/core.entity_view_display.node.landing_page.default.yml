@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.landing_page.field_disable_sidebar_ad
     - field.field.node.landing_page.field_disclosure
     - field.field.node.landing_page.field_layout_
     - field.field.node.landing_page.field_meta_tags
@@ -51,6 +52,7 @@ content:
     type: yoastseo_formatter
     region: content
 hidden:
+  field_disable_sidebar_ad: true
   field_disclosure: true
   field_rendered_node: true
   field_support_image: true

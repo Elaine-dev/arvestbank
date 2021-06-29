@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.page.field_button_links
     - field.field.node.page.field_callout_layout_optio
     - field.field.node.page.field_callout_title
+    - field.field.node.page.field_disable_sidebar_ad
     - field.field.node.page.field_disclosure
     - field.field.node.page.field_featured_image
     - field.field.node.page.field_field_callout_phone_number
@@ -45,7 +46,7 @@ third_party_settings:
         - field_second_callout
         - group_second_call_out_button
       parent_name: group_basic_page_fields
-      weight: 22
+      weight: 32
       format_type: details
       region: content
       format_settings:
@@ -61,7 +62,7 @@ third_party_settings:
         - field_second_callout_link
         - field_second_callout_icon
       parent_name: group_cta
-      weight: 9
+      weight: 34
       format_type: details
       region: content
       format_settings:
@@ -78,7 +79,7 @@ third_party_settings:
         - group_cta
         - group_account_disclosure
       parent_name: ''
-      weight: 5
+      weight: 6
       format_type: details
       region: content
       format_settings:
@@ -99,7 +100,7 @@ third_party_settings:
       children:
         - field_layout_canvas
       parent_name: ''
-      weight: 6
+      weight: 7
       format_type: details
       region: content
       format_settings:
@@ -113,7 +114,7 @@ third_party_settings:
       children:
         - field_button_links
       parent_name: group_basic_page_fields
-      weight: 21
+      weight: 31
       format_type: details
       region: content
       format_settings:
@@ -127,7 +128,7 @@ third_party_settings:
       children:
         - field_featured_image
       parent_name: group_basic_page_fields
-      weight: 20
+      weight: 30
       format_type: details
       region: content
       format_settings:
@@ -141,7 +142,7 @@ third_party_settings:
       children:
         - field_account_disclosure_informa
       parent_name: group_basic_page_fields
-      weight: 23
+      weight: 33
       format_type: details
       region: content
       format_settings:
@@ -168,7 +169,7 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -189,7 +190,7 @@ content:
     type: link_default
     region: content
   field_callout_layout_optio:
-    weight: 6
+    weight: 31
     settings:
       display_label: true
     third_party_settings:
@@ -197,13 +198,20 @@ content:
     type: boolean_checkbox
     region: content
   field_callout_title:
-    weight: 5
+    weight: 30
     settings:
       size: 60
       placeholder: ''
     third_party_settings:
       conditional_fields: {  }
     type: string_textfield
+    region: content
+  field_disable_sidebar_ad:
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_disclosure:
     weight: 2
@@ -219,7 +227,7 @@ content:
     third_party_settings: {  }
     region: content
   field_field_callout_phone_number:
-    weight: 7
+    weight: 32
     settings: {  }
     third_party_settings:
       conditional_fields: {  }
@@ -232,7 +240,7 @@ content:
     type: cohesion_layout_builder_widget
     region: content
   field_meta_tags:
-    weight: 7
+    weight: 8
     settings:
       sidebar: true
     third_party_settings: {  }
@@ -271,7 +279,7 @@ content:
     type: string_textfield
     region: content
   field_second_callout:
-    weight: 8
+    weight: 33
     settings: {  }
     third_party_settings:
       conditional_fields: {  }
@@ -293,7 +301,7 @@ content:
     type: text_textfield
     region: content
   field_second_callout_link:
-    weight: 29
+    weight: 28
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -301,7 +309,7 @@ content:
     type: link_default
     region: content
   field_yoast_seo:
-    weight: 17
+    weight: 18
     settings:
       body: body
     third_party_settings: {  }
@@ -365,24 +373,24 @@ content:
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 15
+    weight: 16
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 12
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -390,7 +398,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 17
     region: content
     third_party_settings: {  }
   title:
@@ -403,7 +411,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 8
+    weight: 9
     settings:
       match_operator: CONTAINS
       size: 60
@@ -413,12 +421,12 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 13
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 14
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }

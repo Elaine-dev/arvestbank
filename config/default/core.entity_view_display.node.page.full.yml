@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.page.field_button_links
     - field.field.node.page.field_callout_layout_optio
     - field.field.node.page.field_callout_title
+    - field.field.node.page.field_disable_sidebar_ad
     - field.field.node.page.field_disclosure
     - field.field.node.page.field_featured_image
     - field.field.node.page.field_field_callout_phone_number
@@ -135,6 +136,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_disable_sidebar_ad: true
   field_disclosure: true
   field_layout_canvas: true
   field_rendered_node: true
