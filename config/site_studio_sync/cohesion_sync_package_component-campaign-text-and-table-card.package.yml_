@@ -1,3 +1,4 @@
+
 -
   type: cohesion_sync_package
   export:
@@ -7,7 +8,7 @@
     dependencies: {  }
     id: pack_component_campaign_text_and
     label: 'Component Campaign Text and Table Card'
-    description: 'Campaign component for text, including tables. Updated: Aaron Parkening 6/24/2021'
+    description: 'Campaign component for text, including tables. Updated: Aaron Parkening 6/28/2021'
     excluded_entity_types: '[]'
     settings: '{"7d841ecb-98fb-412e-9c43-50f7df24fba3":{"type":"cohesion_component","items":{"7d841ecb-98fb-412e-9c43-50f7df24fba3":{"type":"cohesion_component"},"db9ae5f8-1e86-4b25-94e4-d26af92dc3fe":{"type":"file"}},"checked":true}}'
 -
