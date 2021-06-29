@@ -71,6 +71,7 @@
         "drupal/pathauto": "^1.8",
         "drupal/pathauto_menu_link": "1.x-dev",
         "drupal/purge": "^3.0",
+        "drupal/purge_purger_http": "^1.0",
         "drupal/qa_accounts": "1.x-dev@dev",
         "drupal/rabbit_hole": "^1.0@beta",
         "drupal/recaptcha": "^3.0",
