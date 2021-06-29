@@ -1,0 +1,33 @@
+
+-
+  type: cohesion_sync_package
+  export:
+    uuid: bc167f87-c72c-4fca-8426-c468396faf37
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: pack_custom_style_campaign_card
+    label: 'Custom Style Campaign Card'
+    description: 'Styles for campaign cards. Last Updated: Aaron Parkening 06/29/2021'
+    excluded_entity_types: '[]'
+    settings: '{"dc76d788-e773-4a88-8bec-d36d7a0e0d18":{"type":"cohesion_custom_style","items":{"dc76d788-e773-4a88-8bec-d36d7a0e0d18":{"type":"cohesion_custom_style"}},"checked":true}}'
+-
+  type: cohesion_custom_style
+  export:
+    uuid: dc76d788-e773-4a88-8bec-d36d7a0e0d18
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: 38cd6c15
+    label: 'Campaign Card'
+    json_values: '{"preview":{"text":"<div class=\"coh-preview\">Container styles for Campaign Cards.<\/div>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"div","class":"","combinator":"","pseudo":""},"styles":{"xl":{"height":{"value":"100%"},"margin":{"margin-top":{"value":"$med"},"margin-bottom":{"value":"5"}},"background-image-settings":[{"backgroundLayerType":{"value":"image"},"backgroundImage":{"imageStyle":"","value":"[media-reference:media:13901883-b650-47a0-8294-9c7bf9c1c2fc]"},"backgroundImageSize":{"value":"numeric"},"backgroundImageRepeat":{"value":"no-repeat"},"backgroundImageAttachment":{"value":"scroll"},"backgroundImagePositionX":{"value":"left"},"backgroundImagePositionY":{"value":"bottom"},"backgroundImageClip":{},"backgroundImageWidth":{"value":"100%"},"backgroundImageHeight":{"value":"$sm"}}],"background-color":{"value":{"link":true,"value":{"hex":"#ffffff","rgba":"rgba(255, 255, 255, 1)"},"name":"White","uid":"white","class":".coh-color-white","variable":"$coh-color-white","wysiwyg":true,"inuse":true}},"padding":{"padding-bottom":{"value":"$sm"},"padding-equal":{"value":"$med"}}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+    json_mapper: '{"styles":{"title":"Layout","selectorType":"topLevel","formDefinition":[{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":true},{"name":"margin-bottom","active":true},{"name":"margin-left","active":false},{"name":"margin-right","active":false},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]},{"formKey":"height","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"min-height","active":false},{"name":"max-height","active":false},{"name":"height","active":true}]},{"formKey":"padding","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"padding-equal","active":true},{"name":"padding-top","active":false},{"name":"padding-bottom","active":true},{"name":"padding-left","active":false},{"name":"padding-right","active":false},{"name":"padding-block-start","active":false},{"name":"padding-block-end","active":false},{"name":"padding-inline-start","active":false},{"name":"padding-inline-end","active":false}]}]},{"formKey":"background","children":[{"formKey":"background-image-and-gradient","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-image-settings","active":true},{"name":"backgroundLayerType","active":true},{"name":"backgroundImage","active":true},{"name":"backgroundImageGradient","active":true},{"name":"imageStyle","active":true},{"name":"backgroundImageSize","active":true},{"name":"backgroundImageWidth","active":true},{"name":"backgroundImageHeight","active":true},{"name":"backgroundImageRepeat","active":true},{"name":"backgroundImageAttachment","active":true},{"name":"backgroundImagePositionX","active":true},{"name":"backgroundImagePositionXOffset","active":true},{"name":"backgroundImagePositionY","active":true},{"name":"backgroundImagePositionYOffset","active":true},{"name":"backgroundImageOrigin","active":false},{"name":"backgroundImageClip","active":false}]},{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]}],"items":[],"form":null}}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    class_name: .coh-style-campaign-card
+    custom_style_type: layout
+    available_in_wysiwyg: false
+    parent: null
+    weight: 0
