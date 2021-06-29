@@ -840,10 +840,6 @@ if (file_exists('/var/www/site-php')) {
   }
 }
 
-$databases['default']['default']['init_commands'] = array(
-  'wait_timeout' => "SET SESSION wait_timeout=1200",
-);
-
 require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
 /**
  * IMPORTANT.
@@ -853,3 +849,7 @@ require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
  *
  * @link https://docs.acquia.com/blt/
  */
+
+$databases['default']['default']['init_commands'] = array(
+  'wait_timeout' => "SET SESSION wait_timeout=1200",
+);
