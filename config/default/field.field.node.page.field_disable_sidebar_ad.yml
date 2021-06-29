@@ -10,7 +10,7 @@ field_name: field_disable_sidebar_ad
 entity_type: node
 bundle: page
 label: 'Disable Sidebar Ad'
-description: 'Check this box to hide the ad that appears below the sidebar on this page.'
+description: 'Check this box to hide the ad that appears below the sidebar menu on this page.'
 required: false
 translatable: true
 default_value:
