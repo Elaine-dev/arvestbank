@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.page.field_disable_sidebar_ad
     - field.field.node.page.field_disclosure
     - field.field.node.page.field_featured_image
+    - field.field.node.page.field_featured_video
     - field.field.node.page.field_field_callout_phone_number
     - field.field.node.page.field_layout_canvas
     - field.field.node.page.field_meta_tags
@@ -58,6 +59,7 @@ hidden:
   field_disable_sidebar_ad: true
   field_disclosure: true
   field_featured_image: true
+  field_featured_video: true
   field_field_callout_phone_number: true
   field_layout_canvas: true
   field_meta_tags: true
