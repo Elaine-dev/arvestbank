@@ -1,0 +1,20 @@
+uuid: cbf969b4-10ea-4959-8965-97d17ed97225
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - node
+id: node.field_featured_video
+field_name: field_featured_video
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
