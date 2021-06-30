@@ -30,6 +30,9 @@ body .site-content .pager__items li:before, .chosen-results ul li:before, .site-
 .page-node-type-campaign-page  .coh-style-white-text a{
   color: #333333;
 }
+.coh-style-white-text{
+  color: #ffffff !important;
+}
 
 .contextual-component.coh-ce-cpt_support_card-4bca671d br{
   display:none;
@@ -65,4 +68,10 @@ li.coh-menu-list-item.coh-ce-a69b2abe.js-coh-menu-item:nth-child(6), li.coh-menu
   .sitemap {
     column-count: 2;
   }
+}
+
+/* support cards */
+.coh-sidebar .field--name-field-acquiadam-asset-image img{
+  max-width:100%;
+  height: auto;
 }
