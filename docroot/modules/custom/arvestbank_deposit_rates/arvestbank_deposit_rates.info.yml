@@ -1,0 +1,6 @@
+name: Arvest Bank Deposit Rates
+type: module
+description: 'Adds Arvest Bank deposit rates functionality.'
+core_version_requirement: ^9
+dependencies:
+  - arvestbank_webtools_api:arvestbank_webtools_api

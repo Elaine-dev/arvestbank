@@ -63,9 +63,33 @@ class WebtoolsClient {
   }
 
   /**
-   * Tests webtools connectivity.
+   * Tests webtools deposit rates connectivity.
    */
-  public function testConnectivity() {
+  public function testDepositRatesEndpointConnectivity() {
+
+    // Define the test request we want to make.
+    $endpoint = $this->webtoolsConfig->get('deposit-rates-endpoint');
+    $requestOptions = [
+      RequestOptions::JSON => [
+        'RegionID'  => '101',
+        'BranchID'  => '101',
+        'ProductId' => '303,101,All',
+        'Cursor'    => '1',
+      ],
+    ];
+
+    // Make request.
+    $response = $this->makeRequest($endpoint, $requestOptions);
+
+    // Return boolean for success.
+    return is_string($response);
+
+  }
+
+  /**
+   * Tests webtools form api connectivity.
+   */
+  public function testFormEndpointConnectivity() {
 
     // Define the test request we want to make.
     $endpoint = $this->webtoolsConfig->get('webtools-form-endpoint');
@@ -110,8 +134,16 @@ class WebtoolsClient {
    */
   public function makeRequest(string $endpoint, array $requestOptions) {
 
-    // Determine endpoint.
-    $requestEndpoint = $this->webtoolsConfig->get('webtools-domain') . $endpoint;
+    // If the passed endpoint isn't a full url.
+    if (strpos($endpoint, 'http') === FALSE) {
+      // Use the webtools domain and endpoint.
+      $requestEndpoint = $this->webtoolsConfig->get('webtools-domain') . $endpoint;
+    }
+    // If the passed endpoint is a full url.
+    else {
+      // Use the passed url as is.
+      $requestEndpoint = $endpoint;
+    }
 
     // Ensure we have a valid bearer token.
     $this->pingIdentityClient->ensureValidBearerToken();
