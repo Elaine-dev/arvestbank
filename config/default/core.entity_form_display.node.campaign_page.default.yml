@@ -3,8 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.campaign_page.field_campaign_telephone
     - field.field.node.campaign_page.field_disclosure
+    - field.field.node.campaign_page.field_field_callout_phone_number
     - field.field.node.campaign_page.field_layout_canvas
     - field.field.node.campaign_page.field_meta_tags
     - field.field.node.campaign_page.field_rendered_node
@@ -17,7 +17,6 @@ dependencies:
     - metatag
     - path
     - scheduler
-    - telephone
     - yoast_seo
 id: node.campaign_page.default
 targetEntityType: node
@@ -26,38 +25,37 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_campaign_telephone:
-    weight: 2
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-    type: telephone_default
-    region: content
   field_disclosure:
     weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  field_field_callout_phone_number:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_layout_canvas:
     type: cohesion_layout_builder_widget
-    weight: 13
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     region: content
   field_meta_tags:
-    weight: 14
+    weight: 15
     settings:
       sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
     region: content
   field_yoast_seo:
-    weight: 15
+    weight: 16
     settings:
       body: body
     third_party_settings: {  }
@@ -65,24 +63,24 @@ content:
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 11
+    weight: 12
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -90,14 +88,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 12
+    weight: 13
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 6
     region: content
     third_party_settings: {  }
   title:
@@ -110,7 +108,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 4
     settings:
       match_operator: CONTAINS
       size: 60
@@ -120,12 +118,12 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
