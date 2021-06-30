@@ -118,8 +118,9 @@ elements: |-
       '#flexbox': '1'
     email:
       '#type': email
-      '#title': Email
+      '#title': 'Email address'
       '#required': true
+      '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
     phone_number:
       '#type': tel
       '#title': 'Phone Number'
