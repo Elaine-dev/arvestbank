@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.campaign_page.field_campaign_telephone
     - field.field.node.campaign_page.field_disclosure
     - field.field.node.campaign_page.field_layout_canvas
     - field.field.node.campaign_page.field_meta_tags
@@ -48,6 +49,7 @@ content:
     type: yoastseo_formatter
     region: content
 hidden:
+  field_campaign_telephone: true
   field_disclosure: true
   field_rendered_node: true
   links: true
