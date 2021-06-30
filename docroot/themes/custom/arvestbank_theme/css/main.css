@@ -741,8 +741,7 @@ body .site-content .pager__items li:before, .chosen-results ul li:before, .site-
   flex: 0 1 50%;
 }
 
-.page-node-type-campaign-page  .coh-style-white-text .page-node-type-campaign-page  .coh-style-white-text #block-disclosureblock a{
-a{
+.page-node-type-campaign-page #block-disclosureblock .coh-style-white-text a{
   color: #333333;
 }
 
