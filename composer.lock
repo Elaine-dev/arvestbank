@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "baf933e0fb64436974ac82216acea987",
+    "content-hash": "9bbbb3fe233f924e6db19e83e1da0e97",
     "packages": [
         {
             "name": "acquia/blt",
@@ -318,6 +318,41 @@
             ],
             "description": "Provides common methods for detecting the current Acquia environment",
             "time": "2021-04-15T17:44:09+00:00"
+        },
+        {
+            "name": "acquia/site_studio_webform",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pavlosdan/site_studio_webform.git",
+                "reference": "44990c66c1d2c06971c98516e6481d497487f872"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pavlosdan/site_studio_webform/zipball/44990c66c1d2c06971c98516e6481d497487f872",
+                "reference": "44990c66c1d2c06971c98516e6481d497487f872",
+                "shasum": ""
+            },
+            "require": {
+                "acquia/cohesion": ">=6.4.0"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Acquia Engineering",
+                    "homepage": "https://www.acquia.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Provides integration between Site Studio and Webform modules",
+            "support": {
+                "source": "https://github.com/pavlosdan/site_studio_webform/tree/main",
+                "issues": "https://github.com/pavlosdan/site_studio_webform/issues"
+            },
+            "time": "2021-04-29T15:01:03+00:00"
         },
         {
             "name": "asm89/stack-cors",
@@ -16888,6 +16923,7 @@
     "stability-flags": {
         "acquia/blt-simplesamlphp": 20,
         "acquia/blt-site-studio": 20,
+        "acquia/site_studio_webform": 20,
         "drupal/better_exposed_filters": 10,
         "drupal/conditional_fields": 15,
         "drupal/config_split": 10,

@@ -28,6 +28,7 @@ third_party_settings:
     group_education_article:
       children:
         - body
+        - field_reference_text
       parent_name: ''
       weight: 3
       format_type: details
@@ -95,6 +96,14 @@ content:
     third_party_settings: {  }
     type: metatag_firehose
     region: content
+  field_reference_text:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_yoast_seo:
     weight: 11
     settings:
@@ -153,7 +162,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_reference_text: true
   field_related_content_reference: true
   field_rendered_node: true
   promote: true
