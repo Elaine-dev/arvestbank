@@ -1,0 +1,3 @@
+services:
+  arvestbank_branch_locations.legacy_location_information:
+    class: \Drupal\arvestbank_branch_locations\Services\LegacyLocationInformation
