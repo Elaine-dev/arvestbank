@@ -40,12 +40,14 @@ class ExternalLoginHandler extends WebformHandlerBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state, WebformSubmissionInterface $webform_submission) {
 
-    // Get "Login Select" value.
-    $loginSelectValue = $form_state->getValue('login_select');
-
-    // If the login select value is empty try the non-prod login select.
-    if (!$loginSelectValue) {
-      // Get "Login Select" value.
+    // If we're on prod.
+    if (isset($_ENV['AH_SITE_ENVIRONMENT']) && $_ENV['AH_SITE_ENVIRONMENT'] == 'prod') {
+      // Get prod "Login Select" value.
+      $loginSelectValue = $form_state->getValue('login_select');
+    }
+    // If we're not on prod.
+    else {
+      // Get non-prod "Login Select" value.
       $loginSelectValue = $form_state->getValue('login_select_non_prod');
     }
 
