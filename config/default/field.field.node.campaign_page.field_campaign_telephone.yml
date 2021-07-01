@@ -1,0 +1,23 @@
+uuid: 2f15514b-d001-4cb8-a904-84e6ff56d5e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_campaign_telephone
+    - node.type.campaign_page
+  module:
+    - telephone
+id: node.campaign_page.field_campaign_telephone
+field_name: field_campaign_telephone
+entity_type: node
+bundle: campaign_page
+label: 'Heading Telephone'
+description: 'Type the telephone number that will appear in the page heading. Format: (xxx) xxx-xxxx'
+required: true
+translatable: false
+default_value:
+  -
+    value: '(866) 952-9523'
+default_value_callback: ''
+settings: {  }
+field_type: telephone

@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.campaign_page.field_disclosure
+    - field.field.node.campaign_page.field_field_callout_phone_number
     - field.field.node.campaign_page.field_layout_canvas
     - field.field.node.campaign_page.field_meta_tags
     - field.field.node.campaign_page.field_rendered_node
@@ -34,6 +35,7 @@ content:
     region: content
 hidden:
   field_disclosure: true
+  field_field_callout_phone_number: true
   field_meta_tags: true
   field_rendered_node: true
   field_yoast_seo: true

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9bbbb3fe233f924e6db19e83e1da0e97",
+    "content-hash": "3e428438ec1871f88f1fd03684b762da",
     "packages": [
         {
             "name": "acquia/blt",
@@ -318,6 +318,38 @@
             ],
             "description": "Provides common methods for detecting the current Acquia environment",
             "time": "2021-04-15T17:44:09+00:00"
+        },
+        {
+            "name": "acquia/memcache-settings",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/acquia/memcache-settings.git",
+                "reference": "a45c708cb88a57324f9c7a2259ebc61aa8438fc7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/acquia/memcache-settings/zipball/a45c708cb88a57324f9c7a2259ebc61aa8438fc7",
+                "reference": "a45c708cb88a57324f9c7a2259ebc61aa8438fc7",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/memcache": "^2.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Acquia Engineering",
+                    "homepage": "https://www.acquia.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Recommended Memcache settings for use with Acquia hosting.",
+            "time": "2020-07-02T14:36:03+00:00"
         },
         {
             "name": "acquia/site_studio_webform",
@@ -13238,16 +13270,16 @@
         },
         {
             "name": "symfony/config",
-            "version": "v4.4.25",
+            "version": "v4.4.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "2803882bb10353d277d4539635dd688a053d571c"
+                "reference": "1cb26cdb8a9834d8494cadd284602fa0647b73e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/2803882bb10353d277d4539635dd688a053d571c",
-                "reference": "2803882bb10353d277d4539635dd688a053d571c",
+                "url": "https://api.github.com/repos/symfony/config/zipball/1cb26cdb8a9834d8494cadd284602fa0647b73e5",
+                "reference": "1cb26cdb8a9834d8494cadd284602fa0647b73e5",
                 "shasum": ""
             },
             "require": {
@@ -13294,7 +13326,21 @@
             ],
             "description": "Helps you find, load, combine, autofill and validate configuration values of any kind",
             "homepage": "https://symfony.com",
-            "time": "2021-05-26T11:20:16+00:00"
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-06-21T14:51:25+00:00"
         },
         {
             "name": "symfony/console",
@@ -13818,16 +13864,16 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v4.4.25",
+            "version": "v4.4.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "2d926ebd76f52352deb3c9577d8c1d4b96eae429"
+                "reference": "a501126eb6ec9288a3434af01b3d4499ec1268a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/2d926ebd76f52352deb3c9577d8c1d4b96eae429",
-                "reference": "2d926ebd76f52352deb3c9577d8c1d4b96eae429",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/a501126eb6ec9288a3434af01b3d4499ec1268a0",
+                "reference": "a501126eb6ec9288a3434af01b3d4499ec1268a0",
                 "shasum": ""
             },
             "require": {
@@ -13859,7 +13905,21 @@
             ],
             "description": "Provides basic utilities for the filesystem",
             "homepage": "https://symfony.com",
-            "time": "2021-05-26T17:30:55+00:00"
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-06-30T07:12:23+00:00"
         },
         {
             "name": "symfony/finder",

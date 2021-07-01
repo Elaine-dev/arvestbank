@@ -27,7 +27,7 @@ body .site-content .pager__items li:before, .chosen-results ul li:before, .site-
   flex: 0 1 50%;
 }
 
-.page-node-type-campaign-page  .coh-style-white-text #block-disclosureblock a{
+.page-node-type-campaign-page #block-disclosureblock .coh-style-white-text a{
   color: #333333;
 }
 .coh-style-white-text{
@@ -74,4 +74,13 @@ li.coh-menu-list-item.coh-ce-a69b2abe.js-coh-menu-item:nth-child(6), li.coh-menu
 .coh-sidebar .field--name-field-acquiadam-asset-image img{
   max-width:100%;
   height: auto;
+}
+
+.coh-ce-cpt_support_card-4bca671d br{
+  display:none;
+}
+
+/* campaign page overrides */
+.campaign-icon-wrapper{
+  display: flex;
 }
