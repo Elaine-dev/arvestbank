@@ -1,9 +1,9 @@
-uuid: 96f0c7f2-b4e2-48c6-b944-4ae2118ad38a
+uuid: 355c8f89-e05e-4dee-a625-c515662eeb72
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.media_caption
+    - core.entity_view_mode.media.media_button
     - field.field.media.video.field_education_article_category
     - field.field.media.video.field_media_oembed_video
     - field.field.media.video.field_video_subtitle
@@ -12,10 +12,10 @@ dependencies:
     - media.type.video
   module:
     - media_video_micromodal
-id: media.video.media_caption
+id: media.video.media_button
 targetEntityType: media
 bundle: video
-mode: media_caption
+mode: media_button
 content:
   name:
     type: micromodal_field_formatter
@@ -23,7 +23,7 @@ content:
     region: content
     label: hidden
     settings:
-      string_classes: ''
+      string_classes: coh-style-link-arrow-button
       caption_swap: '1'
       thumbnail_image_style: ''
       thumbnail_override_fieldname: ''
