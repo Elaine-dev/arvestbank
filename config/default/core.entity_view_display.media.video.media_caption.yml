@@ -1,0 +1,47 @@
+uuid: 96f0c7f2-b4e2-48c6-b944-4ae2118ad38a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_caption
+    - field.field.media.video.field_education_article_category
+    - field.field.media.video.field_media_oembed_video
+    - field.field.media.video.field_video_subtitle
+    - field.field.media.video.field_video_thumbnail
+    - field.field.media.video.field_video_time_length
+    - media.type.video
+  module:
+    - media
+id: media.video.media_caption
+targetEntityType: media
+bundle: video
+mode: media_caption
+content:
+  field_media_oembed_video:
+    type: oembed
+    label: visually_hidden
+    weight: 0
+    settings:
+      max_width: 237
+      max_height: 117
+    third_party_settings: {  }
+    region: content
+  field_video_thumbnail:
+    type: entity_reference_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  content_moderation_control: true
+  created: true
+  field_education_article_category: true
+  field_video_subtitle: true
+  field_video_time_length: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true
