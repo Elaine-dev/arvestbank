@@ -65,6 +65,11 @@ elements: |-
     '#title': 'Existing Arvest customer?'
     '#options': yes_no
     '#required': true
+  branch_location:
+    '#type': webform_term_select
+    '#title': 'Branch Location'
+    '#vocabulary': branch_location
+    '#breadcrumb_delimiter': ''
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'

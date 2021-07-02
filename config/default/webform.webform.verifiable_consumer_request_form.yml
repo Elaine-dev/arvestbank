@@ -225,6 +225,11 @@ elements: |-
         visible:
           ':input[name="select_method"]':
             value: email
+    branch_location:
+      '#type': webform_term_select
+      '#title': 'Branch Location'
+      '#vocabulary': branch_location
+      '#breadcrumb_delimiter': ''
   step_6:
     '#type': webform_wizard_page
     '#title': 'Step 6'

@@ -52,6 +52,11 @@ elements: |-
       visible:
         ':input[name="what_are_you_interested_in[Other]"]':
           checked: true
+  branch_location:
+    '#type': webform_term_select
+    '#title': 'Branch Location'
+    '#vocabulary': branch_location
+    '#breadcrumb_delimiter': ''
 css: ''
 javascript: ''
 settings:
