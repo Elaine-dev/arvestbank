@@ -45,7 +45,7 @@ Drupal.behaviors.externalLogin = {
       }
 
       // Ajax POST before redirect if online banking is selected.
-      // or nothing is selected (meaning we're defulting to online banking)
+      // or nothing is selected (meaning we're defaulting to online banking)
       // and username is filled.
       if (
         // If online banking or nothing is selected and it's the sidebar form.
