@@ -19,12 +19,14 @@ dependencies:
     - field.field.node.associate.field_mobile_number
     - field.field.node.associate.field_nmls_number
     - field.field.node.associate.field_office_number
+    - field.field.node.associate.field_pb_application
     - field.field.node.associate.field_private_bank_reference
     - field.field.node.associate.field_rendered_node
     - field.field.node.associate.field_vanity_url
     - field.field.node.associate.field_website
     - image.style.thumbnail
     - node.type.associate
+    - workflows.workflow.editorial
   module:
     - conditional_fields
     - content_moderation
@@ -199,6 +201,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: telephone_default
+    region: content
+  field_pb_application:
+    weight: 29
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
   field_private_bank_reference:
     weight: 26
