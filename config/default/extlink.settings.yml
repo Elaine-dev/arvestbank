@@ -10,10 +10,10 @@ extlink_alert: true
 extlink_alert_text: "Leaving Arvest Bank\r\n\r\nYou are about to visit a third-party site not operated by Arvest Bank, a FDIC-insured institution."
 extlink_exclude: ''
 extlink_include: ''
-extlink_class: '0'
+extlink_class: ext
 extlink_label: '(link is external)'
 extlink_img_class: false
-extlink_css_exclude: ''
+extlink_css_exclude: a.external-link-icon-hide
 extlink_css_explicit: ''
 extlink_mailto_class: '0'
 extlink_mailto_label: '(link sends email)'
