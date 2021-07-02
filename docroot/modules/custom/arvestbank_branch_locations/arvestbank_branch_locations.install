@@ -60,7 +60,7 @@ function arvestbank_branch_locations_update_9001() {
         $locationTerm->save();
       }
       else {
-        \Drupal::messenger()->addError($cityName);
+        \Drupal::messenger()->addError('Could not find region id for: ' . $cityName);
       }
 
     }

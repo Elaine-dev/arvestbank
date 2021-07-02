@@ -112,6 +112,149 @@ class LegacyLocationInformation {
   ];
 
   /**
+   * These mappings were provided in Asana by old web team, orig source unknown.
+   *
+   * @var array
+   */
+  public $regionalCapitalCity = [
+    'Alma' => 'fortsmith',
+    'Anderson' => 'bentonville',
+    'Ashdown' => 'littlerock',
+    'Aurora' => 'springfield',
+    'Bartlesville' => 'bartlesville',
+    'Bella Vista' => 'bentonville',
+    'Belton' => 'kansascity',
+    'Benton' => 'littlerock',
+    'Bentonville' => 'bentonville',
+    'Berryville' => 'bentonville',
+    'Branson' => 'springfield',
+    'Branson West' => 'springfield',
+    'Broken Arrow' => 'tulsa',
+    'Broken Bow' => 'fortsmith',
+    'Bryant' => 'littlerock',
+    'Cabot' => 'littlerock',
+    'Caney' => 'bartlesville',
+    'Carthage' => 'joplin',
+    'Cassville' => 'bentonville',
+    'Catoosa' => 'tulsa',
+    'Centerton' => 'bentonville',
+    'Chickasha' => 'lawton',
+    'Choctaw' => 'oklahomacity',
+    'Clarksville' => 'fortsmith',
+    'Conway' => 'littlerock',
+    'Coweta' => 'tulsa',
+    'De Queen' => 'fortsmith',
+    'Del City' => 'oklahomacity',
+    'Dewey' => 'bartlesville',
+    'Dierks' => 'littlerock',
+    'Duncan' => 'lawton',
+    'Edmond' => 'oklahomacity',
+    'Elgin' => 'lawton',
+    'Elkins' => 'fayetteville',
+    'Eufaula' => 'tulsa',
+    'Eureka Springs' => 'bentonville',
+    'Farmington' => 'fayetteville',
+    'Fayetteville' => 'fayetteville',
+    'Flippin' => 'yellville',
+    'Fort Smith' => 'fortsmith',
+    'Gardner' => 'kansascity',
+    'Gentry' => 'siloamsprings',
+    'Gladstone' => 'kansascity',
+    'Glenwood' => 'littlerock',
+    'Gravette' => 'bentonville',
+    'Greenwood' => 'fortsmith',
+    'Grove' => 'siloamsprings',
+    'Harrison' => 'yellville',
+    'Hollister' => 'springfield',
+    'Hot Springs' => 'littlerock',
+    'Hot Springs Village' => 'littlerock',
+    'Huntsville' => 'springdale',
+    'Idabel' => 'fortsmith',
+    'Independence' => 'kansascity',
+    'Jacksonville' => 'littlerock',
+    'Jay' => 'siloamsprings',
+    'Jenks' => 'tulsa',
+    'Jonesboro' => 'littlerock',
+    'Joplin' => 'joplin',
+    'Kansas' => 'siloamsprings',
+    'Kansas City' => 'kansascity',
+    'Kimberling City' => 'springfield',
+    'Lamar' => 'joplin',
+    'Lawton' => 'lawton',
+    'Lead Hill' => 'yellville',
+    'Leawood' => 'kansascity',
+    'Lebanon' => 'springfield',
+    'Lee\'s Summit' => 'kansascity',
+    'Lenexa' => 'kansascity',
+    'Lincoln' => 'fayetteville',
+    'Little Rock' => 'littlerock',
+    'Lockwood' => 'joplin',
+    'Lonoke' => 'littlerock',
+    'Lowell' => 'bentonville',
+    'Manila' => 'littlerock',
+    'Marshfield' => 'springfield',
+    'McAlester' => 'tulsa',
+    'Mena' => 'fortsmith',
+    'Miami' => 'joplin',
+    'Midwest City' => 'oklahomacity',
+    'Mission' => 'kansascity',
+    'Monett' => 'joplin',
+    'Monette' => 'littlerock',
+    'Moore' => 'oklahomacity',
+    'Morrilton' => 'littlerock',
+    'Mount Ida' => 'littlerock',
+    'Mountain Grove' => 'springfield',
+    'Mountain Home' => 'yellville',
+    'Muskogee' => 'tulsa',
+    'Nashville' => 'littlerock',
+    'Neosho' => 'joplin',
+    'Nevada' => 'joplin',
+    'Nixa' => 'springfield',
+    'Noel' => 'bentonville',
+    'Norman' => 'oklahomacity',
+    'North Little Rock' => 'littlerock',
+    'Nowata' => 'bartlesville',
+    'Oklahoma City' => 'oklahomacity',
+    'Okmulgee' => 'tulsa',
+    'Olathe' => 'kansascity',
+    'Ottawa' => 'kansascity',
+    'Overland Park' => 'kansascity',
+    'Owasso' => 'tulsa',
+    'Paris' => 'fortsmith',
+    'Pea Ridge' => 'bentonville',
+    'Pittsburg' => 'joplin',
+    'Poteau' => 'fortsmith',
+    'Prairie Grove' => 'fayetteville',
+    'Pryor' => 'tulsa',
+    'Rogers' => 'bentonville',
+    'Russellville' => 'fortsmith',
+    'Sallisaw' => 'fortsmith',
+    'Sand Springs' => 'tulsa',
+    'Sapulpa' => 'tulsa',
+    'Shawnee' => 'oklahomacity',
+    'Shell Knob' => 'bentonville',
+    'Sherwood' => 'littlerock',
+    'Siloam Springs' => 'siloamsprings',
+    'Springdale' => 'springdale',
+    'Springfield' => 'springfield',
+    'Stillwater' => 'oklahomacity',
+    'Stilwell' => 'siloamsprings',
+    'Tahlequah' => 'tulsa',
+    'Tulsa' => 'tulsa',
+    'Van Buren' => 'fortsmith',
+    'Vinita' => 'bartlesville',
+    'Wagoner' => 'tulsa',
+    'Waldron' => 'fortsmith',
+    'Walters' => 'lawton',
+    'Webb City' => 'joplin',
+    'West Fork' => 'fayetteville',
+    'West Plains' => 'springfield',
+    'Westville' => 'siloamsprings',
+    'Yellville' => 'yellville',
+    'Yukon' => 'oklahomacity',
+  ];
+
+  /**
    * Getting city from location Term.
    */
   public function getCityFromLocationTerm($locationTerm) {
@@ -148,10 +291,21 @@ class LegacyLocationInformation {
       // Return the region id.
       return $this->legacyLocationInformation[$formattedCityName]['regionId'];
     }
-    // If we don't have a record return FALSE.
+    // If we don't have a region id for this city.
     else {
-      return FALSE;
+      // If we have this city's regional capital city with a region id.
+      if (
+        isset($this->regionalCapitalCity[$cityName])
+        && isset($this->legacyLocationInformation[$this->regionalCapitalCity[$cityName]]['regionId'])
+      ) {
+        // Return the regional capital's region id.
+        return $this->legacyLocationInformation[$this->regionalCapitalCity[$cityName]]['regionId'];
+      }
+
     }
+
+    // Return false if we didn't find a region id.
+    return FALSE;
 
   }
 
