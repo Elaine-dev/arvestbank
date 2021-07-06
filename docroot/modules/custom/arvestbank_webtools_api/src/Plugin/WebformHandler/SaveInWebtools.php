@@ -332,6 +332,34 @@ class SaveInWebtools extends WebformHandlerBase {
 
     }
 
+    // If branch location is available.
+    if (
+      isset($submittedValues['branch_location'])
+      && $submittedValues['branch_location']
+    ) {
+
+      // Define properties of our location.
+      $locationTermProperties = [
+        'name' => $submittedValues['branch_location'],
+        'vid'  => 'branch_location',
+      ];
+
+      // Load location term by name.
+      $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties($locationTermProperties);
+      $term = reset($term);
+
+      // Get legacy region id from location term.
+      $legacyRegionIdFieldValue = $term->get('field_legacy_region_id')->getValue();
+
+      // If we have a legacy region id to use.
+      if (isset($legacyRegionIdFieldValue[0]['value'])) {
+        $requestData['meta']['meta'][] = [
+          'name'  => 'regionid',
+          'value' => $legacyRegionIdFieldValue[0]['value'],
+        ];
+      }
+    }
+
     $xmlConverterObject = new ArrayToXml($requestData, 'request');
     return $xmlConverterObject->dropXmlDeclaration()->toXml();
 
