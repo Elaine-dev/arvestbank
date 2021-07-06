@@ -1,0 +1,7 @@
+careers_associate_modal.modal:
+  path: 'careers/apply/associate/modal'
+  defaults:
+    _title: 'Associate Modal'
+    _controller: '\Drupal\arvestbank_careers\Controller\CareersAssociateModalController::modal'
+  requirements:
+    _permission: 'access content'
