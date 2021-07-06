@@ -807,3 +807,30 @@ li.coh-menu-list-item.coh-ce-a69b2abe.js-coh-menu-item:nth-child(6), li.coh-menu
 .campaign-icon-wrapper {
   display: flex;
 }
+
+.webform-submission-sign-up-for-arvest-flex-rewards--form #edit-birth-date {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.webform-submission-sign-up-for-arvest-flex-rewards--form #edit-birth-date > div {
+  width: 125px;
+}
+
+@media (min-width: 600px) {
+  .webform-submission-sign-up-for-arvest-flex-rewards--form #edit-birth-date:before, .webform-submission-sign-up-for-arvest-flex-rewards--form #edit-birth-date:after {
+    content: '/';
+    position: absolute;
+  }
+  .webform-submission-sign-up-for-arvest-flex-rewards--form #edit-birth-date:before {
+    left: 30%;
+  }
+  .webform-submission-sign-up-for-arvest-flex-rewards--form #edit-birth-date:after {
+    right: 30%;
+  }
+}
+
+.webform-submission-sign-up-for-arvest-flex-rewards--form div.webform-name > div.webform-flexbox {
+  margin: 0;
+}
