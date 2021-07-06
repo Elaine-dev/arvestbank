@@ -8,9 +8,9 @@
     dependencies: {  }
     id: pack_base_styles
     label: 'Base Styles'
-    description: 'All base styles. Updated: Aaron Parkening 6/23/2021'
+    description: 'All base styles. Updated: Jacob Crane 07/02/2021'
     excluded_entity_types: '[]'
-    settings: '{"d2cb064e-0739-497a-950c-83468d3b7627":{"type":"cohesion_base_styles","items":{"d2cb064e-0739-497a-950c-83468d3b7627":{"type":"cohesion_base_styles"}},"checked":true},"19d03b88-1ece-4d82-8d0b-3b8a14ecd1af":{"type":"cohesion_base_styles","items":{"19d03b88-1ece-4d82-8d0b-3b8a14ecd1af":{"type":"cohesion_base_styles"}},"checked":true},"f14d5c0e-0d07-4365-b26b-9eae12c7f5c7":{"type":"cohesion_base_styles","items":{"f14d5c0e-0d07-4365-b26b-9eae12c7f5c7":{"type":"cohesion_base_styles"}},"checked":true},"ddda1226-45dc-46e4-ad27-314125a530ee":{"type":"cohesion_base_styles","items":{"ddda1226-45dc-46e4-ad27-314125a530ee":{"type":"cohesion_base_styles"}},"checked":true},"27970863-991e-4f7e-8d3b-831eadec24d7":{"type":"cohesion_base_styles","items":{"27970863-991e-4f7e-8d3b-831eadec24d7":{"type":"cohesion_base_styles"}},"checked":true},"5eb4db5c-38e3-4839-8fab-f27c40d68d20":{"type":"cohesion_base_styles","items":{"5eb4db5c-38e3-4839-8fab-f27c40d68d20":{"type":"cohesion_base_styles"}},"checked":true},"d5d047c7-041b-4cf5-9969-27c0352e7695":{"type":"cohesion_base_styles","items":{"d5d047c7-041b-4cf5-9969-27c0352e7695":{"type":"cohesion_base_styles"}},"checked":true},"c7bae38c-7179-4775-b09a-59146f7c31c8":{"type":"cohesion_base_styles","items":{"c7bae38c-7179-4775-b09a-59146f7c31c8":{"type":"cohesion_base_styles"}},"checked":true},"ead1f350-23c1-42b2-a992-973d64dcc716":{"type":"cohesion_base_styles","items":{"ead1f350-23c1-42b2-a992-973d64dcc716":{"type":"cohesion_base_styles"}},"checked":true},"4de80b64-f6cf-4522-bc4f-e6c1fb3a4f00":{"type":"cohesion_base_styles","items":{"4de80b64-f6cf-4522-bc4f-e6c1fb3a4f00":{"type":"cohesion_base_styles"}},"checked":true},"51acd745-e938-4e25-9851-09f871d117cd":{"type":"cohesion_base_styles","items":{"51acd745-e938-4e25-9851-09f871d117cd":{"type":"cohesion_base_styles"}},"checked":true},"4c4c4371-45f8-4667-a997-2bf35a27e012":{"type":"cohesion_base_styles","items":{"4c4c4371-45f8-4667-a997-2bf35a27e012":{"type":"cohesion_base_styles"}},"checked":true},"c27f39ed-c630-4ab1-81e7-f85fcf7376f5":{"type":"cohesion_base_styles","items":{"c27f39ed-c630-4ab1-81e7-f85fcf7376f5":{"type":"cohesion_base_styles"}},"checked":true},"2c7f0224-9ff1-4e3d-a305-fcd3e5ddf93b":{"type":"cohesion_base_styles","items":{"2c7f0224-9ff1-4e3d-a305-fcd3e5ddf93b":{"type":"cohesion_base_styles"}},"checked":true},"0a0352fa-22b9-4046-884b-0cc4f6534af8":{"type":"cohesion_base_styles","items":{"0a0352fa-22b9-4046-884b-0cc4f6534af8":{"type":"cohesion_base_styles"}},"checked":true},"d092f145-7169-4344-ba4f-5679bae1bbff":{"type":"cohesion_base_styles","items":{"d092f145-7169-4344-ba4f-5679bae1bbff":{"type":"cohesion_base_styles"}},"checked":true},"48fe2fb9-0c45-4dbf-b69a-4bc225dc4ea1":{"type":"cohesion_base_styles","items":{"48fe2fb9-0c45-4dbf-b69a-4bc225dc4ea1":{"type":"cohesion_base_styles"}},"checked":true},"8a4509b5-4d15-4ce2-b951-6ae76078529e":{"type":"cohesion_base_styles","items":{"8a4509b5-4d15-4ce2-b951-6ae76078529e":{"type":"cohesion_base_styles"}},"checked":true},"24052951-c552-4032-8623-cef6734336aa":{"type":"cohesion_base_styles","items":{"24052951-c552-4032-8623-cef6734336aa":{"type":"cohesion_base_styles"}},"checked":true},"b17d13ff-2382-49f0-a5b3-614fb51d1b7f":{"type":"cohesion_base_styles","items":{"b17d13ff-2382-49f0-a5b3-614fb51d1b7f":{"type":"cohesion_base_styles"}},"checked":true},"78c01088-3997-4b56-9352-a577e75135a8":{"type":"cohesion_base_styles","items":{"78c01088-3997-4b56-9352-a577e75135a8":{"type":"cohesion_base_styles"}},"checked":true},"ce8f7766-4ce1-483b-ac33-6bc26b7241c7":{"type":"cohesion_base_styles","items":{"ce8f7766-4ce1-483b-ac33-6bc26b7241c7":{"type":"cohesion_base_styles"}},"checked":true}}'
+    settings: '{"bbb07aa6-455e-417f-8804-10e2450a4083":{"type":"cohesion_base_styles","items":{"bbb07aa6-455e-417f-8804-10e2450a4083":{"type":"cohesion_base_styles"}},"checked":true},"50dbbc2c-aa01-4ce4-ad17-501cb4a6786f":{"type":"cohesion_base_styles","items":{"50dbbc2c-aa01-4ce4-ad17-501cb4a6786f":{"type":"cohesion_base_styles"}},"checked":true},"f14d5c0e-0d07-4365-b26b-9eae12c7f5c7":{"type":"cohesion_base_styles","items":{"f14d5c0e-0d07-4365-b26b-9eae12c7f5c7":{"type":"cohesion_base_styles"}},"checked":true},"698be47c-c968-46f7-b74b-86e4a48af43f":{"type":"cohesion_base_styles","items":{"698be47c-c968-46f7-b74b-86e4a48af43f":{"type":"cohesion_base_styles"}},"checked":true},"5afb9a93-f2a5-4d07-899e-d3bbb2fc1601":{"type":"cohesion_base_styles","items":{"5afb9a93-f2a5-4d07-899e-d3bbb2fc1601":{"type":"cohesion_base_styles"}},"checked":true},"ad48668f-9a1e-4b2a-a064-96c3ca5caeda":{"type":"cohesion_base_styles","items":{"ad48668f-9a1e-4b2a-a064-96c3ca5caeda":{"type":"cohesion_base_styles"}},"checked":true},"2f1638e3-9341-4e38-9315-f62f2a3f8298":{"type":"cohesion_base_styles","items":{"2f1638e3-9341-4e38-9315-f62f2a3f8298":{"type":"cohesion_base_styles"}},"checked":true},"a6463683-b4bf-45dc-9b9e-329bd77f525f":{"type":"cohesion_base_styles","items":{"a6463683-b4bf-45dc-9b9e-329bd77f525f":{"type":"cohesion_base_styles"}},"checked":true},"cad7fb1f-12d3-4c77-9142-fc787eced55a":{"type":"cohesion_base_styles","items":{"cad7fb1f-12d3-4c77-9142-fc787eced55a":{"type":"cohesion_base_styles"}},"checked":true},"931ec24f-7745-4852-8593-1d7df3566513":{"type":"cohesion_base_styles","items":{"931ec24f-7745-4852-8593-1d7df3566513":{"type":"cohesion_base_styles"}},"checked":true},"2d379ab9-a0bf-48ad-beee-ddee2d095655":{"type":"cohesion_base_styles","items":{"2d379ab9-a0bf-48ad-beee-ddee2d095655":{"type":"cohesion_base_styles"}},"checked":true},"e742d9a1-e4e8-4212-9e1f-629631c018b8":{"type":"cohesion_base_styles","items":{"e742d9a1-e4e8-4212-9e1f-629631c018b8":{"type":"cohesion_base_styles"}},"checked":true},"262f14e8-a993-4082-a60f-814eea52d6bc":{"type":"cohesion_base_styles","items":{"262f14e8-a993-4082-a60f-814eea52d6bc":{"type":"cohesion_base_styles"}},"checked":true},"2c7f0224-9ff1-4e3d-a305-fcd3e5ddf93b":{"type":"cohesion_base_styles","items":{"2c7f0224-9ff1-4e3d-a305-fcd3e5ddf93b":{"type":"cohesion_base_styles"}},"checked":true},"0a0352fa-22b9-4046-884b-0cc4f6534af8":{"type":"cohesion_base_styles","items":{"0a0352fa-22b9-4046-884b-0cc4f6534af8":{"type":"cohesion_base_styles"}},"checked":true},"c4223356-14fb-415c-81f4-85a2c8ce91e3":{"type":"cohesion_base_styles","items":{"c4223356-14fb-415c-81f4-85a2c8ce91e3":{"type":"cohesion_base_styles"}},"checked":true},"41df6659-9448-40c8-84f4-41e94196795f":{"type":"cohesion_base_styles","items":{"41df6659-9448-40c8-84f4-41e94196795f":{"type":"cohesion_base_styles"}},"checked":true},"8a4509b5-4d15-4ce2-b951-6ae76078529e":{"type":"cohesion_base_styles","items":{"8a4509b5-4d15-4ce2-b951-6ae76078529e":{"type":"cohesion_base_styles"}},"checked":true},"147b3cd3-327b-476f-82d5-5591cc0dfaa1":{"type":"cohesion_base_styles","items":{"147b3cd3-327b-476f-82d5-5591cc0dfaa1":{"type":"cohesion_base_styles"}},"checked":true},"b17d13ff-2382-49f0-a5b3-614fb51d1b7f":{"type":"cohesion_base_styles","items":{"b17d13ff-2382-49f0-a5b3-614fb51d1b7f":{"type":"cohesion_base_styles"}},"checked":true},"78c01088-3997-4b56-9352-a577e75135a8":{"type":"cohesion_base_styles","items":{"78c01088-3997-4b56-9352-a577e75135a8":{"type":"cohesion_base_styles"}},"checked":true},"ce8f7766-4ce1-483b-ac33-6bc26b7241c7":{"type":"cohesion_base_styles","items":{"ce8f7766-4ce1-483b-ac33-6bc26b7241c7":{"type":"cohesion_base_styles"}},"checked":true}}'
 -
   type: cohesion_base_styles
   export:
@@ -126,7 +126,7 @@
 -
   type: cohesion_base_styles
   export:
-    uuid: d2cb064e-0739-497a-950c-83468d3b7627
+    uuid: bbb07aa6-455e-417f-8804-10e2450a4083
     langcode: en
     status: true
     dependencies: {  }
@@ -142,7 +142,7 @@
 -
   type: cohesion_base_styles
   export:
-    uuid: 19d03b88-1ece-4d82-8d0b-3b8a14ecd1af
+    uuid: 50dbbc2c-aa01-4ce4-ad17-501cb4a6786f
     langcode: en
     status: true
     dependencies: {  }
@@ -158,7 +158,7 @@
 -
   type: cohesion_base_styles
   export:
-    uuid: ddda1226-45dc-46e4-ad27-314125a530ee
+    uuid: 698be47c-c968-46f7-b74b-86e4a48af43f
     langcode: en
     status: true
     dependencies: {  }
@@ -174,7 +174,7 @@
 -
   type: cohesion_base_styles
   export:
-    uuid: 27970863-991e-4f7e-8d3b-831eadec24d7
+    uuid: 5afb9a93-f2a5-4d07-899e-d3bbb2fc1601
     langcode: en
     status: false
     dependencies: {  }
@@ -182,7 +182,7 @@
     label: 'Description list'
     json_values: '{}'
     json_mapper: '{}'
-    last_entity_update: entityupdate_0029
+    last_entity_update: entityupdate_0031
     locked: false
     modified: false
     selectable: false
@@ -190,7 +190,7 @@
 -
   type: cohesion_base_styles
   export:
-    uuid: d5d047c7-041b-4cf5-9969-27c0352e7695
+    uuid: 2f1638e3-9341-4e38-9315-f62f2a3f8298
     langcode: en
     status: true
     dependencies: {  }
@@ -206,7 +206,7 @@
 -
   type: cohesion_base_styles
   export:
-    uuid: c7bae38c-7179-4775-b09a-59146f7c31c8
+    uuid: a6463683-b4bf-45dc-9b9e-329bd77f525f
     langcode: en
     status: true
     dependencies: {  }
@@ -222,7 +222,7 @@
 -
   type: cohesion_base_styles
   export:
-    uuid: ead1f350-23c1-42b2-a992-973d64dcc716
+    uuid: cad7fb1f-12d3-4c77-9142-fc787eced55a
     langcode: en
     status: true
     dependencies: {  }
@@ -238,7 +238,7 @@
 -
   type: cohesion_base_styles
   export:
-    uuid: 4de80b64-f6cf-4522-bc4f-e6c1fb3a4f00
+    uuid: 931ec24f-7745-4852-8593-1d7df3566513
     langcode: en
     status: true
     dependencies: {  }
@@ -254,7 +254,7 @@
 -
   type: cohesion_base_styles
   export:
-    uuid: 51acd745-e938-4e25-9851-09f871d117cd
+    uuid: 2d379ab9-a0bf-48ad-beee-ddee2d095655
     langcode: en
     status: true
     dependencies: {  }
@@ -270,7 +270,7 @@
 -
   type: cohesion_base_styles
   export:
-    uuid: 4c4c4371-45f8-4667-a997-2bf35a27e012
+    uuid: e742d9a1-e4e8-4212-9e1f-629631c018b8
     langcode: en
     status: true
     dependencies: {  }
@@ -286,7 +286,7 @@
 -
   type: cohesion_base_styles
   export:
-    uuid: 5eb4db5c-38e3-4839-8fab-f27c40d68d20
+    uuid: ad48668f-9a1e-4b2a-a064-96c3ca5caeda
     langcode: en
     status: true
     dependencies: {  }
@@ -302,7 +302,7 @@
 -
   type: cohesion_base_styles
   export:
-    uuid: c27f39ed-c630-4ab1-81e7-f85fcf7376f5
+    uuid: 262f14e8-a993-4082-a60f-814eea52d6bc
     langcode: en
     status: true
     dependencies: {  }
@@ -318,14 +318,14 @@
 -
   type: cohesion_base_styles
   export:
-    uuid: d092f145-7169-4344-ba4f-5679bae1bbff
+    uuid: c4223356-14fb-415c-81f4-85a2c8ce91e3
     langcode: en
     status: true
     dependencies: {  }
     id: ordered_list
     label: 'Ordered list'
-    json_values: '{"preview":{"text":"<ol>\n\t<li>List item 1<\/li>\n\t<li>List item 2<\/li>\n\t<li>List item 3<\/li>\n<\/ol>\n","textFormat":"cohesion"},"sBackgroundColour":"#FFFFFF","styles":{"settings":{"element":"ol","class":"","combinator":"","pseudo":""},"styles":{"xl":{"color":{"value":{}},"ordered-list":{"list-style-position":{"value":"outside"}},"margin":{"margin-left":{"value":"$med"}}}},"ce6977c1-2199-4f38-b8db-bc999b8f84f7":{"settings":{"element":"li::marker","class":"","combinator":"","pseudo":""},"styles":{"xl":{"color":{"value":{"link":false,"value":{"hex":"#e60000","rgba":"rgba(230, 0, 0, 1)"},"name":"#e60000 Primary Red","uid":"red-2","class":".coh-color-red-2","variable":"$coh-color-red-2","inuse":true,"wysiwyg":false}}}}},"5a7f2f4f-e374-4015-9273-8e4e90da0ed8":{"settings":{"element":"li","class":"","combinator":"","pseudo":""},"styles":{"xl":{"line-height":{"value":"1.5"},"margin":{"margin-top":{"value":"$sm"}}}}}},"variableFields":[]}'
-    json_mapper: '{"styles":{"title":"Ordered list","selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":false},{"name":"font-weight","active":false},{"name":"color","active":true}]}]},{"formKey":"list-style","children":[{"formKey":"ordered-list","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"list-style-type","active":false},{"name":"list-style-image","active":true},{"name":"list-style-position","active":true}]}]},{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":false},{"name":"margin-bottom","active":false},{"name":"margin-left","active":true},{"name":"margin-right","active":false},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]}]}],"items":[{"title":"li::marker","type":"container","items":[],"form":null,"selectorType":"child","model":"li::marker","uuid":"ce6977c1-2199-4f38-b8db-bc999b8f84f7","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]}]}]},{"title":"li","type":"container","items":[],"form":null,"selectorType":"child","model":"li","uuid":"5a7f2f4f-e374-4015-9273-8e4e90da0ed8","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"font","children":[{"formKey":"font-sizing-and-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-size","active":false},{"name":"line-height","active":true},{"name":"text-align","active":false},{"name":"letter-spacing","active":false},{"name":"word-spacing","active":false},{"name":"text-indent","active":false}]}]},{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":true},{"name":"margin-bottom","active":false},{"name":"margin-left","active":false},{"name":"margin-right","active":false},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]}]}]}],"form":null}}'
+    json_values: '{"preview":{"text":"<ol>\n\t<li>List item 1<\/li>\n\t<li>List item 2<\/li>\n\t<li>List item 3<\/li>\n<\/ol>\n","textFormat":"cohesion"},"sBackgroundColour":"#FFFFFF","styles":{"settings":{"element":"ol","class":"","combinator":"","pseudo":""},"styles":{"xl":{"color":{"value":{}},"ordered-list":{"list-style-position":{"value":"outside"}},"margin":{"margin-left":{"value":"$med"},"margin-bottom":{"value":"$sm"}}}},"ce6977c1-2199-4f38-b8db-bc999b8f84f7":{"settings":{"element":"li::marker","class":"","combinator":"","pseudo":""},"styles":{"xl":{"color":{"value":{"link":false,"value":{"hex":"#e60000","rgba":"rgba(230, 0, 0, 1)"},"name":"#e60000 Primary Red","uid":"red-2","class":".coh-color-red-2","variable":"$coh-color-red-2","inuse":true,"wysiwyg":false}}}}},"5a7f2f4f-e374-4015-9273-8e4e90da0ed8":{"settings":{"element":"li","class":"","combinator":"","pseudo":""},"styles":{"xl":{"line-height":{"value":"1.5"},"margin":{"margin-top":{"value":"$sm"}}}}}},"variableFields":[]}'
+    json_mapper: '{"styles":{"title":"Ordered list","selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":false},{"name":"font-weight","active":false},{"name":"color","active":true}]}]},{"formKey":"list-style","children":[{"formKey":"ordered-list","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"list-style-type","active":false},{"name":"list-style-image","active":true},{"name":"list-style-position","active":true}]}]},{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":false},{"name":"margin-bottom","active":true},{"name":"margin-left","active":true},{"name":"margin-right","active":false},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]}]}],"items":[{"title":"li::marker","type":"container","items":[],"form":null,"selectorType":"child","model":"li::marker","uuid":"ce6977c1-2199-4f38-b8db-bc999b8f84f7","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]}]}]},{"title":"li","type":"container","items":[],"form":null,"selectorType":"child","model":"li","uuid":"5a7f2f4f-e374-4015-9273-8e4e90da0ed8","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"font","children":[{"formKey":"font-sizing-and-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-size","active":false},{"name":"line-height","active":true},{"name":"text-align","active":false},{"name":"letter-spacing","active":false},{"name":"word-spacing","active":false},{"name":"text-indent","active":false}]}]},{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":true},{"name":"margin-bottom","active":false},{"name":"margin-left","active":false},{"name":"margin-right","active":false},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]}]}]}],"form":null}}'
     last_entity_update: entityupdate_0031
     locked: false
     modified: true
@@ -334,7 +334,7 @@
 -
   type: cohesion_base_styles
   export:
-    uuid: 48fe2fb9-0c45-4dbf-b69a-4bc225dc4ea1
+    uuid: 41df6659-9448-40c8-84f4-41e94196795f
     langcode: en
     status: true
     dependencies: {  }
@@ -350,13 +350,13 @@
 -
   type: cohesion_base_styles
   export:
-    uuid: 24052951-c552-4032-8623-cef6734336aa
+    uuid: 147b3cd3-327b-476f-82d5-5591cc0dfaa1
     langcode: en
     status: true
     dependencies: {  }
     id: unordered_list
     label: 'Unordered list'
-    json_values: '{"preview":{"text":"<div class=\"campaign-page\">\n<div class=\"coh-wysiwyg\">\n<ul>\n\t<li>No monthly fee<\/li>\n\t<li>Free <a href=\"\/personal\/bank\/checking\/debit-cards\/specialty\">debit card design<\/a><\/li>\n\t<li>Free <a href=\"\/personal\/bank\/online\/blueiq\">Online Banking with BlueIQ\u2122<\/a><\/li>\n\t<li><a href=\"\/personal\/bank\/online\/mobile-banking\/app\">Arvest Go<\/a> mobile banking app<\/li>\n\t<li>$400 <a href=\"personal\/bank\/checking\/overdraft-coverage-options\">overdraft coverage<\/a> (subject to approval)<\/li>\n\t<li><a href=\"\/bank\/online\/eStatements\">e.Statements<\/a> with images required<\/li>\n\t<li>Free notary services<\/li>\n\t<li>Free checks for customers age 62 and older*<\/li>\n\t<li>Unlimited check writing<\/li>\n<\/ul>\n\n<p>*Shipping and handling charges still apply with the free checks offered to customers age 62 and older.<\/p>\n<\/div>\n<\/div>\n","textFormat":"cohesion"},"styles":{"settings":{"element":".site-content .coh-main-view-content-column ul, .coh-style-page-node-type-stage-page .field--name-body ul, .campaign-page .coh-wysiwyg ul","class":"","combinator":"","pseudo":""},"styles":{"xl":{"unordered-list":{"list-style-type":{"value":"none"}},"margin":{"margin-bottom":{"value":"10"}},"padding":{"padding-left":{"value":"$lg"}}}},"4c4787f5-310f-44e9-80c2-12cee399290c":{"settings":{"element":"li","class":"","combinator":"","pseudo":""},"styles":{"xl":{"margin":{"margin-top":{"value":"2"}},"unordered-list":{"list-style-position":{"value":"outside"}},"custom-css":[{"customCssProperty":{"value":"text-indent"},"customCss":{"value":"-5px"}}]}}},"595d7835-99d7-46b9-ba4b-dfb0fea7fa44":{"settings":{"element":"li","class":"","combinator":"","pseudo":""},"styles":{"xl":{"margin":{"margin-top":{"value":"0"}}}}},"3d09461c-572d-4a78-80c3-28f70ab8afc6":{"settings":{"element":"","class":".dx8-tabs","combinator":"","pseudo":""},"styles":{}},"d306ca2b-be8c-415b-93a1-36d448babfca":{"settings":{"element":"","class":"","combinator":"","pseudo":":before"},"styles":{"xl":{"custom-css":[{"customCssProperty":{"value":"content"},"customCss":{"value":"\"\\2022\";"}}],"color":{"value":{"link":false,"value":{"hex":"#e60000","rgba":"rgba(230, 0, 0, 1)"},"name":"#e60000 Primary Red","uid":"red-2","class":".coh-color-red-2","variable":"$coh-color-red-2","inuse":true,"wysiwyg":false}},"margin":{"margin-left":{"value":"-10"}},"padding":{"padding-left":{"value":""},"padding-right":{"value":"5"}}}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+    json_values: '{"preview":{"text":"<div class=\"campaign-page\">\n<div class=\"coh-wysiwyg\">\n<ul>\n\t<li>No monthly fee<\/li>\n\t<li>Free <a href=\"\/personal\/bank\/checking\/debit-cards\/specialty\">debit card design<\/a><\/li>\n\t<li>Free <a href=\"\/personal\/bank\/online\/blueiq\">Online Banking with BlueIQ\u2122<\/a><\/li>\n\t<li><a href=\"\/personal\/bank\/online\/mobile-banking\/app\">Arvest Go<\/a> mobile banking app<\/li>\n\t<li>$400 <a href=\"personal\/bank\/checking\/overdraft-coverage-options\">overdraft coverage<\/a> (subject to approval)<\/li>\n\t<li><a href=\"\/bank\/online\/eStatements\">e.Statements<\/a> with images required<\/li>\n\t<li>Free notary services<\/li>\n\t<li>Free checks for customers age 62 and older*<\/li>\n\t<li>Unlimited check writing<\/li>\n<\/ul>\n\n<p>*Shipping and handling charges still apply with the free checks offered to customers age 62 and older.<\/p>\n<\/div>\n<\/div>\n","textFormat":"cohesion"},"styles":{"settings":{"element":".site-content .coh-main-view-content-column ul, .coh-style-page-node-type-stage-page .field--name-body ul, .campaign-page .coh-wysiwyg ul","class":"","combinator":"","pseudo":""},"styles":{"xl":{"unordered-list":{"list-style-type":{"value":"none"}},"margin":{"margin-bottom":{"value":"$sm"}},"padding":{"padding-left":{"value":"$lg"}}}},"4c4787f5-310f-44e9-80c2-12cee399290c":{"settings":{"element":"li","class":"","combinator":"","pseudo":""},"styles":{"xl":{"margin":{"margin-top":{"value":"2"}},"unordered-list":{"list-style-position":{"value":"outside"}},"custom-css":[{"customCssProperty":{"value":"text-indent"},"customCss":{"value":"-5px"}}]}}},"595d7835-99d7-46b9-ba4b-dfb0fea7fa44":{"settings":{"element":"li","class":"","combinator":"","pseudo":""},"styles":{"xl":{"margin":{"margin-top":{"value":"0"}}}}},"3d09461c-572d-4a78-80c3-28f70ab8afc6":{"settings":{"element":"","class":".dx8-tabs","combinator":"","pseudo":""},"styles":{}},"d306ca2b-be8c-415b-93a1-36d448babfca":{"settings":{"element":"","class":"","combinator":"","pseudo":":before"},"styles":{"xl":{"custom-css":[{"customCssProperty":{"value":"content"},"customCss":{"value":"\"\\2022\";"}}],"color":{"value":{"link":false,"value":{"hex":"#e60000","rgba":"rgba(230, 0, 0, 1)"},"name":"#e60000 Primary Red","uid":"red-2","class":".coh-color-red-2","variable":"$coh-color-red-2","inuse":true,"wysiwyg":false}},"margin":{"margin-left":{"value":"-10"}},"padding":{"padding-left":{"value":""},"padding-right":{"value":"5"}}}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
     json_mapper: '{"styles":{"title":"Unordered list","selectorType":"topLevel","formDefinition":[{"formKey":"list-style","children":[{"formKey":"unordered-list","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"list-style-type","active":true},{"name":"list-style-image","active":true},{"name":"list-style-position","active":false}]}]},{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":false},{"name":"margin-bottom","active":true},{"name":"margin-left","active":false},{"name":"margin-right","active":false},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]},{"formKey":"padding","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"padding-equal","active":false},{"name":"padding-top","active":false},{"name":"padding-bottom","active":false},{"name":"padding-left","active":true},{"name":"padding-right","active":false},{"name":"padding-block-start","active":false},{"name":"padding-block-end","active":false},{"name":"padding-inline-start","active":false},{"name":"padding-inline-end","active":false}]}]}],"items":[{"title":"li","type":"container","items":[{"title":":before","type":"container","items":[],"form":null,"selectorType":"pseudo","uuid":"d306ca2b-be8c-415b-93a1-36d448babfca","allowedTypes":["child","pseudo"],"formDefinition":[{"formKey":"custom-css","children":[{"formKey":"css-property-and-css-value","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"custom-css","active":true},{"name":"customCssProperty","active":true},{"name":"customCss","active":true}]}]},{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":false},{"name":"font-weight","active":false},{"name":"color","active":true}]}]},{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":false},{"name":"margin-bottom","active":false},{"name":"margin-left","active":true},{"name":"margin-right","active":false},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]},{"formKey":"padding","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"padding-equal","active":false},{"name":"padding-top","active":false},{"name":"padding-bottom","active":false},{"name":"padding-left","active":true},{"name":"padding-right","active":true},{"name":"padding-block-start","active":false},{"name":"padding-block-end","active":false},{"name":"padding-inline-start","active":false},{"name":"padding-inline-end","active":false}]}]}]}],"form":null,"selectorType":"child","model":"li","uuid":"4c4787f5-310f-44e9-80c2-12cee399290c","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":true},{"name":"margin-bottom","active":false},{"name":"margin-left","active":false},{"name":"margin-right","active":false},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]}]},{"formKey":"list-style","children":[{"formKey":"unordered-list","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"list-style-type","active":true},{"name":"list-style-image","active":true},{"name":"list-style-position","active":true}]}]},{"formKey":"custom-css","children":[{"formKey":"css-property-and-css-value","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"custom-css","active":true},{"name":"customCssProperty","active":true},{"name":"customCss","active":true}]}]}]},{"title":".dx8-tabs","type":"container","items":[{"title":"li","type":"container","items":[],"form":null,"selectorType":"child","model":"li","uuid":"595d7835-99d7-46b9-ba4b-dfb0fea7fa44","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":true},{"name":"margin-bottom","active":false},{"name":"margin-left","active":false},{"name":"margin-right","active":false},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]}]}]}],"form":null,"selectorType":"modifier","model":".dx8-tabs","uuid":"3d09461c-572d-4a78-80c3-28f70ab8afc6","allowedTypes":["child","pseudo","modifier"],"formDefinition":[]}],"form":null}}'
     last_entity_update: entityupdate_0031
     locked: false
