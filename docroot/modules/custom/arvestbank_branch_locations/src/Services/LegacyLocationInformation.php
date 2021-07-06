@@ -131,6 +131,7 @@ class LegacyLocationInformation {
     'Benton' => 'littlerock',
     'Bentonville' => 'bentonville',
     'Berryville' => 'bentonville',
+    'Bixby' => 'tulsa',
     'Branson' => 'springfield',
     'Branson West' => 'springfield',
     'Broken Arrow' => 'tulsa',
