@@ -55,6 +55,8 @@ class SaveInWebtools extends WebformHandlerBase {
       'last_name_field_machine_name' => '',
       'full_name_field_machine_name' => '',
       'email_field_machine_name' => '',
+      'legacy_region_id_fields|city_field_machine_name' => '',
+      'legacy_region_id_fields|state_field_machine_name' => '',
     ];
   }
 
@@ -338,26 +340,85 @@ class SaveInWebtools extends WebformHandlerBase {
       && $submittedValues['branch_location']
     ) {
 
-      // Define properties of our location.
-      $locationTermProperties = [
-        'name' => $submittedValues['branch_location'],
-        'vid'  => 'branch_location',
-      ];
-
-      // Load location term by name.
-      $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties($locationTermProperties);
-      $term = reset($term);
-
-      // Get legacy region id from location term.
-      $legacyRegionIdFieldValue = $term->get('field_legacy_region_id')->getValue();
+      // Get legacy location information service.
+      $legacyLocationInformationService = \Drupal::service('arvestbank_branch_locations.legacy_location_information');
+      // Get region id from name (by loading the term with that name).
+      $regionId = $legacyLocationInformationService->getLegacyRegionIdFromBranchLocationName($submittedValues['branch_location']);
 
       // If we have a legacy region id to use.
-      if (isset($legacyRegionIdFieldValue[0]['value'])) {
+      if ($regionId) {
         $requestData['meta']['meta'][] = [
           'name'  => 'regionid',
-          'value' => $legacyRegionIdFieldValue[0]['value'],
+          'value' => $regionId,
         ];
       }
+
+    }
+    // If we don't have a branch location, but we have a city and state.
+    elseif (
+      // If we have a defined city field.
+      isset($this->configuration['legacy_region_id_fields|city_field_machine_name'])
+      && $this->configuration['legacy_region_id_fields|city_field_machine_name']
+      // We have a defined state field.
+      && isset($this->configuration['legacy_region_id_fields|state_field_machine_name'])
+      && $this->configuration['legacy_region_id_fields|state_field_machine_name']
+    ) {
+
+      // If the city field is nested.
+      if (strpos($this->configuration['legacy_region_id_fields|city_field_machine_name'], '.') !== FALSE) {
+        $cityFieldPieces = explode('.', $this->configuration['legacy_region_id_fields|city_field_machine_name']);
+        // If the configured nested field exists in form.
+        if (isset($submittedValues[$cityFieldPieces[0]][$cityFieldPieces[1]])) {
+          // Get entered city value.
+          $cityFieldValue = $submittedValues[$cityFieldPieces[0]][$cityFieldPieces[1]];
+        }
+      }
+      // If the city field isn't nested and the field exists in the form.
+      elseif (isset($submittedValues[$this->configuration['legacy_region_id_fields|city_field_machine_name']])) {
+        // Get entered city value.
+        $cityFieldValue = $submittedValues[$this->configuration['legacy_region_id_fields|city_field_machine_name']];
+      }
+
+      // If the state field is nested.
+      if (strpos($this->configuration['legacy_region_id_fields|state_field_machine_name'], '.') !== FALSE) {
+        $stateFieldPieces = explode('.', $this->configuration['legacy_region_id_fields|state_field_machine_name']);
+        // If the configured nested field exists in form.
+        if (isset($submittedValues[$stateFieldPieces[0]][$stateFieldPieces[1]])) {
+          // Get entered state value.
+          $stateFieldValue = $submittedValues[$stateFieldPieces[0]][$stateFieldPieces[1]];
+        }
+      }
+      // If the state field isn't nested and the field exists in the form.
+      elseif (isset($submittedValues[$this->configuration['legacy_region_id_fields|state_field_machine_name']])) {
+        // Get entered state value.
+        $stateFieldValue = $submittedValues[$this->configuration['legacy_region_id_fields|state_field_machine_name']];
+      }
+
+      // If we found non empty values for city and state.
+      if (
+        isset($stateFieldValue)
+        && $stateFieldValue
+        && isset($cityFieldValue)
+        && $cityFieldValue
+      ) {
+
+        // Get legacy location information service.
+        $legacyLocationInformationService = \Drupal::service('arvestbank_branch_locations.legacy_location_information');
+
+        // Get legacy region id from city.
+        $legacyRegionId = $legacyLocationInformationService->getLegacyRegionIdFromCityAndState($cityFieldValue, $stateFieldValue);
+
+        // If we got a legacy region id.
+        if ($legacyRegionId) {
+          // Add to meta info.
+          $requestData['meta']['meta'][] = [
+            'name'  => 'regionid',
+            'value' => $legacyRegionId,
+          ];
+        }
+
+      }
+
     }
 
     $xmlConverterObject = new ArrayToXml($requestData, 'request');
@@ -493,6 +554,29 @@ class SaveInWebtools extends WebformHandlerBase {
       '#default_value' => $this->configuration['email_field_machine_name'],
     ];
 
+    // Legacy Region Id Fields Container.
+    $form['legacy_region_id_fields'] = [
+      '#type' => 'fieldset',
+      '#title' => 'Alternate fields from which to determine the Legacy Region Id',
+      '#description' => 'A legacy region id is passed to the webtools endpoint for form submissions. By default this is based on a "branch_location" field, but can optionally be based on an entered city and state. If this is the case enter the field machine names for city and state here.',
+    ];
+
+    // City field.
+    $form['legacy_region_id_fields']['city_field_machine_name'] = [
+      '#type'          => 'textfield',
+      '#title'         => $this->t('City Field'),
+      '#description'   => $this->t('If this form contains fields for city and state, but not a branch location enter the city field name here.'),
+      '#default_value' => $this->configuration['legacy_region_id_fields|city_field_machine_name'],
+    ];
+
+    // State field.
+    $form['legacy_region_id_fields']['state_field_machine_name'] = [
+      '#type'          => 'textfield',
+      '#title'         => $this->t('State Field'),
+      '#description'   => $this->t('If this form contains fields for city and state, but not a branch location enter the state field name here.'),
+      '#default_value' => $this->configuration['legacy_region_id_fields|state_field_machine_name'],
+    ];
+
     return $form;
 
   }
@@ -509,8 +593,15 @@ class SaveInWebtools extends WebformHandlerBase {
     $customFields = $this->defaultConfiguration();
     // Loop over our custom fields.
     foreach ($customFields as $customFieldKey => $customFieldDefultValue) {
-      // Save our configuration.
-      $this->configuration[$customFieldKey] = $form_state->getValue($customFieldKey);
+      // If the config key contains a pipe character.
+      if (strpos($customFieldKey, '|') !== FALSE) {
+        // Save configuration.
+        $this->configuration[$customFieldKey] = $form_state->getValue(explode('|', $customFieldKey));
+      }
+      else {
+        // Save configuration.
+        $this->configuration[$customFieldKey] = $form_state->getValue($customFieldKey);
+      }
     }
 
   }

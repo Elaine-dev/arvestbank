@@ -10,6 +10,8 @@ class LegacyLocationInformation {
   /**
    * Copied from old site, contains "region ids", needed for form API.
    *
+   * Intended for initial content population only.
+   *
    * @var array
    */
   public $legacyLocationInformation = [
@@ -113,6 +115,8 @@ class LegacyLocationInformation {
 
   /**
    * These mappings were provided in Asana by old web team, orig source unknown.
+   *
+   * Intended for initial content population only.
    *
    * @var array
    */
@@ -255,6 +259,20 @@ class LegacyLocationInformation {
   ];
 
   /**
+   * Abbreviations for states Arvest opperations.
+   *
+   * This may be used during production.
+   *
+   * @var array
+   */
+  public $stateAbbreviations = [
+    'OKLAHOMA' => 'OK',
+    'ARKANSAS' => 'AR',
+    'MISSOURI' => 'MO',
+    'KANSAS' => 'KS',
+  ];
+
+  /**
    * Getting city from location Term.
    */
   public function getCityFromLocationTerm($locationTerm) {
@@ -274,6 +292,8 @@ class LegacyLocationInformation {
 
   /**
    * Gets a legacy region id from a city name.
+   *
+   * This is intended for initial content population only.
    *
    * @param string $cityName
    *   The city name as pulled from location nodes.
@@ -306,6 +326,94 @@ class LegacyLocationInformation {
 
     // Return false if we didn't find a region id.
     return FALSE;
+
+  }
+
+  /**
+   * Gets legacy region id from branch location term based on city and state.
+   *
+   * This function may be used in production.
+   *
+   * @param string $city
+   *   The city name.
+   * @param string $state
+   *   The state name.
+   *
+   * @return bool|string
+   *   Legacy region id or FALSE.
+   *
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+   */
+  public function getLegacyRegionIdFromCityAndState(string $city, string $state) {
+
+    // If we have an abbreviation for this state.
+    if (isset($this->stateAbbreviations[strtoupper($state)])) {
+      // Get State Abbreviation.
+      $stateAbbreviation = $this->stateAbbreviations[strtoupper($state)];
+    }
+    // If the passed state is already an abbreviation.
+    elseif (in_array($state, strtoupper($this->stateAbbreviations))) {
+      // Use the passed state abbreviation.
+      $stateAbbreviation = strtoupper($this->stateAbbreviations);
+    }
+    // If we don't have an abbreviation for the passed state.
+    else {
+      return FALSE;
+    }
+
+    // Get the theoretical branch location name for the given information.
+    $branchLocationName = $stateAbbreviation . ' - ' . ucwords(strtolower($city));
+
+    // Return the legacy region id from the branch location term (or FALSE).
+    return $this->getLegacyRegionIdFromBranchLocationName($branchLocationName);
+
+  }
+
+  /**
+   * Gets a legacy region id from a given branch location name.
+   *
+   * This function may be used in production.
+   *
+   * @param string $branchLocationName
+   *   A branch location name to find a value for ie "OK - Sperry".
+   *
+   * @return bool|string
+   *   The legacy region id or FALSE.
+   *
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+   */
+  public function getLegacyRegionIdFromBranchLocationName(string $branchLocationName) {
+
+    // Define properties of our location.
+    $locationTermProperties = [
+      'name' => $branchLocationName,
+      'vid'  => 'branch_location',
+    ];
+
+    // Load location term by name.
+    $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties($locationTermProperties);
+    $term = reset($term);
+
+    // If we didn't find a matching branch location term.
+    if (!$term) {
+      return FALSE;
+    }
+
+    // Get legacy region id from location term.
+    $legacyRegionIdFieldValue = $term->get('field_legacy_region_id')->getValue();
+
+    // Return legacy id or false.
+    if (
+      isset($legacyRegionIdFieldValue[0]['value'])
+      && $legacyRegionIdFieldValue[0]['value']
+    ) {
+      return $legacyRegionIdFieldValue[0]['value'];
+    }
+    else {
+      return FALSE;
+    }
 
   }
 
