@@ -115,9 +115,15 @@ class FinancingHandler extends WebformHandlerBase {
     // If we have results, add embedded views to an array.
     if (!empty($results)) {
       $results_ar = explode('|', $results);
+      $featured = FALSE;
       foreach ($results_ar as $option) {
         if (array_key_exists($option, $node_mapping)) {
-          $financing[] = views_embed_view('financing', 'default', $node_mapping[$option]);
+          $display_id = 'embed';
+          if (!$featured) {
+            $display_id = 'embed_featured';
+            $featured = TRUE;
+          }
+          $financing[] = views_embed_view('financing', $display_id, $node_mapping[$option]);
         }
       }
     }
