@@ -73,7 +73,7 @@ class AdBlockMain extends BlockBase {
               // Render array for the image.
               $ad_image = [
                 '#theme' => 'image_style',
-                '#style_name' => 'ad_main',
+                '#style_name' => 'tile_main',
                 '#uri' => $ad_image_url,
               ];
 
