@@ -1,0 +1,10 @@
+uuid: 7cab26b3-97a6-4c50-bf1d-969197a97653
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.media_caption
+label: 'Media Caption'
+targetEntityType: media
+cache: true

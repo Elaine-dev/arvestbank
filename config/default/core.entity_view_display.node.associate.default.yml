@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.associate.field_mobile_number
     - field.field.node.associate.field_nmls_number
     - field.field.node.associate.field_office_number
+    - field.field.node.associate.field_pb_application
     - field.field.node.associate.field_private_bank_reference
     - field.field.node.associate.field_rendered_node
     - field.field.node.associate.field_vanity_url
@@ -154,6 +155,18 @@ content:
       title: ''
     third_party_settings: {  }
     type: telephone_link
+    region: content
+  field_pb_application:
+    weight: 18
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
   field_private_bank_reference:
     weight: 15

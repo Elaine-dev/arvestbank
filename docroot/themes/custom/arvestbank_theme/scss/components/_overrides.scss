@@ -53,6 +53,9 @@ li.coh-menu-list-item.coh-ce-a69b2abe.js-coh-menu-item:nth-child(6), li.coh-menu
   margin-bottom: 20px;
   column-span: all;
 }
+.sitemap h2{
+  display: none;
+}
 .sitemap{
   column-count: 4;
   column-gap: 3em;
@@ -82,5 +85,43 @@ li.coh-menu-list-item.coh-ce-a69b2abe.js-coh-menu-item:nth-child(6), li.coh-menu
 
 /* campaign page overrides */
 .campaign-icon-wrapper{
-  display: flex;
+  // display: flex;
 }
+
+/* sign up for flex rewards webform */
+.webform-submission-sign-up-for-arvest-flex-rewards--form {
+
+  #edit-birth-date {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    > div {
+      width: 125px;
+    }
+
+    @media (min-width: 600px) {
+
+      &:before, &:after {
+        content: '/';
+        position: absolute;
+      }
+
+      &:before {
+        left: 30%;
+      }
+
+      &:after {
+        right: 30%;
+      }
+
+    }
+
+  }
+
+  div.webform-name > div.webform-flexbox {
+    margin: 0;
+  }
+
+}
+

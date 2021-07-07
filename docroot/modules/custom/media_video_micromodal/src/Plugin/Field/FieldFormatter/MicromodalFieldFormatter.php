@@ -34,10 +34,11 @@ class MicromodalFieldFormatter extends FormatterBase {
   /**
    * {@inheritdoc}
    */
-  public static function defaultSettings() {
+  public static function defaultSettings(): array {
     return [
       // Implement default settings.
       'string_classes' => '',
+      'caption_swap' => '',
       'thumbnail_image_style' => '',
       'thumbnail_override_fieldname' => '',
     ] + parent::defaultSettings();
@@ -46,7 +47,7 @@ class MicromodalFieldFormatter extends FormatterBase {
   /**
    * {@inheritdoc}
    */
-  public function settingsForm(array $form, FormStateInterface $form_state) {
+  public function settingsForm(array $form, FormStateInterface $form_state): array {
 
     // Initialize settings variable.
     $settings = [];
@@ -62,6 +63,12 @@ class MicromodalFieldFormatter extends FormatterBase {
           '#maxlength' => 255,
           '#default_value' => $this->getSetting('string_classes'),
           '#description' => $this->t('Add additional classes to the text link, separate by spaces.'),
+        ],
+        'caption_swap' => [
+          '#title' => 'Caption Swap',
+          '#type' => 'checkbox',
+          '#default_value' => $this->getSetting('caption_swap'),
+          '#description' => $this->t('Use the media caption instead of the name for the link.'),
         ],
       ];
 
@@ -115,13 +122,16 @@ class MicromodalFieldFormatter extends FormatterBase {
   /**
    * {@inheritdoc}
    */
-  public function settingsSummary() {
+  public function settingsSummary(): array {
 
     $summary = [];
 
     // Implement settings summary.
     if (!empty($this->getSetting('string_classes'))) {
       $summary[] = 'Additional Classes: ' . $this->getSetting('string_classes');
+    }
+    if (!empty($this->getSetting('caption_swap'))) {
+      $summary[] = 'Caption Swap: ON/YES';
     }
     if (!empty($this->getSetting('thumbnail_image_style'))) {
       $summary[] = 'Image Style: ' . $this->getSetting('thumbnail_image_style');
@@ -137,7 +147,7 @@ class MicromodalFieldFormatter extends FormatterBase {
   /**
    * {@inheritdoc}
    */
-  public function viewElements(FieldItemListInterface $items, $langcode) {
+  public function viewElements(FieldItemListInterface $items, $langcode): array {
 
     $elements = [];
 
@@ -208,7 +218,7 @@ class MicromodalFieldFormatter extends FormatterBase {
           ])->toString();
 
           // Implementation for the thumbnail field.
-          if ($formatter_type == 'image') {
+          if ($formatter_type === 'image') {
 
             // Media ID of the thumbnail.
             $thumbnail_id = $media->getFields()[$image_fieldname]->getValue()[0]['target_id'];
@@ -237,17 +247,32 @@ class MicromodalFieldFormatter extends FormatterBase {
           }
 
           // Implementation for the name field.
-          elseif ($formatter_type == 'string') {
+          elseif ($formatter_type === 'string') {
 
+            // Initialize array to hold additional classes on the link.
+            $additional_classes = [];
+
+            // Check for additional string classes.
             if (!empty($this->getSetting('string_classes'))) {
+              $additional_classes[] = $this->getSetting('string_classes');
+            }
+
+            // Check for caption swap setting.
+            if (!empty($this->getSetting('caption_swap'))) {
+              $additional_classes[] = 'caption-swap';
+            }
+
+            // Add additional classes if there are any.
+            if (!empty($additional_classes)) {
               $linked_item_render = [
-                '#markup' => '<span class="' . $this->getSetting('string_classes') . '">' . $media->getName() . '</span>',
+                '#markup' => '<span class="' . implode(' ', $additional_classes) . '">' . $media->getName() . '</span>',
               ];
               $linked_item = render($linked_item_render);
             }
             else {
               $linked_item = $media->getName();
             }
+
           }
 
           if (!empty($linked_item)) {
@@ -270,13 +295,22 @@ class MicromodalFieldFormatter extends FormatterBase {
 
     // Attach libraries.
     if (!empty($elements)) {
+
+      // Main library.
       $elements['#attached'] = [
         'library' => [
           'media_video_micromodal/micromodal_libraries',
         ],
       ];
+
+      // Add supporting javascript for the caption swap setting.
+      if (!empty($this->getSetting('caption_swap'))) {
+        $elements['#attached']['library'][] = 'media_video_micromodal/caption_swap';
+      }
+
     }
 
+    // Return elements.
     return $elements;
 
   }
