@@ -3,12 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.financing.field_featured_image
     - field.field.node.financing.field_financing_description
     - field.field.node.financing.field_financing_link
     - node.type.financing
   module:
     - content_moderation
     - link
+    - media_library
     - path
     - scheduler
 id: node.financing.default
@@ -22,6 +24,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_featured_image:
+    weight: 123
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
   field_financing_description:
     weight: 121
     settings:
@@ -103,7 +112,7 @@ content:
     third_party_settings: {  }
   url_redirects:
     weight: 50
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }
