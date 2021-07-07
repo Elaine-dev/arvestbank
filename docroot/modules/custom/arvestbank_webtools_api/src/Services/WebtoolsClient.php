@@ -71,10 +71,12 @@ class WebtoolsClient {
     $endpoint = $this->webtoolsConfig->get('deposit-rates-endpoint');
     $requestOptions = [
       RequestOptions::JSON => [
-        'RegionID'  => '101',
-        'BranchID'  => '101',
-        'ProductId' => '303,101,All',
-        'Cursor'    => '1',
+        "Request" => [
+          'RegionID'  => 'ALL',
+          'BranchID'  => 'ALL',
+          'ProductID' => 'ALL',
+          'Cursor'    => '1',
+        ],
       ],
     ];
 
@@ -83,6 +85,32 @@ class WebtoolsClient {
 
     // Return boolean for success.
     return is_string($response);
+
+  }
+
+  /**
+   * Get deposit rates.
+   */
+  public function getDepositRates() {
+
+    // Define the test request we want to make.
+    $endpoint = $this->webtoolsConfig->get('deposit-rates-endpoint');
+    $requestOptions = [
+      RequestOptions::JSON => [
+        "Request" => [
+          'RegionID'  => 'ALL',
+          'BranchID'  => 'ALL',
+          'ProductID' => 'ALL',
+          'Cursor'    => '0',
+        ],
+      ],
+    ];
+
+    // Make request.
+    $response = $this->makeRequest($endpoint, $requestOptions);
+
+    // Return response.
+    return $response;
 
   }
 

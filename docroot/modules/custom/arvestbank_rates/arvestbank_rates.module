@@ -96,6 +96,8 @@ function arvestbank_rates_tokens($type, $tokens, array $data, array $options, Bu
 /**
  * Implements hook_entity_presave().
  *
+ * Populates rendered node field for applicable nodes.
+ *
  * @inheritDoc
  */
 function arvestbank_rates_entity_presave(EntityInterface $entity) {
@@ -140,6 +142,31 @@ function arvestbank_rates_entity_presave(EntityInterface $entity) {
 
     // Set the field value.
     $entity->set('field_rendered_node', $renderedNodeContent);
+
+  }
+
+}
+
+/**
+ * Implements hook_cron().
+ *
+ * @inheritDoc
+ */
+function arvestbank_rates_cron() {
+
+  // Get the last time this cron decided to run it's import.
+  $lastFetch = \Drupal::state()->get('arvestbank_rates.last_import', 0);
+
+  // If we last ran our action a day or more ago.
+  if (REQUEST_TIME - $lastFetch >= 86400) {
+
+    // Load webtools client service.
+    $webtoolsClient = \Drupal::service('arvestbank_webtools_api.webtools_client');
+
+    //$response = $webtoolsClient->getDepositRates();
+
+    // Record that we just ran that import.
+    //\Drupal::state()->set('arvestbank_rates.last_import', REQUEST_TIME);
 
   }
 
