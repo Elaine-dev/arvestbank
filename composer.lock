@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e428438ec1871f88f1fd03684b762da",
+    "content-hash": "b331ef5957e9389d517d823979cf3e88",
     "packages": [
         {
             "name": "acquia/blt",
@@ -6230,6 +6230,47 @@
             "support": {
                 "source": "https://cgit.drupalcode.org/media_acquiadam",
                 "issues": "https://drupal.org/project/issues/media_acquiadam"
+            }
+        },
+        {
+            "name": "drupal/media_video_micromodal",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/media_video_micromodal.git",
+                "reference": "13abfe2013cac531320eb44b4116c9909638c4b4"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "1.x-dev",
+                    "datestamp": "1625250198",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "scott_earnest",
+                    "homepage": "https://www.drupal.org/user/416158"
+                }
+            ],
+            "description": "Displays core media remote videos in a modal popup using micromodal.js.",
+            "homepage": "https://www.drupal.org/project/media_video_micromodal",
+            "support": {
+                "source": "https://git.drupalcode.org/project/media_video_micromodal"
             }
         },
         {
@@ -16995,6 +17036,7 @@
         "drupal/imageapi_optimize_resmushit": 10,
         "drupal/inline_entity_form": 5,
         "drupal/masquerade": 10,
+        "drupal/media_video_micromodal": 20,
         "drupal/memcache": 20,
         "drupal/moderation_dashboard": 10,
         "drupal/mysql56": 10,
@@ -17009,5 +17051,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }
