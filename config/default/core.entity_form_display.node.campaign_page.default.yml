@@ -128,5 +128,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_campaign_telephone: true
   field_rendered_node: true
   promote: true
