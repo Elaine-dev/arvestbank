@@ -1,0 +1,16 @@
+uuid: 31092d8b-524c-4a5f-bbb3-accdb8e4b7b0
+langcode: en
+status: true
+dependencies: {  }
+name: tile_navigation
+label: 'Tile Navigation'
+effects:
+  c1ea2359-2137-4b35-89e9-242cf8c40536:
+    uuid: c1ea2359-2137-4b35-89e9-242cf8c40536
+    id: image_scale
+    weight: 1
+    data:
+      width: 217
+      height: null
+      upscale: false
+pipeline: __default__
