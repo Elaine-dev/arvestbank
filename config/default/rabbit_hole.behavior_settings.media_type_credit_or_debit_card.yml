@@ -7,7 +7,7 @@ dependencies:
 id: media_type_credit_or_debit_card
 entity_type_id: media_type
 entity_id: credit_or_debit_card
-action: display_page
+action: page_redirect
 allow_override: 0
 redirect: /<front>
 redirect_code: 301
