@@ -7,8 +7,10 @@ size_limit: -1
 oauth:
   excluded_redirect_keys:
     - original_path
-notifications_sync: 0
+notifications_sync: 1
 num_images_per_page: 12
 _core:
   default_config_hash: GxmzZTLxQQW3HxqkAimrxwAlUASIAJx1xbSA1q_IxoI
 fallback_thumbnail: 'public://webdam.png'
+perform_sync_delete: 1
+samesite_cookie_disable: 0
