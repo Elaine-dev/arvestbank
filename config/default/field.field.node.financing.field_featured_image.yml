@@ -1,0 +1,29 @@
+uuid: 29e11db5-c2d0-47da-86f0-d456677faedd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured_image
+    - media.type.acquia_dam_image
+    - node.type.financing
+id: node.financing.field_featured_image
+field_name: field_featured_image
+entity_type: node
+bundle: financing
+label: 'Featured Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      acquia_dam_image: acquia_dam_image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
