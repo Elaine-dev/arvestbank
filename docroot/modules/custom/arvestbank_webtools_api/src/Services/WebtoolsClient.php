@@ -66,39 +66,23 @@ class WebtoolsClient {
    * Tests webtools deposit rates connectivity.
    */
   public function testDepositRatesEndpointConnectivity() {
-
-    // Define the test request we want to make.
-    $endpoint = $this->webtoolsConfig->get('deposit-rates-endpoint');
-    $requestOptions = [
-      RequestOptions::JSON => [
-        "Request" => [
-          'RegionID'  => 'ALL',
-          'BranchID'  => 'ALL',
-          'ProductID' => 'ALL',
-          'Cursor'    => '1',
-        ],
-      ],
-    ];
-
-    // Make request.
-    $response = $this->makeRequest($endpoint, $requestOptions);
-
-    // Return boolean for success.
-    return is_string($response);
-
+    // Make request and return boolean for success.
+    return $this->getDepositProductsWithRates() !== FALSE;
   }
 
   /**
-   * Get deposit rates.
+   * Returns deposit products for the region "ARVEST BANK BENTON COUNTY" (101).
+   *
+   * Arvest Bank has stated that this is representative of all regions.
    */
-  public function getDepositRates() {
+  public function getDepositProductsWithRates() {
 
     // Define the test request we want to make.
     $endpoint = $this->webtoolsConfig->get('deposit-rates-endpoint');
     $requestOptions = [
       RequestOptions::JSON => [
         "Request" => [
-          'RegionID'  => 'ALL',
+          'RegionID'  => '101',
           'BranchID'  => 'ALL',
           'ProductID' => 'ALL',
           'Cursor'    => '0',
@@ -107,10 +91,18 @@ class WebtoolsClient {
     ];
 
     // Make request.
-    $response = $this->makeRequest($endpoint, $requestOptions);
+    $responseBody = $this->makeRequest($endpoint, $requestOptions);
 
-    // Return response.
-    return $response;
+    // If we got a good response back.
+    if (is_string($responseBody)) {
+      $responseData = json_decode($responseBody);
+      if (isset($responseData->Regions[0]->Products)) {
+        return $responseData->Regions[0]->Products;
+      }
+    }
+
+    // If we didn't return a good response already.
+    return FALSE;
 
   }
 

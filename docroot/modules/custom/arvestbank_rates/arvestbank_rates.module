@@ -150,6 +150,8 @@ function arvestbank_rates_entity_presave(EntityInterface $entity) {
 /**
  * Implements hook_cron().
  *
+ * Updates deposit rates daily.
+ *
  * @inheritDoc
  */
 function arvestbank_rates_cron() {
@@ -163,7 +165,40 @@ function arvestbank_rates_cron() {
     // Load webtools client service.
     $webtoolsClient = \Drupal::service('arvestbank_webtools_api.webtools_client');
 
-    //$response = $webtoolsClient->getDepositRates();
+    // Make request for deposit rates.
+    $depositProducts = $webtoolsClient->getDepositProductsWithRates();
+
+    // Get rates config.
+    $ratesConfig = \Drupal::service('config.factory')->getEditable('arvestbank_rates.settings');
+
+    // Loop over deposit products.
+    foreach ($depositProducts as $depositProduct) {
+
+      // Get formatted product name used for config name for child attributes.
+      $formattedProductName = str_replace(' ', '_', strtolower($depositProduct->ProductDescription));
+
+      // Loop over product attributes.
+      foreach ($depositProduct as $attributeName => $attributeValue) {
+
+        // If this is not the ProductDescription attribute.
+        if ($attributeName != 'ProductDescription') {
+
+          // Get formatted attribute name.
+          $formattedAttributeName = str_replace(' ', '_', strtolower($attributeName));
+
+          // Determine config name for this attribute.
+          $attributeConfigName = 'deposit_rates__' . $formattedProductName . '__' . $formattedAttributeName;
+
+          // @todo trigger revision for affected content if changed.
+
+          // Store attributes in config.
+          $ratesConfig->set($attributeConfigName, $attributeValue)->save();
+
+        }
+
+      }
+
+    }
 
     // Record that we just ran that import.
     //\Drupal::state()->set('arvestbank_rates.last_import', REQUEST_TIME);

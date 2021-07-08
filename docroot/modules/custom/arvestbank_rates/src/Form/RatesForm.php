@@ -116,42 +116,42 @@ class RatesForm extends ConfigFormBase {
         // Reward Cards - Annual Fee.
         'rewards_card_rates__annual_fees' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'Reward Cards Annual Fee'),
+          '#title' => $this->t('Reward Cards Annual Fee'),
           '#default_value' => $config->get('rewards_card_rates__annual_fees'),
         ],
 
-        // Balance Transfer Fee in $
+        // Balance Transfer Fee in $.
         'rewards_card_rates__balance_transfer_fee_in_dollars' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'Reward Cards Balance Transfer Fee in $'),
+          '#title' => $this->t('Reward Cards Balance Transfer Fee in $'),
           '#default_value' => $config->get('rewards_card_rates__balance_transfer_fee_in_dollars'),
         ],
 
-        // Cash Advance Fee in $
+        // Cash Advance Fee in $.
         'rewards_card_rates__cash_advance_fee_in_dollars' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'Reward Cards Cash Advance Fee in $'),
+          '#title' => $this->t('Reward Cards Cash Advance Fee in $'),
           '#default_value' => $config->get('rewards_card_rates__cash_advance_fee_in_dollars'),
         ],
 
-        // Cash Advance Fee in %
+        // Cash Advance Fee in %.
         'rewards_card_rates__cash_advance_fee_in_percent' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'Reward Cards Cash Advance Fee in %'),
+          '#title' => $this->t('Reward Cards Cash Advance Fee in %'),
           '#default_value' => $config->get('rewards_card_rates__cash_advance_fee_in_percent'),
         ],
 
-        // Late Payment Fee
+        // Late Payment Fee.
         'rewards_card_rates__late_payment_fee' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'Reward Cards Late Payment Fee'),
+          '#title' => $this->t('Reward Cards Late Payment Fee'),
           '#default_value' => $config->get('rewards_card_rates__late_payment_fee'),
         ],
 
-        // Returned Payment Fee
+        // Returned Payment Fee.
         'rewards_card_rates__return_payment_fee' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'Reward Cards Returned Payment Fee'),
+          '#title' => $this->t('Reward Cards Returned Payment Fee'),
           '#default_value' => $config->get('rewards_card_rates__return_payment_fee'),
         ],
 
@@ -200,42 +200,42 @@ class RatesForm extends ConfigFormBase {
         // Reward Cards - Annual Fee.
         'true_rate_card_rates__platinum_rates__annual_fees' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'True Rates Annual Fee'),
+          '#title' => $this->t('True Rates Annual Fee'),
           '#default_value' => $config->get('true_rate_card_rates__platinum_rates__annual_fees'),
         ],
 
-        // Balance Transfer Fee in $
+        // Balance Transfer Fee in $.
         'true_rate_card_rates__balance_transfer_fee_in_dollars' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'True Rates Balance Transfer Fee in $'),
+          '#title' => $this->t('True Rates Balance Transfer Fee in $'),
           '#default_value' => $config->get('true_rate_card_rates__balance_transfer_fee_in_dollars'),
         ],
 
-        // Cash Advance Fee in $
+        // Cash Advance Fee in $.
         'true_rate_card_rates__cash_advance_fee_in_dollars' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'True Rates Cash Advance Fee in $'),
+          '#title' => $this->t('True Rates Cash Advance Fee in $'),
           '#default_value' => $config->get('true_rate_card_rates__cash_advance_fee_in_dollars'),
         ],
 
-        // Cash Advance Fee in %
+        // Cash Advance Fee in %.
         'true_rate_card_rates__cash_advance_fee_in_percent' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'True Rates Cash Advance Fee in %'),
+          '#title' => $this->t('True Rates Cash Advance Fee in %'),
           '#default_value' => $config->get('true_rate_card_rates__cash_advance_fee_in_percent'),
         ],
 
-        // Late Payment Fee
+        // Late Payment Fee.
         'true_rate_card_rates__late_payment_fee' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'True Rates Late Payment Fee'),
+          '#title' => $this->t('True Rates Late Payment Fee'),
           '#default_value' => $config->get('true_rate_card_rates__late_payment_fee'),
         ],
 
-        // Returned Payment Fee
+        // Returned Payment Fee.
         'true_rate_card_rates__return_payment_fee' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'True Rates Returned Payment Fee'),
+          '#title' => $this->t('True Rates Returned Payment Fee'),
           '#default_value' => $config->get('true_rate_card_rates__return_payment_fee'),
         ],
 
@@ -285,42 +285,42 @@ class RatesForm extends ConfigFormBase {
         // Reward Cards - Annual Fee.
         'origin_card_rates__platinum_rates__annual_fees' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'True Rates Annual Fee'),
+          '#title' => $this->t('True Rates Annual Fee'),
           '#default_value' => $config->get('true_rate_card_rates__platinum_rates__annual_fees'),
         ],
 
-        // Balance Transfer Fee in $
+        // Balance Transfer Fee in $.
         'origin_card_rates__balance_transfer_fee_in_dollars' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'True Rates Balance Transfer Fee in $'),
+          '#title' => $this->t('True Rates Balance Transfer Fee in $'),
           '#default_value' => $config->get('true_rate_card_rates__balance_transfer_fee_in_dollars'),
         ],
 
-        // Cash Advance Fee in $
+        // Cash Advance Fee in $.
         'origin_card_rates__cash_advance_fee_in_dollars' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'True Rates Cash Advance Fee in $'),
+          '#title' => $this->t('True Rates Cash Advance Fee in $'),
           '#default_value' => $config->get('true_rate_card_rates__cash_advance_fee_in_dollars'),
         ],
 
-        // Cash Advance Fee in %
+        // Cash Advance Fee in %.
         'origin_card_rates__cash_advance_fee_in_percent' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'True Rates Cash Advance Fee in %'),
+          '#title' => $this->t('True Rates Cash Advance Fee in %'),
           '#default_value' => $config->get('origin_card_rates__cash_advance_fee_in_percent'),
         ],
 
-        // Late Payment Fee
+        // Late Payment Fee.
         'origin_card_rates__late_payment_fee' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'True Rates Late Payment Fee'),
+          '#title' => $this->t('True Rates Late Payment Fee'),
           '#default_value' => $config->get('origin_card_rates__late_payment_fee'),
         ],
 
-        // Returned Payment Fee
+        // Returned Payment Fee.
         'origin_card_rates__return_payment_fee' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'True Rates Returned Payment Fee'),
+          '#title' => $this->t('True Rates Returned Payment Fee'),
           '#default_value' => $config->get('origin_card_rates__return_payment_fee'),
         ],
 
@@ -424,7 +424,7 @@ class RatesForm extends ConfigFormBase {
 
       ],
 
-      //Legacy Container
+      // Legacy Container.
       'legacy_rates__fees' => [
         '#type' => 'details',
         '#title' => $this->t('Legacy Fees'),
@@ -432,48 +432,48 @@ class RatesForm extends ConfigFormBase {
         // Reward Cards - Annual Fee.
         'legacy_rates__platinum_rates__annual_fees' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'Legacy Fees Annual Fee'),
+          '#title' => $this->t('Legacy Fees Annual Fee'),
           '#default_value' => $config->get('legacy_rates__platinum_rates__annual_fees'),
         ],
 
-        // Balance Transfer Fee in $
+        // Balance Transfer Fee in $.
         'legacy_rates__balance_transfer_fee_in_dollars' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'Legacy Fees Balance Transfer Fee in $'),
+          '#title' => $this->t('Legacy Fees Balance Transfer Fee in $'),
           '#default_value' => $config->get('legacy_rates__balance_transfer_fee_in_dollars'),
         ],
 
-        // Cash Advance Fee in $
+        // Cash Advance Fee in $.
         'legacy_rates__cash_advance_fee_in_dollars' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'Legacy Fees Cash Advance Fee in $'),
+          '#title' => $this->t('Legacy Fees Cash Advance Fee in $'),
           '#default_value' => $config->get('legacy_rates__cash_advance_fee_in_dollars'),
         ],
 
-        // Cash Advance Fee in %
+        // Cash Advance Fee in %.
         'legacy_rates__cash_advance_fee_in_percent' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'Legacy Fees Cash Advance Fee in %'),
+          '#title' => $this->t('Legacy Fees Cash Advance Fee in %'),
           '#default_value' => $config->get('legacy_rates__cash_advance_fee_in_percent'),
         ],
 
-        // Late Payment Fee
+        // Late Payment Fee.
         'legacy_rates__late_payment_fee' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'Legacy Fees Late Payment Fee'),
+          '#title' => $this->t('Legacy Fees Late Payment Fee'),
           '#default_value' => $config->get('legacy_rates__late_payment_fee'),
         ],
 
-        // Returned Payment Fee
+        // Returned Payment Fee.
         'legacy_rates__return_payment_fee' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'Legacy Fees Returned Payment Fee'),
+          '#title' => $this->t('Legacy Fees Returned Payment Fee'),
           '#default_value' => $config->get('legacy_rates__return_payment_fee'),
         ],
       ],
     ];
 
-    // Business Elite Credit Card Rates
+    // Business Elite Credit Card Rates.
     $form['business_elite_rates'] = [
       '#type' => 'details',
       '#title' => $this->t('Business Elite Credit Card Rates'),
@@ -506,9 +506,9 @@ class RatesForm extends ConfigFormBase {
         '#default_value' => $config->get('business_elite_rates__apr_for_cash_advances'),
       ],
 
-      ];
+    ];
 
-    // Business Premier Credit Card Rates
+    // Business Premier Credit Card Rates.
     $form['business_premier_card_rates'] = [
       '#type' => 'details',
       '#title' => $this->t('Business Premier Credit Card Rates'),
@@ -541,7 +541,7 @@ class RatesForm extends ConfigFormBase {
         '#default_value' => $config->get('business_premier_card_rates__apr_for_cash_advances'),
       ],
 
-      //Business Premier
+      // Business Premier.
       'business_premier_rates__fees' => [
         '#type' => 'details',
         '#title' => $this->t('Business Fees'),
@@ -549,42 +549,42 @@ class RatesForm extends ConfigFormBase {
         // Reward Cards - Annual Fee.
         'business_premier_rates__annual_fees' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'Business Fees Annual Fee'),
+          '#title' => $this->t('Business Fees Annual Fee'),
           '#default_value' => $config->get('business_premier_rates__platinum_rates__annual_fees'),
         ],
 
-        // Balance Transfer Fee in $
+        // Balance Transfer Fee in $.
         'business_premier_rates__balance_transfer_fee_in_dollars' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'Business Fees Balance Transfer Fee in $'),
+          '#title' => $this->t('Business Fees Balance Transfer Fee in $'),
           '#default_value' => $config->get('business_premier_rates__balance_transfer_fee_in_dollars'),
         ],
 
-        // Cash Advance Fee in $
+        // Cash Advance Fee in $.
         'business_premier_rates__cash_advance_fee_in_dollars' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'Business Fees Cash Advance Fee in $'),
+          '#title' => $this->t('Business Fees Cash Advance Fee in $'),
           '#default_value' => $config->get('business_premier_rates__cash_advance_fee_in_dollars'),
         ],
 
-        // Cash Advance Fee in %
+        // Cash Advance Fee in %.
         'business_premier_rates__cash_advance_fee_in_percent' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'Business Fees Cash Advance Fee in %'),
+          '#title' => $this->t('Business Fees Cash Advance Fee in %'),
           '#default_value' => $config->get('business_premier_rates__cash_advance_fee_in_percent'),
         ],
 
-        // Late Payment Fee
+        // Late Payment Fee.
         'business_premier_rates__late_payment_fee' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'Business Fees Late Payment Fee'),
+          '#title' => $this->t('Business Fees Late Payment Fee'),
           '#default_value' => $config->get('business_premier_rates__late_payment_fee'),
         ],
 
-        // Returned Payment Fee
+        // Returned Payment Fee.
         'business_premier_rates__return_payment_fee' => [
           '#type' => 'textfield',
-          '#title' => $this->t( 'Business Fees Returned Payment Fee'),
+          '#title' => $this->t('Business Fees Returned Payment Fee'),
           '#default_value' => $config->get('business_premier_rates__return_payment_fee'),
         ],
       ],
@@ -598,6 +598,39 @@ class RatesForm extends ConfigFormBase {
       '#open' => TRUE,
       '#markup' => '<p>Zero Card rates shown are the Purchases APR for "True Rate" and "Signature or Platinum Rewards" cards.</p>',
     ];
+
+    // Deposit Rates Container.
+    $form['deposit_rates'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Deposit Rates'),
+      '#open' => FALSE,
+
+      // Deposit Rates Description.
+      'deposit_description' => [
+        '#markup' => '<b>Deposit Rates are listed here for reference, but are updated automatically and are consequently non-editable.</b>',
+      ],
+
+    ];
+
+    // Get config values to loop over.
+    $rawConfigValues = $config->getRawData();
+
+    // Loop over config values.
+    foreach ($rawConfigValues as $configKey => $configValue) {
+      // If this is a deposit rate config value.
+      if (strpos($configKey, 'deposit_rates__') === 0) {
+        // Get config human name.
+        $configHumanName = ucwords(str_replace(['__', '_'], ' ', $configKey));
+        // Add readonly field to form.
+        $form['deposit_rates'][$configKey] = [
+          '#type' => 'textfield',
+          '#disabled' => TRUE,
+          '#title' => $configHumanName,
+          '#default_value' => $configValue,
+        ];
+      }
+    }
+
 
     // Build config form.
     return parent::buildForm($form, $form_state);
@@ -619,7 +652,10 @@ class RatesForm extends ConfigFormBase {
     foreach ($formValues as $formFieldKey => $formFieldValue) {
 
       // If we're not ignoring this value.
-      if (!in_array($formFieldKey, $this->formValueKeysToIgnore)) {
+      if (
+        !in_array($formFieldKey, $this->formValueKeysToIgnore)
+        && strpos($formFieldKey, 'deposit_rates__') !== 0
+      ) {
         // Save submitted value to config.
         $this->config('arvestbank_rates.settings')
           ->set($formFieldKey, $formFieldValue)
