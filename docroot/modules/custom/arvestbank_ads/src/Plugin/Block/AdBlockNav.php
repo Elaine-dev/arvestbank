@@ -124,7 +124,7 @@ class AdBlockNav extends BlockBase {
               // Render array for the ad image.
               $ad_image = [
                 '#theme' => 'image_style',
-                '#style_name' => 'ad_navigation',
+                '#style_name' => 'tile_navigation',
                 '#uri' => $ad_image_url,
               ];
 

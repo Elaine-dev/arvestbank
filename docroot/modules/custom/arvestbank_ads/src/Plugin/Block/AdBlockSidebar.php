@@ -186,7 +186,7 @@ class AdBlockSidebar extends BlockBase {
             // Render array for the image.
             $ad_image = [
               '#theme' => 'image_style',
-              '#style_name' => 'ad_sidebar',
+              '#style_name' => 'tile_sidebar',
               '#uri' => $ad_image_url,
             ];
 
