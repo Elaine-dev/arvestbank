@@ -13,6 +13,7 @@ module:
   arvestbank_browsertest: 0
   arvestbank_buttons: 0
   arvestbank_calculators: 0
+  arvestbank_careers: 0
   arvestbank_core: 0
   arvestbank_external_login: 0
   arvestbank_media_alias: 0

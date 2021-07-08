@@ -1,0 +1,25 @@
+uuid: f8556b9c-26bf-46ba-9942-b27ed75015ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - arvestbank_careers
+    - cohesion
+  theme:
+    - arvestbank_theme
+id: careersblock
+theme: arvestbank_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: careers_block
+settings:
+  id: careers_block
+  label: 'Careers Block'
+  provider: arvestbank_careers
+  label_display: visible
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false
