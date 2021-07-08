@@ -122,9 +122,7 @@
                     "path": "docroot/core/assets/scaffold/files/default.settings.php",
                     "overwrite": false
                 },
-                "[web-root]/.htaccess": {
-                    "append": "patches/htaccessappend.txt"
-                }
+                "[web-root]/.htaccess": false
             },
             "gitignore": true
         },
@@ -227,10 +225,5 @@
     "require-dev": {
         "acquia/blt-drupal-vm": "dev-master",
         "drupal/console": "~1.0"
-    },
-    "scripts": {
-        "post-drupal-scaffold-cmd": [
-            "cd docroot && patch -p1 <../patches/htaccess-saml.patch"
-        ]
     }
 }
