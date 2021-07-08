@@ -83,6 +83,9 @@ class AdBlockMain extends BlockBase {
                   '#type' => 'link',
                   '#url' => Url::fromUri($ad_cta_url),
                   '#title' => $ad_image,
+                  '#attributes' => [
+                    'data-tileType' => 'tile_main',
+                  ],
                 ];
               }
               // Else just return the image.

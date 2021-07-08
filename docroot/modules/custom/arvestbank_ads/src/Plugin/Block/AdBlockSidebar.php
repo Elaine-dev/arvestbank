@@ -196,6 +196,9 @@ class AdBlockSidebar extends BlockBase {
                 '#type' => 'link',
                 '#url' => Url::fromUri($ad_cta_url),
                 '#title' => $ad_image,
+                '#attributes' => [
+                  'data-tileType' => 'sidebar',
+                ],
               ];
             }
             // Else just return the image.

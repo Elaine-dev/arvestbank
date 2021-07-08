@@ -137,6 +137,9 @@ class AdBlockNav extends BlockBase {
                   '#type' => 'link',
                   '#url' => Url::fromUri($ad_cta_url),
                   '#title' => $ad_image,
+                  '#attributes' => [
+                    'data-tileType' => 'main_navigation',
+                  ],
                 ];
               }
               // Else just return the image.
