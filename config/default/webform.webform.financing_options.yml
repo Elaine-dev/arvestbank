@@ -12,7 +12,7 @@ template: false
 archive: false
 id: financing_options
 title: 'Let''s Find Your Best Financing Option'
-description: 'Online form wizard to direct the customer to the loan that is right for them.'
+description: '<p>Online form wizard to direct the customer to the loan that is right for them.</p>'
 category: ''
 elements: |-
   page1:
@@ -118,6 +118,8 @@ elements: |-
         - or
         - ':input[name="loan_secure"]':
             value: marine_boat
+    '#prev_button_label': Back
+    '#next_button_label': Next
     loan_veh_type:
       '#type': radios
       '#title': 'What type of vehicle?'
@@ -153,10 +155,18 @@ elements: |-
         disabled:
           ':input[name="loan_other_purpose"]':
             value: education
-  actions:
-    '#type': webform_actions
-    '#title': 'Submit button(s)'
-    '#submit__label': Next
+  financing_options:
+    '#type': webform_wizard_page
+    '#title': 'Financing Options'
+    '#prev_button_label': Back
+    '#next_button_label': '<none>'
+    financing_options_markup:
+      '#type': webform_markup
+      '#markup': '<p>[financing_options]</p>'
+    actions:
+      '#type': webform_actions
+      '#title': 'Submit button(s)'
+      '#submit__label': Next
 css: ''
 javascript: ''
 settings:
