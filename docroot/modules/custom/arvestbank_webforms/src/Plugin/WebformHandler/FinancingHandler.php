@@ -2,6 +2,7 @@
 
 namespace Drupal\arvestbank_webforms\Plugin\WebformHandler;
 
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\webform\Plugin\WebformHandlerBase;
 use Drupal\webform\WebformSubmissionInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
@@ -26,7 +27,24 @@ class FinancingHandler extends WebformHandlerBase {
   /**
    * {@inheritdoc}
    */
-  public function preSave(WebformSubmissionInterface $webform_submission) {
+  public function alterForm(array &$form, FormStateInterface $form_state, WebformSubmissionInterface $webform_submission) {
+
+    // Show the financing options on the last page of the form,
+    // this way the form is never submitted.  We are replacing the markup
+    // with the financing options generated markup.
+    if ($form_state->getStorage()['current_page'] === 'financing_options') {
+      $financing_options_markup = self::financingOptionsMarkup($webform_submission);
+      $form['elements']['financing_options']['financing_options_markup']['#markup'] = $financing_options_markup;
+      // Remove the submit button.
+      unset($form['actions']['submit']);
+    }
+
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  private function financingOptionsMarkup(WebformSubmissionInterface $webform_submission) {
 
     // We will return a build array.
     $build = [];
@@ -178,8 +196,8 @@ class FinancingHandler extends WebformHandlerBase {
 
     }
 
-    // Overwrite the confirmation message with this nice build array.
-    $this->getWebform()->setSettingOverride('confirmation_message', render($build));
+    // Return the markup of the rendered build array.
+    return render($build);
 
   }
 
