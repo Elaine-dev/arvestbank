@@ -2,6 +2,11 @@ uuid: 17bbc1d8-c2d0-4453-8cd9-74be28cfbbd6
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.media_button
+    - core.entity_view_mode.media.media_caption
+    - core.entity_view_mode.media.media_links
+    - core.entity_view_mode.media.thumbnail_overlay
   module:
     - editor
     - entity_embed
@@ -72,7 +77,11 @@ filters:
         acquia_dam_image: acquia_dam_image
         credit_or_debit_card: credit_or_debit_card
         video: video
-      allowed_view_modes: {  }
+      allowed_view_modes:
+        media_button: media_button
+        media_caption: media_caption
+        media_links: media_links
+        thumbnail_overlay: thumbnail_overlay
   filter_responsive_tables_filter:
     id: filter_responsive_tables_filter
     provider: responsive_tables_filter
