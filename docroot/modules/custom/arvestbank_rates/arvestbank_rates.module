@@ -74,15 +74,24 @@ function arvestbank_rates_tokens($type, $tokens, array $data, array $options, Bu
     // If we have a config value with the same name as this token.
     if (isset($ratesConfigValues[$name])) {
 
-      // If it's a date token.
+      // If it's an explicitly set date token.
       if (isset($dateTokenFormats[$name])) {
+        // Replace with formatted date.
         $replacements[$original] = date(
           $dateTokenFormats[$name],
           strtotime($ratesConfigValues[$name])
         );
       }
+      // If it's a deposit rate effective date token.
+      elseif (preg_match('/__effectivedate$/', $name)) {
+        $replacements[$original] = date(
+          'F j, Y',
+          strtotime($ratesConfigValues[$name])
+        );
+      }
       // If it's a normal nondate token.
       else {
+        // Replace with unaltered config value.
         $replacements[$original] = $ratesConfigValues[$name];
       }
 
@@ -121,8 +130,16 @@ function arvestbank_rates_entity_presave(EntityInterface $entity) {
     \Drupal::theme()->setActiveTheme($activeTheme);
     // Before we render the node invalidate cache tags so we get new data.
     Cache::invalidateTags($entity->getCacheTagsToInvalidate());
-    // Render node with front end theme.
-    $renderedNode = \Drupal::service('renderer')->render($nodeRenderArray)->__toString();
+    // If we have a render context (not run from drush).
+    if (\Drupal::service('renderer')->hasRenderContext()) {
+      // Render node with front end theme.
+      $renderedNode = \Drupal::service('renderer')->render($nodeRenderArray)->__toString();
+    }
+    // If we don't have a render context (run from drush).
+    else {
+      // Render node with front end theme.
+      $renderedNode = \Drupal::service('renderer')->renderPlain($nodeRenderArray)->__toString();
+    }
     // Set active theme back to what it was.
     \Drupal::theme()->setActiveTheme($currentActiveTheme);
 
@@ -162,43 +179,11 @@ function arvestbank_rates_cron() {
   // If we last ran our action a day or more ago.
   if (REQUEST_TIME - $lastFetch >= 86400) {
 
-    // Load webtools client service.
-    $webtoolsClient = \Drupal::service('arvestbank_webtools_api.webtools_client');
+    // Get deposit rates helper.
+    $depositRatesHelper = \Drupal::service('arvestbank_rates.deposit_rates_helper');
 
-    // Make request for deposit rates.
-    $depositProducts = $webtoolsClient->getDepositProductsWithRates();
-
-    // Get rates config.
-    $ratesConfig = \Drupal::service('config.factory')->getEditable('arvestbank_rates.settings');
-
-    // Loop over deposit products.
-    foreach ($depositProducts as $depositProduct) {
-
-      // Get formatted product name used for config name for child attributes.
-      $formattedProductName = str_replace(' ', '_', strtolower($depositProduct->ProductDescription));
-
-      // Loop over product attributes.
-      foreach ($depositProduct as $attributeName => $attributeValue) {
-
-        // If this is not the ProductDescription attribute.
-        if ($attributeName != 'ProductDescription') {
-
-          // Get formatted attribute name.
-          $formattedAttributeName = str_replace(' ', '_', strtolower($attributeName));
-
-          // Determine config name for this attribute.
-          $attributeConfigName = 'deposit_rates__' . $formattedProductName . '__' . $formattedAttributeName;
-
-          // @todo trigger revision for affected content if changed.
-
-          // Store attributes in config.
-          $ratesConfig->set($attributeConfigName, $attributeValue)->save();
-
-        }
-
-      }
-
-    }
+    // Update Deposit Rates.
+    $depositRatesHelper->updateDepositRates();
 
     // Record that we just ran that import.
     //\Drupal::state()->set('arvestbank_rates.last_import', REQUEST_TIME);
