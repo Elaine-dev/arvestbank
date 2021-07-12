@@ -153,8 +153,17 @@ function arvestbank_views_form_views_exposed_form_alter(&$form, FormStateInterfa
     $form[$field_name]['#options'] = $options;
     unset($form[$field_name]['#size']);
   }
-}
 
+  // Attach filters js to specific associates views.
+  $forms = [
+    'views-exposed-form-advisors-block-1',
+    'views-exposed-form-mortgage-loan-officer-block-mortgage-block',
+    'views-exposed-form-trust-and-estate-block-block-3',
+  ];
+  if (in_array($form['#id'], $forms)) {
+    $form['#attached']['library'][] = 'arvestbank_views/clear_associates_filters';
+  }
+}
 
 /**
  * Implements hook_views_pre_view().
@@ -297,4 +306,15 @@ function arvestbank_views_views_query_alter(ViewExecutable $view, QueryPluginBas
 
   }
 
+  // Only show one associate when user filters by name
+  $views = [
+    'mortgage_loan_officer_block',
+    'trust_and_estate_block',
+    'advisors',
+  ];
+  if (in_array($view->id(), $views)) {
+    if ($view->exposed_raw_input['title'] != NULL) {
+      $query->setLimit(1);
+    }
+  }
 }

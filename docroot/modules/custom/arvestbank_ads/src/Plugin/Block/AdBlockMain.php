@@ -73,7 +73,7 @@ class AdBlockMain extends BlockBase {
               // Render array for the image.
               $ad_image = [
                 '#theme' => 'image_style',
-                '#style_name' => 'ad_main',
+                '#style_name' => 'tile_main',
                 '#uri' => $ad_image_url,
               ];
 
@@ -83,6 +83,9 @@ class AdBlockMain extends BlockBase {
                   '#type' => 'link',
                   '#url' => Url::fromUri($ad_cta_url),
                   '#title' => $ad_image,
+                  '#attributes' => [
+                    'data-tileType' => 'tile_main',
+                  ],
                 ];
               }
               // Else just return the image.

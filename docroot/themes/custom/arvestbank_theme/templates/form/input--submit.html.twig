@@ -10,6 +10,6 @@
  * @see template_preprocess_input()
  */
 #}
-<div class="coh-style-triangle webform-submit-input">
+<div class="webform-submit-input{{ attributes.value != 'Back' ? ' coh-style-triangle' }}">
 <input{{ attributes }} />{{ children }}
 </div>

@@ -186,7 +186,7 @@ class AdBlockSidebar extends BlockBase {
             // Render array for the image.
             $ad_image = [
               '#theme' => 'image_style',
-              '#style_name' => 'ad_sidebar',
+              '#style_name' => 'tile_sidebar',
               '#uri' => $ad_image_url,
             ];
 
@@ -196,6 +196,9 @@ class AdBlockSidebar extends BlockBase {
                 '#type' => 'link',
                 '#url' => Url::fromUri($ad_cta_url),
                 '#title' => $ad_image,
+                '#attributes' => [
+                  'data-tileType' => 'sidebar',
+                ],
               ];
             }
             // Else just return the image.
