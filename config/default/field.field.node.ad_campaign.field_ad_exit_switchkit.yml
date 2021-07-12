@@ -10,7 +10,7 @@ field_name: field_ad_exit_switchkit
 entity_type: node
 bundle: ad_campaign
 label: 'Switch Kit'
-description: ''
+description: personal/bank/online/online-switch-kit/exit
 required: false
 translatable: false
 default_value: {  }

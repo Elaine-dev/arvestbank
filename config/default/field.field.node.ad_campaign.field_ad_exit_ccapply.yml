@@ -10,7 +10,7 @@ field_name: field_ad_exit_ccapply
 entity_type: node
 bundle: ad_campaign
 label: 'Credit Card Apply'
-description: ''
+description: personal/bank/credit-cards/apply/exit
 required: false
 translatable: false
 default_value: {  }

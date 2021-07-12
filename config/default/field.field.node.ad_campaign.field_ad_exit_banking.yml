@@ -10,7 +10,7 @@ field_name: field_ad_exit_banking
 entity_type: node
 bundle: ad_campaign
 label: Banking
-description: ''
+description: personal/bank/online/banking/exit
 required: false
 translatable: false
 default_value: {  }
