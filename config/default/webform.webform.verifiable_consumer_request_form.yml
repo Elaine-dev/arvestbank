@@ -77,6 +77,8 @@ elements: |-
         '#type': email
         '#title': 'Email Address of Requester'
         '#required': true
+        '#pattern': '^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$'
+        '#pattern_error': 'Please enter a valid email address.'
       requester_phone_number:
         '#type': tel
         '#title': 'Phone Number of Requester'
@@ -119,6 +121,8 @@ elements: |-
         request_type_agent_email:
           '#type': email
           '#title': 'Email Address of consumer:'
+          '#pattern': '^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$'
+          '#pattern_error': 'Please enter a valid email address.'
         request_type_agent_phone_number:
           '#type': tel
           '#title': 'Phone Number of consumer:'
