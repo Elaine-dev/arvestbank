@@ -245,6 +245,11 @@ class CanonicalMenuLinkHelper {
 
     $hasSidebar = FALSE;
 
+    // If we don't have a route object (run from drush) then return FALSE.
+    if (!\Drupal::routeMatch()->getRouteObject()) {
+      return FALSE;
+    }
+
     // Get current node, term, or view.
     $node = \Drupal::routeMatch()->getParameter('node');
     $term = \Drupal::routeMatch()->getParameter('taxonomy_term');
