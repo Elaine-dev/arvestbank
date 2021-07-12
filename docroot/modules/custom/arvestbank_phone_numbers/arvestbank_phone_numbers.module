@@ -116,10 +116,10 @@ function arvestbank_phone_numbers_entity_update(EntityInterface $entity) {
     $tokenReferenceHelper = \Drupal::service('arvestbank_revisions.token_reference_helper');
 
     // Get token we want to look for.
-    $token = 'arvestbank_phone_numbers:nid=' . $entity->id();
+    $token = '[arvestbank_phone_numbers:nid=' . $entity->id() . ']';
 
     // Create new revision for nodes referencing rates tokens.
-    $tokenReferenceHelper->createRevisionsForReferencingNodes($token, 'Programatic Revision To Record Phone Number Change.');
+    $tokenReferenceHelper->createRevisionsForReferencingNodes([$token], 'Programatic Revision To Record Phone Number Change.');
 
   }
 
@@ -159,13 +159,13 @@ function _arvestbank_phone_numbers_validate_no_references(&$form, FormStateInter
   $tokenReferenceHelper = \Drupal::service('arvestbank_revisions.token_reference_helper');
 
   // Determine token for this phone number.
-  $phoneNumberToken = 'arvestbank_phone_numbers:nid=' . $node->id();
+  $phoneNumberToken = '[arvestbank_phone_numbers:nid=' . $node->id() . ']';
 
   // Check for references to this phone number.
-  $tokenReferences = $tokenReferenceHelper->getNodesWithReferencesToTokenGroup($phoneNumberToken);
+  $tokenReferences = $tokenReferenceHelper->getNodesReferencingTokens([$phoneNumberToken]);
 
   // If there are references.
-  if (is_array($tokenReferences) &&count($tokenReferences)) {
+  if (is_array($tokenReferences) && count($tokenReferences)) {
 
     // Build error message.
     $errorMessage = [

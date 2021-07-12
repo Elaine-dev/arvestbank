@@ -12,8 +12,8 @@ class TokenReferenceHelper {
   /**
    * Creates a new revision for nodes that contain passed token(s).
    *
-   * @param string|array $token
-   *   Machine name of token(s) or token group (partial token) to find refs to.
+   * @param array $tokens
+   *   Machine names of token(s) to find refs to.
    * @param string $revisionMessage
    *   The revision message for created revisions.
    *
@@ -21,50 +21,15 @@ class TokenReferenceHelper {
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    * @throws \Drupal\Core\Entity\EntityStorageException
    */
-  public function createRevisionsForReferencingNodes($token, $revisionMessage) {
+  public function createRevisionsForReferencingNodes(array $tokens, $revisionMessage) {
 
-    // If a string was passed.
-    if (is_string($token)) {
-      // Get nodes with tokens in a given token.
-      $referencingNodes = $this->getNodesWithReferencesToTokenGroup($token);
-    }
     // If an array was passed.
-    elseif (is_array($token)) {
+    if (is_array($tokens)) {
       // Get deduped nodes with a given token.
-      $referencingNodes = $this->getNodesReferencingTokens($token);
+      $referencingNodes = $this->getNodesReferencingTokens($tokens);
+      // Create new revision for nodes.
+      $this->createNewRevisionForNodes($referencingNodes, $revisionMessage);
     }
-    // Create new revision for nodes.
-    $this->createNewRevisionForNodes($referencingNodes, $revisionMessage);
-  }
-
-  /**
-   * Returns nodes with references.
-   *
-   * @param string $token_group
-   *   The machine name of a token group to get references for.
-   *
-   * @return \Drupal\Core\Entity\EntityInterface[]
-   *   Nodes with tokens in given token group.
-   *
-   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
-   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
-   */
-  public function getNodesWithReferencesToTokenGroup(string $token_group) {
-
-    // Query to get nodes that have a token in given group in field values.
-    $nodesWithTokensInFieldsQuery = \Drupal::entityQuery('node');
-    // Add content type condition to query.
-    $this->addContentTypeConditionToEntityQuery($nodesWithTokensInFieldsQuery);
-    // Add contains or condition group.
-    $fieldOrConditionGroup = $this->getFieldOrConditionGroup($nodesWithTokensInFieldsQuery, '[' . $token_group);
-    $nodesWithTokensInFieldsQuery->condition($fieldOrConditionGroup);
-    // Execute query.
-    $nodesWithReferences = $nodesWithTokensInFieldsQuery->execute();
-
-    // Load and return the nodes with tokens in that group.
-    return \Drupal::entityTypeManager()
-      ->getStorage('node')
-      ->loadMultiple($nodesWithReferences);
 
   }
 
@@ -73,6 +38,12 @@ class TokenReferenceHelper {
    *
    * @param array $tokens
    *   The tokens for which to get references for.
+   *
+   * @return \Drupal\Core\Entity\EntityInterface[]
+   *   The nodes referencing the given tokens.
+   *
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
   public function getNodesReferencingTokens(array $tokens) {
 

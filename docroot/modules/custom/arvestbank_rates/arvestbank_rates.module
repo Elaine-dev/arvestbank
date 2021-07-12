@@ -186,7 +186,7 @@ function arvestbank_rates_cron() {
     $depositRatesHelper->updateDepositRates();
 
     // Record that we just ran that import.
-    //\Drupal::state()->set('arvestbank_rates.last_import', REQUEST_TIME);
+    \Drupal::state()->set('arvestbank_rates.last_import', REQUEST_TIME);
 
   }
 

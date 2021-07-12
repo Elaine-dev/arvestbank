@@ -607,7 +607,15 @@ class RatesForm extends ConfigFormBase {
 
       // Deposit Rates Description.
       'deposit_description' => [
-        '#markup' => '<b>Deposit Rates are listed here for reference, but are updated automatically and are consequently non-editable.</b>',
+        '#markup' => '<b>Deposit Rates are listed here for reference, but are updated automatically and are consequently non-editable.</b><br/>',
+      ],
+
+      // Update deposit rates button.
+      'update_deposit_rates' => [
+        '#type' => 'submit',
+        '#submit' => [[$this, 'updateDepositRates']],
+        '#value' => 'Update Deposit Rates',
+        '#description' => 'This button fetches deposit rates now rather than waiting for the daily fetch.',
       ],
 
     ];
@@ -638,6 +646,22 @@ class RatesForm extends ConfigFormBase {
   }
 
   /**
+   * Submit function to update Deposit Rates from webtools API.
+   *
+   * @param array $form
+   *   The form that was submitted.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The form state.
+   */
+  public function updateDepositRates(array &$form, FormStateInterface $form_state) {
+    // Get deposit rates helper.
+    $depositRatesHelper = \Drupal::service('arvestbank_rates.deposit_rates_helper');
+
+    // Update Deposit Rates.
+    $depositRatesHelper->updateDepositRates();
+  }
+
+  /**
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
@@ -648,14 +672,20 @@ class RatesForm extends ConfigFormBase {
     // Get submitted values.
     $formValues = $form_state->getValues();
 
+    // Array to hold rate tokens based on config that's being changed.
+    $changedTokens = [];
+
     // Loop over submitted values.
     foreach ($formValues as $formFieldKey => $formFieldValue) {
 
-      // If we're not ignoring this value.
+      // If we're not ignoring this value and it has changed.
       if (
         !in_array($formFieldKey, $this->formValueKeysToIgnore)
         && strpos($formFieldKey, 'deposit_rates__') !== 0
+        && $formFieldValue !== $this->config('arvestbank_rates.settings')->get($formFieldKey)
       ) {
+        // Add corresponding token to array of changed tokens.
+        $changedTokens[] = '[arvestbank_rates:' . $formFieldKey . ']';
         // Save submitted value to config.
         $this->config('arvestbank_rates.settings')
           ->set($formFieldKey, $formFieldValue)
@@ -664,11 +694,13 @@ class RatesForm extends ConfigFormBase {
 
     }
 
-    // Get token reference helper service.
-    $tokenReferenceHelper = \Drupal::service('arvestbank_revisions.token_reference_helper');
-
-    // Create new revision for nodes referencing rates tokens.
-    $tokenReferenceHelper->createRevisionsForReferencingNodes('arvestbank_rates', 'Programatic Revision To Record Rates Change.');
+    // If there are changed tokens.
+    if (count($changedTokens)) {
+      // Get token reference helper service.
+      $tokenReferenceHelper = \Drupal::service('arvestbank_revisions.token_reference_helper');
+      // Create revisions for nodes referencing changed tokens.
+      $tokenReferenceHelper->createRevisionsForReferencingNodes($changedTokens, 'Programatic revision to record card rate change(s).');
+    }
 
   }
 
