@@ -20,6 +20,42 @@ use Drupal\node\Entity\Node;
 class AdBlockMain extends BlockBase {
 
   /**
+   * Returns the fieldname from the ad campaign to use with this nav item.
+   *
+   * @return string
+   *   fieldname
+   */
+  private function getAdFieldFromContext() {
+
+    // Initialize return variable.
+    $return = FALSE;
+
+    // The current aliased path.
+    $current_uri = \Drupal::request()->getRequestUri();
+
+    // This array maps ad block ID's with fieldnames of the ad campaign.
+    $fieldnames = [
+      // Application.
+      '/personal/apply/exit' => 'field_ad_exit_application',
+      // Banking.
+      '/personal/bank/online/banking/exit' => 'field_ad_exit_banking',
+      // Credit Card Apply.
+      '/personal/bank/credit-cards/apply/exit' => 'field_ad_exit_ccapply',
+      // Switch Kit.
+      '/personal/bank/online/online-switch-kit/exit' => 'field_ad_exit_switchkit',
+    ];
+
+    // If the current path is valid for a fieldname set the return var.
+    if (array_key_exists($current_uri, $fieldnames)) {
+      $return = $fieldnames[$current_uri];
+    }
+
+    // Returns FALSE or the fieldname that matches to this nav item.
+    return $return;
+
+  }
+
+  /**
    * Returns the node id for the ad to use in this context.
    *
    * @return int
@@ -27,8 +63,28 @@ class AdBlockMain extends BlockBase {
    */
   private function getAdNid(): int {
 
-    // Placeholder function to return the proper ad node id.
-    return 0;
+    // Initialize return variable.
+    $ad_nid = 0;
+
+    // Get the current campaign.
+    if ($ad_campaign_nid = \Drupal::service('ad_services')->getCampaignNid()) {
+
+      // If there is a valid campaign proceed.
+      if ($ad_campaign = Node::load($ad_campaign_nid)) {
+
+        // Match the calling nav item to the correct fieldname.
+        if ($fieldname = self::getAdFieldFromContext()) {
+          if (!empty($ad_campaign->get($fieldname)->getValue()[0]['target_id'])) {
+            $ad_nid = $ad_campaign->get($fieldname)->getValue()[0]['target_id'];
+          }
+
+        }
+
+      }
+
+    }
+
+    return $ad_nid;
 
   }
 
