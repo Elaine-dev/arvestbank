@@ -22,10 +22,12 @@ dependencies:
     - field.field.node.page.field_second_callout_icon
     - field.field.node.page.field_second_callout_label
     - field.field.node.page.field_second_callout_link
+    - field.field.node.page.field_sidebar_ad
     - field.field.node.page.field_yoast_seo
     - node.type.page
     - workflows.workflow.editorial
   module:
+    - chosen_field
     - cohesion_elements
     - conditional_fields
     - content_moderation
@@ -154,6 +156,22 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Account Disclosure'
+    group_sidebar_ad:
+      children:
+        - field_sidebar_ad
+        - field_disable_sidebar_ad
+      parent_name: ''
+      weight: 20
+      format_type: details_sidebar
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+        weight: 0
+      label: 'Sidebar Ad'
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -209,7 +227,7 @@ content:
     type: string_textfield
     region: content
   field_disable_sidebar_ad:
-    weight: 5
+    weight: 19
     settings:
       display_label: true
     third_party_settings: {  }
@@ -316,6 +334,12 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_sidebar_ad:
+    weight: 18
+    settings: {  }
+    third_party_settings: {  }
+    type: chosen_select
     region: content
   field_yoast_seo:
     weight: 17
