@@ -19,7 +19,8 @@ blacklist: {  }
 graylist:
   - shield.settings
   - system.performance
-  - qa_accounts.settings.yml
+  - qa_accounts.settings
+  - gtm.settings
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0
