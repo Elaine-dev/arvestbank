@@ -1,0 +1,15 @@
+uuid: 50e519c9-9b18-46f2-90a2-4b0e5ca9b90f
+langcode: en
+status: true
+dependencies: {  }
+name: hub_content_card_credit_card
+label: 'Hub Content Card Credit Card'
+effects:
+  5344b33a-25d4-4432-9b72-8356c0564f04:
+    uuid: 5344b33a-25d4-4432-9b72-8356c0564f04
+    id: image_scale
+    weight: 1
+    data:
+      width: 184
+      height: null
+      upscale: false

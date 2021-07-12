@@ -1,7 +1,9 @@
 uuid: 0df7a706-f638-452f-a443-783c762d88a1
 langcode: en
 status: open
-dependencies: {  }
+dependencies:
+  module:
+    - arvestbank_webtools_api
 open: null
 close: null
 weight: 0
@@ -12,7 +14,84 @@ id: smbus_connect
 title: smbus_connect
 description: 'Small Business Connect'
 category: ''
-elements: "header:\n  '#type': processed_text\n  '#text': |\n    <h2>Connect With Us For Help With Your Business Banking Needs</h2>\n    \n    <p>Interested in one of our convenient small business products and services? Whether you need a loan or a way to take in payments from customers, we can help you with your business needs. Fill out the form below to have us contact you!</p>\n    \n  '#format': cohesion\nname:\n  '#type': webform_flexbox\n  first_name:\n    '#type': textfield\n    '#title': 'First Name'\n    '#title_display': before\n    '#required': true\n  last_name:\n    '#type': textfield\n    '#title': 'Last Name'\n    '#required': true\nbusiness_name:\n  '#type': textfield\n  '#title': 'Business Name'\n  '#title_display': before\n  '#required': true\nlocation:\n  '#type': webform_flexbox\n  city:\n    '#type': textfield\n    '#title': City\n    '#required': true\n  state:\n    '#type': select\n    '#title': State\n    '#options': state_names\nemail_address:\n  '#type': email\n  '#title': 'Email address'\n  '#required': true\nphone_number:\n  '#type': tel\n  '#title': 'Phone Number'\n  '#required': true\nexisting_arvest_customer:\n  '#type': radios\n  '#title': 'Existing Arvest customer'\n  '#options':\n    'Yes': 'Yes'\n    'No': 'No'\n  '#required': true\nwhat_are_you_interested_in_check_all_that_apply_:\n  '#type': checkboxes\n  '#title': 'What are you interested in? (check all that apply)'\n  '#options':\n    Loans: Loans\n    'Credit Cards': 'Credit Cards'\n    'Merchant Services': 'Merchant Services'\n    Other: Other\n  '#required': true\nbranch_location:\n  '#type': webform_term_select\n  '#title': 'Branch Location'\n  '#vocabulary': branch_location\n  '#breadcrumb_delimiter': ''\n  '#required': true\nprocessed_text:\n  '#type': processed_text\n  '#text': |\n    <p><em>You expressly consent to be contacted by Arvest at the telephone number you have provided. You agree Arvest may contact you in any way, including calls delivered by an automatic telephone dialing system.</em></p>\n    \n  '#format': cohesion"
+elements: |-
+  header:
+    '#type': processed_text
+    '#text': |
+      <h2><br />
+      Connect With Us For Help With Your Business Banking Needs</h2>
+
+      <p>Interested in one of our convenient small business products and services? Whether you need a loan or a way to take in payments from customers, we can help you with your business needs. Fill out the form below to have us contact you!</p>
+    '#format': cohesion
+  flexbox:
+    '#type': webform_flexbox
+    business_name:
+      '#type': textfield
+      '#title': 'Business Name'
+      '#title_display': before
+      '#required': true
+  name:
+    '#type': webform_flexbox
+    first_name:
+      '#type': textfield
+      '#title': 'First Name'
+      '#title_display': before
+      '#required': true
+    last_name:
+      '#type': textfield
+      '#title': 'Last Name'
+      '#required': true
+  location:
+    '#type': webform_flexbox
+    city:
+      '#type': textfield
+      '#title': City
+      '#required': true
+    state:
+      '#type': select
+      '#title': State
+      '#options': state_names
+      '#required': true
+  flexbox_contact:
+    '#type': webform_flexbox
+    email_address:
+      '#type': email
+      '#title': 'Email address'
+      '#required': true
+      '#pattern': '^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$'
+      '#pattern_error': 'Please enter a valid email address.'
+    phone_number:
+      '#type': tel
+      '#title': 'Phone Number'
+      '#placeholder': '(nnn) nnn-nnnn'
+      '#required': true
+      '#pattern': '^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$'
+      '#pattern_error': 'Please enter a valid phone number.'
+  existing_arvest_customer:
+    '#type': radios
+    '#title': 'Existing Arvest customer'
+    '#options':
+      'Yes': 'Yes'
+      'No': 'No'
+    '#required': true
+  what_are_you_interested_in_check_all_that_apply_:
+    '#type': checkboxes
+    '#title': 'What are you interested in? (check all that apply)'
+    '#options':
+      Loans: Loans
+      'Credit Cards': 'Credit Cards'
+      'Merchant Services': 'Merchant Services'
+      Other: Other
+    '#required': true
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#submit__label': Submit
+  processed_text:
+    '#type': processed_text
+    '#text': |
+      <p><em>You expressly consent to be contacted by Arvest at the telephone number you have provided. You agree Arvest may contact you in any way, including calls delivered by an automatic telephone dialing system.</em></p>
+    '#format': cohesion
 css: ''
 javascript: ''
 settings:
@@ -114,7 +193,7 @@ settings:
   draft_pending_multiple_message: ''
   confirmation_type: inline
   confirmation_title: ''
-  confirmation_message: 'hank you for letting us know about your interest in small business services with Arvest. One of our knowledgeable small business banking associates will be contacting you shortly. Have a great day!'
+  confirmation_message: '<p>Thank you for letting us know about your interest in small business services with Arvest. One of our knowledgeable small business banking associates will be contacting you shortly. Have a great day!</p>'
   confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
@@ -138,7 +217,7 @@ settings:
   purge: none
   purge_days: null
   results_disabled: true
-  results_disabled_ignore: false
+  results_disabled_ignore: true
   results_customize: false
   token_view: false
   token_update: false
@@ -191,5 +270,19 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  save_submissions_in_webtools:
+    id: 'Save Submissions In Webtools'
+    label: 'Save Submissions In Webtools'
+    notes: ''
+    handler_id: save_submissions_in_webtools
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      webtools_form_name: smbus_connect
+      first_name_field_machine_name: first_name
+      last_name_field_machine_name: last_name
+      full_name_field_machine_name: ''
+      email_field_machine_name: email_address
 variants: {  }

@@ -1,0 +1,22 @@
+uuid: dfc7f2aa-47a3-4a17-9d1b-e7be810b489e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.financing
+id: node.financing.promote
+field_name: promote
+entity_type: node
+bundle: financing
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

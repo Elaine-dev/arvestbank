@@ -9,6 +9,20 @@
   display: inline-block;
   width: 300px;
 }
+
+@media (max-width: 47.9375rem) {
+  #browsertest{
+    width:200px;
+  }
+  #browsertest .browsertest-value {
+    width: 200px;
+  }
+}
+
 #browsertest .browsertest-value.negative {
   color: red;
+}
+
+#browsertest{
+  margin-top:10px;
 }

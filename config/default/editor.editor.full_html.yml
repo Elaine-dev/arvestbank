@@ -27,6 +27,7 @@ settings:
           items:
             - DrupalLink
             - DrupalUnlink
+            - ButtonLink
         -
           name: Lists
           items:
@@ -38,6 +39,7 @@ settings:
             - Blockquote
             - DrupalImage
             - creditcardrate
+            - phonenumber
         -
           name: Tools
           items:

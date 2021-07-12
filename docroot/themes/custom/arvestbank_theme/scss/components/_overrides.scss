@@ -1,0 +1,131 @@
+// --------------- ALL Arvest Bank css overrides  --------------- //
+
+
+/* Site Studio Overrides */
+
+/* Red menu links in the main navigation */
+.main-menu-wrapper .red{
+  color: #e60000;
+}
+
+/* Remove button border from admin toolbar */
+#toolbar-administration button:before {
+  border: none;
+}
+
+/* remove list item bullets or triangles from content area */
+body .site-content .pager__items li:before, .chosen-results ul li:before, .site-content .chosen-container .chosen-results li:before, body .site-content .webform-progress-tracker li:before, .body .site-content .pager__items li:before, .chosen-results ul li:before, .site-content .chosen-container .chosen-results li:before, body .site-content .webform-progress-tracker li:before,
+.webform-submission-external-login-form .coh-style-triangle.webform-submit-input:before,
+.block-views-exposed-filter-blockdatabase-search-page-1 .coh-style-triangle.webform-submit-input:before,
+.block-arvestbank-branch-locations .coh-style-triangle.webform-submit-input:before,
+.webform-submission-external-login-menu-form .coh-style-triangle.webform-submit-input:before{
+  content: none;
+}
+
+/* flex style for webforms */
+.coh-style-flex-50 .webform-flex{
+  flex: 0 1 50%;
+}
+
+.page-node-type-campaign-page #block-disclosureblock .coh-style-white-text a{
+  color: #333333;
+}
+.coh-style-white-text{
+  color: #ffffff !important;
+}
+
+.contextual-component.coh-ce-cpt_support_card-4bca671d br{
+  display:none;
+}
+
+/* main navigation overrides*/
+li.coh-menu-list-item.coh-ce-a69b2abe.js-coh-menu-item:nth-child(6), li.coh-menu-list-item.coh-ce-a69b2abe.js-coh-menu-item:nth-child(7) {
+  display:none;
+}
+@media (max-width: 59.3125rem){
+  li.coh-menu-list-item.coh-ce-a69b2abe.js-coh-menu-item:nth-child(6), li.coh-menu-list-item.coh-ce-a69b2abe.js-coh-menu-item:nth-child(7) {
+    display:block;
+  }
+}
+
+/*sitemap */
+.sitemap h1{
+  margin-bottom: 20px;
+  column-span: all;
+}
+.sitemap h2{
+  display: none;
+}
+.sitemap{
+  column-count: 4;
+  column-gap: 3em;
+}
+.sitemap .coh-style-white-text{
+  color: #1a6ac0;
+}
+.sitemap .menu-item.menu-item--expanded span {
+  font-size: 17px;
+}
+
+@media (max-width: 59.3125rem) {
+  .sitemap {
+    column-count: 2;
+  }
+}
+
+/* support cards */
+.coh-sidebar .field--name-field-acquiadam-asset-image img{
+  max-width:100%;
+  height: auto;
+}
+
+.coh-ce-cpt_support_card-4bca671d br{
+  display:none;
+}
+
+/* campaign page overrides */
+// Display icons and text in columns, such as in /referlive
+.campaign-icon-wrapper{
+  display: flex;
+}
+.campaign-icon{
+  flex: 0 0 calculateRem(58px);
+}
+
+/* sign up for flex rewards webform */
+.webform-submission-sign-up-for-arvest-flex-rewards--form {
+
+  #edit-birth-date {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    > div {
+      width: 125px;
+    }
+
+    @media (min-width: 600px) {
+
+      &:before, &:after {
+        content: '/';
+        position: absolute;
+      }
+
+      &:before {
+        left: 30%;
+      }
+
+      &:after {
+        right: 30%;
+      }
+
+    }
+
+  }
+
+  div.webform-name > div.webform-flexbox {
+    margin: 0;
+  }
+
+}
+

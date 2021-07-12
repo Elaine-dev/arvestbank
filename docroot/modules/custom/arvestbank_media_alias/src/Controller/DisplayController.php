@@ -110,23 +110,27 @@ class DisplayController extends EntityViewController {
     if ($media->bundle() === 'acquia_dam_document') {
 
       // This is the specific field that has the file id.
-      if ($fid = $media->get('field_acquiadam_asset_doc')[0]->getValue()['target_id']) {
+      if (!empty($media->get('field_acquiadam_asset_doc')[0])) {
 
-        // Check that the file loads.
-        if ($file = File::load($fid)) {
+        if ($fid = $media->get('field_acquiadam_asset_doc')[0]->getValue()['target_id']) {
 
-          // Grab these variables.
-          $uri = $file->getFileUri();
-          $filename = $file->getFilename();
+          // Check that the file loads.
+          if ($file = File::load($fid)) {
 
-          // Create the full HTTP binary response.
-          $response = new BinaryFileResponse($uri);
-          $response->setContentDisposition(
-            ResponseHeaderBag::DISPOSITION_INLINE,
-            $filename
-          );
+            // Grab these variables.
+            $uri = $file->getFileUri();
+            $filename = $file->getFilename();
 
+            // Create the full HTTP binary response.
+            $response = new BinaryFileResponse($uri);
+            $response->setContentDisposition(
+              ResponseHeaderBag::DISPOSITION_INLINE,
+              $filename
+            );
+
+          }
         }
+
       }
 
     }

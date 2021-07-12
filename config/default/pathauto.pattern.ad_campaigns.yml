@@ -1,0 +1,22 @@
+uuid: c0fb7a63-80e0-4f16-8705-57824f6cb75e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: ad_campaigns
+label: 'Ad Campaigns'
+type: 'canonical_entities:node'
+pattern: 'ad-campaign/[node:nid]'
+selection_criteria:
+  68838c2f-6a33-4af3-a504-c4509f836070:
+    id: node_type
+    bundles:
+      ad_campaign: ad_campaign
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 68838c2f-6a33-4af3-a504-c4509f836070
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -5,6 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.ad_campaign.field_ad_active_dates
+    - field.field.node.ad_campaign.field_ad_exit_application
+    - field.field.node.ad_campaign.field_ad_exit_banking
+    - field.field.node.ad_campaign.field_ad_exit_ccapply
+    - field.field.node.ad_campaign.field_ad_exit_switchkit
     - field.field.node.ad_campaign.field_ad_nav_business
     - field.field.node.ad_campaign.field_ad_nav_credit_cards
     - field.field.node.ad_campaign.field_ad_nav_home_loans
@@ -49,6 +53,10 @@ content:
     region: content
 hidden:
   field_ad_active_dates: true
+  field_ad_exit_application: true
+  field_ad_exit_banking: true
+  field_ad_exit_ccapply: true
+  field_ad_exit_switchkit: true
   field_ad_nav_business: true
   field_ad_nav_credit_cards: true
   field_ad_nav_home_loans: true

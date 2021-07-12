@@ -1005,276 +1005,14 @@ display:
         - 'config:field.storage.node.field_job_title'
         - 'config:field.storage.node.field_location'
         - 'config:field.storage.node.field_office_number'
-  page_1:
-    display_plugin: page
-    id: page_1
-    display_title: Advisors
-    position: 1
-    display_options:
-      display_extenders:
-        metatag_display_extender: {  }
-      path: personal/invest/find-a-client-advisor
-      filters:
-        status:
-          id: status
-          table: node_field_data
-          field: status
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: '1'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            associate: associate
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-        field_location_value:
-          id: field_location_value
-          table: node__field_location
-          field: field_location_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: contains
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_location_value_op
-            label: Location
-            description: ''
-            use_operator: false
-            operator: field_location_value_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_location_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              reviewer: '0'
-              contributor: '0'
-              site_editor: '0'
-              domain_admin: '0'
-              enterprise_admin: '0'
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: contains
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: title_op
-            label: Name
-            description: ''
-            use_operator: false
-            operator: title_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: title
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              reviewer: '0'
-              contributor: '0'
-              site_editor: '0'
-              domain_admin: '0'
-              enterprise_admin: '0'
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: node
-          entity_field: title
-        field_associate_type_target_id:
-          id: field_associate_type_target_id
-          table: node__field_associate_type
-          field: field_associate_type_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            71: 71
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: associate_category
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
-      defaults:
-        filters: false
-        filter_groups: false
-        style: false
-        row: false
-        header: false
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      display_description: ''
-      menu:
-        type: none
-        title: 'Find a Client Advisor'
-        description: ''
-        expanded: false
-        parent: 'menu_link_content:c59d3469-08ca-4be9-a495-39aaa7bb28f8'
-        weight: 0
-        context: '0'
-        menu_name: main
-      style:
-        type: cohesion_layout
-        options:
-          views_template: view_tpl_associates_view_templat
-          master_template: __none__
-      row:
-        type: 'entity:node'
-        options:
-          relationship: none
-          view_mode: teaser
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: true
-          tokenize: false
-          content:
-            value: "<h1>CONNECT WITH ONE OF OUR EXPERIENCED CLIENT ADVISORS</h1>\r\n\r\n<div class = view-header><p>Our knowledgeable Client Advisors work hard to help you determine the best way to meet your financial goals.</p>\r\n\r\n<p>Select your location to see a list of Client Advisors in your area or search for Advisors by name.</p>\r\n\r\n<p>SEARCH BY LOCATION OR NAME</p></div>"
-            format: cohesion
-          plugin_id: text
-      enabled: false
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - user
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_associate_image'
-        - 'config:field.storage.node.field_designation'
-        - 'config:field.storage.node.field_email'
-        - 'config:field.storage.node.field_insurance_license_number'
-        - 'config:field.storage.node.field_job_title'
-        - 'config:field.storage.node.field_location'
-        - 'config:field.storage.node.field_office_number'
-  page_2:
-    display_plugin: page
-    id: page_2
+  block_2:
+    display_plugin: block
+    id: block_2
     display_title: 'Mortgage Loan Officers'
     position: 1
     display_options:
       display_extenders:
         metatag_display_extender: {  }
-      path: personal/borrow/home-loans/servicing-center/find-a-lender
       filters:
         status:
           id: status
@@ -2059,17 +1797,9 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-      menu:
-        type: none
-        title: 'Find a Lender'
-        description: ''
-        expanded: false
-        parent: 'menu_link_content:eceffee7-98b7-4118-8ea6-9be384cf2815'
-        weight: 0
-        context: '0'
-        menu_name: main
       exposed_block: false
-      enabled: false
+      enabled: true
+      block_description: 'Mortgage Loan Officers'
     cache_metadata:
       max-age: -1
       contexts:
@@ -2087,6 +1817,267 @@ display:
         - 'config:field.storage.node.field_job_title'
         - 'config:field.storage.node.field_location'
         - 'config:field.storage.node.field_nmls_number'
+        - 'config:field.storage.node.field_office_number'
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Advisors
+    position: 1
+    display_options:
+      display_extenders:
+        metatag_display_extender: {  }
+      path: personal/invest/find-a-client-advisor
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            associate: associate
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        field_location_value:
+          id: field_location_value
+          table: node__field_location
+          field: field_location_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_location_value_op
+            label: Location
+            description: ''
+            use_operator: false
+            operator: field_location_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_location_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              reviewer: '0'
+              contributor: '0'
+              site_editor: '0'
+              domain_admin: '0'
+              enterprise_admin: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: title_op
+            label: Name
+            description: ''
+            use_operator: false
+            operator: title_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: title
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              reviewer: '0'
+              contributor: '0'
+              site_editor: '0'
+              domain_admin: '0'
+              enterprise_admin: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: title
+        field_associate_type_target_id:
+          id: field_associate_type_target_id
+          table: node__field_associate_type
+          field: field_associate_type_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            71: 71
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: associate_category
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+      defaults:
+        filters: false
+        filter_groups: false
+        style: false
+        row: false
+        header: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      display_description: ''
+      menu:
+        type: none
+        title: 'Find a Client Advisor'
+        description: ''
+        expanded: false
+        parent: 'menu_link_content:c59d3469-08ca-4be9-a495-39aaa7bb28f8'
+        weight: 0
+        context: '0'
+        menu_name: main
+      style:
+        type: cohesion_layout
+        options:
+          views_template: view_tpl_associates_view_templat
+          master_template: __none__
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: "<h1>CONNECT WITH ONE OF OUR EXPERIENCED CLIENT ADVISORS</h1>\r\n\r\n<div class = view-header><p>Our knowledgeable Client Advisors work hard to help you determine the best way to meet your financial goals.</p>\r\n\r\n<p>Select your location to see a list of Client Advisors in your area or search for Advisors by name.</p>\r\n\r\n<p>SEARCH BY LOCATION OR NAME</p></div>"
+            format: cohesion
+          plugin_id: text
+      enabled: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_associate_image'
+        - 'config:field.storage.node.field_designation'
+        - 'config:field.storage.node.field_email'
+        - 'config:field.storage.node.field_insurance_license_number'
+        - 'config:field.storage.node.field_job_title'
+        - 'config:field.storage.node.field_location'
         - 'config:field.storage.node.field_office_number'
   page_3:
     display_plugin: page

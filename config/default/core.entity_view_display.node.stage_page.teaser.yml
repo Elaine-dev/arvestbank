@@ -5,6 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.stage_page.body
+    - field.field.node.stage_page.field_alert_block_body
+    - field.field.node.stage_page.field_alert_block_dates
+    - field.field.node.stage_page.field_alert_block_link
     - field.field.node.stage_page.field_block_button
     - field.field.node.stage_page.field_block_title
     - field.field.node.stage_page.field_disclosure
@@ -17,19 +20,18 @@ dependencies:
     - field.field.node.stage_page.field_icon_two
     - field.field.node.stage_page.field_icon_two_text
     - field.field.node.stage_page.field_meta_tags
-    - field.field.node.stage_page.field_slide1_bg_position
+    - field.field.node.stage_page.field_rendered_node
+    - field.field.node.stage_page.field_news_alert_block_body
+    - field.field.node.stage_page.field_news_alert_block_dates
     - field.field.node.stage_page.field_slide1_cta_color
     - field.field.node.stage_page.field_slide1_cta_link
     - field.field.node.stage_page.field_slide1_cta_position
-    - field.field.node.stage_page.field_slide2_bg_position
     - field.field.node.stage_page.field_slide2_cta_color
     - field.field.node.stage_page.field_slide2_cta_link
     - field.field.node.stage_page.field_slide2_cta_position
-    - field.field.node.stage_page.field_slide3_bg_position
     - field.field.node.stage_page.field_slide3_cta_color
     - field.field.node.stage_page.field_slide3_cta_link
     - field.field.node.stage_page.field_slide3_cta_position
-    - field.field.node.stage_page.field_slide4_bg_position
     - field.field.node.stage_page.field_slide4_cta_color
     - field.field.node.stage_page.field_slide4_cta_link
     - field.field.node.stage_page.field_slide4_cta_position
@@ -42,6 +44,7 @@ dependencies:
     - field.field.node.stage_page.field_slide_two
     - field.field.node.stage_page.field_slide_two_cta_text
     - field.field.node.stage_page.field_wordpress_articles
+    - field.field.node.stage_page.field_yoast_seo
     - node.type.stage_page
   module:
     - user
@@ -62,6 +65,9 @@ content:
     region: content
 hidden:
   body: true
+  field_alert_block_body: true
+  field_alert_block_dates: true
+  field_alert_block_link: true
   field_block_button: true
   field_block_title: true
   field_disclosure: true
@@ -74,19 +80,18 @@ hidden:
   field_icon_two: true
   field_icon_two_text: true
   field_meta_tags: true
-  field_slide1_bg_position: true
+  field_news_alert_block_body: true
+  field_news_alert_block_dates: true
+  field_rendered_node: true
   field_slide1_cta_color: true
   field_slide1_cta_link: true
   field_slide1_cta_position: true
-  field_slide2_bg_position: true
   field_slide2_cta_color: true
   field_slide2_cta_link: true
   field_slide2_cta_position: true
-  field_slide3_bg_position: true
   field_slide3_cta_color: true
   field_slide3_cta_link: true
   field_slide3_cta_position: true
-  field_slide4_bg_position: true
   field_slide4_cta_color: true
   field_slide4_cta_link: true
   field_slide4_cta_position: true
@@ -99,4 +104,5 @@ hidden:
   field_slide_two: true
   field_slide_two_cta_text: true
   field_wordpress_articles: true
+  field_yoast_seo: true
   search_api_excerpt: true

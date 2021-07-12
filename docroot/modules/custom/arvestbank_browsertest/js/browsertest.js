@@ -53,9 +53,6 @@
     // Set JS enabled to YES - NO is the default.
     details += browsertest.displayRow('JavaScript Enabled', 'YES');
 
-    // Display the full userAgent string just so we know what's in it.
-    details += browsertest.displayRow('Browser Version String', drupalSettings.arvestbank_browsertest.agent);
-
     // Display a user-friendly form of the O/S name.
     if (osName) {
       valclass = 'affirm';
@@ -73,17 +70,10 @@
       val = '* Not Recognized *';
     }
     details += browsertest.displayRow('Browser Name and Version', val, valclass);
-    if (bdMessage !== "") {
-      details += browsertest.displayMessage(bdMessage);
-    }
 
     // Check user's screen resolution
     val = screen.width + ' x ' + screen.height;
     details += browsertest.displayRow('Screen Resolution', val);
-    if (screen.width < 800) {
-      let screenMessage = 'You should set your screen to a resolution of 800x600 or higher before using T-Square';
-      details += browsertest.displayMessage(screenMessage);
-    }
 
     // Ip Address.
     details += browsertest.displayRow('IP Address', browsertest.getIPaddress());

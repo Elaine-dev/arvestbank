@@ -3,6 +3,7 @@
 namespace Drupal\arvestbank_ads\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Cache\Cache;
 use Drupal\Core\Url;
 use Drupal\file\Entity\File;
 use Drupal\media\Entity\Media;
@@ -72,7 +73,7 @@ class AdBlockMain extends BlockBase {
               // Render array for the image.
               $ad_image = [
                 '#theme' => 'image_style',
-                '#style_name' => 'ad_main',
+                '#style_name' => 'tile_main',
                 '#uri' => $ad_image_url,
               ];
 
@@ -82,6 +83,9 @@ class AdBlockMain extends BlockBase {
                   '#type' => 'link',
                   '#url' => Url::fromUri($ad_cta_url),
                   '#title' => $ad_image,
+                  '#attributes' => [
+                    'data-tileType' => 'tile_main',
+                  ],
                 ];
               }
               // Else just return the image.
@@ -110,8 +114,9 @@ class AdBlockMain extends BlockBase {
   /**
    * {@inheritdoc}
    */
-  public function getCacheMaxAge(): int {
-    return 0;
+  public function getCacheContexts(): array {
+    // Block should be cached on a per page (route) level.
+    return Cache::mergeContexts(parent::getCacheContexts(), ['route']);
   }
 
 }

@@ -15,6 +15,8 @@
         "acquia/blt-site-studio": "dev-develop",
         "acquia/cohesion": "6.5.1",
         "acquia/cohesion-theme": "6.5.1",
+        "acquia/memcache-settings": "^1.0",
+        "acquia/site_studio_webform": "dev-main",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.6",
         "drupal/acquia_connector": "^3.0",
@@ -24,7 +26,7 @@
         "drupal/admin_toolbar": "^3.0",
         "drupal/better_exposed_filters": "^5.0@beta",
         "drupal/chosen": "^3.0",
-        "drupal/conditional_fields": "^1.0@alpha",
+        "drupal/conditional_fields": "^4.0@alpha",
         "drupal/config_ignore": "^2.3",
         "drupal/config_split": "^2.0@beta",
         "drupal/config_split_ignore": "^1.9",
@@ -32,43 +34,54 @@
         "drupal/context_entity_field": "1.x-dev@dev",
         "drupal/cookiepro": "^2.0",
         "drupal/core-composer-scaffold": "^9",
-        "drupal/core-recommended": "9.1.8",
+        "drupal/core-recommended": "9.2.0",
         "drupal/critical_css": "^1.17",
         "drupal/ctools": "^3.6",
         "drupal/devel": "^4.1",
         "drupal/diff": "^1.0",
         "drupal/easy_breadcrumb": "^1.13",
+        "drupal/editor_advanced_link": "^2.0",
         "drupal/entity_browser": "^2.5",
         "drupal/entity_embed": "^1.1",
         "drupal/extlink": "^1.6",
         "drupal/feeds": "^3.0@alpha",
         "drupal/feeds_tamper": "^2.0@beta",
         "drupal/field_group": "^3.1",
+        "drupal/geolocation": "^3.5",
         "drupal/gtm": "^1.6",
         "drupal/honeypot": "^2.0",
         "drupal/http_cache_control": "^2.0",
         "drupal/iframe": "^2.8",
+        "drupal/imageapi_optimize": "^4.0@beta",
+        "drupal/imageapi_optimize_resmushit": "^2.0@beta",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/link_attributes": "^1.11",
         "drupal/linkit": "5.0.0-beta12",
         "drupal/masquerade": "^2.0@beta",
-        "drupal/media_acquiadam": "^1.47",
+        "drupal/media_acquiadam": "^1.48",
+        "drupal/media_video_micromodal": "1.x-dev@dev",
+        "drupal/memcache": "2.x-dev@dev",
         "drupal/menu_admin_per_menu": "^1.3",
         "drupal/menu_block": "^1.6",
         "drupal/menu_item_extras": "^2.14",
         "drupal/menu_link_attributes": "^1.2",
         "drupal/menu_per_role": "^1.2",
+        "drupal/migrate_plus": "^5.1",
+        "drupal/migrate_source_csv": "^3.4",
+        "drupal/migrate_tools": "^5.0",
         "drupal/moderation_dashboard": "^1.0@beta",
         "drupal/mysql56": "^1.0@beta",
         "drupal/paragraphs": "^1.12",
         "drupal/pathauto": "^1.8",
         "drupal/pathauto_menu_link": "1.x-dev",
+        "drupal/purge": "^3.0",
+        "drupal/purge_purger_http": "^1.0",
         "drupal/qa_accounts": "1.x-dev@dev",
         "drupal/rabbit_hole": "^1.0@beta",
         "drupal/recaptcha": "^3.0",
         "drupal/redirect": "^1.6",
+        "drupal/responsive_tables_filter": "^1.7",
         "drupal/scheduler": "^1.3",
-        "drupal/search404": "^2.0",
         "drupal/search_api": "^1.19",
         "drupal/search_api_attachments": "^1.0@beta",
         "drupal/seckit": "^2.0",
@@ -110,9 +123,7 @@
                     "path": "docroot/core/assets/scaffold/files/default.settings.php",
                     "overwrite": false
                 },
-                "[web-root]/.htaccess": {
-                    "append": "patches/htaccess-ssl.txt"
-                }
+                "[web-root]/.htaccess": false
             },
             "gitignore": true
         },
@@ -160,23 +171,23 @@
             "drupal/field_group": {
                 "Conditional Fields support": "https://www.drupal.org/files/issues/2019-12-10/field_group-support_conditional_fields-3099051-6.patch"
             },
-            "drupal/conditional_fields": {
-                "Notice: Trying to access array offset on value of type null\n": "https://www.drupal.org/files/issues/2021-01-21/3191984-3-notice-trying-to-access-offset-on-value-of-type-null.patch"
-            },
             "acquia/cohesion": {
                 "Allow master templates to use to be defined at route level.\n": "patches/cohesion-master-template-by-route.patch"
             },
             "drupal/simplesamlphp_auth": {
                 "fix roles": "https://www.drupal.org/files/issues/2020-07-13/simplesamlphp_auth-role_assignment-2894945-11.patch"
             },
-            "drupal/media_acquiadam": {
-                "Module only themed to work with SEVEN": "https://www.drupal.org/files/issues/2021-04-27/module-theming-3210805-1_0.patch"
-            },
             "drupal/diff": {
                 "Filter Revision Overview By Date": "https://www.drupal.org/files/issues/2021-05-06/filter-revision-overview-by-date-3212653-1.patch"
             },
             "sunra/php-simple-html-dom-parser": {
                 "Update simple_html_dom.php": "https://patch-diff.githubusercontent.com/raw/sunra/php-simple-html-dom-parser/pull/78.patch"
+            },
+            "drupal/feeds": {
+                "Undefined Index: allowed_extensions AJAX error when creating feed types.": "https://www.drupal.org/files/issues/2019-02-06/3031019-undefined-index-ajax-2.patch"
+            },
+            "drupal/redirect": {
+                "Feeds: redirects_source field target class.": "https://www.drupal.org/files/issues/2019-04-09/redirect-feeds-target-3046873-1-8.patch"
             }
         }
     },
@@ -192,6 +203,10 @@
         "blt-site-studio": {
             "type": "vcs",
             "url": "https://github.com/davidtrainer/blt-site-studio.git"
+        },
+        "site-studio-webform": {
+            "type": "vcs",
+            "url": "https://github.com/pavlosdan/site_studio_webform.git"
         },
         "chosen": {
             "type": "package",
@@ -211,10 +226,5 @@
     "require-dev": {
         "acquia/blt-drupal-vm": "dev-master",
         "drupal/console": "~1.0"
-    },
-    "scripts": {
-        "post-drupal-scaffold-cmd": [
-            "cd docroot && patch -p1 <../patches/htaccess-saml.patch"
-        ]
     }
 }

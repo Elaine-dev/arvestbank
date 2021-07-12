@@ -1,0 +1,33 @@
+uuid: d87a70f7-e3a3-4c7a-8bda-01e00ccdfeb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_field_callout_phone_number
+    - node.type.campaign_page
+    - node.type.cta_phone_number
+  content:
+    - 'node:cta_phone_number:efe18be3-3f59-4c97-8590-59e7b1e13406'
+id: node.campaign_page.field_field_callout_phone_number
+field_name: field_field_callout_phone_number
+entity_type: node
+bundle: campaign_page
+label: 'Toll Free Phone Number'
+description: 'Select the telephone number that will appear in the page heading.'
+required: true
+translatable: true
+default_value:
+  -
+    target_uuid: efe18be3-3f59-4c97-8590-59e7b1e13406
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      cta_phone_number: cta_phone_number
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

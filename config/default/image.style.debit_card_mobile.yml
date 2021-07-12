@@ -1,0 +1,15 @@
+uuid: 3213c9f5-4ea0-492e-b944-8b7faca65039
+langcode: en
+status: true
+dependencies: {  }
+name: debit_card_mobile
+label: 'Debit Card Mobile'
+effects:
+  12b3366c-f78d-424b-882e-b51061109a2c:
+    uuid: 12b3366c-f78d-424b-882e-b51061109a2c
+    id: image_scale
+    weight: 1
+    data:
+      width: 250
+      height: null
+      upscale: false

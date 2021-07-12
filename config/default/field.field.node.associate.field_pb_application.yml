@@ -1,0 +1,23 @@
+uuid: 9f01c45d-ce0b-4de1-8812-cc6da1de8fea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pb_application
+    - node.type.associate
+  module:
+    - link
+id: node.associate.field_pb_application
+field_name: field_pb_application
+entity_type: node
+bundle: associate
+label: 'PB Application'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

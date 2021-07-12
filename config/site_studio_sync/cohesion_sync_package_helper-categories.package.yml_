@@ -1,4 +1,3 @@
-
 -
   type: cohesion_sync_package
   export:
@@ -8,9 +7,9 @@
     dependencies: {  }
     id: pack_helper_categories
     label: 'Helper Categories'
-    description: "A Site Studio package for all helper categories.\r\nAuthor: Aaron Parkening / Last update: 5/7/2021"
+    description: 'All helper categories. Updated: Aaron Parkening 6/24/2021'
     excluded_entity_types: '[]'
-    settings: '{"179b546b-c18c-4c08-a0e4-bffedcb8721f":{"type":"cohesion_helper_category","items":{"179b546b-c18c-4c08-a0e4-bffedcb8721f":{"type":"cohesion_helper_category"}},"checked":true},"93a5f555-dc7c-4cfb-bff5-7562b2577037":{"type":"cohesion_helper_category","items":{"93a5f555-dc7c-4cfb-bff5-7562b2577037":{"type":"cohesion_helper_category"}},"checked":true},"09067ec0-23ea-431b-8fba-136cf873464c":{"type":"cohesion_helper_category","items":{"09067ec0-23ea-431b-8fba-136cf873464c":{"type":"cohesion_helper_category"}},"checked":true},"38203168-34b3-4f93-94ea-904da5394b07":{"type":"cohesion_helper_category","items":{"38203168-34b3-4f93-94ea-904da5394b07":{"type":"cohesion_helper_category"}},"checked":true},"77eed4be-0ec4-4440-90bc-6f6f068d8178":{"type":"cohesion_helper_category","items":{"77eed4be-0ec4-4440-90bc-6f6f068d8178":{"type":"cohesion_helper_category"}},"checked":true},"23c8fd5b-15ca-4e68-80be-59846f48ca58":{"type":"cohesion_helper_category","items":{"23c8fd5b-15ca-4e68-80be-59846f48ca58":{"type":"cohesion_helper_category"}},"checked":true}}'
+    settings: '{"179b546b-c18c-4c08-a0e4-bffedcb8721f":{"type":"cohesion_helper_category","items":{"179b546b-c18c-4c08-a0e4-bffedcb8721f":{"type":"cohesion_helper_category"}},"checked":true},"93a5f555-dc7c-4cfb-bff5-7562b2577037":{"type":"cohesion_helper_category","items":{"93a5f555-dc7c-4cfb-bff5-7562b2577037":{"type":"cohesion_helper_category"}},"checked":true},"09067ec0-23ea-431b-8fba-136cf873464c":{"type":"cohesion_helper_category","items":{"09067ec0-23ea-431b-8fba-136cf873464c":{"type":"cohesion_helper_category"}},"checked":true},"38203168-34b3-4f93-94ea-904da5394b07":{"type":"cohesion_helper_category","items":{"38203168-34b3-4f93-94ea-904da5394b07":{"type":"cohesion_helper_category"}},"checked":true},"77eed4be-0ec4-4440-90bc-6f6f068d8178":{"type":"cohesion_helper_category","items":{"77eed4be-0ec4-4440-90bc-6f6f068d8178":{"type":"cohesion_helper_category"}},"checked":true},"4c0fa183-c51e-4b7e-8db4-9ad8ae5a024c":{"type":"cohesion_helper_category","items":{"4c0fa183-c51e-4b7e-8db4-9ad8ae5a024c":{"type":"cohesion_helper_category"}},"checked":true},"1c8eaceb-352d-440f-b6ca-cfa314420414":{"type":"cohesion_helper_category","items":{"1c8eaceb-352d-440f-b6ca-cfa314420414":{"type":"cohesion_helper_category"}},"checked":true}}'
 -
   type: cohesion_helper_category
   export:
@@ -104,7 +103,7 @@
 -
   type: cohesion_helper_category
   export:
-    uuid: 23c8fd5b-15ca-4e68-80be-59846f48ca58
+    uuid: 4c0fa183-c51e-4b7e-8db4-9ad8ae5a024c
     langcode: en
     status: true
     dependencies: {  }
@@ -117,3 +116,19 @@
     selectable: true
     class: category-14
     weight: -5
+-
+  type: cohesion_helper_category
+  export:
+    uuid: 1c8eaceb-352d-440f-b6ca-cfa314420414
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: hlp_cat_campaign_page_helpers
+    label: 'Campaign helpers'
+    json_values: '{}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    modified: false
+    selectable: true
+    class: category-9
+    weight: -4

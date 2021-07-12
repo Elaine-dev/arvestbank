@@ -1,0 +1,35 @@
+langcode: en
+activate: true
+mail_attr: 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'
+unique_id: 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'
+user_name: 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress'
+auth_source: prod-sp
+login_link_show: true
+login_link_display_name: 'Federated login'
+header_no_cache: true
+role:
+  population: "enterprise_admin:http://schemas.xmlsoap.org/ws/2005/05/identity/claims/assigned.role,~=,enterprise_admin|domain_admin:http://schemas.xmlsoap.org/ws/2005/05/identity/claims/assigned.role,~=,domain_admin|site_editor:http://schemas.xmlsoap.org/ws/2005/05/identity/claims/assigned.role,~=,site_editor|contributor:http://schemas.xmlsoap.org/ws/2005/05/identity/claims/assigned.role,~=,contributor|reviewer:http://schemas.xmlsoap.org/ws/2005/05/identity/claims/assigned.role,~=,reviewer"
+  eval_every_time: true
+register_users: true
+allow:
+  set_drupal_pwd: true
+  default_login: true
+  default_login_roles:
+    reviewer: reviewer
+    authenticated: authenticated
+    contributor: contributor
+    site_editor: site_editor
+    domain_admin: domain_admin
+    enterprise_admin: enterprise_admin
+  default_login_users: '1'
+logout_goto_url: /homepage
+user_register_original: visitors_admin_approval
+sync:
+  mail: true
+  user_name: true
+autoenablesaml: false
+debug: false
+secure: true
+httponly: true
+_core:
+  default_config_hash: RMy8ch2MOT68bCD63OGZQRdMk2pD6UXPEZMuCIisbfs

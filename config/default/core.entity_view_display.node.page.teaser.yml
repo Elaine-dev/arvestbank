@@ -9,8 +9,10 @@ dependencies:
     - field.field.node.page.field_button_links
     - field.field.node.page.field_callout_layout_optio
     - field.field.node.page.field_callout_title
+    - field.field.node.page.field_disable_sidebar_ad
     - field.field.node.page.field_disclosure
     - field.field.node.page.field_featured_image
+    - field.field.node.page.field_featured_video
     - field.field.node.page.field_field_callout_phone_number
     - field.field.node.page.field_layout_canvas
     - field.field.node.page.field_meta_tags
@@ -18,6 +20,7 @@ dependencies:
     - field.field.node.page.field_print_button_text
     - field.field.node.page.field_rendered_node
     - field.field.node.page.field_second_callout
+    - field.field.node.page.field_second_callout_icon
     - field.field.node.page.field_second_callout_label
     - field.field.node.page.field_second_callout_link
     - field.field.node.page.field_yoast_seo
@@ -53,8 +56,10 @@ hidden:
   field_button_links: true
   field_callout_layout_optio: true
   field_callout_title: true
+  field_disable_sidebar_ad: true
   field_disclosure: true
   field_featured_image: true
+  field_featured_video: true
   field_field_callout_phone_number: true
   field_layout_canvas: true
   field_meta_tags: true
@@ -62,6 +67,7 @@ hidden:
   field_print_button_text: true
   field_rendered_node: true
   field_second_callout: true
+  field_second_callout_icon: true
   field_second_callout_label: true
   field_second_callout_link: true
   field_yoast_seo: true

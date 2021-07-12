@@ -1,0 +1,7 @@
+services:
+  logger.channel.arvestbank_webforms:
+    parent: logger.channel_base
+    arguments: ['arvestbank_webforms']
+  arvestbank_webforms.financing_options:
+    class: Drupal\arvestbank_webforms\FinancingOptionsService
+    arguments: []

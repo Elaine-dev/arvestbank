@@ -1,0 +1,21 @@
+uuid: 9b9efaff-5785-4c2e-b084-b38fba16275f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_support_text
+    - node.type.landing_page
+  module:
+    - text
+id: node.landing_page.field_support_text
+field_name: field_support_text
+entity_type: node
+bundle: landing_page
+label: 'Support Text'
+description: 'This will provide text content to the Support Card component beneath the sidebar navigation on the left.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

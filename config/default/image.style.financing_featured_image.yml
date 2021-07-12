@@ -1,0 +1,16 @@
+uuid: 2bd92092-9ce9-460b-bf1b-fee21b785bc7
+langcode: en
+status: true
+dependencies: {  }
+name: financing_featured_image
+label: 'Financing Featured Image'
+effects:
+  11ea5043-16bd-43aa-97b2-30456a82827d:
+    uuid: 11ea5043-16bd-43aa-97b2-30456a82827d
+    id: image_scale
+    weight: 1
+    data:
+      width: 274
+      height: null
+      upscale: false
+pipeline: __default__

@@ -1,0 +1,16 @@
+uuid: 47fdb024-d14c-4272-a8da-85d5b19a8445
+langcode: en
+status: true
+dependencies: {  }
+name: tile_main
+label: 'Tile Exit Page'
+effects:
+  62d87778-63aa-4a61-a46e-5723c3551966:
+    uuid: 62d87778-63aa-4a61-a46e-5723c3551966
+    id: image_scale
+    weight: 1
+    data:
+      width: 614
+      height: null
+      upscale: false
+pipeline: __default__

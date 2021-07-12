@@ -1,0 +1,10 @@
+uuid: aad46749-13d3-4b8f-914b-805a06d5f0f0
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.thumbnail_overlay
+label: 'Thumbnail Overlay'
+targetEntityType: media
+cache: true

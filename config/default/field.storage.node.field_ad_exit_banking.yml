@@ -1,0 +1,19 @@
+uuid: a8bf4fc3-fa8b-4af9-b6fa-3d28db964794
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_ad_exit_banking
+field_name: field_ad_exit_banking
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

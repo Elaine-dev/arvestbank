@@ -27,7 +27,7 @@
     modified: true
     selectable: true
     class_name: .coh-style-float-left
-    custom_style_type: layout
-    available_in_wysiwyg: false
+    custom_style_type: generic
+    available_in_wysiwyg: true
     parent: null
     weight: 0

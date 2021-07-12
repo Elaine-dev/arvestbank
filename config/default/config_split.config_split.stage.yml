@@ -12,12 +12,14 @@ module:
   shield: 0
   syslog: 0
   qa_accounts: 0
+  simplesamlphp_auth: 0
 theme: {  }
 blacklist: {  }
 graylist:
   - shield.settings
   - system.performance
-  - qa_accounts.settings.yml
+  - qa_accounts.settings
+  - gtm.settings
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0

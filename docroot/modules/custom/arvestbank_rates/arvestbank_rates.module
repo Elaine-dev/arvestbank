@@ -8,6 +8,7 @@
 use Drupal\Core\Render\BubbleableMetadata;
 use Drupal\Core\Entity\EntityInterface;
 use Sunra\PhpSimple\HtmlDomParser;
+use Drupal\Core\Cache\Cache;
 
 /**
  * Implements hook_token_info().
@@ -73,15 +74,24 @@ function arvestbank_rates_tokens($type, $tokens, array $data, array $options, Bu
     // If we have a config value with the same name as this token.
     if (isset($ratesConfigValues[$name])) {
 
-      // If it's a date token.
+      // If it's an explicitly set date token.
       if (isset($dateTokenFormats[$name])) {
+        // Replace with formatted date.
         $replacements[$original] = date(
           $dateTokenFormats[$name],
           strtotime($ratesConfigValues[$name])
         );
       }
+      // If it's a deposit rate effective date token.
+      elseif (preg_match('/__effectivedate$/', $name)) {
+        $replacements[$original] = date(
+          'F j, Y',
+          strtotime($ratesConfigValues[$name])
+        );
+      }
       // If it's a normal nondate token.
       else {
+        // Replace with unaltered config value.
         $replacements[$original] = $ratesConfigValues[$name];
       }
 
@@ -94,6 +104,8 @@ function arvestbank_rates_tokens($type, $tokens, array $data, array $options, Bu
 
 /**
  * Implements hook_entity_presave().
+ *
+ * Populates rendered node field for applicable nodes.
  *
  * @inheritDoc
  */
@@ -116,8 +128,18 @@ function arvestbank_rates_entity_presave(EntityInterface $entity) {
     $activeTheme = \Drupal::service('theme.initialization')->getActiveThemeByName('arvestbank_theme');
     // Set active theme to front end.
     \Drupal::theme()->setActiveTheme($activeTheme);
-    // Render node with front end theme.
-    $renderedNode = \Drupal::service('renderer')->render($nodeRenderArray)->__toString();
+    // Before we render the node invalidate cache tags so we get new data.
+    Cache::invalidateTags($entity->getCacheTagsToInvalidate());
+    // If we have a render context (not run from drush).
+    if (\Drupal::service('renderer')->hasRenderContext()) {
+      // Render node with front end theme.
+      $renderedNode = \Drupal::service('renderer')->render($nodeRenderArray)->__toString();
+    }
+    // If we don't have a render context (run from drush).
+    else {
+      // Render node with front end theme.
+      $renderedNode = \Drupal::service('renderer')->renderPlain($nodeRenderArray)->__toString();
+    }
     // Set active theme back to what it was.
     \Drupal::theme()->setActiveTheme($currentActiveTheme);
 
@@ -130,8 +152,41 @@ function arvestbank_rates_entity_presave(EntityInterface $entity) {
       $renderedNodeContent .= $element->innertext();
     }
 
+    // If we didn't find content that way save the whole thing.
+    if ($renderedNodeContent == '') {
+      $renderedNodeContent = $renderedNode;
+    }
+
     // Set the field value.
     $entity->set('field_rendered_node', $renderedNodeContent);
+
+  }
+
+}
+
+/**
+ * Implements hook_cron().
+ *
+ * Updates deposit rates daily.
+ *
+ * @inheritDoc
+ */
+function arvestbank_rates_cron() {
+
+  // Get the last time this cron decided to run it's import.
+  $lastFetch = \Drupal::state()->get('arvestbank_rates.last_import', 0);
+
+  // If we last ran our action a day or more ago.
+  if (REQUEST_TIME - $lastFetch >= 86400) {
+
+    // Get deposit rates helper.
+    $depositRatesHelper = \Drupal::service('arvestbank_rates.deposit_rates_helper');
+
+    // Update Deposit Rates.
+    $depositRatesHelper->updateDepositRates();
+
+    // Record that we just ran that import.
+    \Drupal::state()->set('arvestbank_rates.last_import', REQUEST_TIME);
 
   }
 

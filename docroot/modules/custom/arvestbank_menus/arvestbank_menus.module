@@ -20,8 +20,12 @@ use Drupal\Core\Render\BubbleableMetadata;
  */
 function arvestbank_menus_form_node_form_alter(&$form, FormStateInterface &$form_state, $form_id) {
 
-  // Add an afterbuild for the menu link altering functionality.
-  $form['#after_build'][] = '_arvestbank_menus_node_form_canonical_menu_link_alters';
+  // Add an afterbuild for the menu link altering functionality
+  // if form hasn't been submitted.
+  // $form_state->isSubmitted() and form storage aren't working here.
+  if (!isset($_POST) || !count($_POST)) {
+    $form['#after_build'][] = '_arvestbank_menus_node_form_canonical_menu_link_alters';
+  }
 
   // Add a submit function to make the menu link canonical on save.
   $form['actions']['submit']['#submit'][] = '_arvestbank_menus_node_form_submit';
@@ -74,15 +78,27 @@ function arvestbank_menus_block_view_menu_block_alter(&$build, &$plugin) {
   // Get menu this is for.
   $thisMenuName = str_replace('menu_block:', '', $plugin->getPluginId());
 
-  // If this is one of our sidebar blocks on a node or term.
+  // If this is one of our sidebar blocks on a node or term
+  // and it's not the education center menu which we don't want to alter.
   if (
     $entity
     && isset(SidebarMenuBlock::MENU_SIDEBAR_BLOCKS[$thisMenuName])
+    && $thisMenuName != 'education-center-menu'
   ) {
 
     // Get canonical menu link.
     $canonicalMenuLinkHelper = \Drupal::service('arvestbank_menus.canonical_menu_link_helper');
-    $canonicalMenuLinkId = $canonicalMenuLinkHelper->getCanonicalMenuLinkIds($entity->id(), TRUE);
+
+    // On revision pages $entity is a string.
+    if (is_string($entity)) {
+      // Get canonical link for this entity.
+      $canonicalMenuLinkId = $canonicalMenuLinkHelper->getCanonicalMenuLinkIds($entity, TRUE);
+    }
+    // For non-revision pages $entity is an object.
+    else {
+      // Get canonical link for this entity.
+      $canonicalMenuLinkId = $canonicalMenuLinkHelper->getCanonicalMenuLinkIds($entity->id(), TRUE);
+    }
 
     // Load the menu link content entity.
     if ($canonicalMenuLinkId) {
@@ -92,7 +108,7 @@ function arvestbank_menus_block_view_menu_block_alter(&$build, &$plugin) {
     // Get menu block settings.
     $menuBlockSettings = $build['#block']->get('settings');
 
-    // If this node has a canonical menu link with no children.
+    // If this entity has a canonical menu link with no children.
     if (
       $entity
       && isset($canonicalMenuLink)

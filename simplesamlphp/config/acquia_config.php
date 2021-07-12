@@ -20,8 +20,8 @@
 
 // Set some security and other configs that are set above, however we
 // overwrite them here to keep all changes in one area.
-$config['technicalcontact_name'] = "Your Name";
-$config['technicalcontact_email'] = "your_email@yourdomain.com";
+$config['technicalcontact_name'] = "Allie Jones";
+$config['technicalcontact_email'] = "allie.jones@acquia.com";
 
 // Change these for your installation.
 $config['secretsalt'] = 'mysecretsalt';

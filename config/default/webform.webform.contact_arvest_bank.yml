@@ -1,7 +1,9 @@
 uuid: 422b5250-b669-4d3c-9881-4d3dc74c0a9a
 langcode: en
 status: open
-dependencies: {  }
+dependencies:
+  module:
+    - arvestbank_webtools_api
 open: null
 close: null
 weight: 0
@@ -12,7 +14,237 @@ id: contact_arvest_bank
 title: 'Contact Arvest Bank'
 description: 'Arvest Bank drop down with different answers. *select General Banking Subject or Inquiry from dropdown.'
 category: ''
-elements: "header_markup:\n  '#type': webform_markup\n  '#markup': |\n    <h2>Email Customer Service</h2>\n    <p>Have a general banking or service question?  Use the email form below.</p>\n    <p>Please note, inquiries related to account-specific topics such as balance, address, transactions, passwords, and debit cards cannot be answered using this form. Please <a href=\"/contact/banking\">contact us by telephone</a> or send a secure message from inside of Arvest Online Banking. To log in to Arvest Online Banking, use the \"Log In To...\" menu at the top right of this page.</p>\n    \nsubject:\n  '#type': select\n  '#title': 'Choose a subject from the list below to begin your email:'\n  '#options':\n    online: 'Online Banking Password Reset or Enrollment'\n    personal_info: 'Update Personal Contact Information and/or email address'\n    specific_amt: 'Specific Account or Loan Transaction Detail Questions'\n    od_nsf_item: 'Question about an Overdraft or NSF Item'\n    lost_stolen_card: 'Report Lost or Stolen Card or Order Replacement Card'\n    card_dispute: 'Report a Debit Card or Credit Card Transaction Dispute'\n    billpay: 'Online BillPay Help'\n    general: 'General Banking Subject or Inquiry'\n    checks: 'Ordering or Reordering Checks'\n    travel: 'Notify the Bank of Travel Plans'\n    mod_close_acct: 'Modify or Close an Account'\n  '#empty_option': 'Select:'\n  '#empty_value': select\nonline_markup:\n  '#type': webform_markup\n  '#states':\n    visible:\n      ':input[name=\"subject\"]':\n        value: online\n  '#markup': |\n    <p>To protect your privacy, we are not able to reset your Arvest Online Banking password or provide your Login ID through email because we cannot properly verify your identity.</p>\n    <p>You can reset your Online Banking <a href=\"/personal/signon/logon/&amp;q=passwordreset\">password here</a>&nbsp;and <a href=\"/personal/signon/logon/logonid\">Login ID</a> here. Enter your information in the requested fields and select the red “Submit” button for your next steps.</p>\n    <p>Learn more about Online Banking by viewing the online <a href=\"//www.youtube.com/embed/0FHXv0GTKs8?autoplay=1\">demo</a> or try finding answers with <a href=\"/askarvest\">Ask Arvest</a>.</p>\n    \npersonal_info_markup:\n  '#type': webform_markup\n  '#states':\n    visible:\n      ':input[name=\"subject\"]':\n        value: personal_info\n  '#markup': |\n    <p>To protect your privacy, we are not able to update your personal contact information through email because we cannot properly verify your identity.</p>\n    <p><strong>As an Arvest Online Banking user, you can update your email address and other personal contact information by sending your new information via a secure message to Customer Service.</strong></p>\n    <ol>\n        <li>Log in by selecting Arvest Online Banking in the \"LOG IN TO...\" drop down found at the top right of this page</li>\n        <li>Once logged in, select \"Alerts &amp; Messages\".  Then select, \"Send Message\"</li>\n        <li>Select your nearest city, compose a message with your new information, click \"Preview\" and then \"Submit\"</li>\n    </ol>\n    <p><strong>You can also call us toll-free at (866) 952-9523.</strong> A Customer Service Associate will be able to complete the identification process and assist with your request.</p>\n    <p>Our Customer Contact Center is available from 7:00 a.m. – 8:00 p.m. Monday through Friday and from 8:00 a.m. – 5:00 p.m. on Saturdays.</p>\n    \nspecific_amt_markup:\n  '#type': webform_markup\n  '#states':\n    visible:\n      ':input[name=\"subject\"]':\n        value: specific_amt\n  '#markup': |\n    <p>To protect your privacy, we are not able to answer specific questions related to your account through email because we cannot properly verify your identity.</p>\n    <p><strong>Please call us toll-free at (866) 952-9523 to discuss details of your account or account activity.</strong><br>\n    A Customer Service Associate will be able to complete the identification process and assist with your request. For general questions about our product and services not related to a specific account # or transaction, <a href=\"/contact/banking\">contact us here.</a></p>\n    <p>Our Customer Contact Center is available from 7:00 a.m. – 8:00 p.m. Monday through Friday and from 8:00 a.m. – 5:00 p.m. on Saturdays.</p>\n    \nod_nsf_item_markup:\n  '#type': webform_markup\n  '#states':\n    visible:\n      ':input[name=\"subject\"]':\n        value: od_nsf_item\n  '#markup': |\n    <p>To protect your privacy, we are not able to answer specific to provide or confirm specific account information regarding overdrafts or insufficient funds items through email because we cannot properly verify your identity.</p>\n    <p><strong>Please call us toll-free at (866) 952-9523 to inquire about an overdraft or insufficient funds item.</strong> A Customer Service Associate will be able to complete the identification process and assist you with your request.</p>\n    <p>Our Customer Contact Center is available from 7:00 a.m. – 8:00 p.m. Monday through Friday and from 8:00 a.m. – 5:00 p.m. on Saturdays.</p>\n    <p>Learn more about <a href=\"/personal/bank/checking/overdraft-coverage-options\">Overdraft Coverage Options</a>, <a href=\"/personal/bank/checking/overdraft-coverage-options/reduce\">How to Avoid or Reduce Overdrafts</a>, <a href=\"/personal/bank/checking/overdraft-coverage-options/what-you-need-to-know-about-overdrafts\">What You Need to Know About Overdrafts</a>, or try finding answers with <a href=\"/askarvest\">Ask Arvest</a>.</p>\n    \nlost_stolen_card_markup:\n  '#type': webform_markup\n  '#states':\n    visible:\n      ':input[name=\"subject\"]':\n        value: lost_stolen_card\n  '#markup': |\n    <p><strong>Report a Debit Card Lost or Stolen:</strong><br>\n    We understand that when your debit card is lost or stolen it can cause concern for our customers.<br>\n    We have a variety of ways in which you can quickly contact us to deactivate your debit card:</p>\n    <ul>\n        <li>During our business hours of 7:00 a.m.-8:00 p.m. and Saturday from 8:00 a.m.-5:00 p.m., please call (866) 952-9523 for assistance.</li>\n        <li>Call our Account Information Line any day or time at (800) 601-8655. Note: You may need to know your lost card’s 16 digit number to use this option.</li>\n    </ul>\n    <p><strong>Report a Credit Card Lost or Stolen:</strong><br>\n    Please call (800) 356-8085 for assistance.</p>\n    <p><strong>Order a Replacement Card:</strong><br>\n    To protect your privacy, we are not able to order a new or replacement card through email because we cannot properly verify your identity. To order a replacement:</p>\n    <p><strong>Debit Card Orders</strong> - Please call us toll-free at (866) 952-9523 to order a debit card. Arvest offers specialty card or local affinity card <a href=\"/personal/bank/checking/debit-cards/specialty\">art options</a> for you to choose from. Our Customer Contact Center is available from 7:00 a.m. – 8:00 p.m. Monday through Friday and from 8:00 a.m. – 5:00 p.m. on Saturdays.</p>\n    <p><strong>Credit Card Orders</strong> - Please call us toll-free at (800) 356-8085 to order a credit card. Our Arvest Credit Card Division is available from 8:00 a.m. – 6:00 p.m. Monday through Friday and from 8:00 a.m. – 5:00 p.m. on Saturdays.</p>\n    \ncard_dispute_markup:\n  '#type': webform_markup\n  '#states':\n    visible:\n      ':input[name=\"subject\"]':\n        value: card_dispute\n  '#markup': |\n    <p>Arvest offers a variety of ways for our customers to dispute debit card and credit card transactions. To file a dispute, please choose from the following:</p>\n    <ul>\n        <li>To dispute an Arvest debit card transaction please call us toll-free at (866) 952-9523 for personal assistance. A Customer Service Associate will be able to assist you with your dispute request. For your convenience, our Contact Center is available from 8:00 a.m. – 8:00 p.m. Monday through Friday and from 8:00 a.m. – 5:00 p.m. on Saturdays.</li>\n    </ul>\n    <ul>\n        <li>To dispute an Arvest credit card transaction, please complete the <a href=\"/personal/bank/credit-cards/dispute\">Credit Card Dispute form</a>.\n            <ul>\n                <li>If you prefer to contact us via phone, please call us toll-free at (800) 356-8085 to file a credit card dispute. A Customer Service Associate will be able to assist you with your dispute request. For your convenience, our Arvest Credit Card Division is available from 8:00 a.m. – 6:00 p.m. Monday through Friday and from 8:00 a.m. – 5:00 p.m. on Saturdays.</li>\n            </ul>\n        </li>\n    </ul>\n    \nbillpay_markup:\n  '#type': webform_markup\n  '#states':\n    visible:\n      ':input[name=\"subject\"]':\n        value: billpay\n  '#markup': |\n    <p>If you are having difficulty accessing our Online BillPay service or have a question, we are not able to help through email because we cannot properly verify your identity.</p>\n    <p><strong>Please call us toll-free at (866) 952-9523 for assistance with Online BillPay.</strong> A Customer Service Associate will be able to complete the identification process and assist you with your request.</p>\n    <p>Our Customer Contact Center is available from 7:00 a.m. – 8:00 p.m. Monday through Friday and from 8:00 a.m. – 5:00 p.m. on Saturdays.</p>\n    <p><strong>To address a stop payment on a check through Online BillPay</strong><br>\n        For online bill payments, we need to speak with you to address any payment change requests. Please call the customer service number listed above for assistance.</p>\n    <p>Learn more about Online BillPay by viewing the online <a href=\"//www.youtube.com/embed/VupHyeZ5j38?autoplay=1\">demo</a> or try finding answers with <a href=\"/askarvest\">Ask Arvest</a>.</p>\n    \nchecks_markup:\n  '#type': webform_markup\n  '#states':\n    visible:\n      ':input[name=\"subject\"]':\n        value: checks\n  '#markup': |\n    <p>Arvest offers a variety of ways to reorder checks for your account. We cannot accept check orders through email, please choose one of the following:</p>\n    <ul>\n        <li>Order checks or reorder checks online:<br>\n            1. Log in to Online Banking<br>\n            2. Click the “Services” tab and choose \"Order Checks\"<br>\n            3. Select the correct account from the drop down menu and click submit.<br>\n            <em>Note: If the name or address on your printed checks has changed, please call instead of ordering online.</em>\n        </li>\n        <li>Order checks or reorder checks at a nearby <a href=\"/branch-locator\">branch location</a>.</li>\n        <li>To reorder checks by phone, please call (877) 838-5287 and please have your 10 digit checking account number available. To reorder business checks call (800) 252-3414.<br>\n        <em>Note: For a first time check order, please visit a <a href=\"/branch-locator\">branch location</a> or call (866) 952-9523 for assistance.</em></li>\n    </ul>\n    \ntravel_markup:\n  '#type': webform_markup\n  '#states':\n    visible:\n      ':input[name=\"subject\"]':\n        value: travel\n  '#markup': |\n    <p class=\"mt-20\">Notifying the bank prior to travel can assist us in helping protect your accounts and cards. We are not able to add a note to your account about travel plans through email because we cannot properly verify your identity.</p>\n    <p><strong>Please call us toll-free at (866) 952-9523 to notify the bank of future travel plans.</strong> A Customer Service Associate will be able to complete the identification process and assist with your request.</p>\n    <p>Our Customer Contact Center is available from 7:00 a.m. – 8:00 p.m. Monday through Friday and from 8:00 a.m. – 5:00 p.m. on Saturdays.</p>\n    \nmod_close_acct_markup:\n  '#type': webform_markup\n  '#states':\n    visible:\n      ':input[name=\"subject\"]':\n        value: mod_close_acct\n  '#markup': |\n    <p>To protect your privacy, we are not able to change the status of your account through email because we cannot properly verify your identity.</p>\n    <p><strong>Please call us toll-free at (866) 952-9523 to modify or close your account.</strong> A Customer Service Associate will be able to complete the identification process and assist you with your request.</p>\n    <p>Our Customer Contact Center is available from 7:00 a.m. – 8:00 p.m. Monday through Friday and from 8:00 a.m. – 5:00 p.m. on Saturdays.</p>\n    \ninquiry_form:\n  '#type': fieldset\n  '#title': inquiry_form\n  '#title_display': invisible\n  '#states':\n    visible:\n      ':input[name=\"subject\"]':\n        value: general\n  branch_location:\n    '#type': webform_term_select\n    '#title': 'Branch Location'\n    '#required': true\n    '#vocabulary': branch_location\n    '#breadcrumb_delimiter': ''\n  name:\n    '#type': webform_name\n    '#title': Name\n    '#title__access': false\n    '#first__title': 'First Name'\n    '#first__required': true\n    '#middle__title': MI\n    '#last__title': 'Last Name'\n    '#last__required': true\n    '#suffix__access': false\n    '#degree__access': false\n  address:\n    '#type': webform_address\n    '#title': Address\n    '#address__access': false\n    '#address_2__access': false\n    '#city__title': City\n    '#city__required': true\n    '#state_province__title': State\n    '#state_province__options': state_province_codes\n    '#postal_code__access': false\n    '#country__access': false\n  email_address:\n    '#type': email\n    '#title': 'Email address'\n    '#required': true\n  phone_number:\n    '#type': tel\n    '#title': 'Phone Number'\n    '#placeholder': '(nnn) nnn-nnnn'\n    '#required': true\n  message:\n    '#type': textarea\n    '#title': Message\n    '#placeholder': 'Questions related to your balance, debit card, or address cannot be answered via this form.'\n    '#required': true\n  inquiry_markup:\n    '#type': webform_markup\n    '#markup': '<em>Note - Please make sure you can receive our email reply.  If you have spam blocking enabled, make sure arvest.com is in your email client''s approved safe list.</em>'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#states':\n    visible:\n      ':input[name=\"subject\"]':\n        value: general"
+elements: |-
+  header_markup:
+    '#type': webform_markup
+    '#markup': |
+      <h2>Email Customer Service</h2>
+      <p>Have a general banking or service question?  Use the email form below.</p>
+      <p>Please note, inquiries related to account-specific topics such as balance, address, transactions, passwords, and debit cards cannot be answered using this form. Please <a href="/contact/banking">contact us by telephone</a> or send a secure message from inside of Arvest Online Banking. To log in to Arvest Online Banking, use the "Log In To..." menu at the top right of this page.</p>
+  subject:
+    '#type': select
+    '#title': 'Choose a subject from the list below to begin your email:'
+    '#options':
+      online: 'Online Banking Password Reset or Enrollment'
+      personal_info: 'Update Personal Contact Information and/or email address'
+      specific_amt: 'Specific Account or Loan Transaction Detail Questions'
+      od_nsf_item: 'Question about an Overdraft or NSF Item'
+      lost_stolen_card: 'Report Lost or Stolen Card or Order Replacement Card'
+      card_dispute: 'Report a Debit Card or Credit Card Transaction Dispute'
+      billpay: 'Online BillPay Help'
+      general: 'General Banking Subject or Inquiry'
+      checks: 'Ordering or Reordering Checks'
+      travel: 'Notify the Bank of Travel Plans'
+      mod_close_acct: 'Modify or Close an Account'
+    '#empty_option': 'Select:'
+    '#empty_value': select
+  online_markup:
+    '#type': webform_markup
+    '#states':
+      visible:
+        ':input[name="subject"]':
+          value: online
+    '#markup': |
+      <p>To protect your privacy, we are not able to reset your Arvest Online Banking password or provide your Login ID through email because we cannot properly verify your identity.</p>
+      <p>You can reset your Online Banking <a href="/personal/signon/logon/&amp;q=passwordreset">password here</a>&nbsp;and <a href="/personal/signon/logon/logonid">Login ID</a> here. Enter your information in the requested fields and select the red “Submit” button for your next steps.</p>
+      <p>Learn more about Online Banking by viewing the online <a href="//www.youtube.com/embed/0FHXv0GTKs8?autoplay=1">demo</a> or try finding answers with <a href="/askarvest">Ask Arvest</a>.</p>
+  personal_info_markup:
+    '#type': webform_markup
+    '#states':
+      visible:
+        ':input[name="subject"]':
+          value: personal_info
+    '#markup': |
+      <p>To protect your privacy, we are not able to update your personal contact information through email because we cannot properly verify your identity.</p>
+      <p><strong>As an Arvest Online Banking user, you can update your email address and other personal contact information by sending your new information via a secure message to Customer Service.</strong></p>
+      <ol>
+          <li>Log in by selecting Arvest Online Banking in the "LOG IN TO..." drop down found at the top right of this page</li>
+          <li>Once logged in, select "Alerts &amp; Messages".  Then select, "Send Message"</li>
+          <li>Select your nearest city, compose a message with your new information, click "Preview" and then "Submit"</li>
+      </ol>
+      <p><strong>You can also call us toll-free at (866) 952-9523.</strong> A Customer Service Associate will be able to complete the identification process and assist with your request.</p>
+      <p>Our Customer Contact Center is available from 7:00 a.m. – 8:00 p.m. Monday through Friday and from 8:00 a.m. – 5:00 p.m. on Saturdays.</p>
+  specific_amt_markup:
+    '#type': webform_markup
+    '#states':
+      visible:
+        ':input[name="subject"]':
+          value: specific_amt
+    '#markup': |
+      <p>To protect your privacy, we are not able to answer specific questions related to your account through email because we cannot properly verify your identity.</p>
+      <p><strong>Please call us toll-free at (866) 952-9523 to discuss details of your account or account activity.</strong><br>
+      A Customer Service Associate will be able to complete the identification process and assist with your request. For general questions about our product and services not related to a specific account # or transaction, <a href="/contact/banking">contact us here.</a></p>
+      <p>Our Customer Contact Center is available from 7:00 a.m. – 8:00 p.m. Monday through Friday and from 8:00 a.m. – 5:00 p.m. on Saturdays.</p>
+  od_nsf_item_markup:
+    '#type': webform_markup
+    '#states':
+      visible:
+        ':input[name="subject"]':
+          value: od_nsf_item
+    '#markup': |
+      <p>To protect your privacy, we are not able to answer specific to provide or confirm specific account information regarding overdrafts or insufficient funds items through email because we cannot properly verify your identity.</p>
+      <p><strong>Please call us toll-free at (866) 952-9523 to inquire about an overdraft or insufficient funds item.</strong> A Customer Service Associate will be able to complete the identification process and assist you with your request.</p>
+      <p>Our Customer Contact Center is available from 7:00 a.m. – 8:00 p.m. Monday through Friday and from 8:00 a.m. – 5:00 p.m. on Saturdays.</p>
+      <p>Learn more about <a href="/personal/bank/checking/overdraft-coverage-options">Overdraft Coverage Options</a>, <a href="/personal/bank/checking/overdraft-coverage-options/reduce">How to Avoid or Reduce Overdrafts</a>, <a href="/personal/bank/checking/overdraft-coverage-options/what-you-need-to-know-about-overdrafts">What You Need to Know About Overdrafts</a>, or try finding answers with <a href="/askarvest">Ask Arvest</a>.</p>
+  lost_stolen_card_markup:
+    '#type': webform_markup
+    '#states':
+      visible:
+        ':input[name="subject"]':
+          value: lost_stolen_card
+    '#markup': |
+      <p><strong>Report a Debit Card Lost or Stolen:</strong><br>
+      We understand that when your debit card is lost or stolen it can cause concern for our customers.<br>
+      We have a variety of ways in which you can quickly contact us to deactivate your debit card:</p>
+      <ul>
+          <li>During our business hours of 7:00 a.m.-8:00 p.m. and Saturday from 8:00 a.m.-5:00 p.m., please call (866) 952-9523 for assistance.</li>
+          <li>Call our Account Information Line any day or time at (800) 601-8655. Note: You may need to know your lost card’s 16 digit number to use this option.</li>
+      </ul>
+      <p><strong>Report a Credit Card Lost or Stolen:</strong><br>
+      Please call (800) 356-8085 for assistance.</p>
+      <p><strong>Order a Replacement Card:</strong><br>
+      To protect your privacy, we are not able to order a new or replacement card through email because we cannot properly verify your identity. To order a replacement:</p>
+      <p><strong>Debit Card Orders</strong> - Please call us toll-free at (866) 952-9523 to order a debit card. Arvest offers specialty card or local affinity card <a href="/personal/bank/checking/debit-cards/specialty">art options</a> for you to choose from. Our Customer Contact Center is available from 7:00 a.m. – 8:00 p.m. Monday through Friday and from 8:00 a.m. – 5:00 p.m. on Saturdays.</p>
+      <p><strong>Credit Card Orders</strong> - Please call us toll-free at (800) 356-8085 to order a credit card. Our Arvest Credit Card Division is available from 8:00 a.m. – 6:00 p.m. Monday through Friday and from 8:00 a.m. – 5:00 p.m. on Saturdays.</p>
+  card_dispute_markup:
+    '#type': webform_markup
+    '#states':
+      visible:
+        ':input[name="subject"]':
+          value: card_dispute
+    '#markup': |
+      <p>Arvest offers a variety of ways for our customers to dispute debit card and credit card transactions. To file a dispute, please choose from the following:</p>
+      <ul>
+          <li>To dispute an Arvest debit card transaction please call us toll-free at (866) 952-9523 for personal assistance. A Customer Service Associate will be able to assist you with your dispute request. For your convenience, our Contact Center is available from 8:00 a.m. – 8:00 p.m. Monday through Friday and from 8:00 a.m. – 5:00 p.m. on Saturdays.</li>
+      </ul>
+      <ul>
+          <li>To dispute an Arvest credit card transaction, please complete the <a href="/personal/bank/credit-cards/dispute">Credit Card Dispute form</a>.
+              <ul>
+                  <li>If you prefer to contact us via phone, please call us toll-free at (800) 356-8085 to file a credit card dispute. A Customer Service Associate will be able to assist you with your dispute request. For your convenience, our Arvest Credit Card Division is available from 8:00 a.m. – 6:00 p.m. Monday through Friday and from 8:00 a.m. – 5:00 p.m. on Saturdays.</li>
+              </ul>
+          </li>
+      </ul>
+  billpay_markup:
+    '#type': webform_markup
+    '#states':
+      visible:
+        ':input[name="subject"]':
+          value: billpay
+    '#markup': |
+      <p>If you are having difficulty accessing our Online BillPay service or have a question, we are not able to help through email because we cannot properly verify your identity.</p>
+      <p><strong>Please call us toll-free at (866) 952-9523 for assistance with Online BillPay.</strong> A Customer Service Associate will be able to complete the identification process and assist you with your request.</p>
+      <p>Our Customer Contact Center is available from 7:00 a.m. – 8:00 p.m. Monday through Friday and from 8:00 a.m. – 5:00 p.m. on Saturdays.</p>
+      <p><strong>To address a stop payment on a check through Online BillPay</strong><br>
+          For online bill payments, we need to speak with you to address any payment change requests. Please call the customer service number listed above for assistance.</p>
+      <p>Learn more about Online BillPay by viewing the online <a href="//www.youtube.com/embed/VupHyeZ5j38?autoplay=1">demo</a> or try finding answers with <a href="/askarvest">Ask Arvest</a>.</p>
+  checks_markup:
+    '#type': webform_markup
+    '#states':
+      visible:
+        ':input[name="subject"]':
+          value: checks
+    '#markup': |
+      <p>Arvest offers a variety of ways to reorder checks for your account. We cannot accept check orders through email, please choose one of the following:</p>
+      <ul>
+          <li>Order checks or reorder checks online:<br>
+              1. Log in to Online Banking<br>
+              2. Click the “Services” tab and choose "Order Checks"<br>
+              3. Select the correct account from the drop down menu and click submit.<br>
+              <em>Note: If the name or address on your printed checks has changed, please call instead of ordering online.</em>
+          </li>
+          <li>Order checks or reorder checks at a nearby <a href="/branch-locator">branch location</a>.</li>
+          <li>To reorder checks by phone, please call (877) 838-5287 and please have your 10 digit checking account number available. To reorder business checks call (800) 252-3414.<br>
+          <em>Note: For a first time check order, please visit a <a href="/branch-locator">branch location</a> or call (866) 952-9523 for assistance.</em></li>
+      </ul>
+  travel_markup:
+    '#type': webform_markup
+    '#states':
+      visible:
+        ':input[name="subject"]':
+          value: travel
+    '#markup': |
+      <p class="mt-20">Notifying the bank prior to travel can assist us in helping protect your accounts and cards. We are not able to add a note to your account about travel plans through email because we cannot properly verify your identity.</p>
+      <p><strong>Please call us toll-free at (866) 952-9523 to notify the bank of future travel plans.</strong> A Customer Service Associate will be able to complete the identification process and assist with your request.</p>
+      <p>Our Customer Contact Center is available from 7:00 a.m. – 8:00 p.m. Monday through Friday and from 8:00 a.m. – 5:00 p.m. on Saturdays.</p>
+  mod_close_acct_markup:
+    '#type': webform_markup
+    '#states':
+      visible:
+        ':input[name="subject"]':
+          value: mod_close_acct
+    '#markup': |
+      <p>To protect your privacy, we are not able to change the status of your account through email because we cannot properly verify your identity.</p>
+      <p><strong>Please call us toll-free at (866) 952-9523 to modify or close your account.</strong> A Customer Service Associate will be able to complete the identification process and assist you with your request.</p>
+      <p>Our Customer Contact Center is available from 7:00 a.m. – 8:00 p.m. Monday through Friday and from 8:00 a.m. – 5:00 p.m. on Saturdays.</p>
+  inquiry_form:
+    '#type': fieldset
+    '#title': inquiry_form
+    '#title_display': invisible
+    '#states':
+      visible:
+        ':input[name="subject"]':
+          value: general
+    name:
+      '#type': webform_name
+      '#title': Name
+      '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+      '#title__access': false
+      '#first__title': 'First Name'
+      '#first__required': true
+      '#middle__title': MI
+      '#last__title': 'Last Name'
+      '#last__required': true
+      '#suffix__access': false
+      '#degree__access': false
+    address:
+      '#type': webform_address
+      '#title': Address
+      '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+      '#address__access': false
+      '#address_2__access': false
+      '#city__title': City
+      '#city__required': true
+      '#state_province__title': State
+      '#state_province__required': true
+      '#state_province__options': state_province_codes
+      '#postal_code__access': false
+      '#country__access': false
+    flexbox_contact:
+      '#type': webform_flexbox
+      email_address:
+        '#type': email
+        '#title': 'Email address'
+        '#required': true
+        '#pattern': '^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$'
+        '#pattern_error': 'Please enter a valid email address.'
+      phone_number:
+        '#type': tel
+        '#title': 'Phone Number'
+        '#placeholder': '(nnn) nnn-nnnn'
+        '#required': true
+        '#pattern': '^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$'
+        '#pattern_error': 'Please enter a valid phone number.'
+    message:
+      '#type': textarea
+      '#title': Message
+      '#placeholder': 'Questions related to your balance, debit card, or address cannot be answered via this form.'
+      '#required': true
+    branch_location:
+      '#type': webform_term_select
+      '#title': 'Branch Location'
+      '#required': true
+      '#vocabulary': branch_location
+      '#breadcrumb_delimiter': ''
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#states':
+      visible:
+        ':input[name="subject"]':
+          value: general
+  inquiry_markup:
+    '#type': webform_markup
+    '#markup': '<em>Note - Please make sure you can receive our email reply.  If you have spam blocking enabled, make sure arvest.com is in your email client''s approved safe list.</em>'
 css: ''
 javascript: ''
 settings:
@@ -138,7 +370,7 @@ settings:
   purge: none
   purge_days: null
   results_disabled: true
-  results_disabled_ignore: false
+  results_disabled_ignore: true
   results_customize: false
   token_view: false
   token_update: false
@@ -191,5 +423,19 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  save_submissions_in_webtools:
+    id: 'Save Submissions In Webtools'
+    label: 'Save Submissions In Webtools'
+    notes: ''
+    handler_id: save_submissions_in_webtools
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      webtools_form_name: email_bank
+      first_name_field_machine_name: name.first
+      last_name_field_machine_name: name.last
+      full_name_field_machine_name: ''
+      email_field_machine_name: email_address
 variants: {  }

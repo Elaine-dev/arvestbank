@@ -186,3 +186,15 @@ AddEncoding gzip svgz
   RewriteCond %{HTTP:X-Forwarded-Proto} !https
   RewriteCond %{HTTP_HOST} !^local.arvestbank.com$
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# rewrite rules for ask arvest search
+<IfModule mod_rewrite.c>
+  # Redirect old search to new search maintaining search term
+  RewriteCond %{QUERY_STRING} [&?]q=(.*)$
+  RewriteRule ^askarvest /search?search=%1 [L,R=301]
+</IfModule>
+
+# increase allowed number of post vars
+<IfModule mod_php7.c>
+php_value max_input_vars 2000
+</IfModule>

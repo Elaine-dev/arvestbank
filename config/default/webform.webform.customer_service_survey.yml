@@ -1,0 +1,529 @@
+uuid: 569214df-c197-4626-af2f-00831c0235fb
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: customer_service_survey
+title: 'Customer Service Survey'
+description: 'Arvest Bank customer experience survey.'
+category: ''
+elements: |-
+  welcome:
+    '#type': webform_wizard_page
+    '#title': Welcome
+    '#next_button_label': Begin
+    markup_begin:
+      '#type': webform_markup
+      '#markup': '<p>Thank you for banking with Arvest. We appreciate your business and look forward to hearing from you. This survey allows you to provide feedback about an experience in a branch, online or on the phone. If you need immediate assistance or would like to talk to a customer service associate, please contact us at (866) 952-9523.</p>'
+  step_1:
+    '#type': webform_wizard_page
+    '#title': Gender/Age
+    '#next_button_label': Continue
+    gender:
+      '#type': radios
+      '#title': Gender
+      '#options':
+        Male: Male
+        Female: Female
+      '#required': true
+    age:
+      '#type': radios
+      '#title': Age
+      '#options':
+        18-29: 18-29
+        30-45: 30-45
+        46-59: 46-59
+        'Over 60': 'Over 60'
+      '#required': true
+  experience:
+    '#type': webform_wizard_page
+    '#title': Experience
+    '#next_button_label': Continue
+    regarding:
+      '#type': radios
+      '#title': 'This survey is associated with:'
+      '#options':
+        branch: 'A branch experience'
+        online: 'An online experience'
+        phone: 'A telephone experience'
+      '#required': true
+    markup_01:
+      '#type': webform_markup
+      '#states':
+        visible:
+          ':input[name="regarding"]':
+            value: branch
+      '#markup': 'Branch where transaction occurred:'
+    markup_02:
+      '#type': webform_markup
+      '#states':
+        visible:
+          - ':input[name="regarding"]':
+              value: online
+          - xor
+          - ':input[name="regarding"]':
+              value: phone
+      '#markup': 'Branch you visit most often:'
+    branch_location:
+      '#type': webform_term_select
+      '#title': 'Branch Location'
+      '#required': true
+      '#states':
+        visible:
+          ':input[name="regarding"]':
+            checked: true
+      '#attributes':
+        class:
+          - webform-chosen
+      '#vocabulary': branch_location
+      '#breadcrumb_delimiter': ''
+  survey:
+    '#type': webform_wizard_page
+    '#title': Survey
+    '#next_button_label': Submit
+    branch:
+      '#type': fieldset
+      '#title': Branch
+      '#states':
+        visible:
+          ':input[name="regarding"]':
+            value: branch
+      greeted:
+        '#type': radios
+        '#title': 'Were you greeted when you entered the building or drive up window?'
+        '#title_display': inline
+        '#options': yes_no
+      addressed:
+        '#type': radios
+        '#title': 'Did the associate use your name during the transaction?'
+        '#title_display': inline
+        '#options': yes_no
+      add_assist:
+        '#type': radios
+        '#title': 'Were you offered additional assistance?'
+        '#title_display': inline
+        '#options': yes_no
+      thanks:
+        '#type': radios
+        '#title': 'Were you thanked for your business?'
+        '#title_display': inline
+        '#options': yes_no
+      recommend:
+        '#type': radios
+        '#title': 'Would you recommend Arvest Bank to your friends and family?'
+        '#options': yes_no
+      suggestion:
+        '#type': textarea
+        '#title': 'Is there anything you would like to share with us?'
+    online:
+      '#type': fieldset
+      '#title': Online
+      '#states':
+        visible:
+          ':input[name="regarding"]':
+            value: online
+      markup_03:
+        '#type': webform_markup
+        '#markup': '<strong>These questions are about the website arvest.com in general, before you log into your accounts:</strong>'
+      ease_find:
+        '#type': select
+        '#title': 'The information on the website is easy to understand and I can find what I''m looking for.'
+        '#options':
+          Satisfied: Satisfied
+          'Somewhat Satisfied': 'Somewhat Satisfied'
+          Neutral: Neutral
+          'Somewhat Dissatisfied': 'Somewhat Dissatisfied'
+          Dissatisfied: Dissatisfied
+        '#empty_option': Select
+        '#required': true
+        '#attributes':
+          class:
+            - webform-chosen
+      find:
+        '#type': select
+        '#title': 'I feel confident about finding my way around the website.'
+        '#options':
+          Satisfied: Satisfied
+          'Somewhat Satisfied': 'Somewhat Satisfied'
+          Neutral: Neutral
+          'Somewhat Dissatisfied': 'Somewhat Dissatisfied'
+          Dissatisfied: Dissatisfied
+        '#empty_option': Select
+        '#required': true
+        '#attributes':
+          class:
+            - webform-chosen
+      info:
+        '#type': radios
+        '#title': 'The website has the information I need to understand all of my banking options.'
+        '#title_display': inline
+        '#options': yes_no
+        '#required': true
+      info_more:
+        '#type': textarea
+        '#title': 'If No, what additional information would be helpful?'
+        '#states':
+          visible:
+            ':input[name="info"]':
+              value: 'No'
+      meets_needs:
+        '#type': radios
+        '#title': 'The Arvest website meets my needs.'
+        '#title_display': inline
+        '#options': yes_no
+        '#required': true
+      meets_needs_more:
+        '#type': textarea
+        '#title': 'If No, please tell us how we can improve the site.'
+        '#states':
+          visible:
+            ':input[name="meets_needs"]':
+              value: 'No'
+      works:
+        '#type': radios
+        '#title': 'The website loads quickly and works with my computer and web browser.'
+        '#title_display': inline
+        '#options': yes_no
+        '#required': true
+      works_more:
+        '#type': textarea
+        '#title': 'If No, please tell us what type of computer/device you use and what type of web browser so we can address the problem.'
+        '#states':
+          visible:
+            ':input[name="works"]':
+              value: 'No'
+      markup_04:
+        '#type': webform_markup
+        '#markup': '<strong>These questions are about Arvest Online Banking, after you have logged into your account:</strong>'
+      act_find:
+        '#type': radios
+        '#title': 'I can find what I''m looking for when managing my accounts.'
+        '#title_display': inline
+        '#options': yes_no
+        '#required': true
+      act_nav:
+        '#type': radios
+        '#title': 'The navigation is easy to use and I can access information quickly.'
+        '#title_display': inline
+        '#options': yes_no
+        '#required': true
+      act_works:
+        '#type': radios
+        '#title': 'The website loads quickly and works with my computer and web browser.'
+        '#title_display': inline
+        '#options': yes_no
+        '#required': true
+      act_works_more:
+        '#type': textarea
+        '#title': 'If you disagree, please tell us what type of computer/device you use and what type of web browser so we can address the problem.'
+        '#states':
+          visible:
+            ':input[name="act_works"]':
+              value: 'No'
+      act_meets_needs:
+        '#type': radios
+        '#title': 'Arvest Online Banking meets my needs.'
+        '#title_display': inline
+        '#options': yes_no
+        '#required': true
+      suggest:
+        '#type': textarea
+        '#title': 'Please tell us how we can improve Arvest Online Banking for you.'
+    telephone:
+      '#type': fieldset
+      '#title': Telephone
+      '#states':
+        visible:
+          ':input[name="regarding"]':
+            value: phone
+      answered:
+        '#type': radios
+        '#title': 'Was your wait time reasonable?'
+        '#title_display': before
+        '#options': yes_no
+      greeting:
+        '#type': radios
+        '#title': 'Was the Representative that assisted you courteous?'
+        '#title_display': before
+        '#options': yes_no
+      timely_req_comp:
+        '#type': radios
+        '#title': 'Was your request completed in a timely manner?'
+        '#title_display': before
+        '#options': yes_no
+      knowledgeable:
+        '#type': radios
+        '#title': 'Was the Representative that assisted you knowledgeable?'
+        '#title_display': before
+        '#options': yes_no
+      use_name:
+        '#type': radios
+        '#title': 'Did the Representative use your name?'
+        '#title_display': before
+        '#options': yes_no
+      offer:
+        '#type': radios
+        '#title': 'Did the Representative offer additional assistance?'
+        '#title_display': before
+        '#options': yes_no
+      thanks_for_calling:
+        '#type': radios
+        '#title': 'Did the Representative thank you for calling?'
+        '#title_display': before
+        '#options': yes_no
+      suggest_phone:
+        '#type': textarea
+        '#title': 'What can Arvest Bank do to provide phone service to exceed your expectations?'
+        '#title_display': before
+      overall:
+        '#type': select
+        '#title': 'Please rate your overall experience during the call.'
+        '#title_display': before
+        '#options':
+          Satisfied: Satisfied
+          'Somewhat Satisfied': 'Somewhat Satisfied'
+          Neutral: Neutral
+          'Somewhat Dissatisfied': 'Somewhat Dissatisfied'
+          Dissatisfied: Dissatisfied
+        '#empty_option': Select
+        '#required': true
+        '#attributes':
+          class:
+            - webform-chosen
+    contact:
+      '#type': checkbox
+      '#title': 'Please contact me regarding this survey.'
+      '#title_display': inline
+    name:
+      '#type': webform_name
+      '#title': Name
+      '#states':
+        visible:
+          ':input[name="contact"]':
+            checked: true
+      '#title__access': false
+      '#first__title': 'First Name'
+      '#first__required': true
+      '#middle__access': false
+      '#last__title': 'Last Name'
+      '#last__required': true
+      '#suffix__access': false
+      '#degree__access': false
+      '#flexbox': '1'
+    email_address:
+      '#type': email
+      '#title': 'Email address'
+      '#required': true
+      '#pattern': '^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$'
+      '#pattern_error': 'Please enter a valid email address.'
+      '#states':
+        visible:
+          ':input[name="contact"]':
+            checked: true
+    phone:
+      '#type': tel
+      '#title': Phone
+      '#placeholder': '(nnn) nnn-nnnn'
+      '#required': true
+      '#pattern': '^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$'
+      '#pattern_error': 'Please enter a valid phone number.'
+      '#states':
+        visible:
+          ':input[name="contact"]':
+            checked: true
+    time_call:
+      '#type': textfield
+      '#title': 'Best time to call'
+      '#states':
+        visible:
+          ':input[name="contact"]':
+            checked: true
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#wizard_prev_hide': true
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: false
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: inline
+  confirmation_title: ''
+  confirmation_message: "<p>Thank you for taking the time to complete this customer service survey. We appreciate and value your feedback. If you need assistance or have a question, we are here to help.</p>\r\n\r\n<ul>\r\n\t<li>Visit a <a href=\"/branch-locator\">branch</a></li>\r\n\t<li>Call us at (866) 952-9523</li>\r\n\t<li>Contact us by <a href=\"/contact/banking/email-bank\">email</a></li>\r\n</ul>\r\n\r\n<p>We sincerely appreciate your business.</p>\r\n<img alt=\"Arvest Bank\" height=\"69\" src=\"/themes/custom/arvestbank_theme/images/arvest-blue-logo.png\" width=\"201\" />\r\n<p>&quot;People helping people find financial solutions for life.&quot;</p>"
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: false
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: true
+  results_disabled_ignore: true
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

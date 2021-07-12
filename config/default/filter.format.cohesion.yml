@@ -2,11 +2,17 @@ uuid: 17bbc1d8-c2d0-4453-8cd9-74be28cfbbd6
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.media_button
+    - core.entity_view_mode.media.media_caption
+    - core.entity_view_mode.media.media_links
+    - core.entity_view_mode.media.thumbnail_overlay
   module:
     - editor
     - entity_embed
     - linkit
     - media
+    - responsive_tables_filter
 _core:
   default_config_hash: IioyLzvJjLGT2lwDC8kXNFbghnHEHyyy5Bb6Jc2kYk8
 name: 'Site Studio'
@@ -19,7 +25,7 @@ filters:
     status: false
     weight: -10
     settings:
-      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h4 id> <h5 id> <h6 id> <img src alt data-entity-type data-entity-uuid> <h1 class="heading-2 heading-1"> <h2 id class="heading-3"> <h3 id class="heading-4"> <u> <p> <pre> <a href hreflang data-entity-substitution data-entity-type data-entity-uuid title class=" coh-style-link-arrow-button coh-style-link-button"> <span class="red-pill blue-pill coh-color-blue-1 coh-color-navy-2 coh-color-midnight-blue-3 coh-color-dark-navy-4 coh-color-danube-5 coh-color-regent-st-blue-6 coh-color-red-7 coh-color-gray-8 coh-color-white-9 coh-color-mine-shaft-10 coh-style-link-arrow-button coh-style-link-button coh-color-black coh-color-gray-1 coh-color-blue-6 coh-color-white">'
+      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h4 id> <h5 id> <h6 id> <img src alt data-entity-type data-entity-uuid> <h1 class="heading-2 heading-1"> <h2 id class="heading-3"> <h3 id class="heading-4"> <u> <p> <pre> <a href hreflang data-entity-substitution data-entity-type data-entity-uuid title class=" coh-style-link-arrow-button coh-style-link-button"> <span class="red-pill blue-pill coh-color-blue-1 coh-color-navy-2 coh-color-midnight-blue-3 coh-color-dark-navy-4 coh-color-danube-5 coh-color-regent-st-blue-6 coh-color-red-7 coh-color-gray-8 coh-color-white-9 coh-color-mine-shaft-10 coh-style-link-arrow-button coh-style-link-button coh-color-black coh-color-gray-1 coh-color-blue-6 coh-color-white coh-style-red-triangle coh-style-font-small coh-style-font-medium coh-style-font-large coh-style-triangle"> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr>'
       filter_html_help: true
       filter_html_nofollow: false
   editor_file_reference:
@@ -62,9 +68,25 @@ filters:
   media_embed:
     id: media_embed
     provider: media
-    status: false
+    status: true
     weight: 100
     settings:
       default_view_mode: default
-      allowed_media_types: {  }
-      allowed_view_modes: {  }
+      allowed_media_types:
+        acquia_dam_document: acquia_dam_document
+        acquia_dam_image: acquia_dam_image
+        credit_or_debit_card: credit_or_debit_card
+        video: video
+      allowed_view_modes:
+        media_button: media_button
+        media_caption: media_caption
+        media_links: media_links
+        thumbnail_overlay: thumbnail_overlay
+  filter_responsive_tables_filter:
+    id: filter_responsive_tables_filter
+    provider: responsive_tables_filter
+    status: true
+    weight: 0
+    settings:
+      tablesaw_type: stack
+      tablesaw_persist: '1'

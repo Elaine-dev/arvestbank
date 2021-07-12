@@ -14,7 +14,42 @@ id: send_browser_diagnostics
 title: 'Send Browser Diagnostics'
 description: 'Sends the browser diagnostic information to an Arvest representative.'
 category: ''
-elements: "recipient:\n  '#type': textfield\n  '#title': 'Enter the ID of the associate that has referred you here:'\n  '#field_suffix': '@Arvest.com'\n  '#required': true\nmarkup:\n  '#type': webform_markup\n  '#markup': '<h2>Send to Arvest</h2>'\nyour_name:\n  '#type': textfield\n  '#title': 'Your Name'\n  '#required': true\ndaytime_phone_number:\n  '#type': tel\n  '#title': 'Daytime Phone Number'\n  '#placeholder': '(nnn) nnn-nnnn'\n  '#required': true\n  '#pattern': '^(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}$'\n  '#pattern_error': 'Please enter a valid phone number.'\nemail:\n  '#type': email\n  '#title': Email\n  '#required': true\nbrowser_diagnostics:\n  '#type': hidden\n  '#title': 'Browser Diagnostics'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send to Arvest'"
+elements: |-
+  markup:
+    '#type': webform_markup
+    '#flex': 12
+    '#markup': '<h2>Send to Arvest</h2>'
+  recipient:
+    '#type': textfield
+    '#title': 'Enter the ID of the associate that has referred you here:'
+    '#field_suffix': '@Arvest.com'
+    '#required': true
+    '#flex': 12
+  your_name:
+    '#type': textfield
+    '#title': 'Your Name'
+    '#required': true
+    '#flex': 12
+  daytime_phone_number:
+    '#type': tel
+    '#title': 'Daytime Phone Number'
+    '#placeholder': '(nnn) nnn-nnnn'
+    '#required': true
+    '#pattern': '^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$'
+    '#pattern_error': 'Please enter a valid phone number.'
+  email:
+    '#type': email
+    '#title': Email
+    '#required': true
+    '#pattern': '^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$'
+    '#pattern_error': 'Please enter a valid email address.'
+  browser_diagnostics:
+    '#type': hidden
+    '#title': 'Browser Diagnostics'
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#submit__label': Submit
 css: ''
 javascript: ''
 settings:

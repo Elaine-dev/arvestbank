@@ -8,17 +8,65 @@ dependencies:
     - field.field.node.calculators.field_education_article_category
     - field.field.node.calculators.field_link
     - field.field.node.calculators.field_meta_tags
+    - field.field.node.calculators.field_print_button_text
+    - field.field.node.calculators.field_rendered_node
     - field.field.node.calculators.field_yoast_seo
     - node.type.calculators
     - workflows.workflow.editorial
   module:
     - content_moderation
+    - field_group
     - link
     - metatag
     - path
     - scheduler
     - text
     - yoast_seo
+third_party_settings:
+  field_group:
+    group_external_calcu:
+      children:
+        - field_link
+      parent_name: ''
+      weight: 3
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: 'Use this field to redirect to an external Calculator.'
+        open: false
+        required_fields: true
+      label: 'External Calculator Redirect'
+    group_internal_calculator:
+      children: {  }
+      parent_name: ''
+      weight: 18
+      format_type: details
+      region: hidden
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Internal Calculator'
+    group_iframe_calculator:
+      children:
+        - field_calculator
+        - field_print_button_text
+        - body
+      parent_name: ''
+      weight: 2
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'iFrame Calculator'
 id: node.calculators.default
 targetEntityType: node
 bundle: calculators
@@ -26,7 +74,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 3
+    weight: 6
     settings:
       rows: 9
       summary_rows: 3
@@ -41,19 +89,19 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_calculator:
-    weight: 1
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_education_article_category:
-    weight: 2
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_link:
-    weight: 16
+    weight: 6
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -61,14 +109,22 @@ content:
     type: link_default
     region: content
   field_meta_tags:
-    weight: 15
+    weight: 13
     settings:
       sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
     region: content
+  field_print_button_text:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_yoast_seo:
-    weight: 17
+    weight: 14
     settings:
       body: body
     third_party_settings: {  }
@@ -76,31 +132,24 @@ content:
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 13
+    weight: 11
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 9
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 6
-    region: content
-    third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 10
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 8
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -108,14 +157,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 14
-    region: content
-    third_party_settings: {  }
-  sticky:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 7
+    weight: 12
     region: content
     third_party_settings: {  }
   title:
@@ -138,13 +180,16 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 11
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 12
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_rendered_node: true
+  promote: true
+  sticky: true

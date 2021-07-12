@@ -1,0 +1,29 @@
+uuid: 798bd925-7ec7-48e5-b8e4-d659f71161e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_disclosure
+    - node.type.article_education_article
+    - taxonomy.vocabulary.disclosures
+id: node.article_education_article.field_disclosure
+field_name: field_disclosure
+entity_type: node
+bundle: article_education_article
+label: Disclosure
+description: 'Select the disclosure that should appear in the footer.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      disclosures: disclosures
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

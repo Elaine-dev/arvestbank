@@ -16,7 +16,7 @@ use Drupal\Core\StringTranslation\TranslatableMarkup;
  * @inheritDoc
  */
 function arvestbank_external_login_form_webform_submission_external_login_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  _arvestbank_external_login_login_form_alter($form);
+  _arvestbank_external_login_login_form_alter($form, $form_id);
 }
 
 /**
@@ -27,23 +27,35 @@ function arvestbank_external_login_form_webform_submission_external_login_form_a
  * @inheritDoc
  */
 function arvestbank_external_login_form_webform_submission_external_login_menu_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  _arvestbank_external_login_login_form_alter($form);
+  _arvestbank_external_login_login_form_alter($form, $form_id);
 }
 
 /**
  * Alters for the login blocks.
  *
- * @param array $form
+ * @param array  $form
  *   The form array.
+ * @param string $form_id
+ *   The form id.
  */
-function _arvestbank_external_login_login_form_alter(array &$form) {
+function _arvestbank_external_login_login_form_alter(array &$form, string $form_id) {
 
   // Decide to show prod or non-prod login select.
   if (isset($_ENV['AH_SITE_ENVIRONMENT']) && $_ENV['AH_SITE_ENVIRONMENT'] == 'prod') {
+    $form['elements']['login_select']['#wrapper_attributes']['class'][] = 'active-sidebar-select';
+    $form['elements']['login_select']['#wrapper_attributes']['class'][] = 'active-sidebar-select-prod';
     $form['elements']['login_select_non_prod']['#access'] = FALSE;
   }
   else {
+    $form['elements']['login_select_non_prod']['#wrapper_attributes']['class'][] = 'active-sidebar-select';
+    $form['elements']['login_select_non_prod']['#wrapper_attributes']['class'][] = 'active-sidebar-select-non-prod';
     $form['elements']['login_select']['#access'] = FALSE;
+  }
+
+  // Make top menu select lists first option have empty text.
+  if (strpos($form_id, 'webform_submission_external_login_menu') !== FALSE) {
+    $form['elements']['login_select']['#empty_option'] = '';
+    $form['elements']['login_select_non_prod']['#empty_option'] = '';
   }
 
   // Define the form field names we have to change.
@@ -59,7 +71,7 @@ function _arvestbank_external_login_login_form_alter(array &$form) {
       'remember_my_computer' => 'remember',
     ],
     'arvest_online_banking' => [
-      'arvest_online_banking_username' => 'j_username',
+      'arvest_online_banking_username' => 'username',
     ],
   ];
 

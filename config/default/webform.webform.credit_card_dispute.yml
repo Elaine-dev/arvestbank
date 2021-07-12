@@ -1,7 +1,9 @@
 uuid: 234043d6-67bb-4f91-a97f-aba3645b0d02
 langcode: en
 status: open
-dependencies: {  }
+dependencies:
+  module:
+    - arvestbank_webtools_api
 open: null
 close: null
 weight: 0
@@ -12,7 +14,361 @@ id: credit_card_dispute
 title: 'Credit Card Dispute Form'
 description: 'Dispute an unauthorized charge on my Arvest Credit Card.'
 category: ''
-elements: "header:\n  '#type': webform_markup\n  '#markup': |\n    <p>We may request additional information from you at various stages in this process to assist us in our investigation and to substantiate your claim.</p>\n    <p>To preserve these billing rights, <b>you must notify Arvest Credit Card Division within (60) days of the closing date of the statement on which the error or problem first appeared.</b></p>\n    <p>For help with this form please call (800) 356-8085.</p>\n    <p>Asterisks (<span style=\"color:#e60000;\">*</span>) indicate required fields.</p>\n    \ncredit_card_account_number:\n  '#type': textfield\n  '#title': 'Credit Card Account Number'\n  '#placeholder': nnnn-nnnn-nnnn-nnnn\n  '#required': true\n  '#pattern': '^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\\d{3})\\d{11})$'\n  '#pattern_error': 'Please enter a valid card number.'\ntransaction_date:\n  '#type': date\n  '#title': 'Transaction Date'\n  '#required': true\ncharge_amount:\n  '#type': number\n  '#title': 'Charge Amount'\n  '#field_prefix': $\n  '#required': true\n  '#min': 0.01\nmerchant_name:\n  '#type': textfield\n  '#title': 'Merchant Name'\n  '#required': true\nmerchant_location:\n  '#type': textfield\n  '#title': 'Merchant Location'\nnature_of_dispute_recurring_charge:\n  '#type': radios\n  '#title': 'Nature of Dispute Recurring Charge'\n  '#title_display': none\n  '#options':\n    'recurring charge': 'Recurring Charge / Automatic Payment / Membership Cancelled'\n  '#attributes':\n    class:\n      - nature-of-dispute\nnature_of_dispute_recurring_charge_markup:\n  '#type': webform_markup\n  '#markup': 'My good faith effort to cancel a recurring charge with the above named merchant has been unsuccessful. I am providing notice within three (3) business days of the next scheduled debit and request that Arvest Credit Card prevent any further debits. I understand that this may result in the cancellation and re-issuance of my current credit card account. For previous charges that occurred after notifying the merchant of cancellation, please provide proof of cancellation.'\nnature_of_dispute_recurring_charge_fieldset:\n  '#type': fieldset\n  '#title': nature_of_dispute_recurring_charge_fieldset\n  '#title_display': invisible\n  '#states':\n    visible:\n      ':input[name=\"nature_of_dispute_recurring_charge\"]':\n        checked: true\n  nod_recurring_cancellation_date:\n    '#type': date\n    '#title': 'Cancellation date'\n    '#required': true\n  nod_recurring_merchants_phone:\n    '#type': tel\n    '#title': 'Merchant''s Phone #'\n    '#placeholder': '(nnn) nnn-nnnn'\n    '#required': true\n    '#pattern': '^(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}$'\n    '#pattern_error': 'Please enter a valid phone number.'\n  nod_recurring_confirmation_number:\n    '#type': textfield\n    '#title': 'Confirmation Number'\n    '#description': or\n    '#description_display': after\n  nod_recurring_charge_attached:\n    '#type': radios\n    '#title': nod_recurring_charge_attached\n    '#title_display': none\n    '#options':\n      'I do not have a Cancellation / Confirmation number.': 'I do not have a Cancellation / Confirmation number.'\n      'Attaching Confirmation Letter': 'Attaching Confirmation Letter'\nnature_of_dispute_hotel:\n  '#type': radios\n  '#title': 'Nature of Dispute Hotel'\n  '#title_display': none\n  '#options':\n    hotel: 'Hotel/Motel Charge'\n  '#attributes':\n    class:\n      - nature-of-dispute\nnature_of_dispute_hotel_markup:\n  '#type': webform_markup\n  '#markup': 'Hotel/Motel NO SHOW charges may be disputed if you have the cancellation number that the merchant provided at the time you cancelled your reservation. <b>Without the cancellation numbers we are unable to remove this charge.</b>'\nnature_of_dispute_hotel_fieldset:\n  '#type': fieldset\n  '#title': nature_of_dispute_hotel_fieldset\n  '#title_display': invisible\n  '#states':\n    visible:\n      ':input[name=\"nature_of_dispute_hotel\"]':\n        checked: true\n  nod_hotel_cancellation_number:\n    '#type': textfield\n    '#title': 'Cancellation Number'\n    '#required': true\n  nod_hotel_cancellation_date:\n    '#type': date\n    '#title': 'Cancellation Date'\n    '#required': true\n  nod_hotel_reservation_date:\n    '#type': date\n    '#title': 'Reservation Date'\n    '#required': true\n  nod_hotel_contact_name_at_hotel:\n    '#type': textfield\n    '#title': 'Contact Name at Hotel'\n    '#required': true\nnature_of_dispute_merchandise_not_receieved:\n  '#type': radios\n  '#title': 'Nature of Dispute Merchandise Not Receieved'\n  '#title_display': none\n  '#options':\n    'merchandise not receieved': 'Merchandise or Services Not Receieved'\n  '#attributes':\n    class:\n      - nature-of-dispute\nnature_of_dispute_merchandise_not_receieved_markup:\n  '#type': webform_markup\n  '#markup': '<b>You must first attempt to resolve the dispute with the merchant.</b><br>Product(s) or Services were not accepted by me or delivered to me as agreed. My good faith effort to resolve this issue with the merchant has been unsuccessful. <b>I will provide a copy of the sales receipt, agreement or contract I received from the merchant.</b>'\nnature_of_dispute_merchandise_not_receieved_fieldset:\n  '#type': fieldset\n  '#title': nature_of_dispute_merchandise_not_receieved_fieldset\n  '#title_display': invisible\n  '#states':\n    visible:\n      ':input[name=\"nature_of_dispute_merchandise_not_receieved\"]':\n        checked: true\n  nod_no_merch_markup:\n    '#type': webform_markup\n    '#markup': 'Did you cancel this order?*'\n  nod_no_merch_cancel_yes:\n    '#type': radios\n    '#title': nod_no_merch_cancel_yes\n    '#title_display': none\n    '#options':\n      'Yes': 'Yes'\n    '#attributes':\n      class:\n        - no-merch-cancel\n  nod_no_merch_date_cancelled:\n    '#type': date\n    '#title': 'Date Cancelled'\n    '#required': true\n  nod_no_merch_cancellation_confirmation_number:\n    '#type': textfield\n    '#title': 'Cancellation Confirmation Number'\n    '#required': true\n  nod_no_merch_cancel_no:\n    '#type': radios\n    '#title': nod_no_merch_cancel_no\n    '#title_display': none\n    '#options':\n      'No': 'No'\n    '#attributes':\n      class:\n        - no-merch-cancel\n  nod_no_merch_date_the_merchandise_was_scheduled_for_delivery:\n    '#type': date\n    '#title': 'Date the merchandise was scheduled for delivery'\n  nod_no_merch_date_merchant_contacted:\n    '#type': date\n    '#title': 'Date merchant contacted'\n  nod_no_merch_details:\n    '#type': textfield\n    '#title': 'You must list in detail what merchandise or services were ordered'\n    '#required': true\n  nod_no_merch_footer_markup:\n    '#type': webform_markup\n    '#markup': 'Include the merchant''s response below in the Descriptions of Transactions section'\nnature_of_dispute_credit_not_posted:\n  '#type': radios\n  '#title': 'Nature of Dispute Credit Not Posted'\n  '#title_display': none\n  '#options':\n    'credit not posted': 'Credit Not Posted'\n  '#attributes':\n    class:\n      - nature-of-dispute\nnature_of_dispute_credit_not_posted_markup:\n  '#type': webform_markup\n  '#markup': 'Merchant failed to properly post a credit to my account. <em>I will provide a copy of the return sales receipt I received from the merchant.</em> (Note: Merchants have 15 days to post a credit after merchandise is returned).'\nnature_of_dispute_credit_not_posted_fieldset:\n  '#type': fieldset\n  '#title': nature_of_dispute_credit_not_posted_fieldset\n  '#title_display': invisible\n  '#states':\n    visible:\n      ':input[name=\"nature_of_dispute_credit_not_posted\"]':\n        checked: true\n  nod_no_credit_date_the_merchant_said:\n    '#type': date\n    '#title': 'Date the merchant stated the credit would be processed'\n    '#required': true\nnature_of_dispute_returned_merchandise:\n  '#type': radios\n  '#title': 'Nature of Dispute Returned Merchandise'\n  '#title_display': none\n  '#options':\n    'returned merchandise': 'Returned Merchandise'\n  '#attributes':\n    class:\n      - nature-of-dispute\nnature_of_dispute_returned_merchandise_markup:\n  '#type': webform_markup\n  '#markup': 'Merchants have 15 days from the day they receive the merchandise back to post a credit to your account. The credit will not include shipping and handling cost. We must have proof of return, what address the merchandise was returned to and who signed for the return. The dispute cannot be completed on-line. You must print out the following page mail it and the <em>proof of return</em> to Arvest Credit Card Division. Without proof of return we are unable to remove this charge. Describe below what was expected and received, reason for return, the merchant''s response to your complaint.'\nnature_of_dispute_unknown:\n  '#type': radios\n  '#title': 'Nature of Dispute Unknown'\n  '#title_display': none\n  '#options':\n    unknown: 'Unknown Charge'\n  '#attributes':\n    class:\n      - nature-of-dispute\nnature_of_dispute_unknown_markup:\n  '#type': webform_markup\n  '#markup': 'I do not recognize this charge. I need more information to verify charge is valid. Merchant has 30 days to supply Arvest Credit Card with a copy of the transaction. You may call the merchant for a faster response. Merchants list their telephone following the charge on your statement.'\nnature_of_dispute_unknown_fieldset:\n  '#type': fieldset\n  '#title': nature_of_dispute_unknown_fieldset\n  '#title_display': invisible\n  '#states':\n    visible:\n      ':input[name=\"nature_of_dispute_unknown\"]':\n        checked: true\n  nod_unknown_date_contacted_merchant:\n    '#type': date\n    '#title': 'Date contacted merchant'\n    '#required': true\nnature_of_dispute_paid_by_other_means:\n  '#type': radios\n  '#title': 'Nature of Dispute Paid by Other Means'\n  '#title_display': none\n  '#options':\n    'paid by other means': 'Paid For By Other Means'\n  '#attributes':\n    class:\n      - nature-of-dispute\nnature_of_dispute_paid_by_other_means_markup:\n  '#type': webform_markup\n  '#markup': 'To dispute any charge to your credit card that you paid for by other means you must supply us with one of the following<br><ul><li>a copy of your receipt, if you paid cash;</li><li>copy of front &amp; back cancelled check, if paid by check;</li><li>or copy of credit card statement, if paid using different card number</li></ul>This dispute cannot be completed on-line. You must print out the following page and mail it and the proof of payment to Arvest Credit Card Division. Without proof of other means of payment, we are unable to remove this charge.'\nnature_of_dispute_fraudulent:\n  '#type': radios\n  '#title': 'Nature of Dispute Fraudulent'\n  '#title_display': none\n  '#options':\n    fraudulent: 'Fraudulent Charge'\n  '#attributes':\n    class:\n      - nature-of-dispute\nnature_of_dispute_fraudulent_markup:\n  '#type': webform_markup\n  '#markup': |\n    If you participated in a transaction with this merchant it is not considered fraud.  Please utilize one of the other options above for dispute.  If you did not participate in a transaction with this merchant then this dispute can not be filed on-line.<br><br>\n    <b>You must contact our fraud department at 1-800-356-8085.  In order for us to pursue this dispute, we will have to close your account and initiate an investigation of the fraudulent charges.</b>\n    \nnature_of_dispute_amount_different:\n  '#type': radios\n  '#title': 'Nature of Dispute Amount Different'\n  '#title_display': none\n  '#options':\n    'amount different': 'Duplicate or Incorrect Charge'\n  '#attributes':\n    class:\n      - nature-of-dispute\nnature_of_dispute_amount_different_markup:\n  '#type': webform_markup\n  '#markup': |\n    The above mentioned transaction was posted to my account incorrectly or posted to my account multiple times. \n    <em>I will provide a copy of the sales receipt that I received from the merchant.</em>\n    \nnature_of_dispute_amount_different_fieldset:\n  '#type': fieldset\n  '#title': nature_of_dispute_amount_different_fieldset\n  '#title_display': invisible\n  '#states':\n    visible:\n      ':input[name=\"nature_of_dispute_amount_different\"]':\n        checked: true\n  nod_diff_markup:\n    '#type': webform_markup\n    '#markup': |\n      Please list a description of this charge below in the &quot;Description of Transactions&quot; box.<br />\n      <br />\n      <strong>Example:</strong>\n      <blockquote>The correct amount of charge is ______. The amount charged to your account is_____.</blockquote>\n      \ndescriptions_of_transactions:\n  '#type': textarea\n  '#title': 'Descriptions of transactions'\nmarkup:\n  '#type': webform_markup\n  '#markup': '[current-date:custom:F j, Y]'\nname:\n  '#type': webform_name\n  '#title': Name\n  '#title__access': false\n  '#first__title': 'First Name'\n  '#first__required': true\n  '#middle__access': false\n  '#last__title': 'Last Name'\n  '#last__required': true\n  '#suffix__access': false\n  '#degree__access': false\nemail_address:\n  '#type': email\n  '#title': 'Email address'\n  '#required': true\ndaytime_phone_number:\n  '#type': tel\n  '#title': 'Daytime Phone Number'\n  '#placeholder': '(nnn) nnn-nnnn'\nevening_phone_number:\n  '#type': tel\n  '#title': 'Evening Phone Number'\n  '#placeholder': '(nnn) nnn-nnnn'\n  '#required': true\n  '#pattern': '^(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}$'\n  '#pattern_error': 'Please enter a valid phone number.'\nfooter_markup:\n  '#type': webform_markup\n  '#markup': |\n    Please use the below address when mailing a completed dispute form and copy of receipt or other reference material or email us at <a href=\"mailto:CreditCardDisputes@arvest.com\">CreditCardDisputes@arvest.com</a>.<br />\n    <br />\n    Arvest Credit Card Division<br />\n    Attn: Disputes<br />\n    P.O. Box 6139<br />\n    Norman, OK 73070<br />\n    <br />\n    By pressing submit I verify that the information I have provided in this form is true and accurate."
+elements: |-
+  header:
+    '#type': webform_markup
+    '#markup': |
+      <p>We may request additional information from you at various stages in this process to assist us in our investigation and to substantiate your claim.</p>
+      <p>To preserve these billing rights, <b>you must notify Arvest Credit Card Division within (60) days of the closing date of the statement on which the error or problem first appeared.</b></p>
+      <p>For help with this form please call (800) 356-8085.</p>
+      <p>Asterisks (<span style="color:#e60000;">*</span>) indicate required fields.</p>
+  flexbox_creditnumber:
+    '#type': webform_flexbox
+    credit_card_account_number:
+      '#type': textfield
+      '#title': 'Credit Card Account Number'
+      '#placeholder': nnnn-nnnn-nnnn-nnnn
+      '#required': true
+      '#pattern': '^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$'
+      '#pattern_error': 'Please enter a valid card number.'
+  flexbox_transaction:
+    '#type': webform_flexbox
+    transaction_date:
+      '#type': date
+      '#title': 'Transaction Date'
+      '#required': true
+    charge_amount:
+      '#type': number
+      '#title': 'Charge Amount'
+      '#placeholder': $
+      '#required': true
+      '#min': 0.01
+  flexbox_merchant:
+    '#type': webform_flexbox
+    merchant_name:
+      '#type': textfield
+      '#title': 'Merchant Name'
+      '#required': true
+    merchant_location:
+      '#type': textfield
+      '#title': 'Merchant Location'
+  dispute_radio_fieldset:
+    '#type': fieldset
+    '#title': dispute_radio_fieldset
+    '#title_display': invisible
+    nature_of_dispute_recurring_charge:
+      '#type': radios
+      '#title': 'Nature of Dispute Recurring Charge'
+      '#title_display': none
+      '#options':
+        'recurring charge': 'Recurring Charge / Automatic Payment / Membership Cancelled'
+      '#attributes':
+        class:
+          - nature-of-dispute
+    nature_of_dispute_recurring_charge_markup:
+      '#type': webform_markup
+      '#markup': 'My good faith effort to cancel a recurring charge with the above named merchant has been unsuccessful. I am providing notice within three (3) business days of the next scheduled debit and request that Arvest Credit Card prevent any further debits. I understand that this may result in the cancellation and re-issuance of my current credit card account. For previous charges that occurred after notifying the merchant of cancellation, please provide proof of cancellation.'
+    nature_of_dispute_recurring_charge_fieldset:
+      '#type': fieldset
+      '#title': nature_of_dispute_recurring_charge_fieldset
+      '#title_display': invisible
+      '#states':
+        visible:
+          ':input[name="nature_of_dispute_recurring_charge"]':
+            checked: true
+      nod_recurring_cancellation_date:
+        '#type': date
+        '#title': 'Cancellation date'
+        '#required': true
+      nod_recurring_merchants_phone:
+        '#type': tel
+        '#title': 'Merchant''s Phone #'
+        '#placeholder': '(nnn) nnn-nnnn'
+        '#required': true
+        '#pattern': '^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$'
+        '#pattern_error': 'Please enter a valid phone number.'
+      nod_recurring_confirmation_number:
+        '#type': textfield
+        '#title': 'Confirmation Number'
+        '#description': or
+        '#description_display': after
+      nod_recurring_charge_attached:
+        '#type': radios
+        '#title': nod_recurring_charge_attached
+        '#title_display': none
+        '#options':
+          'I do not have a Cancellation / Confirmation number.': 'I do not have a Cancellation / Confirmation number.'
+          'Attaching Confirmation Letter': 'Attaching Confirmation Letter'
+    nature_of_dispute_hotel:
+      '#type': radios
+      '#title': 'Nature of Dispute Hotel'
+      '#title_display': none
+      '#options':
+        hotel: 'Hotel/Motel Charge'
+      '#attributes':
+        class:
+          - nature-of-dispute
+    nature_of_dispute_hotel_markup:
+      '#type': webform_markup
+      '#markup': 'Hotel/Motel NO SHOW charges may be disputed if you have the cancellation number that the merchant provided at the time you cancelled your reservation. <b>Without the cancellation numbers we are unable to remove this charge.</b>'
+    nature_of_dispute_hotel_fieldset:
+      '#type': fieldset
+      '#title': nature_of_dispute_hotel_fieldset
+      '#title_display': invisible
+      '#states':
+        visible:
+          ':input[name="nature_of_dispute_hotel"]':
+            checked: true
+      nod_hotel_cancellation_number:
+        '#type': textfield
+        '#title': 'Cancellation Number'
+        '#required': true
+      nod_hotel_cancellation_date:
+        '#type': date
+        '#title': 'Cancellation Date'
+        '#required': true
+      nod_hotel_reservation_date:
+        '#type': date
+        '#title': 'Reservation Date'
+        '#required': true
+      nod_hotel_contact_name_at_hotel:
+        '#type': textfield
+        '#title': 'Contact Name at Hotel'
+        '#required': true
+    nature_of_dispute_merchandise_not_receieved:
+      '#type': radios
+      '#title': 'Nature of Dispute Merchandise Not Received'
+      '#title_display': none
+      '#options':
+        'merchandise not receieved': 'Merchandise or Services Not Receieved'
+      '#attributes':
+        class:
+          - nature-of-dispute
+    nature_of_dispute_merchandise_not_receieved_markup:
+      '#type': webform_markup
+      '#markup': '<b>You must first attempt to resolve the dispute with the merchant.</b><br>Product(s) or Services were not accepted by me or delivered to me as agreed. My good faith effort to resolve this issue with the merchant has been unsuccessful. <b>I will provide a copy of the sales receipt, agreement or contract I received from the merchant.</b>'
+    nature_of_dispute_merchandise_not_receieved_fieldset:
+      '#type': fieldset
+      '#title': nature_of_dispute_merchandise_not_receieved_fieldset
+      '#title_display': invisible
+      '#states':
+        visible:
+          ':input[name="nature_of_dispute_merchandise_not_receieved"]':
+            checked: true
+      nod_no_merch_markup:
+        '#type': webform_markup
+        '#markup': 'Did you cancel this order?*'
+      nod_no_merch_cancel_yes:
+        '#type': radios
+        '#title': nod_no_merch_cancel_yes
+        '#title_display': none
+        '#options':
+          'Yes': 'Yes'
+        '#attributes':
+          class:
+            - no-merch-cancel
+      nod_no_merch_date_cancelled:
+        '#type': date
+        '#title': 'Date Cancelled'
+        '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+        '#date_date_format': ''
+      nod_no_merch_cancellation_confirmation_number:
+        '#type': textfield
+        '#title': 'Cancellation Confirmation Number'
+        '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+      nod_no_merch_cancel_no:
+        '#type': radios
+        '#title': nod_no_merch_cancel_no
+        '#title_display': none
+        '#options':
+          'No': 'No'
+        '#attributes':
+          class:
+            - no-merch-cancel
+      nod_no_merch_date_the_merchandise_was_scheduled_for_delivery:
+        '#type': date
+        '#title': 'Date the merchandise was scheduled for delivery'
+      nod_no_merch_date_merchant_contacted:
+        '#type': date
+        '#title': 'Date merchant contacted'
+      nod_no_merch_details:
+        '#type': textfield
+        '#title': 'You must list in detail what merchandise or services were ordered'
+      nod_no_merch_footer_markup:
+        '#type': webform_markup
+        '#markup': 'Include the merchant''s response below in the Descriptions of Transactions section'
+    nature_of_dispute_credit_not_posted:
+      '#type': radios
+      '#title': 'Nature of Dispute Credit Not Posted'
+      '#title_display': none
+      '#options':
+        'credit not posted': 'Credit Not Posted'
+      '#attributes':
+        class:
+          - nature-of-dispute
+    nature_of_dispute_credit_not_posted_markup:
+      '#type': webform_markup
+      '#markup': 'Merchant failed to properly post a credit to my account. <em>I will provide a copy of the return sales receipt I received from the merchant.</em> (Note: Merchants have 15 days to post a credit after merchandise is returned).'
+    nature_of_dispute_credit_not_posted_fieldset:
+      '#type': fieldset
+      '#title': nature_of_dispute_credit_not_posted_fieldset
+      '#title_display': invisible
+      '#states':
+        visible:
+          ':input[name="nature_of_dispute_credit_not_posted"]':
+            checked: true
+      nod_no_credit_date_the_merchant_said:
+        '#type': date
+        '#title': 'Date the merchant stated the credit would be processed'
+        '#required': true
+    nature_of_dispute_returned_merchandise:
+      '#type': radios
+      '#title': 'Nature of Dispute Returned Merchandise'
+      '#title_display': none
+      '#options':
+        'returned merchandise': 'Returned Merchandise'
+      '#attributes':
+        class:
+          - nature-of-dispute
+    nature_of_dispute_returned_merchandise_markup:
+      '#type': webform_markup
+      '#markup': 'Merchants have 15 days from the day they receive the merchandise back to post a credit to your account. The credit will not include shipping and handling cost. We must have proof of return, what address the merchandise was returned to and who signed for the return. The dispute cannot be completed on-line. You must print out the following page mail it and the <em>proof of return</em> to Arvest Credit Card Division. Without proof of return we are unable to remove this charge. Describe below what was expected and received, reason for return, the merchant''s response to your complaint.'
+    nature_of_dispute_unknown:
+      '#type': radios
+      '#title': 'Nature of Dispute Unknown'
+      '#title_display': none
+      '#options':
+        unknown: 'Unknown Charge'
+      '#attributes':
+        class:
+          - nature-of-dispute
+    nature_of_dispute_unknown_markup:
+      '#type': webform_markup
+      '#markup': 'I do not recognize this charge. I need more information to verify charge is valid. Merchant has 30 days to supply Arvest Credit Card with a copy of the transaction. You may call the merchant for a faster response. Merchants list their telephone following the charge on your statement.'
+    nature_of_dispute_unknown_fieldset:
+      '#type': fieldset
+      '#title': nature_of_dispute_unknown_fieldset
+      '#title_display': invisible
+      '#states':
+        visible:
+          ':input[name="nature_of_dispute_unknown"]':
+            checked: true
+      nod_unknown_date_contacted_merchant:
+        '#type': date
+        '#title': 'Date contacted merchant'
+        '#required': true
+    nature_of_dispute_paid_by_other_means:
+      '#type': radios
+      '#title': 'Nature of Dispute Paid by Other Means'
+      '#title_display': none
+      '#options':
+        'paid by other means': 'Paid For By Other Means'
+      '#attributes':
+        class:
+          - nature-of-dispute
+    nature_of_dispute_paid_by_other_means_markup:
+      '#type': webform_markup
+      '#markup': 'To dispute any charge to your credit card that you paid for by other means you must supply us with one of the following<br><ul><li>a copy of your receipt, if you paid cash;</li><li>copy of front &amp; back cancelled check, if paid by check;</li><li>or copy of credit card statement, if paid using different card number</li></ul>This dispute cannot be completed on-line. You must print out the following page and mail it and the proof of payment to Arvest Credit Card Division. Without proof of other means of payment, we are unable to remove this charge.'
+    nature_of_dispute_fraudulent:
+      '#type': radios
+      '#title': 'Nature of Dispute Fraudulent'
+      '#title_display': none
+      '#options':
+        fraudulent: 'Fraudulent Charge'
+      '#attributes':
+        class:
+          - nature-of-dispute
+    nature_of_dispute_fraudulent_markup:
+      '#type': webform_markup
+      '#markup': |
+        If you participated in a transaction with this merchant it is not considered fraud.  Please utilize one of the other options above for dispute.  If you did not participate in a transaction with this merchant then this dispute can not be filed on-line.<br><br>
+        <b>You must contact our fraud department at 1-800-356-8085.  In order for us to pursue this dispute, we will have to close your account and initiate an investigation of the fraudulent charges.</b>
+    nature_of_dispute_amount_different:
+      '#type': radios
+      '#title': 'Nature of Dispute Amount Different'
+      '#title_display': none
+      '#options':
+        'amount different': 'Duplicate or Incorrect Charge'
+      '#attributes':
+        class:
+          - nature-of-dispute
+    nature_of_dispute_amount_different_markup:
+      '#type': webform_markup
+      '#markup': |
+        The above mentioned transaction was posted to my account incorrectly or posted to my account multiple times.
+        <em>I will provide a copy of the sales receipt that I received from the merchant.</em>
+    nature_of_dispute_amount_different_fieldset:
+      '#type': fieldset
+      '#title': nature_of_dispute_amount_different_fieldset
+      '#title_display': invisible
+      '#states':
+        visible:
+          ':input[name="nature_of_dispute_amount_different"]':
+            checked: true
+      nod_diff_markup:
+        '#type': webform_markup
+        '#states':
+          visible:
+            ':input[name="nature_of_dispute_amount_different"]':
+              checked: true
+        '#markup': |-
+          Please list a description of this charge below in the &quot;Description of Transactions&quot; box.<br />
+          <br />
+          <strong>Example:</strong>
+          <blockquote>The correct amount of charge is ______. The amount charged to your account is_____.</blockquote>
+  flexbox_dispute:
+    '#type': webform_flexbox
+    descriptions_of_transactions:
+      '#type': textarea
+      '#title': 'Descriptions of transactions'
+  markup:
+    '#type': webform_markup
+    '#markup': '[current-date:custom:F j, Y]'
+  flexbox:
+    '#type': webform_flexbox
+    name:
+      '#type': webform_name
+      '#title': Name
+      '#title__access': false
+      '#first__title': 'First Name'
+      '#first__required': true
+      '#middle__access': false
+      '#last__title': 'Last Name'
+      '#last__required': true
+      '#suffix__access': false
+      '#degree__access': false
+  flexbox_email:
+    '#type': webform_flexbox
+    email_address:
+      '#type': email
+      '#title': 'Email address'
+      '#required': true
+      '#pattern': '^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$'
+      '#pattern_error': 'Please enter a valid email address.'
+  flexbox_phone:
+    '#type': webform_flexbox
+    daytime_phone_number:
+      '#type': tel
+      '#title': 'Daytime Phone Number'
+      '#placeholder': '(nnn) nnn-nnnn'
+    evening_phone_number:
+      '#type': tel
+      '#title': 'Evening Phone Number'
+      '#placeholder': '(nnn) nnn-nnnn'
+      '#required': true
+      '#pattern': '^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$'
+      '#pattern_error': 'Please enter a valid phone number.'
+  footer_markup:
+    '#type': webform_markup
+    '#markup': |-
+      Please use the below address when mailing a completed dispute form and copy of receipt or other reference material or email us at <a href="mailto:CreditCardDisputes@arvest.com">CreditCardDisputes@arvest.com</a>.<br />
+      <br />
+      Arvest Credit Card Division<br />
+      Attn: Disputes<br />
+      P.O. Box 6139<br />
+      Norman, OK 73070<br />
+      <br />
+      By pressing submit I verify that the information I have provided in this form is true and accurate.
 css: ''
 javascript: ''
 settings:
@@ -25,7 +381,7 @@ settings:
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: both
+  form_title: source_entity_webform
   form_submit_once: false
   form_exception_message: ''
   form_open_message: ''
@@ -94,7 +450,7 @@ settings:
   wizard_track: ''
   wizard_prev_button_label: ''
   wizard_next_button_label: ''
-  wizard_toggle: false
+  wizard_toggle: true
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
   preview: 0
@@ -138,7 +494,7 @@ settings:
   purge: none
   purge_days: null
   results_disabled: true
-  results_disabled_ignore: false
+  results_disabled_ignore: true
   results_customize: false
   token_view: false
   token_update: false
@@ -191,5 +547,19 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  save_submissions_in_webtools:
+    id: 'Save Submissions In Webtools'
+    label: 'Save Submissions In Webtools'
+    notes: ''
+    handler_id: save_submissions_in_webtools
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      webtools_form_name: dispute
+      first_name_field_machine_name: name.first
+      last_name_field_machine_name: name.last
+      full_name_field_machine_name: ''
+      email_field_machine_name: email_address
 variants: {  }

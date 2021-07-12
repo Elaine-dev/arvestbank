@@ -1,7 +1,9 @@
 uuid: c18a40fb-f297-425a-81d8-353e48b8a547
 langcode: en
 status: open
-dependencies: {  }
+dependencies:
+  module:
+    - arvestbank_webtools_api
 open: null
 close: null
 weight: 0
@@ -12,7 +14,62 @@ id: contact_us_about_your_credit_car
 title: 'Contact Us About Your Credit Card'
 description: '<span style="-webkit-text-stroke-width:0px; background-color:#ffffff; color:#333333; display:inline !important; float:none; font-family:Verdana,Geneva,sans-serif; font-size:12px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-decoration-thickness:initial; text-indent:0px; text-transform:none; white-space:normal; widows:2; word-spacing:0px">Contact a customer service support professional regarding a question about your Arvest Bank credit card.</span>'
 category: ''
-elements: "header_markup:\n  '#type': webform_markup\n  '#markup': |\n    <h2>Arvest Credit Card Division</h2>\n    Have a question about your Arvest Bank credit card? Use the email form below to contact a customer service support professional.<br>\n    <br>\n    Please note, inquiries related to account-specific topics such as credit card balance, address, transactions, passwords and rewards point balances cannot be answered using the automated email form below. Call (800) 822-7759 to speak to one of our customer service representatives if you have questions about your account.\n    \nbranch_location:\n  '#type': webform_term_select\n  '#title': 'Branch Location'\n  '#required': true\n  '#vocabulary': branch_location\n  '#breadcrumb_delimiter': ''\nname:\n  '#type': webform_name\n  '#title': Name\n  '#title__access': false\n  '#first__title': 'First Name'\n  '#first__required': true\n  '#middle__title': MI\n  '#last__title': 'Last Name'\n  '#last__required': true\n  '#suffix__access': false\n  '#degree__access': false\ncity:\n  '#type': textfield\n  '#title': City\n  '#required': true\nstate:\n  '#type': select\n  '#title': State\n  '#options': state_codes\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email address'\n  '#required': true\nphone_number:\n  '#type': tel\n  '#title': 'Phone Number'\n  '#placeholder': '(nnn) nnn-nnnn'\n  '#required': true\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#required': true\nfooter_markup:\n  '#type': webform_markup\n  '#markup': '<em>By clicking the Submit button above, you expressly consent to be contacted by Arvest at the telephone number or email address you have provided. You agree Arvest may contact you in any way, including calls delivered by an automatic telephone dialing system. Note – please ensure that you have spam blocking enabled and add arvest.com to your email client''s approved safe list.</em>'"
+elements: |-
+  header_markup:
+    '#type': webform_markup
+    '#markup': |
+      <h2>Arvest Credit Card Division</h2>
+      Have a question about your Arvest Bank credit card? Use the email form below to contact a customer service support professional.<br>
+      <br>
+      Please note, inquiries related to account-specific topics such as credit card balance, address, transactions, passwords and rewards point balances cannot be answered using the automated email form below. Call (800) 822-7759 to speak to one of our customer service representatives if you have questions about your account.
+  name:
+    '#type': webform_name
+    '#title': Name
+    '#title__access': false
+    '#first__title': 'First Name'
+    '#first__required': true
+    '#middle__title': MI
+    '#last__title': 'Last Name'
+    '#last__required': true
+    '#suffix__access': false
+    '#degree__access': false
+  flexbox:
+    '#type': webform_flexbox
+    city:
+      '#type': textfield
+      '#title': City
+      '#required': true
+    state:
+      '#type': select
+      '#title': State
+      '#options': state_codes
+      '#required': true
+  flexbox_01:
+    '#type': webform_flexbox
+    email_address:
+      '#type': email
+      '#title': 'Email address'
+      '#required': true
+      '#pattern': '^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$'
+      '#pattern_error': 'Please enter a valid email address.'
+    phone_number:
+      '#type': tel
+      '#title': 'Phone Number'
+      '#placeholder': '(nnn) nnn-nnnn'
+      '#required': true
+  message:
+    '#type': textarea
+    '#title': Message
+    '#required': true
+  branch_location:
+    '#type': webform_term_select
+    '#title': 'Branch Location'
+    '#required': true
+    '#vocabulary': branch_location
+    '#breadcrumb_delimiter': ''
+  footer_markup:
+    '#type': webform_markup
+    '#markup': '<em>By clicking the Submit button above, you expressly consent to be contacted by Arvest at the telephone number or email address you have provided. You agree Arvest may contact you in any way, including calls delivered by an automatic telephone dialing system. Note – please ensure that you have spam blocking enabled and add arvest.com to your email client''s approved safe list.</em>'
 css: ''
 javascript: ''
 settings:
@@ -138,7 +195,7 @@ settings:
   purge: none
   purge_days: null
   results_disabled: true
-  results_disabled_ignore: false
+  results_disabled_ignore: true
   results_customize: false
   token_view: false
   token_update: false
@@ -191,5 +248,19 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  save_submissions_in_webtools:
+    id: 'Save Submissions In Webtools'
+    label: 'Save Submissions In Webtools'
+    notes: ''
+    handler_id: save_submissions_in_webtools
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      webtools_form_name: email_acc_business
+      first_name_field_machine_name: name.first
+      last_name_field_machine_name: name.last
+      full_name_field_machine_name: ''
+      email_field_machine_name: email_address
 variants: {  }

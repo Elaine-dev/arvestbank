@@ -1,0 +1,21 @@
+uuid: f77d24b0-b342-4413-8983-a1828d579c1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alert_block_body
+    - node.type.stage_page
+  module:
+    - text
+id: node.stage_page.field_alert_block_body
+field_name: field_alert_block_body
+entity_type: node
+bundle: stage_page
+label: 'Alert Block'
+description: 'Schedule the alert block to appear instead of the block above by setting display dates for the alert.  '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

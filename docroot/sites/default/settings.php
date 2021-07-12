@@ -829,6 +829,7 @@ if (isset($_ENV['AH_SITE_ENVIRONMENT'])) {
 
 $conf['acquia_hosting_settings_autoconnect'] = FALSE;
 
+
 require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
 /**
  * IMPORTANT.

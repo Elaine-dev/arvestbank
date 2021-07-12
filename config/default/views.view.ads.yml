@@ -900,7 +900,7 @@ display:
   entity_reference_3:
     display_plugin: entity_reference
     id: entity_reference_3
-    display_title: 'Main Content Images'
+    display_title: 'Exit Page Images'
     position: 2
     display_options:
       display_extenders:
@@ -1219,7 +1219,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: CTA
+          label: 'Ad Link'
           exclude: false
           alter:
             alter_text: false
@@ -1414,7 +1414,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Image (Content)'
+          label: 'Image (Exit Page)'
           exclude: false
           alter:
             alter_text: false
@@ -1550,7 +1550,7 @@ display:
           empty: true
           tokenize: false
           content:
-            value: "<div class=\"action-link\"><a href=\"/node/add/ad?destination=/admin/content/ads\">Add an Ad</a></div>\r\n<div class=\"action-link\"><a href=\"/media/add/acquia_dam_image?destination=/admin/content/ads\">Add Media</a></div>"
+            value: "<div class=\"action-link\"><a href=\"/node/add/ad?destination=/admin/content/ads\">Add an Ad</a></div>\r\n<div class=\"action-link\"><a href=\"https://arvestbank.acquiadam.com/cloud/#landing\" target=\"_blank\">Add Media</a></div>"
             format: cohesion
           plugin_id: text
     cache_metadata:

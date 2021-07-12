@@ -1,0 +1,36 @@
+arvestbank_theme.phone:
+  label: 'Phone'
+  mediaQuery: '(min-width: 320px)'
+  weight: 0
+  multipliers:
+    - 1x
+arvestbank_theme.phone_landscape:
+  label: 'Phone Landscape'
+  mediaQuery: '(min-width: 565px)'
+  weight: 1
+  multipliers:
+    - 1x
+arvestbank_theme.tablet:
+  label: 'Tablet'
+  mediaQuery: '(min-width: 768px)'
+  weight: 2
+  multipliers:
+    - 1x
+arvestbank_theme.laptop:
+  label: 'Laptop'
+  mediaQuery: '(min-width: 950px)'
+  weight: 3
+  multipliers:
+    - 1x
+arvestbank_theme.desktop:
+  label: 'Desktop'
+  mediaQuery: '(min-width: 1030px)'
+  weight: 4
+  multipliers:
+    - 1x
+arvestbank_theme.wide_desktop:
+  label: 'Wide Desktop'
+  mediaQuery: '(min-width: 1170px)'
+  weight: 5
+  multipliers:
+    - 1x

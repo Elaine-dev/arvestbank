@@ -20,7 +20,7 @@ dependencies:
     - field.field.node.associate.field_mobile_number
     - field.field.node.associate.field_nmls_number
     - field.field.node.associate.field_office_number
-    - field.field.node.associate.field_private_banker_location
+    - field.field.node.associate.field_pb_application
     - field.field.node.associate.field_website
     - node.type.associate
   module:
@@ -56,12 +56,10 @@ label: Associates
 description: ''
 help: ''
 import_period: -1
-fetcher: directory
+fetcher: upload
 fetcher_configuration:
   allowed_extensions: 'txt csv tsv xml opml'
-  allowed_schemes:
-    public: public
-  recursive_scan: false
+  directory: 'private://feeds'
 parser: csv
 parser_configuration:
   delimiter: ','
@@ -71,10 +69,10 @@ processor: 'entity:node'
 processor_configuration:
   langcode: en
   update_existing: 1
-  update_non_existent: _keep
+  update_non_existent: _delete
   expire: -1
   owner_feed_author: false
-  owner_id: 0
+  owner_id: 146
   authorize: true
   skip_hash_check: false
   values:
@@ -136,10 +134,6 @@ custom_sources:
     label: mobile
     value: mobile
     machine_name: mobile
-  pb_location:
-    label: pb_location
-    value: pb_location
-    machine_name: pb_location
   appointment:
     label: appointment
     value: appointment
@@ -180,6 +174,14 @@ custom_sources:
     label: associate_bio_text
     value: associate_bio_text
     machine_name: associate_bio_text
+  pb_location:
+    label: pb_location
+    value: pb_location
+    machine_name: pb_location
+  pb_application:
+    label: pb_application
+    value: pb_application
+    machine_name: pb_application
 mappings:
   -
     target: title
@@ -236,8 +238,8 @@ mappings:
       value: bio
       summary: ''
     settings:
-      language: null
-      format: plain_text
+      language: ''
+      format: cohesion
   -
     target: field_location
     map:
@@ -270,13 +272,6 @@ mappings:
     target: field_mobile_number
     map:
       value: mobile
-    settings:
-      language: null
-  -
-    target: field_private_banker_location
-    map:
-      value: pb_location
-    unique: {  }
     settings:
       language: null
   -
@@ -324,5 +319,12 @@ mappings:
     map:
       uri: associate_bio
       title: associate_bio_text
+    settings:
+      language: null
+  -
+    target: field_pb_application
+    map:
+      uri: pb_application
+      title: ''
     settings:
       language: null

@@ -135,6 +135,15 @@ class WebtoolsAdminForm extends ConfigFormBase {
       '#attributes' => ['disabled' => 'disabled'],
     ];
 
+    // Webtools Deposit Rates Endpoint.
+    $form['webtools']['deposit-rates-endpoint'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Deposit Rates Endpoint'),
+      '#description' => $this->t('The endpoint at which the webtools deposit rates api can be reached.'),
+      '#default_value' => $config->get('deposit-rates-endpoint'),
+      '#attributes' => ['disabled' => 'disabled'],
+    ];
+
     // Webtools Mortgage Rates Endpoint.
     $form['webtools']['webtools-mortgage-rates-endpoint'] = [
       '#type' => 'textfield',
@@ -144,6 +153,12 @@ class WebtoolsAdminForm extends ConfigFormBase {
       '#attributes' => ['disabled' => 'disabled'],
     ];
 
+    // Copied from ConfigFormBase->buildForm.
+    $form['#theme'] = 'system_config_form';
+
+    // Actions.
+    $form['actions']['#type'] = 'actions';
+
     // Test Webtools Form API button.
     $form['webtools']['test_webtools_form_api_config'] = [
       '#type' => 'submit',
@@ -151,11 +166,26 @@ class WebtoolsAdminForm extends ConfigFormBase {
       '#submit' => [[$this, 'testWebtoolsFormEndpoint']],
     ];
 
+
     // Test Webtools Mortgage Rates API button.
     $form['webtools']['test_webtools_mortgage_rates_api_config'] = [
       '#type' => 'submit',
       '#value' => t('Test Webtools Mortgage Rates API Config'),
       '#submit' => [[$this, 'testWebtoolsMortgageRatesEndpoint']],
+    ];
+
+    // Test webtools api button.
+    $form['actions']['test_webtools_form_config'] = [
+      '#type' => 'submit',
+      '#value' => t('Test Form API Config'),
+      '#submit' => [[$this, 'testWebtoolsForm']],
+    ];
+
+    // Test webtools api button.
+    $form['actions']['test_deposit_rates_config'] = [
+      '#type' => 'submit',
+      '#value' => t('Test Deposit Rates API Config'),
+      '#submit' => [[$this, 'testDepositRates']],
     ];
 
     // Coppied from ConfigFormBase->buildForm.
@@ -166,54 +196,32 @@ class WebtoolsAdminForm extends ConfigFormBase {
   }
 
   /**
-   * Submit function to test ping identity config.
+   * Form submit function to test deposit rates config.
    *
    * @param array $form
    *   The form array.
    * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The form state.
    */
-  public function testPingIdentity(array &$form, FormStateInterface $form_state) {
+  public function testDepositRates(array &$form, FormStateInterface $form_state) {
 
-    // Get Ping Identity Client.
-    $pingIdentityClient = \Drupal::service('arvestbank_webtools_api.ping_identity_client');
+    // Get webtools client.
+    $webtoolsClient = \Drupal::service('arvestbank_webtools_api.webtools_client');
 
-    // Attempt to generate a bearer token from ping identity.
-    $requestSuccess = $pingIdentityClient->getNewBearerToken();
+    // Test connectivity.
+    $requestSuccess = $webtoolsClient->testDepositRatesEndpointConnectivity();
 
     // If the test was successful.
     if ($requestSuccess) {
-      $this->messenger()->addMessage('Successfully generated a ping identity bearer token.');
+      $this->messenger()->addMessage('Successfully connected to the deposit rates endpoint.');
     }
     else {
-      $this->messenger()->addError('Could not connect to ping identity.');
+      $this->messenger()->addError('Could not connect to the deposit rates endpoint.');
     }
 
   }
 
-  /**
-   * Submit function to test optimal blue config.
-   *
-   * @param array $form
-   *   The form array.
-   * @param \Drupal\Core\Form\FormStateInterface $form_state
-   *   The form state.
-   */
-  public function testOptimalBlue(array &$form, FormStateInterface $form_state) {
-
-    // Get Azure Token Client.
-    $azureTokenClient = \Drupal::service('arvestbank_webtools_api.azure_token_client');
-
-    // Attempt to generate a bearer token from optimal blue app.
-    $requestSuccess = $azureTokenClient->getNewOptimalBlueBearerToken();
-
-    // If the test was successful.
-    if ($requestSuccess) {
-      $this->messenger()->addMessage('Successfully generated a Optimal Blue app bearer token.');
-    }
-    else {
-      $this->messenger()->addError('Could not connect to ping identity.');
-    }
+  public function testWebtoolsFormEndpoint(array &$form, FormStateInterface $form_state){
 
   }
 
@@ -250,19 +258,46 @@ class WebtoolsAdminForm extends ConfigFormBase {
    * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The form state.
    */
-  public function testWebtoolsFormEndpoint(array &$form, FormStateInterface $form_state) {
+  public function testWebtoolsForm(array &$form, FormStateInterface $form_state) {
 
     // Get webtools client.
     $webtoolsClient = \Drupal::service('arvestbank_webtools_api.webtools_client');
 
     // Test connectivity.
     $requestSuccess = $webtoolsClient->testFormEndpointConnectivity();
+
     // If the test was successfull.
     if ($requestSuccess) {
       $this->messenger()->addMessage('Successfully connected to the webtools SaveFormData endpoint.');
     }
     else {
       $this->messenger()->addError('Could not connect to the webtools SaveFormData endpoint.');
+    }
+
+  }
+
+  /**
+   * Submit function to test ping identity config.
+   *
+   * @param array $form
+   *   The form array.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The form state.
+   */
+  public function testPingIdentity(array &$form, FormStateInterface $form_state) {
+
+    // Get Ping Identity Client.
+    $pingIdentityClient = \Drupal::service('arvestbank_webtools_api.ping_identity_client');
+
+    // Attempt to generate a bearer token from ping identity.
+    $requestSuccess = $pingIdentityClient->getNewBearerToken();
+
+    // If the test was successfull.
+    if ($requestSuccess) {
+      $this->messenger()->addMessage('Successfully generated a ping identity bearer token.');
+    }
+    else {
+      $this->messenger()->addError('Could not connect to ping identity.');
     }
 
   }

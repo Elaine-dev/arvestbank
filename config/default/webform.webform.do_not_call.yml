@@ -1,7 +1,9 @@
 uuid: 4b3cd057-e07d-47e4-b01c-50d82ee8ff96
 langcode: en
 status: open
-dependencies: {  }
+dependencies:
+  module:
+    - arvestbank_webtools_api
 open: null
 close: null
 weight: 0
@@ -12,7 +14,49 @@ id: do_not_call
 title: 'Do Not Call Request'
 description: 'Adds a user to Arvest&#39;s telemarketing &quot;Do Not Call&quot; list.'
 category: ''
-elements: "markup:\n  '#type': webform_markup\n  '#markup': 'If you no longer wish to receive telemarketing phone calls from us, please complete the form below. We will add you to our Telemarketing &quot;Do Not Call&quot; list. Required fields are marked'\nname_flexbox:\n  '#type': webform_flexbox\n  first_name:\n    '#type': textfield\n    '#title': 'First Name'\n    '#required': true\n  last_name:\n    '#type': textfield\n    '#title': 'Last Name'\n    '#required': true\naddress:\n  '#type': webform_address\n  '#title': Address\n  '#address__access': false\n  '#address_2__access': false\n  '#city__title': City\n  '#state_province__title': State\n  '#postal_code__title': ZIP\n  '#country__access': false\nnumber_flexbox:\n  '#type': webform_flexbox\n  phone:\n    '#type': tel\n    '#title': 'Phone Number'\n    '#placeholder': '(nnn) nnn-nnnn'\n    '#required': true\n    '#pattern': '^(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}$'\n  account_number:\n    '#type': textfield\n    '#title': 'Account Number'\nsocial_security_number:\n  '#type': textfield\n  '#title': 'Social Security Number'\n  '#placeholder': nnn-nn-nnnn"
+elements: |-
+  markup:
+    '#type': webform_markup
+    '#markup': 'If you no longer wish to receive telemarketing phone calls from us, please complete the form below. We will add you to our Telemarketing &quot;Do Not Call&quot; list. Required fields are marked'
+  name_flexbox:
+    '#type': webform_flexbox
+    first_name:
+      '#type': textfield
+      '#title': 'First Name'
+      '#required': true
+    last_name:
+      '#type': textfield
+      '#title': 'Last Name'
+      '#required': true
+  address:
+    '#type': webform_address
+    '#title': Address
+    '#address__access': false
+    '#address_2__access': false
+    '#city__title': City
+    '#state_province__title': State
+    '#postal_code__title': ZIP
+    '#country__access': false
+  number_flexbox:
+    '#type': webform_flexbox
+    phone:
+      '#type': tel
+      '#title': 'Phone Number'
+      '#placeholder': '(nnn) nnn-nnnn'
+      '#required': true
+      '#pattern': '^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$'
+    account_number:
+      '#type': textfield
+      '#title': 'Account Number'
+  flexbox_ss:
+    '#type': webform_flexbox
+    '#attributes':
+      class:
+        - coh-style-flex-50
+    social_security_number:
+      '#type': textfield
+      '#title': 'Social Security Number'
+      '#placeholder': nnn-nn-nnnn
 css: ''
 javascript: ''
 settings:
@@ -138,7 +182,7 @@ settings:
   purge: none
   purge_days: null
   results_disabled: true
-  results_disabled_ignore: false
+  results_disabled_ignore: true
   results_customize: false
   token_view: false
   token_update: false
@@ -191,5 +235,19 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  save_submissions_in_webtools:
+    id: 'Save Submissions In Webtools'
+    label: 'Save Submissions In Webtools'
+    notes: ''
+    handler_id: save_submissions_in_webtools
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      webtools_form_name: opt_out
+      first_name_field_machine_name: first_name
+      last_name_field_machine_name: last_name
+      full_name_field_machine_name: ''
+      email_field_machine_name: ''
 variants: {  }

@@ -1,0 +1,15 @@
+uuid: d64e98bc-0c7e-4092-b61e-7d9113124bce
+langcode: en
+status: true
+dependencies: {  }
+name: debit_card
+label: 'Debit Card'
+effects:
+  40f02076-1bbe-441b-98df-7e956aed0208:
+    uuid: 40f02076-1bbe-441b-98df-7e956aed0208
+    id: image_scale
+    weight: 1
+    data:
+      width: 386
+      height: null
+      upscale: false

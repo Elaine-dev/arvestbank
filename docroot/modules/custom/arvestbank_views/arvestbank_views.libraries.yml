@@ -1,0 +1,7 @@
+debit_cards:
+  js:
+    js/debit_cards.js: {}
+
+clear_associates_filters:
+  js:
+    js/clear_associates_filters.js: {}

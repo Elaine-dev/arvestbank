@@ -1,0 +1,23 @@
+uuid: 4a2b4cf7-fdb2-4ab2-89fd-c01bdab0e497
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ad_exit_text_link
+    - node.type.ad
+  module:
+    - link
+id: node.ad.field_ad_exit_text_link
+field_name: field_ad_exit_text_link
+entity_type: node
+bundle: ad
+label: 'Button and Link'
+description: 'This will display below the Text Ad as a button.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

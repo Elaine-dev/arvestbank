@@ -95,3 +95,23 @@ function arvestbank_ads_node_view_alter(array &$build, Drupal\Core\Entity\Entity
   }
 
 }
+
+/**
+ * Implement hook_ENTITY_TYPE_view()
+ */
+function arvestbank_ads_node_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity,
+                                  \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode)
+{
+
+  $bundle = $entity->bundle();
+  if ($bundle == 'ad_campaign') {
+    // Add the title to the top of the Ad Campaign.
+    $build['ad_campaign_title'] = [
+      '#markup' => $entity->get('title')->value,
+      '#prefix' => '<h1>',
+      '#suffix' => '</h1>',
+      '#weight' => '-100',
+    ];
+  }
+
+}

@@ -1,0 +1,51 @@
+uuid: 29635356-eb94-4cad-9164-2f5fe0928be1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.financing.field_featured_image
+    - field.field.node.financing.field_financing_description
+    - field.field.node.financing.field_financing_link
+    - node.type.financing
+  module:
+    - link
+    - user
+id: node.financing.default
+targetEntityType: node
+bundle: financing
+mode: default
+content:
+  field_featured_image:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_financing_description:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_financing_link:
+    weight: 102
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

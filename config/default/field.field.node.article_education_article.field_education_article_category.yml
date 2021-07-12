@@ -11,7 +11,7 @@ field_name: field_education_article_category
 entity_type: node
 bundle: article_education_article
 label: 'Education Article Category'
-description: ''
+description: 'Use this Taxonomy to classify where this article should display within the Education Center.'
 required: true
 translatable: false
 default_value: {  }

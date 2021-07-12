@@ -1,0 +1,14 @@
+uuid: 42f79f16-379f-4ecb-a7a9-6af47bb64564
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.financing
+id: node_type_financing
+entity_type_id: node_type
+entity_id: financing
+action: page_redirect
+allow_override: 0
+redirect: /
+redirect_code: 301
+redirect_fallback_action: access_denied

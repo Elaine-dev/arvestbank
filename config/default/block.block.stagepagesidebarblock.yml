@@ -1,0 +1,25 @@
+uuid: 76a97a0c-479e-48e5-8cec-c2d7bd9f3ce4
+langcode: en
+status: true
+dependencies:
+  module:
+    - arvestbank_blocks
+    - cohesion
+  theme:
+    - arvestbank_theme
+id: stagepagesidebarblock
+theme: arvestbank_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: stagepage_sidebar_block
+settings:
+  id: stagepage_sidebar_block
+  label: 'Stage Page Sidebar Block'
+  provider: arvestbank_blocks
+  label_display: visible
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

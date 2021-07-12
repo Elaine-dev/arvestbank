@@ -1,6 +1,6 @@
 arvestbank_rates.admin_settings_form:
-  title: 'Edit Card Rates'
+  title: 'View/Edit Rates'
   route_name: arvestbank_rates.admin_settings_form
-  description: 'Edit Card Rates'
+  description: 'View/Edit Rates'
   parent: system.admin_config
   weight: 99

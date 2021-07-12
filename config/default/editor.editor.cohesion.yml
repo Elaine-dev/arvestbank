@@ -21,6 +21,7 @@ settings:
             - Italic
             - Underline
             - RemoveFormat
+            - Superscript
         -
           name: Layout
           items:
@@ -33,6 +34,7 @@ settings:
           items:
             - DrupalLink
             - DrupalUnlink
+            - ButtonLink
         -
           name: Lists
           items:
@@ -41,9 +43,11 @@ settings:
         -
           name: Media
           items:
-            - ImceImage
+            - Table
+            - DrupalMediaLibrary
             - Blockquote
             - creditcardrate
+            - phonenumber
         -
           name: Tools
           items:

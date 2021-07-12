@@ -1,0 +1,23 @@
+uuid: 59cb833a-dcbc-4818-8e6e-2724bb0ebdf9
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - media
+id: pdfs
+label: pdfs
+type: 'canonical_entities:media'
+pattern: '/pdfs/[media:name]'
+selection_criteria:
+  55b656b0-99b0-4d29-945f-f963defbdc1e:
+    id: 'entity_bundle:media'
+    bundles:
+      acquia_dam_document: acquia_dam_document
+    negate: false
+    context_mapping:
+      media: media
+    uuid: 55b656b0-99b0-4d29-945f-f963defbdc1e
+selection_logic: and
+weight: -5
+relationships: {  }

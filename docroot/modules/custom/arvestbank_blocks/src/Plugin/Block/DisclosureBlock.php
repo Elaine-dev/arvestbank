@@ -3,7 +3,6 @@
 namespace Drupal\arvestbank_blocks\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
-use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\node\Entity\Node;
 use Drupal\taxonomy\Entity\Term;
 
@@ -16,31 +15,6 @@ use Drupal\taxonomy\Entity\Term;
  * )
  */
 class DisclosureBlock extends BlockBase {
-
-  /**
-   * Helper function to extract the entity for the supplied route.
-   *
-   * @return \Drupal\Core\Entity\ContentEntityInterface
-   *   The entity.
-   */
-  private function getRouteEntity() {
-    $route_match = \Drupal::routeMatch();
-    // Entity will be found in the route parameters.
-    if (($route = $route_match->getRouteObject()) && ($parameters = $route->getOption('parameters'))) {
-      // Determine if the current route represents an entity.
-      foreach ($parameters as $name => $options) {
-        if (isset($options['type']) && strpos($options['type'], 'entity:') === 0) {
-          $entity = $route_match->getParameter($name);
-          if ($entity instanceof ContentEntityInterface && $entity->hasLinkTemplate('canonical')) {
-            return $entity;
-          }
-
-          // Since entity was found, no need to iterate further.
-          return NULL;
-        }
-      }
-    }
-  }
 
   /**
    * {@inheritdoc}
@@ -65,7 +39,8 @@ class DisclosureBlock extends BlockBase {
     }
 
     // Get the current entity with the helper function.
-    $entity = $this->getRouteEntity();
+    $entity = \Drupal::service('arvestbank_blocks.service')->getRouteEntity();
+
     // Check for Node.
     if ($entity instanceof Node) {
       // Check that it has the correct field.
@@ -87,8 +62,8 @@ class DisclosureBlock extends BlockBase {
     // If there is disclosure text add it to the markup.
     if (!empty($disclosure_text)) {
       $build['disclosure_block'] = [
-        '#prefix' => '<div class="coh-style-footer-styles"><div class="text-align-center"><span class="coh-color-white">',
-        '#suffix' => '</span></div></div>',
+        '#prefix' => '<div class="coh-style-footer-styles"><div class="text-align-center">',
+        '#suffix' => '</div></div>',
         '#markup' => $disclosure_text,
       ];
     }

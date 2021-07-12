@@ -1,0 +1,25 @@
+uuid: 48058e9c-6168-4a19-bce8-2bf9c4865b6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ad_exit_switchkit
+    - node.type.ad_campaign
+id: node.ad_campaign.field_ad_exit_switchkit
+field_name: field_ad_exit_switchkit
+entity_type: node
+bundle: ad_campaign
+label: 'Switch Kit'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: ads
+      display_name: entity_reference_3
+      arguments: {  }
+field_type: entity_reference

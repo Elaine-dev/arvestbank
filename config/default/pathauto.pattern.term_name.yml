@@ -10,14 +10,22 @@ label: 'Term Name'
 type: 'canonical_entities:taxonomy_term'
 pattern: '[term:name]'
 selection_criteria:
-  52f9c636-d6f1-45f7-9d6d-0e5b94eee8ee:
+  2c6e8297-2e54-4115-a622-ab9967820707:
     id: 'entity_bundle:taxonomy_term'
     bundles:
-      school_zip_code: school_zip_code
+      associate_category: associate_category
+      branch_location: branch_location
+      card_category_keywords: card_category_keywords
+      certs: certs
+      debit_card_category: debit_card_category
+      designation: designation
+      disclosures: disclosures
+      document_and_resource_category: document_and_resource_category
+      education_article_category: education_article_category
     negate: false
     context_mapping:
       taxonomy_term: taxonomy_term
-    uuid: 52f9c636-d6f1-45f7-9d6d-0e5b94eee8ee
+    uuid: 2c6e8297-2e54-4115-a622-ab9967820707
 selection_logic: and
 weight: -5
 relationships: {  }

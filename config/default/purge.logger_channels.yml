@@ -1,0 +1,19 @@
+channels:
+  -
+    id: purgers
+    grants:
+      - 0
+      - 2
+      - 3
+  -
+    id: queue
+    grants:
+      - 0
+      - 2
+      - 3
+  -
+    id: purger_httpbundled_04ed2c7053
+    grants:
+      - 0
+      - 2
+      - 3

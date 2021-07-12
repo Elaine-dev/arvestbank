@@ -24,7 +24,7 @@ third_party_settings:
     unpublish_enable: true
     unpublish_required: false
     unpublish_revision: false
-name: 'Campaign Page'
+name: 'Campaign Landing Pages'
 type: campaign_page
 description: 'Content Type for one off landing marketing pages without the Arvest header and footer.'
 help: ''

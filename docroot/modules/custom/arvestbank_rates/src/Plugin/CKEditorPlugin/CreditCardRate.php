@@ -53,11 +53,12 @@ class CreditCardRate extends CKEditorPluginBase {
       $tokenHumanName = ucwords(str_replace(['__', '_'], [' - ', ' '], $tokenName));
       // Add to array.
       $config['creditcardrate_tokens'][] = [
-        //'Description' => $tokenHumanName,
-        //'Value' => $tokenName,
-        $tokenHumanName
+        $tokenHumanName,
       ];
     }
+
+    // Alphabetize tokens.
+    sort($config['creditcardrate_tokens']);
 
     return $config;
   }

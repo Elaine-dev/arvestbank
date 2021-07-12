@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.wordpress_articles.field_article_
+    - field.field.paragraph.wordpress_articles.field_display
     - field.field.paragraph.wordpress_articles.field_feed_url
-    - field.field.paragraph.wordpress_articles.field_show_latest_news_summary
     - field.field.paragraph.wordpress_articles.field_title
     - paragraphs.paragraphs_type.wordpress_articles
+  module:
+    - options
 id: paragraph.wordpress_articles.default
 targetEntityType: paragraph
 bundle: wordpress_articles
@@ -22,6 +24,13 @@ content:
     third_party_settings: {  }
     type: number_integer
     region: content
+  field_display:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_feed_url:
     weight: 1
     label: above
@@ -29,16 +38,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
-  field_show_latest_news_summary:
-    weight: 3
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
     region: content
   field_title:
     weight: 0

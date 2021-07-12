@@ -1,0 +1,186 @@
+<?php
+
+/**
+ * @file
+ * Hooks relating to arvestbank phone numbers.
+ */
+
+use Drupal\Core\Render\BubbleableMetadata;
+use Drupal\Core\Entity\EntityInterface;
+use \Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_token_info().
+ */
+function arvestbank_phone_numbers_token_info() {
+
+  // Instantiate tokens array with token group.
+  $info = [
+    'types' => [
+      'arvestbank_phone_numbers' => [
+        'name' => t('Arvest Bank Phone Numbers'),
+        'description' => t('Tokens containing phone numbers.'),
+      ],
+    ],
+    'tokens' => [
+      'arvestbank_phone_numbers' => [],
+    ],
+  ];
+
+  // Get published nodes in cta_phone_number bundle.
+  $phoneNumbersQuery = \Drupal::entityQuery('node')
+    ->condition('type', 'cta_phone_number')
+    ->condition('status', 1);
+  $phoneNumbers = $phoneNumbersQuery->execute();
+
+  // Loop over phone numbers.
+  foreach ($phoneNumbers as $phoneNumberRevisionId => $phoneNumberEntityId) {
+
+    // Load phone number entity.
+    $phoneNumberEntity = \Drupal::entityTypeManager()
+      ->getStorage('node')
+      ->load($phoneNumberEntityId);
+
+    // Add config variable to arvestbank_rates token group.
+    // Numeric keys here would cause ids to be incorrect when tokens are loaded.
+    $info['tokens']['arvestbank_phone_numbers']['nid=' . $phoneNumberEntity->id()] = [
+      'name' => $phoneNumberEntity->getTitle(),
+      'description' => 'A token representing the phone number currently with the value "' . $phoneNumberEntity->getTitle() . '"',
+    ];
+
+  }
+
+  return $info;
+}
+
+/**
+ * Implements hook_tokens().
+ *
+ * @inheritDoc
+ */
+function arvestbank_phone_numbers_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata) {
+
+  $replacements = [];
+
+  // Loop over tokens that need replacing.
+  foreach ($tokens as $name => $original) {
+
+    // If this is a phone number token.
+    if ($type == 'arvestbank_phone_numbers') {
+
+      // Initially set the value to null in case we can't load the node.
+      $replacements[$original] = '';
+
+      // Get phone number nid from token.
+      $phoneNumberNid = str_replace(['[arvestbank_phone_numbers:nid=', ']'], '', $original);
+
+      // If we have a valid nid to try to load.
+      if ($phoneNumberNid && is_numeric($phoneNumberNid)) {
+
+        // Attempt loading phone number field.
+        $phoneNumberNode = \Drupal::entityTypeManager()
+          ->getStorage('node')
+          ->load($phoneNumberNid);
+
+        // If we loaded the node and it's published.
+        if ($phoneNumberNode && $phoneNumberNode->isPublished()) {
+          // Replace with the phone number.
+          $replacements[$original] = $phoneNumberNode->getTitle();
+        }
+
+      }
+
+    }
+
+  }
+
+  return $replacements;
+}
+
+/**
+ * Implements hook_entity_update().
+ *
+ * Trigger save for entities referencing phone number when it gets updated.
+ *
+ * @inheritDoc
+ */
+function arvestbank_phone_numbers_entity_update(EntityInterface $entity) {
+
+  // If the entity is a "CTA Phone Number" node.
+  if (
+    $entity->getEntityTypeId() == 'node'
+    && $entity->bundle() == 'cta_phone_number'
+  ) {
+
+    // Get token reference helper service.
+    $tokenReferenceHelper = \Drupal::service('arvestbank_revisions.token_reference_helper');
+
+    // Get token we want to look for.
+    $token = '[arvestbank_phone_numbers:nid=' . $entity->id() . ']';
+
+    // Create new revision for nodes referencing rates tokens.
+    $tokenReferenceHelper->createRevisionsForReferencingNodes([$token], 'Programatic Revision To Record Phone Number Change.');
+
+  }
+
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function arvestbank_phone_numbers_form_node_form_alter(&$form, &$form_state, $form_id) {
+
+  if ($form_id == 'node_cta_phone_number_form' || $form_id == 'node_cta_phone_number_edit_form') {
+    $helpText = [
+      '#markup' => 'A list of all current CTA Phone Numbers and where they\'re referenced is available '
+      . '<a href="/admin/phone-number-usage">here</a>.',
+    ];
+    array_push($form, $helpText);
+  }
+
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function arvestbank_phone_numbers_form_node_cta_phone_number_delete_form_alter(&$form, FormStateInterface &$form_state, $form_id) {
+  $form['#validate'][] = '_arvestbank_phone_numbers_validate_no_references';
+}
+
+/**
+ * Validation function to prevent deletion of referenced numbers.
+ */
+function _arvestbank_phone_numbers_validate_no_references(&$form, FormStateInterface $form_state){
+
+  // Get node we're trying to delete.
+  $node = $form_state->getFormObject()->getEntity();
+
+  // Load Token Reference Helper Service.
+  $tokenReferenceHelper = \Drupal::service('arvestbank_revisions.token_reference_helper');
+
+  // Determine token for this phone number.
+  $phoneNumberToken = '[arvestbank_phone_numbers:nid=' . $node->id() . ']';
+
+  // Check for references to this phone number.
+  $tokenReferences = $tokenReferenceHelper->getNodesReferencingTokens([$phoneNumberToken]);
+
+  // If there are references.
+  if (is_array($tokenReferences) && count($tokenReferences)) {
+
+    // Build error message.
+    $errorMessage = [
+      '#markup' => 'There are pages referencing this phone number.<br/>Please remove these tokens before deleting this phone number.<br/>',
+    ];
+
+    // Loop over token references.
+    foreach ($tokenReferences as $tokenReference) {
+      $errorMessage['#markup'] .= 'Edit page: <a href="/node/' . $tokenReference->id() . '/edit" target="_blank"><b>"' . $tokenReference->getTitle() . '"</b></a>';
+    }
+
+    // Set error message.
+    $form_state->setError($form['confirm'], $errorMessage);
+
+  }
+
+
+}

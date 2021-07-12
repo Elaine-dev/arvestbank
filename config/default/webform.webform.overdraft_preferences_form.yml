@@ -1,7 +1,9 @@
 uuid: 3de28a6c-8851-475d-8f66-ee6799d124b6
 langcode: en
 status: open
-dependencies: {  }
+dependencies:
+  module:
+    - arvestbank_webtools_api
 open: null
 close: null
 weight: 0
@@ -12,7 +14,85 @@ id: overdraft_preferences_form
 title: 'Overdraft Preferences Form'
 description: 'Use this form to request a change to overdraft program preferences on checking accounts.'
 category: ''
-elements: "markup:\n  '#type': webform_markup\n  '#markup': |\n    <h2>Choose Your Overdraft Coverage Preferences</h2>\n    <p>Use this form to change overdraft program preferences on your personal checking accounts.</p>\n    <ul>\n        <li><strong>Remove all overdraft protection</strong> will remove your overdraft limit on your account. We will generally return transactions when your ledger balance is not sufficient to cover them and charge you an Insufficient Funds/Overdraft fee each time a transaction is presented and returned. From time to time, in our sole discretion, we may choose to pay a transaction that exceeds your ledger balance and charge you an Insufficient Funds/Overdraft fee for paying the overdraft even if you have removed overdraft protection.</li>\n        <li><strong>Basic Overdraft Coverage</strong> will cover checks and other transactions made using your checking account number, automatic bill payments and other recurring debit card transactions such as monthly memberships and subscriptions and Automated Clearing House (ACH) electronic payments for bills automatically deducted for your account when your account’s ledger balance does not have enough money to cover a transaction.  Basic Overdraft Coverage does not cover everyday debit card or ATM transactions and will normally be declined at the point of sale or ATM if your available balance is insufficient to cover the transaction when it is initiated. An Insufficient Funds/Overdraft fee will apply when checks and other transactions made using your checking account number, automatic bill payments and other recurring debit card transactions or transactions made through ACH causing an overdraft on your account.</li>\n        <li><strong>Extended Overdraft Coverage</strong> will cover the transactions included in Basic Overdraft Coverage plus ATM and everyday (i.e., one-time) debit card purchases and payments such as utilities, online shopping, and reservations. An Insufficient Funds/Overdraft fee may apply for each transaction on your account causing an overdraft whether paid or returned unpaid.\n        </li>\n    </ul>\n    \nbranch_location:\n  '#type': webform_term_select\n  '#title': 'Branch Location'\n  '#required': true\n  '#vocabulary': branch_location\n  '#breadcrumb_delimiter': ''\nflexbox_name:\n  '#type': webform_flexbox\n  name:\n    '#type': webform_name\n    '#title': Name\n    '#title__access': false\n    '#first__title': 'First Name'\n    '#first__required': true\n    '#middle__title': MI\n    '#last__title': 'Last Name'\n    '#suffix__access': false\n    '#degree__access': false\n    '#flexbox': '1'\nlast_4_digits_of_your_social_security:\n  '#type': number\n  '#title': 'Last 4 digits of your Social Security #'\n  '#required': true\n  '#min': 1000\n  '#max': 9999\npersonal_checking_accounts_only:\n  '#type': fieldset\n  '#title': 'Personal Checking Accounts Only'\n  '#description': 'Please enter the personal checking account numbers for which you would like to change Overdraft Coverage.'\n  flexbox_01:\n    '#type': webform_flexbox\n    account_number:\n      '#type': number\n      '#title': 'Account #'\n      '#max': 9999999999\n    overdraft_coverage_election:\n      '#type': radios\n      '#title': 'Overdraft Coverage Election'\n      '#options':\n        Remove: 'Remove all Overdraft Protection'\n        Basic: 'Basic Overdraft Coverage'\n        Extended: 'Extended Overdraft Coverage'\ncontact_information:\n  '#type': fieldset\n  '#title': 'Contact Information'\n  email_address:\n    '#type': email\n    '#title': 'Email Address'\n    '#required': true\n  flexbox_02:\n    '#type': webform_flexbox\n    phone_number:\n      '#type': tel\n      '#title': 'Phone Number'\n      '#placeholder': '(nnn) nnn-nnnn'\n    phone_available:\n      '#type': checkboxes\n      '#title': Available\n      '#title_display': none\n      '#options':\n        Morning: Morning\n        Afternoon: Afternoon\n        Evening: Evening\n      '#options_display': three_columns"
+elements: |-
+  markup:
+    '#type': webform_markup
+    '#markup': |
+      <h2>Choose Your Overdraft Coverage Preferences</h2>
+      <p>Use this form to change overdraft program preferences on your personal checking accounts.</p>
+      <ul>
+          <li><strong>Remove all overdraft protection</strong> will remove your overdraft limit on your account. We will generally return transactions when your ledger balance is not sufficient to cover them and charge you an Insufficient Funds/Overdraft fee each time a transaction is presented and returned. From time to time, in our sole discretion, we may choose to pay a transaction that exceeds your ledger balance and charge you an Insufficient Funds/Overdraft fee for paying the overdraft even if you have removed overdraft protection.</li>
+          <li><strong>Basic Overdraft Coverage</strong> will cover checks and other transactions made using your checking account number, automatic bill payments and other recurring debit card transactions such as monthly memberships and subscriptions and Automated Clearing House (ACH) electronic payments for bills automatically deducted for your account when your account’s ledger balance does not have enough money to cover a transaction.  Basic Overdraft Coverage does not cover everyday debit card or ATM transactions and will normally be declined at the point of sale or ATM if your available balance is insufficient to cover the transaction when it is initiated. An Insufficient Funds/Overdraft fee will apply when checks and other transactions made using your checking account number, automatic bill payments and other recurring debit card transactions or transactions made through ACH causing an overdraft on your account.</li>
+          <li><strong>Extended Overdraft Coverage</strong> will cover the transactions included in Basic Overdraft Coverage plus ATM and everyday (i.e., one-time) debit card purchases and payments such as utilities, online shopping, and reservations. An Insufficient Funds/Overdraft fee may apply for each transaction on your account causing an overdraft whether paid or returned unpaid.
+          </li>
+      </ul>
+  flexbox_name:
+    '#type': webform_flexbox
+    name:
+      '#type': webform_name
+      '#title': Name
+      '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+      '#title__access': false
+      '#first__title': 'First Name'
+      '#first__required': true
+      '#middle__title': MI
+      '#last__title': 'Last Name'
+      '#last__required': true
+      '#suffix__access': false
+      '#degree__access': false
+      '#flexbox': '1'
+  last_4_digits_of_your_social_security:
+    '#type': number
+    '#title': 'Last 4 digits of your Social Security #'
+    '#required': true
+    '#min': 1000
+    '#max': 9999
+  personal_checking_accounts_only:
+    '#type': webform_section
+    '#title': 'Personal Checking Accounts Only'
+    '#description': 'Please enter the personal checking account numbers for which you would like to change Overdraft Coverage.'
+    '#description_display': before
+    flexbox_01:
+      '#type': webform_flexbox
+      account_number:
+        '#type': number
+        '#title': 'Account #'
+        '#max': 9999999999
+    overdraft_coverage_election:
+      '#type': radios
+      '#title': 'Overdraft Coverage Election'
+      '#options':
+        Remove: 'Remove all Overdraft Protection'
+        Basic: 'Basic Overdraft Coverage'
+        Extended: 'Extended Overdraft Coverage'
+  contact_information:
+    '#type': webform_section
+    '#title': 'Contact Information'
+    flexbox_02:
+      '#type': webform_flexbox
+      email_address:
+        '#type': email
+        '#title': 'Email Address'
+        '#required': true
+        '#pattern': '^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$'
+        '#pattern_error': 'Please enter a valid email address.'
+      phone_number:
+        '#type': tel
+        '#title': 'Phone Number'
+        '#placeholder': '(nnn) nnn-nnnn'
+        '#required': true
+        '#pattern': '^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$'
+        '#pattern_error': 'Please enter a valid phone number.'
+        '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+    phone_available:
+      '#type': checkboxes
+      '#title': 'Best Time to Contact'
+      '#title_display': before
+      '#options':
+        Morning: Morning
+        Afternoon: Afternoon
+        Evening: Evening
+      '#options_display': side_by_side
 css: ''
 javascript: ''
 settings:
@@ -204,7 +284,7 @@ handlers:
           value: Remove
     weight: 0
     settings:
-      confirmation_message: 'Your request to remove all overdraft protection from your account has been accepted and will be effective immediately. You have the right to change your overdraft coverage plan at any time. If you determine in the future that you want to make a change to the overdraft coverage plan you have selected, you may do so by calling us at 866-953-9523, revisiting this form, or by visiting one of our <a href="https://locations.arvest.com/" target="_blank">branch locations</a>.'
+      confirmation_message: '<p>Your request to remove all overdraft protection from your account has been accepted and will be effective immediately. You have the right to change your overdraft coverage plan at any time. If you determine in the future that you want to make a change to the overdraft coverage plan you have selected, you may do so by calling us at 866-953-9523, revisiting this form, or by visiting one of our <a href="https://locations.arvest.com/">branch locations</a>.</p>'
       debug: ''
       preview_title: ''
       preview_message: ''
@@ -219,10 +299,10 @@ handlers:
     conditions:
       enabled:
         ':input[name="overdraft_coverage_election"]':
-          value: Remove
+          value: Basic
     weight: 1
     settings:
-      confirmation_message: 'Your request for Basic Overdraft coverage has been accepted and will be effective immediately. You have the right to change your overdraft coverage plan at any time.  If you determine in the future that you want to make a change to the overdraft coverage plan you have selected, you may do so by calling us at 866-953-9523, revisiting this form, or by visiting one of our <a href="https://locations.arvest.com/" target="_blank">branch locations</a>.'
+      confirmation_message: '<p>Your request for Basic Overdraft coverage has been accepted and will be effective immediately. You have the right to change your overdraft coverage plan at any time. If you determine in the future that you want to make a change to the overdraft coverage plan you have selected, you may do so by calling us at 866-953-9523, revisiting this form, or by visiting one of our <a href="https://locations.arvest.com/">branch locations</a>.</p>'
       debug: ''
       preview_title: ''
       preview_message: ''
@@ -237,13 +317,27 @@ handlers:
     conditions:
       enabled:
         ':input[name="overdraft_coverage_election"]':
-          value: Remove
+          value: Extended
     weight: 2
     settings:
-      confirmation_message: 'Your request for Extended Overdraft Coverage has been accepted.  The coverage will become effective in three business days. You have the right to change your overdraft coverage plan at any time.  If you determine in the future that you want to make a change to the overdraft coverage plan you have selected, you may do so by calling us at 866-953-9523, revisiting this form, or by visiting one of our <a href="https://locations.arvest.com/" target="_blank">branch locations</a>.'
+      confirmation_message: '<p>Your request for Extended Overdraft Coverage has been accepted. The coverage will become effective in three business days. You have the right to change your overdraft coverage plan at any time. If you determine in the future that you want to make a change to the overdraft coverage plan you have selected, you may do so by calling us at 866-953-9523, revisiting this form, or by visiting one of our <a href="https://locations.arvest.com/">branch locations</a>.</p>'
       debug: ''
       preview_title: ''
       preview_message: ''
       confirmation_url: ''
       confirmation_title: ''
+  save_submissions_in_webtools:
+    id: 'Save Submissions In Webtools'
+    label: 'Save Submissions In Webtools'
+    notes: ''
+    handler_id: save_submissions_in_webtools
+    status: true
+    conditions: {  }
+    weight: 2
+    settings:
+      webtools_form_name: overdraft
+      first_name_field_machine_name: name.first
+      last_name_field_machine_name: name.last
+      full_name_field_machine_name: ''
+      email_field_machine_name: email_address
 variants: {  }

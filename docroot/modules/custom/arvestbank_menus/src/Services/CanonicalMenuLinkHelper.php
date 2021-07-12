@@ -245,6 +245,11 @@ class CanonicalMenuLinkHelper {
 
     $hasSidebar = FALSE;
 
+    // If we don't have a route object (run from drush) then return FALSE.
+    if (!\Drupal::routeMatch()->getRouteObject()) {
+      return FALSE;
+    }
+
     // Get current node, term, or view.
     $node = \Drupal::routeMatch()->getParameter('node');
     $term = \Drupal::routeMatch()->getParameter('taxonomy_term');
@@ -256,7 +261,15 @@ class CanonicalMenuLinkHelper {
 
       // Get canonical menu link.
       $canonicalMenuLinkHelper = \Drupal::service('arvestbank_menus.canonical_menu_link_helper');
-      $canonicalMenuLinkId = $canonicalMenuLinkHelper->getCanonicalMenuLinkIds($node->id(), TRUE);
+
+      // On revision pages $node is a string.
+      if (is_string($node)) {
+        $canonicalMenuLinkId = $canonicalMenuLinkHelper->getCanonicalMenuLinkIds($node, TRUE);
+      }
+      // For non-revision pages $node is an object.
+      else {
+        $canonicalMenuLinkId = $canonicalMenuLinkHelper->getCanonicalMenuLinkIds($node->id(), TRUE);
+      }
 
       // If this node has a canonical menu link.
       if ($canonicalMenuLinkId) {
@@ -281,7 +294,10 @@ class CanonicalMenuLinkHelper {
       }
 
       // If this is an education article.
-      elseif ($node->getType() == 'article_education_article') {
+      elseif (
+        method_exists($node, 'getType') &&
+        $node->getType() == 'article_education_article'
+      ) {
         $hasSidebar = TRUE;
       }
 
