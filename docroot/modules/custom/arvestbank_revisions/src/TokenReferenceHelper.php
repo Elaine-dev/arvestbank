@@ -2,100 +2,147 @@
 
 namespace Drupal\arvestbank_revisions;
 
+use Drupal\Core\Entity\Query\QueryInterface;
+
 /**
  * Service class to find nodes that reference tokens.
  */
 class TokenReferenceHelper {
 
   /**
-   * Creates a new revision for nodes that contain a token in given group.
+   * Creates a new revision for nodes that contain passed token(s).
    *
-   * @param string $token_group
-   *   The machine name of the token group to look for references of.
-   *   Can also contain a specific token ie arvestbank_phone_numbers:nid=6966.
-   * @param string $revision_message
+   * @param array $tokens
+   *   Machine names of token(s) to find refs to.
+   * @param string $revisionMessage
    *   The revision message for created revisions.
    *
    * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    * @throws \Drupal\Core\Entity\EntityStorageException
    */
-  public function createRevisionsForReferencingNodes($token_group, $revision_message) {
+  public function createRevisionsForReferencingNodes(array $tokens, $revisionMessage) {
 
-    // Get nodes with references to tokens in given group.
-    $referencingNodes = $this->getNodesWithReferencesToTokenGroup($token_group);
-
-    // Loop over nodes with references.
-    foreach ($referencingNodes as $referencingNode) {
-      // Save node, creating revision with updated rate in field_rendered_node.
-      $referencingNode->setNewRevision(TRUE);
-      // This is needed to show up in revision list
-      // because of https://www.drupal.org/project/diff/issues/2882334
-      $referencingNode->set('revision_translation_affected', TRUE);
-      $referencingNode->setRevisionLogMessage($revision_message);
-      $referencingNode->setRevisionCreationTime(REQUEST_TIME);
-      $referencingNode->setRevisionUserId(1);
-      $referencingNode->save();
+    // If an array was passed.
+    if (is_array($tokens)) {
+      // Get deduped nodes with a given token.
+      $referencingNodes = $this->getNodesReferencingTokens($tokens);
+      // Create new revision for nodes.
+      $this->createNewRevisionForNodes($referencingNodes, $revisionMessage);
     }
 
   }
 
   /**
-   * Returns nodes with references.
+   * Gets a deduplicated list of nodes with references to given tokens.
    *
-   * @param string $token_group
-   *   The machine name of a token group to get references for.
+   * @param array $tokens
+   *   The tokens for which to get references for.
    *
    * @return \Drupal\Core\Entity\EntityInterface[]
-   *   Nodes with tokens in given token group.
+   *   The nodes referencing the given tokens.
    *
    * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
-  public function getNodesWithReferencesToTokenGroup($token_group) {
+  public function getNodesReferencingTokens(array $tokens) {
 
-    // Get pages that have a token in given group in body copy.
-    $basicPagesWithTokenQuery = \Drupal::entityQuery('node');
-    $fieldConditionGroup = $basicPagesWithTokenQuery->orConditionGroup()
-      ->condition('body', '[' . $token_group, 'CONTAINS')
-      ->condition('field_alert_block_body', '[' . $token_group, 'CONTAINS')
-      ->condition('field_slide_one_cta_text', '[' . $token_group, 'CONTAINS')
-      ->condition('field_slide_two_cta_text', '[' . $token_group, 'CONTAINS')
-      ->condition('field_slide_three_cta_text', '[' . $token_group, 'CONTAINS')
-      ->condition('field_slide_four_cta_text', '[' . $token_group, 'CONTAINS');
-    $basicPagesWithTokenQuery
-      ->condition('type',
-        [
-          'page',
-          'landing_page',
-          'article_education_article',
-          'associate',
-          'calculators',
-          'stage_page',
-        ],
-        'IN'
-      )
-      ->condition($fieldConditionGroup);
-    $basicPagesWithTokenResults = $basicPagesWithTokenQuery->execute();
+    // Query to get nodes that have (even nested) references to the tokens.
+    $nodesWithReferencesQuery = \Drupal::entityQuery('node');
 
-    // Get pages that have a token in group in a component instance.
-    $campaignPagesWithTokenQuery = \Drupal::entityQuery('node');
-    $fieldConditionGroup = $campaignPagesWithTokenQuery->orConditionGroup()
-      ->condition('field_layout_canvas.entity:cohesion_layout.json_values', '[' . $token_group, 'CONTAINS')
-      ->condition('field_layout_.entity:cohesion_layout.json_values', '[' . $token_group, 'CONTAINS');
-    $campaignPagesWithTokenQuery
-      ->condition('type', ['campaign_page', 'landing_page', 'page'], 'IN')
-      ->condition($fieldConditionGroup);
-    $campaignPagesWithTokenResults = $campaignPagesWithTokenQuery->execute();
+    // Add content type condition to query.
+    $this->addContentTypeConditionToEntityQuery($nodesWithReferencesQuery);
 
-    // Combine result arrays.
-    $nodesWithRates = array_merge($basicPagesWithTokenResults, $campaignPagesWithTokenResults);
+    // Contains condition group, to contain one sub-condition-group per token.
+    $outerFieldOrConditionGroup = $nodesWithReferencesQuery->orConditionGroup();
 
-    // Load and return the nodes with rates.
+    // Loop over tokens.
+    foreach ($tokens as $token) {
+      // Get field or-condition-group.
+      $fieldOrConditionGroup = $this->getFieldOrConditionGroup($nodesWithReferencesQuery, $token);
+      // Add field or-condition-group to outer contains condition group.
+      $outerFieldOrConditionGroup->condition($fieldOrConditionGroup);
+    }
+
+    // Add contains condition group to query.
+    $nodesWithReferencesQuery->condition($outerFieldOrConditionGroup);
+
+    // Execute Query.
+    $nodesWithReferencesQueryResult = $nodesWithReferencesQuery->execute();
+
+    // Load and return nodes with matching tokens.
     return \Drupal::entityTypeManager()
       ->getStorage('node')
-      ->loadMultiple($nodesWithRates);
+      ->loadMultiple($nodesWithReferencesQueryResult);
 
+  }
+
+  /**
+   * Creates revisions for nodes.
+   *
+   * @param array $nodes
+   *   An array of nodes to create revisions for.
+   * @param string $revisionMessage
+   *   The message to use for created revisions.
+   */
+  private function createNewRevisionForNodes(array $nodes, string $revisionMessage) {
+    // Loop over nodes with references.
+    foreach ($nodes as $referencingNode) {
+      // Save node, creating revision with updated rate in field_rendered_node.
+      $referencingNode->setNewRevision(TRUE);
+      // This is needed to show up in revision list
+      // because of https://www.drupal.org/project/diff/issues/2882334
+      $referencingNode->set('revision_translation_affected', TRUE);
+      $referencingNode->setRevisionLogMessage($revisionMessage);
+      $referencingNode->setRevisionCreationTime(REQUEST_TIME);
+      $referencingNode->setRevisionUserId(1);
+      $referencingNode->save();
+    }
+  }
+
+  /**
+   * Gets a condition group.
+   *
+   * @param \Drupal\Core\Entity\Query\QueryInterface $query
+   *   The query to add a condition group to.
+   * @param string $searchString
+   *   The string to search for.
+   *
+   * @return \Drupal\Core\Entity\Query\ConditionInterface
+   *   A condition group.
+   */
+  private function getFieldOrConditionGroup(QueryInterface &$query, $searchString) {
+    // Create and return condition group.
+    return $query->orConditionGroup()
+      ->condition('body', $searchString, 'CONTAINS')
+      ->condition('field_alert_block_body', $searchString, 'CONTAINS')
+      ->condition('field_slide_one_cta_text', $searchString, 'CONTAINS')
+      ->condition('field_slide_two_cta_text', $searchString, 'CONTAINS')
+      ->condition('field_slide_three_cta_text', $searchString, 'CONTAINS')
+      ->condition('field_slide_four_cta_text', $searchString, 'CONTAINS')
+      ->condition('field_layout_canvas.entity:cohesion_layout.json_values', $searchString, 'CONTAINS')
+      ->condition('field_layout_.entity:cohesion_layout.json_values', $searchString, 'CONTAINS');
+  }
+
+  /**
+   * Adds entity type condition to the given query.
+   *
+   * @param \Drupal\Core\Entity\Query\QueryInterface $query
+   *   The query to append content type condition to.
+   */
+  private function addContentTypeConditionToEntityQuery(QueryInterface &$query) {
+    $query->condition('type',
+      [
+        'page',
+        'landing_page',
+        'article_education_article',
+        'associate',
+        'calculators',
+        'stage_page',
+        'campaign_page',
+      ],
+      'IN'
+    );
   }
 
 }

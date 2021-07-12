@@ -1,0 +1,4 @@
+services:
+  arvestbank_rates.deposit_rates_helper:
+    class: Drupal\arvestbank_rates\Services\DepositRatesHelper
+    arguments: ['@arvestbank_webtools_api.webtools_client', '@config.factory', '@arvestbank_revisions.token_reference_helper']

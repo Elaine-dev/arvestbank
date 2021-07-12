@@ -1,0 +1,25 @@
+uuid: ecd23b9f-36bc-4c49-8685-7a0a2afb4211
+langcode: en
+status: true
+dependencies:
+  module:
+    - arvestbank_careers
+    - cohesion
+  theme:
+    - arvestbank_theme
+id: careersassociatemodalblock
+theme: arvestbank_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: careers_associate_modal_block
+settings:
+  id: careers_associate_modal_block
+  label: 'Careers Associate Modal Block'
+  provider: arvestbank_careers
+  label_display: visible
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

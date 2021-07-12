@@ -1,0 +1,16 @@
+uuid: 8e5b9838-c7af-4f2f-bfb5-2e34a9e2e916
+langcode: en
+status: true
+dependencies: {  }
+name: tile_sidebar
+label: 'Tile Sidebar'
+effects:
+  ec3ad51d-82d7-4bea-afad-33e6451aac41:
+    uuid: ec3ad51d-82d7-4bea-afad-33e6451aac41
+    id: image_scale
+    weight: 1
+    data:
+      width: 225
+      height: null
+      upscale: false
+pipeline: __default__

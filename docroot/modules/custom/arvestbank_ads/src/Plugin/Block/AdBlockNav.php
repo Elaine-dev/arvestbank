@@ -124,7 +124,7 @@ class AdBlockNav extends BlockBase {
               // Render array for the ad image.
               $ad_image = [
                 '#theme' => 'image_style',
-                '#style_name' => 'ad_navigation',
+                '#style_name' => 'tile_navigation',
                 '#uri' => $ad_image_url,
               ];
 
@@ -137,6 +137,9 @@ class AdBlockNav extends BlockBase {
                   '#type' => 'link',
                   '#url' => Url::fromUri($ad_cta_url),
                   '#title' => $ad_image,
+                  '#attributes' => [
+                    'data-tileType' => 'main_navigation',
+                  ],
                 ];
               }
               // Else just return the image.

@@ -21,7 +21,6 @@ permissions:
   - 'administer linkit profiles'
   - 'administer youtube'
   - 'edit conditional fields'
-  - 'use editorial transition in_review'
   - 'use editorial transition send_to_review'
   - 'use editorial transition unpublished'
   - 'use moderation dashboard'

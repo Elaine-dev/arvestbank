@@ -119,6 +119,15 @@ class WebtoolsAdminForm extends ConfigFormBase {
       '#attributes' => ['disabled' => 'disabled'],
     ];
 
+    // Webtools Deposit Rates Endpoint.
+    $form['webtools']['deposit-rates-endpoint'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Deposit Rates Endpoint'),
+      '#description' => $this->t('The endpoint at which the webtools deposit rates api can be reached.'),
+      '#default_value' => $config->get('deposit-rates-endpoint'),
+      '#attributes' => ['disabled' => 'disabled'],
+    ];
+
     // Coppied from ConfigFormBase->buildForm.
     $form['#theme'] = 'system_config_form';
 
@@ -133,14 +142,73 @@ class WebtoolsAdminForm extends ConfigFormBase {
     ];
 
     // Test webtools api button.
-    $form['actions']['test_webtools_config'] = [
+    $form['actions']['test_webtools_form_config'] = [
       '#type' => 'submit',
-      '#value' => t('Test Webtools API Config'),
-      '#submit' => [[$this, 'testWebtools']],
+      '#value' => t('Test Form API Config'),
+      '#submit' => [[$this, 'testWebtoolsForm']],
+    ];
+
+    // Test webtools api button.
+    $form['actions']['test_deposit_rates_config'] = [
+      '#type' => 'submit',
+      '#value' => t('Test Deposit Rates API Config'),
+      '#submit' => [[$this, 'testDepositRates']],
     ];
 
     // Return form.
     return $form;
+  }
+
+  /**
+   * Form submit function to test deposit rates config.
+   *
+   * @param array $form
+   *   The form array.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The form state.
+   */
+  public function testDepositRates(array &$form, FormStateInterface $form_state) {
+
+    // Get webtools client.
+    $webtoolsClient = \Drupal::service('arvestbank_webtools_api.webtools_client');
+
+    // Test connectivity.
+    $requestSuccess = $webtoolsClient->testDepositRatesEndpointConnectivity();
+
+    // If the test was successfull.
+    if ($requestSuccess) {
+      $this->messenger()->addMessage('Successfully connected to the deposit rates endpoint.');
+    }
+    else {
+      $this->messenger()->addError('Could not connect to the deposit rates endpoint.');
+    }
+
+  }
+
+  /**
+   * Form submit function to test webtools config.
+   *
+   * @param array $form
+   *   The form array.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The form state.
+   */
+  public function testWebtoolsForm(array &$form, FormStateInterface $form_state) {
+
+    // Get webtools client.
+    $webtoolsClient = \Drupal::service('arvestbank_webtools_api.webtools_client');
+
+    // Test connectivity.
+    $requestSuccess = $webtoolsClient->testFormEndpointConnectivity();
+
+    // If the test was successfull.
+    if ($requestSuccess) {
+      $this->messenger()->addMessage('Successfully connected to the webtools SaveFormData endpoint.');
+    }
+    else {
+      $this->messenger()->addError('Could not connect to the webtools SaveFormData endpoint.');
+    }
+
   }
 
   /**
@@ -165,31 +233,6 @@ class WebtoolsAdminForm extends ConfigFormBase {
     }
     else {
       $this->messenger()->addError('Could not connect to ping identity.');
-    }
-
-  }
-
-  /**
-   * Form submit function to test webtools config.
-   *
-   * @param array $form
-   *   The form array.
-   * @param \Drupal\Core\Form\FormStateInterface $form_state
-   *   The form state.
-   */
-  public function testWebtools(array &$form, FormStateInterface $form_state) {
-
-    // Get webtools client.
-    $webtoolsClient = \Drupal::service('arvestbank_webtools_api.webtools_client');
-
-    // Test connectivity.
-    $requestSuccess = $webtoolsClient->testConnectivity();
-    // If the test was successfull.
-    if ($requestSuccess) {
-      $this->messenger()->addMessage('Successfully connected to the webtools SaveFormData endpoint.');
-    }
-    else {
-      $this->messenger()->addError('Could not connect to the webtools SaveFormData endpoint.');
     }
 
   }

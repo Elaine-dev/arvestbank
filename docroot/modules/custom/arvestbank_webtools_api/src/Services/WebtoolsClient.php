@@ -63,9 +63,53 @@ class WebtoolsClient {
   }
 
   /**
-   * Tests webtools connectivity.
+   * Tests webtools deposit rates connectivity.
    */
-  public function testConnectivity() {
+  public function testDepositRatesEndpointConnectivity() {
+    // Make request and return boolean for success.
+    return $this->getDepositProductsWithRates() !== FALSE;
+  }
+
+  /**
+   * Returns deposit products for the region "ARVEST BANK BENTON COUNTY" (101).
+   *
+   * Arvest Bank has stated that this is representative of all regions.
+   */
+  public function getDepositProductsWithRates() {
+
+    // Define the test request we want to make.
+    $endpoint = $this->webtoolsConfig->get('deposit-rates-endpoint');
+    $requestOptions = [
+      RequestOptions::JSON => [
+        "Request" => [
+          'RegionID'  => '101',
+          'BranchID'  => 'ALL',
+          'ProductID' => 'ALL',
+          'Cursor'    => '0',
+        ],
+      ],
+    ];
+
+    // Make request.
+    $responseBody = $this->makeRequest($endpoint, $requestOptions);
+
+    // If we got a good response back.
+    if (is_string($responseBody)) {
+      $responseData = json_decode($responseBody);
+      if (isset($responseData->Regions[0]->Products)) {
+        return $responseData->Regions[0]->Products;
+      }
+    }
+
+    // If we didn't return a good response already.
+    return FALSE;
+
+  }
+
+  /**
+   * Tests webtools form api connectivity.
+   */
+  public function testFormEndpointConnectivity() {
 
     // Define the test request we want to make.
     $endpoint = $this->webtoolsConfig->get('webtools-form-endpoint');
@@ -110,8 +154,16 @@ class WebtoolsClient {
    */
   public function makeRequest(string $endpoint, array $requestOptions) {
 
-    // Determine endpoint.
-    $requestEndpoint = $this->webtoolsConfig->get('webtools-domain') . $endpoint;
+    // If the passed endpoint isn't a full url.
+    if (strpos($endpoint, 'http') === FALSE) {
+      // Use the webtools domain and endpoint.
+      $requestEndpoint = $this->webtoolsConfig->get('webtools-domain') . $endpoint;
+    }
+    // If the passed endpoint is a full url.
+    else {
+      // Use the passed url as is.
+      $requestEndpoint = $endpoint;
+    }
 
     // Ensure we have a valid bearer token.
     $this->pingIdentityClient->ensureValidBearerToken();

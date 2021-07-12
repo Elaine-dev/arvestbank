@@ -808,6 +808,11 @@ li.coh-menu-list-item.coh-ce-a69b2abe.js-coh-menu-item:nth-child(6), li.coh-menu
   display: flex;
 }
 
+.campaign-icon {
+  flex: 0 0 3.625rem;
+}
+
+
 .webform-submission-sign-up-for-arvest-flex-rewards--form #edit-birth-date {
   display: flex;
   justify-content: space-between;

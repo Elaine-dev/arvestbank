@@ -35,7 +35,7 @@ class PhoneReferences extends FieldPluginBase {
     $tokenReferenceHelper = \Drupal::service('arvestbank_revisions.token_reference_helper');
 
     // Get references to this phone number.
-    $nodesWithTokensForThisPhoneNumber = $tokenReferenceHelper->getNodesWithReferencesToTokenGroup('arvestbank_phone_numbers:nid=' . $phoneNumberNode->id());
+    $nodesWithTokensForThisPhoneNumber = $tokenReferenceHelper->getNodesReferencingTokens(['[arvestbank_phone_numbers:nid=' . $phoneNumberNode->id() . ']']);
 
     $references = [];
 

@@ -1,0 +1,21 @@
+uuid: 8cb4178e-176c-45ac-8055-bb5fb4210675
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+name: no_social_icons
+label: 'No Social Icons'
+group: 'campaign page'
+description: ''
+requireAllConditions: true
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: /balanceeraser
+    negate: true
+    uuid: 0ac882b8-cff3-4c55-a634-40cfedd38051
+    context_mapping: {  }
+reactions: {  }
+weight: 0

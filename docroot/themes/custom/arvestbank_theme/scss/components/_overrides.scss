@@ -84,8 +84,12 @@ li.coh-menu-list-item.coh-ce-a69b2abe.js-coh-menu-item:nth-child(6), li.coh-menu
 }
 
 /* campaign page overrides */
+// Display icons and text in columns, such as in /referlive
 .campaign-icon-wrapper{
   display: flex;
+}
+.campaign-icon{
+  flex: 0 0 calculateRem(58px);
 }
 
 /* sign up for flex rewards webform */

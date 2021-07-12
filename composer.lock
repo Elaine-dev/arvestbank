@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e428438ec1871f88f1fd03684b762da",
+    "content-hash": "f0f7703d6b2011e944a5130d1c9ba69f",
     "packages": [
         {
             "name": "acquia/blt",
@@ -2786,17 +2786,17 @@
         },
         {
             "name": "drupal/better_exposed_filters",
-            "version": "5.0.0-beta2",
+            "version": "5.0.0-beta3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/better_exposed_filters.git",
-                "reference": "8.x-5.0-beta2"
+                "reference": "8.x-5.0-beta3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/better_exposed_filters-8.x-5.0-beta2.zip",
-                "reference": "8.x-5.0-beta2",
-                "shasum": "3899191ee3fa383abe0162cc6701ddba86bae252"
+                "url": "https://ftp.drupal.org/files/projects/better_exposed_filters-8.x-5.0-beta3.zip",
+                "reference": "8.x-5.0-beta3",
+                "shasum": "23f00fe898cd9e4f2278ef790bc9f1d197312ac3"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9",
@@ -2808,8 +2808,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-5.0-beta2",
-                    "datestamp": "1624554647",
+                    "version": "8.x-5.0-beta3",
+                    "datestamp": "1625665853",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -3878,7 +3878,7 @@
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "9.2.0",
+            "version": "9.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -4387,6 +4387,50 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/easy_breadcrumb",
                 "issues": "https://www.drupal.org/project/issues/easy_breadcrumb"
+            }
+        },
+        {
+            "name": "drupal/editor_advanced_link",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/editor_advanced_link.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/editor_advanced_link-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "db9469ffc073ab0b350296c86069441882ba2147"
+            },
+            "require": {
+                "drupal/core": "^9.2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1624032768",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "DuaelFr",
+                    "homepage": "https://www.drupal.org/user/931394"
+                }
+            ],
+            "description": "Add title, target etc. attributes to Text Editor's link dialog if the text format allows them.",
+            "homepage": "https://www.drupal.org/project/editor_advanced_link",
+            "support": {
+                "source": "https://git.drupalcode.org/project/editor_advanced_link"
             }
         },
         {
@@ -6233,6 +6277,48 @@
             }
         },
         {
+            "name": "drupal/media_video_micromodal",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/media_video_micromodal.git",
+                "reference": "13abfe2013cac531320eb44b4116c9909638c4b4"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "1.x-dev",
+                    "datestamp": "1625250198",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "scott_earnest",
+                    "homepage": "https://www.drupal.org/user/416158"
+                }
+            ],
+            "description": "Displays core media remote videos in a modal popup using micromodal.js.",
+            "homepage": "https://www.drupal.org/project/media_video_micromodal",
+            "support": {
+                "source": "https://git.drupalcode.org/project/media_video_micromodal"
+            },
+            "time": "2021-07-07T16:54:30+00:00"
+        },
+        {
             "name": "drupal/memcache",
             "version": "dev-2.x",
             "source": {
@@ -6789,7 +6875,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/migrate_tools.git",
-                "reference": "9d9c02f1cb8fcd7afa83e8eb2eaf7def75673a4e"
+                "reference": "56d82b4fc111dd26f2c3a1e53c06015eb854df20"
             },
             "require": {
                 "drupal/core": "^8.8 | ^9",
@@ -6809,8 +6895,8 @@
                     "dev-5.x": "5.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-5.0+12-dev",
-                    "datestamp": "1609779021",
+                    "version": "8.x-5.0+13-dev",
+                    "datestamp": "1618603463",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -6836,6 +6922,10 @@
                     "name": "Lucas Hedding",
                     "homepage": "https://www.drupal.org/u/heddn",
                     "role": "Maintainer"
+                },
+                {
+                    "name": "mikeryan",
+                    "homepage": "https://www.drupal.org/user/4420"
                 }
             ],
             "description": "Tools to assist in developing and running migrations.",
@@ -6845,7 +6935,7 @@
                 "issues": "https://www.drupal.org/project/issues/migrate_tools",
                 "slack": "#migrate"
             },
-            "time": "2021-04-16T19:57:16+00:00"
+            "time": "2021-07-05T21:38:52+00:00"
         },
         {
             "name": "drupal/moderation_dashboard",
@@ -10507,16 +10597,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.10.5",
+            "version": "v4.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "4432ba399e47c66624bc73c8c0f811e5c109576f"
+                "reference": "fe14cf3672a149364fb66dfe11bf6549af899f94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/4432ba399e47c66624bc73c8c0f811e5c109576f",
-                "reference": "4432ba399e47c66624bc73c8c0f811e5c109576f",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/fe14cf3672a149364fb66dfe11bf6549af899f94",
+                "reference": "fe14cf3672a149364fb66dfe11bf6549af899f94",
                 "shasum": ""
             },
             "require": {
@@ -10555,7 +10645,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2021-05-03T19:11:20+00:00"
+            "time": "2021-07-03T13:36:55+00:00"
         },
         {
             "name": "oomphinc/composer-installers-extender",
@@ -16995,6 +17085,7 @@
         "drupal/imageapi_optimize_resmushit": 10,
         "drupal/inline_entity_form": 5,
         "drupal/masquerade": 10,
+        "drupal/media_video_micromodal": 20,
         "drupal/memcache": 20,
         "drupal/moderation_dashboard": 10,
         "drupal/mysql56": 10,

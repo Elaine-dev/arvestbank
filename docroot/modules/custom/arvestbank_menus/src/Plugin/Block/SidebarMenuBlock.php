@@ -38,6 +38,11 @@ class SidebarMenuBlock extends BlockBase {
     // Instantiate render array to return.
     $renderArray = $this->getBaseRenderArray();
 
+    // If we don't have a route object (run from drush) then return.
+    if (!\Drupal::routeMatch()->getRouteObject()) {
+      return $renderArray;
+    }
+
     // Get current node, term, or view.
     $node = \Drupal::routeMatch()->getParameter('node');
     $term = \Drupal::routeMatch()->getParameter('taxonomy_term');

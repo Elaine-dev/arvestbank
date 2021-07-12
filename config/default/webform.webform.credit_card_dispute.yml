@@ -295,7 +295,7 @@ elements: |-
     nature_of_dispute_amount_different_markup:
       '#type': webform_markup
       '#markup': |
-        The above mentioned transaction was posted to my account incorrectly or posted to my account multiple times. 
+        The above mentioned transaction was posted to my account incorrectly or posted to my account multiple times.
         <em>I will provide a copy of the sales receipt that I received from the merchant.</em>
     nature_of_dispute_amount_different_fieldset:
       '#type': fieldset
@@ -343,6 +343,8 @@ elements: |-
       '#type': email
       '#title': 'Email address'
       '#required': true
+      '#pattern': '^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$'
+      '#pattern_error': 'Please enter a valid email address.'
   flexbox_phone:
     '#type': webform_flexbox
     daytime_phone_number:
