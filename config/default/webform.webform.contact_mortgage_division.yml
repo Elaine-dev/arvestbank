@@ -139,6 +139,11 @@ elements: |-
     markup:
       '#type': webform_markup
       '#markup': '<p>Policy dates must be in increments of 6 months.</p>'
+  branch_location:
+    '#type': webform_term_select
+    '#title': 'Branch Location'
+    '#vocabulary': branch_location
+    '#breadcrumb_delimiter': ''
   message:
     '#type': textarea
     '#title': Message

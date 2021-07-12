@@ -1,0 +1,58 @@
+uuid: eb7d2fbd-ccb4-4f33-9b30-0390f731c73a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.branch_location.field_legacy_region_id
+    - taxonomy.vocabulary.branch_location
+  module:
+    - path
+    - text
+id: taxonomy_term.branch_location.default
+targetEntityType: taxonomy_term
+bundle: branch_location
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_legacy_region_id:
+    weight: 101
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  menu:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
+    third_party_settings: {  }
+hidden: {  }

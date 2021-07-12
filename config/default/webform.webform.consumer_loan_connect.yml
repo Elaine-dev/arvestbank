@@ -90,6 +90,12 @@ elements: |-
       visible:
         ':input[name="what_do_you_need_a_loan_for_check_all_that_apply_[Other]"]':
           checked: true
+  branch_location:
+    '#type': webform_term_select
+    '#title': 'Branch Location'
+    '#vocabulary': branch_location
+    '#breadcrumb_delimiter': ''
+    '#required': true
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
@@ -290,4 +296,6 @@ handlers:
       last_name_field_machine_name: last_name
       full_name_field_machine_name: ''
       email_field_machine_name: email_address
+      legacy_region_id_fields|city_field_machine_name: address.city
+      legacy_region_id_fields|state_field_machine_name: address.state_province
 variants: {  }

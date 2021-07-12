@@ -81,6 +81,12 @@ elements: |-
           Phone: Phone
           Email: Email
         '#required': true
+    branch_location:
+      '#type': webform_term_select
+      '#title': 'Branch Location'
+      '#vocabulary': branch_location
+      '#breadcrumb_delimiter': ''
+      '#required': true
   vehicle_information:
     '#type': fieldset
     '#title': 'Vehicle Information'
@@ -123,12 +129,6 @@ elements: |-
         'Super/Turbo Charger': 'Super/Turbo Charger'
         'Wear and Tear': 'Wear and Tear'
       '#options_display': two_columns
-  branch_location:
-    '#type': webform_term_select
-    '#title': 'Branch Location'
-    '#vocabulary': branch_location
-    '#breadcrumb_delimiter': ''
-    '#required': true
 css: ''
 javascript: ''
 settings:
@@ -322,4 +322,8 @@ handlers:
       last_name_field_machine_name: last_name
       full_name_field_machine_name: ''
       email_field_machine_name: email_address
+      city_field_machine_name: null
+      state_field_machine_name: null
+      legacy_region_id_fields|city_field_machine_name: address.city
+      legacy_region_id_fields|state_field_machine_name: address.state_province
 variants: {  }

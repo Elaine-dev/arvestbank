@@ -57,6 +57,11 @@ elements: |-
       '#type': textfield
       '#title': 'Social Security Number'
       '#placeholder': nnn-nn-nnnn
+  branch_location:
+    '#type': webform_term_select
+    '#title': 'Branch Location'
+    '#vocabulary': branch_location
+    '#breadcrumb_delimiter': ''
 css: ''
 javascript: ''
 settings:
