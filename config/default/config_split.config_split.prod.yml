@@ -17,6 +17,7 @@ blacklist: {  }
 graylist:
   - shield.settings
   - system.performance
+  - gtm.settings
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0
