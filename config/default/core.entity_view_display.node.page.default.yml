@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.page.field_callout_title
     - field.field.node.page.field_disable_sidebar_ad
     - field.field.node.page.field_disclosure
+    - field.field.node.page.field_exclude_from_search
     - field.field.node.page.field_featured_image
     - field.field.node.page.field_featured_video
     - field.field.node.page.field_field_callout_phone_number
@@ -40,7 +41,7 @@ third_party_settings:
         - field_field_callout_phone_number
         - field_second_callout
       parent_name: ''
-      weight: 20
+      weight: 21
       format_type: html_element
       region: hidden
       format_settings:
@@ -156,6 +157,7 @@ hidden:
   field_callout_title: true
   field_disable_sidebar_ad: true
   field_disclosure: true
+  field_exclude_from_search: true
   field_field_callout_phone_number: true
   field_meta_tags: true
   field_page_type: true
