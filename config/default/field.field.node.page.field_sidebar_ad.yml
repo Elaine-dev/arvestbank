@@ -1,0 +1,25 @@
+uuid: a91b45e7-3fc0-4896-be88-7907ac41a70a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sidebar_ad
+    - node.type.page
+id: node.page.field_sidebar_ad
+field_name: field_sidebar_ad
+entity_type: node
+bundle: page
+label: 'Sidebar Ad'
+description: 'Select the sidebar tile ad to display on this page.  Not tied to an ad campaign and will override any other setting.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: ads
+      display_name: entity_reference_2
+      arguments: {  }
+field_type: entity_reference

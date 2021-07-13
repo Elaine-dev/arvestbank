@@ -571,7 +571,8 @@ display:
     display_title: 'Main Navigation Images'
     position: 2
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       fields:
         title:
           id: title
@@ -642,6 +643,7 @@ display:
         fields: false
         filters: false
         filter_groups: false
+        sorts: false
       style:
         type: entity_reference
         options:
@@ -723,6 +725,25 @@ display:
         groups:
           1: AND
       display_description: ''
+      sorts:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: standard
+      pager:
+        type: none
+        options:
+          offset: 0
     cache_metadata:
       max-age: -1
       contexts:
@@ -737,7 +758,8 @@ display:
     display_title: 'Sidebar Images'
     position: 2
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       fields:
         title:
           id: title
@@ -808,6 +830,7 @@ display:
         fields: false
         filters: false
         filter_groups: false
+        sorts: false
       style:
         type: entity_reference
         options:
@@ -889,6 +912,25 @@ display:
         groups:
           1: AND
       display_description: ''
+      sorts:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: standard
+      pager:
+        type: none
+        options:
+          offset: 0
     cache_metadata:
       max-age: -1
       contexts:
@@ -975,6 +1017,7 @@ display:
         fields: false
         filters: false
         filter_groups: false
+        sorts: false
       style:
         type: entity_reference
         options:
@@ -1056,6 +1099,25 @@ display:
         groups:
           1: AND
       display_description: ''
+      sorts:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: standard
+      pager:
+        type: none
+        options:
+          offset: 0
     cache_metadata:
       max-age: -1
       contexts:
@@ -1070,7 +1132,8 @@ display:
     display_title: Administration
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       path: admin/content/ads
       menu:
         type: normal

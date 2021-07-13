@@ -23,6 +23,7 @@ dependencies:
     - field.field.node.page.field_second_callout_icon
     - field.field.node.page.field_second_callout_label
     - field.field.node.page.field_second_callout_link
+    - field.field.node.page.field_sidebar_ad
     - field.field.node.page.field_yoast_seo
     - node.type.page
   module:
@@ -145,5 +146,6 @@ hidden:
   field_second_callout_icon: true
   field_second_callout_label: true
   field_second_callout_link: true
+  field_sidebar_ad: true
   field_yoast_seo: true
   search_api_excerpt: true
