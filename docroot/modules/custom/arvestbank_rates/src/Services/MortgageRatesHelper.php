@@ -63,7 +63,7 @@ class MortgageRatesHelper {
           // Loop over products.
           foreach ($response->Products as $product) {
             // If this is the product we're looking for.
-            if($product->ProductCode == str_replace('.json', '', $requestDataFileName){
+            if ($product->ProductCode . '.json' == $requestDataFileName) {
               // Add values to our array.
               //$newTokens
             }
