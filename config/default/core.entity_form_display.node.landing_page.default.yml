@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.landing_page.field_layout_
     - field.field.node.landing_page.field_meta_tags
     - field.field.node.landing_page.field_rendered_node
+    - field.field.node.landing_page.field_sidebar_ad
     - field.field.node.landing_page.field_support_image
     - field.field.node.landing_page.field_support_text
     - field.field.node.landing_page.field_support_title
@@ -15,6 +16,7 @@ dependencies:
     - node.type.landing_page
     - workflows.workflow.editorial
   module:
+    - chosen_field
     - cohesion_elements
     - content_moderation
     - field_group
@@ -42,6 +44,22 @@ third_party_settings:
         required_fields: true
         open: false
       label: 'Support Card'
+    group_sidebar_ad:
+      children:
+        - field_sidebar_ad
+        - field_disable_sidebar_ad
+      parent_name: ''
+      weight: 16
+      format_type: details_sidebar
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+        weight: 0
+      label: 'Sidebar Ad'
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -54,7 +72,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_disable_sidebar_ad:
-    weight: 3
+    weight: 17
     settings:
       display_label: true
     third_party_settings: {  }
@@ -73,11 +91,17 @@ content:
     third_party_settings: {  }
     region: content
   field_meta_tags:
-    weight: 13
+    weight: 14
     settings:
       sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
+    region: content
+  field_sidebar_ad:
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+    type: chosen_select
     region: content
   field_support_image:
     type: media_library_widget
@@ -103,7 +127,7 @@ content:
     type: string_textfield
     region: content
   field_yoast_seo:
-    weight: 14
+    weight: 15
     settings:
       body: body
     third_party_settings: {  }

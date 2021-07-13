@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.landing_page.field_layout_
     - field.field.node.landing_page.field_meta_tags
     - field.field.node.landing_page.field_rendered_node
+    - field.field.node.landing_page.field_sidebar_ad
     - field.field.node.landing_page.field_support_image
     - field.field.node.landing_page.field_support_text
     - field.field.node.landing_page.field_support_title
@@ -37,6 +38,7 @@ hidden:
   field_layout_: true
   field_meta_tags: true
   field_rendered_node: true
+  field_sidebar_ad: true
   field_support_image: true
   field_support_text: true
   field_support_title: true

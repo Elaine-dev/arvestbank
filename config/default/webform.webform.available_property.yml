@@ -19,7 +19,6 @@ elements: |-
       <h2>Real Estate Properties Available</h2>
       <p>Arvest Bank’s Special Assets Department facilitates the sale of foreclosed property (ORE, OREO). Available property includes houses, vacant lots, acreage, commercial and new construction.<br><br>Each foreclosure is managed by a local Arvest banker, listed individually in the real estate description. It is important to contact that banker directly for information.</p>
       <p>Please select your search criteria below and click "Continue" to view a list of available foreclosures.</p>
-      
   city:
     '#type': select
     '#title': City
@@ -179,6 +178,11 @@ elements: |-
       'Residential - Single Family Dwelling': 'Residential - Single Family Dwelling'
       'Residential Lot - Lots': 'Residential Lot - Lots'
     '#empty_option': Any
+  branch_location:
+    '#type': webform_term_select
+    '#title': 'Branch Location'
+    '#vocabulary': branch_location
+    '#breadcrumb_delimiter': ''
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'

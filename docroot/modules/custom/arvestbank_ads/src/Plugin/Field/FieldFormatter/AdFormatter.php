@@ -84,17 +84,17 @@ class AdFormatter extends FormatterBase {
 
             case 'sidebar':
               $image_fieldname = 'field_image';
-              $image_style = 'ad_sidebar';
+              $image_style = 'tile_sidebar';
               break;
 
             case 'navigation':
               $image_fieldname = 'field_ad_nav_image';
-              $image_style = 'ad_navigation';
+              $image_style = 'tile_navigation';
               break;
 
             case 'main':
               $image_fieldname = 'field_ad_content_image';
-              $image_style = 'ad_main';
+              $image_style = 'tile_main';
 
           }
 

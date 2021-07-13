@@ -101,6 +101,11 @@ elements: |-
           '#type': textfield
           '#title': 'Authorized Agent California Secretary of State Registration Number/ID (if applicable):'
           '#description': '<em>If the person you wish to designate as an authorized agent is a business entity, we may request further information regarding the business entity&rsquo;s registration with the Secretary of State to conduct business in California.</em>'
+    branch_location:
+      '#type': webform_term_select
+      '#title': 'Branch Location'
+      '#vocabulary': branch_location
+      '#breadcrumb_delimiter': ''
     information_delivery:
       '#type': checkboxes
       '#title': 'Should information requested by the authorized agent be delivered to the agent and/or you?'

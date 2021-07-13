@@ -660,3 +660,31 @@ function arvestbank_core_update_9003(&$sandbox) {
 
   $sandbox['#finished'] = $sandbox['progress'] / $sandbox['total'];
 }
+
+/**
+ * Delete previously imported associates.
+ */
+function arvestbank_core_update_9004(&$sandbox) {
+  $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+  if (!isset($sandbox['total'])) {
+
+    $node_ids = $node_storage->getQuery()
+      ->condition('type', 'associate')
+      ->condition('changed', '1625112000', '<')
+      ->execute();
+
+    $sandbox['ids'] = array_values($node_ids);
+    $sandbox['total'] = count($node_ids);
+    $sandbox['progress'] = 0;
+  }
+
+  $limit = 100;
+  $batch_ids = array_slice($sandbox['ids'], $sandbox['progress'], $limit);
+  $nodes = $node_storage->loadMultiple($batch_ids);
+  foreach ($nodes as $node) {
+    $node->delete();
+    $sandbox['progress']++;
+  }
+
+  $sandbox['#finished'] = $sandbox['progress'] / $sandbox['total'];
+}

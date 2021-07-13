@@ -358,6 +358,11 @@ elements: |-
       '#required': true
       '#pattern': '^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$'
       '#pattern_error': 'Please enter a valid phone number.'
+  branch_location:
+    '#type': webform_term_select
+    '#title': 'Branch Location'
+    '#vocabulary': branch_location
+    '#breadcrumb_delimiter': ''
   footer_markup:
     '#type': webform_markup
     '#markup': |-

@@ -29,6 +29,47 @@ function arvestbank_branch_locations_install() {
 }
 
 /**
+ * Populates field_legacy_region_ids on branch_location terms.
+ */
+function arvestbank_branch_locations_update_9001() {
+
+  // Get Legacy Location Information Service.
+  $legacyLocationInformationService = \Drupal::service('arvestbank_branch_locations.legacy_location_information');
+
+  // Get location nodes.
+  $locationTerms = \Drupal::entityTypeManager()
+    ->getStorage('taxonomy_term')
+    ->loadByProperties(['vid' => 'branch_location']);
+
+  // Loop over location terms.
+  foreach ($locationTerms as $locationTerm) {
+
+    // Get city name from locationNode.
+    $cityName = $legacyLocationInformationService->getCityFromLocationTerm($locationTerm);
+
+    // If we got a city name.
+    if ($cityName) {
+
+      // Get legacy region id from city name.
+      $regionId = $legacyLocationInformationService->getRegionIdFromCityName($cityName);
+
+      // If we got a legacy region id.
+      if ($regionId) {
+        // Set region id value on node.
+        $locationTerm->set('field_legacy_region_id', $regionId);
+        $locationTerm->save();
+      }
+      else {
+        \Drupal::messenger()->addError('Could not find region id for: ' . $cityName);
+      }
+
+    }
+
+  }
+
+}
+
+/**
  * Returns the default branch locations.
  */
 function _get_default_branch_locations() {

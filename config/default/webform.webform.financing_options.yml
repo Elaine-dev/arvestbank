@@ -155,6 +155,11 @@ elements: |-
         disabled:
           ':input[name="loan_other_purpose"]':
             value: education
+    branch_location:
+      '#type': webform_term_select
+      '#title': 'Branch Location'
+      '#vocabulary': branch_location
+      '#breadcrumb_delimiter': ''
   financing_options:
     '#type': webform_wizard_page
     '#title': 'Financing Options'

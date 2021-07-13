@@ -201,10 +201,10 @@ third_party_settings:
       label: 'Footer Links'
     group_exit_pages:
       children:
-        - field_ad_exit_switchkit
+        - field_ad_exit_application
         - field_ad_exit_banking
         - field_ad_exit_ccapply
-        - field_ad_exit_application
+        - field_ad_exit_switchkit
       parent_name: ''
       weight: 14
       format_type: details
@@ -234,25 +234,25 @@ content:
     type: daterange_default
     region: content
   field_ad_exit_application:
-    weight: 18
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_ad_exit_banking:
     weight: 16
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  field_ad_exit_ccapply:
+  field_ad_exit_banking:
     weight: 17
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  field_ad_exit_ccapply:
+    weight: 18
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_ad_exit_switchkit:
-    weight: 15
+    weight: 19
     settings: {  }
     third_party_settings: {  }
     type: options_select

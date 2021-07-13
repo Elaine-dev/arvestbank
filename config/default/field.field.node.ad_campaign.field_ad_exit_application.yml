@@ -10,7 +10,7 @@ field_name: field_ad_exit_application
 entity_type: node
 bundle: ad_campaign
 label: Application
-description: ''
+description: personal/apply/exit
 required: false
 translatable: false
 default_value: {  }

@@ -93,6 +93,11 @@ elements: |-
         Afternoon: Afternoon
         Evening: Evening
       '#options_display': side_by_side
+  branch_location:
+    '#type': webform_term_select
+    '#title': 'Branch Location'
+    '#vocabulary': branch_location
+    '#breadcrumb_delimiter': ''
 css: ''
 javascript: ''
 settings:
