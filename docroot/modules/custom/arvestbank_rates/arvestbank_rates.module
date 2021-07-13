@@ -181,9 +181,13 @@ function arvestbank_rates_cron() {
 
     // Get deposit rates helper.
     $depositRatesHelper = \Drupal::service('arvestbank_rates.deposit_rates_helper');
-
     // Update Deposit Rates.
     $depositRatesHelper->updateDepositRates();
+
+    // Get mortgage rates helper.
+    $mortgageRatesHelper = \Drupal::service('arvestbank_rates.mortgage_rates_helper');
+    // Update Mortgage Rates.
+    $mortgageRatesHelper->updateMortgageRates();
 
     // Record that we just ran that import.
     \Drupal::state()->set('arvestbank_rates.last_import', REQUEST_TIME);
