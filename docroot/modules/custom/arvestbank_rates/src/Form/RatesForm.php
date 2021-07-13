@@ -623,22 +623,6 @@ class RatesForm extends ConfigFormBase {
     // Get config values to loop over.
     $rawConfigValues = $config->getRawData();
 
-    // Loop over config values.
-    foreach ($rawConfigValues as $configKey => $configValue) {
-      // If this is a deposit rate config value.
-      if (strpos($configKey, 'deposit_rates__') === 0) {
-        // Get config human name.
-        $configHumanName = ucwords(str_replace(['__', '_'], ' ', $configKey));
-        // Add readonly field to form.
-        $form['deposit_rates'][$configKey] = [
-          '#type' => 'textfield',
-          '#disabled' => TRUE,
-          '#title' => $configHumanName,
-          '#default_value' => $configValue,
-        ];
-      }
-    }
-
     // Deposit Rates Container.
     $form['mortgage_rates'] = [
       '#type' => 'details',
@@ -659,6 +643,38 @@ class RatesForm extends ConfigFormBase {
       ],
 
     ];
+
+    // Loop over config values.
+    foreach ($rawConfigValues as $configKey => $configValue) {
+
+      // If this is a deposit rate config value.
+      if (strpos($configKey, 'deposit_rates__') === 0) {
+        // Get config human name.
+        $configHumanName = ucwords(str_replace(['__', '_'], ' ', $configKey));
+        // Add readonly field to form.
+        $form['deposit_rates'][$configKey] = [
+          '#type' => 'textfield',
+          '#disabled' => TRUE,
+          '#title' => $configHumanName,
+          '#default_value' => $configValue,
+        ];
+      }
+
+      // If this is a mortgage rates config value.
+      elseif (strpos($configKey, 'mortgage_rates__') === 0) {
+        // Get config human name.
+        $configHumanName = ucwords(str_replace(['__', '_'], ' ', $configKey));
+        // Add readonly field to form.
+        $form['mortgage_rates'][$configKey] = [
+          '#type' => 'textfield',
+          '#disabled' => TRUE,
+          '#title' => $configHumanName,
+          '#default_value' => $configValue,
+        ];
+      }
+
+    }
+
 
 
     // Build config form.
