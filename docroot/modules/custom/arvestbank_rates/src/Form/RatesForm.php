@@ -639,10 +639,46 @@ class RatesForm extends ConfigFormBase {
       }
     }
 
+    // Deposit Rates Container.
+    $form['mortgage_rates'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Mortgage Rates'),
+      '#open' => FALSE,
+
+      // Deposit Rates Description.
+      'mortgage_description' => [
+        '#markup' => '<b>Mortgage Rates are listed here for reference, but are updated automatically and are consequently non-editable.</b><br/>',
+      ],
+
+      // Update deposit rates button.
+      'update_mortgage_rates' => [
+        '#type' => 'submit',
+        '#submit' => [[$this, 'updateMortgageRates']],
+        '#value' => 'Update Mortgage Rates',
+        '#description' => 'This button fetches mortgage rates now rather than waiting for the daily fetch.',
+      ],
+
+    ];
+
 
     // Build config form.
     return parent::buildForm($form, $form_state);
 
+  }
+
+  /**
+   * Submit function to update Mortgage Rates from webtools API.
+   *
+   * @param array $form
+   *   The form that was submitted.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The form state.
+   */
+  public function updateMortgageRates(array &$form, FormStateInterface $form_state) {
+    // Get mortgage rates helper.
+    $mortgageRatesHelper = \Drupal::service('arvestbank_rates.mortgage_rates_helper');
+    // Update Mortgage Rates.
+    $mortgageRatesHelper->updateMortgageRates();
   }
 
   /**
@@ -656,7 +692,6 @@ class RatesForm extends ConfigFormBase {
   public function updateDepositRates(array &$form, FormStateInterface $form_state) {
     // Get deposit rates helper.
     $depositRatesHelper = \Drupal::service('arvestbank_rates.deposit_rates_helper');
-
     // Update Deposit Rates.
     $depositRatesHelper->updateDepositRates();
   }

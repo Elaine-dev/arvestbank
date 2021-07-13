@@ -147,7 +147,7 @@ class WebtoolsAdminForm extends ConfigFormBase {
     // Webtools Mortgage Rates Endpoint.
     $form['webtools']['webtools-mortgage-rates-endpoint'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Webtools Mortgage Rates Endpoint'),
+      '#title' => $this->t('Mortgage Rates Endpoint'),
       '#description' => $this->t('The endpoint at which webtools form api can be reached.'),
       '#default_value' => $config->get('webtools-mortgage-rates-endpoint'),
       '#attributes' => ['disabled' => 'disabled'],
@@ -159,33 +159,25 @@ class WebtoolsAdminForm extends ConfigFormBase {
     // Actions.
     $form['actions']['#type'] = 'actions';
 
-    // Test Webtools Form API button.
-    $form['webtools']['test_webtools_form_api_config'] = [
+    // Test webtools api button.
+    $form['webtools']['test_webtools_form_config'] = [
       '#type' => 'submit',
-      '#value' => t('Test Webtools Form API Config'),
-      '#submit' => [[$this, 'testWebtoolsFormEndpoint']],
+      '#value' => t('Test Form API Config'),
+      '#submit' => [[$this, 'testFormEndpoint']],
     ];
 
+    // Test webtools api button.
+    $form['webtools']['test_deposit_rates_config'] = [
+      '#type' => 'submit',
+      '#value' => t('Test Deposit Rates API Config'),
+      '#submit' => [[$this, 'testDepositRates']],
+    ];
 
     // Test Webtools Mortgage Rates API button.
     $form['webtools']['test_webtools_mortgage_rates_api_config'] = [
       '#type' => 'submit',
-      '#value' => t('Test Webtools Mortgage Rates API Config'),
-      '#submit' => [[$this, 'testWebtoolsMortgageRatesEndpoint']],
-    ];
-
-    // Test webtools api button.
-    $form['actions']['test_webtools_form_config'] = [
-      '#type' => 'submit',
-      '#value' => t('Test Form API Config'),
-      '#submit' => [[$this, 'testWebtoolsForm']],
-    ];
-
-    // Test webtools api button.
-    $form['actions']['test_deposit_rates_config'] = [
-      '#type' => 'submit',
-      '#value' => t('Test Deposit Rates API Config'),
-      '#submit' => [[$this, 'testDepositRates']],
+      '#value' => t('Test Mortgage Rates API Config'),
+      '#submit' => [[$this, 'testMortgageRates']],
     ];
 
     // Coppied from ConfigFormBase->buildForm.
@@ -221,10 +213,6 @@ class WebtoolsAdminForm extends ConfigFormBase {
 
   }
 
-  public function testWebtoolsFormEndpoint(array &$form, FormStateInterface $form_state){
-
-  }
-
   /**
    * Form submit function to test webtools mortgage rates endpoint config.
    *
@@ -233,13 +221,14 @@ class WebtoolsAdminForm extends ConfigFormBase {
    * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The form state.
    */
-  public function testWebtoolsMortgageRatesEndpoint(array &$form, FormStateInterface $form_state) {
+  public function testMortgageRates(array &$form, FormStateInterface $form_state) {
 
-    // Get webtools client.
-    $webtoolsClient = \Drupal::service('arvestbank_webtools_api.webtools_client');
+    // Get mortgage rates helper.
+    $mortgageRatesHelper = \Drupal::service('arvestbank_rates.mortgage_rates_helper');
 
     // Test connectivity.
-    $requestSuccess = $webtoolsClient->testMortgageRatesEndpointConnectivity();
+    $requestSuccess = $mortgageRatesHelper->testConnectivity();
+
     // If the test was successfull.
     if ($requestSuccess) {
       $this->messenger()->addMessage('Successfully connected to the webtools MortgageRates endpoint.');
@@ -258,7 +247,7 @@ class WebtoolsAdminForm extends ConfigFormBase {
    * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The form state.
    */
-  public function testWebtoolsForm(array &$form, FormStateInterface $form_state) {
+  public function testFormEndpoint(array &$form, FormStateInterface $form_state) {
 
     // Get webtools client.
     $webtoolsClient = \Drupal::service('arvestbank_webtools_api.webtools_client');
@@ -292,7 +281,7 @@ class WebtoolsAdminForm extends ConfigFormBase {
     // Attempt to generate a bearer token from ping identity.
     $requestSuccess = $pingIdentityClient->getNewBearerToken();
 
-    // If the test was successfull.
+    // If the test was successful.
     if ($requestSuccess) {
       $this->messenger()->addMessage('Successfully generated a ping identity bearer token.');
     }

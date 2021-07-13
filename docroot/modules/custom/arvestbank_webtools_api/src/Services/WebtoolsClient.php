@@ -61,23 +61,28 @@ class WebtoolsClient {
     $this->httpClient = $httpClient;
     // Store ping identity client.
     $this->pingIdentityClient = $pingIdentityClient;
-    // Store ping identity client.
-    $this->azureTokenClient = $azureTokenClient;
   }
 
   /**
-   * Tests webtools mortgage rates endpoint connectivity.
+   * Makes mortgage rates request.
+   *
+   * @param string $requestData
+   *   Json encoded request data.
+   *
+   * @return bool|string
+   *   Returns the response or FALSE.
    */
-  public function testMortgageRatesEndpointConnectivity(){
+  public function makeMortgageRatesRequest(string $requestData) {
 
-    // Define the test request we want to make.
+    // Get the endpoint to make request to.
     $endpoint = $this->webtoolsConfig->get('webtools-mortgage-rates-endpoint');
+    // Populate the request data.
     $requestOptions = [
-      RequestOptions::BODY => $this->getMortgageRatesJsonString(),
+      RequestOptions::BODY => $requestData,
     ];
 
     // Return boolean for success.
-    return is_string($this->makeRequest($endpoint, $requestOptions));
+    return $this->makeRequest($endpoint, $requestOptions);
 
   }
 
@@ -238,16 +243,6 @@ class WebtoolsClient {
     // Return response.
     return $response;
 
-  }
-
-  /**
-   * Returns a static json string we were given to request.
-   *
-   * @return string
-   *   A static json string we were given to request.
-   */
-  public function getMortgageRatesJsonString() {
-    return '{"BorrowerInformation":{"AssetDocumentation":"Verified","DebtToIncomeRatio":"40.0","PledgedAssets":"false","Citizenship":"USCitizen","EmploymentDocumentation":"Verified","FICO":"740","FirstName":"John","LastName":"Doe","FirstTimeHomeBuyer":"true","IncomeDocumentation":"Verified","MonthlyIncome":"6000.00","MonthsReserves":"24","SelfEmployed":"true","WaiveEscrows":"false","MortgageLatesX30":"0","MortgageLatesX60":"0","MortgageLatesX90":"0","MortgageLatesX120":"0","MortgageLatesRolling":"0","Bankruptcy":"Never","Foreclosure":"Never","DisclosureDate":"2017-02-06T22:39:44.908-06:00","ApplicationDate":"2017-02-06T22:39:44.908-06:00"},"LoanInformation":{"LoanPurpose":"Purchase","LienType":"First","AmortizationTypes":["Fixed"],"ARMFixedTerms":["FiveYear"],"AutomatedUnderwritingSystem":"NotSpecified","BorrowerPaidMI":"Yes","Buydown":"None","CashOutAmount":"0.0","DesiredLockPeriod":"0","DesiredPrice":"0.0","DesiredRate":"0.0","ExpandedApprovalLevel":"NotApplicable","FHACaseAssigned":"2017-02-06T06:00:00Z","FHACaseEndorsement":"2017-02-06T06:00:00Z","InterestOnly":"false","BaseLoanAmount":"225000.00","CalculateTotalLoanAmount":"true","SecondLienAmount":"0.0","HELOCDrawnAmount":"0.0","HELOCLineAmount":"0.0","LoanTerms":["ThirtyYear"],"LoanType":"Conforming","PrepaymentPenalty":"None","IncludeLOCompensationInPricing":"YesLenderPaid","CurrentServicer":"NotApplicable"},"PropertyInformation":{"AppraisedValue":"225000.00","Occupancy":"PrimaryResidence","PropertyStreetAddress":"123 ABC Dr.","County":"Collin","State":"TX","ZipCode":"75024","PropertyType":"SingleFamily","CorporateRelocation":"false","SalesPrice":"225000.00","NumberOfStories":"1","NumberOfUnits":"OneUnit","Construction":"false"},"RepresentativeFICO":"740","LoanLevelDebtToIncomeRatio":"40.0","CustomerInternalId":"OBSearch","ExemptFromVAFundingFee":"true","VeteranType":"Active Duty","VADisability":"true","VaFirstTimeUse":"true"}';
   }
 
 }
