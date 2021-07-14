@@ -132,6 +132,10 @@ Drupal.behaviors.externalLogin = {
 
     });
 
+    // Add inline-form class to sidebar form on load and focus text input
+    jQuery('.webform-submission-external-login-form').toggleClass('inline-form');
+    jQuery('.webform-submission-external-login-form input[data-drupal-selector="edit-arvest-online-banking-username"]').focus();
+
     // Populate cashman browser data.
     jQuery('input[name=pm_fp]').each(function () {
       jQuery(this).val(encode_deviceprint());
@@ -165,7 +169,6 @@ Drupal.behaviors.externalLogin = {
       );
     }
 
-
     // Login select change function
     // For prod or non prod sidebar select
     // To hide/show online banking field container and re-require select
@@ -198,12 +201,20 @@ Drupal.behaviors.externalLogin = {
           jQuery(this).val('');
         });
       }
-
     });
 
     // Login select change function.
     // For non-prod login select.
     jQuery('select[name="login_select_non_prod"]').change(function () {
+
+      // Add class if Arvest Online Banking selected. Else remove inline-form class.
+      var nonProdForm = jQuery(this).closest('form');
+      nonProdForm.toggleClass('inline-form', jQuery(this).val() == 'arvest_online_banking');
+
+      // After form displays, focus on visible email or text input
+      setTimeout(function() {
+        nonProdForm.find('.js-form-wrapper .js-form-wrapper:visible .js-form-item .form-email, .js-form-wrapper .js-form-wrapper:visible .js-form-item .form-text').first().focus();
+      }, 100);
 
       // If "Cash Manager" is selected.
       if (jQuery(this).val() == 'cash_manager') {
@@ -247,11 +258,18 @@ Drupal.behaviors.externalLogin = {
 
     });
 
-
-
     // Login select change function.
     // For prod login select.
     jQuery('select[name="login_select"]').change(function () {
+
+      // Add class if Arvest Online Banking selected. Else remove inline-form class.
+      var prodForm = jQuery(this).closest('form');
+      prodForm.toggleClass('inline-form', jQuery(this).val() == 'arvest_online_banking');
+
+      // After form displays, focus on visible email or text input
+      setTimeout(function() {
+        prodForm.find('.js-form-wrapper .js-form-wrapper:visible .js-form-item .form-email, .js-form-wrapper .js-form-wrapper:visible .js-form-item .form-text').first().focus();
+      }, 100);
 
       // If "Cash Manager" is selected.
       if (jQuery(this).val() == 'cash_manager') {
