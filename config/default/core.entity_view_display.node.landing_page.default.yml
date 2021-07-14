@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.landing_page.field_disable_sidebar_ad
     - field.field.node.landing_page.field_disclosure
+    - field.field.node.landing_page.field_exclude_from_search
     - field.field.node.landing_page.field_layout_
     - field.field.node.landing_page.field_meta_tags
     - field.field.node.landing_page.field_rendered_node
@@ -55,6 +56,7 @@ content:
 hidden:
   field_disable_sidebar_ad: true
   field_disclosure: true
+  field_exclude_from_search: true
   field_rendered_node: true
   field_sidebar_ad: true
   field_support_image: true
