@@ -7,22 +7,8 @@ label: Reviewer
 weight: -9
 is_admin: null
 permissions:
-  - 'access administration pages'
   - 'access content overview'
   - 'access sitemap'
-  - 'edit any ad content'
-  - 'edit any ad_campaign content'
-  - 'edit any article_education_article content'
-  - 'edit any associate content'
-  - 'edit any calculators content'
-  - 'edit any campaign_page content'
-  - 'edit any cta_phone_number content'
-  - 'edit any financing content'
-  - 'edit any landing_page content'
-  - 'edit any page content'
-  - 'edit any private_bank_location content'
-  - 'edit any stage_page content'
-  - 'edit any webform content'
   - 'use editorial transition create_new_draft'
   - 'use editorial transition unpublished'
   - 'view all revisions'
