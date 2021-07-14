@@ -1,18 +1,22 @@
 channels:
-  -
+  0:
     id: purgers
     grants:
       - 0
       - 2
       - 3
-  -
+  1:
     id: queue
     grants:
       - 0
       - 2
       - 3
-  -
-    id: purger_httpbundled_04ed2c7053
+  3:
+    id: diagnostics
+    grants:
+      - 3
+  4:
+    id: purger_acquia_purge_45cd87fcc0
     grants:
       - 0
       - 2
