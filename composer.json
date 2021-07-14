@@ -189,6 +189,9 @@
             },
             "drupal/redirect": {
                 "Feeds: redirects_source field target class.": "https://www.drupal.org/files/issues/2019-04-09/redirect-feeds-target-3046873-1-8.patch"
+            },
+            "drupal/purge_purger_http": {
+                "scheme is https not work": "https://www.drupal.org/files/issues/2018-11-29/2892552-verify-option-scheme-update-6.patch"
             }
         }
     },
