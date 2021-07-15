@@ -2,4 +2,4 @@ name: 'Arvest Bank Careers'
 type: module
 description: 'Custom programming for Arvest Bank Careers.'
 core_version_requirement: ^9
-package: 'Custom'
+package: 'Arvest'

@@ -79,7 +79,6 @@
         "drupal/purge_purger_http": "^1.0",
         "drupal/qa_accounts": "1.x-dev@dev",
         "drupal/rabbit_hole": "^1.0@beta",
-        "drupal/recaptcha": "^3.0",
         "drupal/redirect": "^1.6",
         "drupal/responsive_tables_filter": "^1.7",
         "drupal/scheduler": "^1.3",

@@ -2,4 +2,4 @@ name: 'Arvest Bank Browser Test'
 type: module
 description: 'Compiles information about a site visitor''s local browser and displays this information on the page.'
 core_version_requirement: ^9
-package: 'Custom'
+package: 'Arvest'

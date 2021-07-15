@@ -2,7 +2,7 @@ name: 'Arvest Bank Blocks'
 type: module
 description: 'Custom programming for Arvest Bank blocks.'
 core_version_requirement: ^9
-package: 'Custom'
+package: 'Arvest'
 dependencies:
   - node
   - block

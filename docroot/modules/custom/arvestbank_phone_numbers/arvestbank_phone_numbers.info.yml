@@ -2,5 +2,6 @@ name: Arvest Bank Phone Numbers
 type: module
 description: 'Adds Arvest Bank Phone Numbers.'
 core_version_requirement: ^9
+package: 'Arvest'
 dependencies:
   - drupal:ckeditor
