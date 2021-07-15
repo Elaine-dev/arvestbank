@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.media.field_document_and_resource_cate
     - media.type.acquia_dam_document
+    - system.menu.footer
   module:
     - media
     - taxonomy
