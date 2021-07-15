@@ -4,12 +4,12 @@ namespace Drupal\arvestbank_core\Form;
 
 use Drupal\content_moderation\ModerationInformationInterface;
 use Drupal\content_moderation\StateTransitionValidation;
-use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\node\NodeInterface;
+use Drupal\Core\Entity\ContentEntityInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -22,21 +22,21 @@ class NodeStatusForm extends FormBase {
    *
    * @var \Drupal\Core\Entity\EntityStorageInterface
    */
-  protected EntityStorageInterface $nodeStorage;
+  protected $nodeStorage;
 
   /**
    * Current user service.
    *
    * @var \Drupal\Core\Session\AccountInterface
    */
-  protected AccountInterface $currentUser;
+  protected $currentUser;
 
   /**
    * The moderation information service.
    *
    * @var \Drupal\content_moderation\ModerationInformationInterface
    */
-  protected ModerationInformationInterface $moderationInfo;
+  protected $moderationInfo;
 
   /**
    * Returns valid workflow state options for the current user.
@@ -44,7 +44,7 @@ class NodeStatusForm extends FormBase {
    * @return array
    *   Options array.
    */
-  protected function getStateOptions(EntityInterface $revision): array {
+  protected function getStateOptions(ContentEntityInterface $revision): array {
 
     // Initialize the return options.
     $options = [];
