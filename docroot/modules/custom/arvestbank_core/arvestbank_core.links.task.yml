@@ -1,0 +1,5 @@
+entity.node.status:
+  route_name: entity.node.status
+  base_route: entity.node.canonical
+  title: 'Status'
+  weight: 30
