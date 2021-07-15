@@ -1,0 +1,80 @@
+{
+  "BorrowerInformation": {
+    "AssetDocumentation": "Verified",
+    "DebtToIncomeRatio": "40",
+    "PledgedAssets": "false",
+    "Citizenship": "USCitizen",
+    "EmploymentDocumentation": "Verified",
+    "FICO": "600",
+    "FirstName": "John",
+    "LastName": "Doe",
+    "VaFirstTimeUse": "true",
+    "FirstTimeHomeBuyer": "true",
+    "IncomeDocumentation": "Verified",
+    "TypeOfVeteran": "ActiveDuty",
+    "MonthlyIncome": "0",
+    "MonthsReserves": "12",
+    "SelfEmployed": "false",
+    "WaiveEscrows": "false",
+    "MortgageLatesX30": "0",
+    "MortgageLatesX60": "0",
+    "MortgageLatesX90": "0",
+    "MortgageLatesX120": "0",
+    "MortgageLatesRolling": "0",
+    "Bankruptcy": "Never",
+    "Foreclosure": "Never",
+    "DisclosureDate": "2017-02-06T22:39:44.908-06:00",
+    "ApplicationDate": "2017-02-06T22:39:44.908-06:00"
+  },
+  "LoanInformation": {
+    "LoanPurpose": "Purchase",
+    "LienType": "First",
+    "AmortizationTypes": [
+      "Fixed"
+    ],
+    "ARMFixedTerms": [
+      "FiveYear"
+    ],
+    "AutomatedUnderwritingSystem": "NotSpecified",
+    "BorrowerPaidMI": "Yes",
+    "Buydown": "None",
+    "CashOutAmount": "0",
+    "DesiredLockPeriod": "45",
+    "DesiredPrice": "0",
+    "DesiredRate": "0",
+    "ExpandedApprovalLevel": "NotApplicable",
+    "FHACaseAssigned": "2017-02-06T00:00:00-06:00",
+    "FHACaseEndorsement": "2017-02-06T00:00:00-06:00",
+    "InterestOnly": "false",
+    "BaseLoanAmount": "175000",
+    "CalculateTotalLoanAmount": "true",
+    "SecondLienAmount": "0",
+    "HELOCDrawnAmount": "0",
+    "HELOCLineAmount": "0",
+    "LoanTerms": [
+      "ThirtyYear"
+    ],
+    "LoanType": "VA",
+    "PrepaymentPenalty": "None",
+    "ExemptFromVAFundingFee": "false",
+    "IncludeLOCompensationInPricing": "YesLenderPaid",
+    "CurrentServicer": "Not Applicable"
+  },
+  "PropertyInformation": {
+    "AppraisedValue": "218750.0",
+    "Occupancy": "PrimaryResidence",
+    "PropertyStreetAddress": "123 ABC Dr",
+    "County": "Collin",
+    "State": "TX",
+    "ZipCode": "75025",
+    "PropertyType": "SingleFamily",
+    "CorporateRelocation": "false",
+    "SalesPrice": "218750.00",
+    "NumberOfStories": "1",
+    "NumberOfUnits": "OneUnit",
+    "Construction": "false"
+  },
+  "RepresentativeFICO": "740",
+  "LoanLevelDebtToIncomeRatio": "40",
+  "CustomerInternalId": "OB#99"
+}
