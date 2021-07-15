@@ -235,8 +235,16 @@ class AdBlockSidebar extends BlockBase {
   public function getCacheTags() {
     // With this when your node change your block will rebuild.
     if ($node = \Drupal::routeMatch()->getParameter('node')) {
+      // Initialize return ID.
+      $nid = 0;
       // If there is node add its cachetag.
-      return Cache::mergeTags(parent::getCacheTags(), ['node:' . $node->id()]);
+      if ($node instanceof Node) {
+        $nid = $node->id();
+      }
+      elseif (intval($node)) {
+        $nid = $node;
+      }
+      return Cache::mergeTags(parent::getCacheTags(), ['node:' . $nid]);
     }
     else {
       // Return default tags instead.
