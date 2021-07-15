@@ -57,8 +57,6 @@ module:
   context_entity_field: 0
   context_ui: 0
   contextual: 0
-  cookiepro: 0
-  critical_css: 0
   ctools: 0
   ctools_entity_mask: 0
   datetime: 0
@@ -123,6 +121,7 @@ module:
   moderation_dashboard: 0
   node: 0
   options: 0
+  page_cache: 0
   page_manager: 0
   panels: 0
   path: 0
@@ -131,7 +130,7 @@ module:
   purge: 0
   purge_drush: 0
   purge_processor_cron: 0
-  purge_purger_http: 0
+  purge_processor_lateruntime: 0
   purge_queuer_coretags: 0
   purge_tokens: 0
   purge_ui: 0
@@ -157,7 +156,6 @@ module:
   seckit: 0
   serialization: 0
   settings_tray: 0
-  shield: 0
   shortcut: 0
   simple_sitemap: 0
   simple_sitemap_engines: 0
