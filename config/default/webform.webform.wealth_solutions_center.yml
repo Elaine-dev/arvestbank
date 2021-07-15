@@ -252,4 +252,6 @@ handlers:
       last_name_field_machine_name: ''
       full_name_field_machine_name: name
       email_field_machine_name: email_address
+      legacy_region_id_fields|city_field_machine_name: ''
+      legacy_region_id_fields|state_field_machine_name: ''
 variants: {  }
