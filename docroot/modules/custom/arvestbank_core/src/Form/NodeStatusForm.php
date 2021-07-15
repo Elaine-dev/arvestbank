@@ -138,20 +138,23 @@ class NodeStatusForm extends FormBase {
     if (
       $revision->hasField('moderation_state') &&
       !$revision->get('moderation_state')->isEmpty() &&
-      !empty($revision->get('moderation_state')->getValue()[0]['value'])
+      !empty($revision->get('moderation_state')->getString())
     ) {
 
       // Current state.
-      $state = $revision->get('moderation_state')->getValue()[0]['value'];
+      $state = $revision->get('moderation_state')->getString();
+      $state_label = \Drupal::config("workflows.workflow.editorial")->get("type_settings.states.{$state}.label");
 
       // Pass the node through the form.
       $form['#node'] = $node;
 
       // Helpful markup.
-      $form['#prefix'] = '<h3>Current State: ' . $state . '</h3>';
+      $form['#prefix'] = '<h3>Current State: ' . $state_label . '</h3>';
 
+      // Get valid states for this revision.
       $state_options = $this::getStateOptions($revision);
 
+      // Dropdown of status to change to.
       $form['update_status'] = [
         '#title' => 'Update Status To:',
         '#type' => 'select',
@@ -159,6 +162,7 @@ class NodeStatusForm extends FormBase {
         '#options' => $state_options,
       ];
 
+      // Submit.
       $form['actions'] = [
         '#type' => 'actions',
         'submit' => [
@@ -169,7 +173,7 @@ class NodeStatusForm extends FormBase {
 
     }
 
-
+    // Return form render array.
     return $form;
 
   }
