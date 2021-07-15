@@ -10,6 +10,6 @@ cache:
     vary: ''
   surrogate:
     maxage: 0
-    nostore: null
+    nostore: false
 _core:
   default_config_hash: 7J75jee6uT-qT16hDiNTHOtRFPgAz_ppCBdl7GTo-As

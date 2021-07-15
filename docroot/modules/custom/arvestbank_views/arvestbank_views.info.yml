@@ -2,3 +2,4 @@ name: Arvest Bank Views
 type: module
 description: 'Adds Arvest Bank specific view functionality.'
 core_version_requirement: ^9
+package: 'Arvest'

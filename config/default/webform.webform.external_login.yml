@@ -82,7 +82,7 @@ elements: |-
         '#wrapper_attributes':
           class:
             - wide-links
-        '#markup': '<a class="coh-style-triangle" href="/user/password">Forgot Login ID or password?</a>'
+        '#markup': '<a class="coh-style-triangle" href="/personal/signon/logon/&q=passwordreset">Forgot Login ID or password?</a>'
     cash_manager:
       '#type': container
       '#states':

@@ -2,6 +2,6 @@ name: 'Arvest Bank Media Alias'
 type: module
 description: 'Allows files to be displayed via media alias. Forked from drupal/media_alias_display.'
 core_version_requirement: ^9
-package: Media
+package: 'Arvest'
 dependencies:
   - drupal:media

@@ -2,3 +2,4 @@ name: Arvest Bank Revisions
 type: module
 description: 'Adds Arvest Bank revision functionality.'
 core_version_requirement: ^9
+package: 'Arvest'
