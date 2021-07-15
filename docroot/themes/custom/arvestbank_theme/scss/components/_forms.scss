@@ -263,6 +263,16 @@
 // Target sidebar and top logins
 .coh-style-login-blocks {
 
+    // Adjust submit button for Firefox
+    &.inline-form {
+        @-moz-document url-prefix() {
+            input[type='submit'] {
+                top: 102px;
+                height: 36px;
+            }
+        }
+    }
+
     // Continue to hide selects when small screen menu is toggled
     select {
         display: visible;
@@ -288,7 +298,7 @@
         right: 0;
         top: 100%;
         width: calculateRem(280px);
-        background: #00457c;
+        background: #00457c; 
         background: rgba(0,69,124,0.8);
 
         // Full opacity and in tablet and below screens

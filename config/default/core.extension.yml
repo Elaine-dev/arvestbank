@@ -1,5 +1,6 @@
 module:
   acquia_connector: 0
+  acquia_purge: 0
   acquiadam_asset_import: 0
   address: 0
   admin_toolbar: 0
@@ -152,6 +153,7 @@ module:
   search_api_attachments: 0
   search_api_attachments_php: 0
   search_api_db: 0
+  search_api_exclude_entity: 0
   seckit: 0
   serialization: 0
   settings_tray: 0

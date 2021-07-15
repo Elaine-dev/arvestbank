@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.stage_page.field_block_button
     - field.field.node.stage_page.field_block_title
     - field.field.node.stage_page.field_disclosure
+    - field.field.node.stage_page.field_exclude_from_search
     - field.field.node.stage_page.field_icon_four
     - field.field.node.stage_page.field_icon_four_text
     - field.field.node.stage_page.field_icon_one
@@ -19,9 +20,9 @@ dependencies:
     - field.field.node.stage_page.field_icon_two
     - field.field.node.stage_page.field_icon_two_text
     - field.field.node.stage_page.field_meta_tags
-    - field.field.node.stage_page.field_rendered_node
     - field.field.node.stage_page.field_news_alert_block_body
     - field.field.node.stage_page.field_news_alert_block_dates
+    - field.field.node.stage_page.field_rendered_node
     - field.field.node.stage_page.field_slide1_cta_color
     - field.field.node.stage_page.field_slide1_cta_link
     - field.field.node.stage_page.field_slide1_cta_position
@@ -359,6 +360,7 @@ hidden:
   field_alert_block_dates: true
   field_alert_block_link: true
   field_disclosure: true
+  field_exclude_from_search: true
   field_news_alert_block_body: true
   field_news_alert_block_dates: true
   field_rendered_node: true

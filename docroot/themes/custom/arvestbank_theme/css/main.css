@@ -457,6 +457,13 @@
   flex: 1 1 auto;
 }
 
+@-moz-document url-prefix() {
+  .coh-style-login-blocks.inline-form input[type='submit'] {
+    top: 102px;
+    height: 36px;
+  }
+}
+
 .coh-style-login-blocks select {
   display: visible;
   position: absolute;

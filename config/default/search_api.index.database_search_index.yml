@@ -14,6 +14,7 @@ dependencies:
     - file
     - search_api
     - search_api_attachments
+    - search_api_exclude_entity
 id: database_search_index
 name: 'Database Search Index'
 description: ''
@@ -115,8 +116,11 @@ datasource_settings:
       selected:
         - article_education_article
         - calculators
+        - campaign_page
+        - landing_page
         - page
         - stage_page
+        - webform
     languages:
       default: true
       selected: {  }
@@ -137,7 +141,6 @@ processor_settings:
     excerpt: true
     excerpt_length: 256
     exclude_fields:
-      - field_title
       - name
       - title
     prefix: '<strong>'
@@ -176,6 +179,12 @@ processor_settings:
       preprocess_query: -43
   language_with_fallback: {  }
   rendered_item: {  }
+  search_api_exclude_entity_processor:
+    fields:
+      media:
+        - field_exclude_from_search
+      node:
+        - field_exclude_from_search
   stemmer:
     all_fields: false
     fields:
