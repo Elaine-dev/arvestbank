@@ -154,22 +154,37 @@ class NodeStatusForm extends FormBase {
       // Get valid states for this revision.
       $state_options = $this::getStateOptions($revision);
 
-      // Dropdown of status to change to.
-      $form['update_status'] = [
-        '#title' => 'Update Status To:',
-        '#type' => 'select',
-        '#default_value' => $state,
-        '#options' => $state_options,
-      ];
+      // Check for valid transition options.
+      if (!empty($state_options)) {
 
-      // Submit.
-      $form['actions'] = [
-        '#type' => 'actions',
-        'submit' => [
-          '#type' => 'submit',
-          '#value' => 'Proceed',
-        ],
-      ];
+        // Dropdown of status to change to.
+        $form['update_status'] = [
+          '#title' => 'Update Status To:',
+          '#type' => 'select',
+          '#default_value' => $state,
+          '#options' => $state_options,
+        ];
+
+        // Submit.
+        $form['actions'] = [
+          '#type' => 'actions',
+          'submit' => [
+            '#type' => 'submit',
+            '#value' => 'Proceed',
+          ],
+        ];
+
+      }
+
+      // If no options let them know.
+      else {
+
+        $form['no_options'] = [
+          '#type' => 'markup',
+          '#markup' => 'Sorry, there are no available status options.',
+        ];
+
+      }
 
     }
 
