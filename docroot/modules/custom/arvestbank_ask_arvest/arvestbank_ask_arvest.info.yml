@@ -2,6 +2,7 @@ name: Arvest Bank Ask Arvest
 type: module
 description: 'Adds connectivity with [24]7 Answers APIs to facilitate "Ask Arvest" functionality.'
 core_version_requirement: ^9
+package: 'Arvest'
 configure: arvestbank_ask_arvest.settings
 dependencies:
   - drupal:block

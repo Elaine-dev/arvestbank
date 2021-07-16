@@ -2,7 +2,7 @@ name: 'Arvest Bank Ads'
 type: module
 description: 'Custom ads management.'
 core_version_requirement: ^9
-package: 'Custom'
+package: 'Arvest'
 dependencies:
   - node
   - block

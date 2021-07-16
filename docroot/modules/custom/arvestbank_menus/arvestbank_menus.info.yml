@@ -2,3 +2,4 @@ name: Arvest Bank Menus
 type: module
 description: 'Adds Arvest Bank specific menu functionality.'
 core_version_requirement: ^9
+package: 'Arvest'

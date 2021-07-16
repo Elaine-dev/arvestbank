@@ -2,7 +2,7 @@ name: 'Arvest Bank Migrate'
 type: module
 description: 'Custom migrations for Arvest Bank.'
 core_version_requirement: ^9
-package: 'Custom'
+package: 'Arvest'
 dependencies:
   - drupal:migrate
   - migrate_plus:migrate_plus

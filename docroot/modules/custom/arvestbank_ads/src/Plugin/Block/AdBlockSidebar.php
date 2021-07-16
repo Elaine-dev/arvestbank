@@ -178,8 +178,14 @@ class AdBlockSidebar extends BlockBase {
       // If the media loaded successfully, continue with the formatting.
       if ($media_id = $storage->load($nid)->get('field_image')[0]->getValue()['target_id']) {
 
+        // Get the media item
+        $media_entity = Media::load($media_id);
+
         // Get the file id for this media item.
-        $fid = Media::load($media_id)->field_acquiadam_asset_image[0]->getValue()['target_id'];
+        $fid = $media_entity->field_acquiadam_asset_image[0]->getValue()['target_id'];
+
+        // Save the alt text value from original image.
+        $alt_value = $media_entity->field_acquiadam_asset_image->first()->get('alt')->getValue();
 
         // Load the file from this fid.
         if ($file = File::load($fid)) {
@@ -195,6 +201,9 @@ class AdBlockSidebar extends BlockBase {
               '#theme' => 'image_style',
               '#style_name' => 'tile_sidebar',
               '#uri' => $ad_image_url,
+              '#attributes' => [
+                'alt' => $alt_value,
+              ],
             ];
 
             // If there is a CTA, link this image.
@@ -235,8 +244,16 @@ class AdBlockSidebar extends BlockBase {
   public function getCacheTags() {
     // With this when your node change your block will rebuild.
     if ($node = \Drupal::routeMatch()->getParameter('node')) {
+      // Initialize return ID.
+      $nid = 0;
       // If there is node add its cachetag.
-      return Cache::mergeTags(parent::getCacheTags(), ['node:' . $node->id()]);
+      if ($node instanceof Node) {
+        $nid = $node->id();
+      }
+      elseif (intval($node)) {
+        $nid = $node;
+      }
+      return Cache::mergeTags(parent::getCacheTags(), ['node:' . $nid]);
     }
     else {
       // Return default tags instead.

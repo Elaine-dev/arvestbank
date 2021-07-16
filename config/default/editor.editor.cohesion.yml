@@ -34,7 +34,6 @@ settings:
           items:
             - DrupalLink
             - DrupalUnlink
-            - ButtonLink
         -
           name: Lists
           items:
@@ -57,8 +56,6 @@ settings:
           name: Styles
           items:
             - Format
-            - Styles
-            - DX8Styles
             - DX8InlineStyles
   plugins:
     stylescombo:

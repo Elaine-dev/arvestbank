@@ -114,8 +114,14 @@ class AdBlockMain extends BlockBase {
 
         if ($media_id = $ad_node_field->getValue()['target_id']) {
 
+          // Get the media item
+          $media_entity = Media::load($media_id);
+
           // Get the file id for this media item.
-          $fid = Media::load($media_id)->field_acquiadam_asset_image[0]->getValue()['target_id'];
+          $fid = $media_entity->field_acquiadam_asset_image[0]->getValue()['target_id'];
+
+          // Save the alt text value from original image.
+          $alt_value = $media_entity->field_acquiadam_asset_image->first()->get('alt')->getValue();
 
           // Load the file from this fid.
           if ($file = File::load($fid)) {
@@ -131,6 +137,9 @@ class AdBlockMain extends BlockBase {
                 '#theme' => 'image_style',
                 '#style_name' => 'tile_main',
                 '#uri' => $ad_image_url,
+                '#attributes' => [
+                  'alt' => $alt_value,
+                ],
               ];
 
               // If there is a CTA, link this image.

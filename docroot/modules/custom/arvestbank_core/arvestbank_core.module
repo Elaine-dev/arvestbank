@@ -5,7 +5,9 @@
  * Contains arvestbank_core.module.
  */
 
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
 
 /**
  * Implements hook_form_alter().
@@ -27,3 +29,19 @@ function arvestbank_core_form_alter(&$form, FormStateInterface $form_state, $for
   }
 
 }
+
+/**
+ * Implements hook_entity_operation().
+ */
+function arvestbank_core_entity_operation(EntityInterface $entity) {
+  $operations = [];
+  if ($entity->getEntityTypeId() === 'node') {
+    $operations['status'] = [
+      'title' => t('Status'),
+      'weight' => 100,
+      'url' => Url::fromRoute('entity.node.status',["node" => $entity->id()]),
+    ];
+  }
+  return $operations;
+}
+
