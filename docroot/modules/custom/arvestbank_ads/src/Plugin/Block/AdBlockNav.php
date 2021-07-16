@@ -177,7 +177,7 @@ class AdBlockNav extends BlockBase {
    * {@inheritdoc}
    */
   public function getCacheMaxAge(): int {
-    return 0;
+    return 86400;
   }
 
 }
