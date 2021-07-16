@@ -9,7 +9,8 @@ is_admin: null
 permissions:
   - 'access content overview'
   - 'access sitemap'
-  - 'use editorial transition create_new_draft'
+  - 'use editorial transition draft_to_review'
+  - 'use editorial transition review_to_draft'
   - 'use editorial transition unpublished'
   - 'view all revisions'
   - 'view media'
