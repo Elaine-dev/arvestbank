@@ -6,6 +6,7 @@ use Drupal\Core\Config\ConfigFactory;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\BadResponseException;
 use Drupal\arvestbank_webtools_api\Services\PingIdentityClient;
+use Drupal\arvestbank_webtools_api\Services\AzureTokenClient;
 use GuzzleHttp\RequestOptions;
 
 /**
@@ -49,7 +50,7 @@ class WebtoolsClient {
    * @param \GuzzleHttp\Client $httpClient
    *   A drupal http client factory.
    * @param \Drupal\arvestbank_webtools_api\Services\PingIdentityClient $pingIdentityClient
-   *  The ping identity client service.
+   *   The ping identity client service.
    */
   public function __construct(ConfigFactory $configFactory, Client $httpClient, PingIdentityClient $pingIdentityClient) {
     // Store config factory for later use.
@@ -60,6 +61,29 @@ class WebtoolsClient {
     $this->httpClient = $httpClient;
     // Store ping identity client.
     $this->pingIdentityClient = $pingIdentityClient;
+  }
+
+  /**
+   * Makes mortgage rates request.
+   *
+   * @param string $requestData
+   *   Json encoded request data.
+   *
+   * @return bool|string
+   *   Returns the response or FALSE.
+   */
+  public function makeMortgageRatesRequest(string $requestData) {
+
+    // Get the endpoint to make request to.
+    $endpoint = $this->webtoolsConfig->get('webtools-mortgage-rates-endpoint');
+    // Populate the request data.
+    $requestOptions = [
+      RequestOptions::BODY => $requestData,
+    ];
+
+    // Return boolean for success.
+    return $this->makeRequest($endpoint, $requestOptions);
+
   }
 
   /**
@@ -148,11 +172,13 @@ class WebtoolsClient {
    *   The endpoint to make a request to.
    * @param array $requestOptions
    *   Request (Guzzle) options to be merged into the authentication ones.
+   * @param string $method
+   *   Get or post.
    *
    * @return bool|string
    *   Response or FALSE.
    */
-  public function makeRequest(string $endpoint, array $requestOptions) {
+  public function makeRequest(string $endpoint, array $requestOptions, string $method = 'post') {
 
     // If the passed endpoint isn't a full url.
     if (strpos($endpoint, 'http') === FALSE) {
@@ -180,15 +206,24 @@ class WebtoolsClient {
     ];
 
     // Merge the passed request options with the authorization ones.
-    $postRequestOptions = array_merge_recursive($postRequestOptions, $requestOptions);
+    $postRequestOptions = array_merge($postRequestOptions, $requestOptions);
 
     try {
 
-      // Make request and get response body contents.
-      $response = $this->httpClient->post(
-        $requestEndpoint,
-        $postRequestOptions
-      )->getBody()->getContents();
+      if ($method == 'post') {
+        // Make request and get response body contents.
+        $response = $this->httpClient->post(
+          $requestEndpoint,
+          $postRequestOptions
+        )->getBody()->getContents();
+      }
+      elseif ($method == 'get') {
+        // Make request and get response body contents.
+        $response = $this->httpClient->get(
+          $requestEndpoint,
+          $postRequestOptions
+        )->getBody()->getContents();
+      }
 
     }
     catch (BadResponseException $e) {

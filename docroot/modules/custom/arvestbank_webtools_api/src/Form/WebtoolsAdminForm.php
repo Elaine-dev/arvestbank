@@ -37,7 +37,7 @@ class WebtoolsAdminForm extends ConfigFormBase {
       '#collapsible' => FALSE,
       '#collapsed' => FALSE,
       '#title' => 'Ping Federate OAuth Connection Details',
-      '#description' => 'Connection info for Ping Federate OAuth.<br/>Used to obtain bearer token for webtool api requests.<br/>Should be autoswitched in secrets.settings.php.',
+      '#description' => 'Connection info for Ping Federate OAuth.<br/>Used to obtain bearer token for webtool form api requests.<br/>Should be autoswitched in secrets.settings.php.',
     ];
 
     // Add bearer token info to ping federate container description.
@@ -80,6 +80,22 @@ class WebtoolsAdminForm extends ConfigFormBase {
       '#title' => $this->t('Client Secret'),
       '#description' => $this->t('The ping federate client secret.'),
       '#default_value' => $config->get('client_secret'),
+      '#attributes' => ['disabled' => 'disabled'],
+    ];
+
+    // Test Ping Identity button.
+    $form['ping-federate']['test_ping_identity_config'] = [
+      '#type' => 'submit',
+      '#value' => t('Test Ping Identity Config'),
+      '#submit' => [[$this, 'testPingIdentity']],
+    ];
+
+    // IBM Client Id.
+    $form['webtools']['ibm-client-id'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('IBM Client Id'),
+      '#description' => $this->t('The value to include for ibm-client-id in webtools requests.'),
+      '#default_value' => $config->get('ibm-client-id'),
       '#attributes' => ['disabled' => 'disabled'],
     ];
 
@@ -128,32 +144,44 @@ class WebtoolsAdminForm extends ConfigFormBase {
       '#attributes' => ['disabled' => 'disabled'],
     ];
 
-    // Coppied from ConfigFormBase->buildForm.
+    // Webtools Mortgage Rates Endpoint.
+    $form['webtools']['webtools-mortgage-rates-endpoint'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Mortgage Rates Endpoint'),
+      '#description' => $this->t('The endpoint at which webtools form api can be reached.'),
+      '#default_value' => $config->get('webtools-mortgage-rates-endpoint'),
+      '#attributes' => ['disabled' => 'disabled'],
+    ];
+
+    // Copied from ConfigFormBase->buildForm.
     $form['#theme'] = 'system_config_form';
 
     // Actions.
     $form['actions']['#type'] = 'actions';
 
-    // Test Ping Identity button.
-    $form['actions']['test_ping_identity_config'] = [
-      '#type' => 'submit',
-      '#value' => t('Test Ping Identity Config'),
-      '#submit' => [[$this, 'testPingIdentity']],
-    ];
-
     // Test webtools api button.
-    $form['actions']['test_webtools_form_config'] = [
+    $form['webtools']['test_webtools_form_config'] = [
       '#type' => 'submit',
       '#value' => t('Test Form API Config'),
-      '#submit' => [[$this, 'testWebtoolsForm']],
+      '#submit' => [[$this, 'testFormEndpoint']],
     ];
 
     // Test webtools api button.
-    $form['actions']['test_deposit_rates_config'] = [
+    $form['webtools']['test_deposit_rates_config'] = [
       '#type' => 'submit',
       '#value' => t('Test Deposit Rates API Config'),
       '#submit' => [[$this, 'testDepositRates']],
     ];
+
+    // Test Webtools Mortgage Rates API button.
+    $form['webtools']['test_webtools_mortgage_rates_api_config'] = [
+      '#type' => 'submit',
+      '#value' => t('Test Mortgage Rates API Config'),
+      '#submit' => [[$this, 'testMortgageRates']],
+    ];
+
+    // Coppied from ConfigFormBase->buildForm.
+    $form['#theme'] = 'system_config_form';
 
     // Return form.
     return $form;
@@ -175,7 +203,7 @@ class WebtoolsAdminForm extends ConfigFormBase {
     // Test connectivity.
     $requestSuccess = $webtoolsClient->testDepositRatesEndpointConnectivity();
 
-    // If the test was successfull.
+    // If the test was successful.
     if ($requestSuccess) {
       $this->messenger()->addMessage('Successfully connected to the deposit rates endpoint.');
     }
@@ -186,14 +214,40 @@ class WebtoolsAdminForm extends ConfigFormBase {
   }
 
   /**
-   * Form submit function to test webtools config.
+   * Form submit function to test webtools mortgage rates endpoint config.
    *
    * @param array $form
    *   The form array.
    * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The form state.
    */
-  public function testWebtoolsForm(array &$form, FormStateInterface $form_state) {
+  public function testMortgageRates(array &$form, FormStateInterface $form_state) {
+
+    // Get mortgage rates helper.
+    $mortgageRatesHelper = \Drupal::service('arvestbank_rates.mortgage_rates_helper');
+
+    // Test connectivity.
+    $requestSuccess = $mortgageRatesHelper->testConnectivity();
+
+    // If the test was successfull.
+    if ($requestSuccess) {
+      $this->messenger()->addMessage('Successfully connected to the webtools MortgageRates endpoint.');
+    }
+    else {
+      $this->messenger()->addError('Could not connect to the webtools MortgageRates endpoint.');
+    }
+
+  }
+
+  /**
+   * Form submit function to test webtools form endpoint config.
+   *
+   * @param array $form
+   *   The form array.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The form state.
+   */
+  public function testFormEndpoint(array &$form, FormStateInterface $form_state) {
 
     // Get webtools client.
     $webtoolsClient = \Drupal::service('arvestbank_webtools_api.webtools_client');
@@ -227,7 +281,7 @@ class WebtoolsAdminForm extends ConfigFormBase {
     // Attempt to generate a bearer token from ping identity.
     $requestSuccess = $pingIdentityClient->getNewBearerToken();
 
-    // If the test was successfull.
+    // If the test was successful.
     if ($requestSuccess) {
       $this->messenger()->addMessage('Successfully generated a ping identity bearer token.');
     }

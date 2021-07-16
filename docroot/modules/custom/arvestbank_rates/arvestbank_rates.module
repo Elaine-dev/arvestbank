@@ -68,6 +68,25 @@ function arvestbank_rates_tokens($type, $tokens, array $data, array $options, Bu
     'legacy_card_rates__accurate_as_of_date' => 'F j, Y',
   ];
 
+  // Define the decimal places for decimal tokens.
+  $rateTokenDecimalPlaces = [
+    // Three decimal places for mortgage APRs.
+    'mortgage_rates__conventional_15yr_fixed__apr' => 3,
+    'mortgage_rates__conventional_30yr_fixed__apr' => 3,
+    'mortgage_rates__fha_30yr_fixed___apr' => 3,
+    'mortgage_rates__va_30yr_fixed__apr' => 3,
+    // Two decimal places for mortgage payments.
+    'mortgage_rates__conventional_15yr_fixed__payment' => 2,
+    'mortgage_rates__conventional_30yr_fixed__payment' => 2,
+    'mortgage_rates__fha_30yr_fixed___payment' => 2,
+    'mortgage_rates__va_30yr_fixed__payment' => 2,
+    // Three decimal places for mortgage rates.
+    'mortgage_rates__conventional_15yr_fixed__rate' => 3,
+    'mortgage_rates__conventional_30yr_fixed__rate' => 3,
+    'mortgage_rates__fha_30yr_fixed___rate' => 3,
+    'mortgage_rates__va_30yr_fixed__rate' => 3,
+  ];
+
   // Loop over tokens that need replacing.
   foreach ($tokens as $name => $original) {
 
@@ -87,6 +106,14 @@ function arvestbank_rates_tokens($type, $tokens, array $data, array $options, Bu
         $replacements[$original] = date(
           'F j, Y',
           strtotime($ratesConfigValues[$name])
+        );
+      }
+      // If it's a token we want to set decimal places for.
+      elseif (isset($rateTokenDecimalPlaces[$name])) {
+        // Replace with formatted number.
+        $replacements[$original] = number_format(
+          $ratesConfigValues[$name],
+          $rateTokenDecimalPlaces[$name]
         );
       }
       // If it's a normal nondate token.
@@ -181,9 +208,13 @@ function arvestbank_rates_cron() {
 
     // Get deposit rates helper.
     $depositRatesHelper = \Drupal::service('arvestbank_rates.deposit_rates_helper');
-
     // Update Deposit Rates.
     $depositRatesHelper->updateDepositRates();
+
+    // Get mortgage rates helper.
+    $mortgageRatesHelper = \Drupal::service('arvestbank_rates.mortgage_rates_helper');
+    // Update Mortgage Rates.
+    $mortgageRatesHelper->updateMortgageRates();
 
     // Record that we just ran that import.
     \Drupal::state()->set('arvestbank_rates.last_import', REQUEST_TIME);

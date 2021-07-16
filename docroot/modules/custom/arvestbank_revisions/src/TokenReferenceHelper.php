@@ -36,6 +36,9 @@ class TokenReferenceHelper {
   /**
    * Gets a deduplicated list of nodes with references to given tokens.
    *
+   * This was originally one query, but hit join limit due to this issue:
+   * https://www.drupal.org/project/drupal/issues/3088098
+   *
    * @param array $tokens
    *   The tokens for which to get references for.
    *
@@ -47,33 +50,39 @@ class TokenReferenceHelper {
    */
   public function getNodesReferencingTokens(array $tokens) {
 
-    // Query to get nodes that have (even nested) references to the tokens.
-    $nodesWithReferencesQuery = \Drupal::entityQuery('node');
-
-    // Add content type condition to query.
-    $this->addContentTypeConditionToEntityQuery($nodesWithReferencesQuery);
-
-    // Contains condition group, to contain one sub-condition-group per token.
-    $outerFieldOrConditionGroup = $nodesWithReferencesQuery->orConditionGroup();
+    // Instantiate array to store query results.
+    $nodesWithReferencesQueryResults = [];
 
     // Loop over tokens.
     foreach ($tokens as $token) {
+      // Query to get nodes that have (even nested) references to the tokens.
+      $nodesWithReferencesQuery = \Drupal::entityQuery('node');
+      // Add content type condition to query.
+      $this->addContentTypeConditionToEntityQuery($nodesWithReferencesQuery);
+
+      // Contains condition group, to contain one sub-condition-group per token.
+      $outerFieldOrConditionGroup = $nodesWithReferencesQuery->orConditionGroup();
+
       // Get field or-condition-group.
       $fieldOrConditionGroup = $this->getFieldOrConditionGroup($nodesWithReferencesQuery, $token);
+
       // Add field or-condition-group to outer contains condition group.
       $outerFieldOrConditionGroup->condition($fieldOrConditionGroup);
+
+      // Add contains condition group to query.
+      $nodesWithReferencesQuery->condition($outerFieldOrConditionGroup);
+
+      // Execute Query.
+      $queryResults = $nodesWithReferencesQuery->execute();
+      if (is_array($queryResults) && count($queryResults)) {
+        $nodesWithReferencesQueryResults = $nodesWithReferencesQueryResults + $queryResults;
+      }
     }
-
-    // Add contains condition group to query.
-    $nodesWithReferencesQuery->condition($outerFieldOrConditionGroup);
-
-    // Execute Query.
-    $nodesWithReferencesQueryResult = $nodesWithReferencesQuery->execute();
 
     // Load and return nodes with matching tokens.
     return \Drupal::entityTypeManager()
       ->getStorage('node')
-      ->loadMultiple($nodesWithReferencesQueryResult);
+      ->loadMultiple($nodesWithReferencesQueryResults);
 
   }
 
