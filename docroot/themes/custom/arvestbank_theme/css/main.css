@@ -846,3 +846,8 @@ li.coh-menu-list-item.coh-ce-a69b2abe.js-coh-menu-item:nth-child(6), li.coh-menu
 .webform-submission-sign-up-for-arvest-flex-rewards--form div.webform-name > div.webform-flexbox {
   margin: 0;
 }
+
+
+.coh-style-ask-arvest-block .ask-block-background {
+  background-image: url(../images/cheree.png);
+}
