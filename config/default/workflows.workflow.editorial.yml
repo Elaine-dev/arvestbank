@@ -50,9 +50,7 @@ type_settings:
       from:
         - archive
         - draft
-        - in_review
         - published
-        - unpublished
       to: archive
       weight: 3
     create_new_draft:
@@ -61,44 +59,51 @@ type_settings:
       weight: 0
       from:
         - draft
-        - in_review
         - published
-    in_review:
-      label: 'In Review'
+        - unpublished
+    draft_to_review:
+      label: 'Draft to Review'
       from:
-        - in_review
-      to: published
-      weight: 5
+        - draft
+      to: in_review
+      weight: 6
     publish:
       label: Publish
       to: published
       weight: 1
       from:
-        - archive
-        - draft
+        - in_review
         - published
+        - unpublished
     restore_from_archive:
       label: 'Restore From Archive'
       from:
         - archive
       to: draft
       weight: 4
+    review_to_draft:
+      label: 'Review to Draft'
+      from:
+        - in_review
+      to: draft
+      weight: 7
     send_to_review:
       label: 'Send to review'
       from:
-        - archive
-        - draft
         - in_review
         - published
         - unpublished
       to: in_review
       weight: 2
-    unpublished:
-      label: Unpublished
+    unpublish:
+      label: Unpublish
       from:
+        - draft
+        - in_review
+        - published
         - unpublished
-      to: published
-      weight: 6
+      to: unpublished
+      weight: 5
   entity_types:
     node:
       - ad
