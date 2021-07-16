@@ -7,9 +7,9 @@
     dependencies: {  }
     id: pack_component_careers
     label: 'Component Careers'
-    description: 'The associate y/n modal and iframe components for the Career Center page.  Updated: Aaron Parkening 7/14/21. '
+    description: 'The associate y/n modal and iframe components for the Career Center page.  Updated: Scott Earnest 7/16/21. '
     excluded_entity_types: '[]'
-    settings: '{"68fd56a5-3d0f-4ebb-ac63-2eecff5da78e":{"type":"cohesion_component","items":{"68fd56a5-3d0f-4ebb-ac63-2eecff5da78e":{"type":"cohesion_component"},"5265a147-d000-4243-91b3-f66bd2e84f33":{"type":"cohesion_component_category"}},"checked":true},"d351fadc-e8b0-4643-b170-dc092cc0e452":{"type":"cohesion_component","items":{"d351fadc-e8b0-4643-b170-dc092cc0e452":{"type":"cohesion_component"},"5265a147-d000-4243-91b3-f66bd2e84f33":{"type":"cohesion_component_category"}},"checked":true}}'
+    settings: '{"68fd56a5-3d0f-4ebb-ac63-2eecff5da78e":{"type":"cohesion_component","items":{"68fd56a5-3d0f-4ebb-ac63-2eecff5da78e":{"type":"cohesion_component"}},"checked":true},"d351fadc-e8b0-4643-b170-dc092cc0e452":{"type":"cohesion_component","items":{"d351fadc-e8b0-4643-b170-dc092cc0e452":{"type":"cohesion_component"}},"checked":true}}'
 -
   type: cohesion_component
   export:
@@ -19,7 +19,7 @@
     dependencies: {  }
     id: cpt_careers_iframe
     label: 'Careers Iframe'
-    json_values: '{"canvas":[{"type":"item","uid":"drupal-block","title":"Block","status":{"collapsed":true},"uuid":"3483cb85-e1cd-4396-b340-7a0eeffe65f7","parentUid":"root","isContainer":false,"children":[]}],"componentForm":[],"mapper":{"3483cb85-e1cd-4396-b340-7a0eeffe65f7":{"settings":{"formDefinition":[{"formKey":"block-settings","children":[{"formKey":"block-drupal-block","breakpoints":[],"activeFields":[{"name":"theme","active":true},{"name":"block","active":true}]},{"formKey":"block-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]},"styles":{"formDefinition":[],"selectorType":"topLevel","items":[{"title":"iframe","type":"container","items":[],"form":null,"selectorType":"child","model":"iframe","uuid":"8e4dad01-d054-4bfc-93f4-3cc289a89f3b","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"layout","children":[{"formKey":"height","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"min-height","active":false},{"name":"max-height","active":false},{"name":"height","active":true}]}]}]}],"form":null}}},"model":{"3483cb85-e1cd-4396-b340-7a0eeffe65f7":{"settings":{"title":"Block - Careers Iframe with Styles","customStyle":[{"customStyle":""}],"settings":{"theme":"all","customStyle":[{"customStyle":""}]},"theme":"arvestbank_theme","block":"careersblock"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"block"},"8e4dad01-d054-4bfc-93f4-3cc289a89f3b":{"settings":{"element":"iframe","class":"","combinator":"","pseudo":""},"styles":{"xl":{"height":{"value":"775}}}}}}},"previewModel":{"3483cb85-e1cd-4396-b340-7a0eeffe65f7":{}},"variableFields":{"3483cb85-e1cd-4396-b340-7a0eeffe65f7":[]},"meta":{"fieldHistory":[]}}'
+    json_values: '{"canvas":[{"type":"item","uid":"drupal-block","title":"Block","status":{"collapsed":true},"uuid":"4733ec4c-40d6-46e5-a4dc-78b928b120de","parentUid":"root","isContainer":false,"children":[]}],"componentForm":[],"mapper":{"4733ec4c-40d6-46e5-a4dc-78b928b120de":{"settings":{"formDefinition":[{"formKey":"block-settings","children":[{"formKey":"block-drupal-block","breakpoints":[],"activeFields":[{"name":"theme","active":true},{"name":"block","active":true}]},{"formKey":"block-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]},"styles":{"formDefinition":[{"formKey":"layout","children":[{"formKey":"height","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"min-height","active":true},{"name":"max-height","active":true},{"name":"height","active":true}]}]}],"selectorType":"topLevel","items":[{"title":"iframe","type":"container","items":[],"form":null,"selectorType":"child","model":"iframe","uuid":"114cf1d1-dda2-4b25-aea6-583336dc8070","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"layout","children":[{"formKey":"height","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"min-height","active":true},{"name":"max-height","active":true},{"name":"height","active":true}]}]}]}],"form":null}}},"model":{"4733ec4c-40d6-46e5-a4dc-78b928b120de":{"settings":{"title":"Block - Careers Iframe","customStyle":[{"customStyle":""}],"settings":{"theme":"all","customStyle":[{"customStyle":""}]},"theme":"arvestbank_theme","block":"careersblock"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"block"},"styles":{"xl":{"height":{"value":""}}},"114cf1d1-dda2-4b25-aea6-583336dc8070":{"settings":{"element":"iframe","class":"","combinator":"","pseudo":""},"styles":{"xl":{"height":{"value":"775"}}}}}}},"previewModel":{"4733ec4c-40d6-46e5-a4dc-78b928b120de":{}},"variableFields":{"4733ec4c-40d6-46e5-a4dc-78b928b120de":[]},"meta":{"fieldHistory":[]}}'
     json_mapper: '{}'
     last_entity_update: entityupdate_0031
     locked: false
@@ -54,20 +54,3 @@
     bundle_access: {  }
     twig_template: component--cohesion-cpt-careers-modal
     weight: 0
--
-  type: cohesion_component_category
-  export:
-    uuid: 5265a147-d000-4243-91b3-f66bd2e84f33
-    langcode: en
-    status: true
-    dependencies: {  }
-    id: cpt_cat_drupal_blocks
-    label: 'Drupal Blocks'
-    json_values: '{}'
-    json_mapper: '{}'
-    last_entity_update: entityupdate_0031
-    locked: false
-    modified: false
-    selectable: true
-    class: category-11
-    weight: -5
