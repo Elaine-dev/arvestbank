@@ -5,7 +5,7 @@
     "PledgedAssets": "false",
     "Citizenship": "USCitizen",
     "EmploymentDocumentation": "Verified",
-    "FICO": "600",
+    "FICO": "700",
     "FirstName": "John",
     "LastName": "Doe",
     "VaFirstTimeUse": "true",
@@ -61,7 +61,7 @@
     "CurrentServicer": "Not Applicable"
   },
   "PropertyInformation": {
-    "AppraisedValue": "218750.0",
+    "AppraisedValue": "175000",
     "Occupancy": "PrimaryResidence",
     "PropertyStreetAddress": "123 ABC Dr",
     "County": "Collin",
@@ -69,7 +69,7 @@
     "ZipCode": "75025",
     "PropertyType": "SingleFamily",
     "CorporateRelocation": "false",
-    "SalesPrice": "218750.00",
+    "SalesPrice": "175000",
     "NumberOfStories": "1",
     "NumberOfUnits": "OneUnit",
     "Construction": "false"

@@ -5,7 +5,7 @@
     "PledgedAssets": false,
     "Citizenship": 259,
     "EmploymentDocumentation": 220,
-    "FICO": 740,
+    "FICO": 700,
     "FirstName": "string",
     "LastName": "string",
     "MiddleName": null,
@@ -83,7 +83,7 @@
     "InterestOnlyTerm": null
   },
   "PropertyInformation": {
-    "AppraisedValue": 218750,
+    "AppraisedValue": 181348,
     "Occupancy": "PrimaryResidence",
     "PropertyStreetAddress": "string",
     "City": null,
@@ -92,7 +92,7 @@
     "ZipCode": "75025",
     "PropertyType": 115,
     "CorporateRelocation": false,
-    "SalesPrice": 218750,
+    "SalesPrice": 181348,
     "NumberOfStories": 1,
     "NumberOfUnits": "OneUnit",
     "Construction": false,
