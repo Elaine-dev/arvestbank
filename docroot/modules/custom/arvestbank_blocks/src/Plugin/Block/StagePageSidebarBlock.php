@@ -120,7 +120,7 @@ class StagePageSidebarBlock extends BlockBase {
    */
   public function getCacheMaxAge(): int {
     // Set to not cache.
-    return 0;
+    return 86400;
   }
 
 }

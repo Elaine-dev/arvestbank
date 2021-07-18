@@ -77,7 +77,7 @@ class CareersBlock extends BlockBase {
    */
   public function getCacheMaxAge(): int {
     // No caching on this - fresh content for each visitor.
-    return 0;
+    return 86400;
   }
 
 }
