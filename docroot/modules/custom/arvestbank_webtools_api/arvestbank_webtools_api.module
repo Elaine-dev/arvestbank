@@ -19,30 +19,48 @@ use Drupal\Core\Entity\EntityInterface;
  */
 function arvestbank_webtools_api_entity_prepare_form(EntityInterface $entity, $operation, FormStateInterface $form_state) {
 
+  // If we have the referrers cookie.
+  if (isset($_COOKIE['_arvestbank_webtools__referrers'])) {
+    $refererInfo = unserialize($_COOKIE['_arvestbank_webtools__referrers']);
+  }
+  // If we don't have the referrers cookie.
+  else {
+    $refererInfo = [];
+  }
+
   // If this is an initial webform load.
   if (
     $entity->getEntityTypeId() == 'webform_submission'
     && !count($form_state->getUserInput())
   ) {
-    // Set Referer in session.
+
+    // If we have a referrer.
     if (isset($_SERVER['HTTP_REFERER'])) {
-      $_SESSION['_arvestbank_webtools__referrers'][$entity->bundle()] = $_SERVER['HTTP_REFERER'];
+      $refererInfo[$entity->bundle()] = $_SERVER['HTTP_REFERER'];
     }
     else {
-      $_SESSION['_arvestbank_webtools__referrers'][$entity->bundle()] = '';
+      $refererInfo[$entity->bundle()] = '';
     }
+
+    // Save cookie.
+    setcookie('_arvestbank_webtools__referrers', serialize($refererInfo));
+
   }
 
   // If this is a webform being submitted and we have the original referrer.
   elseif (
     $entity->getEntityTypeId() == 'webform_submission'
     && count($form_state->getUserInput())
-    && isset($_SESSION['_arvestbank_webtools__referrers'][$entity->bundle()])
+    && isset($refererInfo[$entity->bundle()])
   ) {
+
     // Store referrer in form state.
-    $form_state->set('_arvestbank_webtools__referrer', $_SESSION['_arvestbank_webtools__referrers'][$entity->bundle()]);
-    // Remove referrer from session.
-    unset($_SESSION['_arvestbank_webtools__referrers'][$entity->bundle()]);
+    $form_state->set('_arvestbank_webtools__referrer', $refererInfo[$entity->bundle()]);
+    // Remove referrer from referrer info.
+    unset($refererInfo[$entity->bundle()]);
+    // Save cookie.
+    setcookie('_arvestbank_webtools__referrers', serialize($refererInfo));
+
   }
 
 }

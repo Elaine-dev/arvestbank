@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\arvestbank_ask_arvest\Services\AnswersClient;
+use Symfony\Component\HttpFoundation\Cookie;
 
 /**
  * Defines a route controller for rating an answer.
@@ -47,29 +48,40 @@ class TrackUser extends ControllerBase {
   public function trackUser(Request $request) {
 
     // Response just for debugging.
-    $response = [
-      'already_in_session' => TRUE,
+    $responseBody = [
+      'already_in_cookie' => TRUE,
     ];
 
     // If we don't already have a tracking id for this user.
-    if (!isset($_SESSION['ask_arvest_session_id'])) {
+    if (!isset($_COOKIE['ask_arvest_session_id'])) {
 
       // Make request for tracking id.
       $sessionId = $this->answersClient->getSessionId();
-
-      // Set tracking id in session variable.
-      $_SESSION['ask_arvest_session_id'] = $sessionId;
-
+      // Create cookie with tracking id.
+      $trackingIdCookie = new Cookie('ask_arvest_session_id', $sessionId);
       // Indicate that the session id wasn't already in session.
-      $response['already_in_session'] = FALSE;
+      $responseBody['already_in_cookie'] = FALSE;
+      // Put the session id in the response.
+      $responseBody['session_id'] = $sessionId;
 
     }
+    // If we already have the session id.
+    else {
+      // Add session id to the response.
+      $responseBody['session_id'] = $_COOKIE['ask_arvest_session_id'];
+    }
 
-    // Add session id to the response.
-    $response['session_id'] = $_SESSION['ask_arvest_session_id'];
+    // Create response object.
+    $response = new JsonResponse($responseBody);
+
+    // If we have a new tracking cookie to set.
+    if (isset($trackingIdCookie)) {
+      // Set the cookie.
+      $response->headers->setCookie($trackingIdCookie);
+    }
 
 
-    return new JsonResponse($response);
+    return $response;
 
   }
 

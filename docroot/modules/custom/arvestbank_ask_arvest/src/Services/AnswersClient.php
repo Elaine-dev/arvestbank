@@ -310,8 +310,8 @@ class AnswersClient {
   private function getUserSessionId() {
     // Get session id for user tracking.
     $sessionId = NULL;
-    if (isset($_SESSION['ask_arvest_session_id'])) {
-      $sessionId = $_SESSION['ask_arvest_session_id'];
+    if (isset($_COOKIE['ask_arvest_session_id'])) {
+      $sessionId = $_COOKIE['ask_arvest_session_id'];
     }
     return $sessionId;
   }
