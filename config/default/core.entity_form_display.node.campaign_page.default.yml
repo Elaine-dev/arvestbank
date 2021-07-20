@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.campaign_page.field_campaign_telephone
     - field.field.node.campaign_page.field_disclosure
-    - field.field.node.campaign_page.field_exclude_from_search
     - field.field.node.campaign_page.field_field_callout_phone_number
     - field.field.node.campaign_page.field_layout_canvas
     - field.field.node.campaign_page.field_meta_tags
@@ -19,7 +18,6 @@ dependencies:
     - metatag
     - path
     - scheduler
-    - search_api_exclude_entity
     - yoast_seo
 id: node.campaign_page.default
 targetEntityType: node
@@ -37,13 +35,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
-    region: content
-  field_exclude_from_search:
-    weight: 26
-    settings:
-      field_label: 'Yes, exclude this entity from the search indexes.'
-    third_party_settings: {  }
-    type: search_api_exclude_entity_widget
     region: content
   field_field_callout_phone_number:
     weight: 2
