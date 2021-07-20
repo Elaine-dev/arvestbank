@@ -3,6 +3,7 @@
 namespace Drupal\arvestbank_blocks\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Cache\Cache;
 use Drupal\node\Entity\Node;
 use Drupal\taxonomy\Entity\Term;
 
@@ -78,6 +79,37 @@ class DisclosureBlock extends BlockBase {
    */
   public function getCacheMaxAge(): int {
     return 86400;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getCacheTags() {
+    // With this when your node change your block will rebuild.
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+      // Initialize return ID.
+      $nid = 0;
+      // If there is node add its cachetag.
+      if ($node instanceof Node) {
+        $nid = $node->id();
+      }
+      elseif (intval($node)) {
+        $nid = $node;
+      }
+      return Cache::mergeTags(parent::getCacheTags(), ['node:' . $nid]);
+    }
+    else {
+      // Return default tags instead.
+      return parent::getCacheTags();
+    }
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getCacheContexts(): array {
+    // Block should be cached on a per page (route) level.
+    return Cache::mergeContexts(parent::getCacheContexts(), ['route']);
   }
 
 }
