@@ -157,11 +157,12 @@ elements: |-
         '#title_display': invisible
         '#placeholder': email
       mortgage_password:
-        '#type': textfield
+        '#type': pass
         '#title': 'Mortgage Password'
         '#title_display': invisible
         '#placeholder': password
         '#input_hide': true
+        '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
       remember_my_computer:
         '#type': checkbox
         '#title': 'Remember My Computer'
@@ -326,11 +327,12 @@ elements: |-
         '#title_display': invisible
         '#placeholder': 'Login ID'
       investments_wealth_password:
-        '#type': textfield
+        '#type': pass
         '#title': 'Investments Wealth Password'
         '#title_display': invisible
         '#placeholder': Password
         '#input_hide': true
+        '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
         '#attributes':
           class:
             - form-text
