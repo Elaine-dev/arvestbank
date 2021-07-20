@@ -11,7 +11,6 @@ dependencies:
     - field.field.node.page.field_callout_title
     - field.field.node.page.field_disable_sidebar_ad
     - field.field.node.page.field_disclosure
-    - field.field.node.page.field_exclude_from_search
     - field.field.node.page.field_featured_image
     - field.field.node.page.field_featured_video
     - field.field.node.page.field_field_callout_phone_number
@@ -60,7 +59,6 @@ hidden:
   field_callout_title: true
   field_disable_sidebar_ad: true
   field_disclosure: true
-  field_exclude_from_search: true
   field_featured_image: true
   field_featured_video: true
   field_field_callout_phone_number: true

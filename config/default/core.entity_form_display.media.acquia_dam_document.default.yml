@@ -7,14 +7,12 @@ dependencies:
     - field.field.media.acquia_dam_document.field_acquiadam_asset_doc
     - field.field.media.acquia_dam_document.field_acquiadam_asset_id
     - field.field.media.acquia_dam_document.field_document_and_resource_cate
-    - field.field.media.acquia_dam_document.field_exclude_from_search
     - field.field.media.acquia_dam_document.field_hide_from_list
     - field.field.media.acquia_dam_document.field_link
     - media.type.acquia_dam_document
   module:
     - link
     - path
-    - search_api_exclude_entity
 _core:
   default_config_hash: PML3haUd0QzO47lE_0So_j8IwjVbSih45WsG5DVezYg
 id: media.acquia_dam_document.default
@@ -34,13 +32,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
-    region: content
-  field_exclude_from_search:
-    weight: 26
-    settings:
-      field_label: 'Yes, exclude this entity from the search indexes.'
-    third_party_settings: {  }
-    type: search_api_exclude_entity_widget
     region: content
   field_hide_from_list:
     weight: 2
