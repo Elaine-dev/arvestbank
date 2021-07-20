@@ -9,13 +9,11 @@ folder: ../config/envs/prod
 module:
   acquia_lift: 0
   acquia_connector: 0
-  shield: 0
   syslog: 0
   simplesamlphp_auth: 0
 theme: {  }
 blacklist: {  }
 graylist:
-  - shield.settings
   - system.performance
   - gtm.settings
 graylist_dependents: true
