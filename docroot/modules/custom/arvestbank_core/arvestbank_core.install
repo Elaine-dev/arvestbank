@@ -688,3 +688,18 @@ function arvestbank_core_update_9004(&$sandbox) {
 
   $sandbox['#finished'] = $sandbox['progress'] / $sandbox['total'];
 }
+
+/**
+ * Remove purge_purger_http module from server
+ */
+function arvestbank_core_update_9005(&$sandbox) {
+  if (!isset($sandbox['total'])) {
+    $modules = [
+      'purge_purger_http',
+    ];
+    \Drupal::database()->delete('key_value')
+      ->condition('collection', 'system.schema')
+      ->condition('name', $modules, 'IN')
+      ->execute();
+  }
+}
