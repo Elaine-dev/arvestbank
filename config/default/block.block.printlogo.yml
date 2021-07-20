@@ -1,9 +1,9 @@
-uuid: bf688e99-caf5-4e11-a174-d95090f1e50e
+uuid: 0aee6593-e258-4e70-8ddc-f729040dde54
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:text:834d79b1-469a-434b-8c27-5fac6dc1a6b5'
+    - 'block_content:text:794d151f-4aad-4d51-8a7c-192ae24f7550'
   module:
     - block_content
     - cohesion
@@ -14,9 +14,9 @@ theme: arvestbank_theme
 region: footer
 weight: 0
 provider: null
-plugin: 'block_content:834d79b1-469a-434b-8c27-5fac6dc1a6b5'
+plugin: 'block_content:794d151f-4aad-4d51-8a7c-192ae24f7550'
 settings:
-  id: 'block_content:834d79b1-469a-434b-8c27-5fac6dc1a6b5'
+  id: 'block_content:794d151f-4aad-4d51-8a7c-192ae24f7550'
   label: 'Print Logo'
   provider: block_content
   label_display: '0'

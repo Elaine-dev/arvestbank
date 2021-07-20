@@ -42,12 +42,12 @@ true_rate_card_rates__cash_advance_fee_in_dollars: $4
 true_rate_card_rates__cash_advance_fee_in_percent: 4%
 true_rate_card_rates__late_payment_fee: $25
 true_rate_card_rates__return_payment_fee: $25
-origin_card_rates__platinum_rates__annual_fees: None
+origin_card_rates__platinum_rates__annual_fees: $49
 origin_card_rates__balance_transfer_fee_in_dollars: '$10 or 3%'
 origin_card_rates__cash_advance_fee_in_dollars: $4
-origin_card_rates__cash_advance_fee_in_percent: ''
-origin_card_rates__late_payment_fee: ''
-origin_card_rates__return_payment_fee: ''
+origin_card_rates__cash_advance_fee_in_percent: 4%
+origin_card_rates__late_payment_fee: $25
+origin_card_rates__return_payment_fee: $25
 legacy_rates__platinum_rates__annual_fees: None
 legacy_rates__balance_transfer_fee_in_dollars: '$10 or $3'
 legacy_rates__cash_advance_fee_in_dollars: $4
@@ -181,3 +181,4 @@ deposit_rates__preferred_club__apy4: '.000000'
 deposit_rates__preferred_club__apy5: '.000000'
 deposit_rates__preferred_club__frequency: '12'
 update_deposit_rates: 'Update Deposit Rates'
+update_mortgage_rates: 'Update Mortgage Rates'
