@@ -152,6 +152,8 @@ module:
   search_api_db: 0
   search_api_exclude_entity: 0
   seckit: 0
+  select2: 0
+  select2_all: 0
   serialization: 0
   settings_tray: 0
   shield: 0
