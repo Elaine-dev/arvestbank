@@ -3,6 +3,7 @@
 namespace Drupal\arvestbank_careers\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Cache\Cache;
 
 /**
  * Provides a 'CareersBlock' iframe from AppOne.
@@ -78,6 +79,17 @@ class CareersBlock extends BlockBase {
   public function getCacheMaxAge(): int {
     // No caching on this - fresh content for each visitor.
     return 86400;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getCacheContexts(): array {
+    // Block should be cached per path per query string.
+    return Cache::mergeContexts(parent::getCacheContexts(), [
+      'url.path',
+      'url.query_args',
+    ]);
   }
 
 }
