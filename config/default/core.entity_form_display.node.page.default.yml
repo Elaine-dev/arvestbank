@@ -28,9 +28,7 @@ dependencies:
     - node.type.page
     - workflows.workflow.editorial
   module:
-    - chosen_field
     - cohesion_elements
-    - conditional_fields
     - content_moderation
     - field_group
     - link
@@ -348,7 +346,7 @@ content:
     weight: 18
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
+    type: options_select
     region: content
   field_yoast_seo:
     weight: 17

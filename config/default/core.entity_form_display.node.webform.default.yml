@@ -15,7 +15,6 @@ dependencies:
     - node.type.webform
     - workflows.workflow.editorial
   module:
-    - chosen_field
     - cohesion_elements
     - content_moderation
     - field_group
@@ -104,7 +103,7 @@ content:
     weight: 16
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
+    type: options_select
     region: content
   field_yoast_seo:
     weight: 15
