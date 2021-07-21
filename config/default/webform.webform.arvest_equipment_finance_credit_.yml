@@ -121,9 +121,10 @@ elements: |-
     branch_location:
       '#type': webform_term_select
       '#title': 'Branch Location'
+      '#select2': true
+      '#required': true
       '#vocabulary': branch_location
       '#breadcrumb_delimiter': ''
-      '#required': true
     if_you_are_currently_working_with_one_of_our_loan_officers_pleas:
       '#type': textfield
       '#title': 'If you are currently working with one of our loan officers please include his/her name'
@@ -149,6 +150,7 @@ elements: |-
       '#type': select
       '#title': 'State of Incorporation'
       '#options': state_names
+      '#select2': true
       '#required': true
     principal:
       '#type': webform_custom_composite
@@ -564,4 +566,6 @@ handlers:
       last_name_field_machine_name: ''
       full_name_field_machine_name: contact_name
       email_field_machine_name: email
+      legacy_region_id_fields|city_field_machine_name: ''
+      legacy_region_id_fields|state_field_machine_name: ''
 variants: {  }

@@ -51,6 +51,7 @@ elements: |-
       '#type': select
       '#title': State
       '#options': state_names
+      '#select2': true
       '#required': true
   flexbox_contact:
     '#type': webform_flexbox
@@ -86,9 +87,10 @@ elements: |-
   branch_location:
     '#type': webform_term_select
     '#title': 'Branch Location'
+    '#select2': true
+    '#required': true
     '#vocabulary': branch_location
     '#breadcrumb_delimiter': ''
-    '#required': true
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'

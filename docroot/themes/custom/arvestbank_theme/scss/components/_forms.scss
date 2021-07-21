@@ -86,7 +86,7 @@
     justify-content: center;
     flex-direction: row;
     margin: .9375rem 0; // 15px
-  
+
     // max-width 564px
     // Stack tabs at full width
     @media screen and (max-width: 35.25em) {
@@ -96,12 +96,12 @@
     // Tab
     .form-item-search-tab {
         flex: 1 1 auto;
-  
+
         // Use label as tab display
         label {
             color: #333;
             background-color: #fbfbfb;
-            font-size: 1rem; 
+            font-size: 1rem;
             display: flex;
             justify-content: center;
             flex-flow: column;
@@ -120,7 +120,7 @@
         // Change borders
         @media screen and (max-width: 35.25em) {
             label {
-                border-left-color: #e3e3e3;    
+                border-left-color: #e3e3e3;
                 border-top-color: transparent;
             }
             &:first-child label {
@@ -132,7 +132,7 @@
         input[type="radio"] {
             opacity: 0;
         }
-        
+
         /* Radio and label selected, hover, and focus states */
        input[type="radio"]:checked + label {
             color: #fff;
@@ -242,257 +242,431 @@
     }
 }
 
+//
+//// ---------------  Login Forms  --------------- //
+//// Remaining styles in Site Studio Login Blocks custom style
+//// calculateRem() is in base > _variables.scss
+//
+//// Target top login
+//.login-wrapper {
+//    // Vertically stretch and center styled select list
+//    .coh-block,
+//    .block,
+//    .coh-style-webforms,
+//    form,
+//    .top-select {
+//        display: flex;
+//        flex: 1 1 auto;
+//    }
+//}
+//
+//// Target sidebar and top logins
+//.coh-style-login-blocks {
+//
+//    // Adjust submit button for Firefox
+//    &.inline-form {
+//        @-moz-document url-prefix() {
+//            input[type='submit'] {
+//                top: 102px;
+//                height: 36px;
+//            }
+//        }
+//    }
+//
+//    // Continue to hide selects when small screen menu is toggled
+//    select {
+//        display: visible;
+//        position: absolute;
+//        width: 0px;
+//        height: 0px;
+//        clip: rect(0,0,0,0);
+//    }
+//
+//    // Sidebar element padding
+//    .sidebar-select,
+//    .sidebar-login-results {
+//        padding: calculateRem(10px) calculateRem(20px) calculateRem(0px) calculateRem(20px);
+//    }
+//    .sidebar-login-results {
+//        padding-bottom: calculateRem(15px);
+//    }
+//
+//    // Top login
+//    .login-results {
+//        padding: calculateRem(15px) calculateRem(10px);
+//        position: absolute;
+//        right: 0;
+//        top: 100%;
+//        width: calculateRem(280px);
+//        background: #00457c;
+//        background: rgba(0,69,124,0.8);
+//
+//        // Full opacity and in tablet and below screens
+//        @media (max-width: 59.3125rem) {
+//            margin-top: calculateRem(2px);
+//            background: #00457c;
+//        }
+//        // Full width in landscape phone and below screens
+//        @media (max-width: 47.9375rem) {
+//            width: 100vw;
+//        }
+//    }
+//
+//    // Chosen-specific styles
+//    .chosen-container-single {
+//        flex: 1 1 auto;
+//        display: flex !important;
+//        border-left: 0.0625rem solid;
+//        border-right: 0.0625rem solid;
+//        border-color: #426386;
+//
+//        .chosen-single {
+//            text-transform: uppercase;
+//            flex: 1 1 auto;
+//            display: flex;
+//            width: calculateRem(220px);
+//            color: #fff;
+//            border: none;
+//            border-radius: 0;
+//            padding: calculateRem(15px) calculateRem(10px);
+//            height: 100%;
+//            font-size: 0.75rem;
+//            line-height: 1.0125rem;
+//            font-weight: 600;
+//            box-shadow: none;
+//            // background: url(/themes/custom/arvestbank_theme/images/icon-lock.png) left 0.75rem center no-repeat, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='2 2 12 12'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='square' stroke-linejoin='square' stroke-width='3' d='M2 5l6 6 6-6'/%3e%3c/svg%3e") right 1.25rem center no-repeat;
+//            // background: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cpath fill='%23ffffff' d='m3,9h1V6a5,5 0 0,1 12,0V9h1v11H3M14,9V6a4,4 0 1,0-8,0v3'/%3E%3C/svg%3E%0A") left 1rem center no-repeat;
+//            // background-size: 1.375rem 1.25rem;
+//            background: #4178b4 url(../images/icon-lock.png) left 1rem center no-repeat;
+//            background-size: calculateRem(22px) calculateRem(20px);
+//            -webkit-appearance: none;
+//            -moz-appearance: none;
+//            appearance: none;
+//
+//            &:hover {
+//                background-color: #5990cb;
+//                color: #002c5c;
+//            }
+//            span {
+//                margin: auto calculateRem(40px) auto calculateRem(35px);
+//            }
+//            div {
+//                right: 1rem;
+//                width: 1.5rem;
+//                // SVG arrow
+//                b {
+//                    background: none;
+//                    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='2 2 12 12'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='square' stroke-linejoin='square' stroke-width='3' d='M2 5l6 7 6-7'/%3e%3c/svg%3e") center center no-repeat !important;
+//                    background-size: 1.5rem 0.70rem !important;
+//                }
+//            }
+//
+//            // Replace default X and hide arrow
+//            &.chosen-single-with-deselect {
+//                abbr {
+//                    right: calculateRem(12px);
+//                    top: 0;
+//                    width: 1.5rem;
+//                    display: flex;
+//                    height: 100%;
+//                    background: none !important;
+//                    color: #ffffff;
+//                    font-size: calculateRem(22px);
+//
+//                    &:before {
+//                        align-self: center;
+//                        height: auto;
+//                        width: auto;
+//                        padding: inherit;
+//                        font-weight: bold;
+//                        content: "\2715";
+//                    }
+//                }
+//                // Hide arrow
+//                div {
+//                    display: none;
+//                }
+//            }
+//
+//            &.chosen-default div {
+//                display: block;
+//            }
+//        }
+//        &.chosen-container-active .chosen-single {
+//            background-color: #acc6e1;
+//            color: #002c5c;
+//            &:hover {
+//                background-color: #001b44;
+//                color: #ffffff;
+//            }
+//        }
+//
+//        // List of select options container
+//        .chosen-drop {
+//            width: calculateRem(222px);
+//            right: 0;
+//            margin-top: 0;
+//            margin-right: -1px;
+//            background: #fff;
+//            color: #4879ad;
+//            padding: 1rem;
+//            border: 3px solid #acc6e1;
+//            border-radius: 0;
+//            -webkit-clip-path: none;
+//            clip-path: none;
+//            -webkit-box-shadow: none;
+//            box-shadow: none;
+//        }
+//
+//        // List of select options
+//        .chosen-results {
+//            max-height: none;
+//            margin: 0;
+//            padding: 0;
+//
+//            li {
+//                margin: 0;
+//                padding: 0 0 calculateRem(5px) 0;
+//                color: #4879ad;
+//                line-height: 1.2;
+//                // &:first-child {
+//                //     display:none; // Hide Log In To...
+//                // }
+//                &.highlighted {
+//                    text-decoration: underline;
+//                    background: none;
+//                    color: #4879ad;
+//                }
+//                &.result-selected {
+//                    text-decoration: none;
+//                }
+//            }
+//        }
+//    }
+//
+//    // Sidebar Chosen-specific styles
+//    .sidebar-select .chosen-container-single {
+//        border: 0;
+//        // Increase size
+//        .chosen-single {
+//            font-size: calculateRem(18px);
+//            line-height: 2.1;
+//            padding-top: 0;
+//            padding-bottom: 0;
+//            font-weight: 500;
+//        }
+//        .chosen-drop {
+//            width: 100%;
+//            left: 0;
+//        }
+//        .chosen-results li:first-child {
+//            display: none;
+//        }
+//    }
+//
+//    // Top Chosen-specific styles
+//    .top-select .chosen-container-single .chosen-single {
+//
+//        // Max-width 1169px
+//        @media screen and (max-width: 73.0625rem) {
+//            width: calculateRem(160px); // Reduce width
+//        }
+//
+//        // Max-width 949px
+//        @media screen and (max-width: 59.3125rem) {
+//            border: none; // Remove navigation grey border
+//        }
+//
+//        // Max-width 564px
+//        @media screen and (max-width: 35.25em) {
+//            width: calculateRem(120px); // Reduce width
+//            background-image: none; // remove lock icon
+//            span {
+//                margin-left: 0;
+//                margin-right: calculateRem(15px);
+//            }
+//            div {
+//                right: calculateRem(5px); // move arrow
+//            }
+//            &.chosen-single-with-deselect {
+//                abbr {
+//                    right: calculateRem(2px); // align x with arrow
+//                }
+//            }
+//        }
+//    }
+//}
 
-// ---------------  Login Forms  --------------- //
-// Remaining styles in Site Studio Login Blocks custom style
-// calculateRem() is in base > _variables.scss
-
-// Target top login
-.login-wrapper {
-    // Vertically stretch and center styled select list
-    .coh-block,
-    .block,
-    .coh-style-webforms,
-    form,
-    .top-select {
-        display: flex;
-        flex: 1 1 auto;
-    }
+.coh-style-login-blocks .select2-container {
+  width: 100% !important;
 }
 
-// Target sidebar and top logins
-.coh-style-login-blocks {
+.select2-container--default .select2-selection--single {
+  flex: 1 1 auto;
+  display: flex !important;
+  border-left: 0.0625rem solid;
+  border-right: 0.0625rem solid;
+  border-color: #426386;
+  width: 100% !important;
+  height: 100%;
+}
 
-    // Adjust submit button for Firefox
-    &.inline-form {
-        @-moz-document url-prefix() {
-            input[type='submit'] {
-                top: 102px;
-                height: 36px;
-            }
-        }
-    }
 
-    // Continue to hide selects when small screen menu is toggled
-    select {
-        display: visible;
-        position: absolute;
-        width: 0px;
-        height: 0px;
-        clip: rect(0,0,0,0);
-    }
+.coh-style-login-blocks .select2-selection .select2-selection__rendered {
 
-    // Sidebar element padding
-    .sidebar-select,
-    .sidebar-login-results {
-        padding: calculateRem(10px) calculateRem(20px) calculateRem(0px) calculateRem(20px);
-    }
-    .sidebar-login-results { 
-        padding-bottom: calculateRem(15px);
-    }
+  text-transform: uppercase;
+  flex: 1 1 auto;
+  display: flex;
+  width: 13.75rem;
+  text-indent: 42px;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  height: 100%;
+  font-size: 0.75rem;
+  line-height: 1.0125rem;
+  font-weight: 600;
+  box-shadow: none;
+  background: #4178b4 url(../images/icon-lock.png) left 1rem center no-repeat;
+  background-size: 1.375rem 1.25rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+}
 
-    // Top login 
-    .login-results {
-        padding: calculateRem(15px) calculateRem(10px);
-        position: absolute;
-        right: 0;
-        top: 100%;
-        width: calculateRem(280px);
-        background: #00457c; 
-        background: rgba(0,69,124,0.8);
+.coh-style-login-blocks .chosen-container-single .chosen-single:hover {
+  background-color: #5990cb;
+  color: #002c5c;
+}
 
-        // Full opacity and in tablet and below screens
-        @media (max-width: 59.3125rem) {
-            margin-top: calculateRem(2px);
-            background: #00457c;
-        }
-        // Full width in landscape phone and below screens
-        @media (max-width: 47.9375rem) {
-            width: 100vw;
-        }
-    }
+.coh-style-login-blocks .select2-selection--single .select2-selection__placeholder {
+  margin: auto 2.5rem auto 2.1875rem;
+  color: #ffffff;
+  text-indent: 10px;
+}
 
-    // Chosen-specific styles
-    .chosen-container-single {
-        flex: 1 1 auto;
-        display: flex !important;
-        border-left: 0.0625rem solid;
-        border-right: 0.0625rem solid;
-        border-color: #426386;
+/*.coh-style-login-blocks .chosen-container-single .chosen-single div {*/
+/*  right: 1rem;*/
+/*  width: 1.5rem;*/
+/*}*/
 
-        .chosen-single {
-            text-transform: uppercase;
-            flex: 1 1 auto;
-            display: flex;
-            width: calculateRem(220px);
-            color: #fff;
-            border: none;
-            border-radius: 0;
-            padding: calculateRem(15px) calculateRem(10px);
-            height: 100%;
-            font-size: 0.75rem;
-            line-height: 1.0125rem;
-            font-weight: 600;
-            box-shadow: none;
-            // background: url(/themes/custom/arvestbank_theme/images/icon-lock.png) left 0.75rem center no-repeat, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='2 2 12 12'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='square' stroke-linejoin='square' stroke-width='3' d='M2 5l6 6 6-6'/%3e%3c/svg%3e") right 1.25rem center no-repeat;
-            // background: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cpath fill='%23ffffff' d='m3,9h1V6a5,5 0 0,1 12,0V9h1v11H3M14,9V6a4,4 0 1,0-8,0v3'/%3E%3C/svg%3E%0A") left 1rem center no-repeat;
-            // background-size: 1.375rem 1.25rem;
-            background: #4178b4 url(../images/icon-lock.png) left 1rem center no-repeat;
-            background-size: calculateRem(22px) calculateRem(20px);
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-        
-            &:hover {
-                background-color: #5990cb;
-                color: #002c5c;
-            }
-            span {
-                margin: auto calculateRem(40px) auto calculateRem(35px);
-            }
-            div {
-                right: 1rem;
-                width: 1.5rem;
-                // SVG arrow
-                b {
-                    background: none;
-                    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='2 2 12 12'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='square' stroke-linejoin='square' stroke-width='3' d='M2 5l6 7 6-7'/%3e%3c/svg%3e") center center no-repeat !important;
-                    background-size: 1.5rem 0.70rem !important;
-                }
-            }
+.coh-style-login-blocks .select2-container--default .select2-selection--single .select2-selection__arrow{
+  right:6%;
+  top:  20%;
+}
+.coh-style-login-blocks .select2-selection .select2-selection__arrow b {
+  background: none;
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='2 2 12 12'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='square' stroke-linejoin='square' stroke-width='3' d='M2 5l6 7 6-7'/%3e%3c/svg%3e") center center no-repeat !important;
+  background-size: 1.5rem 0.70rem !important;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  border: none;
+  left: 0;
+  margin: 0;
+}
 
-            // Replace default X and hide arrow
-            &.chosen-single-with-deselect {
-                abbr {
-                    right: calculateRem(12px);
-                    top: 0;
-                    width: 1.5rem;
-                    display: flex;
-                    height: 100%;
-                    background: none !important;
-                    color: #ffffff;
-                    font-size: calculateRem(22px);
-                 
-                    &:before {
-                        align-self: center;
-                        height: auto;
-                        width: auto;
-                        padding: inherit;
-                        font-weight: bold;
-                        content: "\2715";
-                    }
-                }
-                // Hide arrow
-                div {
-                    display: none;
-                }
-            }
+.select2-results__options {
+  right: 0;
+  margin-top: 0;
+  margin-right: -1px;
+  background: #fff;
+  color: #4879ad;
+  padding: 1rem;
+  border: 3px solid #acc6e1;
+  border-radius: 0;
+  -webkit-clip-path: none;
+  clip-path: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  max-height: 100% !important;
+  overflow: hidden;
+  width: 100%;
+}
 
-            &.chosen-default div {
-                display: block;
-            }
-        }
-        &.chosen-container-active .chosen-single {
-            background-color: #acc6e1;
-            color: #002c5c;
-            &:hover {
-                background-color: #001b44;
-                color: #ffffff;
-            }
-        }
+.path-frontpage .select2-results__option {
+  padding: 0;
+}
 
-        // List of select options container
-        .chosen-drop {
-            width: calculateRem(222px);
-            right: 0;
-            margin-top: 0;
-            margin-right: -1px;
-            background: #fff;
-            color: #4879ad;
-            padding: 1rem;
-            border: 3px solid #acc6e1;
-            border-radius: 0;
-            -webkit-clip-path: none;
-            clip-path: none;
-            -webkit-box-shadow: none;
-            box-shadow: none;
-        }
+.path-frontpage .select2-search.select2-search--dropdown{
+  display:none;
+  padding: 0;
+}
 
-        // List of select options
-        .chosen-results {
-            max-height: none;
-            margin: 0;
-            padding: 0;
-        
-            li {
-                margin: 0;
-                padding: 0 0 calculateRem(5px) 0;
-                color: #4879ad;
-                line-height: 1.2;
-                // &:first-child {
-                //     display:none; // Hide Log In To... 
-                // }
-                &.highlighted {
-                    text-decoration: underline;
-                    background: none;
-                    color: #4879ad;
-                }
-                &.result-selected {
-                    text-decoration: none; 
-                }
-            }
-        }
-    }
+.coh-style-login-blocks .select2-selection__rendered .select2-results__options li {
+  margin: 0;
+  padding: 0 0 0.3125rem 0;
+  color: #4879ad;
+  line-height: 1.2;
+}
 
-    // Sidebar Chosen-specific styles
-    .sidebar-select .chosen-container-single {
-        border: 0;
-        // Increase size
-        .chosen-single {
-            font-size: calculateRem(18px);
-            line-height: 2.1;
-            padding-top: 0;
-            padding-bottom: 0;
-            font-weight: 500;
-        }
-        .chosen-drop {
-            width: 100%;
-            left: 0;
-        }
-        .chosen-results li:first-child {
-            display: none;
-        }
-    }
+.coh-style-login-blocks .select2-selection__rendered .select2-results__options li.highlighted {
+  text-decoration: underline;
+  background: none;
+  color: #4879ad;
+}
 
-    // Top Chosen-specific styles
-    .top-select .chosen-container-single .chosen-single {
+.coh-style-login-blocks .select2-selection__rendered .select2-results__options li.result-selected {
+  text-decoration: none;
+}
 
-        // Max-width 1169px
-        @media screen and (max-width: 73.0625rem) {
-            width: calculateRem(160px); // Reduce width
-        }
-    
-        // Max-width 949px
-        @media screen and (max-width: 59.3125rem) {
-            border: none; // Remove navigation grey border
-        }
-    
-        // Max-width 564px
-        @media screen and (max-width: 35.25em) {
-            width: calculateRem(120px); // Reduce width
-            background-image: none; // remove lock icon
-            span {
-                margin-left: 0; 
-                margin-right: calculateRem(15px);
-            }
-            div {
-                right: calculateRem(5px); // move arrow
-            }
-            &.chosen-single-with-deselect {
-                abbr {
-                    right: calculateRem(2px); // align x with arrow
-                }
-            }
-        }
-    }
+.coh-style-login-blocks .sidebar-select .select2-selection__rendered {
+  border: 0;
+}
+
+.coh-style-login-blocks .sidebar-select .select2-selection__rendered {
+  font-size: 1.125rem;
+  line-height: 2.1;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+@media screen and (max-width: 73.0625rem) {
+  .coh-style-login-blocks .select2-selection .select2-selection__rendered {
+    width: 10rem;
+  }
+}
+
+@media screen and (max-width: 59.3125rem) {
+  .coh-style-login-blocks .select2-selection .select2-selection__rendered {
+    border: none;
+  }
+
+  .select2-container--default .select2-selection--single{
+    height:45px !important;
+  }
+  .path-frontpage .select2-results{
+    right:0;
+    position: absolute;
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 35.25em) {
+  .coh-style-login-blocks .select2-selection .select2-selection__rendered {
+    width: 7.5rem;
+    background-image: none;
+  }
+
+  .coh-style-login-blocks .select2-selection--single .select2-selection__placeholder {
+    margin-left: 0;
+    margin-right: 0.9375rem;
+  }
+
+  .coh-style-login-blocks .select2-selection .select2-selection__rendered div {
+    right: 0.3125rem;
+  }
+
+  .coh-style-login-blocks .select2-selection .select2-selection__rendered abbr {
+    right: 0.125rem;
+  }
+}
+.js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-field-debit-card-category-target-id.form-item-field-debit-card-category-target-id label{
+  margin-top: -15px;
 }

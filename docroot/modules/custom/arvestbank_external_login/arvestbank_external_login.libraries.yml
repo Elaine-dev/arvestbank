@@ -4,4 +4,3 @@ external-login:
     js/external-login.js: {}
   dependencies:
     - core/jquery
-    - chosen/drupal.chosen

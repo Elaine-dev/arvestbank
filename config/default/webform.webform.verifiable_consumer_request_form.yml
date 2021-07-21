@@ -214,6 +214,7 @@ elements: |-
         mail: Mail
         email: Email
       '#empty_option': Select
+      '#select2': true
       '#required': true
     mailing_address:
       '#type': textfield
@@ -232,6 +233,7 @@ elements: |-
     branch_location:
       '#type': webform_term_select
       '#title': 'Branch Location'
+      '#select2': true
       '#vocabulary': branch_location
       '#breadcrumb_delimiter': ''
   step_6:

@@ -158,6 +158,7 @@ elements: |-
     branch_location:
       '#type': webform_term_select
       '#title': 'Branch Location'
+      '#select2': true
       '#vocabulary': branch_location
       '#breadcrumb_delimiter': ''
   financing_options:

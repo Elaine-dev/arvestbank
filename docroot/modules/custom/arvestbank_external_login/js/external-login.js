@@ -6,14 +6,6 @@
 Drupal.behaviors.externalLogin = {
   attach: function (context, settings) {
 
-    // Use "chosen" to make selects styleable sudo-selects.
-    jQuery('select[name="login_select_non_prod"],select[name="login_select"]').chosen({
-      "disable_search": true,
-      allow_single_deselect: true,
-      width: "100%"
-    });
-
-    // Form submit function.
     jQuery('.webform-submission-external-login-menu-add-form,.webform-submission-external-login-add-form').submit(function (e) {
 
       // Determine if this is menu or sidebar form.
