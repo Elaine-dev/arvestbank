@@ -24,7 +24,8 @@ function getCookie(name) {
     const cookiePair = e.split('=');
     // Removing whitespace at the beginning of the cookie name
     // and compare it with the given string.
-    const [cookieName, cookieValue] = cookiePair;
+    const cookieName = cookiePair[0];
+    const cookieValue = cookiePair[1];
     if (name === cookieName.trim()) {
       // Get the cookie value and return.
       returnedValue = cookieValue;
