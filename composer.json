@@ -172,6 +172,9 @@
             "drupal/field_group": {
                 "Conditional Fields support": "https://www.drupal.org/files/issues/2019-12-10/field_group-support_conditional_fields-3099051-6.patch"
             },
+            "drupal/config_ignore": {
+                "Support for export filtering via Drush\n": "https://www.drupal.org/files/issues/2021-01-04/config_ignore_2857247-61.patch"
+            },
             "acquia/cohesion": {
                 "Allow master templates to use to be defined at route level.\n": "patches/cohesion-master-template-by-route.patch"
             },

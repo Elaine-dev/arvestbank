@@ -5,7 +5,9 @@ ignored_config_entities:
   - shield.settings
   - arvestbank_rates.settings
   - views.view.documents_and_resources
-  - block.block.views_block__documents_and_resources_block_1.yml
+  - block.block.views_block__documents_and_resources_block
   - gtm.settings
+  - extlink.settings
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
+enable_export_filtering: 1
