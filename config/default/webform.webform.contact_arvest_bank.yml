@@ -38,6 +38,7 @@ elements: |-
       mod_close_acct: 'Modify or Close an Account'
     '#empty_option': 'Select:'
     '#empty_value': select
+    '#select2': true
   online_markup:
     '#type': webform_markup
     '#states':
@@ -209,6 +210,7 @@ elements: |-
       '#state_province__options': state_province_codes
       '#postal_code__access': false
       '#country__access': false
+      '#select2': true
     flexbox_contact:
       '#type': webform_flexbox
       email_address:
@@ -232,6 +234,7 @@ elements: |-
     branch_location:
       '#type': webform_term_select
       '#title': 'Branch Location'
+      '#select2': true
       '#required': true
       '#vocabulary': branch_location
       '#breadcrumb_delimiter': ''
@@ -438,4 +441,6 @@ handlers:
       last_name_field_machine_name: name.last
       full_name_field_machine_name: ''
       email_field_machine_name: email_address
+      legacy_region_id_fields|city_field_machine_name: ''
+      legacy_region_id_fields|state_field_machine_name: ''
 variants: {  }

@@ -59,6 +59,7 @@ elements: |-
       '#type': select
       '#title': State
       '#options': state_names
+      '#select2': true
       '#required': true
       '#flex': 2
   flexbox_contact:
@@ -87,6 +88,7 @@ elements: |-
     '#type': webform_term_select
     '#title': 'Branch Location'
     '#title_display': before
+    '#select2': true
     '#required': true
     '#vocabulary': branch_location
     '#breadcrumb_delimiter': ''
@@ -289,4 +291,6 @@ handlers:
       last_name_field_machine_name: last_name
       full_name_field_machine_name: ''
       email_field_machine_name: email
+      legacy_region_id_fields|city_field_machine_name: ''
+      legacy_region_id_fields|state_field_machine_name: ''
 variants: {  }

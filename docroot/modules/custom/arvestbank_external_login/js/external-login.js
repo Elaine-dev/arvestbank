@@ -6,7 +6,6 @@
 Drupal.behaviors.externalLogin = {
   attach: function (context, settings) {
 
-    // Form submit function.
     jQuery('.webform-submission-external-login-menu-add-form,.webform-submission-external-login-add-form').submit(function (e) {
 
       // Determine if this is menu or sidebar form.

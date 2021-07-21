@@ -43,6 +43,7 @@ elements: |-
       '#type': select
       '#title': State
       '#options': state_codes
+      '#select2': true
       '#required': true
   flexbox_01:
     '#type': webform_flexbox
@@ -64,6 +65,7 @@ elements: |-
   branch_location:
     '#type': webform_term_select
     '#title': 'Branch Location'
+    '#select2': true
     '#required': true
     '#vocabulary': branch_location
     '#breadcrumb_delimiter': ''
@@ -263,4 +265,6 @@ handlers:
       last_name_field_machine_name: name.last
       full_name_field_machine_name: ''
       email_field_machine_name: email_address
+      legacy_region_id_fields|city_field_machine_name: ''
+      legacy_region_id_fields|state_field_machine_name: ''
 variants: {  }

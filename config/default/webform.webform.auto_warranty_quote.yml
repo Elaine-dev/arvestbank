@@ -84,9 +84,10 @@ elements: |-
     branch_location:
       '#type': webform_term_select
       '#title': 'Branch Location'
+      '#select2': true
+      '#required': true
       '#vocabulary': branch_location
       '#breadcrumb_delimiter': ''
-      '#required': true
   vehicle_information:
     '#type': fieldset
     '#title': 'Vehicle Information'

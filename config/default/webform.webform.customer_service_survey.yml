@@ -72,6 +72,7 @@ elements: |-
     branch_location:
       '#type': webform_term_select
       '#title': 'Branch Location'
+      '#select2': true
       '#required': true
       '#states':
         visible:
