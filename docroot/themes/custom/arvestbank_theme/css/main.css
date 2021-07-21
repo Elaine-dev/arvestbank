@@ -540,7 +540,7 @@
 }
 
 
-.coh-style-login-blocks .select2-selection .select2-selection__rendered {
+.coh-style-login-blocks .select2-selection .select2-selection__rendered, #edit-login-select-non-prod {
   text-transform: uppercase;
   flex: 1 1 auto;
   width: 13.75rem;
@@ -596,7 +596,7 @@
   margin: 0;
 }
 
-#select2-edit-login-select-non-prod--2-results, #select2-edit-login-select-non-prod-results{
+#select2-edit-login-select-non-prod--2-results, #select2-edit-login-select-non-prod-results, #select2-edit-login-select-results{
   right: 0;
   margin-top: 0;
   margin-right: -1px;
@@ -670,7 +670,7 @@
     border: none;
   }
 
-  .select2-container--default .select2-selection--single {
+  .top-select .select2-container--default .select2-selection--single {
     height: 45px !important;
   }
 
@@ -678,6 +678,7 @@
     right: 0;
     position: absolute;
     width: 200px;
+    background-color: #ffffff;
   }
 }
 
