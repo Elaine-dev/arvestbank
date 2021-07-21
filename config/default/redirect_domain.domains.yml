@@ -1,3 +1,56 @@
-domain_redirects: {  }
+domain_redirects:
+  '​www-test:arvest:com':
+    -
+      sub_path: /personal/bank/checking/basic-blue/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=312'
+    -
+      sub_path: /personal/bank/checking/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops'
+    -
+      sub_path: /personal/bank/savings/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=330'
+    -
+      sub_path: /personal/bank/checking/free-blue/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=311'
+    -
+      sub_path: /personal/bank/checking/myblue/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=313'
+    -
+      sub_path: /personal/bank/savings/money-market/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=325'
+    -
+      sub_path: /personal/bank/savings/savings-account/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=325'
+    -
+      sub_path: /personal/bank/checking/preferred-club/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=352'
+    -
+      sub_path: /personal/bank/checking/club/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=319'
+  'arvestbankdev:prod:acquia-sites:com':
+    -
+      sub_path: /personal/bank/checking/basic-blue/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=312'
+    -
+      sub_path: /personal/bank/checking/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops'
+    -
+      sub_path: /personal/bank/savings/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=330'
+    -
+      sub_path: /personal/bank/checking/free-blue/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=311'
+    -
+      sub_path: /personal/bank/checking/myblue/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=313'
+    -
+      sub_path: /personal/bank/savings/money-market/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=325'
+    -
+      sub_path: /personal/bank/checking/preferred-club/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=352'
+    -
+      sub_path: /personal/bank/checking/club/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=319'
 _core:
   default_config_hash: CgXLPQkHCGerCdDtMO8wK9Er4j6iy1iMOyalk8iRgrE
