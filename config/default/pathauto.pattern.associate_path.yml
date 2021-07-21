@@ -7,16 +7,16 @@ dependencies:
 id: associate_path
 label: 'Associate Path'
 type: 'canonical_entities:node'
-pattern: '/[associate_type]/associate/[node:title]'
+pattern: '/[node:field_associate_type]/associate/[node:title]'
 selection_criteria:
-  a2249004-fbfa-479b-9527-facb73d88034:
+  ecdea0b1-760f-4726-9ac6-144138cfcc87:
     id: node_type
     bundles:
       associate: associate
     negate: false
     context_mapping:
       node: node
-    uuid: a2249004-fbfa-479b-9527-facb73d88034
+    uuid: ecdea0b1-760f-4726-9ac6-144138cfcc87
 selection_logic: and
 weight: -5
 relationships: {  }
