@@ -232,7 +232,7 @@ function arvestbank_views_views_post_execute(ViewExecutable $view) {
       $link = $value->_entity->field_link->getValue();
       if (!empty($link)) {
         $link_value = $link[0]['uri'];
-        if (!$external = UrlHelper::isExternal($link_value)) {
+        if (empty($link_value)) {
           break;
         }
         else {
