@@ -466,6 +466,8 @@
   border-color: #fff;
 }
 
+/*start login block styling */
+
 .login-wrapper .coh-block,
 .login-wrapper .block,
 .login-wrapper .coh-style-webforms,
@@ -539,10 +541,8 @@
 
 
 .coh-style-login-blocks .select2-selection .select2-selection__rendered {
-
   text-transform: uppercase;
   flex: 1 1 auto;
-  display: flex;
   width: 13.75rem;
   text-indent: 42px;
   color: #fff;
@@ -550,7 +550,7 @@
   border-radius: 0;
   height: 100%;
   font-size: 0.75rem;
-  line-height: 1.0125rem;
+  line-height: 46px;
   font-weight: 600;
   box-shadow: none;
   background: #4178b4 url(../images/icon-lock.png) left 1rem center no-repeat;
@@ -559,23 +559,23 @@
   -moz-appearance: none;
   appearance: none;
   padding: 0;
+  text-overflow: ellipsis;
+  padding-right:30px;
 }
 
-.coh-style-login-blocks .chosen-container-single .chosen-single:hover {
+.coh-style-login-blocks .select2-selection .select2-selection__rendered:hover {
   background-color: #5990cb;
   color: #002c5c;
 }
 
 .coh-style-login-blocks .select2-selection--single .select2-selection__placeholder {
-  margin: auto 2.5rem auto 2.1875rem;
   color: #ffffff;
   text-indent: 10px;
 }
 
-/*.coh-style-login-blocks .chosen-container-single .chosen-single div {*/
-/*  right: 1rem;*/
-/*  width: 1.5rem;*/
-/*}*/
+.coh-style-login-blocks .select2-selection .select2-selection__rendered:hover > span{
+  color: #002c5c;
+}
 
 .coh-style-login-blocks .select2-container--default .select2-selection--single .select2-selection__arrow {
   right: 6%;
@@ -596,7 +596,7 @@
   margin: 0;
 }
 
-.path-frontpage .select2-results__options {
+#select2-edit-login-select-non-prod--2-results, #select2-edit-login-select-non-prod-results{
   right: 0;
   margin-top: 0;
   margin-right: -1px;
@@ -614,11 +614,11 @@
   width: 100%;
 }
 
-.path-frontpage .select2-results__option {
+.select2-results__option {
   padding: 0;
 }
 
-.path-frontpage .select2-search.select2-search--dropdown {
+.select2-search.select2-search--dropdown {
   display: none;
   padding: 0;
 }
@@ -652,6 +652,11 @@
   font-weight: 500;
   text-overflow: ellipsis;
   display: block;
+  padding-right: 30px;
+}
+
+.js-form-item-loan-id.form-item-loan-id label{
+  margin-bottom: 26px;
 }
 
 @media screen and (max-width: 73.0625rem) {
@@ -669,7 +674,7 @@
     height: 45px !important;
   }
 
-  .path-frontpage .select2-results {
+  .select2-results {
     right: 0;
     position: absolute;
     width: 200px;
@@ -679,7 +684,6 @@
 @media screen and (max-width: 35.25em) {
   .coh-style-login-blocks .select2-selection .select2-selection__rendered {
     width: 7.5rem;
-    background-image: none;
   }
 
   .coh-style-login-blocks .select2-selection--single .select2-selection__placeholder {
@@ -696,7 +700,7 @@
   }
 }
 
-.page-node-type-landing-page .select2-container--default .select2-selection--single, .page-node-type-webform .select2-container--default .select2-selection--single{
+.page-node-type-landing-page .site-content .select2-container--default .select2-selection--single, .page-node-type-webform .site-content .select2-container--default .select2-selection--single {
   background-color: #f2f3f4;
   border-width: 0.0625rem;
   -webkit-border-radius: 0.125rem;
@@ -710,7 +714,9 @@
   width: 100%;
 }
 
-.js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-field-debit-card-category-target-id.form-item-field-debit-card-category-target-id label{
+/*end login block styling */
+
+.js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-field-debit-card-category-target-id.form-item-field-debit-card-category-target-id label {
   margin-top: -15px;
 }
 
