@@ -19,7 +19,8 @@ function getCookie(name) {
   // Split cookie string and get all individual name=value pairs in an array.
   const cookieArr = document.cookie.split(';');
   // Loop through the array elements.
-  cookieArr.forEach((e) => {
+  for (var i = 0; i < cookieArr.length; i++) {
+    var e = cookieArr[i];
     const cookiePair = e.split('=');
     // Removing whitespace at the beginning of the cookie name
     // and compare it with the given string.
@@ -28,7 +29,8 @@ function getCookie(name) {
       // Get the cookie value and return.
       returnedValue = cookieValue;
     }
-  });
+  }
+
   // Return null if not found.
   return returnedValue;
 }
@@ -63,13 +65,16 @@ const sliders = {
 Drupal.behaviors.arvestSliders = {
   attach(context) {
     if (typeof sliders !== 'undefined') {
-      Object.keys(sliders).forEach((component) => {
+
+      for (var i = 0; i < Object.keys(sliders).length; i++) {
+        var component = Object.keys(sliders)[i];
         // Find Elements and stop program if non-existent
         const sliderWrapper = context.classList && context.classList.contains(component)
           ? [context] : context.querySelectorAll(`.${component}`);
         if (sliderWrapper.length === 0) { return; }
         // Run Program on each element
-        sliderWrapper.forEach((element) => {
+        for (var i = 0; i < sliderWrapper.length; i++) {
+          var element = sliderWrapper[i];
           const glideElement = element.querySelector('.glide');
           if (!glideElement) { return; }
           const glideSlides = glideElement.querySelectorAll('.glide__slide');
@@ -103,6 +108,7 @@ Drupal.behaviors.arvestSliders = {
           }
           // Set active slide based on cookie
           if (journeyStageCookie !== null) {
+
             sliderControls.forEach((control) => {
               if (journeyStageCookie === control.dataset.journeyStage) {
                 const controlIndex = parseInt(control.dataset.glideDir.substr(1, 1), 10);
@@ -110,8 +116,8 @@ Drupal.behaviors.arvestSliders = {
               }
             });
           }
-        });
-      });
+        }
+      }
     }
   },
 };
