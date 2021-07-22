@@ -43,6 +43,7 @@
         "drupal/editor_advanced_link": "^2.0",
         "drupal/entity_browser": "^2.5",
         "drupal/entity_embed": "^1.1",
+        "drupal/environment_indicator": "^4.0",
         "drupal/extlink": "^1.6",
         "drupal/feeds": "^3.0@alpha",
         "drupal/feeds_tamper": "^2.0@beta",

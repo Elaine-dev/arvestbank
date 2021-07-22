@@ -1,0 +1,10 @@
+uuid: b34d461f-24ea-4021-86dd-10d13e47cc8c
+langcode: en
+status: true
+dependencies: {  }
+machine: dev
+description: null
+name: Dev
+url: 'https://arvestbankdev.prod.acquia-sites.com'
+fg_color: '#d0d0d0'
+bg_color: '#509b63'

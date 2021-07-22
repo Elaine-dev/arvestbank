@@ -1,0 +1,10 @@
+uuid: 6750aa20-497b-45b9-9d62-6518a53d60ee
+langcode: en
+status: true
+dependencies: {  }
+machine: stage
+description: null
+name: Stage
+url: 'https://arvestbanktest.prod.acquia-sites.com/'
+fg_color: '#d0d0d0'
+bg_color: '#cca000'

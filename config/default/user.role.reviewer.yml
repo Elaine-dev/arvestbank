@@ -8,6 +8,7 @@ weight: -9
 is_admin: null
 permissions:
   - 'access content overview'
+  - 'access environment indicator'
   - 'access sitemap'
   - 'use editorial transition draft_to_review'
   - 'use editorial transition review_to_draft'
