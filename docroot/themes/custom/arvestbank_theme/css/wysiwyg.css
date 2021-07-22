@@ -1,6 +1,7 @@
+@import url("https://use.typekit.net/uhm3box.css");
 
 .coh-wysiwyg h1,h2,h3,h4,h5,h6 {
-  font-family: proxima-nova, san-serif;
+  font-family: "proxima-nova", san-serif;
 }
 
 .coh-wysiwyg ul {
