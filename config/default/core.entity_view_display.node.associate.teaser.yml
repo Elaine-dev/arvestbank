@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.associate.field_designation
     - field.field.node.associate.field_email
     - field.field.node.associate.field_fax_number
+    - field.field.node.associate.field_hide_from_views_listings
     - field.field.node.associate.field_insurance_license_number
     - field.field.node.associate.field_job_title
     - field.field.node.associate.field_location
@@ -169,6 +170,7 @@ hidden:
   field_associate_id: true
   field_associate_type: true
   field_fax_number: true
+  field_hide_from_views_listings: true
   field_mobile_number: true
   field_private_bank_reference: true
   field_rendered_node: true
