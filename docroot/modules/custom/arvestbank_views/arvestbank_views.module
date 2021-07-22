@@ -71,10 +71,16 @@ function arvestbank_views_form_views_exposed_form_alter(&$form, FormStateInterfa
     ->getStorage('node');
   $nids = $storage->getQuery();
 
+  // Create the orConditionGroup
+  $orGroup = $nids->orConditionGroup()
+    ->condition('field_hide_from_views_listings', 0, '=')
+    ->condition('field_hide_from_views_listings', NULL, 'IS NULL');
+
   // Gather published associate nodes and sort by title
   $nids = $nids->condition('type', 'associate')
     ->condition('status', 1)
     ->condition('field_associate_type', $termId, '=')
+    ->condition($orGroup)
     ->sort('title')
     ->execute();
 

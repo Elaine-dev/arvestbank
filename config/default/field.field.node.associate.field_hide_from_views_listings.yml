@@ -1,0 +1,23 @@
+uuid: 594fc9fd-882d-4215-99df-ee6b29760b96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hide_from_views_listings
+    - node.type.associate
+id: node.associate.field_hide_from_views_listings
+field_name: field_hide_from_views_listings
+entity_type: node
+bundle: associate
+label: 'Hide from views listings'
+description: 'Select this if you wish for this particular associate to not appear when using the associate views listings.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
