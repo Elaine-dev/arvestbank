@@ -325,6 +325,6 @@ handlers:
       email_field_machine_name: email_address
       city_field_machine_name: null
       state_field_machine_name: null
-      legacy_region_id_fields|city_field_machine_name: address.city
-      legacy_region_id_fields|state_field_machine_name: address.state_province
+      legacy_region_id_fields|city_field_machine_name: ''
+      legacy_region_id_fields|state_field_machine_name: ''
 variants: {  }
