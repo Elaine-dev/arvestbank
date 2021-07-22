@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "acquia/blt": "12.4",
+        "acquia/blt": "12.7",
         "acquia/blt-simplesamlphp": "dev-master",
         "acquia/blt-site-studio": "dev-develop",
         "acquia/cohesion": "6.5.1",
@@ -34,7 +34,7 @@
         "drupal/context_entity_field": "1.x-dev@dev",
         "drupal/cookiepro": "^2.0",
         "drupal/core-composer-scaffold": "^9",
-        "drupal/core-recommended": "9.2.0",
+        "drupal/core-recommended": "9.2.2",
         "drupal/critical_css": "^1.17",
         "drupal/ctools": "^3.6",
         "drupal/devel": "^4.1",
@@ -43,6 +43,7 @@
         "drupal/editor_advanced_link": "^2.0",
         "drupal/entity_browser": "^2.5",
         "drupal/entity_embed": "^1.1",
+        "drupal/environment_indicator": "^4.0",
         "drupal/extlink": "^1.6",
         "drupal/feeds": "^3.0@alpha",
         "drupal/feeds_tamper": "^2.0@beta",

@@ -7,7 +7,6 @@ ignored_config_entities:
   - views.view.documents_and_resources
   - block.block.views_block__documents_and_resources_block
   - gtm.settings
-  - extlink.settings
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
-enable_export_filtering: 1
+enable_export_filtering: true

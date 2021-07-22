@@ -1,0 +1,10 @@
+uuid: 7a0e36f9-cbb9-4c78-a92f-5e5840cea8e5
+langcode: en
+status: true
+dependencies: {  }
+machine: local
+description: null
+name: Local
+url: 'https://local.arvestbank.com/'
+fg_color: '#d0d0d0'
+bg_color: '#2ca2c9'
