@@ -23,6 +23,7 @@ dependencies:
     - field.field.node.associate.field_pb_application
     - field.field.node.associate.field_private_bank_reference
     - field.field.node.associate.field_rendered_node
+    - field.field.node.associate.field_username
     - field.field.node.associate.field_vanity_url
     - field.field.node.associate.field_website
     - image.style.associate_headshot
@@ -79,13 +80,12 @@ content:
       target: ''
     third_party_settings: {  }
   field_designation:
-    type: entity_reference_entity_view
+    type: entity_reference_label
     weight: 1
     region: content
     label: hidden
     settings:
       link: false
-      view_mode: default
     third_party_settings: {  }
   field_email:
     type: email_mailto
@@ -172,5 +172,6 @@ hidden:
   field_mobile_number: true
   field_private_bank_reference: true
   field_rendered_node: true
+  field_username: true
   field_vanity_url: true
   search_api_excerpt: true

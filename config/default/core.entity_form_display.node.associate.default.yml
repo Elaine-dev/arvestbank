@@ -22,6 +22,7 @@ dependencies:
     - field.field.node.associate.field_pb_application
     - field.field.node.associate.field_private_bank_reference
     - field.field.node.associate.field_rendered_node
+    - field.field.node.associate.field_username
     - field.field.node.associate.field_vanity_url
     - field.field.node.associate.field_website
     - image.style.thumbnail
@@ -215,6 +216,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_username:
+    weight: 30
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_vanity_url:
     weight: 25

@@ -1,0 +1,6 @@
+services:
+  arvest_redirect_subscriber:
+    class: '\Drupal\arvestbank_core\EventSubscriber\AssociatesRedirect'
+    arguments: ['@current_user']
+    tags:
+      - { name: event_subscriber }
