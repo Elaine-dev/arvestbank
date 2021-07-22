@@ -64,7 +64,7 @@ const sliders = {
   necessary classes and options there.
 \* ------------------------------------ */
 Drupal.behaviors.arvestSliders = {
-  attach(context) {
+  attach: function (context, settings) {
     if (typeof sliders !== 'undefined') {
 
       for (var i = 0; i < Object.keys(sliders).length; i++) {
