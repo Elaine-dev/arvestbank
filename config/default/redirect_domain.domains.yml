@@ -1,3 +1,170 @@
-domain_redirects: {  }
+domain_redirects:
+  '​www-test:arvest:com':
+    -
+      sub_path: /personal/bank/checking/basic-blue/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=312'
+    -
+      sub_path: /personal/bank/checking/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops'
+    -
+      sub_path: /personal/bank/savings/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=330'
+    -
+      sub_path: /personal/bank/checking/free-blue/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=311'
+    -
+      sub_path: /personal/bank/checking/myblue/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=313'
+    -
+      sub_path: /personal/bank/savings/money-market/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=325'
+    -
+      sub_path: /personal/bank/savings/savings-account/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=325'
+    -
+      sub_path: /personal/bank/checking/preferred-club/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=352'
+    -
+      sub_path: /personal/bank/checking/club/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=319'
+    -
+      sub_path: /bank/credit-cards/flex-rewards-credit-cards/apply
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/23246/#/beginApp'
+    -
+      sub_path: /personal/bank/credit-cards/true-rate/apply
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22100/#/beginApp '
+    -
+      sub_path: /balanceeraser/customer-log-in
+      destination: 'sso-tst.arvest.com/as/authorization.oauth2?redirect_uri=https%3A%2F%2Faps18test.arvest.com%2Fcallback&client_id=aps_ac_client&re'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/auto-loans
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22032/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/boat-loans
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22055/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/motorcycle-loans
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22034/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/rv-loans
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22036/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/powersports
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22035/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/new-accessible
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22033/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/used-accessible
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22032/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/unsecured-loans
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/21686/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/fixed-home-equity-loans
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22043/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/arm-home-equity-loans
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22042/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/home-equity-line-of-credit
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22038/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/unsecured-personal-loans
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/21686/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/personal-line-of-credit
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/21686/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/unsecured-home-improvement-loan
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22088/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/cd-installment-loans
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22045/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/cd-line-of-credit
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22046/#/beginApp'
+  'arvestbankdev:prod:acquia-sites:com':
+    -
+      sub_path: /personal/bank/checking/basic-blue/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=312'
+    -
+      sub_path: /personal/bank/checking/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops'
+    -
+      sub_path: /personal/bank/savings/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=330'
+    -
+      sub_path: /personal/bank/checking/free-blue/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=311'
+    -
+      sub_path: /personal/bank/checking/myblue/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=313'
+    -
+      sub_path: /personal/bank/savings/money-market/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=325'
+    -
+      sub_path: /personal/bank/checking/preferred-club/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=352'
+    -
+      sub_path: /personal/bank/checking/club/apply
+      destination: 'secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=319'
+    -
+      sub_path: /bank/credit-cards/flex-rewards-credit-cards/apply
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/23246/#/beginApp'
+    -
+      sub_path: /personal/bank/credit-cards/true-rate/apply
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22100/#/beginApp '
+    -
+      sub_path: /balanceeraser/customer-log-in
+      destination: 'sso-tst.arvest.com/as/authorization.oauth2?redirect_uri=https%3A%2F%2Faps18test.arvest.com%2Fcallback&client_id=aps_ac_client&re'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/auto-loans
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22032/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/boat-loans
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22055/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/motorcycle-loans
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22034/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/rv-loans
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22036/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/powersports
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22035/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/new-accessible
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22033/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/used-accessible
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22032/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/unsecured-loans
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/21686/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/fixed-home-equity-loans
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22043/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/arm-home-equity-loans
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22042/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/home-equity-line-of-credit
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22038/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/unsecured-personal-loans
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/21686/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/personal-line-of-credit
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/21686/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/unsecured-home-improvement-loan
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22088/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/cd-installment-loans
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22045/#/beginApp'
+    -
+      sub_path: /personal/borrow/consumer-loans/apply/cd-line-of-credit
+      destination: 'oa-beta.fisglobal.com/oa/fi/lt/10052/22046/#/beginApp'
 _core:
   default_config_hash: CgXLPQkHCGerCdDtMO8wK9Er4j6iy1iMOyalk8iRgrE
