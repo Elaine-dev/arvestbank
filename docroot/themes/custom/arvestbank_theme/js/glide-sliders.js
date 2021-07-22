@@ -1,42 +1,10 @@
 /**
  * Sliders JavaScript
- * - 01 - Imports
- * - 02 - Functions
- * - 03 - Instances
- * - 04 - Glide
+ * - 01 - Instances
+ * - 02 - Glide
  */
 /* ------------------------------------ *\
-  01 - Imports
-\* ------------------------------------ */
-// This import depends on webpack to work.
-// import Glide from '@glidejs/glide';
-/* ------------------------------------ *\
-  02 - Functions
-  Useful functions for production usage.
-\* ------------------------------------ */
-function getCookie(name) {
-  let returnedValue = null;
-  // Split cookie string and get all individual name=value pairs in an array.
-  const cookieArr = document.cookie.split(';');
-  // Loop through the array elements.
-  for (var i = 0; i < cookieArr.length; i++) {
-    var e = cookieArr[i];
-    const cookiePair = e.split('=');
-    // Removing whitespace at the beginning of the cookie name
-    // and compare it with the given string.
-    const cookieName = cookiePair[0];
-    const cookieValue = cookiePair[1];
-    if (name === cookieName.trim()) {
-      // Get the cookie value and return.
-      returnedValue = cookieValue;
-    }
-  }
-
-  // Return null if not found.
-  return returnedValue;
-}
-/* ------------------------------------ *\
-  03 - Instances
+  01 - Instances
   Add any instances of sliders to this
   object using the class of the block
   wrapper, followed by the options
@@ -57,7 +25,7 @@ const sliders = {
   },
 };
 /* ------------------------------------ *\
-  04 - Glide
+  02 - Glide
   Mounts slider.
 \* ------------------------------------ */
 Drupal.behaviors.arvestSliders = {
@@ -96,7 +64,6 @@ Drupal.behaviors.arvestSliders = {
           const sliderControlLeft = glideElement.querySelector('.glide__arrow--left');
           const sliderControlRight = glideElement.querySelector('.glide__arrow--right');
           const sliderControls = glideElement.querySelectorAll('.glide__control');
-          const journeyStageCookie = getCookie('conga_journey_stage');
 
           // Instantiate and mount slider.
           const glide = new Glide(glideElement, sliders[slideClass].options);
@@ -144,18 +111,7 @@ Drupal.behaviors.arvestSliders = {
             glide.update({ perView: 1 });
           }
 
-          // Set active slide based on cookie.
-          if (journeyStageCookie !== null) {
-            sliderControls.forEach((control) => {
-              if (journeyStageCookie === control.dataset.journeyStage) {
-                const controlIndex = parseInt(control.dataset.glideDir.substr(1, 1), 10);
-                glide.update({ startAt: controlIndex });
-              }
-            });
-          }
-
         }
-
 
       }
 
