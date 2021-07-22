@@ -21,6 +21,7 @@ dependencies:
     - field.field.node.associate.field_nmls_number
     - field.field.node.associate.field_office_number
     - field.field.node.associate.field_pb_application
+    - field.field.node.associate.field_username
     - field.field.node.associate.field_website
     - node.type.associate
   module:
@@ -182,6 +183,10 @@ custom_sources:
     label: pb_application
     value: pb_application
     machine_name: pb_application
+  user_id:
+    label: user_id
+    value: user_id
+    machine_name: user_id
 mappings:
   -
     target: title
@@ -326,5 +331,12 @@ mappings:
     map:
       uri: pb_application
       title: ''
+    settings:
+      language: null
+  -
+    target: field_username
+    map:
+      value: user_id
+    unique: {  }
     settings:
       language: null
