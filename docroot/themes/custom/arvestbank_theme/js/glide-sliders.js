@@ -109,9 +109,9 @@ Drupal.behaviors.arvestSliders = {
             sliderControlLeft.setAttribute('disabled', '');
 
             // Attach "run.after" event to slider.
-            glide.on('run.after', () => {
+            glide.on('run.after', function () {
 
-              // If this is notthe first slide.
+              // If this is not the first slide.
               if (glide.index > 0) {
                 // Enable back arrow.
                 sliderControlLeft.removeAttribute('disabled');
