@@ -2,12 +2,12 @@ username: arvestadmin
 password: 'Arv3st42*'
 client_id: 445e7798666d5ca4f0ea2906549edb3f0eca6ea1
 secret: 22d00af856002a9090e1675ce18833a49fb85950
-sync_interval: -1
+sync_interval: 86400
 size_limit: -1
 oauth:
   excluded_redirect_keys:
     - original_path
-notifications_sync: 1
+notifications_sync: 0
 num_images_per_page: 12
 _core:
   default_config_hash: GxmzZTLxQQW3HxqkAimrxwAlUASIAJx1xbSA1q_IxoI
