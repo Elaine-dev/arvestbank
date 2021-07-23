@@ -24,32 +24,34 @@
  */
 #}
 {{ attach_library('arvestbank_theme/global-styling') }}
-{%
-set body_classes = [
-logged_in ? 'user-logged-in',
-not root_path ? 'path-frontpage' : 'path-' ~ root_path|clean_class,
-node_type ? 'page-node-type-' ~ node_type|clean_class,
-db_offline ? 'db-offline',
-]
-%}
+{% set body_classes = [
+  logged_in ? 'user-logged-in',
+  not root_path ? 'path-frontpage' : 'path-' ~ root_path|clean_class,
+  node_type ? 'page-node-type-' ~ node_type|clean_class,
+  db_offline ? 'db-offline',
+] %}
 <!DOCTYPE html>
-<!--[if IE 8 ]><html class="coh-ie8" {{ html_attributes }}> <![endif]-->
-<!--[if IE 9 ]><html class="coh-ie9" {{ html_attributes }}> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html{{ html_attributes }}> <!--<![endif]-->
+<!--[if IE 8 ]>
+<html class="coh-ie8" {{ html_attributes }}> <![endif]-->
+<!--[if IE 9 ]>
+<html class="coh-ie9" {{ html_attributes }}> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html{{ html_attributes }}> <!--<![endif]-->
 <head>
-    <head-placeholder token="{{ placeholder_token }}">
+  <head-placeholder token="{{ placeholder_token }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token }}">
-    <js-placeholder token="{{ placeholder_token }}">
-    <cohesion-placeholder></cohesion-placeholder>
-</head>
+      <js-placeholder token="{{ placeholder_token }}">
+        <cohesion-placeholder></cohesion-placeholder>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        </head>
 <body{{ attributes.addClass(body_classes) }}>
 {#
   Keyboard navigation/accessibility link to main content section in
   page.html.twig.
 #}
 <a href="#main-content" class="visually-hidden focusable skip-link">
-    {{ 'Skip to main content'|t }}
+  {{ 'Skip to main content'|t }}
 </a>
 {{ page_top }}
 {{ page }}
