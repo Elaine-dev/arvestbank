@@ -6,9 +6,11 @@
  */
 
 use Drupal\Component\Utility\UrlHelper;
+use Drupal\Core\Cache\Cache;
 use Drupal\Core\Database\Query\Condition;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
+use Drupal\node\NodeInterface;
 use Drupal\views\Plugin\views\query\QueryPluginBase;
 use Drupal\views\ViewExecutable;
 
@@ -322,5 +324,17 @@ function arvestbank_views_views_query_alter(ViewExecutable $view, QueryPluginBas
     if ($view->exposed_raw_input['title'] != NULL) {
       $query->setLimit(1);
     }
+  }
+}
+
+function arvestbank_core_node_presave(NodeInterface $node) {
+  $tags = [];
+  if ($node->hasField('field_hide_from_views_listings')) {
+    foreach ($node->get('field_hide_from_views_listings') as $item) {
+      $tags[] = 'arvestbank:node:boolean:' . $item->value;
+    }
+  }
+  if ($tags) {
+    Cache::invalidateTags($tags);
   }
 }
