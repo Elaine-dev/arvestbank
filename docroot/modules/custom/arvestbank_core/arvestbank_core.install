@@ -704,6 +704,9 @@ function arvestbank_core_update_9005(&$sandbox) {
   }
 }
 
+/**
+ * Provide default value for associates.
+ */
 function arvestbank_core_update_9006(&$sandbox) {
   $node_storage = \Drupal::entityTypeManager()->getStorage('node');
   if (!isset($sandbox['total'])) {
