@@ -196,6 +196,9 @@
             },
             "drupal/purge_purger_http": {
                 "scheme is https not work": "https://www.drupal.org/files/issues/2018-11-29/2892552-verify-option-scheme-update-6.patch"
+            },
+            "drupal/extlink": {
+                "fix double warn": "patches/extlink-stop-propagation.patch"
             }
         }
     },
