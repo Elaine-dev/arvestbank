@@ -495,6 +495,7 @@
 .coh-style-login-blocks .sidebar-select,
 .coh-style-login-blocks .sidebar-login-results {
   padding: 0.625rem 1.25rem 0rem 1.25rem;
+  position: relative;
 }
 
 .coh-style-login-blocks .sidebar-login-results {
@@ -540,10 +541,10 @@
 }
 
 
-.coh-style-login-blocks .select2-selection .select2-selection__rendered, #edit-login-select-non-prod {
+.coh-style-login-blocks .select2-selection .select2-selection__rendered, #edit-login-select-non-prod, .coh-style-login-blocks #edit-login-select {
   text-transform: uppercase;
   flex: 1 1 auto;
-  width: 13.75rem;
+  width: 100%;
   text-indent: 42px;
   color: #fff;
   border: none;
@@ -596,7 +597,11 @@
   margin: 0;
 }
 
-#select2-edit-login-select-non-prod--2-results, #select2-edit-login-select-non-prod-results, #select2-edit-login-select-results, #select2-edit-login-select--2-results{
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{
+  transform: scaleY(-1);
+}
+
+#select2-edit-login-select-non-prod--2-results, #select2-edit-login-select-non-prod-results, #select2-edit-login-select-results, #select2-edit-login-select--2-results, #select2-edit-login-select-non-prod--3-results{
   right: 0;
   margin-top: 0;
   margin-right: -1px;
@@ -663,6 +668,9 @@
   .coh-style-login-blocks .select2-selection .select2-selection__rendered {
     width: 10rem;
   }
+  .edit-login-select-non-prod coh-style-login-blocks .select2-selection .select2-selection__rendered, #edit-login-select-non-prod{
+    line-height: 55px;
+  }
 }
 
 @media screen and (max-width: 59.3125rem) {
@@ -713,6 +721,28 @@
   height: 1.875rem;
   color: black;
   width: 100%;
+}
+
+
+.js-form-item-login-select-non-prod .select2-selection__clear{
+  position: absolute;
+  right: 0;
+  top: 50px;
+  z-index: 999;
+}
+
+.js-form-item-login-select-non-prod .select2-selection__clear:before{
+  border:none;
+}
+
+#edit-arvest-online-banking-username{
+  width:215px;
+}
+
+@media (max-width: 59.3125rem) {
+  #edit-arvest-online-banking-username{
+    width:100%;
+  }
 }
 
 /*end login block styling */

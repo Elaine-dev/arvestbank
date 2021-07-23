@@ -6,6 +6,13 @@
 Drupal.behaviors.externalLogin = {
   attach: function (context, settings) {
 
+    // Add a closeout button to the login block
+    jQuery('.webform-submission-external-login-menu-add-form select').select2({
+      dropdownParent: jQuery('#block-menuexternalloginblock'),
+      placeholder: "LOG IN TO...",
+      allowClear: true,
+    });
+
     jQuery('.webform-submission-external-login-menu-add-form,.webform-submission-external-login-add-form').submit(function (e) {
 
       // Determine if this is menu or sidebar form.
