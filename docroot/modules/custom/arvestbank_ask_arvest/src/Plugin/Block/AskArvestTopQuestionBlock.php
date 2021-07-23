@@ -146,8 +146,17 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
    */
   private function getRatingWidget(array $answers) {
 
+    // If there are multiple answers.
+    if (isset($answers[0]['id'])) {
+      $bestAnswer = $answers[0];
+    }
+    // If there is not multiple answers.
+    else {
+      $bestAnswer = $answers;
+    }
+
     // If we have a Best Answer to rate.
-    if (isset($answers['id'])) {
+    if (isset($bestAnswer['id'])) {
 
       // Attach "raty" rating js library.
       $renderArray = [
@@ -175,7 +184,7 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
 
       // Add a div to use for the rating widget.
       $renderArray['rating_widget_div'] = [
-        '#markup' => '<div class="rating-widget" data-id="' . $answers['id'] . '"></div>',
+        '#markup' => '<div class="rating-widget" data-id="' . $bestAnswer['id'] . '"></div>',
       ];
 
       // Add help text.
@@ -201,6 +210,15 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
    */
   private function getBestAnswer(array $answers) {
 
+    // If there are multiple answers.
+    if (isset($answers[0]['id'])) {
+      $bestAnswer = $answers[0];
+    }
+    // If there is not multiple answers.
+    else {
+      $bestAnswer = $answers;
+    }
+
     // Add best answer label.
     $renderArray['best_answer_label'] = [
       '#type' => 'html_tag',
@@ -220,18 +238,18 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
 
     // The body contains a no results message.
     // Only providing a fallback in case SOAP request failed.
-    if (isset($answers['body'])) {
-      $bestAnswer = strip_tags($answers['body'], '<img><a><b><strong><ul><ol><li><br><p>');
+    if (isset($bestAnswer['body'])) {
+      $bestAnswerBody = strip_tags($bestAnswer['body'], '<img><a><b><strong><ul><ol><li><br><p>');
     }
     else {
-      $bestAnswer = 'We did not find a best response. Please try rephrasing your question. If that doesn\'t help, please call our Customer Service at (866) 952-9523 for assistance.';
+      $bestAnswerBody = 'We did not find a best response. Please try rephrasing your question. If that doesn\'t help, please call our Customer Service at (866) 952-9523 for assistance.';
     }
 
     // Add response "body" to the render array.
     $renderArray['best_answer_content'] = [
       '#type' => 'html_tag',
       '#tag' => 'dd',
-      '#value' => $bestAnswer,
+      '#value' => $bestAnswerBody,
       '#attributes' => [
         'class' => [
           'ask-arvest-value ask-arvest-best-answer-value',
@@ -259,6 +277,15 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
    */
   private function getTopQuestion(array $answers) {
 
+    // If we got more than one answer.
+    if (isset($answers[0]['id'])) {
+      $answer = $answers[0];
+    }
+    // If we only got one answer.
+    else {
+      $answer = $answers;
+    }
+
     // Add top question label.
     $renderArray['top_question_label'] = [
       '#type' => 'html_tag',
@@ -277,8 +304,8 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
     ];
 
     // If we got a top Question.
-    if (isset($answers['id'])) {
-      $questionText = $answers['title'];
+    if (isset($answer['id'])) {
+      $questionText = $answer['title'];
     }
     // If we didn't get a best answer output a message indicating that.
     else {

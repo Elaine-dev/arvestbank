@@ -100,8 +100,19 @@ class SuggestedQuestionsBlock extends BlockBase implements ContainerFactoryPlugi
         $answers = $GLOBALS['ask_query_response'][$searchTerm][$source];
       }
 
-      // If we have suggestions to offer.
-      if (isset($answers['suggested']) && count($answers['suggested'])) {
+      // If we have answer(s) suggestions to offer.
+      if (
+        // If we have a singular answer with suggestions.
+        (
+          isset($answers['suggested'])
+          && count($answers['suggested'])
+        )
+        // If we have multiple answers with suggestions.
+        ||(
+          isset($answers[0]['suggested'])
+          && count($answers[0]['suggested'])
+        )
+      ) {
 
         // Add container and title to returned render array.
         $renderArray = [
@@ -130,11 +141,20 @@ class SuggestedQuestionsBlock extends BlockBase implements ContainerFactoryPlugi
           ],
         ];
 
-        // Limit to 10 results.
-        $answers['suggested'] = array_slice($answers['suggested'], 0, 10);
+        // If we only have one answer.
+        if (isset($answers['suggested'])) {
+          // Use the first ten suggested answers.
+          $suggested_answers = array_slice($answers['suggested'], 0, 10);
+        }
+        // If we have multiple answers.
+        else {
+          // Use the first ten suggested answers from the first question.
+          // Could have added questions from both, but matching old site.
+          $suggested_answers = array_slice($answers[0]['suggested'], 0, 10);
+        }
 
         // Loop over suggested questions.
-        foreach ($answers['suggested'] as $suggested_answer) {
+        foreach ($suggested_answers as $suggested_answer) {
           // Add a link to search this question to the render array.
           // The data-question-id isn't used right now, but could be helpful.
           $renderArray['questions'][] = [
