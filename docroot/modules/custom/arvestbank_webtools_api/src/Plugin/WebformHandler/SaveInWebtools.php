@@ -442,16 +442,27 @@ class SaveInWebtools extends WebformHandlerBase {
    * @return array
    *   The submitted values.
    */
-  private function getSubmittedValues(string $formName, FormStateInterface $form_state) {
+  private function getSubmittedValues(string $formName, FormStateInterface $form_state, $formFields = [], &$submittedValues = []) {
 
-    // Get submitted form values.
-    $submittedValues = $form_state->cleanValues()->getValues();
-
-    // Get form fields.
-    $formFields = $form_state->getCompleteForm()['elements'];
+    // If this isn't a nested call.
+    if (!count($formFields)) {
+      // Get submitted form values.
+      $submittedValues = $form_state->cleanValues()->getValues();
+      // Get form fields.
+      $formFields = $form_state->getCompleteForm()['elements'];
+    }
 
     // Loop over form fields looking for reference fields.
     foreach ($formFields as $formFieldKey => $formFieldInfo) {
+
+      // If this is a fieldset.
+      if (
+        isset($formFieldInfo['#type'])
+        && $formFieldInfo['#type'] == 'fieldset'
+      ) {
+        // Recursively get submitted values for fields in this fieldset.
+        $this->getSubmittedValues($formName, $form_state, $formFieldInfo, $submittedValues);
+      }
 
       // If we found a term reference field we have a value set for.
       if (
