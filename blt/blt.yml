@@ -34,8 +34,8 @@ modules:
     enable: [shield, qa_accounts]
     uninstall: [dblog, devel, views_ui]
   prod:
-    enable: [shield, acquia_connector]
-    uninstall: [dblog, devel, views_ui, qa_accounts]
+    enable: [acquia_connector]
+    uninstall: [shield, dblog, devel, views_ui, qa_accounts]
 command-hooks:
   frontend-reqs:
     dir: '${repo.root}'
