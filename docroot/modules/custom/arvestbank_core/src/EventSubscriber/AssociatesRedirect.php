@@ -28,7 +28,7 @@ class AssociatesRedirect implements EventSubscriberInterface {
     $current_url = Url::fromRoute('<current>');
     $path = $current_url->toString();
 
-    if (str_contains($requested_uri, '.html')) {
+    if (str_contains($requested_uri)) {
 
       // Check if  associate username.
       $username_from_path = substr($requested_uri, 0, strpos($requested_uri, "."));
