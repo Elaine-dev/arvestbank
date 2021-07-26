@@ -4,8 +4,6 @@ ignored_config_entities:
   - acquia_connector.settings
   - shield.settings
   - arvestbank_rates.settings
-  - views.view.documents_and_resources
-  - block.block.views_block__documents_and_resources_block
   - gtm.settings
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
