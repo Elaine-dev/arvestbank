@@ -62,6 +62,33 @@ AddEncoding gzip svgz
 <IfModule mod_rewrite.c>
   RewriteEngine on
 
+  Redirect https://www-test.arvest.com/personal/bank/checking/basic-blue/apply https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=312
+  Redirect https://www-test.arvest.com/personal/bank/checking/apply https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops
+  Redirect https://www-test.arvest.com/personal/bank/savings/apply https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=330
+  Redirect https://www-test.arvest.com/personal/bank/checking/free-blue/apply https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=311
+  Redirect https://www-test.arvest.com/personal/bank/checking/myblue/apply https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=313
+  Redirect https://www-test.arvest.com/personal/bank/savings/money-market/apply https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=325
+  Redirect https://www-test.arvest.com/personal/bank/checking/free-blue/apply https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=311
+  Redirect https://www-test.arvest.com/personal/bank/savings/savings-account/apply https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=325
+  Redirect https://www-test.arvest.com/personal/bank/checking/preferred-club/apply https:/secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=352
+  Redirect https://www-test.arvest.com/personal/bank/checking/club/apply https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=319
+  Redirect https://www-test.arvest.com/bank/credit-cards/flex-rewards-credit-cards/apply https://oa-beta.fisglobal.com/oa/fi/lt/10052/23246/#/beginApp
+  Redirect https://www-test.arvest.com/personal/bank/credit-cards/true-rate/apply https://oa-beta.fisglobal.com/oa/fi/lt/10052/22100/#/beginApp
+  Redirect https://www-test.arvest.com/balanceeraser/customer-log-in https://sso-tst.arvest.com/as/authorization.oauth2?redirect_uri=https%3A%2F%2Faps18test.arvest.com%2Fcallback&client_id=aps_ac_client&re
+  Redirect https://personal/borrow/consumer-loans/apply/auto-loans https://oa-beta.fisglobal.com/oa/fi/lt/10052/22032/#/beginApp
+  Redirect https://www-test.arvest.com/personal/borrow/consumer-loans/apply/boat-loans https://oa-beta.fisglobal.com/oa/fi/lt/10052/22055/#/beginApp
+  Redirect https://www-test.arvest.com/personal/borrow/consumer-loans/apply/motorcycle-loans https://oa-beta.fisglobal.com/oa/fi/lt/10052/22034/#/beginApp
+  Redirect https://www-test.arvest.com/personal/borrow/consumer-loans/apply/rv-loans https://oa-beta.fisglobal.com/oa/fi/lt/10052/22036/#/beginApp
+  Redirect https://www-test.arvest.com/personal/borrow/consumer-loans/apply/powersports https://oa-beta.fisglobal.com/oa/fi/lt/10052/22035/#/beginApp
+  Redirect https://www-test.arvest.com/personal/borrow/consumer-loans/apply/new-accessible https://oa-beta.fisglobal.com/oa/fi/lt/10052/22033/#/beginApp
+  Redirect https://www-test.arvest.com/personal/borrow/consumer-loans/apply/unsecured-loans https://oa-beta.fisglobal.com/oa/fi/lt/10052/21686/#/beginApp
+  Redirect https://www-test.arvest.com/personal/borrow/consumer-loans/apply/fixed-home-equity-loans https://oa-beta.fisglobal.com/oa/fi/lt/10052/22043/#/beginApp
+  Redirect https://www-test.arvest.com/personal/borrow/consumer-loans/apply/arm-home-equity-loans https://oa-beta.fisglobal.com/oa/fi/lt/10052/22042/#/beginApp
+  Redirect https://www-test.arvest.com/personal/borrow/consumer-loans/apply/home-equity-line-of-credit https://oa-beta.fisglobal.com/oa/fi/lt/10052/22038/#/beginApp
+  Redirect https://www-test.arvest.com/personal/borrow/consumer-loans/apply/unsecured-personal-loans https://oa-beta.fisglobal.com/oa/fi/lt/10052/21686/#/beginApp
+  Redirect https://www-test.arvest.com/personal/borrow/consumer-loans/apply/personal-line-of-credit https://oa-beta.fisglobal.com/oa/fi/lt/10052/21686/#/beginApp
+  Redirect https://www-test.arvest.com/personal/borrow/consumer-loans/apply/unsecured-home-improvement-loan https://oa-beta.fisglobal.com/oa/fi/lt/10052/22088/#/beginApp
+
   # Set "protossl" to "s" if we were accessed via https://.  This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
   # you don't bounce between http and https.
