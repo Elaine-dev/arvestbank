@@ -467,6 +467,10 @@
   padding-bottom: 0.9375rem;
 }
 
+.coh-style-login-blocks .sidebar-login-results input[data-drupal-selector='edit-arvest-online-banking-username'] {
+  width: 13.5rem;
+}
+
 .coh-style-login-blocks .login-results {
   padding: 0.9375rem 0.625rem;
   position: absolute;
@@ -479,7 +483,6 @@
 
 .coh-style-login-blocks .login-results input[data-drupal-selector='edit-arvest-online-banking-username'] {
   width: 12.25rem;
-  padding-right: 0;
 }
 
 @media (max-width: 59.3125rem) {
@@ -487,15 +490,17 @@
     margin-top: 0.125rem;
     background: #00457c;
   }
-  .coh-style-login-blocks .login-results input[data-drupal-selector='edit-arvest-online-banking-username'] {
-    width: 100%;
-    padding-right: 4.375rem;
-  }
 }
 
 @media (max-width: 47.9375rem) {
   .coh-style-login-blocks .login-results {
     width: 100vw;
+    margin-top: 0.125rem;
+    background: #00457c;
+  }
+  .coh-style-login-blocks .login-results input[data-drupal-selector='edit-arvest-online-banking-username'] {
+    width: -webkit-calc(100% - 64px);
+    width: calc(100% - 64px);
   }
 }
 
@@ -687,43 +692,43 @@
 }
 
 @media screen and (max-width: 59.3125rem) {
-  .coh-style-login-blocks .top-select .select2-selection {
+  .coh-style-login-blocks .top-select .select2-container .select2-selection {
     height: 2.875rem;
     border: 0;
   }
 }
 
 @media screen and (max-width: 73.0625rem) {
-  .coh-style-login-blocks .top-select .select2-selection .select2-selection__rendered {
+  .coh-style-login-blocks .top-select .select2-container .select2-selection .select2-selection__rendered {
     width: 11.25rem;
   }
 }
 
 @media screen and (max-width: 64.3125rem) {
-  .coh-style-login-blocks .top-select .select2-selection .select2-selection__rendered {
+  .coh-style-login-blocks .top-select .select2-container .select2-selection .select2-selection__rendered {
     width: 10rem;
   }
 }
 
 @media screen and (max-width: 59.3125rem) {
-  .coh-style-login-blocks .top-select .select2-selection .select2-selection__rendered {
+  .coh-style-login-blocks .top-select .select2-container .select2-selection .select2-selection__rendered {
     border: none;
   }
 }
 
 @media screen and (max-width: 35.25em) {
-  .coh-style-login-blocks .top-select .select2-selection {
+  .coh-style-login-blocks .top-select .select2-container .select2-selection {
     background-image: none;
   }
-  .coh-style-login-blocks .top-select .select2-selection .select2-selection__rendered {
+  .coh-style-login-blocks .top-select .select2-container .select2-selection .select2-selection__rendered {
     width: 7.5rem;
     padding-left: 0.625rem;
   }
-  .coh-style-login-blocks .top-select .select2-selection .select2-selection__arrow {
+  .coh-style-login-blocks .top-select .select2-container .select2-selection .select2-selection__arrow {
     right: 0.625rem;
   }
-  .coh-style-login-blocks .top-select .select2-selection button.select2-selection__clear {
-    right: 0.625rem;
+  .coh-style-login-blocks .top-select .select2-container .select2-selection.select2-selection--clearable button.select2-selection__clear {
+    right: 0;
   }
 }
 
