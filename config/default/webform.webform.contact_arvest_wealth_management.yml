@@ -120,7 +120,7 @@ elements: |-
     email:
       '#type': email
       '#title': 'Email address'
-      '#pattern': '^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$'
+      '#pattern': '^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{3}|[0-9]{1,3})(\]?)$'
       '#pattern_error': 'Please enter a valid email address.'
       '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
     phone_number:
