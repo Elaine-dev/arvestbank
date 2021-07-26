@@ -62,7 +62,9 @@ AddEncoding gzip svgz
 <IfModule mod_rewrite.c>
   RewriteEngine on
 
-  RewriteCond  %{HTTP_HOST}  !^www.mydomain.com$
+  RewriteCond %{HTTP_HOST} !^www-test.arvest.com
+  RewriteCond %{HTTP_HOST} !^local.arvestbank.com
+  RewriteCond %{HTTP_HOST} !^arvestbankdev.prod.acquia-sites.com
   # skip rules if NOT within domain - only way to tie multiple rules to one cond
   RewriteRule  .?  -  [S=26]
   Redirect /personal/bank/checking/basic-blue/apply https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=312
