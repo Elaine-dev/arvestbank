@@ -703,3 +703,30 @@ function arvestbank_core_update_9005(&$sandbox) {
       ->execute();
   }
 }
+
+/**
+ * Provide default value for associates.
+ */
+function arvestbank_core_update_9006(&$sandbox) {
+  $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+  if (!isset($sandbox['total'])) {
+    $node_ids = $node_storage->getQuery()
+      ->condition('type', 'associate')
+      ->execute();
+
+    $sandbox['ids'] = array_values($node_ids);
+    $sandbox['total'] = count($node_ids);
+    $sandbox['progress'] = 0;
+  }
+
+  $limit = 100;
+  $batch_ids = array_slice($sandbox['ids'], $sandbox['progress'], $limit);
+  $nodes = $node_storage->loadMultiple($batch_ids);
+  foreach ($nodes as $node) {
+    $node->set('field_hide_from_views_listings', 0);
+    $node->save();
+    $sandbox['progress']++;
+  }
+
+  $sandbox['#finished'] = $sandbox['progress'] / $sandbox['total'];
+}

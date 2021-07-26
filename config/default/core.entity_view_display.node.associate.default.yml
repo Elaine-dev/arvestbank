@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.associate.field_designation
     - field.field.node.associate.field_email
     - field.field.node.associate.field_fax_number
+    - field.field.node.associate.field_hide_from_views_listings
     - field.field.node.associate.field_insurance_license_number
     - field.field.node.associate.field_job_title
     - field.field.node.associate.field_location
@@ -108,6 +109,16 @@ content:
       title: ''
     third_party_settings: {  }
     type: telephone_link
+    region: content
+  field_hide_from_views_listings:
+    weight: 20
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_insurance_license_number:
     weight: 16

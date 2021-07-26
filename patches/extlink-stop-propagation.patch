@@ -1,0 +1,12 @@
+diff --git a/extlink.js b/extlink.js
+index 7d57dc9..988ad38 100644
+--- a/extlink.js
++++ b/extlink.js
+@@ -208,6 +208,7 @@
+ 
+     $(external_links).off("click.extlink");
+     $(external_links).on("click.extlink", function (e) {
++	  e.stopPropagation();
+       return Drupal.extlink.popupClickHandler(e, this);
+     });
+   };

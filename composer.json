@@ -176,6 +176,9 @@
             "drupal/config_ignore": {
                 "Support for export filtering via Drush\n": "https://www.drupal.org/files/issues/2021-01-04/config_ignore_2857247-61.patch"
             },
+            "drupal/media_video_micromodal": {
+                "Change attach behaviors for ie11 support\n": "https://www.drupal.org/files/issues/2021-07-23/ie11-support-3225153-1.patch"
+            },
             "acquia/cohesion": {
                 "Allow master templates to use to be defined at route level.\n": "patches/cohesion-master-template-by-route.patch"
             },
@@ -196,6 +199,9 @@
             },
             "drupal/purge_purger_http": {
                 "scheme is https not work": "https://www.drupal.org/files/issues/2018-11-29/2892552-verify-option-scheme-update-6.patch"
+            },
+            "drupal/extlink": {
+                "fix double warn": "patches/extlink-stop-propagation.patch"
             }
         }
     },

@@ -6,6 +6,19 @@
 Drupal.behaviors.externalLogin = {
   attach: function (context, settings) {
 
+    // Move top menu Select2 dropdown into login block and add closeout button
+    jQuery('.webform-submission-external-login-menu-add-form select').select2({
+      dropdownParent: jQuery('#block-menuexternalloginblock .top-select'),
+      minimumResultsForSearch: Infinity,
+      allowClear: true,
+    });
+
+    // Move sidebar Select2 dropdown into sidebar login block
+    jQuery('.webform-submission-external-login-add-form select').select2({
+      dropdownParent: jQuery('#block-homepageexternalloginblock .sidebar-select'),
+      minimumResultsForSearch: Infinity,
+    });
+
     jQuery('.webform-submission-external-login-menu-add-form,.webform-submission-external-login-add-form').submit(function (e) {
 
       // Determine if this is menu or sidebar form.

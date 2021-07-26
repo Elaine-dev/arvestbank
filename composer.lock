@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bd7576b5919e3bd09d1c4f80ae8363f1",
+    "content-hash": "08bb331c03587c2d8dbdd221f0f6158b",
     "packages": [
         {
             "name": "acquia/blt",
@@ -4624,11 +4624,14 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-1.6",
-                    "datestamp": "1614961993",
+                    "datestamp": "1615218226",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "fix double warn": "patches/extlink-stop-propagation.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -6127,6 +6130,9 @@
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
                     }
+                },
+                "patches_applied": {
+                    "Change attach behaviors for ie11 support\n": "https://www.drupal.org/files/issues/2021-07-23/ie11-support-3225153-1.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

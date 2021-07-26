@@ -84,8 +84,8 @@ class StagePageSidebarBlock extends BlockBase {
               $sidebar_button_link = Link::fromTextAndUrl($sidebar_block_button['title'], $sidebar_button_url)->toString();
               $sidebar_button = [
                 '#markup' => render($sidebar_button_link),
-                '#prefix' => Markup::create('<button>'),
-                '#suffix' => Markup::create('</button>'),
+                '#prefix' => Markup::create('<div class="coh-style-link-arrow-button">'),
+                '#suffix' => Markup::create('</div>'),
               ];
               $sidebar_block_contents['button'] = $sidebar_button;
             }

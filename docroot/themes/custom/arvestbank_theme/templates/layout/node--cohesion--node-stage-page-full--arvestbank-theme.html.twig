@@ -4,7 +4,7 @@
 </a>
 {# Hidden H1 tag for SEO #}
 {% if label|render|trim is not empty %}
-  <div class="title-container"><h1>{{ label }}</h1></div>
+  <div class="title-container visually-hidden"><h1 class="visually-hidden">{{ label }}</h1></div>
 {% endif %}
 
 {# Local admin tabs #}
@@ -23,7 +23,7 @@
               <div class="slide-cta color-{{ content.field_slide1_cta_color.0 }} position-{{ content.field_slide1_cta_position.0 }}">
                 <span class="text1">{{ content.field_slide_one_cta_text|render }}</span>
                 {% if content.field_slide1_cta_link|render|trim is not empty %}
-                  <button>{{ content.field_slide1_cta_link|render }}</button>
+                  <div class="coh-style-link-button">{{ content.field_slide1_cta_link|render }}</div>
                 {% endif %}
               </div>
             </div>
@@ -35,7 +35,7 @@
               <div class="slide-cta color-{{ content.field_slide2_cta_color.0 }} position-{{ content.field_slide2_cta_position.0 }}">
                 <span class="text1">{{ content.field_slide_two_cta_text|render }}</span>
                 {% if content.field_slide2_cta_link|render|trim is not empty %}
-                  <button>{{ content.field_slide2_cta_link|render }}</button>
+                <div class="coh-style-link-button">{{ content.field_slide2_cta_link|render }}</div>
                 {% endif %}
               </div>
             </div>
@@ -47,7 +47,7 @@
               <div class="slide-cta color-{{ content.field_slide3_cta_color.0 }} position-{{ content.field_slide3_cta_position.0 }}">
                 <span class="text1">{{ content.field_slide_three_cta_text|render }}</span>
                 {% if content.field_slide3_cta_link|render|trim is not empty %}
-                  <button>{{ content.field_slide3_cta_link|render }}</button>
+                <div class="coh-style-link-button">{{ content.field_slide3_cta_link|render }}</div>
                 {% endif %}
               </div>
             </div>
@@ -60,7 +60,7 @@
                 <div class="slide-cta color-{{ content.field_slide4_cta_color.0 }} position-{{ content.field_slide4_cta_position.0 }}">
                   <span class="text1">{{ content.field_slide_four_cta_text|render }}</span>
                   {% if content.field_slide4_cta_link|render|trim is not empty %}
-                    <button>{{ content.field_slide4_cta_link|render }}</button>
+                  <div class="coh-style-link-button">{{ content.field_slide4_cta_link|render }}</div>
                   {% endif %}
                 </div>
               </div>
@@ -129,7 +129,7 @@
             <div class="left-block-content">
               {{ content.body|render }}
               {% if content.field_block_button|render|trim is not empty %}
-                <button>{{ content.field_block_button|render }}</button>
+                <div class="coh-style-link-arrow-button">{{ content.field_block_button|render }}</div>
               {% endif %}
             </div>
           </div>

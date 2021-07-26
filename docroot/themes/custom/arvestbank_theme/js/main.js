@@ -5,4 +5,5 @@
   }).replaceWith(function() {
     return this.nodeValue.replace("®", "<sup>&reg;</sup>");
   });
+
 })(jQuery, Drupal);
