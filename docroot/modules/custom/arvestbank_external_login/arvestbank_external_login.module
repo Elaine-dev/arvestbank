@@ -52,12 +52,6 @@ function _arvestbank_external_login_login_form_alter(array &$form, string $form_
     $form['elements']['login_select']['#access'] = FALSE;
   }
 
-  // Make top menu select lists first option have empty text.
-  if (strpos($form_id, 'webform_submission_external_login_menu') !== FALSE) {
-    $form['elements']['login_select']['#empty_option'] = '';
-    $form['elements']['login_select_non_prod']['#empty_option'] = '';
-  }
-
   // Define the form field names we have to change.
   $fieldNameReplacements = [
     'cash_manager' => [
