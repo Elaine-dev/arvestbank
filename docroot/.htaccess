@@ -62,37 +62,105 @@ AddEncoding gzip svgz
 <IfModule mod_rewrite.c>
   RewriteEngine on
 
-#  RewriteCond %{HTTP_HOST} !^www-test.arvest.com
-#  RewriteCond %{HTTP_HOST} !^local.arvestbank.com
-#  RewriteCond %{HTTP_HOST} !^arvestbankdev.prod.acquia-sites.com
-#  # skip rules if NOT within domain - only way to tie multiple rules to one cond
-#  RewriteRule  .?  -  [S=26]
-#  Redirect /personal/bank/checking/basic-blue/apply https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=312
-#  Redirect /personal/bank/checking/apply https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops
-#  Redirect /personal/bank/savings/apply https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=330
-#  Redirect /personal/bank/checking/free-blue/apply https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=311
-#  Redirect /personal/bank/checking/myblue/apply https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=313
-#  Redirect /personal/bank/savings/money-market/apply https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=325
-#  Redirect /personal/bank/checking/free-blue/apply https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=311
-#  Redirect /personal/bank/savings/savings-account/apply https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=325
-#  Redirect /personal/bank/checking/preferred-club/apply https:/secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=352
-#  Redirect /personal/bank/checking/club/apply https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=319
-#  Redirect /bank/credit-cards/flex-rewards-credit-cards/apply https://oa-beta.fisglobal.com/oa/fi/lt/10052/23246/#/beginApp
-#  Redirect /personal/bank/credit-cards/true-rate/apply https://oa-beta.fisglobal.com/oa/fi/lt/10052/22100/#/beginApp
-#  Redirect /balanceeraser/customer-log-in https://sso-tst.arvest.com/
-#  Redirect /personal/borrow/consumer-loans/apply/auto-loans https://oa-beta.fisglobal.com/oa/fi/lt/10052/22032/#/beginApp
-#  Redirect /personal/borrow/consumer-loans/apply/boat-loans https://oa-beta.fisglobal.com/oa/fi/lt/10052/22055/#/beginApp
-#  Redirect /personal/borrow/consumer-loans/apply/motorcycle-loans https://oa-beta.fisglobal.com/oa/fi/lt/10052/22034/#/beginApp
-#  Redirect /personal/borrow/consumer-loans/apply/rv-loans https://oa-beta.fisglobal.com/oa/fi/lt/10052/22036/#/beginApp
-#  Redirect /personal/borrow/consumer-loans/apply/powersports https://oa-beta.fisglobal.com/oa/fi/lt/10052/22035/#/beginApp
-#  Redirect /personal/borrow/consumer-loans/apply/new-accessible https://oa-beta.fisglobal.com/oa/fi/lt/10052/22033/#/beginApp
-#  Redirect /personal/borrow/consumer-loans/apply/unsecured-loans https://oa-beta.fisglobal.com/oa/fi/lt/10052/21686/#/beginApp
-#  Redirect /personal/borrow/consumer-loans/apply/fixed-home-equity-loans https://oa-beta.fisglobal.com/oa/fi/lt/10052/22043/#/beginApp
-#  Redirect /personal/borrow/consumer-loans/apply/arm-home-equity-loans https://oa-beta.fisglobal.com/oa/fi/lt/10052/22042/#/beginApp
-#  Redirect /personal/borrow/consumer-loans/apply/home-equity-line-of-credit https://oa-beta.fisglobal.com/oa/fi/lt/10052/22038/#/beginApp
-#  Redirect /personal/borrow/consumer-loans/apply/unsecured-personal-loans https://oa-beta.fisglobal.com/oa/fi/lt/10052/21686/#/beginApp
-#  Redirect /personal/borrow/consumer-loans/apply/personal-line-of-credit https://oa-beta.fisglobal.com/oa/fi/lt/10052/21686/#/beginApp
-#  Redirect /personal/borrow/consumer-loans/apply/unsecured-home-improvement-loan https://oa-beta.fisglobal.com/oa/fi/lt/10052/22088/#/beginApp
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /personal/bank/checking/basic-blue/apply
+  RewriteRule ^ https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=312 [L,R=301]
+
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /personal/bank/checking/apply
+  RewriteRule ^ https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops [L,R=301]
+
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /personal/bank/savings/apply
+  RewriteRule ^ https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=311 [L,R=301]
+
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /personal/bank/checking/myblue/apply
+  RewriteRule ^ https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=313 [L,R=301]
+
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /personal/bank/savings/money-market/apply
+  RewriteRule ^ https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=325 [L,R=301]
+
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /personal/bank/checking/free-blue/apply
+  RewriteRule ^ https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=311 [L,R=301]
+
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /personal/bank/savings/savings-account/apply
+  RewriteRule ^ https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=325 [L,R=301]
+
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /personal/bank/checking/preferred-club/apply
+  RewriteRule ^ https:/secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=352 [L,R=301]
+
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /bank/credit-cards/flex-rewards-credit-cards/apply
+  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/23246/#/beginApp [L,R=301]
+
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /personal/bank/credit-cards/true-rate/apply
+  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/22100/#/beginApp [L,R=301]
+
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /balanceeraser/customer-log-in
+  RewriteRule ^ https://sso-tst.arvest.com/ [L,R=301]
+
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/auto-loans
+  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/22032/#/beginApp [L,R=301]
+
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/boat-loans
+  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/22055/#/beginApp [L,R=301]
+
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /bank/credit-cards/flex-rewards-credit-cards/apply
+  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/23246/#/beginApp [L,R=301]
+
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/motorcycle-loans
+  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/22034/#/beginApp [L,R=301]
+
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/rv-loans
+  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/22036/#/beginApp [L,R=301]
+
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/powersports
+  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/22035/#/beginApp [L,R=301]
+
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/new-accessible
+  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/22033/#/beginApp [L,R=301]
+
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/unsecured-loans
+  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/21686/#/beginApp [L,R=301]
+
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/fixed-home-equity-loans
+  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/22043/#/beginApp [L,R=301]
+
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/arm-home-equity-loans
+  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/22042/#/beginApp [L,R=301]
+
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/home-equity-line-of-credit
+  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/22035/#/beginApp [L,R=301]
+
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/unsecured-personal-loans
+  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/21686/#/beginApp [L,R=301]
+
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/personal-line-of-credit
+  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/21686/#/beginApp [L,R=301]
+
+  RewriteCond %{HTTP_HOST} www-test.arvest.com
+  RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/unsecured-home-improvement-loan
+  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/22088/#/beginApp [L,R=301]
 
   # Set "protossl" to "s" if we were accessed via https://.  This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
