@@ -28,11 +28,10 @@ class AssociatesRedirect implements EventSubscriberInterface {
     $current_url = Url::fromRoute('<current>');
     $path = $current_url->toString();
 
-    if (str_contains($requested_uri)) {
+    if ($requested_uri) {
 
       // Check if  associate username.
-      $username_from_path = substr($requested_uri, 0, strpos($requested_uri, "."));
-      $username = str_replace('/','', $username_from_path);
+      $username = str_replace('/','', $requested_uri);
 
       $query = \Drupal::entityQuery('node')
         ->condition('type', 'associate')
@@ -42,7 +41,7 @@ class AssociatesRedirect implements EventSubscriberInterface {
       // Only redirect if the path is a associates username.
       if ($results != NULL) {
         // Create the destination URL.
-        $url = 'https://www.arvesthomeloan.com' . $requested_uri;
+        $url = 'https://www.arvesthomeloan.com' . $requested_uri . '.html';
 
         // Create redirect:
         $response = new TrustedRedirectResponse($url);

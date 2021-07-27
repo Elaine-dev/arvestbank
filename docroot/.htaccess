@@ -79,7 +79,7 @@ AddEncoding gzip svgz
   Redirect /personal/bank/checking/club/apply https://secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=319
   Redirect /bank/credit-cards/flex-rewards-credit-cards/apply https://oa-beta.fisglobal.com/oa/fi/lt/10052/23246/#/beginApp
   Redirect /personal/bank/credit-cards/true-rate/apply https://oa-beta.fisglobal.com/oa/fi/lt/10052/22100/#/beginApp
-  Redirect /balanceeraser/customer-log-in  https://sso-tst.arvest.com/as/authorization.oauth2?redirect_uri=https%3A%2F%2Faps18test.arvest.com%2Fcallback&client_id=aps_ac_client&response_type=code&state=%2Fmy-loan%2Ftransactions&scope=openid profile&pfiadapterid=compositeHTMLPingDirectory&access_type=offline&ArvBrand=APS&_gl=1*11gl6er*_ga*MzQzNzA0OTI1LjE2MjEwMDA3Mzg.*_ga_GRH26TKW0W*MTYyNjEwNDIxNi41Ny4xLjE2MjYxMDQ0ODUuNjA
+  Redirect /balanceeraser/customer-log-in https://sso-tst.arvest.com/
   Redirect /personal/borrow/consumer-loans/apply/auto-loans https://oa-beta.fisglobal.com/oa/fi/lt/10052/22032/#/beginApp
   Redirect /personal/borrow/consumer-loans/apply/boat-loans https://oa-beta.fisglobal.com/oa/fi/lt/10052/22055/#/beginApp
   Redirect /personal/borrow/consumer-loans/apply/motorcycle-loans https://oa-beta.fisglobal.com/oa/fi/lt/10052/22034/#/beginApp
