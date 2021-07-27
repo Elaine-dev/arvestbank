@@ -1,0 +1,34 @@
+-
+  type: cohesion_sync_package
+  export:
+    uuid: 50cd8b9a-e1fa-4e38-b6ac-13d9cce40e7d
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: pack_component_resources_and_doc
+    label: 'Component Resources and Documents'
+    description: 'A component for Resources and documents. Last Updated: Allie Jones 07/27/2021'
+    excluded_entity_types: '[]'
+    settings: '{"0f7d1ef7-c3a0-47ad-a7d0-a426baa78cce":{"type":"cohesion_component","items":{"0f7d1ef7-c3a0-47ad-a7d0-a426baa78cce":{"type":"cohesion_component"}},"checked":true}}'
+-
+  type: cohesion_component
+  export:
+    uuid: 0f7d1ef7-c3a0-47ad-a7d0-a426baa78cce
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: cpt_resources_and_docs
+    label: 'Resources and Docs'
+    json_values: '{"canvas":[{"type":"item","uid":"drupal-block","title":"Block","status":{"collapsed":true},"uuid":"14d70a32-9902-4747-92ea-1fdd1e3b84f4","parentUid":"root","isContainer":false,"children":[]}],"componentForm":[{"type":"form-container","uid":"form-tab-item","title":"Tab item","status":{"collapsed":false},"options":{"formBuilder":true},"uuid":"11458c6a-109f-4981-b9a6-0dad0c670aef","parentUid":"root","isContainer":true,"children":[{"type":"form-container","uid":"form-section","title":"Field group","status":{"collapsed":false},"options":{"formBuilder":true},"uuid":"2b325b3a-ac05-42a5-b722-c538a2d7f466","parentUid":"form-tab-item","isContainer":true,"children":[{"type":"form-help","uid":"form-helptext","title":"Help text","status":{"collapsed":false},"uuid":"0a6e4f1f-5d6a-4040-97fe-bc574ce0459e","parentUid":"form-section","isContainer":false,"children":[]}]}]}],"mapper":{"14d70a32-9902-4747-92ea-1fdd1e3b84f4":{}},"model":{"14d70a32-9902-4747-92ea-1fdd1e3b84f4":{"settings":{"title":"Block","customStyle":[{"customStyle":""}],"settings":{"theme":"all","customStyle":[{"customStyle":""}]},"theme":"arvestbank_theme","block":"views_block__documents_and_resources_block_1"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"block"}}},"11458c6a-109f-4981-b9a6-0dad0c670aef":{"settings":{"title":"Help","type":"cohTabItem","breakpointIcon":""},"contextVisibility":{"condition":"ALL"}},"2b325b3a-ac05-42a5-b722-c538a2d7f466":{"settings":{"title":"Help and information","type":"cohSection","hideRowHeading":0,"removePadding":0,"columnCount":"coh-component-field-group-1-col","breakpointIcon":"","breakpoints":false,"propertiesMenu":false,"disableScrollbar":true,"disableEllipsisMenu":true,"isOpen":true},"contextVisibility":{"condition":"ALL"}},"0a6e4f1f-5d6a-4040-97fe-bc574ce0459e":{"settings":{"title":"Help text","type":"cohHelpText","options":{"showClose":false,"helpType":"coh-help-text--help","helpText":"This component should be placed on any page that needs the Documents and Resources list view. There is no editable styles for this component."}},"contextVisibility":{"condition":"ALL"}}},"previewModel":{"14d70a32-9902-4747-92ea-1fdd1e3b84f4":{},"11458c6a-109f-4981-b9a6-0dad0c670aef":{},"2b325b3a-ac05-42a5-b722-c538a2d7f466":{},"0a6e4f1f-5d6a-4040-97fe-bc574ce0459e":{}},"variableFields":{"14d70a32-9902-4747-92ea-1fdd1e3b84f4":[],"11458c6a-109f-4981-b9a6-0dad0c670aef":[],"2b325b3a-ac05-42a5-b722-c538a2d7f466":[],"0a6e4f1f-5d6a-4040-97fe-bc574ce0459e":[]},"meta":{"fieldHistory":[]}}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0031
+    locked: false
+    modified: true
+    selectable: true
+    category: cpt_cat_drupal_blocks
+    preview_image: ''
+    has_quick_edit: true
+    entity_type_access: {  }
+    bundle_access: {  }
+    twig_template: component--cohesion-cpt-resources-and-docs
+    weight: 0
