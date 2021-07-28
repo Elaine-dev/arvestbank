@@ -39,6 +39,7 @@
         "drupal/ctools": "^3.6",
         "drupal/devel": "^4.1",
         "drupal/diff": "^1.0",
+        "drupal/domain": "^1.0@beta",
         "drupal/easy_breadcrumb": "^1.13",
         "drupal/editor_advanced_link": "^2.0",
         "drupal/entity_browser": "^2.5",
