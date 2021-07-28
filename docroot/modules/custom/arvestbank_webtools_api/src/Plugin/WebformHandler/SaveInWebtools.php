@@ -72,9 +72,7 @@ class SaveInWebtools extends WebformHandlerBase {
       $GLOBALS['sent_webform_submission_this_request'] = TRUE;
 
       // Build the form data to save.
-      $xmlData
-        = $this->buildFormDataXml($this->configuration['webtools_form_name'],
-        $form_state);
+      $xmlData = $this->buildFormDataXml($this->configuration['webtools_form_name'], $form_state);
 
       // Build the Guzzle request options.
       $requestOptions = [
@@ -334,6 +332,9 @@ class SaveInWebtools extends WebformHandlerBase {
 
     }
 
+    // Tracks weather we've found a region id.
+    $foundRegionId = FALSE;
+
     // If branch location is available.
     if (
       isset($submittedValues['branch_location'])
@@ -347,6 +348,9 @@ class SaveInWebtools extends WebformHandlerBase {
 
       // If we have a legacy region id to use.
       if ($regionId) {
+        // Track that we've found a region id.
+        $foundRegionId = TRUE;
+        // Put region id in request.
         $requestData['meta']['meta'][] = [
           'name'  => 'regionid',
           'value' => $regionId,
@@ -410,6 +414,8 @@ class SaveInWebtools extends WebformHandlerBase {
 
         // If we got a legacy region id.
         if ($legacyRegionId) {
+          // Track that we've found a region id.
+          $foundRegionId = TRUE;
           // Add to meta info.
           $requestData['meta']['meta'][] = [
             'name'  => 'regionid',
@@ -421,6 +427,15 @@ class SaveInWebtools extends WebformHandlerBase {
 
     }
 
+    // If we didn't obtain a region id.
+    if (!$foundRegionId) {
+      // Provide a default value for region id.
+      $requestData['meta']['meta'][] = [
+        'name'  => 'regionid',
+        'value' => 101,
+      ];
+    }
+
     $xmlConverterObject = new ArrayToXml($requestData, 'request');
     return $xmlConverterObject->dropXmlDeclaration()->toXml();
 
@@ -428,6 +443,8 @@ class SaveInWebtools extends WebformHandlerBase {
 
   /**
    * Gets submitted values and titles from reference fields.
+   *
+   * Called recursively to get field type from nested form elements.
    *
    * Currently only webform_term_select is supported as that's all we use.
    *
@@ -438,11 +455,15 @@ class SaveInWebtools extends WebformHandlerBase {
    *   The webtools api form name.
    * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The form state containing submitted values.
+   * @param array $formFields
+   *   Form fields to get values for. Only used for recursive calls.
+   * @param array $submittedValues
+   *   Passed by reference for recursive calls so it can be edited.
    *
    * @return array
    *   The submitted values.
    */
-  private function getSubmittedValues(string $formName, FormStateInterface $form_state, $formFields = [], &$submittedValues = []) {
+  private function getSubmittedValues(string $formName, FormStateInterface $form_state, array $formFields = [], array &$submittedValues = []) {
 
     // If this isn't a nested call.
     if (!count($formFields)) {
