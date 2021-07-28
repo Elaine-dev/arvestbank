@@ -73,11 +73,13 @@ elements: |-
       '#type': webform_term_select
       '#title': 'Branch Location'
       '#select2': true
-      '#required': true
       '#states':
         visible:
           ':input[name="regarding"]':
             checked: true
+      '#wrapper_attributes':
+        class:
+          - visually-hidden
       '#attributes':
         class:
           - webform-chosen

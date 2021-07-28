@@ -72,6 +72,7 @@
         "drupal/migrate_source_csv": "^3.4",
         "drupal/migrate_tools": "^5.0",
         "drupal/moderation_dashboard": "^1.0@beta",
+        "drupal/moderation_sidebar": "^1.4",
         "drupal/mysql56": "^1.0@beta",
         "drupal/paragraphs": "^1.12",
         "drupal/pathauto": "^1.8",
@@ -180,6 +181,9 @@
             },
             "drupal/media_video_micromodal": {
                 "Change attach behaviors for ie11 support\n": "https://www.drupal.org/files/issues/2021-07-23/ie11-support-3225153-1.patch"
+            },
+            "drupal/scheduler_content_moderation_integration": {
+                "Hide scheduling state options if there are no valid transitions\n": "https://www.drupal.org/files/issues/2020-07-16/2798689-hide-scheduling-options-if-no-valid-transitions-20.patch"
             },
             "acquia/cohesion": {
                 "Allow master templates to use to be defined at route level.\n": "patches/cohesion-master-template-by-route.patch"

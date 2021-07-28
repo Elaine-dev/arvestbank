@@ -8,12 +8,13 @@ weight: -9
 is_admin: null
 permissions:
   - 'access content overview'
-  - 'access environment indicator'
   - 'access sitemap'
-  - 'use editorial transition draft_to_review'
-  - 'use editorial transition review_to_draft'
   - 'use editorial transition unpublished'
+  - 'use moderation sidebar'
   - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view latest version'
   - 'view media'
   - 'view own unpublished content'
+  - 'view own unpublished media'
   - 'view the administration theme'

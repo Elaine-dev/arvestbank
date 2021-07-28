@@ -235,7 +235,9 @@ elements: |-
       '#type': webform_term_select
       '#title': 'Branch Location'
       '#select2': true
-      '#required': true
+      '#wrapper_attributes':
+        class:
+          - visually-hidden
       '#vocabulary': branch_location
       '#breadcrumb_delimiter': ''
   actions:
