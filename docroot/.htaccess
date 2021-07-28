@@ -104,7 +104,7 @@ AddEncoding gzip svgz
 
   RewriteCond %{HTTP_HOST} www-test.arvest.com
   RewriteCond %{REQUEST_URI} /balanceeraser/customer-log-in
-  RewriteRule ^ https://sso-tst.arvest.com/ [L,R=301]
+  RewriteRule ^ https://sso-tst.arvest.com/as/authorization.oauth2?redirect_uri=https%3A%2F%2Faps18test.arvest.com%2Fcallback&client_id=aps_ac_client&response_type=code&state=%2Fmy-loan%2Ftransactions&scope=openid profile&pfiadapterid=compositeHTMLPingDirectory&access_type=offline&ArvBrand=APS&_gl=1*11gl6er*_ga*MzQzNzA0OTI1LjE2MjEwMDA3Mzg.*_ga_GRH26TKW0W*MTYyNjEwNDIxNi41Ny4xLjE2MjYxMDQ0ODUuNjA [L,R=301]
 
   RewriteCond %{HTTP_HOST} www-test.arvest.com
   RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/auto-loans
