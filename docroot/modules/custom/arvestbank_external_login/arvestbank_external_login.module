@@ -40,6 +40,23 @@ function arvestbank_external_login_form_webform_submission_external_login_menu_f
  */
 function _arvestbank_external_login_login_form_alter(array &$form, string $form_id) {
 
+  // Prepend form id to the id attribute of each element.
+  // @see https://www.drupal.org/project/drupal/issues/1852090.
+  foreach ($form['elements'] as $elementIndex => $element) {
+    // If we have a webform and webform key for this element.
+    if (
+      isset($form['elements'][$elementIndex]['#webform'])
+      && isset($form['elements'][$elementIndex]['#webform_key'])
+    ) {
+      // Build the id we want to use.
+      $formattedWebformId = str_replace('_', '-', $form['elements'][$elementIndex]['#webform']);
+      $formattedWebformKey = str_replace('_', '-', $form['elements'][$elementIndex]['#webform_key']);
+      $newElementId = $formattedWebformId . '--' . $formattedWebformKey;
+      // Set the id for this element.
+      $form['elements'][$elementIndex]['#attributes']['id'] = $newElementId;
+    }
+  }
+
   // Decide to show prod or non-prod login select.
   if (isset($_ENV['AH_SITE_ENVIRONMENT']) && $_ENV['AH_SITE_ENVIRONMENT'] == 'prod') {
     $form['elements']['login_select']['#wrapper_attributes']['class'][] = 'active-sidebar-select';
