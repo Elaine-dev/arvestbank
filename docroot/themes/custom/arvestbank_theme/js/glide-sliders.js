@@ -67,7 +67,33 @@ Drupal.behaviors.arvestSliders = {
 
           // Instantiate and mount slider.
           const glide = new Glide(glideElement, sliders[slideClass].options);
+
+          // Set heights before build
+          glide.on('build.before', function () {
+            glideHandleHeight();
+          });
+          // Adjust heights on browser resize
+          glide.on('resize', function () {
+            glideHandleHeight();
+          });
+
           glide.mount();
+
+          // Resize slide heights based on text objects
+          function glideHandleHeight() {
+            for (var j = 0; j < glideSlides.length; j++) {
+              const sliderBlock = glideSlides[j].querySelector('.left-block-padding'); // Get text object
+              const blockTop = sliderBlock.offsetTop; // Get top offset
+              const blockHeight = sliderBlock.offsetHeight; // Get current height
+
+              // If width < 950px set specific slide heights
+              if (slide.offsetWidth < 950) {
+                glideSlides[j].style.height = blockTop + blockHeight + 10 + 'px'; // Set new height + extra padding height with px
+              } else {
+                glideSlides[j].style.height = '100%';
+              }
+            }
+          }
 
           // If slider can't go back and we have arrows.
           if (sliders[slideClass].options.rewind === false && glideArrows !== null) {
