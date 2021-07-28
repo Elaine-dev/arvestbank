@@ -123,6 +123,9 @@ elements: |-
       '#title': 'Branch Location'
       '#select2': true
       '#required': true
+      '#wrapper_attributes':
+        class:
+          - visually-hidden
       '#vocabulary': branch_location
       '#breadcrumb_delimiter': ''
     if_you_are_currently_working_with_one_of_our_loan_officers_pleas:

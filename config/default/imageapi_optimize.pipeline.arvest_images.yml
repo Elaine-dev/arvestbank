@@ -12,4 +12,4 @@ processors:
     id: resmushit
     weight: 1
     data:
-      quality: 75
+      quality: 95

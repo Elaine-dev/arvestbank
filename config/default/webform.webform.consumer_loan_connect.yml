@@ -94,9 +94,9 @@ elements: |-
     '#type': webform_term_select
     '#title': 'Branch Location'
     '#select2': true
-    '#required': true
     '#vocabulary': branch_location
     '#breadcrumb_delimiter': ''
+    '#required': true
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'

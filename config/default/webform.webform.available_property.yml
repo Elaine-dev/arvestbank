@@ -181,6 +181,9 @@ elements: |-
   branch_location:
     '#type': webform_term_select
     '#title': 'Branch Location'
+    '#wrapper_attributes':
+      class:
+        - visually-hidden
     '#vocabulary': branch_location
     '#breadcrumb_delimiter': ''
   actions:
