@@ -254,7 +254,8 @@
     .block,
     .coh-style-webforms,
     form,
-    .top-select {
+    .top-select,
+    select {
         display: flex;
         flex: 1 1 auto;
     }
@@ -262,6 +263,63 @@
 
 // Target sidebar and top logins
 .coh-style-login-blocks {
+
+    // Style default select input like Select2
+    .form-select {
+        text-transform: uppercase;
+        align-items: center;
+        color: #fff;
+        border: none;
+        border-radius: 0;
+        padding: 0 calculateRem(45px);
+        font-size: 0.75rem;
+        line-height: 1.0125rem;
+        font-weight: 600;
+        text-overflow: ellipsis;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        border-left: 0.0625rem solid;
+        border-right: 0.0625rem solid;
+        border-color: #426386;
+        background: url(../images/icon-lock.png) left 1rem center no-repeat, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='2 2 12 12'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='square' stroke-linejoin='square' stroke-width='3' d='M2 5l6 7 6-7'/%3e%3c/svg%3e") right 1rem center no-repeat;
+        background-size: calculateRem(22px) calculateRem(20px), calculateRem(20px) calculateRem(11px);
+        background-color: #4178b4;
+        &::-ms-expand {
+            display: none;
+        }
+        &:hover {
+            color: #002c5c;
+            background-color: #5990cb;
+        }
+        &:focus {
+            background-color: #acc6e1;
+            color: #002c5c;
+            outline: none;
+        }
+        option {
+            text-transform: unset;
+            font-weight: normal;
+            margin: 0;
+            padding: 0 0 0.3125rem 0;
+            color: #4879ad;
+            line-height: 1.2;
+            font-size: 0.75rem;
+            background: #fff;
+        }
+    }
+    // Increase sidebar default select size
+    .sidebar-select .form-select {
+        border: 0; // Reset border
+        font-size: calculateRem(18px);
+        line-height: 2.1;
+        font-weight: 500;
+    }
 
     // Arvest Online login text input
     // input[data-drupal-selector='edit-arvest-online-banking-username'] {
@@ -302,8 +360,6 @@
 
         // Max-width 949
         @media (max-width: 59.3125rem) {
-        // Max-width 564px
-        // @media screen and (max-width: 35.25em) {
             margin-top: calculateRem(2px);
             background: #00457c;
         }
@@ -345,9 +401,6 @@
         .select2-selection {
             background: #4178b4 url(../images/icon-lock.png) left 1rem center no-repeat;
             background-size: calculateRem(22px) calculateRem(20px);
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
 
             // Select2 Placeholder
             .select2-selection__rendered {
@@ -401,7 +454,7 @@
         // Replace arrow with X on selection
         &.select2-container .select2-selection--clearable {
             .select2-selection__arrow {
-                // b { transform: scaleY(-1); }
+                // b { transform: scaleY(-1); } // Reverse arrow to show active
                 display: none;
             }
             button.select2-selection__clear {
@@ -427,18 +480,19 @@
         &.select2-container--open {
             .select2-selection {
                 background-color: #acc6e1;
-                .select2-selection__placeholder {
+                .select2-selection__placeholder,
+                .select2-selection__rendered {
                     color: #002c5c;
                 }
                 &:hover {
                     background-color: #001b44;
-                    .select2-selection__placeholder {
+                    .select2-selection__placeholder,
+                    .select2-selection__rendered {
                         color: #ffffff;
                     }
                 }
             }
         }
-
 
         // Dropdown container
         .select2-dropdown {
@@ -447,7 +501,7 @@
             .select2-results {
                 position: absolute;
                 right: 0;
-                width: calculateRem(220px);
+                width: calculateRem(222px);
                 background-color: #fff;
                 margin-right: -1px;
                 color: #4879ad;
@@ -525,50 +579,68 @@
 
     // Top Select2-specific styles
     .top-select { 
-        // Select placeholder
-        .select2-container .select2-selection {
 
-            // Max-width 949px
-            @media screen and (max-width: 59.3125rem) {
+        // Max-width 949px
+        @media screen and (max-width: 59.3125rem) {
+            // Dropdown Container
+            .select2-container--default .select2-dropdown .select2-results {
+                // margin-right: -1px; // Align right border with screen
+            }
+
+            // Select2 placeholder and select default
+            .select2-container .select2-selection,
+            .form-select {
                 height: calculateRem(46px); // Explicit height on small screens
                 border: 0; // Remove borders when not in nav
             }
+        }
 
-            .select2-selection__rendered {
-                // // Max-width 1169px
-                @media screen and (max-width: 73.0625rem) {
-                    width: calculateRem(180px); // Reduce width
-                }
-
-                // Max-width 1029px
-                @media screen and (max-width: 64.3125rem) {
-                    width: calculateRem(160px); // Reduce width
-                }
-
-                // Max-width 949px
-                @media screen and (max-width: 59.3125rem) {
-                    border: none; // Remove navigation grey border
-                }
+        .select2-container .select2-selection .select2-selection__rendered,
+        .form-select {
+            // // Max-width 1169px
+            @media screen and (max-width: 73.0625rem) {
+                width: calculateRem(180px); // Reduce width
             }
 
-            // Max-width 564px
-            @media screen and (max-width: 35.25em) {
-            // Reduce widths and elements for small screens
+            // Max-width 1029px
+            @media screen and (max-width: 64.3125rem) {
+                width: calculateRem(160px); // Reduce width
+            }
 
-            // // Max-width 319px
-            // @media screen and (max-width: 19.9375em) {
-                background-image: none; // remove lock icon
+            // Max-width 949px
+            @media screen and (max-width: 59.3125rem) {
+                border: none; // Remove navigation grey border
+            }
+        }
 
-                .select2-selection__rendered {
-                    width: calculateRem(120px); // Reduce width
-                    padding-left: calculateRem(10px);
-                }
-                .select2-selection__arrow {
-                    right: calculateRem(10px); // Give more text space; move arrow
-                }
-                &.select2-selection--clearable button.select2-selection__clear {
-                    right: 0; // Align X with arrow
-                }
+        // Max-width 564px
+        @media screen and (max-width: 35.25em) {
+        // Reduce widths and elements for small screens
+
+        // // Max-width 319px
+        // @media screen and (max-width: 19.9375em) {
+            .select2-container .select2-selection {
+                background-image: none; // Remove lock icon
+            }
+            .form-select {
+                // Remove lock icon
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='2 2 12 12'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='square' stroke-linejoin='square' stroke-width='3' d='M2 5l6 7 6-7'/%3e%3c/svg%3e");
+                background-repeat: no-repeat;
+                background-position: right 0.5rem center;
+                background-size: calculateRem(20px) calculateRem(11px);
+            }
+
+            .select2-container .select2-selection .select2-selection__rendered,
+            .form-select {
+                width: calculateRem(120px); // Reduce width
+                padding-left: calculateRem(10px); // Reduce padding
+                padding-right: calculateRem(30px);
+            }
+            .select2-container .select2-selection .select2-selection__arrow {
+                right: calculateRem(10px); // Give more text space; move arrow
+            }
+            .select2-container .select2-selection.select2-selection--clearable button.select2-selection__clear {
+                right: 0; // Align X with arrow
             }
         }
     }
