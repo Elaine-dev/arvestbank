@@ -6,16 +6,16 @@
 Drupal.behaviors.externalLogin = {
   attach: function (context, settings) {
 
-    // Move top menu Select2 dropdown into login block and add closeout button
+    // Instantiate menu Select2, move into login block, and add closeout button.
     jQuery('.webform-submission-external-login-menu-add-form select').select2({
-      dropdownParent: jQuery('#block-menuexternalloginblock .top-select'),
+      dropdownParent: jQuery('.block-menu-external-login-block .top-select'),
       minimumResultsForSearch: Infinity,
       allowClear: true,
     });
 
-    // Move sidebar Select2 dropdown into sidebar login block
+    // Instantiate sidebar Select2, move into sidebar login block.
     jQuery('.webform-submission-external-login-add-form select').select2({
-      dropdownParent: jQuery('#block-homepageexternalloginblock .sidebar-select'),
+      dropdownParent: jQuery('.block-homepage-external-login-block .sidebar-select'),
       minimumResultsForSearch: Infinity,
     });
 
@@ -152,10 +152,8 @@ Drupal.behaviors.externalLogin = {
 
     // Unrequire sidebar login select on load
     // To be re-required on change.
-    jQuery('.block-homepage-external-login-block #edit-login-select-non-prod')
-      .add('.block-homepage-external-login-block #edit-login-select-non-prod--2')
-      .add('.block-homepage-external-login-block #edit-login-select')
-      .add('.block-homepage-external-login-block #edit-login-select--2')
+    jQuery('.block-homepage-external-login-block [data-drupal-selector="edit-login-select-non-prod"]')
+      .add('.block-homepage-external-login-block [data-drupal-selector="edit-login-select"]')
       .removeAttr('required');
 
     // Default sidebar form action non prod.
@@ -178,10 +176,8 @@ Drupal.behaviors.externalLogin = {
     // For prod or non prod sidebar select
     // To hide/show online banking field container and re-require select
     // Doing this here to prevent hiding on load.
-    jQuery('.block-homepage-external-login-block #edit-login-select-non-prod')
-      .add('.block-homepage-external-login-block #edit-login-select-non-prod--2')
-      .add('.block-homepage-external-login-block #edit-login-select')
-      .add('.block-homepage-external-login-block #edit-login-select--2')
+    jQuery('.block-homepage-external-login-block [data-drupal-selector="edit-login-select-non-prod"]')
+      .add('.block-homepage-external-login-block [data-drupal-selector="edit-login-select"]')
       .change(function () {
 
       // Require select again.
@@ -189,19 +185,16 @@ Drupal.behaviors.externalLogin = {
 
       // If the online banking container should be shown.
       if (jQuery(this).val() == 'arvest_online_banking') {
-        jQuery('.block-homepage-external-login-block #edit-arvest-online-banking')
-          .add('.block-homepage-external-login-block #edit-arvest-online-banking--2')
+        jQuery('.block-homepage-external-login-block [data-drupal-selector="edit-arvest-online-banking"]')
           .show();
       }
       // If the online banking container should be hidden.
       else {
         // Hide container.
-        jQuery('.block-homepage-external-login-block #edit-arvest-online-banking')
-          .add('.block-homepage-external-login-block #edit-arvest-online-banking--2')
+        jQuery('.block-homepage-external-login-block [data-drupal-selector="edit-arvest-online-banking"]')
           .hide();
         // Set value of contained fields to null.
-        jQuery('.block-homepage-external-login-block #edit-arvest-online-banking input')
-          .add('.block-homepage-external-login-block #edit-arvest-online-banking--2 input')
+        jQuery('.block-homepage-external-login-block [data-drupal-selector="edit-arvest-online-banking"] input')
           .each(function () {
           jQuery(this).val('');
         });
