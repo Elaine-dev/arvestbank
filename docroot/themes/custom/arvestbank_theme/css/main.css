@@ -1001,3 +1001,24 @@ li.coh-menu-list-item.coh-ce-a69b2abe.js-coh-menu-item:nth-child(6), li.coh-menu
 .webform-submission-sign-up-for-arvest-flex-rewards--form div.webform-name > div.webform-flexbox {
   margin: 0;
 }
+
+
+.webform-submission-financing-options-form .financing-featured-image {
+  float: right;
+  margin-left: 1.25rem;
+}
+
+@media (max-width: 47.9375rem) {
+  .webform-submission-financing-options-form .financing-featured-image {
+    float: none;
+    margin-left: 0;
+  }
+  .webform-submission-financing-options-form .financing-featured-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.webform-submission-financing-options-form .views-element-container {
+  margin-bottom: 1.25rem;
+}
