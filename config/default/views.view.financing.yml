@@ -61,9 +61,8 @@ display:
         type: default
         options:
           grouping: {  }
-          row_class: ''
+          row_class: clearfix
           default_row_class: true
-          uses_fields: false
       row:
         type: fields
         options:
@@ -173,7 +172,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: p
           element_class: ''
           element_label_type: ''
           element_label_class: ''
@@ -434,7 +433,7 @@ display:
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_class: financing-featured-image
           element_default_classes: true
           empty: ''
           hide_empty: false
@@ -557,7 +556,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: p
           element_class: ''
           element_label_type: ''
           element_label_class: ''

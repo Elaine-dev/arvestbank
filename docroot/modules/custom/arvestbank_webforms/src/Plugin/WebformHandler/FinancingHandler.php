@@ -152,7 +152,7 @@ class FinancingHandler extends WebformHandlerBase {
       // Beginning Markup.
       $build[] = [
         '#type' => 'markup',
-        '#markup' => '<h2>Your Recommendation</h2>Based on your answers, this should be what you need!',
+        '#markup' => '<h2>Your Recommendation</h2><p>Based on your answers, this should be what you need!</p>',
       ];
 
       for ($i = 0; $i <= 2; $i++) {
@@ -165,7 +165,7 @@ class FinancingHandler extends WebformHandlerBase {
             else {
               $option_text = "option";
             }
-            $message = "We understand each customer's financial situation and financing needs are different. With that in mind, we have an additional $option_text that could also help you.";
+            $message = "<p>We understand each customer's financial situation and financing needs are different. With that in mind, we have an additional $option_text that could also help you.</p>";
             $build[] = [
               '#type' => 'markup',
               '#markup' => $message,
@@ -181,11 +181,11 @@ class FinancingHandler extends WebformHandlerBase {
     else {
 
       // Set the default response for no options.
-      $message = "Thank you for your interest in this loan from Arvest! Unfortunately, we do not take online applications for this type of loan at this time. To learn more about the loan and apply, please call (866) 952-9523 or visit your local branch.";
+      $message = "<p>Thank you for your interest in this loan from Arvest! Unfortunately, we do not take online applications for this type of loan at this time. To learn more about the loan and apply, please call (866) 952-9523 or visit your local branch.</p>";
 
       // This is the only exception.  If others are found make this a switch.
       if ($results_key === 'other|buy_home|||') {
-        $message = "We’re glad you’re interested in buying  a home with Arvest. Visit <a href=\"/homeloan\">arvest.com/homeloan</a> to apply or learn more from our mortgage division.";
+        $message = "<p>We’re glad you’re interested in buying  a home with Arvest. Visit <a href=\"/homeloan\">arvest.com/homeloan</a> to apply or learn more from our mortgage division.</p>";
       }
 
       // Sorry no results.

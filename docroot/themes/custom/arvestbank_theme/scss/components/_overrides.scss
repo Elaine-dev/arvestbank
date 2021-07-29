@@ -128,12 +128,36 @@ li.coh-menu-list-item.coh-ce-a69b2abe.js-coh-menu-item:nth-child(6), li.coh-menu
       }
 
     }
-
   }
 
   div.webform-name > div.webform-flexbox {
     margin: 0;
   }
 
+}
+
+/* financing option: help me decide */
+.webform-submission-financing-options-form {
+
+  // Float featured image to the right
+  .financing-featured-image {
+    float: right;
+    margin-left: 1.25rem;
+    
+    // Max-width 767: Remove float and make image responsive
+    @media (max-width: 47.9375rem) {
+      float: none;
+      margin-left: 0;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  // Add more spacing for each views element
+  .views-element-container {
+    margin-bottom: 1.25rem;
+  }
 }
 
