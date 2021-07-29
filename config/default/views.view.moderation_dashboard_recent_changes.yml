@@ -440,10 +440,11 @@ display:
   block_2:
     display_plugin: block
     id: block_2
-    display_title: 'Your activity'
+    display_title: 'Approved Content'
     position: 2
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       display_description: ''
       arguments:
         uid:
@@ -520,7 +521,7 @@ display:
         arguments: false
         title: false
         empty: false
-      title: 'Your activity'
+      title: 'Approved Content'
       empty:
         area_text_custom:
           id: area_text_custom
