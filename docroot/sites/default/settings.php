@@ -843,3 +843,6 @@ require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
 $databases['default']['default']['init_commands'] = array(
   'wait_timeout' => "SET SESSION wait_timeout=1200",
 );
+
+$config['image.settings']['suppress_itok_output'] = TRUE;
+$config['image.settings']['allow_insecure_derivatives'] = TRUE;
