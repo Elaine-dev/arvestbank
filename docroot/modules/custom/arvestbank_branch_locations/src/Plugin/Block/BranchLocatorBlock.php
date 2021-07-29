@@ -44,6 +44,7 @@ class BranchLocatorBlock extends BlockBase {
       '#type' => 'textfield',
       '#attributes' => [
         'name' => 'loc_q',
+        'aria-label' => 'branch location'
       ],
       '#placeholder' => 'City, State or Zip',
     ];
