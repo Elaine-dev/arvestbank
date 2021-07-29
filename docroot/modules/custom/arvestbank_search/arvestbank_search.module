@@ -66,6 +66,8 @@ function arvestbank_search_form_views_exposed_form_alter(&$form, FormStateInterf
     $form['search']['#weight'] = 2;
     // Change placeholder text for search bar.
     $form['search']['#attributes']['placeholder'] = 'Enter a Question or Keyword';
+    // Add aria label to search bar
+    $form['search']['#attributes']['aria-label'] = 'Ask Arvest a Question';
     // Add hidden field indicating if a suggestion was used.
     $form['source'] = [
       '#type' => 'hidden',
