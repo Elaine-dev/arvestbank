@@ -96,11 +96,11 @@ AddEncoding gzip svgz
 
   RewriteCond %{HTTP_HOST} www-test.arvest.com
   RewriteCond %{REQUEST_URI} /bank/credit-cards/flex-rewards-credit-cards/apply
-  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/23246/#/beginApp [L,R=301]
+  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/23246/#/beginApp [NE,R]
 
   RewriteCond %{HTTP_HOST} www-test.arvest.com
   RewriteCond %{REQUEST_URI} /personal/bank/credit-cards/true-rate/apply
-  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/22100/#/beginApp [L,R=301]
+  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/22100/#/beginApp [NE,R]
 
   RewriteCond %{HTTP_HOST} www-test.arvest.com
   RewriteCond %{REQUEST_URI} /balanceeraser/customer-log-in
