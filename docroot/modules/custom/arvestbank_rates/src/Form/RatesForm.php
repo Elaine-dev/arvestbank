@@ -15,12 +15,14 @@ class RatesForm extends ConfigFormBase {
    *
    * @var formValueKeysToIgnore
    */
-  private $formValueKeysToIgnore = [
+  public static $formValueKeysToIgnore = [
     'form_build_id',
     'form_id',
     'form_token',
     'op',
     'submit',
+    'update_deposit_rates',
+    'update_mortgage_rates',
   ];
 
   /**
@@ -731,7 +733,7 @@ class RatesForm extends ConfigFormBase {
 
       // If we're not ignoring this value and it has changed.
       if (
-        !in_array($formFieldKey, $this->formValueKeysToIgnore)
+        !in_array($formFieldKey, self::$formValueKeysToIgnore)
         && strpos($formFieldKey, 'deposit_rates__') !== 0
         && $formFieldValue !== $this->config('arvestbank_rates.settings')->get($formFieldKey)
       ) {

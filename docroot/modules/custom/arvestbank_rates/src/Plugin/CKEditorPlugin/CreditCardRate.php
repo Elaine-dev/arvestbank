@@ -4,6 +4,7 @@ namespace Drupal\arvestbank_rates\Plugin\CKEditorPlugin;
 
 use Drupal\editor\Entity\Editor;
 use Drupal\ckeditor\CKEditorPluginBase;
+use Drupal\arvestbank_rates\Form\RatesForm;
 
 /**
  * Defines the "creditcardrate" plugin.
@@ -49,12 +50,16 @@ class CreditCardRate extends CKEditorPluginBase {
 
     // Loop over tokens adding to token array.
     foreach ($ratesConfigValues as $tokenName => $tokenValue) {
-      // Decide on human name for config variable.
-      $tokenHumanName = ucwords(str_replace(['__', '_'], [' - ', ' '], $tokenName));
-      // Add to array.
-      $config['creditcardrate_tokens'][] = [
-        $tokenHumanName,
-      ];
+      // If this isn't one of the ignored values from the rates form.
+      if (!in_array($tokenName, RatesForm::$formValueKeysToIgnore)) {
+        // Decide on human name for config variable.
+        $tokenHumanName = ucwords(str_replace(['__', '_'], [' - ', ' '],
+          $tokenName));
+        // Add to array.
+        $config['creditcardrate_tokens'][] = [
+          $tokenHumanName,
+        ];
+      }
     }
 
     // Alphabetize tokens.
