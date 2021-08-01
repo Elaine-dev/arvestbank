@@ -82,8 +82,6 @@ module:
   http_cache_control: 0
   iframe: 0
   image: 0
-  imageapi_optimize: 0
-  imageapi_optimize_resmushit: 0
   imce: 0
   inline_entity_form: 0
   jquery_ui: 0
