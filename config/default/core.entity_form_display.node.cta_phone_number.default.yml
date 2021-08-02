@@ -9,6 +9,12 @@ targetEntityType: node
 bundle: cta_phone_number
 mode: default
 content:
+  publish_state:
+    type: scheduler_moderation
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   scheduler_settings:
     weight: 20
     settings: {  }
@@ -28,6 +34,12 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  unpublish_state:
+    type: scheduler_moderation
+    weight: 30
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   created: true

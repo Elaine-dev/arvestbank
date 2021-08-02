@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.stage_page.field_block_button
     - field.field.node.stage_page.field_block_title
     - field.field.node.stage_page.field_disclosure
+    - field.field.node.stage_page.field_exclude_from_search
     - field.field.node.stage_page.field_icon_four
     - field.field.node.stage_page.field_icon_four_text
     - field.field.node.stage_page.field_icon_one
@@ -56,6 +57,8 @@ dependencies:
     - paragraphs
     - path
     - scheduler
+    - scheduler_content_moderation_integration
+    - search_api_exclude_entity
     - text
     - yoast_seo
 third_party_settings:
@@ -340,6 +343,13 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_exclude_from_search:
+    weight: 57
+    settings:
+      field_label: 'Yes, exclude this entity from the search indexes.'
+    third_party_settings: {  }
+    type: search_api_exclude_entity_widget
+    region: content
   field_icon_four:
     type: media_library_widget
     weight: 42
@@ -598,6 +608,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  publish_state:
+    type: scheduler_moderation
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   scheduler_settings:
     weight: 9
     region: content
@@ -631,6 +647,12 @@ content:
   unpublish_on:
     type: datetime_timestamp_no_default
     weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  unpublish_state:
+    type: scheduler_moderation
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }

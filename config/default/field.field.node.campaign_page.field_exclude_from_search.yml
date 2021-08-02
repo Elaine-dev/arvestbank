@@ -1,0 +1,23 @@
+uuid: 6f3d5475-c83e-4390-93fe-1f1773c6e652
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_exclude_from_search
+    - node.type.campaign_page
+  module:
+    - search_api_exclude_entity
+id: node.campaign_page.field_exclude_from_search
+field_name: field_exclude_from_search
+entity_type: node
+bundle: campaign_page
+label: 'Yes, exclude this entity from the search indexes'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: false
+default_value_callback: ''
+settings: {  }
+field_type: search_api_exclude_entity

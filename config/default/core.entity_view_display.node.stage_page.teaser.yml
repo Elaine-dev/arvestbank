@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.stage_page.field_block_button
     - field.field.node.stage_page.field_block_title
     - field.field.node.stage_page.field_disclosure
+    - field.field.node.stage_page.field_exclude_from_search
     - field.field.node.stage_page.field_icon_four
     - field.field.node.stage_page.field_icon_four_text
     - field.field.node.stage_page.field_icon_one
@@ -71,6 +72,7 @@ hidden:
   field_block_button: true
   field_block_title: true
   field_disclosure: true
+  field_exclude_from_search: true
   field_icon_four: true
   field_icon_four_text: true
   field_icon_one: true
