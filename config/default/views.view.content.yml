@@ -560,6 +560,7 @@ display:
           admin_label: ''
           operator: in
           value:
+            all: all
             editorial-draft: editorial-draft
             editorial-in_review: editorial-in_review
             editorial-approved: editorial-approved

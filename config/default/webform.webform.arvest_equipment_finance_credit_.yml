@@ -15,9 +15,16 @@ title: 'Arvest Equipment Finance Credit Application'
 description: ''
 category: ''
 elements: |-
+  apply_online:
+    '#type': webform_wizard_page
+    '#title': 'Apply Online'
+    '#next_button_label': Continue
+    markup_01:
+      '#type': webform_markup
+      '#markup': '<p>Apply Online Today.</p>'
   step_1:
     '#type': webform_wizard_page
-    '#title': 'Step 1'
+    '#title': 'Step 2'
     '#next_button_label': Continue
     step_1_title:
       '#type': webform_markup
@@ -122,7 +129,6 @@ elements: |-
       '#type': webform_term_select
       '#title': 'Branch Location'
       '#select2': true
-      '#required': true
       '#wrapper_attributes':
         class:
           - visually-hidden
@@ -133,7 +139,7 @@ elements: |-
       '#title': 'If you are currently working with one of our loan officers please include his/her name'
   step_2:
     '#type': webform_wizard_page
-    '#title': 'Step 2'
+    '#title': 'Step 3'
     '#next_button_label': Continue
     step_2_title:
       '#type': webform_markup
@@ -161,6 +167,15 @@ elements: |-
       '#multiple': 2
       '#more_title': 'Add a principal'
       '#required': true
+      '#multiple__header': false
+      '#multiple__header_label': Principal
+      '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+      '#multiple__empty_items': 0
+      '#multiple__sorting': false
+      '#multiple__operations': false
+      '#multiple__add_more_input': false
+      '#multiple__add_more_button_label': 'Add Another Principal'
+      '#multiple__add_more_input_label': 'Add Another Principal'
       '#element':
         name:
           '#type': textfield
@@ -201,9 +216,10 @@ elements: |-
           '#type': textfield
           '#required': true
           '#title': Zip
+      '#select2': true
   step_3:
     '#type': webform_wizard_page
-    '#title': 'Step 3'
+    '#title': 'Step 4'
     '#next_button_label': Continue
     step_3_title:
       '#type': webform_markup
@@ -211,6 +227,12 @@ elements: |-
     loans_leases:
       '#type': webform_custom_composite
       '#title': 'Loans / Leases'
+      '#multiple__header_label': 'Loans / Leases'
+      '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+      '#multiple__sorting': false
+      '#multiple__operations': false
+      '#multiple__add_more_input': false
+      '#multiple__add_more_button_label': 'Add more Loans / Leases'
       '#element':
         loan_leasing_company:
           '#type': textfield
@@ -235,7 +257,7 @@ elements: |-
           '#title': 'Monthly payment'
   step_4:
     '#type': webform_wizard_page
-    '#title': 'Step 4'
+    '#title': 'Step 5'
     '#next_button_label': Continue
     step_4_title:
       '#type': webform_markup
@@ -243,6 +265,12 @@ elements: |-
     bank_references:
       '#type': webform_custom_composite
       '#title': 'Bank References'
+      '#multiple__header_label': 'Bank References'
+      '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+      '#multiple__sorting': false
+      '#multiple__operations': false
+      '#multiple__add_more_input': false
+      '#multiple__add_more_button_label': 'Add more Bank References'
       '#element':
         bank:
           '#type': textfield
@@ -279,6 +307,12 @@ elements: |-
     trade_references:
       '#type': webform_custom_composite
       '#title': 'Trade References'
+      '#multiple__header_label': 'Trade References'
+      '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+      '#multiple__sorting': false
+      '#multiple__operations': false
+      '#multiple__add_more_input': false
+      '#multiple__add_more_button_label': 'Add more Trade References'
       '#element':
         company_name:
           '#type': textfield
@@ -294,7 +328,7 @@ elements: |-
           '#title': Phone
   step_6:
     '#type': webform_wizard_page
-    '#title': 'Step 6'
+    '#title': 'Step 7'
     '#next_button_label': Continue
     step_6_title:
       '#type': webform_markup
@@ -354,7 +388,7 @@ elements: |-
       '#title': 'Equipment Description'
   step_7:
     '#type': webform_wizard_page
-    '#title': 'Step 7'
+    '#title': 'Step 8'
     '#next_button_label': Continue
     step_7_title:
       '#type': webform_markup
@@ -376,6 +410,11 @@ elements: |-
     markup:
       '#type': webform_markup
       '#markup': 'The Federal Equal Credit Opportunity Act prohibits creditors from discriminating against credit applicants on the basis of race, color, religion, national origin, sex, marital status, age (provided the applicant has the capacity to enter into a binding contract), because all or part of the applicant&#39;s income derives from any public assistance program or because the applicant has in good faith exercised any right under the Consumer Credit Protection Act. The federal agency that administers compliance with this law is the Federal Trade Commission Equal Credit Opportunity, Washington, D.C. 20580. If your application for business credit is denied, you have the right to a written statement of the specific reasons for the denial. To obtain the statement, please contact Lessor set forth above within 60 days from the date you are notified or our decision. We will send you a written statement of reasons for the denial within 30 days for receiving your request for the statement.'
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#wizard_prev__label': Back
+    '#wizard_next__label': Continue
 css: ''
 javascript: ''
 settings:
@@ -406,10 +445,10 @@ settings:
   form_disable_autocomplete: false
   form_novalidate: false
   form_disable_inline_errors: false
-  form_required: false
+  form_required: true
   form_unsaved: false
   form_disable_back: false
-  form_submit_back: false
+  form_submit_back: true
   form_autofocus: false
   form_details_toggle: false
   form_access_denied: default
@@ -445,7 +484,7 @@ settings:
   wizard_progress_bar: true
   wizard_progress_pages: false
   wizard_progress_percentage: false
-  wizard_progress_link: false
+  wizard_progress_link: true
   wizard_progress_states: false
   wizard_auto_forward: true
   wizard_auto_forward_hide_next_button: false
@@ -455,8 +494,8 @@ settings:
   wizard_confirmation: false
   wizard_confirmation_label: ''
   wizard_track: ''
-  wizard_prev_button_label: ''
-  wizard_next_button_label: ''
+  wizard_prev_button_label: Back
+  wizard_next_button_label: Continue
   wizard_toggle: true
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
