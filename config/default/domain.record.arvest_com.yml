@@ -1,0 +1,11 @@
+uuid: ffd9a09d-27c7-4dea-a1f5-657017cc996a
+langcode: en
+status: true
+dependencies: {  }
+id: arvest_com
+domain_id: 7187452
+hostname: arvest.com
+name: 'Arvest Bank PROD'
+scheme: https
+weight: -5
+is_default: true
