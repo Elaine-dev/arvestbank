@@ -1,0 +1,11 @@
+uuid: ade9287a-0941-42e8-b9cb-cfcab36b1407
+langcode: en
+status: true
+dependencies: {  }
+id: arvestbankdev_prod_acquia_sites_com
+domain_id: 6765760
+hostname: arvestbankdev.prod.acquia-sites.com
+name: 'Arvest Bank DEV'
+scheme: https
+weight: -3
+is_default: false

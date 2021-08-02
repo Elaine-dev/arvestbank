@@ -1,0 +1,5 @@
+name: Arvest Bank Redirects
+type: module
+description: 'Adds Arvest Bank redirects with a config form.'
+core_version_requirement: ^9
+package: 'Arvest'

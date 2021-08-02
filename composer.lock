@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "82b446aad0475fb16622e44568b04c60",
+    "content-hash": "61a6b6607ec424a2b224d714e61765b9",
     "packages": [
         {
             "name": "acquia/blt",
@@ -4023,6 +4023,65 @@
             "homepage": "https://www.drupal.org/project/domain",
             "support": {
                 "source": "https://git.drupalcode.org/project/domain"
+            }
+        },
+        {
+            "name": "drupal/domain_path_redirect",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/domain_path_redirect.git",
+                "reference": "8.x-1.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/domain_path_redirect-8.x-1.3.zip",
+                "reference": "8.x-1.3",
+                "shasum": "b209ec3f17cc6c99ebf367e1e32f97628d6704fc"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/domain": "^1.0",
+                "drupal/redirect": "^1.6"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.3",
+                    "datestamp": "1610621329",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Vlad_Bo",
+                    "homepage": "https://www.drupal.org/user/3197385"
+                },
+                {
+                    "name": "itsekhmistro",
+                    "homepage": "https://www.drupal.org/user/928152"
+                },
+                {
+                    "name": "vladbo",
+                    "homepage": "https://www.drupal.org/user/2696261"
+                },
+                {
+                    "name": "yarik.lutsiuk",
+                    "homepage": "https://www.drupal.org/user/3212333"
+                }
+            ],
+            "description": "This small module allows creating alternative redirects per domains. It extends the Redirect module.",
+            "homepage": "https://drupal.org/project/domain_path_redirect",
+            "support": {
+                "source": "https://git.drupalcode.org/project/domain_path_redirect",
+                "issues": "https://drupal.org/project/issues/domain_path_redirect"
             }
         },
         {
