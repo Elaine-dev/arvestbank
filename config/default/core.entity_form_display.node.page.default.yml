@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.page.field_callout_title
     - field.field.node.page.field_disable_sidebar_ad
     - field.field.node.page.field_disclosure
+    - field.field.node.page.field_exclude_from_search
     - field.field.node.page.field_featured_image
     - field.field.node.page.field_featured_video
     - field.field.node.page.field_field_callout_phone_number
@@ -35,6 +36,8 @@ dependencies:
     - metatag
     - path
     - scheduler
+    - scheduler_content_moderation_integration
+    - search_api_exclude_entity
     - text
     - yoast_seo
 third_party_settings:
@@ -237,6 +240,13 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_exclude_from_search:
+    weight: 31
+    settings:
+      field_label: 'Yes, exclude this entity from the search indexes.'
+    third_party_settings: {  }
+    type: search_api_exclude_entity_widget
+    region: content
   field_featured_image:
     type: media_library_widget
     weight: 21
@@ -420,6 +430,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  publish_state:
+    type: scheduler_moderation
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   scheduler_settings:
     weight: 10
     region: content
@@ -453,6 +469,12 @@ content:
   unpublish_on:
     type: datetime_timestamp_no_default
     weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  unpublish_state:
+    type: scheduler_moderation
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
