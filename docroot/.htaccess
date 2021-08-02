@@ -95,12 +95,12 @@ AddEncoding gzip svgz
   RewriteRule ^ https:/secure-qa.arvest.com/apply/servlet/SmartForm.html?formCode=usdaops&product=352 [L,R=301]
 
   RewriteCond %{HTTP_HOST} www-test.arvest.com
-  RewriteCond %{REQUEST_URI} /bank/credit-cards/flex-rewards-credit-cards/apply
-  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/23246/#/beginApp [NE,R]
+  RewriteCond %{REQUEST_URI} /personal/bank/credit-cards/flex-rewards-credit-cards/apply
+  RewriteRule ^ /personal/bank/credit-cards/flex-rewards-credit-cards/apply-test [L,R=301]
 
   RewriteCond %{HTTP_HOST} www-test.arvest.com
   RewriteCond %{REQUEST_URI} /personal/bank/credit-cards/true-rate/apply
-  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/22100/#/beginApp [NE,R]
+  RewriteRule ^ /personal/bank/credit-cards/true-rate/apply-test [L,R=301]
 
   RewriteCond %{HTTP_HOST} www-test.arvest.com
   RewriteCond %{REQUEST_URI} /balanceeraser/customer-log-in
@@ -108,59 +108,59 @@ AddEncoding gzip svgz
 
   RewriteCond %{HTTP_HOST} www-test.arvest.com
   RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/auto-loans
-  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/22032/#/beginApp [NE,R]
+  RewriteRule ^ /personal/borrow/consumer-loans/apply/auto-loans-test [L,R=301]
 
   RewriteCond %{HTTP_HOST} www-test.arvest.com
   RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/boat-loans
-  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/22055/#/beginApp [NE,R]
+  RewriteRule ^ /personal/borrow/consumer-loans/apply/boat-loans-test [L,R=301]
 
   RewriteCond %{HTTP_HOST} www-test.arvest.com
   RewriteCond %{REQUEST_URI} /bank/credit-cards/flex-rewards-credit-cards/apply
-  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/23246/#/beginApp [NE,R]
+  RewriteRule ^ /bank/credit-cards/flex-rewards-credit-cards/apply-test [L,R=301]
 
   RewriteCond %{HTTP_HOST} www-test.arvest.com
   RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/motorcycle-loans
-  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/22034/#/beginApp [NE,R]
+  RewriteRule ^ /personal/borrow/consumer-loans/apply/motorcycle-loans-test [L,R=301]
 
   RewriteCond %{HTTP_HOST} www-test.arvest.com
   RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/rv-loans
-  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/22036/#/beginApp [NE,R]
+  RewriteRule ^ /personal/borrow/consumer-loans/apply/rv-loans-test [L,R=301]
 
   RewriteCond %{HTTP_HOST} www-test.arvest.com
   RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/powersports
-  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/22035/#/beginApp [NE,R]
+  RewriteRule ^ /personal/borrow/consumer-loans/apply/powersports-test [L,R=301]
 
   RewriteCond %{HTTP_HOST} www-test.arvest.com
   RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/new-accessible
-  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/22033/#/beginApp [NE,R]
+  RewriteRule ^ /personal/borrow/consumer-loans/apply/new-accessible-test [L,R=301]
 
   RewriteCond %{HTTP_HOST} www-test.arvest.com
   RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/unsecured-loans
-  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/21686/#/beginApp [NE,R]
+  RewriteRule ^ /personal/borrow/consumer-loans/apply/unsecured-loans-test [L,R=301]
 
   RewriteCond %{HTTP_HOST} www-test.arvest.com
   RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/fixed-home-equity-loans
-  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/22043/#/beginApp [NE,R]
+  RewriteRule ^ /personal/borrow/consumer-loans/apply/fixed-home-equity-loans-test [L,R=301]
 
   RewriteCond %{HTTP_HOST} www-test.arvest.com
   RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/arm-home-equity-loans
-  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/22042/#/beginApp [NE,R]
+  RewriteRule ^ /personal/borrow/consumer-loans/apply/arm-home-equity-loans-test [L,R=301]
 
   RewriteCond %{HTTP_HOST} www-test.arvest.com
   RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/home-equity-line-of-credit
-  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/22035/#/beginApp [NE,R]
+  RewriteRule ^ /personal/borrow/consumer-loans/apply/home-equity-line-of-credit-test [L,R=301]
 
   RewriteCond %{HTTP_HOST} www-test.arvest.com
   RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/unsecured-personal-loans
-  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/21686/#/beginApp [NE,R]
+  RewriteRule ^ /personal/borrow/consumer-loans/apply/unsecured-personal-loans-test [L,R=301]
 
   RewriteCond %{HTTP_HOST} www-test.arvest.com
   RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/personal-line-of-credit
-  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/21686/#/beginApp [NE,R]
+  RewriteRule ^ /personal/borrow/consumer-loans/apply/personal-line-of-credit-test [L,R=301]]
 
   RewriteCond %{HTTP_HOST} www-test.arvest.com
   RewriteCond %{REQUEST_URI} /personal/borrow/consumer-loans/apply/unsecured-home-improvement-loan
-  RewriteRule ^ https://oa-beta.fisglobal.com/oa/fi/lt/10052/22088/#/beginApp [NE,R]
+  RewriteRule ^ htt/personal/borrow/consumer-loans/apply/unsecured-home-improvement-loan-test [L,R=301]
 
   # Set "protossl" to "s" if we were accessed via https://.  This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
