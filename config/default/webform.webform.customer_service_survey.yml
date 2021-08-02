@@ -77,9 +77,6 @@ elements: |-
         visible:
           ':input[name="regarding"]':
             checked: true
-      '#wrapper_attributes':
-        class:
-          - visually-hidden
       '#attributes':
         class:
           - webform-chosen
