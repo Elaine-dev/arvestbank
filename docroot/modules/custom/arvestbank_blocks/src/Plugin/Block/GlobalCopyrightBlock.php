@@ -51,8 +51,8 @@ class GlobalCopyrightBlock extends BlockBase {
     if ($node = \Drupal::routeMatch()->getParameter('node')) {
       if ($node instanceof Node && $node->getType() == 'campaign_page') {
         $icons = [
-          '<img src="/sites/default/files/acquiadam/images/fdic-grey.png" width="43" height="41" alt="Fdic Grey" title="Fdic Grey" loading="lazy" typeof="foaf:Image">',
-          '<img src="/sites/default/files/acquiadam/images/nhl-grey.png" width="39" height="41" alt="Home Lender Logo" loading="lazy" typeof="foaf:Image">',
+          '<img src="/sites/default/files/acquiadam/images/fdic-grey.png" width="43" height="41" alt="Member FDIC" title="Fdic Grey" loading="lazy" typeof="foaf:Image">',
+          '<img src="/sites/default/files/acquiadam/images/nhl-grey.png" width="39" height="41" alt="Equal Housing Lender" loading="lazy" typeof="foaf:Image">',
         ];
       }
     }
