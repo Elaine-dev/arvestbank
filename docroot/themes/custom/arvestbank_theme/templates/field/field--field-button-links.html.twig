@@ -53,12 +53,12 @@
   {% if multiple %}
     <div{{ attributes.addClass(classes, 'field__items') }}>
       {% for item in items %}
-        <div class="coh-style-link-arrow-button-button"{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+        <div class="coh-style-link-arrow-button"{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
-      <div class="coh-style-link-arrow-button-button"{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
+      <div class="coh-style-link-arrow-button"{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
@@ -68,7 +68,7 @@
     <div class="field__items">
       {% endif %}
       {% for item in items %}
-        <div class="coh-style-link-arrow-button-button"{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+        <div class="coh-style-link-arrow-button"{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
       {% endfor %}
       {% if multiple %}
     </div>

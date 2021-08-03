@@ -632,18 +632,6 @@ display:
           expose:
             label: ''
           plugin_id: search_api
-        search_api_datasource:
-          id: search_api_datasource
-          table: search_api_index_database_search_index
-          field: search_api_datasource
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: true
-          expose:
-            label: Datasource
-          plugin_id: search_api
       title: 'Search Results'
       header:
         result:
@@ -705,8 +693,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - 'url.query_args:sort_by'
-        - 'url.query_args:sort_order'
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -729,8 +715,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - 'url.query_args:sort_by'
-        - 'url.query_args:sort_order'
         - 'user.node_grants:view'
         - user.permissions
       tags:
