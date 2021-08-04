@@ -227,6 +227,7 @@ elements: |-
     loans_leases:
       '#type': webform_custom_composite
       '#title': 'Loans / Leases'
+      '#multiple__header': false
       '#multiple__header_label': 'Loans / Leases'
       '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
       '#multiple__sorting': false
@@ -255,6 +256,7 @@ elements: |-
         monthly_payment:
           '#type': number
           '#title': 'Monthly payment'
+      '#select2': true
   step_4:
     '#type': webform_wizard_page
     '#title': 'Step 5'
@@ -265,6 +267,7 @@ elements: |-
     bank_references:
       '#type': webform_custom_composite
       '#title': 'Bank References'
+      '#multiple__header': false
       '#multiple__header_label': 'Bank References'
       '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
       '#multiple__sorting': false
@@ -307,6 +310,7 @@ elements: |-
     trade_references:
       '#type': webform_custom_composite
       '#title': 'Trade References'
+      '#multiple__header': false
       '#multiple__header_label': 'Trade References'
       '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
       '#multiple__sorting': false

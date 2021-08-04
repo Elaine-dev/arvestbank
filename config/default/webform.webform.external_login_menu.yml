@@ -305,7 +305,7 @@ elements: |-
             '!value': 'https://epayables.arvest.com/?_gl=1*1crqwrb*_ga*MTQ2MTExNjcwOS4xNjE2Nzc0MzEy*_ga_GRH26TKW0W*MTYxOTAzNjgwNC43OC4xLjE2MTkwMzc1NDEuNTU.'
       epayables_title:
         '#type': webform_markup
-        '#markup': '<h3>Flex Rewards: Business</h3>'
+        '#markup': '<h3>ePayables</h3>'
     investments_wealth:
       '#type': container
       '#states':
