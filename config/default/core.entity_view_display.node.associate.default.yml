@@ -22,7 +22,6 @@ dependencies:
     - field.field.node.associate.field_office_number
     - field.field.node.associate.field_pb_application
     - field.field.node.associate.field_private_bank_reference
-    - field.field.node.associate.field_rendered_node
     - field.field.node.associate.field_username
     - field.field.node.associate.field_vanity_url
     - field.field.node.associate.field_website
@@ -228,5 +227,4 @@ content:
 hidden:
   feeds_item: true
   field_associate_id: true
-  field_rendered_node: true
   search_api_excerpt: true
