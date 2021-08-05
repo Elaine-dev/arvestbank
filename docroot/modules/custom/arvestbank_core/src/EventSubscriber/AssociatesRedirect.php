@@ -59,8 +59,7 @@ class AssociatesRedirect implements EventSubscriberInterface {
 
     if (in_array($requested_uri, $invalid_paths)) {
       // Create redirect:
-      $response = new RedirectResponse($path);
-      $response->send();
+      \Drupal::service('request_stack')->getCurrentRequest()->query->set('destination', $path);
     }
   }
 
