@@ -35,9 +35,6 @@ AddEncoding gzip svgz
 # Requires mod_expires to be enabled.
 <IfModule mod_expires.c>
 
-  #rewrire condition for all image styles
-  RewriteCond %{REQUEST_URI} !/sites/default/files/styles(.*?)/?.*
-
   # Enable expirations.
   ExpiresActive On
 

@@ -216,8 +216,3 @@ function arvestbank_theme_preprocess_field__field_print_button_text(&$variables,
   }
 
 }
-
-
-function arvestbank_theme_preprocess_image(&$variables) {
-  $variables['attributes']['loading'] = 'eager';
-}
