@@ -4,6 +4,6 @@ arvestbank_rates.admin_settings_form:
     _form: '\Drupal\arvestbank_rates\Form\RatesForm'
     _title: 'Edit Credit Card Rates'
   requirements:
-    _permission: 'access administration pages'
+    _permission: 'edit credit card rates'
   options:
     _admin_route: TRUE

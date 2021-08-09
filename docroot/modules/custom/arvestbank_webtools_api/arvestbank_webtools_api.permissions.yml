@@ -1,4 +1,4 @@
 'administer webtools api settings':
   title: 'Administer Webtools API Settings'
   description: 'Gives the ability to access the webtools api settings form.'
-  restrict access: true
+

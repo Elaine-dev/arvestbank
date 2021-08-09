@@ -23,6 +23,9 @@ dependencies:
     - field.field.node.stage_page.field_news_alert_block_body
     - field.field.node.stage_page.field_news_alert_block_dates
     - field.field.node.stage_page.field_rendered_node
+    - field.field.node.stage_page.field_sidebar_button
+    - field.field.node.stage_page.field_sidebar_description
+    - field.field.node.stage_page.field_sidebar_title
     - field.field.node.stage_page.field_slide1_cta_color
     - field.field.node.stage_page.field_slide1_cta_link
     - field.field.node.stage_page.field_slide1_cta_position
@@ -53,7 +56,6 @@ dependencies:
     - options
     - text
     - user
-    - yoast_seo
 id: node.stage_page.default
 targetEntityType: node
 bundle: stage_page
@@ -165,6 +167,32 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
+    region: content
+  field_sidebar_button:
+    weight: 37
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_sidebar_description:
+    weight: 35
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_sidebar_title:
+    weight: 36
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_slide1_cta_color:
     weight: 16
@@ -343,13 +371,6 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
-  field_yoast_seo:
-    weight: 35
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: yoastseo_formatter
-    region: content
   links:
     weight: 1
     region: content
@@ -364,4 +385,5 @@ hidden:
   field_news_alert_block_body: true
   field_news_alert_block_dates: true
   field_rendered_node: true
+  field_yoast_seo: true
   search_api_excerpt: true

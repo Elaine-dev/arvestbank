@@ -343,6 +343,7 @@ permissions:
   - 'rabbit hole bypass node'
   - 'rabbit hole bypass taxonomy_term'
   - 'rabbit hole bypass user'
+  - 'rebuild cache access'
   - 'revert ad revisions'
   - 'revert ad_campaign revisions'
   - 'revert all revisions'
