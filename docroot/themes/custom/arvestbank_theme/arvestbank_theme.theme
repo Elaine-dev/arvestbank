@@ -27,10 +27,11 @@ function arvestbank_theme_form_alter(&$form, FormStateInterface $form_state, $fo
 function arvestbank_theme_preprocess_html(&$variables) {
   // Add node ID to the body class.
   $node = \Drupal::routeMatch()->getParameter('node');
+  $route_name = \Drupal::routeMatch()->getRouteName();
   if (is_object($node)) {
     $variables['attributes']['class'][] = 'node-' . $node->id();
   }
-  if ($variables['page']['content']['#title'] == 'Calculator') {
+  if ($route_name === 'arvestbank_calculators.iframe' && $variables['page']['content']['#title'] === 'Calculator') {
     $node = $variables['page']['content']['#object'];
     $calc_id = $node->field_calculator->getValue();
     $variables['calc_title'] = $calc_id[0]['target_id'] . '|' . 'Arvest Bank';
