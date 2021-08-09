@@ -34,6 +34,7 @@ dependencies:
     - link
     - path
     - scheduler
+    - scheduler_content_moderation_integration
     - telephone
     - text
 id: node.associate.default
@@ -125,28 +126,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings:
-      conditional_fields:
-        c001f251-89f0-4080-b0be-37ea821e5c39:
-          dependee: field_associate_type
-          settings:
-            state: visible
-            condition: value
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              -
-                target_id: '2'
-            effect: slide
-            effect_options:
-              fade:
-                speed: '400'
-              slide:
-                speed: '400'
-            selector: ''
-          entity_type: node
-          bundle: associate
+      conditional_fields: {  }
     type: string_textfield
     region: content
   field_job_title:
@@ -178,28 +158,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings:
-      conditional_fields:
-        31a6d4c7-3812-4d52-8332-71b85e5bf4c2:
-          dependee: field_associate_type
-          settings:
-            state: visible
-            condition: value
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: lender
-            value_form:
-              -
-                target_id: '1'
-            effect: slide
-            effect_options:
-              fade:
-                speed: '400'
-              slide:
-                speed: '400'
-            selector: ''
-          entity_type: node
-          bundle: associate
+      conditional_fields: {  }
     type: string_textfield
     region: content
   field_office_number:
@@ -245,24 +204,7 @@ content:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings:
-      conditional_fields:
-        c09fc0ff-d2e1-4ead-89a1-334200a8ba9d:
-          dependee: field_associate_type
-          settings:
-            state: '!visible'
-            condition: value
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              -
-                target_id: '2'
-            effect: show
-            effect_options: {  }
-            selector: ''
-          entity_type: node
-          bundle: associate
+      conditional_fields: {  }
     type: link_default
     region: content
   moderation_state:
