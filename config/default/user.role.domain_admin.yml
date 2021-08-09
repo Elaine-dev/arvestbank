@@ -156,7 +156,6 @@ permissions:
   - 'administer social-media-menu menu items'
   - 'administer software updates'
   - 'administer style helpers'
-  - 'administer style_guide'
   - 'administer taxonomy'
   - 'administer taxonomy_term display'
   - 'administer taxonomy_term fields'
