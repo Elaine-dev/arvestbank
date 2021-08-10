@@ -159,9 +159,6 @@ class WebtoolsClient {
    *   Response or FALSE.
    */
   public function makeFormSaveRequest(array $requestOptions) {
-    // Temporarily log form requests.
-    \Drupal::logger('arvestbank_webtools_api')->notice('Form API Request Options: ' . htmlspecialchars(print_r($requestOptions, 1)));
-    // Get the endpoint to send form data to.
     $endpoint = $this->webtoolsConfig->get('webtools-form-endpoint');
     // Make request and return response.
     return $this->makeRequest($endpoint, $requestOptions);
