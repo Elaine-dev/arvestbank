@@ -1,0 +1,21 @@
+uuid: 2dc54399-470f-419d-a17a-cf11df85f641
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sidebar_description
+    - node.type.stage_page
+  module:
+    - text
+id: node.stage_page.field_sidebar_description
+field_name: field_sidebar_description
+entity_type: node
+bundle: stage_page
+label: 'Sidebar Description'
+description: 'Use this field for all stage pages that are not the homepage.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

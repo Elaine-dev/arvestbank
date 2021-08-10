@@ -1,0 +1,6 @@
+arvestbank_webtools_api.webtools_admin_form:
+  title: 'Webtools API'
+  route_name: arvestbank_webtools_api.webtools_admin_form
+  description: 'Webtools API'
+  parent: system.admin_config
+  weight: 98

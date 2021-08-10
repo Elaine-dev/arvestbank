@@ -1,0 +1,21 @@
+uuid: 7b235cc8-e4e8-4c54-9d74-9aaa1b8f472c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sidebar_title
+    - node.type.stage_page
+  module:
+    - text
+id: node.stage_page.field_sidebar_title
+field_name: field_sidebar_title
+entity_type: node
+bundle: stage_page
+label: 'Sidebar Title'
+description: 'Use this field for the title for Stage pages that are not the homepage.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

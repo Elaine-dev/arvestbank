@@ -1,0 +1,23 @@
+uuid: 946d1dab-e732-406d-8ee5-2ff6b1ebb7bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sidebar_button
+    - node.type.stage_page
+  module:
+    - link
+id: node.stage_page.field_sidebar_button
+field_name: field_sidebar_button
+entity_type: node
+bundle: stage_page
+label: 'Sidebar Button'
+description: 'Use this sidebar button field for all stage pages that are not the homepage.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link
