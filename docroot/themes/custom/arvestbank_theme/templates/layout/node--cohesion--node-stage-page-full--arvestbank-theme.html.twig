@@ -125,13 +125,13 @@
         {% endif %}
 
         {# Stage Page Fields #}
-        {% if content.body|render|trim is not empty %}
+        {% if content.field_sidebar_description|render|trim is not empty %}
           <div class="left-block-content-wrapper">
-            <h2>{{ content.field_block_title|render }}</h2>
+            <h2>{{ content.field_sidebar_title|render }}</h2>
             <div class="left-block-content">
-              {{ content.body|render }}
-              {% if content.field_block_button|render|trim is not empty %}
-                <div class="coh-style-link-arrow-button">{{ content.field_block_button|render }}</div>
+              {{ content.field_sidebar_description|render }}
+              {% if content.field_sidebar_button|render|trim is not empty %}
+                <div class="coh-style-link-arrow-button">{{ content.field_sidebar_button|render }}</div>
               {% endif %}
             </div>
           </div>
