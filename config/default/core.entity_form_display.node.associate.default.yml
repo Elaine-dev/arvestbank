@@ -21,7 +21,6 @@ dependencies:
     - field.field.node.associate.field_nmls_number
     - field.field.node.associate.field_office_number
     - field.field.node.associate.field_pb_application
-    - field.field.node.associate.field_private_bank_reference
     - field.field.node.associate.field_username
     - field.field.node.associate.field_vanity_url
     - field.field.node.associate.field_website
@@ -175,12 +174,6 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
-    region: content
-  field_private_bank_reference:
-    weight: 27
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   field_username:
     weight: 31
