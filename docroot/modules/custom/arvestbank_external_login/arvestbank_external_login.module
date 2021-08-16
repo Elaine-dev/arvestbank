@@ -84,6 +84,11 @@ function _arvestbank_external_login_login_form_alter(array &$form, string $form_
     'arvest_online_banking' => [
       'arvest_online_banking_username' => 'username',
     ],
+    'investments_wealth' => [
+      'investments_wealth_username' => 'userid',
+      'investments_wealth_password' => 'password',
+      'remember_my_computer' => 'remember',
+    ],
   ];
 
   // Determine the supplimental field wrapper for this form.
