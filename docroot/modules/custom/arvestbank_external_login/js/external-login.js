@@ -41,6 +41,9 @@ Drupal.behaviors.externalLogin = {
       // Get the mortgage username element for the submitted form.
       var $mortgageUsernameField = jQuery(this).find('input[name="userid"]');
 
+      // Get the mortgage username element for the submitted form.
+      var $investmentsWealthUsernameField = jQuery(this).find('input[name="investments_wealth_username"]');
+
       // Determine the domain of the corresponding online banking site.
       if ($activeSelect.attr('name') == 'login_select_non_prod') {
         var onlineBankingDomain = 'https://www-test.arvest.com';
@@ -108,6 +111,34 @@ Drupal.behaviors.externalLogin = {
         // Determine post variables to send.
         var postVariables = {
           "userid": $mortgageUsernameField.val(),
+          "password": jQuery(this).find('input[name="password"]').val(),
+        };
+
+        // Add value for "remember" if checked.
+        if (jQuery(this).find('input[name="remember"]').is(':checked')) {
+          postVariables.rememberVal = "on";
+        }
+
+        // Send cleaner version of submission.
+        post_redirect({url: jQuery(this).attr('action'),
+          method: "post",
+          data: postVariables,
+        });
+      }
+
+      // If we're submitting the Investments - Wealth form and have a username set.
+      if (
+        $activeSelect.val() == 'investments_wealth'
+        // If username field is set.
+        && $investmentsWealthUsernameField.val() != ''
+      ) {
+
+        // Prevent submission.
+        e.preventDefault();
+
+        // Determine post variables to send.
+        var postVariables = {
+          "userid": $investmentsWealthUsernameField.val(),
           "password": jQuery(this).find('input[name="password"]').val(),
         };
 
