@@ -125,7 +125,6 @@
         {% endif %}
 
         {# Stage Page Fields #}
-        {% if content.field_sidebar_description|render|trim is not empty %}
           <div class="left-block-content-wrapper">
             <h2>{{ content.field_sidebar_title|render }}</h2>
             <div class="left-block-content">
@@ -135,7 +134,7 @@
               {% endif %}
             </div>
           </div>
-        {% endif %}
+
 
 
       </div>

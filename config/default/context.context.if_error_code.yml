@@ -1,0 +1,27 @@
+uuid: d970e4f8-4d26-44ec-b44b-71bb04c466ee
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+name: if_error_code
+label: 'If Error code'
+group: null
+description: 'If Cashmanager has an error. /business/bank/online-services/online-cash-manager?EC=30'
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path_exclusion:
+    id: request_path_exclusion
+    negate: true
+    pages: ''
+    uuid: b6ce4ab8-f5f7-43f3-abe0-e44616767fa1
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '/business/bank/online-services/online-cash-manager?EC=30'
+    negate: false
+    uuid: feb49018-2f3b-47c6-95d2-f50aefc545a5
+    context_mapping: {  }
+reactions: {  }
+weight: 0
