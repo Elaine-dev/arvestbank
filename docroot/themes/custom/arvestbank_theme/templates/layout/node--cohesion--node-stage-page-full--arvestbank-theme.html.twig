@@ -109,7 +109,7 @@
         {% endif %}
 
         {# Sidebar / Alert Block #}
-        {% if (content.stagepage_sidebar_block|render|trim is not empty) and (node.id == 531) %}
+        {% if (content.body|render|trim is not empty) and (node.id == 531) %}
           <div class="coh-style-homepage-in-between-block">
             {% if node.id == 531 %}
             {{ content.stagepage_sidebar_block }}
@@ -125,6 +125,7 @@
         {% endif %}
 
         {# Stage Page Fields #}
+        {% if content.field_sidebar_description|render|trim is not empty %}
           <div class="left-block-content-wrapper">
             <h2>{{ content.field_sidebar_title|render }}</h2>
             <div class="left-block-content">
@@ -134,6 +135,7 @@
               {% endif %}
             </div>
           </div>
+        {% endif %}
 
 
 
