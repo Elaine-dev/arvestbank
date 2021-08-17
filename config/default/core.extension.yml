@@ -45,6 +45,7 @@ module:
   cohesion_templates: 0
   cohesion_website_settings: 0
   color: 0
+  condition_query: 0
   conditional_fields: 0
   config: 0
   config_filter: 0

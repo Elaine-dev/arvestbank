@@ -26,6 +26,7 @@
         "drupal/address": "^1.9",
         "drupal/admin_toolbar": "^3.0",
         "drupal/better_exposed_filters": "^5.0@beta",
+        "drupal/condition_query": "1.x-dev@dev",
         "drupal/conditional_fields": "^4.0@alpha",
         "drupal/config_ignore": "^2.3",
         "drupal/config_split": "^2.0@beta",
@@ -204,6 +205,9 @@
             },
             "drupal/extlink": {
                 "fix double warn": "patches/extlink-stop-propagation.patch"
+            },
+            "drupal/condition_query": {
+                "Add support for a wildcard parameter and a case sensitive option": "https://www.drupal.org/files/issues/2021-06-04/2986466-25.patch"
             }
         }
     },
