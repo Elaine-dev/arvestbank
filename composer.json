@@ -34,7 +34,7 @@
         "drupal/context_entity_field": "1.x-dev@dev",
         "drupal/cookiepro": "^2.0",
         "drupal/core-composer-scaffold": "^9",
-        "drupal/core-recommended": "9.2.2",
+        "drupal/core-recommended": "9.2.4",
         "drupal/critical_css": "^1.17",
         "drupal/ctools": "^3.6",
         "drupal/devel": "^4.1",
@@ -180,9 +180,6 @@
             },
             "drupal/config_ignore": {
                 "Support for export filtering via Drush\n": "https://www.drupal.org/files/issues/2021-01-04/config_ignore_2857247-61.patch"
-            },
-            "drupal/media_video_micromodal": {
-                "Change attach behaviors for ie11 support\n": "https://www.drupal.org/files/issues/2021-07-23/ie11-support-3225153-1.patch"
             },
             "drupal/scheduler_content_moderation_integration": {
                 "Hide scheduling state options if there are no valid transitions\n": "https://www.drupal.org/files/issues/2020-07-16/2798689-hide-scheduling-options-if-no-valid-transitions-20.patch"
