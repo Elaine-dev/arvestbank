@@ -3,25 +3,27 @@ langcode: en
 status: true
 dependencies:
   module:
+    - condition_query
     - system
 name: if_error_code
 label: 'If Error code'
 group: null
 description: 'If Cashmanager has an error. /business/bank/online-services/online-cash-manager?EC=30'
-requireAllConditions: false
+requireAllConditions: true
 disabled: false
 conditions:
-  request_path_exclusion:
-    id: request_path_exclusion
-    negate: true
-    pages: ''
-    uuid: b6ce4ab8-f5f7-43f3-abe0-e44616767fa1
-    context_mapping: {  }
   request_path:
     id: request_path
-    pages: '/business/bank/online-services/online-cash-manager?EC=30'
+    pages: /business/bank/online-services/online-cash-manager
     negate: false
-    uuid: feb49018-2f3b-47c6-95d2-f50aefc545a5
+    uuid: 2161818d-b0b5-4cd2-824f-af9c1f5beaed
     context_mapping: {  }
+  request_param:
+    id: request_param
+    request_param: EC=30
+    negate: false
+    uuid: 1c4b618e-d73c-4ecf-93de-ccc8e962408c
+    context_mapping: {  }
+    case_sensitive: true
 reactions: {  }
 weight: 0
