@@ -183,7 +183,8 @@
                 "Hide scheduling state options if there are no valid transitions\n": "https://www.drupal.org/files/issues/2020-07-16/2798689-hide-scheduling-options-if-no-valid-transitions-20.patch"
             },
             "acquia/cohesion": {
-                "Allow master templates to use to be defined at route level.\n": "patches/cohesion-master-template-by-route.patch"
+                "Allow master templates to use to be defined at route level.\n": "patches/cohesion-master-template-by-route.patch",
+                "Stop Site Studio from going into maintenance mode": "patches/site-studio-no-maintenance-mode-patch.diff"
             },
             "drupal/simplesamlphp_auth": {
                 "fix roles": "https://www.drupal.org/files/issues/2020-07-13/simplesamlphp_auth-role_assignment-2894945-11.patch"

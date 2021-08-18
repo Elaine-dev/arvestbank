@@ -1,0 +1,59 @@
+diff --git a/modules/cohesion_website_settings/cohesion_website_settings.batch.inc b/modules/cohesion_website_settings/cohesion_website_settings.batch.inc
+index 822262f..95bc7be 100644
+--- a/modules/cohesion_website_settings/cohesion_website_settings.batch.inc
++++ b/modules/cohesion_website_settings/cohesion_website_settings.batch.inc
+@@ -91,3 +91,22 @@ function batch_drupal_flush_all_caches($verbose = FALSE, &$context = []) {
+     }
+   }
+ }
++
++/**
++ * @param $verbose
++ * @param array $context
++ */
++function _cohesion_set_maintenance_mode($verbose = FALSE, &$context = []) {
++  $context['message'] = t('Setting maintenance_mode to TRUE while copying temp files.');
++  \Drupal::service('state')->set('system.maintenance_mode', TRUE);
++}
++
++/**
++ * @param $verbose
++ * @param array $context
++ */
++function _cohesion_unset_maintenance_mode($verbose = FALSE, &$context = []) {
++  $context['message'] = t('Setting maintenance mode to FALSE.');
++  \Drupal::service('state')->set('system.maintenance_mode', FALSE);
++}
++
+diff --git a/modules/cohesion_website_settings/src/Controller/WebsiteSettingsController.php b/modules/cohesion_website_settings/src/Controller/WebsiteSettingsController.php
+index dc178bc..a07b96d 100644
+--- a/modules/cohesion_website_settings/src/Controller/WebsiteSettingsController.php
++++ b/modules/cohesion_website_settings/src/Controller/WebsiteSettingsController.php
+@@ -585,6 +585,13 @@ class WebsiteSettingsController extends ControllerBase implements ContainerInjec
+     // Add .htaccess to twig template directory.
+     $batch['operations'][] = ['cohesion_templates_secure_directory', []];
+ 
++    // Set maintenacne mode before moving temp to live.
++    $batch['operations'][] = [
++      '_cohesion_set_maintenance_mode', [
++        'verbose' => $verbose,
++      ],
++    ];
++
+     // Move temp to live.
+     $batch['operations'][] = [
+       'entity_rebuild_temp_to_live', [
+@@ -600,6 +607,13 @@ class WebsiteSettingsController extends ControllerBase implements ContainerInjec
+       ];
+     }
+ 
++    // Unset maintenacne mode after moving temp to live and clearing caches.
++    $batch['operations'][] = [
++      '_cohesion_unset_maintenance_mode', [
++        'verbose' => $verbose,
++      ],
++    ];
++
+     // Carry on!
+     if ($cron) {
+       return $batch;
