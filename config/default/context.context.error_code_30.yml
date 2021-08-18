@@ -1,0 +1,29 @@
+uuid: d970e4f8-4d26-44ec-b44b-71bb04c466ee
+langcode: en
+status: true
+dependencies:
+  module:
+    - condition_query
+    - system
+name: error_code_30
+label: 'Error Code = 30'
+group: 'error codes'
+description: 'If Cashmanager has an error EC=30'
+requireAllConditions: true
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: /business/bank/online-services/online-cash-manager
+    negate: false
+    uuid: 2161818d-b0b5-4cd2-824f-af9c1f5beaed
+    context_mapping: {  }
+  request_param:
+    id: request_param
+    request_param: EC=30
+    negate: false
+    uuid: 1c4b618e-d73c-4ecf-93de-ccc8e962408c
+    context_mapping: {  }
+    case_sensitive: true
+reactions: {  }
+weight: 0

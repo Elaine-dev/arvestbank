@@ -1,14 +1,14 @@
-uuid: d970e4f8-4d26-44ec-b44b-71bb04c466ee
+uuid: 66fc8ebb-947e-4546-ac60-dfc1bb12345e
 langcode: en
 status: true
 dependencies:
   module:
     - condition_query
     - system
-name: if_error_code
-label: 'If Error code'
-group: null
-description: 'If Cashmanager has an error. /business/bank/online-services/online-cash-manager?EC=30'
+name: error_code_140
+label: 'Error Code = 140'
+group: 'error codes'
+description: 'If Cashmanager has an error EC=140'
 requireAllConditions: true
 disabled: false
 conditions:
@@ -16,14 +16,14 @@ conditions:
     id: request_path
     pages: /business/bank/online-services/online-cash-manager
     negate: false
-    uuid: 2161818d-b0b5-4cd2-824f-af9c1f5beaed
+    uuid: 394f3ff0-b70c-4f1b-b4ff-528264ccfd2c
     context_mapping: {  }
   request_param:
     id: request_param
-    request_param: EC=30
-    negate: false
-    uuid: 1c4b618e-d73c-4ecf-93de-ccc8e962408c
-    context_mapping: {  }
+    request_param: EC=140
     case_sensitive: true
+    negate: false
+    uuid: 78ec333d-ce55-4a50-ac3e-932c0846bc28
+    context_mapping: {  }
 reactions: {  }
 weight: 0
