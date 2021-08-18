@@ -85,8 +85,8 @@ class AdBlockSidebar extends BlockBase {
     // Initialize return variable.
     $ad_nid = 0;
 
-    if ($node = \Drupal::routeMatch()->getParameter('node')) {
-    //  $node = Node::load($node);
+    if ($node = \Drupal::routeMatch()->getRawParameter('node')) {
+      $node = Node::load($node);
       // Some nodes can switch off the sidebar ad on a per node basis.
       if ($node->hasField('field_disable_sidebar_ad')) {
         if (!empty($node->get('field_disable_sidebar_ad')->getValue()[0]['value'])) {
