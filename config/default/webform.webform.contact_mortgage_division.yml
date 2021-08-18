@@ -20,19 +20,25 @@ elements: |-
     '#title': Name
     '#required': true
     '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
-  address:
-    '#type': webform_address
-    '#title': Address
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
-    '#address__access': false
-    '#address_2__access': false
-    '#city__title': City
-    '#city__required': true
-    '#state_province__title': State
-    '#state_province__required': true
-    '#postal_code__access': false
-    '#country__access': false
-    '#flexbox': '1'
+  flexbox_city_state:
+    '#type': webform_flexbox
+    city:
+      '#type': textfield
+      '#title': City
+      '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+      '#required': true
+    state:
+      '#type': webform_address
+      '#title': State
+      '#required': true
+      '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+      '#address__access': false
+      '#address_2__access': false
+      '#city__access': false
+      '#state_province__title': State
+      '#state_province__required': true
+      '#postal_code__access': false
+      '#country__access': false
   email:
     '#type': email
     '#title': 'Email address'
