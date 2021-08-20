@@ -81,6 +81,15 @@ class ArvestbankMenusActiveTrail extends MenuActiveTrail {
         $route_name = $this->routeMatch->getRouteName();
         if ($route_name) {
           $route_parameters = $this->routeMatch->getRawParameters()->all();
+          // If viewing a latest revision we need to load links based on the
+          // canonical node.
+          if ($route_name == 'entity.node.latest_version' || $route_name == 'entity.node.revision') {
+            $route_name = 'entity.node.canonical';
+            $route_parameters['node'] = $node;
+            if ($route_parameters['node_revision']) {
+              unset($route_parameters['node_revision']);
+            }
+          }
           // Load links matching this route.
           $links = $this->menuLinkManager->loadLinksByRoute($route_name, $route_parameters, $menu_name);
 
