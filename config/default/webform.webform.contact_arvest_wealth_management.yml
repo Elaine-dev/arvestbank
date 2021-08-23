@@ -44,7 +44,7 @@ elements: |-
   email_investments:
     '#type': radios
     '#title': 'Email Investments'
-    '#title_display': none
+    '#title_display': invisible
     '#options':
       investments: 'Email Investments'
     '#wrapper_attributes':
@@ -63,7 +63,7 @@ elements: |-
   email_insurance:
     '#type': radios
     '#title': 'Email Insurance'
-    '#title_display': none
+    '#title_display': invisible
     '#options':
       insurance: 'Email Insurance'
     '#wrapper_attributes':

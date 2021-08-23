@@ -59,7 +59,7 @@ elements: |-
     nature_of_dispute_recurring_charge:
       '#type': radios
       '#title': 'Nature of Dispute Recurring Charge'
-      '#title_display': none
+      '#title_display': invisible
       '#options':
         'recurring charge': 'Recurring Charge / Automatic Payment / Membership Cancelled'
       '#attributes':
@@ -95,14 +95,14 @@ elements: |-
       nod_recurring_charge_attached:
         '#type': radios
         '#title': nod_recurring_charge_attached
-        '#title_display': none
+        '#title_display': invisible
         '#options':
           'I do not have a Cancellation / Confirmation number.': 'I do not have a Cancellation / Confirmation number.'
           'Attaching Confirmation Letter': 'Attaching Confirmation Letter'
     nature_of_dispute_hotel:
       '#type': radios
       '#title': 'Nature of Dispute Hotel'
-      '#title_display': none
+      '#title_display': invisible
       '#options':
         hotel: 'Hotel/Motel Charge'
       '#attributes':
@@ -138,7 +138,7 @@ elements: |-
     nature_of_dispute_merchandise_not_receieved:
       '#type': radios
       '#title': 'Nature of Dispute Merchandise Not Received'
-      '#title_display': none
+      '#title_display': invisible
       '#options':
         'merchandise not receieved': 'Merchandise or Services Not Receieved'
       '#attributes':
@@ -161,7 +161,7 @@ elements: |-
       nod_no_merch_cancel_yes:
         '#type': radios
         '#title': nod_no_merch_cancel_yes
-        '#title_display': none
+        '#title_display': invisible
         '#options':
           'Yes': 'Yes'
         '#attributes':
@@ -179,7 +179,7 @@ elements: |-
       nod_no_merch_cancel_no:
         '#type': radios
         '#title': nod_no_merch_cancel_no
-        '#title_display': none
+        '#title_display': invisible
         '#options':
           'No': 'No'
         '#attributes':
@@ -200,7 +200,7 @@ elements: |-
     nature_of_dispute_credit_not_posted:
       '#type': radios
       '#title': 'Nature of Dispute Credit Not Posted'
-      '#title_display': none
+      '#title_display': invisible
       '#options':
         'credit not posted': 'Credit Not Posted'
       '#attributes':
@@ -224,7 +224,7 @@ elements: |-
     nature_of_dispute_returned_merchandise:
       '#type': radios
       '#title': 'Nature of Dispute Returned Merchandise'
-      '#title_display': none
+      '#title_display': invisible
       '#options':
         'returned merchandise': 'Returned Merchandise'
       '#attributes':
@@ -236,7 +236,7 @@ elements: |-
     nature_of_dispute_unknown:
       '#type': radios
       '#title': 'Nature of Dispute Unknown'
-      '#title_display': none
+      '#title_display': invisible
       '#options':
         unknown: 'Unknown Charge'
       '#attributes':
@@ -260,7 +260,7 @@ elements: |-
     nature_of_dispute_paid_by_other_means:
       '#type': radios
       '#title': 'Nature of Dispute Paid by Other Means'
-      '#title_display': none
+      '#title_display': invisible
       '#options':
         'paid by other means': 'Paid For By Other Means'
       '#attributes':
@@ -272,7 +272,7 @@ elements: |-
     nature_of_dispute_fraudulent:
       '#type': radios
       '#title': 'Nature of Dispute Fraudulent'
-      '#title_display': none
+      '#title_display': invisible
       '#options':
         fraudulent: 'Fraudulent Charge'
       '#attributes':
@@ -286,7 +286,7 @@ elements: |-
     nature_of_dispute_amount_different:
       '#type': radios
       '#title': 'Nature of Dispute Amount Different'
-      '#title_display': none
+      '#title_display': invisible
       '#options':
         'amount different': 'Duplicate or Incorrect Charge'
       '#attributes':
