@@ -211,9 +211,10 @@ class MediaUpdateBatch extends FormBase {
         break;
 
       case "alttags":
+        $bundles = ['acquia_dam_image', 'credit_or_debit_card'];
         $query = $database->select('media__field_acquiadam_asset_image', 'i');
         $query->join('media_field_data', 'm', 'i.entity_id = m.mid');
-        $query->condition('m.bundle', 'acquia_dam_image', '=');
+        $query->condition('m.bundle', $bundles, 'IN');
         $orGroup = $query->orConditionGroup()
           ->isNull('i.field_acquiadam_asset_image_alt')
           ->condition('i.field_acquiadam_asset_image_alt', '', '=');
