@@ -2,6 +2,7 @@
 
 namespace Drupal\arvestbank_core\Form;
 
+use Drupal\Component\Utility\Unicode;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\media\Entity\Media;
@@ -243,28 +244,11 @@ class MediaUpdateBatch extends FormBase {
   public function getAltFromName(string $name) : string {
 
     // Take off the extension.
-    $name_ar = explode('.', $name);
-    array_pop($name_ar);
-
-    // Turn it back into a string, any other .'s will now be spaces.
-    $name = implode(' ', $name_ar);
+    $name = pathinfo($name, PATHINFO_FILENAME);
 
     // Strip out other characters.
-    $name = str_replace(['-', '_'], ' ', $name);
-
-    // Turn back into an array.
-    $name_ar = explode(' ', $name);
-
-    // Loop through name array and capitalize each part.
-    $name_ar_caps = [];
-    foreach ($name_ar as $name_piece) {
-      $name_ar_caps[] = ucfirst($name_piece);
-    }
-
-    // And send it back to a string.
-    $name = implode(' ', $name_ar_caps);
-
-    return $name;
+    $name = str_replace(['.', '-', '_'], ' ', $name);
+    return Unicode::ucwords($name);
 
   }
 
