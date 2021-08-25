@@ -2,6 +2,7 @@
 
 namespace Drupal\arvestbank_core\Form;
 
+use Drupal\Component\Utility\Unicode;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\media\Entity\Media;
@@ -211,9 +212,10 @@ class MediaUpdateBatch extends FormBase {
         break;
 
       case "alttags":
+        $bundles = ['acquia_dam_image', 'credit_or_debit_card'];
         $query = $database->select('media__field_acquiadam_asset_image', 'i');
         $query->join('media_field_data', 'm', 'i.entity_id = m.mid');
-        $query->condition('m.bundle', 'acquia_dam_image', '=');
+        $query->condition('m.bundle', $bundles, 'IN');
         $orGroup = $query->orConditionGroup()
           ->isNull('i.field_acquiadam_asset_image_alt')
           ->condition('i.field_acquiadam_asset_image_alt', '', '=');
@@ -242,28 +244,11 @@ class MediaUpdateBatch extends FormBase {
   public function getAltFromName(string $name) : string {
 
     // Take off the extension.
-    $name_ar = explode('.', $name);
-    array_pop($name_ar);
-
-    // Turn it back into a string, any other .'s will now be spaces.
-    $name = implode(' ', $name_ar);
+    $name = pathinfo($name, PATHINFO_FILENAME);
 
     // Strip out other characters.
-    $name = str_replace(['-', '_'], ' ', $name);
-
-    // Turn back into an array.
-    $name_ar = explode(' ', $name);
-
-    // Loop through name array and capitalize each part.
-    $name_ar_caps = [];
-    foreach ($name_ar as $name_piece) {
-      $name_ar_caps[] = ucfirst($name_piece);
-    }
-
-    // And send it back to a string.
-    $name = implode(' ', $name_ar_caps);
-
-    return $name;
+    $name = str_replace(['.', '-', '_'], ' ', $name);
+    return Unicode::ucwords($name);
 
   }
 
