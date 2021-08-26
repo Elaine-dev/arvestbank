@@ -85,8 +85,10 @@ class ArvestbankMenusActiveTrail extends MenuActiveTrail {
           // canonical node.
           if ($route_name == 'entity.node.latest_version' || $route_name == 'entity.node.revision') {
             $route_name = 'entity.node.canonical';
-            $route_parameters['node'] = $node;
-            if ($route_parameters['node_revision']) {
+            if (!is_string($node)) {
+              $route_parameters['node'] = $node->id();
+            }
+            if (isset($route_parameters['node_revision'])) {
               unset($route_parameters['node_revision']);
             }
           }
