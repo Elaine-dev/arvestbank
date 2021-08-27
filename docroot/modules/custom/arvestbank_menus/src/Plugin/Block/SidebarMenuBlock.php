@@ -140,7 +140,6 @@ class SidebarMenuBlock extends BlockBase {
 
     // Start render array with a container.
     return [
-      '#type'       => 'container',
       '#attributes' => [
         'class' => ['sidebar-menu'],
       ],
