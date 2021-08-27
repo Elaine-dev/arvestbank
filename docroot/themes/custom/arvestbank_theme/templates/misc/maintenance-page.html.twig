@@ -11,31 +11,32 @@
  * @ingroup themeable
  */
 #}
-<header role="banner">
 
-</header>
-
-<main role="main">
-
-  {{ page.highlighted }}
-
-  {{ page.content }}
-</main>
-
-{% if page.sidebar_first %}
-  <aside role="complementary">
-    {{ page.sidebar_first }}
-  </aside>
-{% endif %}
-
-{% if page.sidebar_second %}
-  <aside role="complementary">
-    {{ page.sidebar_second }}
-  </aside>
-{% endif %}
-
-{% if page.footer %}
-  <footer role="contentinfo">
-    {{ page.footer }}
-  </footer>
-{% endif %}
+<div class="maintenance-page">
+  <div class="m-header">
+    <div class="content-container">
+      <img src="/themes/custom/arvestbank_theme/logo.png" alt="Home">
+    </div>
+  </div>
+  <div class="m-main">
+    <div class="content-container">
+      {{ page.content }}
+    </div>
+  </div>
+  <div class="m-footer">
+    <div class="content-container">
+      <div class="m-left">
+        <p>Copyright &copy; 2021 Arvest Bank. All Rights Reserved.</p>
+      </div>
+      <div>
+        <div class="m-right"><img alt="Member FDIC" height="23" src="/sites/default/files/acquiadam_assets/fdic-logo.png" width="36" loading="lazy" typeof="Image"><img alt="Equal Housing Lender" height="33" src="/sites/default/files/acquiadam_assets/housing-logo2.png" width="32" loading="lazy" typeof="Image"></div>
+        <div class="m-clear"><p><b>Investments and Insurance Products: Not a Deposit | Not Guaranteed by the Bank or its Affiliates | Not FDIC Insured | Not Insured by Any Federal Government Agency | May Go Down in Value</b></p>
+          <p>Investment products and services provided by Arvest Investments, Inc., doing business as Arvest Wealth Management, member FINRA/SIPC, an SEC registered investment adviser and a subsidiary of Arvest Bank. Securities offered and cleared through Pershing LLC, a BNY Mellon company, member NYSE/SIPC. Insurance products made available through Arvest Insurance, Inc., which is registered as
+            an insurance agency. Insurance products are marketed through Arvest Insurance, Inc., but are underwritten by unaffiliated insurance companies.</p>
+          <p>The Investment Management Group (IMG) is comprised of Arvest Wealth Management registered investment adviser representatives who provide portfolio management services with respect to certain of Arvest Wealth Management's investment advisory wrap fee programs.
+            Trust services provided by Arvest Bank.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
