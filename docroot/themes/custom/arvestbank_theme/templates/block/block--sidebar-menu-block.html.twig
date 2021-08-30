@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Theme override to display a sidebar menu block.
+ *
+ * Sidebar menu JS expects data-has-nav to be initialized to 1. Since this
+ * block is added to the markup twice, once for mobile and once for desktop,
+ * JS removes or reinserts to the appropriate based on screen size.
+ *
+ * @see js/main.js
+ * @see block.html.twig for available variables.
+ */
+#}
+<div class="sidebar-menu block block-arvestbank-menus block-sidebar-menu-block" data-has-nav="1">
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</div>

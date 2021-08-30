@@ -209,6 +209,9 @@
             },
             "drupal/condition_query": {
                 "Add support for a wildcard parameter and a case sensitive option": "https://www.drupal.org/files/issues/2021-06-04/2986466-25.patch"
+            },
+            "drupal/media_video_micromodal": {
+                "aria-labelledby attribute must point to IDs of elements in the same document.": "https://www.drupal.org/files/issues/2021-08-27/update_aria_labelledby_attribute.patch"
             }
         }
     },

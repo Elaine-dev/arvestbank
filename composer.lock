@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c117afca3378db605194d011a9597bfc",
+
+    "content-hash": "015bca9e88218af8fd8aacddb4bfd74
     "packages": [
         {
             "name": "acquia/blt",
@@ -6289,8 +6290,7 @@
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
                     }
-                },
-                "patches_applied": []
+                }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
@@ -6306,8 +6306,7 @@
             "homepage": "https://www.drupal.org/project/media_video_micromodal",
             "support": {
                 "source": "https://git.drupalcode.org/project/media_video_micromodal"
-            },
-            "time": "2021-07-30T19:11:09+00:00"
+            }
         },
         {
             "name": "drupal/memcache",
@@ -17264,5 +17263,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.1.0"
 }
