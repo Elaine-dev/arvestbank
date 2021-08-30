@@ -1047,13 +1047,15 @@ li.coh-menu-list-item.coh-ce-a69b2abe.js-coh-menu-item:nth-child(6), li.coh-menu
   padding: 20px;
 }
 
-.m-header, .m-footer{
+.m-header{
   background-color:#00457c;
-  color: white;
+  border-bottom: 4px solid #e60000;
 }
 
 .m-footer{
+  background-color:#00457c;
   text-align:center;
+  color: white;
 }
 
 .m-footer img{
