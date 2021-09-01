@@ -102,7 +102,7 @@ class ArvestSearchTabs extends FilterPluginBase {
   public function buildExposedForm(&$form, FormStateInterface $form_state) {
 
     // Get the active tab.
-    $activeSearchTab = 'all';
+    $activeSearchTab = 'services';
     if (
       isset($_GET['search-tab'])
       && $_GET['search-tab'] != ''
