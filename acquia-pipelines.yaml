@@ -1,5 +1,7 @@
 version: 1.2.0
 services:
+  - composer:
+      version: 2
   - mysql
   - php:
       version: 7.4
@@ -18,19 +20,10 @@ events:
             - composer validate --no-check-all --ansi
             - composer install --ansi
             - source ${BLT_DIR}/scripts/pipelines/setup_env
-            # - nvm install v6.9.1 --latest-npm
-            # - npm install --global yarn
       - validate:
           type: script
           script:
             - source ${BLT_DIR}/scripts/pipelines/validate
-      # Uncomment these lines to test database updates using live content.
-      # You will need to set up SSH keys for your Pipelines container:
-      # @see https://docs.acquia.com/acquia-cloud/develop/pipelines/encrypt/
-      # - test-updates:
-      #     type: script
-      #     script:
-      #       - blt drupal:sync:default:site
       - setup-app:
           type: script
           script:

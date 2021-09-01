@@ -109,3 +109,7 @@ apache_vhosts_ssl:
       ProxyPassMatch ^/(.*\.php(/.*)?)$ "fcgi://127.0.0.1:9000{{ drupal_core_path }}"
 
 max_allowed_packet: 256M
+
+# composer settings
+composer_keep_updated: true # Always update the composer on provision
+composer_version_branch: '--2' # Restrict the update to version 2
