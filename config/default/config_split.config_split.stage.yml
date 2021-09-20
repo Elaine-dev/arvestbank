@@ -5,6 +5,7 @@ dependencies: {  }
 id: stage
 label: Stage
 description: 'Configuration for the Cloud Platform staging environment.'
+storage: folder
 folder: ../config/envs/stage
 module:
   acquia_connector: 0
@@ -14,12 +15,10 @@ module:
   qa_accounts: 0
   simplesamlphp_auth: 0
 theme: {  }
-blacklist: {  }
-graylist:
+weight: 0
+complete_list: {  }
+partial_list:
   - shield.settings
   - system.performance
   - qa_accounts.settings
   - gtm.settings
-graylist_dependents: true
-graylist_skip_equal: true
-weight: 0

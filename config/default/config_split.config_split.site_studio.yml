@@ -5,12 +5,11 @@ dependencies: {  }
 id: site_studio
 label: 'Site Studio'
 description: 'Avoid exporting cohesion configuration since that will be handled by the cohesion import/export commands. See: http://geertvd.github.io/post/exclude-config-from-cmi-in-d8/'
+storage: database
 folder: ''
 module: {  }
 theme: {  }
-blacklist:
-  - 'cohesion_*'
-graylist: {  }
-graylist_dependents: true
-graylist_skip_equal: true
 weight: 0
+complete_list:
+  - 'cohesion_*'
+partial_list: {  }
