@@ -5,6 +5,7 @@ dependencies: {  }
 id: local
 label: Local
 description: 'Local Configuration for development purposes outside of the Cloud Platform.'
+storage: folder
 folder: ../config/envs/local
 module:
   acquia_lift: 0
@@ -13,15 +14,13 @@ module:
   qa_accounts: 0
   simplesamlphp_auth: 0
 theme: {  }
-blacklist:
+weight: 0
+complete_list:
   - dblog.settings
   - devel.settings
   - devel.toolbar.settings
   - views.view.watchdog
   - cohesion.sync.settings
-graylist:
+partial_list:
   - shield.settings
   - qa_accounts.settings.yml
-graylist_dependents: true
-graylist_skip_equal: true
-weight: 0

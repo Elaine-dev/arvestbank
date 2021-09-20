@@ -5,6 +5,7 @@ dependencies: {  }
 id: prod
 label: Prod
 description: 'Configuration of the Cloud Platform Production environment.'
+storage: folder
 folder: ../config/envs/prod
 module:
   acquia_lift: 0
@@ -12,10 +13,8 @@ module:
   syslog: 0
   simplesamlphp_auth: 0
 theme: {  }
-blacklist: {  }
-graylist:
+weight: 0
+complete_list: {  }
+partial_list:
   - system.performance
   - gtm.settings
-graylist_dependents: true
-graylist_skip_equal: true
-weight: 0
