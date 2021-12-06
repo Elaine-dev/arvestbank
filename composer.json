@@ -228,12 +228,17 @@
         "site-studio-webform": {
             "type": "vcs",
             "url": "https://github.com/pavlosdan/site_studio_webform.git"
+        },
+        "blt-ide-local": {
+            "type": "vcs",
+            "url": "https://github.com/pavlosdan/blt-ide-local.git"
         }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require-dev": {
         "acquia/blt-drupal-vm": "dev-master",
-        "drupal/console": "~1.0"
+        "drupal/console": "~1.0",
+        "acquia/blt-ide-local": "dev-main"
     }
 }
