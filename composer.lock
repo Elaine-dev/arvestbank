@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "934ff5bd8008f80e353616aff66a4494",
+    "content-hash": "96fb0097fd8adcfdbb963b7f9002163f",
     "packages": [
         {
             "name": "acquia/blt",
@@ -17152,6 +17152,47 @@
             "time": "2021-09-13T14:24:40+00:00"
         },
         {
+            "name": "acquia/blt-ide-local",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pavlosdan/blt-ide-local.git",
+                "reference": "0d6ced905219ab22297d7de21bb91ec8fd91865b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pavlosdan/blt-ide-local/zipball/0d6ced905219ab22297d7de21bb91ec8fd91865b",
+                "reference": "0d6ced905219ab22297d7de21bb91ec8fd91865b",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Acquia\\BltIdeLocal\\": "./src/"
+                },
+                "classmap": [
+                    "src/Blt/Plugin/EnvironmentDetector/IdeDetector.php"
+                ]
+            },
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Acquia Engineering",
+                    "homepage": "https://www.acquia.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Allows BLT to treat an Acquia IDE environment as local",
+            "support": {
+                "source": "https://github.com/pavlosdan/blt-ide-local/tree/main",
+                "issues": "https://github.com/pavlosdan/blt-ide-local/issues"
+            },
+            "time": "2021-02-03T02:51:02+00:00"
+        },
+        {
             "name": "alchemy/zippy",
             "version": "0.4.9",
             "source": {
@@ -17897,7 +17938,8 @@
         "drupal/search_api_attachments": 10,
         "drupal/select2_all": 15,
         "drupal/sitemap": 10,
-        "acquia/blt-drupal-vm": 20
+        "acquia/blt-drupal-vm": 20,
+        "acquia/blt-ide-local": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
