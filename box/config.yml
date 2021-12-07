@@ -98,7 +98,7 @@ php_xdebug_remote_port: "9000"
 php_memory_limit: "512M"
 
 post_provision_scripts:
-  - "../../../acquia/blt-drupal-vm/scripts/drupal-vm/post-provision.php"
+  - "../../../acquia/blt-drupal-vm/scripts/drupal-vm/post-provision.sh"
 
 apache_vhosts_ssl:
   - servername: "{{ drupal_domain }}"
@@ -113,3 +113,6 @@ max_allowed_packet: 256M
 # composer settings
 composer_keep_updated: true # Always update the composer on provision
 composer_version_branch: '--2' # Restrict the update to version 2
+
+# Fix NFS issues on macOS Big Sur https://github.com/geerlingguy/drupal-vm/issues/2154
+vagrant_nfs_fix_enabled: true
