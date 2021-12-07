@@ -99,7 +99,7 @@
         "drupal/simple_sitemap": "^3.8",
         "drupal/simplesamlphp_auth": "^3.2",
         "drupal/sitemap": "^2.0@beta",
-        "drupal/taxonomy_menu_ui": "^1.4",
+        "drupal/taxonomy_menu_ui": "^2.0",
         "drupal/views_autosubmit": "^1.4",
         "drupal/views_block_filter_block": "^1.0",
         "drupal/webform": "^6.0.4",
@@ -177,13 +177,13 @@
                 "FinishResponseSubscriber: Need warning/error when headers exceed 16k": "https://www.drupal.org/files/issues/2021-02-08/finish-response-subscriber--need-warning-error-when-headers-exceed-16k-2844620-34.patch"
             },
             "drupal/config_ignore": {
-                "Support for export filtering via Drush\n": "https://www.drupal.org/files/issues/2021-01-04/config_ignore_2857247-61.patch"
+                "Support for export filtering via Drush": "https://www.drupal.org/files/issues/2021-01-04/config_ignore_2857247-61.patch"
             },
             "drupal/scheduler_content_moderation_integration": {
-                "Hide scheduling state options if there are no valid transitions\n": "https://www.drupal.org/files/issues/2020-07-16/2798689-hide-scheduling-options-if-no-valid-transitions-20.patch"
+                "Hide scheduling state options if there are no valid transitions": "https://www.drupal.org/files/issues/2020-07-16/2798689-hide-scheduling-options-if-no-valid-transitions-20.patch"
             },
             "acquia/cohesion": {
-                "Allow master templates to use to be defined at route level.\n": "patches/cohesion-master-template-by-route.patch",
+                "Allow master templates to use to be defined at route level.": "patches/cohesion-master-template-by-route.patch",
                 "Stop Site Studio from going into maintenance mode": "patches/site-studio-no-maintenance-mode-patch.diff"
             },
             "drupal/simplesamlphp_auth": {
