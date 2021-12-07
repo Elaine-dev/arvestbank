@@ -60,7 +60,7 @@
         "drupal/imageapi_optimize_resmushit": "^2.0@beta",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/link_attributes": "^1.11",
-        "drupal/linkit": "5.0.0-beta12",
+        "drupal/linkit": "5.0.0-beta13",
         "drupal/masquerade": "^2.0@beta",
         "drupal/media_acquiadam": "^1.48",
         "drupal/media_video_micromodal": "1.x-dev@dev",
