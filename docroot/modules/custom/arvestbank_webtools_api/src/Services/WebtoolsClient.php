@@ -105,12 +105,10 @@ class WebtoolsClient {
     $endpoint = $this->webtoolsConfig->get('deposit-rates-endpoint');
     $requestOptions = [
       RequestOptions::JSON => [
-        "Request" => [
-          'RegionID'  => '101',
-          'BranchID'  => 'ALL',
-          'ProductID' => 'ALL',
-          'Cursor'    => '0',
-        ],
+        'RegionID'  => '101',
+        'BranchID'  => 'ALL',
+        'ProductID' => 'ALL',
+        'Cursor'    => '0',
       ],
     ];
 
