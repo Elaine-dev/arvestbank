@@ -75,6 +75,7 @@ type_settings:
     in_review_to_approve:
       label: 'In Review to Approve'
       from:
+        - approved
         - in_review
         - published
       to: approved
