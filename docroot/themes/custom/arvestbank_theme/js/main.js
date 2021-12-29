@@ -33,7 +33,7 @@
             // Initialize the sidebar menu property by finding the copy in the
             // hidden region.
             if (!behavior.$sidebarMenuNav) {
-              behavior.$sidebarMenuNav = $sidebarMenuBlock.find('nav#block-sidebar-menu-top-menu');
+              behavior.$sidebarMenuNav = $sidebarMenuBlock.find('nav#block-sidebar-menu-main-navigation');
             }
             // Remove the sidebar menu nav element from the DOM if it is still
             // within the hidden region. Need to do this check to prevent
