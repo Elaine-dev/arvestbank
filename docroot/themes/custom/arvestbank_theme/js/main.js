@@ -16,7 +16,6 @@
       var behavior = this;
       $('.block-sidebar-menu-block', context).each(function (index, elem) {
         var $sidebarMenuBlock = $(elem);
-        console.log($sidebarMenuBlock);
         // CSS `display: none` is set on ancestor of the sidebar block in both
         // locations. Based on which ancestor is visible, inject or remove
         // sidebar menu HTML.
