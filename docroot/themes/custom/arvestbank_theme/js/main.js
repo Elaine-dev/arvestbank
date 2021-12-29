@@ -16,6 +16,7 @@
       var behavior = this;
       $('.block-sidebar-menu-block', context).each(function (index, elem) {
         var $sidebarMenuBlock = $(elem);
+        console.log($sidebarMenuBlock);
         // CSS `display: none` is set on ancestor of the sidebar block in both
         // locations. Based on which ancestor is visible, inject or remove
         // sidebar menu HTML.
@@ -33,7 +34,7 @@
             // Initialize the sidebar menu property by finding the copy in the
             // hidden region.
             if (!behavior.$sidebarMenuNav) {
-              behavior.$sidebarMenuNav = $sidebarMenuBlock.find('nav#block-sidebar-menu-top-menu');
+              behavior.$sidebarMenuNav = $sidebarMenuBlock.find('nav#block-sidebar-menu-main-navigation');
             }
             // Remove the sidebar menu nav element from the DOM if it is still
             // within the hidden region. Need to do this check to prevent
