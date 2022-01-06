@@ -67,6 +67,7 @@ class SaveInWebtools extends WebformHandlerBase {
 
     // To avoid site studio induced multiple submissions check global variable.
     if (!isset($GLOBALS['sent_webform_submission_this_request'])) {
+      $submittedValues = $this->getSubmittedValues($this->configuration['webtools_form_name'], $form_state);
 
       // Indicate we're sending the submission now.
       $GLOBALS['sent_webform_submission_this_request'] = TRUE;
@@ -74,12 +75,66 @@ class SaveInWebtools extends WebformHandlerBase {
       // Build the form data to save.
       $xmlData = $this->buildFormDataXml($this->configuration['webtools_form_name'], $form_state);
 
+      $requestData = [
+        'FormName' => $this->configuration['webtools_form_name'],
+        'XMLString' => $xmlData,
+      ];
+
+      // Special handling for opt_out forms.
+      if ($this->configuration['webtools_form_name'] == 'opt_out') {
+        $submittedValues = $this->getSubmittedValues($this->configuration['webtools_form_name'], $form_state);
+
+        $firstName = explode('.',$this->configuration['first_name_field_machine_name']);
+        $lastName = explode('.',$this->configuration['last_name_field_machine_name']);
+
+        // Set the First Name
+        if (count($firstName) == 2) {
+          // Opt Out Request form uses a nested field.
+          $requestData['FirstName'] = $submittedValues[$firstName[0]][$firstName[1]];
+        } else {
+          // Do not call form uses no nesting.
+          $requestData['FirstName'] = $submittedValues[$this->configuration['first_name_field_machine_name']];
+        }
+
+        // Set the Last Name
+        if (count($lastName) == 2) {
+          // Opt Out Request form uses a nested field.
+          $requestData['LastName'] = $submittedValues[$lastName[0]][$lastName[1]];
+        } else {
+          // Do not call form uses no nesting.
+          $requestData['LastName'] = $submittedValues[$this->configuration['last_name_field_machine_name']];
+        }
+
+        $requestData['EmailAddress'] = !empty($submittedValues['email_address']) ? $submittedValues['email_address'] : 'N/A';
+        $requestData['SocialNumber'] = !empty($submittedValues['social_security_number']) ? $submittedValues['social_security_number'] : 'N/A';
+        $requestData['City'] = !empty($submittedValues['address']['city']) ? $submittedValues['address']['city'] : 'N/A';
+        $requestData['State'] = !empty($submittedValues['address']['state_province']) ? $submittedValues['address']['state_province'] : 'N/A';
+        $requestData['Zip'] = !empty($submittedValues['address']['postal_code']) ? $submittedValues['address']['postal_code'] : 'N/A';
+        $requestData['Phone'] = !empty($submittedValues['phone']) ? $submittedValues['phone'] : 'N/A';
+        $requestData['AccountNumber'] = !empty($submittedValues['account_number']) ? $submittedValues['account_number'] : 'N/A';
+
+        $webform_machine_name = $webform_submission->getWebform()->id();
+        if ($webform_machine_name == 'do_not_call') {
+          $requestData['DNC'] = 'Y';
+          // The API still expects the following but this form does not collect them.
+          $requestData['AS'] = 'N';
+          $requestData['MKT'] = 'N';
+          $requestData['OnlyMe'] = 'N';
+        }
+        elseif ($webform_machine_name == 'opt_out_request') {
+          $requestData['DNC'] = 'N';
+          // Selected is Opt Out.
+          $requestData['AS'] = in_array('no_everyday_business', $submittedValues['do_not_share']) ? 'N' : 'Y';
+          // Selected is Opt Out.
+          $requestData['MKT'] = in_array('no_marketing', $submittedValues['do_not_share']) ? 'N' : 'Y';
+          // Selected is Opt In.
+          $requestData['OnlyMe'] = !empty($submittedValues['only_me']) ? 'Y' : 'N';
+        }
+      }
+
       // Build the Guzzle request options.
       $requestOptions = [
-        RequestOptions::JSON => [
-          'FormName' => $this->configuration['webtools_form_name'],
-          'XMLString' => $xmlData,
-        ],
+        RequestOptions::JSON => $requestData,
       ];
 
       // Make request.
