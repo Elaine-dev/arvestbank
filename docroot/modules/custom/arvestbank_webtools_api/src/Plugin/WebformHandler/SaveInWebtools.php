@@ -81,7 +81,8 @@ class SaveInWebtools extends WebformHandlerBase {
       ];
 
       // Special handling for opt_out forms.
-      if ($this->configuration['webtools_form_name'] == 'opt_out') {
+      if ($this->configuration['webtools_form_name'] == 'opt_out' ||
+        $this->configuration['webtools_form_name'] == 'do_not_call') {
         $submittedValues = $this->getSubmittedValues($this->configuration['webtools_form_name'], $form_state);
 
         $firstName = explode('.',$this->configuration['first_name_field_machine_name']);
