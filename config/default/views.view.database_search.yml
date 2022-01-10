@@ -596,7 +596,7 @@ display:
             operator_list: {  }
             identifier: search-tab
             required: false
-            remember: true
+            remember: false
             multiple: false
             remember_roles:
               anonymous: anonymous
@@ -698,6 +698,7 @@ display:
       tags:
         - 'config:field.storage.node.body'
         - 'config:search_api.index.database_search_index'
+        - 'config_split_state:field.storage.node.body'
   page_1:
     display_plugin: page
     id: page_1
@@ -720,3 +721,4 @@ display:
       tags:
         - 'config:field.storage.node.body'
         - 'config:search_api.index.database_search_index'
+        - 'config_split_state:field.storage.node.body'
