@@ -21,7 +21,7 @@ default_value: {  }
 default_value_callback: ''
 settings:
   file_directory: acquiadam/images
-  file_extensions: 'png gif jpg jpeg tiff'
+  file_extensions: 'png gif jpg jpeg tiff webp'
   max_filesize: '50 MB'
   max_resolution: ''
   min_resolution: ''
