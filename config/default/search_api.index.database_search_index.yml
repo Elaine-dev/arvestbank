@@ -3,15 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.media.field_acquiadam_asset_doc
     - field.storage.node.body
     - field.storage.node.field_field_callout_phone_number
     - field.storage.node.field_callout_title
-    - field.storage.media.field_acquiadam_asset_doc
     - search_api.server.database_search_server
   module:
-    - node
-    - media
     - file
+    - media
+    - node
     - search_api
     - search_api_attachments
 id: database_search_index
@@ -24,6 +24,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: body
     type: text
+    boost: !!float 5
     dependencies:
       config:
         - field.storage.node.body
@@ -32,6 +33,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: 'field_field_callout_phone_number:entity:body'
     type: text
+    boost: !!float 5
     dependencies:
       config:
         - field.storage.node.body
@@ -43,6 +45,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: field_callout_title
     type: text
+    boost: !!float 5
     dependencies:
       config:
         - field.storage.node.field_callout_title
@@ -72,7 +75,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: title
     type: text
-    boost: !!float 2
+    boost: !!float 8
     dependencies:
       module:
         - node
