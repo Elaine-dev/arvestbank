@@ -1,1 +1,21 @@
 /* Calculators Custom CSS */
+.InputContainer legend.tvcLegendForRadioClass {
+  display: none;
+}
+
+.InputTable legend.tvcLegendForRadioClass {
+  display: none;
+}
+
+.InputTable label.tvcHideLabelClass {
+  display:none;
+}
+
+p.tvcHidePClass {
+  display:none;
+}
+
+div#DIVCalculatorResultsDetail {
+  margin: 0;
+  display: none;
+}
