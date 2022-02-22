@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5e76f5c1b841582975d03217cd97006e",
+    "content-hash": "199baab421037f8973ce93a256d32770",
     "packages": [
         {
             "name": "acquia/blt",
@@ -148,20 +148,20 @@
         },
         {
             "name": "acquia/blt-site-studio",
-            "version": "dev-develop",
+            "version": "2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/davidtrainer/blt-site-studio.git",
-                "reference": "48a0121888b10d4f15cb40c697a5b314eae8c7ce"
+                "reference": "5ac8d5fe7fa513731f81b486b861fb64ee717202"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davidtrainer/blt-site-studio/zipball/48a0121888b10d4f15cb40c697a5b314eae8c7ce",
-                "reference": "48a0121888b10d4f15cb40c697a5b314eae8c7ce",
+                "url": "https://api.github.com/repos/davidtrainer/blt-site-studio/zipball/5ac8d5fe7fa513731f81b486b861fb64ee717202",
+                "reference": "5ac8d5fe7fa513731f81b486b861fb64ee717202",
                 "shasum": ""
             },
             "require": {
-                "acquia/cohesion": ">=6.4.0",
+                "acquia/cohesion": ">=6.8.0",
                 "drupal/config_ignore": "^1 | ^2",
                 "drupal/config_split": "^1 | ^2"
             },
@@ -184,10 +184,10 @@
             ],
             "description": "Acquia Site Studio integration for Acquia BLT",
             "support": {
-                "source": "https://github.com/davidtrainer/blt-site-studio/tree/develop",
+                "source": "https://github.com/davidtrainer/blt-site-studio/tree/2.x",
                 "issues": "https://github.com/davidtrainer/blt-site-studio/issues"
             },
-            "time": "2021-06-18T11:18:38+00:00"
+            "time": "2022-02-14T20:54:21+00:00"
         },
         {
             "name": "acquia/cohesion",
@@ -3247,17 +3247,17 @@
         },
         {
             "name": "drupal/config_split",
-            "version": "2.0.0-beta4",
+            "version": "2.0.0-beta5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/config_split.git",
-                "reference": "2.0.0-beta4"
+                "reference": "2.0.0-beta5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/config_split-2.0.0-beta4.zip",
-                "reference": "2.0.0-beta4",
-                "shasum": "815af0f3ac3b51368624d7ecb07424b0d9ad6c87"
+                "url": "https://ftp.drupal.org/files/projects/config_split-2.0.0-beta5.zip",
+                "reference": "2.0.0-beta5",
+                "shasum": "b5cf4ee3d7af1ba38883bebead12678214a98f1e"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -3275,8 +3275,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0-beta4",
-                    "datestamp": "1631393371",
+                    "version": "2.0.0-beta5",
+                    "datestamp": "1637101204",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."

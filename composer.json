@@ -12,7 +12,7 @@
     "require": {
         "acquia/blt": "12.7",
         "acquia/blt-simplesamlphp": "dev-master",
-        "acquia/blt-site-studio": "dev-develop",
+        "acquia/blt-site-studio": "2.x-dev",
         "acquia/cohesion": "6.8",
         "acquia/cohesion-theme": "6.8",
         "acquia/memcache-settings": "^1.0",

@@ -3,7 +3,8 @@ project:
   prefix: AB
 site-studio:
   cohesion-import: true
-  sync-import: true
+  sync-import: false
+  package-import: true
   rebuild: true
 git:
   default_branch: develop
