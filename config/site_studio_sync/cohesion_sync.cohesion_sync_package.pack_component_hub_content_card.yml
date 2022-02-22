@@ -1,0 +1,23 @@
+uuid: 28d3aab2-0b07-4179-89cb-923b2b9fd07a
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_hub_content_card
+label: 'Component Hub Content Listing Card'
+description: 'A component hub content card. Last Updated: Allie Jones 08/09/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "6bc271ee-01a6-41dc-b369-cfafa86056ad": {
+          "type": "cohesion_component",
+          "items": {
+              "6bc271ee-01a6-41dc-b369-cfafa86056ad": {
+                  "type": "cohesion_component"
+              },
+              "737ceb5d-a752-47b2-93b8-fb3223ff9048": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

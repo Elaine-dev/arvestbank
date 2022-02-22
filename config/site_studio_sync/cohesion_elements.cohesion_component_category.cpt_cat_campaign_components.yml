@@ -1,0 +1,14 @@
+uuid: 3dc002f0-47b0-4ec1-a6f9-d2494e020cb0
+langcode: en
+status: true
+dependencies: {  }
+id: cpt_cat_campaign_components
+label: 'Campaign Components'
+json_values: '{}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: false
+selectable: true
+class: category-4
+weight: -7

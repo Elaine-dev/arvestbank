@@ -1,0 +1,20 @@
+uuid: d9954c31-b9f2-495b-bb6d-98ab9fa36057
+langcode: en
+status: true
+dependencies: {  }
+id: pack_master_template
+label: 'Master Template'
+description: 'Master template. Updated: Allie Jones 8/18/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "77ec9f12-cb22-4a09-b4ab-dfc87a592fc3": {
+          "type": "cohesion_master_templates",
+          "items": {
+              "77ec9f12-cb22-4a09-b4ab-dfc87a592fc3": {
+                  "type": "cohesion_master_templates"
+              }
+          },
+          "checked": true
+      }
+  }

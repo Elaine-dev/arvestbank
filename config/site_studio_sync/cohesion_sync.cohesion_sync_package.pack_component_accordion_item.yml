@@ -1,0 +1,23 @@
+uuid: f4ba8a0b-f8c0-4e56-a122-41ff4fcc7da7
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_accordion_item
+label: 'Component Accordion Item'
+description: 'Accordion item component. Updated: Aaron Parkening 7/30/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "2383de38-a7fa-4be2-8a71-617250e1e5e2": {
+          "type": "cohesion_component",
+          "items": {
+              "2383de38-a7fa-4be2-8a71-617250e1e5e2": {
+                  "type": "cohesion_component"
+              },
+              "62ff6b9c-227a-46bc-a37b-0b6554ac9a85": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

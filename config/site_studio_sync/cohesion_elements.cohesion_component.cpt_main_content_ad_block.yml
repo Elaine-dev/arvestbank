@@ -1,0 +1,212 @@
+uuid: e487b687-d9b6-4db6-80c6-afd863c3a3f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_elements.cohesion_component_category.cpt_cat_drupal_blocks
+id: cpt_main_content_ad_block
+label: 'Main Content Ad Block'
+json_values: |
+  {
+      "canvas": [
+          {
+              "type": "item",
+              "uid": "drupal-block",
+              "title": "Block",
+              "status": {
+                  "collapsed": true
+              },
+              "uuid": "6a5372ba-c9d2-4f66-8ae1-03a1be683bcb",
+              "parentUid": "root",
+              "children": []
+          }
+      ],
+      "componentForm": [
+          {
+              "type": "form-container",
+              "uid": "form-tab-item",
+              "title": "Tab item",
+              "status": {
+                  "collapsed": false
+              },
+              "options": {
+                  "formBuilder": true
+              },
+              "uuid": "b4f13dac-0ef5-424f-bb25-18b30cac55f5",
+              "parentUid": "root",
+              "children": [
+                  {
+                      "type": "form-container",
+                      "uid": "form-section",
+                      "title": "Field group",
+                      "status": {
+                          "collapsed": false
+                      },
+                      "options": {
+                          "formBuilder": true
+                      },
+                      "uuid": "236fdffe-9b5e-4d66-b069-9087f8876191",
+                      "parentUid": "form-tab-item",
+                      "children": [
+                          {
+                              "type": "form-help",
+                              "uid": "form-helptext",
+                              "title": "Help text",
+                              "status": {
+                                  "collapsed": false
+                              },
+                              "uuid": "09e9ddf9-c433-462d-9b99-b6e1cca35ff5",
+                              "parentUid": "form-section",
+                              "children": []
+                          }
+                      ]
+                  }
+              ]
+          }
+      ],
+      "mapper": {
+          "6a5372ba-c9d2-4f66-8ae1-03a1be683bcb": {
+              "settings": {
+                  "formDefinition": [
+                      {
+                          "formKey": "block-settings",
+                          "children": [
+                              {
+                                  "formKey": "block-drupal-block",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "theme",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "block",
+                                          "active": true
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "block-style",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "customStyle",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "customStyle",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "selectorType": "topLevel",
+                  "form": null,
+                  "items": []
+              }
+          }
+      },
+      "model": {
+          "6a5372ba-c9d2-4f66-8ae1-03a1be683bcb": {
+              "settings": {
+                  "title": "Main Content Ad Card Block",
+                  "customStyle": [
+                      {
+                          "customStyle": ""
+                      }
+                  ],
+                  "settings": {
+                      "theme": "all",
+                      "customStyle": [
+                          {
+                              "customStyle": ""
+                          }
+                      ]
+                  },
+                  "theme": "arvestbank_theme",
+                  "block": "adblockmaincontent"
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "block"
+                  }
+              }
+          },
+          "b4f13dac-0ef5-424f-bb25-18b30cac55f5": {
+              "settings": {
+                  "title": "Help",
+                  "type": "cohTabItem",
+                  "breakpointIcon": ""
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "236fdffe-9b5e-4d66-b069-9087f8876191": {
+              "settings": {
+                  "title": "Help and information",
+                  "type": "cohSection",
+                  "hideRowHeading": 0,
+                  "removePadding": 0,
+                  "columnCount": "coh-component-field-group-1-col",
+                  "breakpointIcon": "",
+                  "breakpoints": false,
+                  "propertiesMenu": false,
+                  "disableScrollbar": true,
+                  "disableEllipsisMenu": true,
+                  "isOpen": true
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "09e9ddf9-c433-462d-9b99-b6e1cca35ff5": {
+              "settings": {
+                  "title": "Help text",
+                  "type": "cohHelpText",
+                  "options": {
+                      "showClose": false,
+                      "helpType": "coh-help-text--help",
+                      "helpText": "This component should be placed on exit pages only. These ads are managed by the ad campaign."
+                  }
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          }
+      },
+      "previewModel": {
+          "6a5372ba-c9d2-4f66-8ae1-03a1be683bcb": {},
+          "b4f13dac-0ef5-424f-bb25-18b30cac55f5": {},
+          "236fdffe-9b5e-4d66-b069-9087f8876191": {},
+          "09e9ddf9-c433-462d-9b99-b6e1cca35ff5": {}
+      },
+      "variableFields": {
+          "6a5372ba-c9d2-4f66-8ae1-03a1be683bcb": [],
+          "b4f13dac-0ef5-424f-bb25-18b30cac55f5": [],
+          "236fdffe-9b5e-4d66-b069-9087f8876191": [],
+          "09e9ddf9-c433-462d-9b99-b6e1cca35ff5": []
+      },
+      "meta": {
+          "fieldHistory": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+category: cpt_cat_drupal_blocks
+preview_image: ''
+has_quick_edit: true
+entity_type_access: {  }
+bundle_access: {  }
+twig_template: component--cohesion-cpt-main-content-ad-block
+weight: 0

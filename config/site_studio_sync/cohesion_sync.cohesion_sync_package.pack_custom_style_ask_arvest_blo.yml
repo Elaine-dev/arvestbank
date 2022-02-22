@@ -1,0 +1,20 @@
+uuid: af45a918-2448-487c-99ca-13e1b685b345
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_ask_arvest_blo
+label: 'Custom Style Ask Arvest Block'
+description: 'Styles for Ask Arvest Block component. Last Updated: Aaron Parkening 07/16/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "098894f3-88b9-4209-806d-76707abbedc6": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "098894f3-88b9-4209-806d-76707abbedc6": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

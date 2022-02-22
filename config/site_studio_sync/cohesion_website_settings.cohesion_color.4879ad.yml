@@ -1,0 +1,27 @@
+uuid: b7185e79-4788-45ed-a8d6-1f7a78b2470e
+langcode: en
+status: true
+dependencies: {  }
+id: 4879ad
+label: '#4879ad'
+json_values: |
+  {
+      "link": true,
+      "value": {
+          "value": {
+              "hex": "#4879ad",
+              "rgba": "rgba(72, 121, 173, 1)"
+          }
+      },
+      "name": "#4879ad",
+      "uid": "4879ad",
+      "class": ".coh-color-4879ad",
+      "variable": "$coh-color-4879ad",
+      "inuse": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 21

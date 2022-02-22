@@ -1,0 +1,27 @@
+uuid: e936898e-d2a0-4879-b81d-c16524094c6c
+langcode: en
+status: true
+dependencies: {  }
+id: b3cae4
+label: '#b3cae4'
+json_values: |
+  {
+      "link": true,
+      "value": {
+          "value": {
+              "hex": "#b3cae4",
+              "rgba": "rgba(179, 202, 228, 1)"
+          }
+      },
+      "name": "#b3cae4",
+      "uid": "b3cae4",
+      "class": ".coh-color-b3cae4",
+      "variable": "$coh-color-b3cae4",
+      "inuse": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 27

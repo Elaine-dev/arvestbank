@@ -1,0 +1,20 @@
+uuid: 74af0b16-5fbd-43a9-803a-2d426d3adad0
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_responsive_chi
+label: 'Custom Style Responsive Child Image'
+description: 'Styles for making children images responsive. Updated: Aaron Parkening 6/16/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "922e0744-9c2b-4d77-b0f4-07b1e6df98d0": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "922e0744-9c2b-4d77-b0f4-07b1e6df98d0": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

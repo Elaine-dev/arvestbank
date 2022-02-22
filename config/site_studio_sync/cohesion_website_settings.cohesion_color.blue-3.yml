@@ -1,0 +1,28 @@
+uuid: 5f65ddb7-d1e8-4023-b2d9-ca9f9a676f81
+langcode: en
+status: true
+dependencies: {  }
+id: blue-3
+label: 'Blue 3'
+json_values: |
+  {
+      "name": "Blue 3",
+      "uid": "blue-3",
+      "value": {
+          "value": {
+              "hex": "#003162",
+              "rgba": "rgba(0, 49, 98, 1)"
+          }
+      },
+      "wysiwyg": false,
+      "class": ".coh-color-blue-3",
+      "variable": "$coh-color-blue-3",
+      "inuse": true,
+      "link": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 18

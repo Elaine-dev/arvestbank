@@ -1,0 +1,20 @@
+uuid: 6f89d1b5-6eff-447c-b8cc-b53b16b2072d
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_header_navigat
+label: 'Custom Style Header Navigation'
+description: 'Site Studio package for header navigation styles. Last updated: Aaron Parkening 7/14/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "34d91ced-fc54-41b1-8005-7ac566188235": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "34d91ced-fc54-41b1-8005-7ac566188235": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

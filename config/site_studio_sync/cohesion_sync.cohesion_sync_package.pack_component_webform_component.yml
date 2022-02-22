@@ -1,0 +1,38 @@
+uuid: e836883e-cc51-47cf-b7e7-a069e5787430
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_webform_component
+label: 'Component Webform component cards'
+description: 'Components to make webform Drupal Blocks. Last updated Allie Jones 06/29/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "6f37bdc6-0fbf-4778-bcf4-211b484afa9f": {
+          "type": "cohesion_component",
+          "items": {
+              "6f37bdc6-0fbf-4778-bcf4-211b484afa9f": {
+                  "type": "cohesion_component"
+              }
+          },
+          "checked": true
+      },
+      "d825e699-0505-46d3-a6a0-5dfbbb2da801": {
+          "type": "cohesion_component",
+          "items": {
+              "d825e699-0505-46d3-a6a0-5dfbbb2da801": {
+                  "type": "cohesion_component"
+              }
+          },
+          "checked": true
+      },
+      "4cc12444-8b81-4a7b-b9ac-8e521c021ed2": {
+          "type": "cohesion_component",
+          "items": {
+              "4cc12444-8b81-4a7b-b9ac-8e521c021ed2": {
+                  "type": "cohesion_component"
+              }
+          },
+          "checked": true
+      }
+  }

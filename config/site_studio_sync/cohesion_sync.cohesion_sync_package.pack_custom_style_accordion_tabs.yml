@@ -1,0 +1,20 @@
+uuid: 75d5fdb9-7260-4c12-b962-ddbc5d0cc08d
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_accordion_tabs
+label: 'Custom Style Accordion Tabs Solid'
+description: 'Accordion and tabs solid styles used in main and Campaign pages. Updated: Aaron Parkening 7/30/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "c80ab743-36ba-4793-835e-6d7d8dcc8e45": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "c80ab743-36ba-4793-835e-6d7d8dcc8e45": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

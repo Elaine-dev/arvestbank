@@ -1,0 +1,103 @@
+uuid: 9c44fd5f-b27c-4f93-9ffc-78e406ad3525
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_elements.cohesion_component.cpt_ask_arvest_block
+    - cohesion_elements.cohesion_component.cpt_callout_cards
+    - cohesion_elements.cohesion_helper_category.hlp_cat_general_helpers
+id: hlp_ask_arvest_template
+label: 'Ask Arvest Template'
+json_values: |
+  {
+      "canvas": [
+          {
+              "uid": "cpt_callout_cards",
+              "type": "component",
+              "title": "Callout Card",
+              "enabled": true,
+              "category": "category-5",
+              "componentId": "cpt_callout_cards",
+              "componentType": "container",
+              "uuid": "783081e9-1bfe-4ff5-99dc-627810a7c0b3",
+              "parentUid": "root",
+              "status": {
+                  "collapsed": false
+              },
+              "children": [
+                  {
+                      "type": "container",
+                      "uid": "component-drop-zone",
+                      "mimicParent": true,
+                      "parentUid": "cpt_callout_cards",
+                      "title": "Component drop zone",
+                      "selected": false,
+                      "status": {
+                          "collapsed": false,
+                          "disabled": false
+                      },
+                      "uuid": "7a144b0c-fd0f-4dec-abe0-f611cc797c7d",
+                      "dropzoneId": "e509ca7b-8031-4fba-b11f-63d9fcd58ea7",
+                      "children": [
+                          {
+                              "uid": "cpt_ask_arvest_block",
+                              "type": "component",
+                              "title": "Ask Arvest Block",
+                              "enabled": true,
+                              "category": "category-11",
+                              "componentId": "cpt_ask_arvest_block",
+                              "componentType": "container",
+                              "uuid": "8e2528b9-0703-4fbf-a539-97c4a4674764",
+                              "parentUid": "component-drop-zone",
+                              "children": []
+                          }
+                      ]
+                  }
+              ]
+          }
+      ],
+      "mapper": {},
+      "model": {
+          "783081e9-1bfe-4ff5-99dc-627810a7c0b3": {
+              "settings": {
+                  "title": "Ask Arvest Mortgage"
+              },
+              "a19e4829-3142-41a1-8c2a-284aca17590f": {
+                  "entity": {
+                      "entityUUID": "06a4be65-101f-4fc9-83e8-9fba551fba1d",
+                      "entityId": "06a4be65-101f-4fc9-83e8-9fba551fba1d",
+                      "entityType": "media"
+                  },
+                  "entityBrowserType": "media_library",
+                  "entityType": "media",
+                  "bundles": {
+                      "acquia_dam_image": true
+                  }
+              },
+              "9e5e990f-5632-492b-aaee-a756f79c5a59": "Ask Arvest",
+              "c61e9bf0-0ee4-4456-8827-9d26127cb1dd": {
+                  "text": "<p>Have a question about your Arvest mortgage? Ask it here:<\/p>\n",
+                  "textFormat": "cohesion"
+              }
+          },
+          "7a144b0c-fd0f-4dec-abe0-f611cc797c7d": {
+              "settings": {
+                  "title": "Component drop zone",
+                  "dropzoneHideSelector": ""
+              }
+          },
+          "8e2528b9-0703-4fbf-a539-97c4a4674764": {}
+      },
+      "previewModel": {},
+      "variableFields": {}
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+category: hlp_cat_general_helpers
+preview_image: ''
+entity_type_access: {  }
+bundle_access: {  }
+weight: null

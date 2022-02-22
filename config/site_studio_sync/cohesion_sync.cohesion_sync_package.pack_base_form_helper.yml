@@ -1,0 +1,20 @@
+uuid: 724342c8-fbfa-4099-9c3a-b303ae2d1fa8
+langcode: en
+status: true
+dependencies: {  }
+id: pack_base_form_helper
+label: 'Base Form Helper'
+description: 'Builds out help tab to be used in form builder.  Created by Jacob Crane 5/25/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "082131e7-7ef6-4c20-b3e2-aa5e188814ef": {
+          "type": "cohesion_helper",
+          "items": {
+              "082131e7-7ef6-4c20-b3e2-aa5e188814ef": {
+                  "type": "cohesion_helper"
+              }
+          },
+          "checked": true
+      }
+  }

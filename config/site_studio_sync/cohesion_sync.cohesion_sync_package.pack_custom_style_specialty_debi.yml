@@ -1,0 +1,20 @@
+uuid: 29967993-4d74-4c05-94ed-f440fd7cb970
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_specialty_debi
+label: 'Custom Style Specialty Debit Cards View'
+description: 'Styles for Specialty Debit Cards forms and image slider. Last Updated: Aaron Parkening 06/23/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "859bc18c-3151-4d68-9a58-57affd1cf021": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "859bc18c-3151-4d68-9a58-57affd1cf021": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

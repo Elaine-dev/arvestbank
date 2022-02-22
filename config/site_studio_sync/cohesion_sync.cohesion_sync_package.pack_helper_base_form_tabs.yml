@@ -1,0 +1,20 @@
+uuid: d636f4e9-f791-47c1-b95e-47c2f6ed79fd
+langcode: en
+status: true
+dependencies: {  }
+id: pack_helper_base_form_tabs
+label: 'Helper Base Form Tabs'
+description: 'A helper with all 3 basic form builder tabs. Last Updated: Aaron Parkening  6/3/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "b93a4506-8013-49f4-a424-1e87a9712004": {
+          "type": "cohesion_helper",
+          "items": {
+              "b93a4506-8013-49f4-a424-1e87a9712004": {
+                  "type": "cohesion_helper"
+              }
+          },
+          "checked": true
+      }
+  }

@@ -1,0 +1,245 @@
+uuid: 57648ab6-73ac-4274-84a8-6682b4698205
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_styles_margin_and_pa
+label: 'Custom Styles Margin and Padding Styles'
+description: "A Site Studio package for all margin and padding custom styles.\r\nUpdated: Jacob Crane on 07/26/2021"
+excluded_entity_types: '[]'
+settings: |
+  {
+      "bdd9ca3f-ccf1-46a4-a447-482c24b29adb": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "bdd9ca3f-ccf1-46a4-a447-482c24b29adb": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      },
+      "6370d72e-cd23-459b-81b8-6bdf30ab28ba": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "6370d72e-cd23-459b-81b8-6bdf30ab28ba": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      },
+      "4d43a46f-9ced-4aa6-b079-8ea4347f9c01": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "4d43a46f-9ced-4aa6-b079-8ea4347f9c01": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      },
+      "3ccb5d01-0d86-474f-9774-1b40de1f4f30": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "3ccb5d01-0d86-474f-9774-1b40de1f4f30": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      },
+      "34acbc2b-1b3a-464d-b59f-20f86a653188": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "34acbc2b-1b3a-464d-b59f-20f86a653188": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      },
+      "1186b3c2-8e97-4fab-878d-61c95a551050": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "1186b3c2-8e97-4fab-878d-61c95a551050": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      },
+      "3681cccf-bd91-4a70-9c8b-9cbd9a4e2423": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "3681cccf-bd91-4a70-9c8b-9cbd9a4e2423": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      },
+      "9903929c-3be9-49cd-a6ae-2bc25778a45d": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "9903929c-3be9-49cd-a6ae-2bc25778a45d": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      },
+      "0374099d-e586-413e-9a93-02fd70ef3c00": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "0374099d-e586-413e-9a93-02fd70ef3c00": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      },
+      "f7e6a81c-466a-48cc-8694-d04a8dd1ebfe": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "f7e6a81c-466a-48cc-8694-d04a8dd1ebfe": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      },
+      "42d77eff-b2b7-4e03-9c1f-e2ef5f58fd6b": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "42d77eff-b2b7-4e03-9c1f-e2ef5f58fd6b": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      },
+      "3663f6c3-a46b-4540-a9ab-5faefb0e9351": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "3663f6c3-a46b-4540-a9ab-5faefb0e9351": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      },
+      "2fcca22c-f49b-4bcf-bd5c-7e82674ec8d9": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "2fcca22c-f49b-4bcf-bd5c-7e82674ec8d9": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      },
+      "94f2221d-8ebf-43f9-9d6a-0f4f04049e0e": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "94f2221d-8ebf-43f9-9d6a-0f4f04049e0e": {
+                  "type": "cohesion_custom_style"
+              },
+              "4f6145e3-c530-4040-abec-6c434fd58e8c": {
+                  "type": "cohesion_scss_variable"
+              }
+          },
+          "checked": true
+      },
+      "a9487f97-2711-4c60-88d2-cd802593b317": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "a9487f97-2711-4c60-88d2-cd802593b317": {
+                  "type": "cohesion_custom_style"
+              },
+              "4e87ed85-a03d-49e4-989f-cc36928935b0": {
+                  "type": "cohesion_scss_variable"
+              }
+          },
+          "checked": true
+      },
+      "ebf76692-1efc-4c63-af2c-036a95e76cef": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "ebf76692-1efc-4c63-af2c-036a95e76cef": {
+                  "type": "cohesion_custom_style"
+              },
+              "4e87ed85-a03d-49e4-989f-cc36928935b0": {
+                  "type": "cohesion_scss_variable"
+              }
+          },
+          "checked": true
+      },
+      "6981e82c-ef13-45f6-97c8-5d92e2bdce33": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "6981e82c-ef13-45f6-97c8-5d92e2bdce33": {
+                  "type": "cohesion_custom_style"
+              },
+              "4f6145e3-c530-4040-abec-6c434fd58e8c": {
+                  "type": "cohesion_scss_variable"
+              }
+          },
+          "checked": true
+      },
+      "56abc9e7-df6a-4748-9857-80334ed03d18": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "56abc9e7-df6a-4748-9857-80334ed03d18": {
+                  "type": "cohesion_custom_style"
+              },
+              "4f6145e3-c530-4040-abec-6c434fd58e8c": {
+                  "type": "cohesion_scss_variable"
+              }
+          },
+          "checked": true
+      },
+      "5b7740e2-6f82-44bd-84cd-ef5ebe8e444c": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "5b7740e2-6f82-44bd-84cd-ef5ebe8e444c": {
+                  "type": "cohesion_custom_style"
+              },
+              "4e87ed85-a03d-49e4-989f-cc36928935b0": {
+                  "type": "cohesion_scss_variable"
+              }
+          },
+          "checked": true
+      },
+      "a5430e52-180a-4d19-8edc-86a0034e4119": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "a5430e52-180a-4d19-8edc-86a0034e4119": {
+                  "type": "cohesion_custom_style"
+              },
+              "4f6145e3-c530-4040-abec-6c434fd58e8c": {
+                  "type": "cohesion_scss_variable"
+              }
+          },
+          "checked": true
+      },
+      "129d7a06-934e-4364-906a-3df088b6857f": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "129d7a06-934e-4364-906a-3df088b6857f": {
+                  "type": "cohesion_custom_style"
+              },
+              "4e87ed85-a03d-49e4-989f-cc36928935b0": {
+                  "type": "cohesion_scss_variable"
+              }
+          },
+          "checked": true
+      },
+      "e224a8f5-5dbb-40d4-bda6-67c27d4f6e46": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "e224a8f5-5dbb-40d4-bda6-67c27d4f6e46": {
+                  "type": "cohesion_custom_style"
+              },
+              "4f6145e3-c530-4040-abec-6c434fd58e8c": {
+                  "type": "cohesion_scss_variable"
+              }
+          },
+          "checked": true
+      },
+      "e82f7d46-72a1-4c24-a1c1-b5f61eedf5dc": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "e82f7d46-72a1-4c24-a1c1-b5f61eedf5dc": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

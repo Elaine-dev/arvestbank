@@ -1,0 +1,23 @@
+uuid: 2de74e52-2d36-4c3e-9a1b-a124ee2b05aa
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_campaign_text_a_3
+label: 'Component Campaign Text and Linked Image Card'
+description: 'Text and linked image card layout and styles. Updated: Aaron Parkening 07/08/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "63fe1ab9-3e6f-4550-8d40-17770f5e3aee": {
+          "type": "cohesion_component",
+          "items": {
+              "63fe1ab9-3e6f-4550-8d40-17770f5e3aee": {
+                  "type": "cohesion_component"
+              },
+              "e0bde4f2-fe83-410d-9f37-9b7d883794a3": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

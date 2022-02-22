@@ -1,0 +1,204 @@
+uuid: eeef6750-f51b-4b59-9262-a644e5e3d46a
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_custom_styles.cohesion_custom_style.dd984084
+id: 3c6f2254
+label: 'Icon - replace no'
+json_values: |
+  {
+      "preview": {
+          "text": "<div class=\"coh-preview coh-style-icon---yes\">Default content for 'Generic'.<\/div>\n",
+          "textFormat": "cohesion"
+      },
+      "styles": {
+          "settings": {
+              "element": "div",
+              "class": "",
+              "combinator": "",
+              "pseudo": ""
+          },
+          "b87febd3-a6c5-426a-9047-b7be19d221c8": {
+              "settings": {
+                  "element": "",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ":after"
+              },
+              "styles": {
+                  "xl": {
+                      "content-string": {
+                          "contentType": {
+                              "value": "custom"
+                          },
+                          "customString": {
+                              "value": "\"\\D7\""
+                          }
+                      },
+                      "background-color": {
+                          "value": {
+                              "value": {
+                                  "hex": "#ec1c24",
+                                  "rgba": "rgba(236, 28, 36, 1)"
+                              }
+                          }
+                      },
+                      "font-weight": {
+                          "value": "bold"
+                      },
+                      "font-size": {
+                          "value": "22"
+                      }
+                  }
+              }
+          }
+      },
+      "sBackgroundColour": "#FFFFFF",
+      "variableFields": []
+  }
+json_mapper: |
+  {
+      "styles": {
+          "title": "Layout",
+          "selectorType": "topLevel",
+          "formDefinition": [],
+          "items": [
+              {
+                  "title": ":after",
+                  "type": "container",
+                  "items": [],
+                  "form": null,
+                  "selectorType": "pseudo",
+                  "uuid": "b87febd3-a6c5-426a-9047-b7be19d221c8",
+                  "allowedTypes": [
+                      "child",
+                      "pseudo"
+                  ],
+                  "formDefinition": [
+                      {
+                          "formKey": "content",
+                          "children": [
+                              {
+                                  "formKey": "strings-counters-quotes-urls-and-attributes",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "contentType",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "contentString",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "counterString",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "customString",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      },
+                      {
+                          "formKey": "background",
+                          "children": [
+                              {
+                                  "formKey": "background-color",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "background-color",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      },
+                      {
+                          "formKey": "font",
+                          "children": [
+                              {
+                                  "formKey": "font-and-color",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "font-family",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "font-weight",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "color",
+                                          "active": false
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "font-sizing-and-alignment",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "font-size",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "line-height",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "text-align",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "letter-spacing",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "word-spacing",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "text-indent",
+                                          "active": false
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "form": null
+      }
+  }
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-icon---no
+custom_style_type: generic
+available_in_wysiwyg: true
+parent: .coh-style-icon---yes
+weight: 0

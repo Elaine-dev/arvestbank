@@ -1,0 +1,20 @@
+uuid: 28ee2d06-24c4-45d9-9edf-2eb9bd19d899
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component1_column_layout
+label: 'Component one column layout'
+description: "A reusuable component 1 column content layouts.\r\nAuthor: Aaron Parkening / Last update: 5/7/2021"
+excluded_entity_types: '[]'
+settings: |
+  {
+      "20b1e0a1-bcdf-4d30-ab99-3f44e192a74b": {
+          "type": "cohesion_component",
+          "items": {
+              "20b1e0a1-bcdf-4d30-ab99-3f44e192a74b": {
+                  "type": "cohesion_component"
+              }
+          },
+          "checked": true
+      }
+  }

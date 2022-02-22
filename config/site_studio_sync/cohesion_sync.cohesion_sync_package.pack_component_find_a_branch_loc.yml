@@ -1,0 +1,23 @@
+uuid: 87166f96-3d5d-4214-a2fa-93ec5d0db71b
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_find_a_branch_loc
+label: 'Component Find a Branch location block'
+description: 'Component for find a branch location block. Updated: Aaron Parkening 6/28/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "9026a0a7-44d6-4172-ab24-0f4bd0a99a86": {
+          "type": "cohesion_component",
+          "items": {
+              "9026a0a7-44d6-4172-ab24-0f4bd0a99a86": {
+                  "type": "cohesion_component"
+              },
+              "4cf60691-3dff-4ac6-96c0-30d64d46d5b6": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

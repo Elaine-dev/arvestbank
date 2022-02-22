@@ -1,0 +1,33 @@
+uuid: ccf28b07-caa1-4336-95be-59118af2e282
+langcode: en
+status: true
+dependencies: {  }
+id: transparent-light-blue
+label: 'Transparent Light Blue'
+json_values: |
+  {
+      "link": true,
+      "value": {
+          "value": {
+              "hex": "#00457c",
+              "rgba": "rgba(0, 69, 124, 0.7)"
+          }
+      },
+      "name": "Transparent Light Blue",
+      "uid": "transparent-light-blue",
+      "class": ".coh-color-transparent-light-blue",
+      "variable": "$coh-color-transparent-light-blue",
+      "tags": [
+          {
+              "label": "Transparent",
+              "value": "transparent"
+          }
+      ],
+      "inuse": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 12

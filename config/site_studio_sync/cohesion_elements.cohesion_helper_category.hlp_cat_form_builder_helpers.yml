@@ -1,0 +1,13 @@
+uuid: 4c0fa183-c51e-4b7e-8db4-9ad8ae5a024c
+langcode: en
+status: true
+dependencies: {  }
+id: hlp_cat_form_builder_helpers
+label: 'Form builder helpers'
+json_values: '{}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+modified: false
+selectable: true
+class: category-14
+weight: -5

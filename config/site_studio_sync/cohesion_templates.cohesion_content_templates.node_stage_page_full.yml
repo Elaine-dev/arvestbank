@@ -1,0 +1,44 @@
+uuid: 44d10cb6-e5cd-418e-a9cb-4924ce191e51
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_templates.cohesion_master_templates.mstr_tpl_no_boxed_width
+id: node_stage_page_full
+label: 'Full content (Node, Stage Page)'
+json_values: |
+  {
+      "canvas": [
+          {
+              "type": "item",
+              "uid": "drupal-content",
+              "title": "Content",
+              "status": {
+                  "collapsed": true
+              },
+              "uuid": "f21f4f54-b48a-48a4-8717-5dfdbd6d7377",
+              "parentUid": "root",
+              "children": []
+          }
+      ],
+      "mapper": {
+          "f21f4f54-b48a-48a4-8717-5dfdbd6d7377": {}
+      },
+      "model": [],
+      "previewModel": {},
+      "variableFields": {},
+      "meta": {
+          "fieldHistory": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+modified: true
+selectable: true
+custom: false
+twig_template: node--cohesion--node-stage-page-full
+default: true
+entity_type: node
+bundle: stage_page
+view_mode: full
+master_template: mstr_tpl_no_boxed_width

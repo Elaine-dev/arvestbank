@@ -1,0 +1,23 @@
+uuid: 8d370278-48ff-4f09-bd61-c1284f436e71
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_campaign_card
+label: 'Component Campaign Icon and Text Card'
+description: 'Campaign icon and text card layout and styles. Last Updated: Aaron Parkening 07/06/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "2230f07e-44cd-4e98-8a5f-ddf3b7cf034b": {
+          "type": "cohesion_component",
+          "items": {
+              "2230f07e-44cd-4e98-8a5f-ddf3b7cf034b": {
+                  "type": "cohesion_component"
+              },
+              "20c07718-1662-4572-8b2c-3bb6e1e1e858": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

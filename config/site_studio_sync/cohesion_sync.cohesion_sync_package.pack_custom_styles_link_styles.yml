@@ -1,0 +1,56 @@
+uuid: 54c3d1bd-21c5-4485-84bb-64b04b5f334f
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_styles_link_styles
+label: 'Custom Styles Link Styles'
+description: 'All Link custom styles. Updated: Aaron Parkening 7/29/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "95798c9d-8686-406e-8041-1dcf7be77dc2": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "95798c9d-8686-406e-8041-1dcf7be77dc2": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      },
+      "a4926d57-063b-4016-8d45-849169165fbc": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "a4926d57-063b-4016-8d45-849169165fbc": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      },
+      "45f847d5-5f4d-4784-94a0-3d9f622e5fa2": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "45f847d5-5f4d-4784-94a0-3d9f622e5fa2": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      },
+      "43c36556-d762-41ea-b345-5d526a13f231": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "43c36556-d762-41ea-b345-5d526a13f231": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      },
+      "b5cda7fd-c8fe-45bb-8eca-c907cd2517ac": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "b5cda7fd-c8fe-45bb-8eca-c907cd2517ac": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

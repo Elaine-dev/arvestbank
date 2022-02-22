@@ -1,0 +1,90 @@
+uuid: ffe18732-e910-4af4-baef-48596bb3d0ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_elements.cohesion_component.cpt_hub_content_card
+    - cohesion_elements.cohesion_component_category.cpt_cat_uncategorized
+id: cpt_cld_disclosure
+label: 'CLD Disclosure'
+json_values: |
+  {
+      "canvas": [
+          {
+              "uid": "cpt_hub_content_card",
+              "type": "component",
+              "title": "Hub Content List Card",
+              "enabled": true,
+              "category": "category-5",
+              "componentId": "cpt_hub_content_card",
+              "componentType": "container",
+              "uuid": "13c8f9a2-e89a-411a-a339-26e09acc74a2",
+              "parentUid": "root",
+              "model": {
+                  "settings": {
+                      "title": "Arvest Bank only accepts applications from Arkansas, Kansas, Missouri and Oklahoma."
+                  }
+              },
+              "children": []
+          }
+      ],
+      "mapper": {},
+      "model": {
+          "13c8f9a2-e89a-411a-a339-26e09acc74a2": {
+              "settings": {
+                  "title": "Arvest Bank only accepts applications from Arkansas, Kansas, Missouri and Oklahoma."
+              },
+              "dfa0f850-2e23-448b-8098-71042b41ee8d": false,
+              "6981567c-c65f-4909-a9e4-2868867e7688": "",
+              "b251f5b2-2310-4766-9793-2e2e953d8b28": {
+                  "text": "<main>\n<p>Arvest Bank only accepts applications from Arkansas, Kansas, Missouri and Oklahoma. If you are submitting an application from outside of these areas, we appreciate your interest but cannot offer lending services at this time. However, if the collateral you are purchasing\/refinancing is located in our lending area, we may be able to help! Call our lending specialists at <span><span>[arvestbank_phone_numbers:nid=14171]<\/span><\/span> to discuss your specific financing needs.<\/p>\n\n<p><a href=\"\/personal\/borrow\/home-loans\/servicing-center\/servicemember-benefits\">Learn more about financial assistance for military servicemembers.<\/a><\/p>\n<\/main>\n\n<footer>\n<ul>\n<\/ul>\n<\/footer>\n",
+                  "textFormat": "cohesion"
+              },
+              "a0af1b17-61ad-4978-a40c-9bbbd3926e2f": {
+                  "entity": {
+                      "entityType": "media"
+                  }
+              },
+              "4636aaaf-2c61-4f82-97b4-71fab7942bf0": false,
+              "0b2df780-bd05-4881-9bbf-d76c96a5ca45": false,
+              "ca852585-6bfb-42c7-8e9f-e614ac61e713": false,
+              "32b99e19-bf3b-4088-9be5-166ec08b41e3": false,
+              "fe04a3b5-0401-4525-9137-61f84f22fbf9": false,
+              "ad2c4d02-4ecc-43a3-b59f-cb9fa4f2ab04": false,
+              "301e8e8e-6085-44f9-826d-314bf5dbb9f6": false,
+              "9092e7d1-1753-4479-a95b-8069b5a7b3b0": false,
+              "d92e8e83-f84e-48ec-8ff9-90937e0b1f5b": false,
+              "2de97601-9a88-4136-a177-220254499623": false,
+              "ed29d645-f6fa-4b9e-b3e2-8832999e71de": false,
+              "9c869472-b12c-47c1-80c6-b8bbd36fabb4": false,
+              "11d75deb-65f9-4521-9ebd-e43f84e092ca": false,
+              "88ba92ad-3b0a-4e16-8485-a398d06929b0": false,
+              "95183a9b-1c88-415e-bd48-e8ab47a26cd9": false,
+              "bb069ce9-a42f-4edc-b12b-498d6cd1af4c": false,
+              "4a2f9022-e3ac-4f9b-98de-044d28a51f58": false,
+              "5707bc14-4d71-41ad-892f-f65e3a7882eb": false,
+              "4eeb9e27-1152-4cfa-a1e1-262243011303": false,
+              "d7160ce2-0bef-4282-9fd4-57e0f54468ff": false,
+              "2a41fd3b-1ebc-4a8e-8239-289a39a6f3fd": false,
+              "8fb9b7b1-10b5-4169-8ccf-fe93a72c0dc2": false
+          }
+      },
+      "previewModel": {
+          "13c8f9a2-e89a-411a-a339-26e09acc74a2": []
+      },
+      "variableFields": {
+          "13c8f9a2-e89a-411a-a339-26e09acc74a2": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+category: cpt_cat_uncategorized
+preview_image: ''
+has_quick_edit: null
+entity_type_access: {  }
+bundle_access: {  }
+twig_template: component--cohesion-cpt-cld-disclosure
+weight: null

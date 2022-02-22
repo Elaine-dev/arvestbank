@@ -1,0 +1,23 @@
+uuid: 6f249e64-fcd2-4c5d-88fb-c1cb1062e47e
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_video
+label: 'Component Video'
+description: 'Video entity component. Last Updated: Aaron Parkening 6/25/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "6ec820dc-dba7-483d-9485-f9457654a9bd": {
+          "type": "cohesion_component",
+          "items": {
+              "6ec820dc-dba7-483d-9485-f9457654a9bd": {
+                  "type": "cohesion_component"
+              },
+              "4bb05a28-8547-4731-9762-b93d7b0df208": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

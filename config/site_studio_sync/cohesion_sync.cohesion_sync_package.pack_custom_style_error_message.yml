@@ -1,0 +1,20 @@
+uuid: 6eb9c13d-c6f9-4c98-b054-c4a44932e515
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_error_message
+label: 'Custom Style Error Message'
+description: 'A custom style for error messages. Seen on cash manager pages and on the master template. 08/18/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "eb79ef82-cfe3-4b3a-8364-66efa3e64274": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "eb79ef82-cfe3-4b3a-8364-66efa3e64274": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

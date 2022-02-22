@@ -1,0 +1,20 @@
+uuid: c8eab958-0cd4-4786-b8d0-d2b999c6c3f7
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_ad_blocks
+label: 'Custom Style Ad Blocks'
+description: 'A custom style for ad blocks. Last Updated: Allie Jones 06/03/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "7f0dc57c-eca6-41fd-98a8-58031fd12069": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "7f0dc57c-eca6-41fd-98a8-58031fd12069": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

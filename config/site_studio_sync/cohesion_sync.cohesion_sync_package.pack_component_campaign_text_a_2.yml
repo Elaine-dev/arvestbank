@@ -1,0 +1,23 @@
+uuid: 726bfa76-96e1-45b6-b91e-141e681c352b
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_campaign_text_a_2
+label: 'Component Campaign Text and Image Card'
+description: 'Text and image card layout and styles. Updated: Aaron Parkening 07/08/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "f3c8865c-6d2a-4074-b6c0-ff07ccc0a76a": {
+          "type": "cohesion_component",
+          "items": {
+              "f3c8865c-6d2a-4074-b6c0-ff07ccc0a76a": {
+                  "type": "cohesion_component"
+              },
+              "0fa7e412-6e13-4716-ae06-0535792d6984": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

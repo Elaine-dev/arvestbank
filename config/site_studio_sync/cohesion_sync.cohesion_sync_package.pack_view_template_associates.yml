@@ -1,0 +1,20 @@
+uuid: be540aac-74db-4126-8e6c-82e423800802
+langcode: en
+status: true
+dependencies: {  }
+id: pack_view_template_associates
+label: 'View Template Advisors'
+description: 'Contains the advisors layout and view specific styling. Last Updated: Allie Jones  06/25/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "ee64a9c5-f0cd-4f42-82be-4b0cbb066b69": {
+          "type": "cohesion_view_templates",
+          "items": {
+              "9adb1c01-3fd3-454c-bcf4-5008381a773b": {
+                  "type": "cohesion_view_templates"
+              }
+          },
+          "checked": true
+      }
+  }

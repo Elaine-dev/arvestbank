@@ -1,0 +1,20 @@
+uuid: c6281bac-5152-4877-b3f7-ba3079a7e415
+langcode: en
+status: true
+dependencies: {  }
+id: pack_compontent_breadcrumbs_and
+label: 'Component Breadcrumbs and status'
+description: "Breadcrumbs, Drupal core status, and admin edit tabs.\r\nUpdated: Aaron Parkening 6/16/2021"
+excluded_entity_types: '[]'
+settings: |
+  {
+      "e4cf14f5-2984-4d3d-b8b5-803cdc88a9bc": {
+          "type": "cohesion_component",
+          "items": {
+              "e4cf14f5-2984-4d3d-b8b5-803cdc88a9bc": {
+                  "type": "cohesion_component"
+              }
+          },
+          "checked": true
+      }
+  }

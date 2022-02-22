@@ -1,0 +1,28 @@
+uuid: de128762-a075-4e39-b285-8f3a4adce01b
+langcode: en
+status: true
+dependencies: {  }
+id: f2f3f4
+label: '#f2f3f4'
+json_values: |
+  {
+      "link": true,
+      "value": {
+          "value": {
+              "hex": "#f2f3f4",
+              "rgba": "rgba(242, 243, 244, 1)"
+          }
+      },
+      "name": "#f2f3f4",
+      "uid": "f2f3f4",
+      "class": ".coh-color-f2f3f4",
+      "variable": "$coh-color-f2f3f4",
+      "wysiwyg": false,
+      "inuse": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 7

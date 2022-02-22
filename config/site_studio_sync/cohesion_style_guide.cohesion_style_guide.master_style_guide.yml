@@ -1,0 +1,26 @@
+uuid: 287856ed-ee55-49c8-a433-dd98fdf5573e
+langcode: en
+status: true
+dependencies: {  }
+id: master_style_guide
+label: 'Master Style Guide'
+json_values: |
+  {
+      "canvas": [],
+      "styleGuideForm": [],
+      "mapper": {},
+      "model": [],
+      "previewModel": {},
+      "variableFields": {},
+      "meta": {
+          "fieldHistory": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+has_quick_edit: null
+twig_template: null
+weight: null

@@ -1,0 +1,27 @@
+uuid: 3f3a629b-8c9b-463c-a3a1-ccfddf8064a0
+langcode: en
+status: true
+dependencies: {  }
+id: '6e7079'
+label: '6E7079'
+json_values: |
+  {
+      "link": true,
+      "value": {
+          "value": {
+              "hex": "#6e7079",
+              "rgba": "rgba(110, 112, 121, 1)"
+          }
+      },
+      "name": "6E7079",
+      "uid": "6e7079",
+      "class": ".coh-color-6e7079",
+      "variable": "$coh-color-6e7079",
+      "inuse": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 39

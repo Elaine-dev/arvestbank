@@ -1,0 +1,20 @@
+uuid: e881225b-d838-4aea-bc3c-fdf083bbfdcb
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_ask_arvest_top
+label: 'Custom Style Ask Arvest Top Question Block'
+description: 'Styles for the Ask Arvest Top Question block. Last Updated: Aaron Parkening 06/14/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "c9a0334d-504b-4e36-af62-d96c384bdd81": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "c9a0334d-504b-4e36-af62-d96c384bdd81": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

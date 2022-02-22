@@ -1,0 +1,20 @@
+uuid: 886b44d5-e0fb-4c6d-b16b-fed0b3ada09e
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_private_banker_bl
+label: 'Component Private Banker Block'
+description: 'Contains the private bankers  block component to be placed in a node to render the private banker view. Last Updated: John Cunningham 06/11/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "28fa536a-df2e-4129-9173-ccfa4d6c5abe": {
+          "type": "cohesion_component",
+          "items": {
+              "28fa536a-df2e-4129-9173-ccfa4d6c5abe": {
+                  "type": "cohesion_component"
+              }
+          },
+          "checked": true
+      }
+  }

@@ -1,0 +1,20 @@
+uuid: d57eb86d-a834-4292-b82d-2b716ca84fdd
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_clear_both_
+label: 'Custom Style Clear Both '
+description: 'A custom Stylet just for clear both. Author: Allie Jones / Last update: 05/07/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "cb65c7a2-8d28-4d9c-81e2-9b50c98d06dd": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "cb65c7a2-8d28-4d9c-81e2-9b50c98d06dd": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

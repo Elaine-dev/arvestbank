@@ -1,0 +1,23 @@
+uuid: a6f48c27-c8dd-471a-854d-daf1daa1e122
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_advisor_contact_y
+label: 'Component Advisor Contact You Block'
+description: 'Component for the have an advisor contact you block. Updated: Aaron Parkening 6/28/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "2ff6488d-6603-42fe-8a48-809306e71e9b": {
+          "type": "cohesion_component",
+          "items": {
+              "2ff6488d-6603-42fe-8a48-809306e71e9b": {
+                  "type": "cohesion_component"
+              },
+              "5c75f2fb-41de-4227-bc90-b51f43058962": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

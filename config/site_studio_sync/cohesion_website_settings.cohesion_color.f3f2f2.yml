@@ -1,0 +1,27 @@
+uuid: 4f9bd296-ba67-4725-bb0f-811738fcf76a
+langcode: en
+status: true
+dependencies: {  }
+id: f3f2f2
+label: '#f3f2f2'
+json_values: |
+  {
+      "link": true,
+      "value": {
+          "value": {
+              "hex": "#f3f2f2",
+              "rgba": "rgba(243, 242, 242, 1)"
+          }
+      },
+      "name": "#f3f2f2",
+      "uid": "f3f2f2",
+      "class": ".coh-color-f3f2f2",
+      "variable": "$coh-color-f3f2f2",
+      "inuse": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 31

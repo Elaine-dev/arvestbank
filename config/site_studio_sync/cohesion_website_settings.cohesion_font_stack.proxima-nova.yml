@@ -1,0 +1,27 @@
+uuid: aab13d06-c276-4bc2-ac05-676db3039168
+langcode: en
+status: true
+dependencies: {  }
+id: proxima-nova
+label: 'Proxima Nova'
+json_values: |
+  {
+      "inuse": true,
+      "systemfont": false,
+      "link": true,
+      "name": "Proxima Nova",
+      "uid": "proxima-nova",
+      "class": ".coh-font-proxima-nova",
+      "variable": "$coh-font-proxima-nova",
+      "fontStack": "proxima-nova, san-serif",
+      "smoothing": {
+          "firefox": true,
+          "webkit": true
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+source: fontStacks

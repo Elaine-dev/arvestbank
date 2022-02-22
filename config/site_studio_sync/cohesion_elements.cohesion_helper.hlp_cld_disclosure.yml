@@ -1,0 +1,43 @@
+uuid: 158f8f0a-648f-474c-bfa5-4089370409c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_elements.cohesion_component.cpt_hub_content_card
+    - cohesion_elements.cohesion_helper_category.hlp_cat_general_helpers
+  content:
+    - 'component_content:component_content:a0064662-be4c-4b96-a037-7f66f2ccef2b'
+id: hlp_cld_disclosure
+label: 'CLD Disclosure'
+json_values: |
+  {
+      "canvas": [
+          {
+              "title": "Arvest Bank only accepts applications from Arkansas, Kansas, Missouri and Oklahoma.",
+              "type": "component",
+              "componentContentId": "cc_a0064662-be4c-4b96-a037-7f66f2ccef2b",
+              "uid": "cc_a0064662-be4c-4b96-a037-7f66f2ccef2b",
+              "componentId": "cpt_hub_content_card",
+              "category": "category-5",
+              "componentType": "container",
+              "url": "\/admin\/cohesion\/components\/component_contents\/21",
+              "uuid": "757bf74c-ab34-4851-801b-f65d28268c28",
+              "parentUid": "root",
+              "children": []
+          }
+      ],
+      "mapper": {},
+      "model": [],
+      "previewModel": {},
+      "variableFields": {}
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+category: hlp_cat_general_helpers
+preview_image: ''
+entity_type_access: {  }
+bundle_access: {  }
+weight: null

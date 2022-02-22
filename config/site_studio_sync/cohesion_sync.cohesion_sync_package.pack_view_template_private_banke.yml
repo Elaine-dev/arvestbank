@@ -1,0 +1,20 @@
+uuid: 493f837d-4296-4b14-b6e2-8726f55418ff
+langcode: en
+status: true
+dependencies: {  }
+id: pack_view_template_private_banke
+label: 'View Template Private Bankers'
+description: 'Contains the private bankers layout and view specific styling. Last Updated: Allie Jones  06/25/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "c6fcb685-bd39-4544-a67b-a3461d012e98": {
+          "type": "cohesion_view_templates",
+          "items": {
+              "c6fcb685-bd39-4544-a67b-a3461d012e98": {
+                  "type": "cohesion_view_templates"
+              }
+          },
+          "checked": true
+      }
+  }

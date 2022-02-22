@@ -1,0 +1,23 @@
+uuid: d42bcb8e-5b8c-4a9e-b640-cbaa79bdb5d8
+langcode: en
+status: true
+dependencies: {  }
+id: pack_helper_campaign_header_and_
+label: 'Helper Campaign Header and 2 rows of columns'
+description: 'Campaign helper with simple header and 2 rows of 2 columns. Updated: Aaron Parkening 6/24/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "cb11330b-60f1-4e06-ae24-a9c7eda8ea21": {
+          "type": "cohesion_helper",
+          "items": {
+              "cb11330b-60f1-4e06-ae24-a9c7eda8ea21": {
+                  "type": "cohesion_helper"
+              },
+              "1c8eaceb-352d-440f-b6ca-cfa314420414": {
+                  "type": "cohesion_helper_category"
+              }
+          },
+          "checked": true
+      }
+  }

@@ -1,0 +1,20 @@
+uuid: 0f65a75c-71bd-4d68-a390-1f02ed2966db
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_ask_question_b
+label: 'Custom Style Ask Question Block'
+description: 'Styles for the Ask Question block in search results. Last Updated: Aaron Parkening 06/14/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "6bc0d735-395d-444d-8d0a-4556d6c182ea": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "6bc0d735-395d-444d-8d0a-4556d6c182ea": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

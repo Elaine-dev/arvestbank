@@ -1,0 +1,20 @@
+uuid: 5bf9589f-5e1c-4d3a-8448-1a661d5b51c3
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_wp_articles
+label: 'Component Wordpress Articles'
+description: 'A component to display wordpress articles.'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "87f78e59-5773-4194-b8f4-653f636b7548": {
+          "type": "cohesion_component",
+          "items": {
+              "87f78e59-5773-4194-b8f4-653f636b7548": {
+                  "type": "cohesion_component"
+              }
+          },
+          "checked": true
+      }
+  }

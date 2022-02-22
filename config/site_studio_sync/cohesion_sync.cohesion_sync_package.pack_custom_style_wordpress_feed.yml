@@ -1,0 +1,20 @@
+uuid: 775d871f-7ce3-4936-8060-254d45619875
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_wordpress_feed
+label: 'Custom Style Wordpress Feed block'
+description: 'A custom style for the Wordpress feed block. Last updated Allie Jones 06/29/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "815e4eea-b979-4558-ad42-a30ebae3a350": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "815e4eea-b979-4558-ad42-a30ebae3a350": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

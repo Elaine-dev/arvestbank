@@ -1,0 +1,23 @@
+uuid: c76fd4ab-2534-4baa-a9a0-5f1932e6227f
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_page_title
+label: 'Component Page Title'
+description: 'H1 page title. Last Updated: Aaron Parkening 6/3/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "51afecd5-4686-4e3f-96c4-13ad482b4f30": {
+          "type": "cohesion_component",
+          "items": {
+              "51afecd5-4686-4e3f-96c4-13ad482b4f30": {
+                  "type": "cohesion_component"
+              },
+              "af047307-a0c5-4443-bb28-e5b4650dd51f": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

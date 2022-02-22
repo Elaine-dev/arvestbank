@@ -1,0 +1,82 @@
+uuid: 7daf0590-227e-4e09-8822-7210ce08802f
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_elements.cohesion_component_category.cpt_cat_drupal_blocks
+    - views.view.documents_and_resources
+id: cpt_documents_and_resources_v2
+label: 'Documents and Resources V2'
+json_values: |
+  {
+      "canvas": [
+          {
+              "type": "item",
+              "uid": "drupal-block",
+              "title": "Block",
+              "status": {
+                  "collapsed": true
+              },
+              "uuid": "d0d02114-dba9-4a81-b2c2-ce65deaef3f2",
+              "parentUid": "root",
+              "children": []
+          }
+      ],
+      "componentForm": [],
+      "mapper": {
+          "d0d02114-dba9-4a81-b2c2-ce65deaef3f2": {}
+      },
+      "model": {
+          "d0d02114-dba9-4a81-b2c2-ce65deaef3f2": {
+              "settings": {
+                  "title": "Block",
+                  "customStyle": [
+                      {
+                          "customStyle": ""
+                      }
+                  ],
+                  "settings": {
+                      "theme": "all",
+                      "customStyle": [
+                          {
+                              "customStyle": ""
+                          }
+                      ]
+                  },
+                  "theme": "arvestbank_theme",
+                  "block": "views_block__documents_and_resources_block_1"
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "block"
+                  }
+              }
+          }
+      },
+      "previewModel": {
+          "d0d02114-dba9-4a81-b2c2-ce65deaef3f2": {}
+      },
+      "variableFields": {
+          "d0d02114-dba9-4a81-b2c2-ce65deaef3f2": []
+      },
+      "meta": {
+          "fieldHistory": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+category: cpt_cat_drupal_blocks
+preview_image: ''
+has_quick_edit: true
+entity_type_access: {  }
+bundle_access: {  }
+twig_template: component--cohesion-cpt-documents-and-resources-v2
+weight: 0

@@ -1,0 +1,34 @@
+uuid: a35b2744-53a7-40d4-97c7-a740c8fd1fcd
+langcode: en
+status: true
+dependencies: {  }
+id: transparent-blue
+label: 'transparent blue'
+json_values: |
+  {
+      "link": false,
+      "value": {
+          "value": {
+              "hex": "#00457c",
+              "rgba": "rgba(0, 69, 124, 0.8)"
+          }
+      },
+      "name": "Transparent Dark Blue",
+      "uid": "transparent-blue",
+      "class": ".coh-color-transparent-blue",
+      "variable": "$coh-color-transparent-blue",
+      "wysiwyg": true,
+      "inuse": true,
+      "tags": [
+          {
+              "label": "Transparent",
+              "value": "transparent"
+          }
+      ]
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 13

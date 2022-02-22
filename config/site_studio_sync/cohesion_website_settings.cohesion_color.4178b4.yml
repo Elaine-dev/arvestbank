@@ -1,0 +1,27 @@
+uuid: e9da5d21-4612-4d25-acc6-081eb16927c4
+langcode: en
+status: true
+dependencies: {  }
+id: 4178b4
+label: '#4178b4'
+json_values: |
+  {
+      "link": true,
+      "value": {
+          "value": {
+              "hex": "#4178b4",
+              "rgba": "rgba(65, 120, 180, 1)"
+          }
+      },
+      "name": "#4178b4",
+      "uid": "4178b4",
+      "class": ".coh-color-4178b4",
+      "variable": "$coh-color-4178b4",
+      "inuse": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 20

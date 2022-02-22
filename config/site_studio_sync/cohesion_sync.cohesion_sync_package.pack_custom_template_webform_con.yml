@@ -1,0 +1,20 @@
+uuid: a299b75f-e97a-4d39-8295-d422b56729d6
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_template_webform_con
+label: 'Custom Template Webform Content Type'
+description: 'A Custom Template for the Webform content type. Last Updated: Allie Jones 06/07/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "7823ec5d-30bc-4c88-88dc-4c2d586d1ece": {
+          "type": "cohesion_content_templates",
+          "items": {
+              "7823ec5d-30bc-4c88-88dc-4c2d586d1ece": {
+                  "type": "cohesion_content_templates"
+              }
+          },
+          "checked": true
+      }
+  }

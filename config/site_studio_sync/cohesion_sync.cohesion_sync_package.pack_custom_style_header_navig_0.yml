@@ -1,0 +1,20 @@
+uuid: a81968f7-1ff0-4be6-862f-5a8b064f4f7e
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_header_navig_0
+label: 'Custom Style Header Navigation Toggle Button'
+description: 'Main navigation toggle button styles. Updated: Aaron Parkening 6/25/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "85dad3f0-c7a9-4a27-8fb8-1aa7ca259fde": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "85dad3f0-c7a9-4a27-8fb8-1aa7ca259fde": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

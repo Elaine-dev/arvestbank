@@ -1,0 +1,38 @@
+uuid: 0c82ac2c-fb2c-46ec-b25d-17cffefbfeb2
+langcode: en
+status: true
+dependencies: {  }
+id: pack_website_settings
+label: 'Website Settings'
+description: "A Site Studio package for all website settings. This includes base unit, fonts settings, and responsive grid settings.\r\nAuthor: Aaron Parkening / Last update: 5/10/2021"
+excluded_entity_types: '[]'
+settings: |
+  {
+      "be073944-e764-4c2c-a878-7164616718d3": {
+          "type": "cohesion_website_settings",
+          "items": {
+              "be073944-e764-4c2c-a878-7164616718d3": {
+                  "type": "cohesion_website_settings"
+              }
+          },
+          "checked": true
+      },
+      "e92f0917-cdf6-4787-9f57-8cee308a9f51": {
+          "type": "cohesion_website_settings",
+          "items": {
+              "e92f0917-cdf6-4787-9f57-8cee308a9f51": {
+                  "type": "cohesion_website_settings"
+              }
+          },
+          "checked": true
+      },
+      "0088fbfb-c0f3-408c-a9aa-4dfe31aeb20a": {
+          "type": "cohesion_website_settings",
+          "items": {
+              "0088fbfb-c0f3-408c-a9aa-4dfe31aeb20a": {
+                  "type": "cohesion_website_settings"
+              }
+          },
+          "checked": true
+      }
+  }

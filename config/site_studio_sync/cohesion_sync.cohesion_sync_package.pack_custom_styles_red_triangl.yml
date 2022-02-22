@@ -1,0 +1,20 @@
+uuid: 365924ba-5452-4a00-b8df-bc5a84417e50
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_styles_red_triangl
+label: 'Custom Style Red Triangle'
+description: 'A Site studio package for the custom style red triangle.'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "dd3a4cd9-af61-4bb0-9329-9373d506b000": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "dd3a4cd9-af61-4bb0-9329-9373d506b000": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

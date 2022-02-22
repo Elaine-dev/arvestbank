@@ -1,0 +1,20 @@
+uuid: 5df6f47d-cd00-424d-95fb-69ee6a0835c2
+langcode: en
+status: true
+dependencies: {  }
+id: pack_content_template_private_ba
+label: 'Content Template Private Banker Location Full content '
+description: 'The content template used to render/style results when viewing an private banker view. Last Updated: John Cunningham 05/25/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "411d325c-f622-447e-936b-915279aa4d33": {
+          "type": "cohesion_content_templates",
+          "items": {
+              "411d325c-f622-447e-936b-915279aa4d33": {
+                  "type": "cohesion_content_templates"
+              }
+          },
+          "checked": true
+      }
+  }

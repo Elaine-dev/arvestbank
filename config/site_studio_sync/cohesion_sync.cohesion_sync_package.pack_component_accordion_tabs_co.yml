@@ -1,0 +1,23 @@
+uuid: 9af42fe0-3a0c-42a5-a300-de3ef87f4f7a
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_accordion_tabs_co
+label: 'Component Accordion Tabs Container'
+description: 'Horizontal tabs container. Updated: Aaron Parkening 7/30/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "be1219a8-86e4-4239-afc5-e6b2cc963cb0": {
+          "type": "cohesion_component",
+          "items": {
+              "be1219a8-86e4-4239-afc5-e6b2cc963cb0": {
+                  "type": "cohesion_component"
+              },
+              "a96b0bed-7988-433c-abeb-a8191634874c": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

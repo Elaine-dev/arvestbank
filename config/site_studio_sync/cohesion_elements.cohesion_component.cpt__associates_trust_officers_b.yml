@@ -1,0 +1,110 @@
+uuid: 23a90036-1b85-4511-a2f8-d971077258ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_elements.cohesion_component_category.cpt_cat_drupal_blocks
+    - views.view.trust_and_estate_block
+id: cpt__associates_trust_officers_b
+label: 'Component Associates Trust Officers Block'
+json_values: |
+  {
+      "canvas": [
+          {
+              "type": "item",
+              "uid": "drupal-block",
+              "title": "Block",
+              "status": {
+                  "collapsed": true
+              },
+              "uuid": "2ab1bac4-008b-4bd9-9bf0-18ace18fc111",
+              "parentUid": "root",
+              "children": []
+          }
+      ],
+      "componentForm": [
+          {
+              "type": "form-help",
+              "uid": "form-helptext",
+              "title": "Help text",
+              "status": {
+                  "collapsed": false
+              },
+              "uuid": "28b95092-3350-4359-a271-3646c966676d",
+              "parentUid": "root",
+              "children": []
+          }
+      ],
+      "mapper": {
+          "2ab1bac4-008b-4bd9-9bf0-18ace18fc111": {}
+      },
+      "model": {
+          "2ab1bac4-008b-4bd9-9bf0-18ace18fc111": {
+              "settings": {
+                  "title": "Block",
+                  "customStyle": [
+                      {
+                          "customStyle": ""
+                      }
+                  ],
+                  "settings": {
+                      "theme": "all",
+                      "customStyle": [
+                          {
+                              "customStyle": ""
+                          }
+                      ]
+                  },
+                  "theme": "arvestbank_theme",
+                  "block": "views_block__trust_and_estate_block_block_3"
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "block"
+                  }
+              }
+          },
+          "28b95092-3350-4359-a271-3646c966676d": {
+              "settings": {
+                  "title": "Help text",
+                  "type": "cohHelpText",
+                  "options": {
+                      "showClose": false,
+                      "helpType": "coh-help-text--help",
+                      "helpText": "The Trust Officers block component, when dropped in the layout builder of a node, will render a view of associates that are tagged with the Trust Officer term. When viewing the view for the first time the results will be empty until a selection is made from one of the two exposed filters. The styling of the results is handled in the Associates teaser content template while the styling\/text of the view header is handled in the Trust Officers view template."
+                  }
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          }
+      },
+      "previewModel": {
+          "2ab1bac4-008b-4bd9-9bf0-18ace18fc111": {},
+          "28b95092-3350-4359-a271-3646c966676d": {}
+      },
+      "variableFields": {
+          "2ab1bac4-008b-4bd9-9bf0-18ace18fc111": [],
+          "28b95092-3350-4359-a271-3646c966676d": []
+      },
+      "meta": {
+          "fieldHistory": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+category: cpt_cat_drupal_blocks
+preview_image: ''
+has_quick_edit: true
+entity_type_access: {  }
+bundle_access: {  }
+twig_template: component--cohesion-cpt--associates-trust-officers-b
+weight: 0

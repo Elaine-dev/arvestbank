@@ -1,0 +1,20 @@
+uuid: 7eaac46d-6661-4156-9115-e85b3b874f20
+langcode: en
+status: true
+dependencies: {  }
+id: pack_view_template_loan_officers
+label: 'View Template Loan Officers'
+description: 'Contains the loan officer''s layout and view-specific styling. Last Updated: Allie Jones 06/23/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "a5d1bfee-ee1a-4007-b9de-1e0551f6c313": {
+          "type": "cohesion_view_templates",
+          "items": {
+              "a5d1bfee-ee1a-4007-b9de-1e0551f6c313": {
+                  "type": "cohesion_view_templates"
+              }
+          },
+          "checked": true
+      }
+  }

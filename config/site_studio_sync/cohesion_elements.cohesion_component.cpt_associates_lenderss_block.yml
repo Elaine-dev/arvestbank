@@ -1,0 +1,110 @@
+uuid: b96973ae-c8a4-42f0-9b3b-cdb58ebdc199
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_elements.cohesion_component_category.cpt_cat_drupal_blocks
+    - views.view.mortgage_loan_officer_block
+id: cpt_associates_lenderss_block
+label: 'Component Associates Lenders Block'
+json_values: |
+  {
+      "canvas": [
+          {
+              "type": "item",
+              "uid": "drupal-block",
+              "title": "Block",
+              "status": {
+                  "collapsed": true
+              },
+              "uuid": "aa75a597-df4c-4415-b1f2-2cbf156d0bcf",
+              "parentUid": "root",
+              "children": []
+          }
+      ],
+      "componentForm": [
+          {
+              "type": "form-help",
+              "uid": "form-helptext",
+              "title": "Help text",
+              "status": {
+                  "collapsed": false
+              },
+              "uuid": "5efb427c-02ef-4347-be71-3f62a940e5a2",
+              "parentUid": "root",
+              "children": []
+          }
+      ],
+      "mapper": {
+          "aa75a597-df4c-4415-b1f2-2cbf156d0bcf": {}
+      },
+      "model": {
+          "aa75a597-df4c-4415-b1f2-2cbf156d0bcf": {
+              "settings": {
+                  "title": "Block",
+                  "customStyle": [
+                      {
+                          "customStyle": ""
+                      }
+                  ],
+                  "settings": {
+                      "theme": "all",
+                      "customStyle": [
+                          {
+                              "customStyle": ""
+                          }
+                      ]
+                  },
+                  "theme": "arvestbank_theme",
+                  "block": "views_block__mortgage_loan_officer_block_mortgage_block"
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "block"
+                  }
+              }
+          },
+          "5efb427c-02ef-4347-be71-3f62a940e5a2": {
+              "settings": {
+                  "title": "Help text",
+                  "type": "cohHelpText",
+                  "options": {
+                      "showClose": false,
+                      "helpType": "coh-help-text--help",
+                      "helpText": "The Lenders block component, when dropped in the layout builder of a node, will render a view of associates that are tagged with the Lender term. When viewing the view for the first time the results will be empty until a selection is made from one of the two exposed filters. The styling of the results is handled in the Associates teaser content template while the styling\/text of the view header is handled in the Lenders view template."
+                  }
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          }
+      },
+      "previewModel": {
+          "aa75a597-df4c-4415-b1f2-2cbf156d0bcf": {},
+          "5efb427c-02ef-4347-be71-3f62a940e5a2": {}
+      },
+      "variableFields": {
+          "aa75a597-df4c-4415-b1f2-2cbf156d0bcf": [],
+          "5efb427c-02ef-4347-be71-3f62a940e5a2": []
+      },
+      "meta": {
+          "fieldHistory": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+category: cpt_cat_drupal_blocks
+preview_image: ''
+has_quick_edit: true
+entity_type_access: {  }
+bundle_access: {  }
+twig_template: component--cohesion-cpt-associates-lenderss-block
+weight: 0

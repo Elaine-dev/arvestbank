@@ -1,0 +1,20 @@
+uuid: 48ae7da5-400b-4bb7-b555-981ea8f0f98e
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_footer_styles
+label: 'Custom Style Footer Styles'
+description: 'Site footer styles. Updated: Aaron Parkening 6/17/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "8957c086-845c-40fd-b222-3bc826b8ec4f": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "8957c086-845c-40fd-b222-3bc826b8ec4f": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

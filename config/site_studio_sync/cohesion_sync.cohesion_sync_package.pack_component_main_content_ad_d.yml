@@ -1,0 +1,20 @@
+uuid: 95b47c01-f6a8-4df3-91cf-d493a928f145
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_main_content_ad_d
+label: 'Component main content ad drupal block'
+description: 'A component for the main content Ad block for exit pages. Last Updated: Allie Jones 07/09/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "e487b687-d9b6-4db6-80c6-afd863c3a3f8": {
+          "type": "cohesion_component",
+          "items": {
+              "e487b687-d9b6-4db6-80c6-afd863c3a3f8": {
+                  "type": "cohesion_component"
+              }
+          },
+          "checked": true
+      }
+  }

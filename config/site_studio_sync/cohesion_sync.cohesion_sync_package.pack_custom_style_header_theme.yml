@@ -1,0 +1,20 @@
+uuid: 77a3e888-6288-4662-bb41-ae67328cd548
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_header_theme
+label: 'Custom Style Header Theme'
+description: "Site Studio package for header styles.\r\nAuthor: Aaron Parkening / Last update: 5/10/2021"
+excluded_entity_types: '[]'
+settings: |
+  {
+      "b7ceb7fc-0a05-49a6-bfe9-ffd4938b1b81": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "b7ceb7fc-0a05-49a6-bfe9-ffd4938b1b81": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

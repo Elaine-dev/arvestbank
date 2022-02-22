@@ -1,0 +1,20 @@
+uuid: d9bd050b-cb7c-4486-8354-e1b91a847680
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_find_a_mortgage_l
+label: 'Component Find a Mortgage Loan Officer'
+description: 'Component to output the "Find a Local Mortgage Loan Officer" view block.'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "c6f17035-bd83-4028-b5ba-093dc92aff53": {
+          "type": "cohesion_component",
+          "items": {
+              "c6f17035-bd83-4028-b5ba-093dc92aff53": {
+                  "type": "cohesion_component"
+              }
+          },
+          "checked": true
+      }
+  }

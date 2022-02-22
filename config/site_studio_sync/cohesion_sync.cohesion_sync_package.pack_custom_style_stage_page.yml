@@ -1,0 +1,20 @@
+uuid: f9d2c4fa-7239-4383-9883-579dfa92e314
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_stage_page
+label: 'Custom Style Stage Page'
+description: 'Styles for Stage Page content type sliders. Updated Allie 08/03/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "66a0f47d-a774-48c5-9a82-7dc8c1eaa772": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "66a0f47d-a774-48c5-9a82-7dc8c1eaa772": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

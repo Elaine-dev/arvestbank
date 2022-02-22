@@ -1,0 +1,694 @@
+uuid: b93a4506-8013-49f4-a424-1e87a9712004
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_custom_styles.cohesion_custom_style.5c940554
+    - cohesion_custom_styles.cohesion_custom_style.69e9d234
+    - cohesion_custom_styles.cohesion_custom_style.717a7bf0
+    - cohesion_custom_styles.cohesion_custom_style.7ef725fd
+    - cohesion_custom_styles.cohesion_custom_style.ce94182e
+    - cohesion_custom_styles.cohesion_custom_style.fd99703e
+    - cohesion_elements.cohesion_helper_category.hlp_cat_form_builder_helpers
+id: hlp_base_form_tabs
+label: 'Base Form Tabs'
+json_values: |
+  {
+      "canvas": [
+          {
+              "type": "form-container",
+              "uid": "form-tab-container",
+              "title": "Tab container",
+              "status": {
+                  "collapsed": false
+              },
+              "options": {
+                  "formBuilder": true
+              },
+              "uuid": "9d232e54-610b-477e-8fdc-d070c4e919f7",
+              "parentUid": "root",
+              "children": [
+                  {
+                      "type": "form-container",
+                      "uid": "form-tab-item",
+                      "title": "Tab item",
+                      "status": {
+                          "collapsed": true
+                      },
+                      "options": {
+                          "formBuilder": true
+                      },
+                      "uuid": "8e8918a6-639a-427b-9f58-8e9119a75181",
+                      "parentUid": "form-tab-container",
+                      "children": [
+                          {
+                              "type": "form-container",
+                              "uid": "form-section",
+                              "title": "Field group",
+                              "status": {
+                                  "collapsed": false,
+                                  "collapsedParents": [
+                                      "8e8918a6-639a-427b-9f58-8e9119a75181"
+                                  ]
+                              },
+                              "options": {
+                                  "formBuilder": true
+                              },
+                              "uuid": "69b0a7e0-daab-4417-97fb-109e680c77a9",
+                              "parentUid": "form-tab-item",
+                              "children": [
+                                  {
+                                      "type": "form-field",
+                                      "uid": "form-entity-browser",
+                                      "title": "Entity browser",
+                                      "status": {
+                                          "collapsed": false,
+                                          "collapsedParents": [
+                                              "8e8918a6-639a-427b-9f58-8e9119a75181"
+                                          ]
+                                      },
+                                      "uuid": "a19e4829-3142-41a1-8c2a-284aca17590f",
+                                      "parentUid": "form-section",
+                                      "children": []
+                                  },
+                                  {
+                                      "type": "form-field",
+                                      "uid": "form-input",
+                                      "title": "Input",
+                                      "translate": true,
+                                      "status": {
+                                          "collapsed": false,
+                                          "collapsedParents": [
+                                              "8e8918a6-639a-427b-9f58-8e9119a75181"
+                                          ]
+                                      },
+                                      "uuid": "9e5e990f-5632-492b-aaee-a756f79c5a59",
+                                      "parentUid": "form-section",
+                                      "children": []
+                                  },
+                                  {
+                                      "type": "form-field",
+                                      "uid": "form-wysiwyg",
+                                      "title": "WYSIWYG",
+                                      "translate": true,
+                                      "status": {
+                                          "collapsed": false,
+                                          "collapsedParents": [
+                                              "8e8918a6-639a-427b-9f58-8e9119a75181"
+                                          ]
+                                      },
+                                      "uuid": "c61e9bf0-0ee4-4456-8827-9d26127cb1dd",
+                                      "parentUid": "form-section",
+                                      "children": []
+                                  }
+                              ]
+                          }
+                      ]
+                  },
+                  {
+                      "type": "form-container",
+                      "uid": "form-tab-item",
+                      "title": "Tab item",
+                      "status": {
+                          "collapsed": true
+                      },
+                      "options": {
+                          "formBuilder": true
+                      },
+                      "uuid": "0bf977b1-e476-4d98-9eea-1c85fd594c4b",
+                      "parentUid": "form-tab-container",
+                      "children": [
+                          {
+                              "type": "form-container",
+                              "uid": "form-section",
+                              "title": "Field group",
+                              "status": {
+                                  "collapsed": false,
+                                  "collapsedParents": [
+                                      "0bf977b1-e476-4d98-9eea-1c85fd594c4b"
+                                  ]
+                              },
+                              "options": {
+                                  "formBuilder": true
+                              },
+                              "uuid": "3a29af0d-36b2-4b07-9b41-620ebd43774b",
+                              "parentUid": "form-tab-item",
+                              "children": [
+                                  {
+                                      "type": "form-field",
+                                      "uid": "form-select",
+                                      "title": "Select",
+                                      "translate": false,
+                                      "status": {
+                                          "collapsed": false,
+                                          "collapsedParents": [
+                                              "0bf977b1-e476-4d98-9eea-1c85fd594c4b"
+                                          ]
+                                      },
+                                      "uuid": "87199a13-8d29-4226-a3e4-1c8b05c38af6",
+                                      "parentUid": "form-section",
+                                      "children": []
+                                  },
+                                  {
+                                      "type": "form-field",
+                                      "uid": "form-select",
+                                      "title": "Select",
+                                      "translate": false,
+                                      "status": {
+                                          "collapsed": false,
+                                          "collapsedParents": [
+                                              "0bf977b1-e476-4d98-9eea-1c85fd594c4b"
+                                          ]
+                                      },
+                                      "uuid": "b4fcb501-6984-40dc-b46c-bd96c30bf53d",
+                                      "parentUid": "form-section",
+                                      "children": []
+                                  },
+                                  {
+                                      "type": "form-field",
+                                      "uid": "form-select",
+                                      "title": "Select",
+                                      "translate": false,
+                                      "status": {
+                                          "collapsed": false,
+                                          "collapsedParents": [
+                                              "0bf977b1-e476-4d98-9eea-1c85fd594c4b"
+                                          ]
+                                      },
+                                      "uuid": "6f05a060-b7a2-4c03-9f2f-ff94c33f4292",
+                                      "parentUid": "form-section",
+                                      "children": []
+                                  },
+                                  {
+                                      "type": "form-field",
+                                      "uid": "form-select",
+                                      "title": "Select",
+                                      "translate": false,
+                                      "status": {
+                                          "collapsed": false,
+                                          "collapsedParents": [
+                                              "0bf977b1-e476-4d98-9eea-1c85fd594c4b"
+                                          ]
+                                      },
+                                      "uuid": "fd887d3d-1b51-416b-acef-87be7bdac51b",
+                                      "parentUid": "form-section",
+                                      "children": []
+                                  }
+                              ]
+                          },
+                          {
+                              "type": "form-container",
+                              "uid": "form-section",
+                              "title": "Field group",
+                              "status": {
+                                  "collapsed": true,
+                                  "collapsedParents": [
+                                      "0bf977b1-e476-4d98-9eea-1c85fd594c4b"
+                                  ]
+                              },
+                              "options": {
+                                  "formBuilder": true
+                              },
+                              "uuid": "c6d7362a-95b7-4aad-af7b-7fa7d64a90d2",
+                              "parentUid": "form-tab-item",
+                              "children": [
+                                  {
+                                      "type": "form-field",
+                                      "uid": "form-colorpicker",
+                                      "title": "Color picker",
+                                      "status": {
+                                          "collapsed": false,
+                                          "collapsedParents": [
+                                              "0bf977b1-e476-4d98-9eea-1c85fd594c4b"
+                                          ]
+                                      },
+                                      "uuid": "29a13125-f4a7-4daa-8cf4-036483139228",
+                                      "parentUid": "form-section",
+                                      "children": []
+                                  }
+                              ]
+                          }
+                      ]
+                  },
+                  {
+                      "type": "form-container",
+                      "uid": "form-tab-item",
+                      "title": "Tab item",
+                      "status": {
+                          "collapsed": true
+                      },
+                      "options": {
+                          "formBuilder": true
+                      },
+                      "uuid": "b9588b3f-6b41-49d6-bd05-c94879f4a274",
+                      "parentUid": "form-tab-container",
+                      "children": [
+                          {
+                              "type": "form-help",
+                              "uid": "form-helptext",
+                              "title": "Help text",
+                              "status": {
+                                  "collapsed": false,
+                                  "collapsedParents": [
+                                      "b9588b3f-6b41-49d6-bd05-c94879f4a274"
+                                  ]
+                              },
+                              "uuid": "1457247a-cb6f-4e0e-8269-8c7b28ce7e6f",
+                              "parentUid": "form-tab-item",
+                              "children": []
+                          }
+                      ]
+                  }
+              ]
+          }
+      ],
+      "mapper": {},
+      "model": {
+          "9d232e54-610b-477e-8fdc-d070c4e919f7": {
+              "settings": {
+                  "type": "cohTabContainer",
+                  "title": "Tab container",
+                  "responsiveMode": true
+              }
+          },
+          "8e8918a6-639a-427b-9f58-8e9119a75181": {
+              "settings": {
+                  "title": "Content",
+                  "type": "cohTabItem",
+                  "breakpointIcon": ""
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "69b0a7e0-daab-4417-97fb-109e680c77a9": {
+              "settings": {
+                  "title": "Settings",
+                  "type": "cohSection",
+                  "hideRowHeading": 0,
+                  "removePadding": 0,
+                  "columnCount": "coh-component-field-group-1-col",
+                  "breakpointIcon": "",
+                  "breakpoints": false,
+                  "propertiesMenu": false,
+                  "disableScrollbar": true,
+                  "disableEllipsisMenu": true,
+                  "isOpen": true
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "a19e4829-3142-41a1-8c2a-284aca17590f": {
+              "settings": {
+                  "title": "Heading icon",
+                  "type": "cohEntityBrowser",
+                  "showConfig": false,
+                  "hideRowHeading": true,
+                  "schema": {
+                      "type": "object"
+                  },
+                  "machineName": "entity-browser",
+                  "options": {
+                      "entityBrowserTypeDisabled": true,
+                      "entityTypeDisabled": true,
+                      "entityBrowserType": "dam_image_entity_browser",
+                      "entityType": "media",
+                      "entityBrowserBundlesDisabled": true,
+                      "bundles": {
+                          "acquia_dam_image": true
+                      }
+                  },
+                  "entityBrowserTypeTooltipPlacement": "auto right",
+                  "entityTypeTooltipPlacement": "auto right",
+                  "entityBrowserTooltipPlacement": "auto right",
+                  "entityBrowserTooltipText": "Dimensions: 60px wide X 50px tall",
+                  "entityBrowserTypeTooltipText": ""
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              },
+              "model": {
+                  "value": {
+                      "entity": {
+                          "entityType": "media"
+                      }
+                  }
+              }
+          },
+          "9e5e990f-5632-492b-aaee-a756f79c5a59": {
+              "settings": {
+                  "title": "Card Heading",
+                  "schema": {
+                      "type": "string",
+                      "escape": true,
+                      "required": true
+                  },
+                  "machineName": "heading",
+                  "tooltipPlacement": "auto right",
+                  "validationMessage": {
+                      "302": ""
+                  }
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "c61e9bf0-0ee4-4456-8827-9d26127cb1dd": {
+              "settings": {
+                  "title": "Content Paragraph",
+                  "type": "cohWysiwyg",
+                  "schema": {
+                      "type": "object"
+                  },
+                  "machineName": "wysiwyg",
+                  "tooltipPlacement": "auto right"
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              },
+              "model": {
+                  "value": {
+                      "text": "",
+                      "textFormat": "cohesion"
+                  }
+              }
+          },
+          "0bf977b1-e476-4d98-9eea-1c85fd594c4b": {
+              "settings": {
+                  "title": "Layout and style",
+                  "type": "cohTabItem",
+                  "breakpointIcon": ""
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "3a29af0d-36b2-4b07-9b41-620ebd43774b": {
+              "settings": {
+                  "title": "Settings",
+                  "type": "cohSection",
+                  "hideRowHeading": 0,
+                  "removePadding": 0,
+                  "columnCount": "coh-component-field-group-2-col",
+                  "breakpointIcon": "",
+                  "breakpoints": false,
+                  "propertiesMenu": false,
+                  "disableScrollbar": true,
+                  "disableEllipsisMenu": true,
+                  "isOpen": true
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "87199a13-8d29-4226-a3e4-1c8b05c38af6": {
+              "settings": {
+                  "title": "Width of content area",
+                  "type": "cohSelect",
+                  "selectType": "custom",
+                  "schema": {
+                      "type": "string"
+                  },
+                  "options": [
+                      {
+                          "label": "Boxed width",
+                          "value": "boxed"
+                      },
+                      {
+                          "label": "Full width",
+                          "value": "fluid"
+                      }
+                  ],
+                  "machineName": "width",
+                  "tooltipPlacement": "auto right"
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              },
+              "model": {
+                  "value": "boxed"
+              }
+          },
+          "b4fcb501-6984-40dc-b46c-bd96c30bf53d": {
+              "settings": {
+                  "title": "Align column",
+                  "type": "cohSelect",
+                  "selectType": "custom",
+                  "schema": {
+                      "type": "string"
+                  },
+                  "options": [
+                      {
+                          "label": "Left align column",
+                          "value": "flex-start"
+                      },
+                      {
+                          "label": "Right align column",
+                          "value": "flex-end"
+                      },
+                      {
+                          "label": "Center align column",
+                          "value": "center"
+                      }
+                  ],
+                  "machineName": "justify-columns",
+                  "tooltipPlacement": "auto right"
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              },
+              "model": {
+                  "value": "center"
+              }
+          },
+          "6f05a060-b7a2-4c03-9f2f-ff94c33f4292": {
+              "settings": {
+                  "title": "Column width",
+                  "type": "cohSelect",
+                  "selectType": "custom",
+                  "schema": {
+                      "type": "string"
+                  },
+                  "options": [
+                      {
+                          "label": "12 (full width)",
+                          "value": "12"
+                      },
+                      {
+                          "label": "11",
+                          "value": "11"
+                      },
+                      {
+                          "label": "10",
+                          "value": "10"
+                      },
+                      {
+                          "label": "9 (3\/4 width)",
+                          "value": "9"
+                      },
+                      {
+                          "label": "8 (2\/3 width)",
+                          "value": "8"
+                      },
+                      {
+                          "label": "7",
+                          "value": "7"
+                      },
+                      {
+                          "label": "6 (1\/2 width)",
+                          "value": "6"
+                      },
+                      {
+                          "label": "5",
+                          "value": "5"
+                      },
+                      {
+                          "label": "4 (1\/3 width)",
+                          "value": "4"
+                      },
+                      {
+                          "label": "3 (1\/4 width)",
+                          "value": "3"
+                      },
+                      {
+                          "label": "2 (1\/6 width)",
+                          "value": "2"
+                      },
+                      {
+                          "label": "1.5 (1\/5 width)",
+                          "value": "1.5"
+                      },
+                      {
+                          "label": "1",
+                          "value": "1"
+                      }
+                  ],
+                  "machineName": "column-width",
+                  "tooltipPlacement": "auto right"
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              },
+              "model": {
+                  "value": "12"
+              }
+          },
+          "fd887d3d-1b51-416b-acef-87be7bdac51b": {
+              "settings": {
+                  "title": "Padding top and bottom",
+                  "type": "cohSelect",
+                  "selectType": "custom",
+                  "schema": {
+                      "type": "string"
+                  },
+                  "options": [
+                      {
+                          "label": "None",
+                          "value": ""
+                      },
+                      {
+                          "label": "Medium top and bottom",
+                          "value": "coh-style-padding-top-bottom-medium"
+                      },
+                      {
+                          "label": "Large top and bottom",
+                          "value": "coh-style-padding-top-bottom-large"
+                      },
+                      {
+                          "label": "Medium top",
+                          "value": "coh-style-padding-top-medium"
+                      },
+                      {
+                          "label": "Large top",
+                          "value": "coh-style-padding-top-large"
+                      },
+                      {
+                          "label": "Medium bottom",
+                          "value": "coh-style-padding-bottom-medium"
+                      },
+                      {
+                          "label": "Large bottom",
+                          "value": "coh-style-padding-bottom-large"
+                      }
+                  ],
+                  "machineName": "padding-top-bottom",
+                  "tooltipPlacement": "auto right"
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              },
+              "model": {
+                  "value": ""
+              }
+          },
+          "c6d7362a-95b7-4aad-af7b-7fa7d64a90d2": {
+              "settings": {
+                  "title": "Background",
+                  "type": "cohSection",
+                  "hideRowHeading": 0,
+                  "removePadding": 0,
+                  "columnCount": "coh-component-field-group-1-col",
+                  "breakpointIcon": "",
+                  "breakpoints": false,
+                  "propertiesMenu": false,
+                  "disableScrollbar": true,
+                  "disableEllipsisMenu": true,
+                  "isOpen": true
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "29a13125-f4a7-4daa-8cf4-036483139228": {
+              "settings": {
+                  "title": "Background color",
+                  "type": "cohColourPickerOpener",
+                  "colourPickerOptions": {
+                      "flat": true,
+                      "showOnly": ""
+                  },
+                  "schema": {
+                      "type": "object"
+                  },
+                  "machineName": "background-color",
+                  "restrictBy": "none",
+                  "tooltipPlacement": "auto right"
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "b9588b3f-6b41-49d6-bd05-c94879f4a274": {
+              "settings": {
+                  "title": "Help",
+                  "type": "cohTabItem",
+                  "breakpointIcon": ""
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "1457247a-cb6f-4e0e-8269-8c7b28ce7e6f": {
+              "settings": {
+                  "title": "Help text",
+                  "type": "cohHelpText",
+                  "options": {
+                      "showClose": false,
+                      "helpType": "coh-help-text--help",
+                      "helpText": "# <Component Name>\nThis component provides <Component Function>\n\n# Content\n- **Heading Icon -** Red icon displayed to the left of the heading. Ideal dimensions: 60px wide X 50px tall.\n- **Card Heading -** The white heading text in the blue background.\n- **Content Paragraph -** The WYSIWYG field that allows text, buttons, etc.\n- **Drop Zone -** Allows additional embedded components in a card, like forms.\n\n# Layout and Style\n- **Width of content area -** Sets a maximum width to the content area. Boxed width restrains the content to a maximum set width. Full width allows the content to expand to fill the width available.\n- **Align column -** If the column width is set to less than full width, it can be aligned horizontally to the left, center or right.\n- **Column width -** Set the width of the column. Use this in conjunction with the **Align column** field to set the width and horizontal position of the content.\n- **Padding top and bottom -** Set a space above and\/or below the content within the layout. This setting is needed when the layout is used at the top level as a section. It should be set to None if nesting this layout within another layout\n- **Background color -** Optionally set the background color of the row."
+                  }
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          }
+      },
+      "previewModel": {
+          "8e8918a6-639a-427b-9f58-8e9119a75181": {},
+          "69b0a7e0-daab-4417-97fb-109e680c77a9": {},
+          "a19e4829-3142-41a1-8c2a-284aca17590f": {},
+          "9e5e990f-5632-492b-aaee-a756f79c5a59": {},
+          "c61e9bf0-0ee4-4456-8827-9d26127cb1dd": {},
+          "0bf977b1-e476-4d98-9eea-1c85fd594c4b": {},
+          "3a29af0d-36b2-4b07-9b41-620ebd43774b": {},
+          "87199a13-8d29-4226-a3e4-1c8b05c38af6": {},
+          "b4fcb501-6984-40dc-b46c-bd96c30bf53d": {},
+          "6f05a060-b7a2-4c03-9f2f-ff94c33f4292": {},
+          "fd887d3d-1b51-416b-acef-87be7bdac51b": {},
+          "c6d7362a-95b7-4aad-af7b-7fa7d64a90d2": {},
+          "29a13125-f4a7-4daa-8cf4-036483139228": {},
+          "b9588b3f-6b41-49d6-bd05-c94879f4a274": {},
+          "1457247a-cb6f-4e0e-8269-8c7b28ce7e6f": {}
+      },
+      "variableFields": {
+          "8e8918a6-639a-427b-9f58-8e9119a75181": [],
+          "69b0a7e0-daab-4417-97fb-109e680c77a9": [],
+          "a19e4829-3142-41a1-8c2a-284aca17590f": [],
+          "9e5e990f-5632-492b-aaee-a756f79c5a59": [],
+          "c61e9bf0-0ee4-4456-8827-9d26127cb1dd": [],
+          "0bf977b1-e476-4d98-9eea-1c85fd594c4b": [],
+          "3a29af0d-36b2-4b07-9b41-620ebd43774b": [],
+          "87199a13-8d29-4226-a3e4-1c8b05c38af6": [],
+          "b4fcb501-6984-40dc-b46c-bd96c30bf53d": [],
+          "6f05a060-b7a2-4c03-9f2f-ff94c33f4292": [],
+          "fd887d3d-1b51-416b-acef-87be7bdac51b": [],
+          "c6d7362a-95b7-4aad-af7b-7fa7d64a90d2": [],
+          "29a13125-f4a7-4daa-8cf4-036483139228": [],
+          "b9588b3f-6b41-49d6-bd05-c94879f4a274": [],
+          "1457247a-cb6f-4e0e-8269-8c7b28ce7e6f": []
+      },
+      "meta": {
+          "fieldHistory": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+category: hlp_cat_form_builder_helpers
+preview_image: ''
+entity_type_access: {  }
+bundle_access: {  }
+weight: 0

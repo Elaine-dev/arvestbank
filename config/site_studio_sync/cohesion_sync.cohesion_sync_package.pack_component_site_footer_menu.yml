@@ -1,0 +1,20 @@
+uuid: 13266d88-401a-4e33-ad91-40dcbc4f9b12
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_site_footer_menu
+label: 'Component Site Footer Menu'
+description: 'Main footer menu. Updated: Aaron Parkening 6/16/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "c6e8b0d5-a214-4999-b02d-ea3e45ef2b81": {
+          "type": "cohesion_component",
+          "items": {
+              "c6e8b0d5-a214-4999-b02d-ea3e45ef2b81": {
+                  "type": "cohesion_component"
+              }
+          },
+          "checked": true
+      }
+  }

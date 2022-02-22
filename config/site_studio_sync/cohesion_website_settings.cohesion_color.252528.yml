@@ -1,0 +1,27 @@
+uuid: 48a3b929-8bac-48e0-9f4c-2dd74bca3b2d
+langcode: en
+status: true
+dependencies: {  }
+id: '252528'
+label: '252528'
+json_values: |
+  {
+      "link": true,
+      "value": {
+          "value": {
+              "hex": "#252528",
+              "rgba": "rgba(37, 37, 40, 1)"
+          }
+      },
+      "name": "252528",
+      "uid": "252528",
+      "class": ".coh-color-252528",
+      "variable": "$coh-color-252528",
+      "inuse": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 38

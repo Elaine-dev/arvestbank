@@ -1,0 +1,26 @@
+uuid: 13268e7a-d08a-4bf1-a03f-7a86610109ca
+langcode: en
+status: true
+dependencies: {  }
+id: transparent-red
+label: 'Transparent Red'
+json_values: |
+  {
+      "link": true,
+      "value": {
+          "value": {
+              "hex": "#bd0000",
+              "rgba": "rgba(189, 0, 0, 0.7)"
+          }
+      },
+      "name": "Transparent Red",
+      "uid": "transparent-red",
+      "class": ".coh-color-transparent-red",
+      "variable": "$coh-color-transparent-red"
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 43

@@ -1,0 +1,23 @@
+uuid: 8cbfcfe1-d938-4f38-957a-8de415d421b2
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_basic_page_cta
+label: 'Component Basic Page CTA'
+description: "A component for the Basic Page CTA.\r\nLast Updated: Allie Jones 06/18/2021"
+excluded_entity_types: '[]'
+settings: |
+  {
+      "4c4d92b0-be89-4599-b397-a764d6a58e15": {
+          "type": "cohesion_component",
+          "items": {
+              "4c4d92b0-be89-4599-b397-a764d6a58e15": {
+                  "type": "cohesion_component"
+              },
+              "2fc786cb-5655-423a-8076-f614ba3eef6b": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

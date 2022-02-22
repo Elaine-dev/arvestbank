@@ -1,0 +1,23 @@
+uuid: aa238367-571f-4dac-a7d7-5224798dcacf
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_campaign_text_and
+label: 'Component Campaign Text and Table Card'
+description: 'Campaign component for text, including tables. Updated: Jacob Crane 7/9/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "7d841ecb-98fb-412e-9c43-50f7df24fba3": {
+          "type": "cohesion_component",
+          "items": {
+              "7d841ecb-98fb-412e-9c43-50f7df24fba3": {
+                  "type": "cohesion_component"
+              },
+              "db9ae5f8-1e86-4b25-94e4-d26af92dc3fe": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

@@ -1,0 +1,20 @@
+uuid: d7f44952-5301-40e8-9aad-fa88b0596957
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_red
+label: 'Custom Style Red'
+description: 'A Custom style to add to the main menu to make menu links red. Last Updated: Allie Jones 05/27/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "7884b490-e063-43cd-b75e-e0d63908e672": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "7884b490-e063-43cd-b75e-e0d63908e672": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

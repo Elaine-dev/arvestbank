@@ -1,0 +1,28 @@
+uuid: ca4d6a37-41d1-49c5-bea8-90b2499eb415
+langcode: en
+status: true
+dependencies: {  }
+id: f5f5f5
+label: '#f5f5f5'
+json_values: |
+  {
+      "link": true,
+      "value": {
+          "value": {
+              "hex": "#f5f5f5",
+              "rgba": "rgba(245, 245, 245, 1)"
+          }
+      },
+      "name": "#f5f5f5",
+      "uid": "f5f5f5",
+      "class": ".coh-color-f5f5f5",
+      "variable": "$coh-color-f5f5f5",
+      "wysiwyg": false,
+      "inuse": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 9

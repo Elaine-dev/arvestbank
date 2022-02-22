@@ -1,0 +1,28 @@
+uuid: 95626145-3391-4854-8fef-60bb32579739
+langcode: en
+status: true
+dependencies: {  }
+id: '004580'
+label: '#004580'
+json_values: |
+  {
+      "link": true,
+      "value": {
+          "value": {
+              "hex": "#004580",
+              "rgba": "rgba(0, 69, 128, 1)"
+          }
+      },
+      "name": "#004580",
+      "uid": "004580",
+      "class": ".coh-color-004580",
+      "variable": "$coh-color-004580",
+      "inuse": true,
+      "wysiwyg": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 19

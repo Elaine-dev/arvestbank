@@ -1,0 +1,28 @@
+uuid: ece2b206-bc5a-4278-ae21-3e80a3b41e6f
+langcode: en
+status: true
+dependencies: {  }
+id: blue-6
+label: 'Blue 6'
+json_values: |
+  {
+      "link": false,
+      "value": {
+          "value": {
+              "hex": "#1a6ac0",
+              "rgba": "rgba(26, 106, 192, 1)"
+          }
+      },
+      "name": "#1a6ac0",
+      "uid": "blue-6",
+      "class": ".coh-color-blue-6",
+      "variable": "$coh-color-blue-6",
+      "inuse": true,
+      "wysiwyg": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 28

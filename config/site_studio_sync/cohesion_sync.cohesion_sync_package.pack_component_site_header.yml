@@ -1,0 +1,20 @@
+uuid: 8e44d941-5b24-4e7b-aecb-c0f1c449b38e
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_site_header
+label: 'Component Site Header'
+description: "A Site Studio package for the main site header.\r\nLast update: Allie Jones 5/26/2021"
+excluded_entity_types: '[]'
+settings: |
+  {
+      "16329a77-4eb7-444d-afce-223589e498e5": {
+          "type": "cohesion_component",
+          "items": {
+              "16329a77-4eb7-444d-afce-223589e498e5": {
+                  "type": "cohesion_component"
+              }
+          },
+          "checked": true
+      }
+  }

@@ -1,0 +1,187 @@
+uuid: 19d03b88-1ece-4d82-8d0b-3b8a14ecd1af
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_website_settings.cohesion_color.gray-1
+    - cohesion_website_settings.cohesion_font_stack.verdana
+id: body
+label: Body
+json_values: |
+  {
+      "preview": {
+          "text": "<p>Default content for 'Body'.<\/p>\n",
+          "textFormat": "cohesion"
+      },
+      "styles": {
+          "settings": {
+              "element": "body",
+              "class": "",
+              "combinator": "",
+              "pseudo": ""
+          },
+          "styles": {
+              "xl": {
+                  "font-family": {
+                      "value": "$coh-font-verdana"
+                  },
+                  "color": {
+                      "value": {
+                          "name": "#333333",
+                          "uid": "gray-1",
+                          "value": {
+                              "hex": "#333333",
+                              "rgba": "rgba(51, 51, 51, 1)"
+                          },
+                          "wysiwyg": true,
+                          "class": ".coh-color-gray-1",
+                          "variable": "$coh-color-gray-1",
+                          "inuse": true,
+                          "link": false
+                      }
+                  },
+                  "line-height": {
+                      "value": "1.75"
+                  },
+                  "font-size": {
+                      "value": "12"
+                  }
+              }
+          },
+          "6e2409a9-161b-462b-b6d9-63e8cbd67d89": {
+              "settings": {
+                  "element": "",
+                  "class": ".page-node-type-campaign-page",
+                  "combinator": "",
+                  "pseudo": ""
+              },
+              "styles": {
+                  "xl": {
+                      "background-color": {
+                          "value": {
+                              "value": {
+                                  "hex": "#ebecee",
+                                  "rgba": "rgba(235, 236, 238, 1)"
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      },
+      "sBackgroundColour": "#FFFFFF",
+      "variableFields": []
+  }
+json_mapper: |
+  {
+      "styles": {
+          "title": "Body",
+          "selectorType": "topLevel",
+          "formDefinition": [
+              {
+                  "formKey": "font",
+                  "children": [
+                      {
+                          "formKey": "font-and-color",
+                          "breakpoints": [
+                              {
+                                  "name": "xl"
+                              }
+                          ],
+                          "activeFields": [
+                              {
+                                  "name": "font-family",
+                                  "active": true
+                              },
+                              {
+                                  "name": "font-weight",
+                                  "active": true
+                              },
+                              {
+                                  "name": "color",
+                                  "active": true
+                              }
+                          ]
+                      },
+                      {
+                          "formKey": "font-sizing-and-alignment",
+                          "breakpoints": [
+                              {
+                                  "name": "xl"
+                              }
+                          ],
+                          "activeFields": [
+                              {
+                                  "name": "font-size",
+                                  "active": true
+                              },
+                              {
+                                  "name": "line-height",
+                                  "active": true
+                              },
+                              {
+                                  "name": "text-align",
+                                  "active": true
+                              },
+                              {
+                                  "name": "letter-spacing",
+                                  "active": true
+                              },
+                              {
+                                  "name": "word-spacing",
+                                  "active": true
+                              },
+                              {
+                                  "name": "text-indent",
+                                  "active": true
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "items": [
+              {
+                  "title": ".page-node-type-campaign-page",
+                  "type": "container",
+                  "items": [],
+                  "form": null,
+                  "selectorType": "modifier",
+                  "model": ".page-node-type-campaign-page",
+                  "uuid": "6e2409a9-161b-462b-b6d9-63e8cbd67d89",
+                  "allowedTypes": [
+                      "child",
+                      "pseudo",
+                      "modifier"
+                  ],
+                  "formDefinition": [
+                      {
+                          "formKey": "background",
+                          "children": [
+                              {
+                                  "formKey": "background-color",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "background-color",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "form": null
+      }
+  }
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: false
+custom: null

@@ -1,0 +1,20 @@
+uuid: 457c73ef-240b-4871-aa40-5eb0dc5b50e5
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_component_body_size_
+label: 'Custom Style: Body Size Heading'
+description: 'A custom heading component utilized by the associate teaser content template. Last Updated: Allie Jones 05/25/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "9867acc5-6799-4fd3-83fb-49cd30bac5e1": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "9867acc5-6799-4fd3-83fb-49cd30bac5e1": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

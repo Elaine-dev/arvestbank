@@ -1,0 +1,20 @@
+uuid: a67c7231-32f8-40d6-9a43-70fdec077c05
+langcode: en
+status: true
+dependencies: {  }
+id: pack_view_template_generic
+label: 'View Template Generic'
+description: 'A Site Studio package for the view template generic. This is the fall back for all views.'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "df734877-86ee-447a-bf4e-b395d747e186": {
+          "type": "cohesion_view_templates",
+          "items": {
+              "df734877-86ee-447a-bf4e-b395d747e186": {
+                  "type": "cohesion_view_templates"
+              }
+          },
+          "checked": true
+      }
+  }
