@@ -331,7 +331,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Author
+          label: 'Last modified by'
           exclude: false
           alter:
             alter_text: false
@@ -781,7 +781,7 @@ display:
           exposed: true
           expose:
             operator_id: revision_uid_op
-            label: Author
+            label: 'Last modified by'
             description: ''
             use_operator: false
             operator: revision_uid_op
