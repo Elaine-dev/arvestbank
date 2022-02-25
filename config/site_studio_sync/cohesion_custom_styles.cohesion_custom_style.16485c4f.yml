@@ -1,0 +1,119 @@
+uuid: 9903929c-3be9-49cd-a6ae-2bc25778a45d
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_website_settings.cohesion_scss_variable.med
+id: 16485c4f
+label: 'Padding medium'
+json_values: |
+  {
+      "preview": {
+          "text": "<div class=\"coh-preview\">Default content for 'Layout'.<\/div>\n",
+          "textFormat": "cohesion"
+      },
+      "styles": {
+          "settings": {
+              "element": "div",
+              "class": "",
+              "combinator": "",
+              "pseudo": ""
+          },
+          "styles": {
+              "xl": {
+                  "padding": {
+                      "padding-top": {},
+                      "padding-bottom": {},
+                      "padding-equal": {
+                          "value": "$med"
+                      }
+                  }
+              },
+              "ps": {
+                  "padding": {
+                      "padding-top": {},
+                      "padding-bottom": {}
+                  }
+              },
+              "md": {
+                  "padding": {
+                      "padding-top": {},
+                      "padding-bottom": {}
+                  }
+              }
+          }
+      },
+      "sBackgroundColour": "#FFFFFF",
+      "variableFields": []
+  }
+json_mapper: |
+  {
+      "styles": {
+          "selectorType": "topLevel",
+          "items": [],
+          "title": "Layout",
+          "formDefinition": [
+              {
+                  "formKey": "layout",
+                  "children": [
+                      {
+                          "formKey": "padding",
+                          "breakpoints": [
+                              {
+                                  "name": "xl"
+                              }
+                          ],
+                          "activeFields": [
+                              {
+                                  "name": "padding-equal",
+                                  "active": true
+                              },
+                              {
+                                  "name": "padding-top",
+                                  "active": false
+                              },
+                              {
+                                  "name": "padding-bottom",
+                                  "active": false
+                              },
+                              {
+                                  "name": "padding-left",
+                                  "active": false
+                              },
+                              {
+                                  "name": "padding-right",
+                                  "active": false
+                              },
+                              {
+                                  "name": "padding-block-start",
+                                  "active": false
+                              },
+                              {
+                                  "name": "padding-block-end",
+                                  "active": false
+                              },
+                              {
+                                  "name": "padding-inline-start",
+                                  "active": false
+                              },
+                              {
+                                  "name": "padding-inline-end",
+                                  "active": false
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "form": null
+      }
+  }
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-padding-medium
+custom_style_type: layout
+available_in_wysiwyg: false
+parent: null
+weight: 24

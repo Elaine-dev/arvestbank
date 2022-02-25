@@ -1,0 +1,23 @@
+uuid: e848906a-9e35-474e-9edb-553992620e4f
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_callout_card
+label: 'Component Callout Card'
+description: 'Callout Card red icon with blue header, typically found on the right sidebar of a three column page. Last Updated: Allie Jones 6/23/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "fa99751f-8152-4aac-897e-ed77a7b98d9c": {
+          "type": "cohesion_component",
+          "items": {
+              "fa99751f-8152-4aac-897e-ed77a7b98d9c": {
+                  "type": "cohesion_component"
+              },
+              "a408c4a0-81d0-4ad0-81cf-125b3b3b481d": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

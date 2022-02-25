@@ -1,0 +1,20 @@
+uuid: b52e6cae-bd58-4d66-b5ad-3c952603636e
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_alert
+label: 'Custom Style Alert'
+description: 'A custom style for alerts. Last Updated: Allie Jones 06/21/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "7b106bf8-faf1-4855-82f2-fd7d4a9769df": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "7b106bf8-faf1-4855-82f2-fd7d4a9769df": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

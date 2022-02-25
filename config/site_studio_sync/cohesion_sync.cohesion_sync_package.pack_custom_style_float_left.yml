@@ -1,0 +1,20 @@
+uuid: 4e61d944-74e0-4743-a8f5-9df14795f731
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_float_left
+label: 'Custom Style Float Left'
+description: 'A custom style to float elements left. Author: Allie Jones / Last update: 05/07/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "79690b3f-34f7-4e9b-8625-fd47fc6bfd69": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "79690b3f-34f7-4e9b-8625-fd47fc6bfd69": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

@@ -1,0 +1,197 @@
+uuid: 08eba451-338b-47a5-b210-f5d75fc0f8d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_elements.cohesion_component.cpt_adjustable_two_column_layout
+    - cohesion_elements.cohesion_component.cpt_basic_text_card
+    - cohesion_elements.cohesion_component.cpt_campaign_components
+    - cohesion_elements.cohesion_helper_category.hlp_cat_campaign_page_helpers
+id: hlp_adjustable_two_column_layout
+label: 'Adjustable Two Column Layout with Basic Text Card'
+json_values: |
+  {
+      "canvas": [
+          {
+              "uid": "cpt_adjustable_two_column_layout",
+              "type": "component",
+              "title": "Adjustable Two Column Layout",
+              "enabled": true,
+              "category": "category-1",
+              "componentId": "cpt_adjustable_two_column_layout",
+              "componentType": "row-for-columns",
+              "uuid": "5c938202-9ec7-4da5-92ec-f663edf38743",
+              "parentUid": "root",
+              "status": {
+                  "collapsed": false
+              },
+              "children": [
+                  {
+                      "type": "container",
+                      "uid": "component-drop-zone",
+                      "mimicParent": true,
+                      "parentUid": "cpt_adjustable_two_column_layout",
+                      "title": "Component drop zone",
+                      "selected": false,
+                      "status": {
+                          "collapsed": false,
+                          "disabled": false
+                      },
+                      "uuid": "830f32a0-a32e-4733-b409-910692889d66",
+                      "dropzoneId": "eda5a03c-fe3f-4039-bd24-19de468bb13e",
+                      "children": [
+                          {
+                              "uid": "cpt_basic_text_card",
+                              "type": "component",
+                              "title": "Basic Text Card",
+                              "enabled": true,
+                              "category": "category-5",
+                              "componentId": "cpt_basic_text_card",
+                              "componentType": "container",
+                              "uuid": "8951c3a1-2dbd-40c9-99c5-4825621e854a",
+                              "parentUid": "component-drop-zone",
+                              "children": []
+                          },
+                          {
+                              "uid": "cpt_campaign_components",
+                              "type": "component",
+                              "title": "Campaign Icon and Text Card",
+                              "enabled": true,
+                              "category": "category-4",
+                              "componentId": "cpt_campaign_components",
+                              "componentType": "container",
+                              "uuid": "d416534d-b29b-46b6-8147-e951080d9ffa",
+                              "parentUid": "component-drop-zone",
+                              "children": []
+                          }
+                      ]
+                  },
+                  {
+                      "type": "container",
+                      "uid": "component-drop-zone",
+                      "mimicParent": true,
+                      "parentUid": "cpt_adjustable_two_column_layout",
+                      "title": "Component drop zone",
+                      "selected": false,
+                      "status": {
+                          "collapsed": false,
+                          "disabled": false
+                      },
+                      "uuid": "7c418199-8a16-40d0-bc4f-7689303d02e8",
+                      "dropzoneId": "40928edf-f27e-4e25-bc06-2a0d25b4aff1",
+                      "children": [
+                          {
+                              "uid": "cpt_campaign_components",
+                              "type": "component",
+                              "title": "Campaign Icon and Text Card",
+                              "enabled": true,
+                              "category": "category-4",
+                              "componentId": "cpt_campaign_components",
+                              "componentType": "container",
+                              "uuid": "27e39820-a82a-48f1-8a88-61084ba96087",
+                              "parentUid": "component-drop-zone",
+                              "children": []
+                          }
+                      ]
+                  }
+              ]
+          }
+      ],
+      "mapper": {},
+      "model": {
+          "5c938202-9ec7-4da5-92ec-f663edf38743": {
+              "7a3de526-046d-4851-991f-0771a619f822": "6"
+          },
+          "830f32a0-a32e-4733-b409-910692889d66": {
+              "settings": {
+                  "title": "Column 1 drop zone",
+                  "dropzoneHideSelector": ""
+              }
+          },
+          "8951c3a1-2dbd-40c9-99c5-4825621e854a": {
+              "settings": {
+                  "title": "Basic Text Card"
+              },
+              "7034be68-d780-4c7e-8108-ef6a0e7e35f6": {
+                  "text": "",
+                  "textFormat": "cohesion"
+              },
+              "f87d2033-4743-4f4a-b16a-96a87ed0d326": {
+                  "value": {
+                      "hex": "#4a3131",
+                      "rgba": "rgba(74, 49, 49, 1)"
+                  }
+              },
+              "fa64efe3-99a3-4dfe-b5b6-9932905d88cf": false,
+              "653a2ec2-f7a5-4c0b-81ba-c09f95401f9a": false,
+              "f9d2ef33-9262-40ef-bf22-c4c8e1f6057f": false,
+              "0d7de7e2-e288-412a-b82a-6f13ffa0110e": true,
+              "5c78a44c-262c-49ed-91d1-ea2680e1a50b": false,
+              "680855cc-c682-4a3b-9597-3085eec78d75": true
+          },
+          "d416534d-b29b-46b6-8147-e951080d9ffa": {
+              "settings": {
+                  "title": "Campaign Icon and Text Card"
+              },
+              "e2e389b2-5c09-43a1-9063-c156b94320db": {
+                  "entity": {
+                      "entityType": "media"
+                  }
+              },
+              "42c67b18-1610-47eb-b102-29cc1cde918f": {
+                  "text": "<h2>IN-STORE<\/h2>\n\n<p>Choose CREDIT at checkout&nbsp;<br \/>\nOR<br \/>\nSign your receipt<br \/>\nOR<br \/>\nTell the cashier you want to make a \u201ccredit\u201d or \u201csignature\u201d purchase<br \/>\n&nbsp;<\/p>\n",
+                  "textFormat": "cohesion"
+              },
+              "1187eb1c-e1d5-40ab-89b9-da28f1d1a100": {
+                  "entity_type": "media",
+                  "view_mode": "thumbnail_overlay"
+              },
+              "081c06a2-08a5-410d-b258-f2fa03119cc4": ""
+          },
+          "7c418199-8a16-40d0-bc4f-7689303d02e8": {
+              "settings": {
+                  "title": "Column 2 drop zone",
+                  "dropzoneHideSelector": ""
+              }
+          },
+          "27e39820-a82a-48f1-8a88-61084ba96087": {
+              "settings": {
+                  "title": "Campaign Icon and Text Card"
+              },
+              "e2e389b2-5c09-43a1-9063-c156b94320db": {
+                  "entity": {
+                      "entityType": "media"
+                  }
+              },
+              "42c67b18-1610-47eb-b102-29cc1cde918f": {
+                  "text": "<h2>ONLINE OR OVER THE PHONE<\/h2>\n\n<p>Simply make a purchase as usual&nbsp;<br \/>\n(all online and phone purchases are eligible purchases, including bills and subscriptions)<br \/>\n&nbsp;<\/p>\n",
+                  "textFormat": "cohesion"
+              },
+              "1187eb1c-e1d5-40ab-89b9-da28f1d1a100": {
+                  "entity_type": "media",
+                  "view_mode": "thumbnail_overlay"
+              },
+              "081c06a2-08a5-410d-b258-f2fa03119cc4": ""
+          }
+      },
+      "previewModel": {
+          "8951c3a1-2dbd-40c9-99c5-4825621e854a": {},
+          "d416534d-b29b-46b6-8147-e951080d9ffa": {},
+          "27e39820-a82a-48f1-8a88-61084ba96087": {}
+      },
+      "variableFields": {
+          "8951c3a1-2dbd-40c9-99c5-4825621e854a": [],
+          "d416534d-b29b-46b6-8147-e951080d9ffa": [],
+          "27e39820-a82a-48f1-8a88-61084ba96087": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+category: hlp_cat_campaign_page_helpers
+preview_image: ''
+entity_type_access: {  }
+bundle_access: {  }
+weight: null

@@ -1,0 +1,20 @@
+uuid: 80585afc-f592-49c1-9bcc-df6fe76fb2ac
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_main_content_side
+label: 'Component Main content and sidebar'
+description: "A reusable component for all content with a left sidebar.\r\nLast Updated: Jacob Crane 6/17/2021"
+excluded_entity_types: '[]'
+settings: |
+  {
+      "7746dbb1-2200-4526-a6e1-3a31abc1bd97": {
+          "type": "cohesion_component",
+          "items": {
+              "7746dbb1-2200-4526-a6e1-3a31abc1bd97": {
+                  "type": "cohesion_component"
+              }
+          },
+          "checked": true
+      }
+  }

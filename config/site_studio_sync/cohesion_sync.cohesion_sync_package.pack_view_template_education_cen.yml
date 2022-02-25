@@ -1,0 +1,20 @@
+uuid: 999d1405-0f3b-4971-b35b-41caec69ada4
+langcode: en
+status: true
+dependencies: {  }
+id: pack_view_template_education_cen
+label: 'View Template Education center'
+description: 'A Site studio package for the view template Education center.'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "8577aa36-c5a6-46ee-b224-e8507044c7c6": {
+          "type": "cohesion_view_templates",
+          "items": {
+              "8577aa36-c5a6-46ee-b224-e8507044c7c6": {
+                  "type": "cohesion_view_templates"
+              }
+          },
+          "checked": true
+      }
+  }

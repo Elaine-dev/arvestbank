@@ -1,0 +1,2220 @@
+uuid: 7746dbb1-2200-4526-a6e1-3a31abc1bd97
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_custom_styles.cohesion_custom_style.0fb20ef3
+    - cohesion_custom_styles.cohesion_custom_style.386d51ff
+    - cohesion_custom_styles.cohesion_custom_style.f763ee57
+    - cohesion_elements.cohesion_component.cpt_1_column_layout_component
+    - cohesion_elements.cohesion_component.cpt_support_card
+    - cohesion_elements.cohesion_component_category.cpt_cat_layout_components
+    - cohesion_website_settings.cohesion_color.004580
+    - cohesion_website_settings.cohesion_color.blue-4
+    - cohesion_website_settings.cohesion_color.white
+id: cpt_main_content_and_sidebar
+label: 'Main content and sidebar'
+json_values: |
+  {
+      "canvas": [
+          {
+              "uid": "cpt_1_column_layout_component",
+              "type": "component",
+              "title": "1 column layout",
+              "enabled": true,
+              "category": "category-1",
+              "componentId": "cpt_1_column_layout_component",
+              "componentType": "container",
+              "uuid": "9e7615b8-0eeb-4a6e-83f2-2fbfca33b8a0",
+              "parentUid": "root",
+              "status": {
+                  "collapsed": false
+              },
+              "children": [
+                  {
+                      "type": "container",
+                      "uid": "component-drop-zone",
+                      "mimicParent": true,
+                      "parentUid": "cpt_1_column_layout_component",
+                      "title": "Component drop zone",
+                      "selected": false,
+                      "status": {
+                          "collapsed": false,
+                          "disabled": false
+                      },
+                      "uuid": "0d954c13-e602-41de-9c71-95b9a7f0bf2c",
+                      "dropzoneId": "4bf981d1-2035-4487-94d9-597ea5ce7569",
+                      "children": [
+                          {
+                              "type": "container",
+                              "uid": "accordion-tabs-container",
+                              "title": "Accordion tabs container",
+                              "status": {
+                                  "collapsed": false
+                              },
+                              "uuid": "b9cb678c-1aa7-4113-9cd7-7f870920944a",
+                              "parentUid": "component-drop-zone",
+                              "children": [
+                                  {
+                                      "type": "container",
+                                      "uid": "accordion-tabs-item",
+                                      "title": "Accordion tabs item",
+                                      "status": {
+                                          "collapsed": false
+                                      },
+                                      "uuid": "8df79c5c-6eb8-4995-8321-767e9225850f",
+                                      "parentUid": "accordion-tabs-container",
+                                      "children": [
+                                          {
+                                              "type": "item",
+                                              "uid": "drupal-block",
+                                              "title": "Block",
+                                              "status": {
+                                                  "collapsed": true
+                                              },
+                                              "uuid": "9f3879a7-02ba-4965-9b90-5731219e0ad9",
+                                              "parentUid": "accordion-tabs-item",
+                                              "children": []
+                                          }
+                                      ]
+                                  }
+                              ]
+                          },
+                          {
+                              "type": "container",
+                              "uid": "row-for-columns",
+                              "title": "Row for columns",
+                              "status": {
+                                  "collapsed": false
+                              },
+                              "uuid": "6dd308ba-7e87-4858-abd6-079213c9f83b",
+                              "parentUid": "component-drop-zone",
+                              "children": [
+                                  {
+                                      "type": "container",
+                                      "uid": "column",
+                                      "title": "Column",
+                                      "status": {
+                                          "collapsed": false
+                                      },
+                                      "uuid": "333fe19b-967e-481e-bcc3-a682d58dfef3",
+                                      "parentUid": "row-for-columns",
+                                      "children": [
+                                          {
+                                              "type": "item",
+                                              "uid": "drupal-block",
+                                              "title": "Block",
+                                              "status": {
+                                                  "collapsed": true
+                                              },
+                                              "parentUid": "column",
+                                              "uuid": "ae481cbc-7a08-4f90-9ddc-fc8a31952ced",
+                                              "children": []
+                                          },
+                                          {
+                                              "type": "item",
+                                              "uid": "drupal-block",
+                                              "title": "Block",
+                                              "status": {
+                                                  "collapsed": true
+                                              },
+                                              "uuid": "bc3f0401-8e9c-47b9-80ce-e325354a0820",
+                                              "parentUid": "column",
+                                              "children": []
+                                          },
+                                          {
+                                              "uid": "cpt_support_card",
+                                              "type": "component",
+                                              "title": "Support Card",
+                                              "enabled": true,
+                                              "category": "category-5",
+                                              "componentId": "cpt_support_card",
+                                              "componentType": "container",
+                                              "uuid": "732a3838-9ed7-4e22-b71e-82066cae569f",
+                                              "parentUid": "column",
+                                              "children": []
+                                          }
+                                      ]
+                                  },
+                                  {
+                                      "type": "container",
+                                      "uid": "column",
+                                      "title": "Column",
+                                      "status": {
+                                          "collapsed": false
+                                      },
+                                      "uuid": "3e02a1e8-8af3-4bf8-8f29-78326cb39f79",
+                                      "parentUid": "row-for-columns",
+                                      "children": [
+                                          {
+                                              "type": "item",
+                                              "uid": "component-drop-zone-placeholder",
+                                              "title": "Component drop zone",
+                                              "status": {
+                                                  "collapsed": true
+                                              },
+                                              "uuid": "59cc97b1-180f-4bcd-b63c-d0a988391fb3",
+                                              "parentUid": "column",
+                                              "children": []
+                                          }
+                                      ]
+                                  }
+                              ]
+                          }
+                      ]
+                  }
+              ]
+          }
+      ],
+      "componentForm": [
+          {
+              "type": "form-container",
+              "uid": "form-tab-container",
+              "title": "Tab container",
+              "status": {
+                  "collapsed": false
+              },
+              "options": {
+                  "formBuilder": true
+              },
+              "uuid": "c5993147-31a7-466d-8cb1-ebf25e12fae5",
+              "parentUid": "root",
+              "children": [
+                  {
+                      "type": "form-container",
+                      "uid": "form-tab-item",
+                      "title": "Tab item",
+                      "status": {
+                          "collapsed": false
+                      },
+                      "options": {
+                          "formBuilder": true
+                      },
+                      "uuid": "1f57f452-decd-4997-91b1-512f534c34f1",
+                      "parentUid": "form-tab-container",
+                      "children": [
+                          {
+                              "type": "form-container",
+                              "uid": "form-section",
+                              "title": "Field group",
+                              "status": {
+                                  "collapsed": false
+                              },
+                              "options": {
+                                  "formBuilder": true
+                              },
+                              "uuid": "a3d18f90-94a8-4b1f-be2c-a2084827652e",
+                              "parentUid": "form-tab-item",
+                              "children": [
+                                  {
+                                      "type": "form-help",
+                                      "uid": "form-helptext",
+                                      "title": "Help text",
+                                      "status": {
+                                          "collapsed": false
+                                      },
+                                      "uuid": "79ffb74c-893e-4d84-8705-60f4d012146d",
+                                      "parentUid": "form-section",
+                                      "children": []
+                                  }
+                              ]
+                          }
+                      ]
+                  }
+              ]
+          }
+      ],
+      "mapper": {
+          "6dd308ba-7e87-4858-abd6-079213c9f83b": {
+              "settings": {
+                  "formDefinition": [
+                      {
+                          "formKey": "row-for-columns-settings",
+                          "children": [
+                              {
+                                  "formKey": "row-for-columns-bleed",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "bleed",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "overflow",
+                                          "active": true
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "row-for-columns-markup-style-target",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "targetContainer",
+                                          "active": true
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "row-for-columns-style",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "customStyle",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "customStyle",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      },
+                      {
+                          "formKey": "row-for-columns-js-settings",
+                          "children": [
+                              {
+                                  "formKey": "row-for-columns-match-height",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "targetElement",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "class",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "targetLevel",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "selectorType": "topLevel",
+                  "form": null,
+                  "items": []
+              },
+              "styles": {
+                  "selectorType": "topLevel",
+                  "formDefinition": [
+                      {
+                          "formKey": "layout",
+                          "children": [
+                              {
+                                  "formKey": "flex-container",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      },
+                                      {
+                                          "name": "sm"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "flex-direction",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "flex-wrap",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "justify-content",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "justify-content-safety",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "align-content",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "align-content-safety",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "align-items",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "align-items-safety",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "items": [],
+                  "form": null
+              }
+          },
+          "3e02a1e8-8af3-4bf8-8f29-78326cb39f79": {
+              "settings": {
+                  "formDefinition": [
+                      {
+                          "formKey": "column-settings",
+                          "children": [
+                              {
+                                  "formKey": "column-width-and-position",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      },
+                                      {
+                                          "name": "sm"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "col",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "pull",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "push",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "offset",
+                                          "active": false
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "common-link-animation",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "linkAnimation",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationType",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationScope",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationParent",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationTarget",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationScale",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationDirection",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationDirection",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationDirection",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationDistance",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationPieces",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationOrigin",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationFoldHeight",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationHorizontalFirst",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationIterations",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationEasing",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationDuration",
+                                          "active": true
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "common-link-modifier",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "modifier",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "modifierType",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "interactionScope",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "interactionParent",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "interactionTarget",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "modifierName",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "title": "Settings",
+                  "selectorType": "topLevel",
+                  "form": null,
+                  "items": []
+              },
+              "styles": {
+                  "selectorType": "topLevel",
+                  "formDefinition": [
+                      {
+                          "formKey": "layout",
+                          "children": [
+                              {
+                                  "formKey": "flex-item",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      },
+                                      {
+                                          "name": "sm"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "flex-basis",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "order",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "flex-grow",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "flex-shrink",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "align-self",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "align-self-safety",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "items": [],
+                  "form": null
+              },
+              "markup": {
+                  "formDefinition": [
+                      {
+                          "formKey": "tab-markup-classes-and-ids",
+                          "children": [
+                              {
+                                  "formKey": "tab-markup-add-classes",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "classes",
+                                          "active": true
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "tab-markup-add-id",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "id",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "title": "Markup",
+                  "selectorType": "topLevel",
+                  "form": null,
+                  "items": []
+              }
+          },
+          "59cc97b1-180f-4bcd-b63c-d0a988391fb3": {},
+          "333fe19b-967e-481e-bcc3-a682d58dfef3": {
+              "settings": {
+                  "formDefinition": [
+                      {
+                          "formKey": "column-settings",
+                          "children": [
+                              {
+                                  "formKey": "column-width-and-position",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      },
+                                      {
+                                          "name": "sm"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "col",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "pull",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "push",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "offset",
+                                          "active": false
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "common-link-animation",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "linkAnimation",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationType",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationScope",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationParent",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationTarget",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationScale",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationDirection",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationDirection",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationDirection",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationDistance",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationPieces",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationOrigin",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationFoldHeight",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationHorizontalFirst",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationIterations",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationEasing",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationDuration",
+                                          "active": true
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "common-link-modifier",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "modifier",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "modifierType",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "interactionScope",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "interactionParent",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "interactionTarget",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "modifierName",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "title": "Settings",
+                  "selectorType": "topLevel",
+                  "form": null,
+                  "items": []
+              },
+              "styles": {
+                  "selectorType": "topLevel",
+                  "formDefinition": [
+                      {
+                          "formKey": "layout",
+                          "children": [
+                              {
+                                  "formKey": "flex-item",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      },
+                                      {
+                                          "name": "sm"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "flex-basis",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "order",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "flex-grow",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "flex-shrink",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "align-self",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "align-self-safety",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "items": [],
+                  "form": null
+              },
+              "markup": {
+                  "formDefinition": [
+                      {
+                          "formKey": "tab-markup-classes-and-ids",
+                          "children": [
+                              {
+                                  "formKey": "tab-markup-add-classes",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "classes",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "title": "Markup",
+                  "selectorType": "topLevel",
+                  "form": null,
+                  "items": []
+              },
+              "hideNoData": {
+                  "formDefinition": [
+                      {
+                          "formKey": "tab-hide-data-settings",
+                          "children": [
+                              {
+                                  "formKey": "tab-hide-data-hide",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "hideEnable",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "hideData",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "title": "Hide if no data",
+                  "selectorType": "topLevel",
+                  "form": null,
+                  "items": []
+              }
+          },
+          "bc3f0401-8e9c-47b9-80ce-e325354a0820": {
+              "settings": {
+                  "formDefinition": [
+                      {
+                          "formKey": "block-settings",
+                          "children": [
+                              {
+                                  "formKey": "block-drupal-block",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "theme",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "block",
+                                          "active": true
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "block-style",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "customStyle",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "customStyle",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "selectorType": "topLevel",
+                  "form": null,
+                  "items": []
+              },
+              "styles": {
+                  "formDefinition": [],
+                  "selectorType": "topLevel",
+                  "items": [],
+                  "form": null
+              },
+              "markup": {
+                  "formDefinition": [
+                      {
+                          "formKey": "tab-markup-classes-and-ids",
+                          "children": [
+                              {
+                                  "formKey": "tab-markup-add-classes",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "classes",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "title": "Markup",
+                  "selectorType": "topLevel",
+                  "form": null,
+                  "items": []
+              }
+          },
+          "ae481cbc-7a08-4f90-9ddc-fc8a31952ced": {
+              "settings": {
+                  "formDefinition": [
+                      {
+                          "formKey": "block-settings",
+                          "children": [
+                              {
+                                  "formKey": "block-drupal-block",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "theme",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "block",
+                                          "active": true
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "block-style",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "customStyle",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "customStyle",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "selectorType": "topLevel",
+                  "form": null,
+                  "items": []
+              },
+              "markup": {
+                  "formDefinition": [
+                      {
+                          "formKey": "tab-markup-classes-and-ids",
+                          "children": [
+                              {
+                                  "formKey": "tab-markup-add-classes",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "classes",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "title": "Markup",
+                  "selectorType": "topLevel",
+                  "form": null,
+                  "items": []
+              },
+              "styles": {
+                  "formDefinition": [
+                      {
+                          "formKey": "layout",
+                          "children": [
+                              {
+                                  "formKey": "display",
+                                  "breakpoints": [
+                                      {
+                                          "name": "sm"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "display",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "visibility",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "overflow",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "overflow-x",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "overflow-y",
+                                          "active": false
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "selectorType": "topLevel",
+                  "items": [],
+                  "form": null
+              }
+          },
+          "b9cb678c-1aa7-4113-9cd7-7f870920944a": {
+              "settings": {
+                  "formDefinition": [
+                      {
+                          "formKey": "accordion-tabs-container-settings",
+                          "children": [
+                              {
+                                  "formKey": "accordion-tabs-container-accordion-or-tab",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "accordionOrTab",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "collapsible",
+                                          "active": true
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "accordion-tabs-container-transition",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "animation",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "duration",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "durationMs",
+                                          "active": true
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "accordion-tabs-container-start-state",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "startCollapsed",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "active",
+                                          "active": true
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "accordion-tabs-container-style",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "customStyle",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "customStyle",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      },
+                      {
+                          "formKey": "accordion-tabs-container-accordion-accordion-settings",
+                          "children": [
+                              {
+                                  "formKey": "accordion-tabs-container-behavior",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "scrollToAccordion",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "setHash",
+                                          "active": true
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "accordion-tabs-container-offset-scroll-position",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "offsetPositionAgainst",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "scrollToAccordionOffset",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "scrollToAccordionOffsetClass",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      },
+                      {
+                          "formKey": "accordion-tabs-container-tab-settings",
+                          "children": [
+                              {
+                                  "formKey": "accordion-tabs-container-position",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "horizontalVertical",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "HorizontalPosition",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "VerticalPosition",
+                                          "active": true
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "accordion-tabs-container-width",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "accordionTabWidth",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "accordionTabBleed",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "selectorType": "topLevel",
+                  "form": null,
+                  "items": []
+              },
+              "styles": {
+                  "formDefinition": [],
+                  "selectorType": "topLevel",
+                  "items": [],
+                  "form": null
+              }
+          },
+          "8df79c5c-6eb8-4995-8321-767e9225850f": {
+              "settings": {
+                  "formDefinition": [
+                      {
+                          "formKey": "accordion-tabs-item-settings",
+                          "children": [
+                              {
+                                  "formKey": "accordion-tabs-item-settings-label",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "title",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      },
+                      {
+                          "formKey": "accordion-tabs-item-accordion-settings",
+                          "children": [
+                              {
+                                  "formKey": "accordion-tabs-item-accordion-html-element",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "accordionTabElement",
+                                          "active": true
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "accordion-tabs-item-accordion-settings-style",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "customStyle",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      },
+                      {
+                          "formKey": "accordion-tabs-item-tab-settings",
+                          "children": [
+                              {
+                                  "formKey": "accordion-tabs-item-tab-settings-tab-style",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "customStyle",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "selectorType": "topLevel",
+                  "form": null,
+                  "items": []
+              },
+              "styles": {
+                  "formDefinition": [
+                      {
+                          "formKey": "background",
+                          "children": [
+                              {
+                                  "formKey": "background-color",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "background-color",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      },
+                      {
+                          "formKey": "font",
+                          "children": [
+                              {
+                                  "formKey": "font-and-color",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "font-family",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "font-weight",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "color",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      },
+                      {
+                          "formKey": "border-and-outline",
+                          "children": [
+                              {
+                                  "formKey": "border-style",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "border-style",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "border-top-style",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "border-bottom-style",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "border-left-style",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "border-right-style",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "border-block-start-style",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "border-block-end-style",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "border-inline-start-style",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "border-inline-end-style",
+                                          "active": false
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "border-color",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "border-color",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "border-top-color",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "border-bottom-color",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "border-left-color",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "border-right-color",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "border-block-start-color",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "border-block-end-color",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "border-inline-start-color",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "border-inline-end-color",
+                                          "active": false
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "border-width",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "border-width",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "border-top-width",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "border-bottom-width",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "border-left-width",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "border-right-width",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "border-block-start-width",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "border-block-end-width",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "border-inline-start-width",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "border-inline-end-width",
+                                          "active": false
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "selectorType": "topLevel",
+                  "items": [
+                      {
+                          "title": ".coh-accordion-title a",
+                          "type": "container",
+                          "items": [],
+                          "form": null,
+                          "selectorType": "child",
+                          "model": ".coh-accordion-title a",
+                          "uuid": "f45f8575-9042-48ba-bc52-2311ee8d22d0",
+                          "allowedTypes": [
+                              "child",
+                              "pseudo",
+                              "modifier"
+                          ],
+                          "formDefinition": []
+                      }
+                  ],
+                  "form": null
+              }
+          },
+          "9f3879a7-02ba-4965-9b90-5731219e0ad9": {
+              "settings": {
+                  "formDefinition": [
+                      {
+                          "formKey": "block-settings",
+                          "children": [
+                              {
+                                  "formKey": "block-drupal-block",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "theme",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "block",
+                                          "active": true
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "block-style",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "customStyle",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "customStyle",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "selectorType": "topLevel",
+                  "form": null,
+                  "items": []
+              },
+              "styles": {
+                  "formDefinition": [],
+                  "selectorType": "topLevel",
+                  "items": [],
+                  "form": null
+              },
+              "markup": {
+                  "formDefinition": [
+                      {
+                          "formKey": "tab-markup-classes-and-ids",
+                          "children": [
+                              {
+                                  "formKey": "tab-markup-add-classes",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "classes",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "title": "Markup",
+                  "selectorType": "topLevel",
+                  "form": null,
+                  "items": []
+              }
+          }
+      },
+      "model": {
+          "9e7615b8-0eeb-4a6e-83f2-2fbfca33b8a0": {
+              "settings": {
+                  "title": "Content column"
+              },
+              "ee4740a9-03d3-4ff4-9b71-a70db6309a4e": "boxed",
+              "6506f549-da8d-4c14-bd6e-5515534ceb3b": "center",
+              "ce5a5da7-31df-4dd0-afa9-6d23a029bcef": "12",
+              "5f589a6c-bbe2-4a41-88d2-384ab8c0bccb": ""
+          },
+          "0d954c13-e602-41de-9c71-95b9a7f0bf2c": {
+              "settings": {
+                  "title": "Column drop zone",
+                  "dropzoneHideSelector": ""
+              }
+          },
+          "b9cb678c-1aa7-4113-9cd7-7f870920944a": {
+              "settings": {
+                  "title": "Accordion tabs container",
+                  "styles": {
+                      "xl": {
+                          "accordionOrTab": "accordion",
+                          "collapsible": true,
+                          "startCollapsed": true,
+                          "animation": "slide",
+                          "offsetPositionAgainst": "px",
+                          "duration": 700,
+                          "scrollToAccordionOffset": 0,
+                          "accordionTabWidth": -2,
+                          "accordionTabBleed": "retain_gutters"
+                      }
+                  },
+                  "scrollToAccordion": false,
+                  "setHash": false,
+                  "horizontalVertical": "horizontal_top",
+                  "HorizontalPosition": "left_aligned",
+                  "VerticalPosition": "left",
+                  "settings": {
+                      "styles": {
+                          "xl": {
+                              "accordionOrTab": "accordion",
+                              "collapsible": true,
+                              "animation": "slide",
+                              "duration": 700,
+                              "startCollapsed": false,
+                              "active": 1,
+                              "offsetPositionAgainst": "px",
+                              "scrollToAccordionOffset": 0
+                          }
+                      },
+                      "scrollToAccordion": false,
+                      "setHash": false,
+                      "horizontalVertical": "horizontal_top",
+                      "HorizontalPosition": "left_aligned"
+                  },
+                  "customStyle": [
+                      {
+                          "customStyle": "coh-style-sidebar-accordion-menu"
+                      }
+                  ]
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "accordion-tabs-container"
+                  },
+                  "styles": {
+                      "7e8f07c2-3f84-4a28-a5ee-1993051537a2": {
+                          "styles": {
+                              "xl": {
+                                  "background-image-settings": [
+                                      {
+                                          "backgroundLayerType": {
+                                              "value": "image"
+                                          },
+                                          "backgroundImage": {
+                                              "imageStyle": ""
+                                          },
+                                          "backgroundImageSize": {
+                                              "value": "auto"
+                                          },
+                                          "backgroundImageRepeat": {
+                                              "value": "no-repeat"
+                                          },
+                                          "backgroundImageAttachment": {
+                                              "value": "scroll"
+                                          },
+                                          "backgroundImagePositionX": {
+                                              "value": "left"
+                                          },
+                                          "backgroundImagePositionY": {
+                                              "value": "top"
+                                          },
+                                          "backgroundImageOrigin": {
+                                              "value": "border-box"
+                                          },
+                                          "backgroundImageClip": {
+                                              "value": "border-box"
+                                          }
+                                      }
+                                  ]
+                              }
+                          }
+                      },
+                      "b626f482-59d4-413c-9460-d3cc80f5acf0": {
+                          "styles": {
+                              "xl": {
+                                  "clearfix": {
+                                      "value": false
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          },
+          "8df79c5c-6eb8-4995-8321-767e9225850f": {
+              "settings": {
+                  "title": "Accordion tabs item",
+                  "accordionTabElement": "div",
+                  "settings": {
+                      "accordionTabElement": "div",
+                      "accordionStyle": {
+                          "customStyle": ""
+                      },
+                      "tabStyle": {
+                          "customStyle": ""
+                      },
+                      "title": "Section Menu"
+                  },
+                  "accordionStyle": {
+                      "customStyle": ""
+                  },
+                  "tabStyle": {
+                      "customStyle": ""
+                  }
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "accordion-tabs-item"
+                  },
+                  "styles": {
+                      "xl": {
+                          "background-color": {
+                              "value": {
+                                  "link": true,
+                                  "value": {
+                                      "hex": "#004580",
+                                      "rgba": "rgba(0, 69, 128, 1)"
+                                  },
+                                  "name": "#004580",
+                                  "uid": "004580",
+                                  "class": ".coh-color-004580",
+                                  "variable": "$coh-color-004580",
+                                  "inuse": false
+                              }
+                          },
+                          "color": {
+                              "value": {
+                                  "link": true,
+                                  "value": {
+                                      "hex": "#ffffff",
+                                      "rgba": "rgba(255, 255, 255, 1)"
+                                  },
+                                  "name": "White",
+                                  "uid": "white",
+                                  "class": ".coh-color-white",
+                                  "variable": "$coh-color-white",
+                                  "wysiwyg": true,
+                                  "inuse": true
+                              }
+                          },
+                          "border-bottom-style": {
+                              "value": "solid"
+                          },
+                          "border-bottom-color": {
+                              "value": {
+                                  "link": false,
+                                  "value": {
+                                      "hex": "#cd0000",
+                                      "rgba": "rgba(205, 0, 0, 1)"
+                                  },
+                                  "name": "#cd0000 Border Red",
+                                  "uid": "red-1",
+                                  "class": ".coh-color-border-red",
+                                  "variable": "$coh-color-border-red",
+                                  "inuse": true
+                              }
+                          },
+                          "border-bottom-width": {
+                              "value": "2"
+                          }
+                      }
+                  },
+                  "f45f8575-9042-48ba-bc52-2311ee8d22d0": {
+                      "settings": {
+                          "element": ".coh-accordion-title a",
+                          "class": "",
+                          "combinator": "",
+                          "pseudo": ""
+                      },
+                      "styles": {
+                          "xl": {
+                              "color": {
+                                  "value": {
+                                      "link": true,
+                                      "value": {
+                                          "hex": "#ffffff",
+                                          "rgba": "rgba(255, 255, 255, 1)"
+                                      },
+                                      "name": "White",
+                                      "uid": "white",
+                                      "class": ".coh-color-white",
+                                      "variable": "$coh-color-white",
+                                      "wysiwyg": true,
+                                      "inuse": true
+                                  }
+                              },
+                              "background-color": {
+                                  "value": {
+                                      "link": false,
+                                      "value": {
+                                          "hex": "#00457c",
+                                          "rgba": "rgba(0, 69, 124, 1)"
+                                      },
+                                      "name": "#00457c",
+                                      "uid": "blue-4",
+                                      "class": ".coh-color-blue-4",
+                                      "variable": "$coh-color-blue-4",
+                                      "inuse": true
+                                  }
+                              },
+                              "margin": {
+                                  "margin-bottom": {
+                                      "value": "20"
+                                  }
+                              },
+                              "border-bottom-width": {
+                                  "value": "2"
+                              },
+                              "border-bottom-style": {
+                                  "value": "solid"
+                              },
+                              "border-bottom-color": {
+                                  "value": {
+                                      "link": false,
+                                      "value": {
+                                          "hex": "#cd0000",
+                                          "rgba": "rgba(205, 0, 0, 1)"
+                                      },
+                                      "name": "#cd0000 Border Red",
+                                      "uid": "red-1",
+                                      "class": ".coh-color-border-red",
+                                      "variable": "$coh-color-border-red",
+                                      "inuse": true
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          },
+          "9f3879a7-02ba-4965-9b90-5731219e0ad9": {
+              "settings": {
+                  "title": "tablet and below navigation block",
+                  "customStyle": [
+                      {
+                          "customStyle": ""
+                      }
+                  ],
+                  "settings": {
+                      "theme": "all",
+                      "customStyle": [
+                          {
+                              "customStyle": ""
+                          }
+                      ]
+                  },
+                  "theme": "all",
+                  "block": "sidebarmenublock"
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "block"
+                  }
+              },
+              "markup": {
+                  "classes": "coh-style-sidebar-navigation"
+              }
+          },
+          "6dd308ba-7e87-4858-abd6-079213c9f83b": {
+              "settings": {
+                  "title": "Row for columns",
+                  "styles": {
+                      "xl": {
+                          "bleed": "retain",
+                          "targetContainer": "inner",
+                          "overflow": "visible",
+                          "jsSettings": {
+                              "matchHeightRow": {
+                                  "targetElement": "none"
+                              }
+                          }
+                      }
+                  },
+                  "customStyle": [
+                      {
+                          "customStyle": ""
+                      }
+                  ],
+                  "settings": {
+                      "styles": {
+                          "xl": {
+                              "bleed": "retain",
+                              "overflow": "visible",
+                              "jsSettings": {
+                                  "matchHeightRow": {
+                                      "targetElement": "none"
+                                  }
+                              }
+                          }
+                      },
+                      "targetContainer": "inner",
+                      "customStyle": [
+                          {
+                              "customStyle": ""
+                          }
+                      ]
+                  },
+                  "targetContainer": "inner"
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "row-for-columns"
+                  },
+                  "styles": {
+                      "xl": {
+                          "flex-container": {
+                              "flex-wrap": {
+                                  "value": "nowrap"
+                              }
+                          }
+                      },
+                      "sm": {
+                          "flex-container": {
+                              "flex-wrap": {
+                                  "value": "wrap"
+                              }
+                          }
+                      }
+                  }
+              }
+          },
+          "333fe19b-967e-481e-bcc3-a682d58dfef3": {
+              "settings": {
+                  "title": "coh-sidebar",
+                  "styles": {
+                      "xl": {
+                          "col": 3
+                      },
+                      "sm": {
+                          "col": 12
+                      }
+                  },
+                  "settings": {
+                      "styles": {
+                          "xl": {
+                              "col": -2,
+                              "pull": -1,
+                              "push": -1,
+                              "offset": -1
+                          }
+                      }
+                  }
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "column"
+                  },
+                  "styles": {
+                      "xl": {
+                          "flex-item": {
+                              "order": {
+                                  "value": "1"
+                              }
+                          }
+                      },
+                      "sm": {
+                          "flex-item": {
+                              "order": {
+                                  "value": "2"
+                              }
+                          }
+                      }
+                  }
+              },
+              "markup": {
+                  "classes": "coh-sidebar"
+              },
+              "hideNoData": {
+                  "hideEnable": true,
+                  "hideData": "[arvestbank_menus:has_sidebar_menu]"
+              }
+          },
+          "ae481cbc-7a08-4f90-9ddc-fc8a31952ced": {
+              "settings": {
+                  "title": "Sidebar navigation block",
+                  "customStyle": [
+                      {
+                          "customStyle": ""
+                      }
+                  ],
+                  "settings": {
+                      "theme": "all",
+                      "customStyle": [
+                          {
+                              "customStyle": ""
+                          }
+                      ]
+                  },
+                  "theme": "all",
+                  "block": "sidebarmenublock"
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "block"
+                  },
+                  "styles": {
+                      "sm": {
+                          "display": {
+                              "value": "none"
+                          }
+                      }
+                  }
+              },
+              "markup": {
+                  "classes": "coh-style-sidebar-navigation"
+              }
+          },
+          "bc3f0401-8e9c-47b9-80ce-e325354a0820": {
+              "settings": {
+                  "title": "Ad Block - Sidebar .coh-style-ad-blocks",
+                  "customStyle": [
+                      {
+                          "customStyle": ""
+                      }
+                  ],
+                  "settings": {
+                      "theme": "all",
+                      "customStyle": [
+                          {
+                              "customStyle": ""
+                          }
+                      ]
+                  },
+                  "theme": "all",
+                  "block": "adblocksidebar"
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "block"
+                  }
+              },
+              "markup": {
+                  "classes": "coh-style-ad-blocks"
+              }
+          },
+          "732a3838-9ed7-4e22-b71e-82066cae569f": {},
+          "3e02a1e8-8af3-4bf8-8f29-78326cb39f79": {
+              "settings": {
+                  "title": "coh-main-view-content-column",
+                  "styles": {
+                      "sm": {
+                          "col": 12
+                      },
+                      "xl": {
+                          "col": -2
+                      }
+                  },
+                  "settings": {
+                      "styles": {
+                          "xl": {
+                              "col": -2,
+                              "pull": -1,
+                              "push": -1,
+                              "offset": -1
+                          }
+                      }
+                  }
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "column"
+                  },
+                  "styles": {
+                      "xl": {
+                          "flex-item": {
+                              "order": {
+                                  "value": "2"
+                              }
+                          }
+                      },
+                      "sm": {
+                          "flex-item": {
+                              "order": {
+                                  "value": "1"
+                              }
+                          }
+                      },
+                      "53c01f90-ea0d-450e-9d02-79ae1cbc3fc8": {
+                          "styles": {
+                              "xl": {
+                                  "clearfix": {
+                                      "value": false
+                                  }
+                              }
+                          }
+                      }
+                  }
+              },
+              "markup": {
+                  "classes": "coh-main-view-content-column",
+                  "id": "main-content"
+              }
+          },
+          "59cc97b1-180f-4bcd-b63c-d0a988391fb3": {
+              "settings": {
+                  "title": "Add main content",
+                  "dropzoneHideSelector": "",
+                  "placeholderHeight": 104
+              }
+          },
+          "c5993147-31a7-466d-8cb1-ebf25e12fae5": {
+              "settings": {
+                  "type": "cohTabContainer",
+                  "title": "Tab container",
+                  "responsiveMode": true
+              }
+          },
+          "1f57f452-decd-4997-91b1-512f534c34f1": {
+              "settings": {
+                  "title": "Help",
+                  "type": "cohTabItem",
+                  "breakpointIcon": ""
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "a3d18f90-94a8-4b1f-be2c-a2084827652e": {
+              "settings": {
+                  "title": "Help and information",
+                  "type": "cohSection",
+                  "hideRowHeading": 0,
+                  "removePadding": 0,
+                  "columnCount": "coh-component-field-group-1-col",
+                  "breakpointIcon": "",
+                  "breakpoints": false,
+                  "propertiesMenu": false,
+                  "disableScrollbar": true,
+                  "disableEllipsisMenu": true,
+                  "isOpen": true
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "79ffb74c-893e-4d84-8705-60f4d012146d": {
+              "settings": {
+                  "title": "Help text",
+                  "type": "cohHelpText",
+                  "options": {
+                      "showClose": false,
+                      "helpType": "coh-help-text--help",
+                      "helpText": "This component should be placed on any page that needs main content and sidebar content. It has no editable settings. \n\nThis component displays the page container with breadcrumb, status, and admin tab items, and the row with sidebar and content columns. Once placed, this component offers a drop zone for adding content."
+                  }
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          }
+      },
+      "previewModel": {
+          "333fe19b-967e-481e-bcc3-a682d58dfef3": {},
+          "3e02a1e8-8af3-4bf8-8f29-78326cb39f79": {},
+          "1f57f452-decd-4997-91b1-512f534c34f1": {},
+          "a3d18f90-94a8-4b1f-be2c-a2084827652e": {},
+          "79ffb74c-893e-4d84-8705-60f4d012146d": {},
+          "59cc97b1-180f-4bcd-b63c-d0a988391fb3": {},
+          "ae481cbc-7a08-4f90-9ddc-fc8a31952ced": {},
+          "9e7615b8-0eeb-4a6e-83f2-2fbfca33b8a0": {},
+          "b9cb678c-1aa7-4113-9cd7-7f870920944a": {},
+          "9f3879a7-02ba-4965-9b90-5731219e0ad9": {},
+          "8df79c5c-6eb8-4995-8321-767e9225850f": {},
+          "bc3f0401-8e9c-47b9-80ce-e325354a0820": {},
+          "6dd308ba-7e87-4858-abd6-079213c9f83b": {}
+      },
+      "variableFields": {
+          "333fe19b-967e-481e-bcc3-a682d58dfef3": [],
+          "3e02a1e8-8af3-4bf8-8f29-78326cb39f79": [],
+          "1f57f452-decd-4997-91b1-512f534c34f1": [],
+          "a3d18f90-94a8-4b1f-be2c-a2084827652e": [],
+          "79ffb74c-893e-4d84-8705-60f4d012146d": [],
+          "59cc97b1-180f-4bcd-b63c-d0a988391fb3": [],
+          "ae481cbc-7a08-4f90-9ddc-fc8a31952ced": [],
+          "9e7615b8-0eeb-4a6e-83f2-2fbfca33b8a0": [],
+          "b9cb678c-1aa7-4113-9cd7-7f870920944a": [],
+          "9f3879a7-02ba-4965-9b90-5731219e0ad9": [],
+          "8df79c5c-6eb8-4995-8321-767e9225850f": [],
+          "bc3f0401-8e9c-47b9-80ce-e325354a0820": [],
+          "6dd308ba-7e87-4858-abd6-079213c9f83b": []
+      },
+      "meta": {
+          "fieldHistory": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+category: cpt_cat_layout_components
+preview_image: ''
+has_quick_edit: true
+entity_type_access: {  }
+bundle_access: {  }
+twig_template: component--cohesion-cpt-main-content-and-sidebar
+weight: 7

@@ -1,0 +1,20 @@
+uuid: 24e0e4c1-2f96-4a91-9d18-925045e554f8
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_view_paginatio
+label: 'Custom Style View Pagination'
+description: "A Site Studio custom style for the pagination in views.\r\nAuthor: Aaron Parkening / Last update: 5/3/2021"
+excluded_entity_types: '[]'
+settings: |
+  {
+      "08ad5d9b-0389-44eb-9402-12dad05555dc": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "08ad5d9b-0389-44eb-9402-12dad05555dc": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

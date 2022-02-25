@@ -1,0 +1,20 @@
+uuid: f8653dce-457d-4fe1-96e4-fd1c2f291c3d
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_my_accounts_ho
+label: 'Custom Style My Accounts homepage Block'
+description: 'Custom style for the homepage my accounts block. Last updated: Allie Jones 05/17/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "d093e18f-5242-4db3-a95d-c5b6365ae61d": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "d093e18f-5242-4db3-a95d-c5b6365ae61d": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

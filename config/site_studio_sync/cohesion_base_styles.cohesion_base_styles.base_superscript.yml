@@ -1,0 +1,162 @@
+uuid: ce8f7766-4ce1-483b-ac33-6bc26b7241c7
+langcode: en
+status: true
+dependencies: {  }
+id: base_superscript
+label: Superscript
+json_values: |
+  {
+      "preview": {
+          "text": "<p>Add your preview HTML<sup>\u00ae<\/sup> element here<sup>1<\/sup>.<\/p>\n",
+          "textFormat": "cohesion"
+      },
+      "styles": {
+          "settings": {
+              "element": "sup"
+          },
+          "styles": {
+              "xl": {
+                  "font-size": {
+                      "value": "75%"
+                  },
+                  "line-height": {
+                      "value": "1.01"
+                  },
+                  "vertical-align": {
+                      "verticalAlignType": {
+                          "value": "baseline"
+                      }
+                  },
+                  "position": {
+                      "value": "relative"
+                  },
+                  "top": {
+                      "value": "-5"
+                  }
+              },
+              "styles": {
+                  "xl": {
+                      "vertical-align": {
+                          "verticalAlignType": {
+                              "value": "baseline"
+                          }
+                      }
+                  }
+              }
+          }
+      },
+      "sBackgroundColour": "#FFFFFF",
+      "variableFields": []
+  }
+json_mapper: |
+  {
+      "styles": {
+          "title": null,
+          "selectorType": "topLevel",
+          "formDefinition": [
+              {
+                  "formKey": "font",
+                  "children": [
+                      {
+                          "formKey": "font-sizing-and-alignment",
+                          "breakpoints": [
+                              {
+                                  "name": "xl"
+                              }
+                          ],
+                          "activeFields": [
+                              {
+                                  "name": "font-size",
+                                  "active": true
+                              },
+                              {
+                                  "name": "line-height",
+                                  "active": true
+                              },
+                              {
+                                  "name": "text-align",
+                                  "active": false
+                              },
+                              {
+                                  "name": "letter-spacing",
+                                  "active": false
+                              },
+                              {
+                                  "name": "word-spacing",
+                                  "active": false
+                              },
+                              {
+                                  "name": "text-indent",
+                                  "active": false
+                              }
+                          ]
+                      }
+                  ]
+              },
+              {
+                  "formKey": "layout",
+                  "children": [
+                      {
+                          "formKey": "position",
+                          "breakpoints": [
+                              {
+                                  "name": "xl"
+                              }
+                          ],
+                          "activeFields": [
+                              {
+                                  "name": "position",
+                                  "active": true
+                              },
+                              {
+                                  "name": "top",
+                                  "active": true
+                              },
+                              {
+                                  "name": "bottom",
+                                  "active": true
+                              },
+                              {
+                                  "name": "left",
+                                  "active": true
+                              },
+                              {
+                                  "name": "right",
+                                  "active": true
+                              },
+                              {
+                                  "name": "z-index",
+                                  "active": true
+                              }
+                          ]
+                      },
+                      {
+                          "formKey": "vertical-alignment",
+                          "breakpoints": [
+                              {
+                                  "name": "xl"
+                              }
+                          ],
+                          "activeFields": [
+                              {
+                                  "name": "verticalAlignType",
+                                  "active": true
+                              },
+                              {
+                                  "name": "verticalAlignLength",
+                                  "active": true
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "items": [],
+          "form": null
+      }
+  }
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+custom: null

@@ -1,0 +1,28 @@
+uuid: af99fe7f-2885-4905-b577-466420c9f777
+langcode: en
+status: true
+dependencies: {  }
+id: gray-1
+label: 'Gray 1'
+json_values: |
+  {
+      "name": "#333333",
+      "uid": "gray-1",
+      "value": {
+          "value": {
+              "hex": "#333333",
+              "rgba": "rgba(51, 51, 51, 1)"
+          }
+      },
+      "wysiwyg": true,
+      "class": ".coh-color-gray-1",
+      "variable": "$coh-color-gray-1",
+      "inuse": true,
+      "link": false
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 1

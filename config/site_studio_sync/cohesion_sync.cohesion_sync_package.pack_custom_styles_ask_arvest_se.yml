@@ -1,0 +1,20 @@
+uuid: 448526c0-3703-47ce-9459-2adafc6c7b92
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_styles_ask_arvest_se
+label: 'Custom Style Ask Arvest Search Bar'
+description: 'A Site Studio package for the custom style Ask Arvest Search Bar.'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "449a7bd5-93e2-4ed4-8d28-5688ef6ec840": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "449a7bd5-93e2-4ed4-8d28-5688ef6ec840": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

@@ -1,0 +1,27 @@
+uuid: 43414b0c-c0d0-4c23-bd43-c20c7b5fa58d
+langcode: en
+status: true
+dependencies: {  }
+id: 42668b
+label: '#42668b'
+json_values: |
+  {
+      "link": true,
+      "value": {
+          "value": {
+              "hex": "#42668b",
+              "rgba": "rgba(66, 102, 139, 1)"
+          }
+      },
+      "name": "#42668b",
+      "uid": "42668b",
+      "class": ".coh-color-42668b",
+      "variable": "$coh-color-42668b",
+      "inuse": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 24

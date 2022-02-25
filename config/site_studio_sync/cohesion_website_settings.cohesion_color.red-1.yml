@@ -1,0 +1,27 @@
+uuid: 26316cae-2da6-4cf0-a9e1-f53e5322c684
+langcode: en
+status: true
+dependencies: {  }
+id: red-1
+label: 'Border Red'
+json_values: |
+  {
+      "link": false,
+      "value": {
+          "value": {
+              "hex": "#cd0000",
+              "rgba": "rgba(205, 0, 0, 1)"
+          }
+      },
+      "name": "#cd0000 Border Red",
+      "uid": "red-1",
+      "class": ".coh-color-border-red",
+      "variable": "$coh-color-border-red",
+      "inuse": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 34

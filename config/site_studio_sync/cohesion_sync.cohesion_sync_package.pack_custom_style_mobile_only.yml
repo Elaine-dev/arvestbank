@@ -1,0 +1,20 @@
+uuid: 05c8c283-9a33-415b-9b58-c3cef1172305
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_mobile_only
+label: 'Custom Style Mobile Only'
+description: 'A custom Style to change display to block on tablet and below. Last Updated: Allie Jones 06/18/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "4f7957e0-c6f6-4aa3-ac01-8584b7cd03ac": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "4f7957e0-c6f6-4aa3-ac01-8584b7cd03ac": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

@@ -1,0 +1,20 @@
+uuid: e30948a5-b7e3-407f-8b74-164edd9b97bc
+langcode: en
+status: true
+dependencies: {  }
+id: pack_content_template_education_
+label: 'Content Template Education Article taxonomy terms'
+description: 'The content template for education article taxonomy terms. Last Updated: Allie Jones 05/26/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "391a385f-2d01-4135-9d42-e826e227c88b": {
+          "type": "cohesion_content_templates",
+          "items": {
+              "391a385f-2d01-4135-9d42-e826e227c88b": {
+                  "type": "cohesion_content_templates"
+              }
+          },
+          "checked": true
+      }
+  }

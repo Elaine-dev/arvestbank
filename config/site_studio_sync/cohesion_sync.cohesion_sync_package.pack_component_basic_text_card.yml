@@ -1,0 +1,23 @@
+uuid: 897b1705-baf9-4fd2-92b0-df6619442f6c
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_basic_text_card
+label: 'Component Basic Text Card'
+description: 'A component for a basic text card block. This component only contains a WYSIWYG. Last Updated: Allie Jones 07/15/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "33ff1e67-23d9-4035-8f66-065dfa5f0196": {
+          "type": "cohesion_component",
+          "items": {
+              "33ff1e67-23d9-4035-8f66-065dfa5f0196": {
+                  "type": "cohesion_component"
+              },
+              "0f8e0e5d-0127-465e-b8d5-246a1202b85b": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

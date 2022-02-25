@@ -1,0 +1,20 @@
+uuid: 44a6dd0f-4032-4ef9-87ae-5ff558394f5d
+langcode: en
+status: true
+dependencies: {  }
+id: pack_content_template_associate_
+label: 'Content Template Associate Teaser Display'
+description: 'The content template used to render/style results when viewing an associates view. Last Updated: Allie Jones 08/04/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "f53a80b2-1b08-4944-8c59-d3145f68ddf5": {
+          "type": "cohesion_content_templates",
+          "items": {
+              "f53a80b2-1b08-4944-8c59-d3145f68ddf5": {
+                  "type": "cohesion_content_templates"
+              }
+          },
+          "checked": true
+      }
+  }

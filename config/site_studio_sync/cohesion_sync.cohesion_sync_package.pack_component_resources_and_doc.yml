@@ -1,0 +1,20 @@
+uuid: 50cd8b9a-e1fa-4e38-b6ac-13d9cce40e7d
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_resources_and_doc
+label: 'Component Resources and Documents'
+description: 'A component for Resources and documents. Last Updated: Allie Jones 07/27/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "0f7d1ef7-c3a0-47ad-a7d0-a426baa78cce": {
+          "type": "cohesion_component",
+          "items": {
+              "0f7d1ef7-c3a0-47ad-a7d0-a426baa78cce": {
+                  "type": "cohesion_component"
+              }
+          },
+          "checked": true
+      }
+  }

@@ -1,0 +1,270 @@
+uuid: 216741e3-d9f0-4299-b6a6-ee5e46997d63
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_website_settings.cohesion_color.001b44
+    - cohesion_website_settings.cohesion_color.white
+    - cohesion_website_settings.cohesion_font_stack.proxima-nova
+id: 278e3aa9
+label: 'Heading 1 size'
+json_values: |
+  {
+      "preview": {
+          "text": "<p class=\"coh-preview\">Default content for 'Heading'.<\/p>\n",
+          "textFormat": "cohesion"
+      },
+      "styles": {
+          "settings": {
+              "element": "h1",
+              "class": "",
+              "combinator": "",
+              "pseudo": ""
+          },
+          "styles": {
+              "xl": {
+                  "font-family": {
+                      "value": "$coh-font-proxima-nova"
+                  },
+                  "font-weight": {
+                      "value": "500"
+                  },
+                  "color": {
+                      "value": {
+                          "link": true,
+                          "value": {
+                              "hex": "#ffffff",
+                              "rgba": "rgba(255, 255, 255, 1)"
+                          },
+                          "name": "White",
+                          "uid": "white",
+                          "class": ".coh-color-white",
+                          "variable": "$coh-color-white",
+                          "wysiwyg": true,
+                          "inuse": true
+                      }
+                  },
+                  "font-size": {
+                      "value": "20"
+                  },
+                  "line-height": {
+                      "value": "1.1"
+                  },
+                  "text-transform": {
+                      "value": "uppercase"
+                  },
+                  "padding": {
+                      "padding-top": {
+                          "value": "10"
+                      },
+                      "padding-bottom": {
+                          "value": "10"
+                      },
+                      "padding-left": {
+                          "value": "20"
+                      },
+                      "padding-right": {
+                          "value": "0"
+                      }
+                  },
+                  "background-color": {
+                      "value": {
+                          "link": true,
+                          "value": {
+                              "hex": "#001b44",
+                              "rgba": "rgba(0, 27, 68, 1)"
+                          },
+                          "name": "#001b44",
+                          "uid": "001b44",
+                          "class": ".coh-color-001b44",
+                          "variable": "$coh-color-001b44",
+                          "inuse": true
+                      }
+                  }
+              }
+          }
+      },
+      "sBackgroundColour": "#FFFFFF",
+      "variableFields": []
+  }
+json_mapper: |
+  {
+      "styles": {
+          "title": "Heading",
+          "selectorType": "topLevel",
+          "formDefinition": [
+              {
+                  "formKey": "font",
+                  "children": [
+                      {
+                          "formKey": "font-and-color",
+                          "breakpoints": [
+                              {
+                                  "name": "xl"
+                              }
+                          ],
+                          "activeFields": [
+                              {
+                                  "name": "font-family",
+                                  "active": true
+                              },
+                              {
+                                  "name": "font-weight",
+                                  "active": true
+                              },
+                              {
+                                  "name": "color",
+                                  "active": true
+                              }
+                          ]
+                      },
+                      {
+                          "formKey": "font-sizing-and-alignment",
+                          "breakpoints": [
+                              {
+                                  "name": "xl"
+                              }
+                          ],
+                          "activeFields": [
+                              {
+                                  "name": "font-size",
+                                  "active": true
+                              },
+                              {
+                                  "name": "line-height",
+                                  "active": true
+                              },
+                              {
+                                  "name": "text-align",
+                                  "active": false
+                              },
+                              {
+                                  "name": "letter-spacing",
+                                  "active": false
+                              },
+                              {
+                                  "name": "word-spacing",
+                                  "active": false
+                              },
+                              {
+                                  "name": "text-indent",
+                                  "active": false
+                              }
+                          ]
+                      },
+                      {
+                          "formKey": "font-style-and-wrapping",
+                          "breakpoints": [
+                              {
+                                  "name": "xl"
+                              }
+                          ],
+                          "activeFields": [
+                              {
+                                  "name": "font-style",
+                                  "active": false
+                              },
+                              {
+                                  "name": "text-transform",
+                                  "active": true
+                              },
+                              {
+                                  "name": "text-decoration",
+                                  "active": false
+                              },
+                              {
+                                  "name": "word-wrap",
+                                  "active": false
+                              },
+                              {
+                                  "name": "direction",
+                                  "active": false
+                              }
+                          ]
+                      }
+                  ]
+              },
+              {
+                  "formKey": "layout",
+                  "children": [
+                      {
+                          "formKey": "padding",
+                          "breakpoints": [
+                              {
+                                  "name": "xl"
+                              }
+                          ],
+                          "activeFields": [
+                              {
+                                  "name": "padding-equal",
+                                  "active": false
+                              },
+                              {
+                                  "name": "padding-top",
+                                  "active": true
+                              },
+                              {
+                                  "name": "padding-bottom",
+                                  "active": true
+                              },
+                              {
+                                  "name": "padding-left",
+                                  "active": true
+                              },
+                              {
+                                  "name": "padding-right",
+                                  "active": true
+                              },
+                              {
+                                  "name": "padding-block-start",
+                                  "active": false
+                              },
+                              {
+                                  "name": "padding-block-end",
+                                  "active": false
+                              },
+                              {
+                                  "name": "padding-inline-start",
+                                  "active": false
+                              },
+                              {
+                                  "name": "padding-inline-end",
+                                  "active": false
+                              }
+                          ]
+                      }
+                  ]
+              },
+              {
+                  "formKey": "background",
+                  "children": [
+                      {
+                          "formKey": "background-color",
+                          "breakpoints": [
+                              {
+                                  "name": "xl"
+                              }
+                          ],
+                          "activeFields": [
+                              {
+                                  "name": "background-color",
+                                  "active": true
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "items": [],
+          "form": null
+      }
+  }
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-heading-1-size
+custom_style_type: heading
+available_in_wysiwyg: false
+parent: null
+weight: 0

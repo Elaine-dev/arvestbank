@@ -1,0 +1,23 @@
+uuid: 92e81fd7-7290-4b31-82bd-39c03a80c1f3
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_featured_content_
+label: 'Component Featured Content Card'
+description: 'Featured Content Card layout and styles. Last Updated: Aaron Parkening 6/24/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "7650a73d-b451-4287-8977-c9a0bf0e8d83": {
+          "type": "cohesion_component",
+          "items": {
+              "7650a73d-b451-4287-8977-c9a0bf0e8d83": {
+                  "type": "cohesion_component"
+              },
+              "e905326e-85d1-4c65-8b38-3ce32475248d": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

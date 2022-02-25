@@ -1,0 +1,1362 @@
+uuid: 3ff72921-c975-457f-884f-ea2082f8bcd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_custom_styles.cohesion_custom_style.3c6f2254
+    - cohesion_custom_styles.cohesion_custom_style.59942bd8
+    - cohesion_custom_styles.cohesion_custom_style.91e6820e
+    - cohesion_custom_styles.cohesion_custom_style.c5b21ed6
+    - cohesion_custom_styles.cohesion_custom_style.c6de39c1
+    - cohesion_custom_styles.cohesion_custom_style.dd984084
+    - cohesion_custom_styles.cohesion_custom_style.fa242aad
+    - cohesion_elements.cohesion_component.cpt_adjustable_two_column_layout
+    - cohesion_elements.cohesion_component.cpt_campaign_accordion_item
+    - cohesion_elements.cohesion_component.cpt_campaign_components
+    - cohesion_elements.cohesion_component.cpt_campaign_header_card
+    - cohesion_elements.cohesion_component.cpt_campaign_text_and_dropzone_c
+    - cohesion_elements.cohesion_component.cpt_campaign_text_and_table_card
+    - cohesion_elements.cohesion_component.cpt_tabs_container_horizontal_ta
+    - cohesion_elements.cohesion_component.cpt_video
+    - cohesion_elements.cohesion_helper_category.hlp_cat_campaign_page_helpers
+id: hlp_multipage
+label: Multi-Page
+json_values: |
+  {
+      "canvas": [
+          {
+              "uid": "cpt_tabs_container_horizontal_ta",
+              "type": "component",
+              "title": "Campaign Accordion Tabs Container",
+              "enabled": true,
+              "category": "category-4",
+              "componentId": "cpt_tabs_container_horizontal_ta",
+              "componentType": "container",
+              "uuid": "71809320-5aea-491c-ae66-fdf802916ccb",
+              "parentUid": "root",
+              "status": {
+                  "collapsed": false
+              },
+              "children": [
+                  {
+                      "type": "container",
+                      "uid": "component-drop-zone",
+                      "mimicParent": true,
+                      "parentUid": "cpt_tabs_container_horizontal_ta",
+                      "title": "Component drop zone",
+                      "selected": false,
+                      "status": {
+                          "collapsed": false,
+                          "disabled": false
+                      },
+                      "uuid": "b0501fbc-4e48-47f1-86b6-fc738c1f85d1",
+                      "dropzoneId": "774ab3e9-e3c6-491c-b932-854c52976d94",
+                      "children": [
+                          {
+                              "uid": "cpt_campaign_accordion_item",
+                              "type": "component",
+                              "title": "Campaign Accordion item",
+                              "enabled": true,
+                              "category": "category-4",
+                              "componentId": "cpt_campaign_accordion_item",
+                              "componentType": "accordion-tabs-item",
+                              "uuid": "288b5d36-e236-4c7a-9ab2-f0fc3ab593a3",
+                              "parentUid": "component-drop-zone",
+                              "status": {
+                                  "collapsed": true
+                              },
+                              "children": [
+                                  {
+                                      "type": "container",
+                                      "uid": "component-drop-zone",
+                                      "mimicParent": true,
+                                      "parentUid": "cpt_campaign_accordion_item",
+                                      "title": "Component drop zone",
+                                      "selected": false,
+                                      "status": {
+                                          "collapsed": false,
+                                          "disabled": false,
+                                          "collapsedParents": [
+                                              "288b5d36-e236-4c7a-9ab2-f0fc3ab593a3"
+                                          ]
+                                      },
+                                      "uuid": "5f20525e-6af0-4478-a6d1-508564db09ee",
+                                      "dropzoneId": "8413e7b2-da2b-42f3-9d12-638943245a14",
+                                      "children": [
+                                          {
+                                              "uid": "cpt_campaign_header_card",
+                                              "type": "component",
+                                              "title": "Campaign Header Card",
+                                              "enabled": true,
+                                              "category": "category-4",
+                                              "componentId": "cpt_campaign_header_card",
+                                              "componentType": "container",
+                                              "uuid": "d32eb3dc-1c14-403a-8792-efa086ff3699",
+                                              "parentUid": "component-drop-zone",
+                                              "status": {
+                                                  "collapsedParents": [
+                                                      "288b5d36-e236-4c7a-9ab2-f0fc3ab593a3"
+                                                  ]
+                                              },
+                                              "children": []
+                                          },
+                                          {
+                                              "uid": "cpt_adjustable_two_column_layout",
+                                              "type": "component",
+                                              "title": "Adjustable Two Column Layout",
+                                              "enabled": true,
+                                              "category": "category-1",
+                                              "componentId": "cpt_adjustable_two_column_layout",
+                                              "componentType": "row-for-columns",
+                                              "uuid": "8320baa6-fad6-47bc-8b0e-b083dc1da20c",
+                                              "parentUid": "component-drop-zone",
+                                              "status": {
+                                                  "collapsed": false,
+                                                  "collapsedParents": [
+                                                      "288b5d36-e236-4c7a-9ab2-f0fc3ab593a3"
+                                                  ]
+                                              },
+                                              "children": [
+                                                  {
+                                                      "type": "container",
+                                                      "uid": "component-drop-zone",
+                                                      "mimicParent": true,
+                                                      "parentUid": "cpt_adjustable_two_column_layout",
+                                                      "title": "Component drop zone",
+                                                      "selected": false,
+                                                      "status": {
+                                                          "collapsed": false,
+                                                          "disabled": false,
+                                                          "collapsedParents": [
+                                                              "288b5d36-e236-4c7a-9ab2-f0fc3ab593a3"
+                                                          ]
+                                                      },
+                                                      "uuid": "5d928512-91ed-4c0f-a9c9-a2470e5e92a4",
+                                                      "dropzoneId": "eda5a03c-fe3f-4039-bd24-19de468bb13e",
+                                                      "children": [
+                                                          {
+                                                              "uid": "cpt_campaign_components",
+                                                              "type": "component",
+                                                              "title": "Campaign Icon and Text Card",
+                                                              "enabled": true,
+                                                              "category": "category-4",
+                                                              "componentId": "cpt_campaign_components",
+                                                              "componentType": "container",
+                                                              "uuid": "58e6b41e-82ed-4361-b67e-47b7c5bf5a13",
+                                                              "parentUid": "component-drop-zone",
+                                                              "status": {
+                                                                  "collapsedParents": [
+                                                                      "288b5d36-e236-4c7a-9ab2-f0fc3ab593a3"
+                                                                  ]
+                                                              },
+                                                              "children": []
+                                                          }
+                                                      ]
+                                                  },
+                                                  {
+                                                      "type": "container",
+                                                      "uid": "component-drop-zone",
+                                                      "mimicParent": true,
+                                                      "parentUid": "cpt_adjustable_two_column_layout",
+                                                      "title": "Component drop zone",
+                                                      "selected": false,
+                                                      "status": {
+                                                          "collapsed": false,
+                                                          "disabled": false,
+                                                          "collapsedParents": [
+                                                              "288b5d36-e236-4c7a-9ab2-f0fc3ab593a3"
+                                                          ]
+                                                      },
+                                                      "uuid": "408c4b03-9c48-41f1-9eeb-d9662a2325a5",
+                                                      "dropzoneId": "40928edf-f27e-4e25-bc06-2a0d25b4aff1",
+                                                      "children": [
+                                                          {
+                                                              "uid": "cpt_campaign_components",
+                                                              "type": "component",
+                                                              "title": "Campaign Icon and Text Card",
+                                                              "enabled": true,
+                                                              "category": "category-4",
+                                                              "componentId": "cpt_campaign_components",
+                                                              "componentType": "container",
+                                                              "uuid": "0b49f534-b3c2-4401-95d1-db35755593e8",
+                                                              "parentUid": "component-drop-zone",
+                                                              "status": {
+                                                                  "collapsedParents": [
+                                                                      "288b5d36-e236-4c7a-9ab2-f0fc3ab593a3"
+                                                                  ]
+                                                              },
+                                                              "children": []
+                                                          }
+                                                      ]
+                                                  }
+                                              ]
+                                          },
+                                          {
+                                              "uid": "cpt_campaign_components",
+                                              "type": "component",
+                                              "title": "Campaign Icon and Text Card",
+                                              "enabled": true,
+                                              "category": "category-4",
+                                              "componentId": "cpt_campaign_components",
+                                              "componentType": "container",
+                                              "uuid": "9c47e2ef-18cc-4bec-8828-11814e994ff3",
+                                              "parentUid": "component-drop-zone",
+                                              "status": {
+                                                  "collapsedParents": [
+                                                      "288b5d36-e236-4c7a-9ab2-f0fc3ab593a3"
+                                                  ]
+                                              },
+                                              "children": []
+                                          },
+                                          {
+                                              "uid": "cpt_adjustable_two_column_layout",
+                                              "type": "component",
+                                              "title": "Adjustable Two Column Layout",
+                                              "enabled": true,
+                                              "category": "category-1",
+                                              "componentId": "cpt_adjustable_two_column_layout",
+                                              "componentType": "row-for-columns",
+                                              "uuid": "404ded09-f4e0-45a6-985f-6f3aafc201a6",
+                                              "parentUid": "component-drop-zone",
+                                              "status": {
+                                                  "collapsed": true,
+                                                  "collapsedParents": [
+                                                      "288b5d36-e236-4c7a-9ab2-f0fc3ab593a3"
+                                                  ]
+                                              },
+                                              "children": [
+                                                  {
+                                                      "type": "container",
+                                                      "uid": "component-drop-zone",
+                                                      "mimicParent": true,
+                                                      "parentUid": "cpt_adjustable_two_column_layout",
+                                                      "title": "Component drop zone",
+                                                      "selected": false,
+                                                      "status": {
+                                                          "collapsed": false,
+                                                          "disabled": false,
+                                                          "collapsedParents": [
+                                                              "288b5d36-e236-4c7a-9ab2-f0fc3ab593a3"
+                                                          ]
+                                                      },
+                                                      "uuid": "9193faf4-924b-4a4f-891c-70be749ff380",
+                                                      "dropzoneId": "eda5a03c-fe3f-4039-bd24-19de468bb13e",
+                                                      "children": [
+                                                          {
+                                                              "uid": "cpt_campaign_components",
+                                                              "type": "component",
+                                                              "title": "Campaign Icon and Text Card",
+                                                              "enabled": true,
+                                                              "category": "category-4",
+                                                              "componentId": "cpt_campaign_components",
+                                                              "componentType": "container",
+                                                              "uuid": "f6bf643c-9449-4f5f-bc75-f4371a9c6f16",
+                                                              "parentUid": "component-drop-zone",
+                                                              "status": {
+                                                                  "collapsedParents": [
+                                                                      "288b5d36-e236-4c7a-9ab2-f0fc3ab593a3"
+                                                                  ]
+                                                              },
+                                                              "children": []
+                                                          }
+                                                      ]
+                                                  },
+                                                  {
+                                                      "type": "container",
+                                                      "uid": "component-drop-zone",
+                                                      "mimicParent": true,
+                                                      "parentUid": "cpt_adjustable_two_column_layout",
+                                                      "title": "Component drop zone",
+                                                      "selected": false,
+                                                      "status": {
+                                                          "collapsed": false,
+                                                          "disabled": false,
+                                                          "collapsedParents": [
+                                                              "288b5d36-e236-4c7a-9ab2-f0fc3ab593a3"
+                                                          ]
+                                                      },
+                                                      "uuid": "516070b7-b1d8-4e98-a294-7cbaf61cb271",
+                                                      "dropzoneId": "40928edf-f27e-4e25-bc06-2a0d25b4aff1",
+                                                      "children": [
+                                                          {
+                                                              "uid": "cpt_campaign_components",
+                                                              "type": "component",
+                                                              "title": "Campaign Icon and Text Card",
+                                                              "enabled": true,
+                                                              "category": "category-4",
+                                                              "componentId": "cpt_campaign_components",
+                                                              "componentType": "container",
+                                                              "uuid": "551f06c9-ce7d-4226-b255-68efb462cdf4",
+                                                              "parentUid": "component-drop-zone",
+                                                              "status": {
+                                                                  "collapsedParents": [
+                                                                      "288b5d36-e236-4c7a-9ab2-f0fc3ab593a3"
+                                                                  ]
+                                                              },
+                                                              "children": []
+                                                          }
+                                                      ]
+                                                  }
+                                              ]
+                                          }
+                                      ]
+                                  }
+                              ]
+                          },
+                          {
+                              "uid": "cpt_campaign_accordion_item",
+                              "type": "component",
+                              "title": "Campaign Accordion item",
+                              "enabled": true,
+                              "category": "category-4",
+                              "componentId": "cpt_campaign_accordion_item",
+                              "componentType": "accordion-tabs-item",
+                              "uuid": "229ecd12-ea16-40c0-b6f3-d81c63816e4e",
+                              "parentUid": "component-drop-zone",
+                              "status": {
+                                  "collapsed": true
+                              },
+                              "children": [
+                                  {
+                                      "type": "container",
+                                      "uid": "component-drop-zone",
+                                      "mimicParent": true,
+                                      "parentUid": "cpt_campaign_accordion_item",
+                                      "title": "Component drop zone",
+                                      "selected": false,
+                                      "status": {
+                                          "collapsed": false,
+                                          "disabled": false,
+                                          "collapsedParents": [
+                                              "229ecd12-ea16-40c0-b6f3-d81c63816e4e"
+                                          ]
+                                      },
+                                      "uuid": "ca1a81c7-0d2d-462a-8849-64e9693dcdc7",
+                                      "dropzoneId": "8413e7b2-da2b-42f3-9d12-638943245a14",
+                                      "children": [
+                                          {
+                                              "uid": "cpt_campaign_header_card",
+                                              "type": "component",
+                                              "title": "Campaign Header Card",
+                                              "enabled": true,
+                                              "category": "category-4",
+                                              "componentId": "cpt_campaign_header_card",
+                                              "componentType": "container",
+                                              "uuid": "aa661673-c35c-49be-a471-749c1214238c",
+                                              "parentUid": "component-drop-zone",
+                                              "status": {
+                                                  "collapsedParents": [
+                                                      "229ecd12-ea16-40c0-b6f3-d81c63816e4e"
+                                                  ]
+                                              },
+                                              "children": []
+                                          },
+                                          {
+                                              "uid": "cpt_campaign_text_and_table_card",
+                                              "type": "component",
+                                              "title": "Campaign Text and Table Card",
+                                              "enabled": true,
+                                              "category": "category-4",
+                                              "componentId": "cpt_campaign_text_and_table_card",
+                                              "componentType": "container",
+                                              "uuid": "8ef09da8-3a98-4a8f-b94d-0003ab15a932",
+                                              "parentUid": "component-drop-zone",
+                                              "status": {
+                                                  "collapsedParents": [
+                                                      "229ecd12-ea16-40c0-b6f3-d81c63816e4e"
+                                                  ]
+                                              },
+                                              "children": []
+                                          }
+                                      ]
+                                  }
+                              ]
+                          },
+                          {
+                              "uid": "cpt_campaign_accordion_item",
+                              "type": "component",
+                              "title": "Campaign Accordion item",
+                              "enabled": true,
+                              "category": "category-4",
+                              "componentId": "cpt_campaign_accordion_item",
+                              "componentType": "accordion-tabs-item",
+                              "uuid": "31f57d58-b60d-4297-ae27-04cdfe22cb0b",
+                              "parentUid": "component-drop-zone",
+                              "status": {
+                                  "collapsed": true
+                              },
+                              "children": [
+                                  {
+                                      "type": "container",
+                                      "uid": "component-drop-zone",
+                                      "mimicParent": true,
+                                      "parentUid": "cpt_campaign_accordion_item",
+                                      "title": "Component drop zone",
+                                      "selected": false,
+                                      "status": {
+                                          "collapsed": false,
+                                          "disabled": false,
+                                          "collapsedParents": [
+                                              "31f57d58-b60d-4297-ae27-04cdfe22cb0b"
+                                          ]
+                                      },
+                                      "uuid": "865167b3-f6ad-4918-b5e0-9880ec8bfd3b",
+                                      "dropzoneId": "8413e7b2-da2b-42f3-9d12-638943245a14",
+                                      "children": [
+                                          {
+                                              "uid": "cpt_campaign_header_card",
+                                              "type": "component",
+                                              "title": "Campaign Header Card",
+                                              "enabled": true,
+                                              "category": "category-4",
+                                              "componentId": "cpt_campaign_header_card",
+                                              "componentType": "container",
+                                              "uuid": "1b00ec2f-ecd6-4d83-8594-338e4e644379",
+                                              "parentUid": "component-drop-zone",
+                                              "status": {
+                                                  "collapsedParents": [
+                                                      "31f57d58-b60d-4297-ae27-04cdfe22cb0b"
+                                                  ]
+                                              },
+                                              "children": []
+                                          },
+                                          {
+                                              "uid": "cpt_campaign_components",
+                                              "type": "component",
+                                              "title": "Campaign Icon and Text Card",
+                                              "enabled": true,
+                                              "category": "category-4",
+                                              "componentId": "cpt_campaign_components",
+                                              "componentType": "container",
+                                              "uuid": "d0c0518d-6b80-4845-8606-10372deb1437",
+                                              "parentUid": "component-drop-zone",
+                                              "status": {
+                                                  "collapsedParents": [
+                                                      "31f57d58-b60d-4297-ae27-04cdfe22cb0b"
+                                                  ]
+                                              },
+                                              "children": []
+                                          },
+                                          {
+                                              "uid": "cpt_campaign_components",
+                                              "type": "component",
+                                              "title": "Campaign Icon and Text Card",
+                                              "enabled": true,
+                                              "category": "category-4",
+                                              "componentId": "cpt_campaign_components",
+                                              "componentType": "container",
+                                              "uuid": "fc2795e8-8733-48cc-add0-1064dddef27e",
+                                              "parentUid": "component-drop-zone",
+                                              "status": {
+                                                  "collapsedParents": [
+                                                      "31f57d58-b60d-4297-ae27-04cdfe22cb0b"
+                                                  ]
+                                              },
+                                              "children": []
+                                          },
+                                          {
+                                              "uid": "cpt_adjustable_two_column_layout",
+                                              "type": "component",
+                                              "title": "Adjustable Two Column Layout",
+                                              "enabled": true,
+                                              "category": "category-1",
+                                              "componentId": "cpt_adjustable_two_column_layout",
+                                              "componentType": "row-for-columns",
+                                              "uuid": "c748d74e-90c2-486c-a2a4-9f510452ded7",
+                                              "parentUid": "component-drop-zone",
+                                              "status": {
+                                                  "collapsed": false,
+                                                  "collapsedParents": [
+                                                      "31f57d58-b60d-4297-ae27-04cdfe22cb0b"
+                                                  ]
+                                              },
+                                              "children": [
+                                                  {
+                                                      "type": "container",
+                                                      "uid": "component-drop-zone",
+                                                      "mimicParent": true,
+                                                      "parentUid": "cpt_adjustable_two_column_layout",
+                                                      "title": "Component drop zone",
+                                                      "selected": false,
+                                                      "status": {
+                                                          "collapsed": false,
+                                                          "disabled": false,
+                                                          "collapsedParents": [
+                                                              "31f57d58-b60d-4297-ae27-04cdfe22cb0b"
+                                                          ]
+                                                      },
+                                                      "uuid": "49abcd65-d9cf-4219-99ef-05a56c8adadb",
+                                                      "dropzoneId": "eda5a03c-fe3f-4039-bd24-19de468bb13e",
+                                                      "children": [
+                                                          {
+                                                              "uid": "cpt_campaign_components",
+                                                              "type": "component",
+                                                              "title": "Campaign Icon and Text Card",
+                                                              "enabled": true,
+                                                              "category": "category-4",
+                                                              "componentId": "cpt_campaign_components",
+                                                              "componentType": "container",
+                                                              "uuid": "f0db9444-fb88-4019-989b-f5b4175606b0",
+                                                              "parentUid": "component-drop-zone",
+                                                              "status": {
+                                                                  "collapsedParents": [
+                                                                      "31f57d58-b60d-4297-ae27-04cdfe22cb0b"
+                                                                  ]
+                                                              },
+                                                              "children": []
+                                                          }
+                                                      ]
+                                                  },
+                                                  {
+                                                      "type": "container",
+                                                      "uid": "component-drop-zone",
+                                                      "mimicParent": true,
+                                                      "parentUid": "cpt_adjustable_two_column_layout",
+                                                      "title": "Component drop zone",
+                                                      "selected": false,
+                                                      "status": {
+                                                          "collapsed": false,
+                                                          "disabled": false,
+                                                          "collapsedParents": [
+                                                              "31f57d58-b60d-4297-ae27-04cdfe22cb0b"
+                                                          ]
+                                                      },
+                                                      "uuid": "20f88cba-9a8b-473e-9d21-fd278cf0caf8",
+                                                      "dropzoneId": "40928edf-f27e-4e25-bc06-2a0d25b4aff1",
+                                                      "children": [
+                                                          {
+                                                              "uid": "cpt_campaign_components",
+                                                              "type": "component",
+                                                              "title": "Campaign Icon and Text Card",
+                                                              "enabled": true,
+                                                              "category": "category-4",
+                                                              "componentId": "cpt_campaign_components",
+                                                              "componentType": "container",
+                                                              "uuid": "e7e6d1d9-3b10-4e38-8835-fc9bab3fcdbf",
+                                                              "parentUid": "component-drop-zone",
+                                                              "status": {
+                                                                  "collapsedParents": [
+                                                                      "31f57d58-b60d-4297-ae27-04cdfe22cb0b"
+                                                                  ]
+                                                              },
+                                                              "children": []
+                                                          }
+                                                      ]
+                                                  }
+                                              ]
+                                          }
+                                      ]
+                                  }
+                              ]
+                          },
+                          {
+                              "uid": "cpt_campaign_accordion_item",
+                              "type": "component",
+                              "title": "Campaign Accordion item",
+                              "enabled": true,
+                              "category": "category-4",
+                              "componentId": "cpt_campaign_accordion_item",
+                              "componentType": "accordion-tabs-item",
+                              "uuid": "91918584-0f1e-44a9-b7dc-7ea53b46c0aa",
+                              "parentUid": "component-drop-zone",
+                              "status": {
+                                  "collapsed": false
+                              },
+                              "children": [
+                                  {
+                                      "type": "container",
+                                      "uid": "component-drop-zone",
+                                      "mimicParent": true,
+                                      "parentUid": "cpt_campaign_accordion_item",
+                                      "title": "Component drop zone",
+                                      "selected": false,
+                                      "status": {
+                                          "collapsed": false,
+                                          "disabled": false,
+                                          "collapsedParents": []
+                                      },
+                                      "uuid": "b70f07da-782b-494f-93ef-2d01c9dd1a8d",
+                                      "dropzoneId": "8413e7b2-da2b-42f3-9d12-638943245a14",
+                                      "children": [
+                                          {
+                                              "uid": "cpt_campaign_header_card",
+                                              "type": "component",
+                                              "title": "Campaign Header Card",
+                                              "enabled": true,
+                                              "category": "category-4",
+                                              "componentId": "cpt_campaign_header_card",
+                                              "componentType": "container",
+                                              "uuid": "95877076-6a5d-4456-b2aa-ec017ef9d2ed",
+                                              "parentUid": "component-drop-zone",
+                                              "status": {
+                                                  "collapsedParents": []
+                                              },
+                                              "children": []
+                                          },
+                                          {
+                                              "uid": "cpt_campaign_components",
+                                              "type": "component",
+                                              "title": "Campaign Icon and Text Card",
+                                              "enabled": true,
+                                              "category": "category-4",
+                                              "componentId": "cpt_campaign_components",
+                                              "componentType": "container",
+                                              "uuid": "4e1e3f6c-f922-4336-bfe7-c3e3968dc736",
+                                              "parentUid": "component-drop-zone",
+                                              "status": {
+                                                  "collapsedParents": []
+                                              },
+                                              "children": []
+                                          },
+                                          {
+                                              "uid": "cpt_adjustable_two_column_layout",
+                                              "type": "component",
+                                              "title": "Adjustable Two Column Layout",
+                                              "enabled": true,
+                                              "category": "category-1",
+                                              "componentId": "cpt_adjustable_two_column_layout",
+                                              "componentType": "row-for-columns",
+                                              "uuid": "10d80c55-f9f9-4f1e-97ce-9bfd7d6a8aa5",
+                                              "parentUid": "component-drop-zone",
+                                              "status": {
+                                                  "collapsed": false,
+                                                  "collapsedParents": []
+                                              },
+                                              "children": [
+                                                  {
+                                                      "type": "container",
+                                                      "uid": "component-drop-zone",
+                                                      "mimicParent": true,
+                                                      "parentUid": "cpt_adjustable_two_column_layout",
+                                                      "title": "Component drop zone",
+                                                      "selected": false,
+                                                      "status": {
+                                                          "collapsed": false,
+                                                          "disabled": false,
+                                                          "collapsedParents": []
+                                                      },
+                                                      "uuid": "4a10e9f6-267d-4f06-a1ea-1fc7616417ae",
+                                                      "dropzoneId": "eda5a03c-fe3f-4039-bd24-19de468bb13e",
+                                                      "children": [
+                                                          {
+                                                              "uid": "cpt_campaign_text_and_dropzone_c",
+                                                              "type": "component",
+                                                              "title": "Campaign Text and Dropzone Card",
+                                                              "enabled": true,
+                                                              "category": "category-4",
+                                                              "componentId": "cpt_campaign_text_and_dropzone_c",
+                                                              "componentType": "container",
+                                                              "uuid": "954043b5-ec77-42f2-a16d-2c845112b7a7",
+                                                              "parentUid": "component-drop-zone",
+                                                              "status": {
+                                                                  "collapsed": false,
+                                                                  "collapsedParents": []
+                                                              },
+                                                              "children": [
+                                                                  {
+                                                                      "type": "container",
+                                                                      "uid": "component-drop-zone",
+                                                                      "mimicParent": true,
+                                                                      "parentUid": "cpt_campaign_text_and_dropzone_c",
+                                                                      "title": "Component drop zone",
+                                                                      "selected": false,
+                                                                      "status": {
+                                                                          "collapsed": false,
+                                                                          "disabled": false,
+                                                                          "collapsedParents": []
+                                                                      },
+                                                                      "uuid": "5013028b-4f3f-4c88-ace3-c79fa37b3e6a",
+                                                                      "dropzoneId": "6f60e289-4cf7-47d9-8d5c-1b05fbb65d99",
+                                                                      "children": [
+                                                                          {
+                                                                              "uid": "cpt_adjustable_two_column_layout",
+                                                                              "type": "component",
+                                                                              "title": "Adjustable Two Column Layout",
+                                                                              "enabled": true,
+                                                                              "category": "category-1",
+                                                                              "componentId": "cpt_adjustable_two_column_layout",
+                                                                              "componentType": "row-for-columns",
+                                                                              "uuid": "ec331f9a-e489-4816-a21b-2255da52fbc7",
+                                                                              "parentUid": "component-drop-zone",
+                                                                              "status": {
+                                                                                  "collapsed": false,
+                                                                                  "collapsedParents": []
+                                                                              },
+                                                                              "children": [
+                                                                                  {
+                                                                                      "type": "container",
+                                                                                      "uid": "component-drop-zone",
+                                                                                      "mimicParent": true,
+                                                                                      "parentUid": "cpt_adjustable_two_column_layout",
+                                                                                      "title": "Component drop zone",
+                                                                                      "selected": false,
+                                                                                      "status": {
+                                                                                          "collapsed": false,
+                                                                                          "disabled": false,
+                                                                                          "collapsedParents": []
+                                                                                      },
+                                                                                      "uuid": "ee720b55-c0fc-451b-bd1f-afdfe33678cc",
+                                                                                      "dropzoneId": "eda5a03c-fe3f-4039-bd24-19de468bb13e",
+                                                                                      "children": [
+                                                                                          {
+                                                                                              "uid": "cpt_video",
+                                                                                              "type": "component",
+                                                                                              "title": "Video",
+                                                                                              "enabled": true,
+                                                                                              "category": "category-7",
+                                                                                              "componentId": "cpt_video",
+                                                                                              "componentType": "container",
+                                                                                              "uuid": "89b26b3b-5dd9-44bf-904d-afd133430a97",
+                                                                                              "parentUid": "component-drop-zone",
+                                                                                              "status": {
+                                                                                                  "collapsedParents": []
+                                                                                              },
+                                                                                              "children": []
+                                                                                          }
+                                                                                      ]
+                                                                                  },
+                                                                                  {
+                                                                                      "type": "container",
+                                                                                      "uid": "component-drop-zone",
+                                                                                      "mimicParent": true,
+                                                                                      "parentUid": "cpt_adjustable_two_column_layout",
+                                                                                      "title": "Component drop zone",
+                                                                                      "selected": false,
+                                                                                      "status": {
+                                                                                          "collapsed": false,
+                                                                                          "disabled": false,
+                                                                                          "collapsedParents": []
+                                                                                      },
+                                                                                      "uuid": "ff404966-f4d6-4ac1-86fc-602b8a5c2429",
+                                                                                      "dropzoneId": "40928edf-f27e-4e25-bc06-2a0d25b4aff1",
+                                                                                      "children": [
+                                                                                          {
+                                                                                              "uid": "cpt_video",
+                                                                                              "type": "component",
+                                                                                              "title": "Video",
+                                                                                              "enabled": true,
+                                                                                              "category": "category-7",
+                                                                                              "componentId": "cpt_video",
+                                                                                              "componentType": "container",
+                                                                                              "uuid": "d27b255d-4008-4279-8fac-2cd4cf8d6436",
+                                                                                              "parentUid": "component-drop-zone",
+                                                                                              "status": {
+                                                                                                  "collapsedParents": []
+                                                                                              },
+                                                                                              "children": []
+                                                                                          }
+                                                                                      ]
+                                                                                  }
+                                                                              ]
+                                                                          }
+                                                                      ]
+                                                                  }
+                                                              ]
+                                                          }
+                                                      ]
+                                                  },
+                                                  {
+                                                      "type": "container",
+                                                      "uid": "component-drop-zone",
+                                                      "mimicParent": true,
+                                                      "parentUid": "cpt_adjustable_two_column_layout",
+                                                      "title": "Component drop zone",
+                                                      "selected": false,
+                                                      "status": {
+                                                          "collapsed": false,
+                                                          "disabled": false,
+                                                          "collapsedParents": []
+                                                      },
+                                                      "uuid": "fca51829-e12d-40fe-9f7c-43a24ebefa28",
+                                                      "dropzoneId": "40928edf-f27e-4e25-bc06-2a0d25b4aff1",
+                                                      "children": [
+                                                          {
+                                                              "uid": "cpt_campaign_components",
+                                                              "type": "component",
+                                                              "title": "Campaign Icon and Text Card",
+                                                              "enabled": true,
+                                                              "category": "category-4",
+                                                              "componentId": "cpt_campaign_components",
+                                                              "componentType": "container",
+                                                              "uuid": "778e6c77-af3f-4fba-93ad-2935b61ecc2a",
+                                                              "parentUid": "component-drop-zone",
+                                                              "status": {
+                                                                  "collapsedParents": []
+                                                              },
+                                                              "children": []
+                                                          }
+                                                      ]
+                                                  }
+                                              ]
+                                          }
+                                      ]
+                                  }
+                              ]
+                          }
+                      ]
+                  }
+              ]
+          }
+      ],
+      "mapper": {},
+      "model": {
+          "71809320-5aea-491c-ae66-fdf802916ccb": {
+              "8e3cea79-2f6a-4a04-8314-9d36e4fa5a31": "coh-accordion-tabs-horizontal-justify",
+              "82c0c7eb-5244-4b91-ac15-a90688de4f9f": "coh-style-accordion-tabs-solid"
+          },
+          "b0501fbc-4e48-47f1-86b6-fc738c1f85d1": {
+              "settings": {
+                  "dropzoneHideSelector": "",
+                  "title": "Drop 'Tab item' components here."
+              }
+          },
+          "288b5d36-e236-4c7a-9ab2-f0fc3ab593a3": {
+              "settings": {
+                  "title": "Campaign Accordion item - Home"
+              },
+              "45737439-0721-49fd-8006-90701912e04f": "Home"
+          },
+          "5f20525e-6af0-4478-a6d1-508564db09ee": {
+              "settings": {
+                  "dropzoneHideSelector": "",
+                  "title": "Content drop zone"
+              }
+          },
+          "d32eb3dc-1c14-403a-8792-efa086ff3699": {
+              "settings": {
+                  "title": "Campaign Header Card - Make the Jump"
+              },
+              "ca12f516-0541-4263-8dd9-8464769a226c": {
+                  "entity": {
+                      "entityId": "38d0c1c4-e662-4735-a047-a22c55953a35",
+                      "entityUUID": "38d0c1c4-e662-4735-a047-a22c55953a35",
+                      "entityType": "media"
+                  }
+              },
+              "8b41f1c7-8cb1-4372-b3a7-a4ed9d0d538b": {
+                  "text": "<h1><span class=\"coh-style-font-medium\">MAKE THE <\/span><strong><span class=\"coh-style-font-large\">JUMP<br \/>\nEARN UP TO $150<\/span><\/strong><br \/>\n<span class=\"coh-style-font-small\">OFFER ENDS JULY 9, 2021<\/span><\/h1>\n\n<p>&nbsp;<\/p>\n\n<p><a class=\"coh-style-link-arrow-button\" href=\"\/get150\/account-chooser\">Get Started Today<\/a><\/p>\n",
+                  "textFormat": "cohesion"
+              }
+          },
+          "8320baa6-fad6-47bc-8b0e-b083dc1da20c": {
+              "settings": {
+                  "title": "Adjustable Two Column Layout"
+              },
+              "7a3de526-046d-4851-991f-0771a619f822": "8"
+          },
+          "5d928512-91ed-4c0f-a9c9-a2470e5e92a4": {
+              "settings": {
+                  "title": "Column 1 drop zone",
+                  "dropzoneHideSelector": ""
+              }
+          },
+          "58e6b41e-82ed-4361-b67e-47b7c5bf5a13": {
+              "settings": {
+                  "title": "Make the Jump Today"
+              },
+              "e2e389b2-5c09-43a1-9063-c156b94320db": {
+                  "entity": {
+                      "entityUUID": "21a874d8-ac46-46dd-a3cf-783e17763383",
+                      "entityId": "21a874d8-ac46-46dd-a3cf-783e17763383",
+                      "entityType": "media"
+                  }
+              },
+              "f0bb808b-dc36-4dfd-a7da-ff2272214c51": "Make the Jump Today & Start Earning Up To $150",
+              "42c67b18-1610-47eb-b102-29cc1cde918f": {
+                  "text": "<p>Whether you're looking for smart, simple and flexible&nbsp;<a href=\"\/get150\/account-chooser\">account options<\/a>; banking that's easy and convenient; or a friendly face that puts you and your&nbsp;<a href=\"\/get150\/community\">community first<\/a>, there is something for everyone at Arvest Bank!<\/p>\n\n<p>We're convinced that you'll enjoy being an Arvest customer\u2014that's why we selected you to be part of our <strong>exclusive Get 150 program<\/strong>.<\/p>\n",
+                  "textFormat": "cohesion"
+              },
+              "1187eb1c-e1d5-40ab-89b9-da28f1d1a100": {
+                  "entity_type": "media",
+                  "view_mode": "thumbnail_overlay"
+              }
+          },
+          "408c4b03-9c48-41f1-9eeb-d9662a2325a5": {
+              "settings": {
+                  "title": "Column 2 drop zone",
+                  "dropzoneHideSelector": ""
+              }
+          },
+          "0b49f534-b3c2-4401-95d1-db35755593e8": {
+              "settings": {
+                  "title": "How to Apply"
+              },
+              "e2e389b2-5c09-43a1-9063-c156b94320db": {
+                  "entity": {
+                      "entityUUID": "974d1b4f-d723-4ac4-b96d-5f53922e8dca",
+                      "entityId": "974d1b4f-d723-4ac4-b96d-5f53922e8dca",
+                      "entityType": "media"
+                  }
+              },
+              "f0bb808b-dc36-4dfd-a7da-ff2272214c51": "How to Apply",
+              "42c67b18-1610-47eb-b102-29cc1cde918f": {
+                  "text": "<div>\n<p>You can apply for a new Arvest checking account whichever way is most convenient for you.<\/p>\n\n<ul>\n\t<li><a href=\"\/get150\/account-chooser\">Apply Online<\/a><\/li>\n\t<li>Call us at (844) 740-6011<\/li>\n\t<li><a href=\"https:\/\/appointments.arvest.com\/service\">Schedule an appointment<\/a> with a banker<\/li>\n\t<li>Visit a <a href=\"https:\/\/www.arvest.com\/branch-locator\" target=\"_blank\">local Arvest Bank<\/a> branch<\/li>\n<\/ul>\n<\/div>\n",
+                  "textFormat": "cohesion"
+              },
+              "1187eb1c-e1d5-40ab-89b9-da28f1d1a100": {
+                  "entity_type": "media",
+                  "view_mode": "thumbnail_overlay"
+              }
+          },
+          "9c47e2ef-18cc-4bec-8828-11814e994ff3": {
+              "settings": {
+                  "title": "How to Earn"
+              },
+              "e2e389b2-5c09-43a1-9063-c156b94320db": {
+                  "entity": {
+                      "entityUUID": "81a0fce8-2861-4e0c-8eb3-ef664dd81c38",
+                      "entityId": "81a0fce8-2861-4e0c-8eb3-ef664dd81c38",
+                      "entityType": "media"
+                  }
+              },
+              "f0bb808b-dc36-4dfd-a7da-ff2272214c51": "How to Earn",
+              "42c67b18-1610-47eb-b102-29cc1cde918f": {
+                  "text": "<p>Once your account is opened, you will be eligible to earn up to&nbsp;<b>three $50 bonuses<\/b>. Simply complete these steps during each statement cycle:<\/p>\n\n<ul>\n\t<li>Open a personal checking account with a minimum $50 deposit; AND<\/li>\n\t<li>Set up a qualifying direct deposit OR automatic payment OR recurring debit card transaction on your account; AND<\/li>\n\t<li>Make eight (8) purchases with your debit card<\/li>\n<\/ul>\n\n<p>Each $50 bonus will be credited to your new personal checking account if all requirements are met by the end of your monthly statement cycle. To make it even easier, you have up to six statement cycles to earn the full $150.<\/p>\n\n<p>You must open your new account by&nbsp;<strong>July 9, 2021<\/strong>&nbsp;to be eligible for this exclusive offer.<\/p>\n",
+                  "textFormat": "cohesion"
+              },
+              "1187eb1c-e1d5-40ab-89b9-da28f1d1a100": {
+                  "entity_type": "media",
+                  "view_mode": "thumbnail_overlay"
+              }
+          },
+          "404ded09-f4e0-45a6-985f-6f3aafc201a6": {
+              "settings": {
+                  "title": "Adjustable Two Column Layout"
+              },
+              "7a3de526-046d-4851-991f-0771a619f822": "4"
+          },
+          "9193faf4-924b-4a4f-891c-70be749ff380": {
+              "settings": {
+                  "title": "Column 1 drop zone",
+                  "dropzoneHideSelector": ""
+              }
+          },
+          "f6bf643c-9449-4f5f-bc75-f4371a9c6f16": {
+              "settings": {
+                  "title": "A Switch That's Easy"
+              },
+              "e2e389b2-5c09-43a1-9063-c156b94320db": {
+                  "entity": {
+                      "entityUUID": "869d9f96-8199-440b-b58a-36ab5ca8727a",
+                      "entityId": "869d9f96-8199-440b-b58a-36ab5ca8727a",
+                      "entityType": "media"
+                  }
+              },
+              "f0bb808b-dc36-4dfd-a7da-ff2272214c51": "A Switch That's Easy",
+              "42c67b18-1610-47eb-b102-29cc1cde918f": {
+                  "text": "<p>In addition to earning up to $150, we make switching to Arvest Bank easy and convenient. Use our&nbsp;<a href=\"https:\/\/www.arvest.com\/pdfs\/personal\/switch-kit-checklist.pdf\">switch checklist<\/a>, <a href=\"https:\/\/www.arvest.com\/pdfs\/personal\/switch-kit-worksheet.pdf\">account switch forms<\/a> and <a href=\" \/personal\/bank\/online\/online-switch-kit\">more<\/a>!<\/p>",
+                  "textFormat": "cohesion"
+              },
+              "1187eb1c-e1d5-40ab-89b9-da28f1d1a100": {
+                  "entity_type": "media",
+                  "view_mode": "thumbnail_overlay"
+              }
+          },
+          "516070b7-b1d8-4e98-a294-7cbaf61cb271": {
+              "settings": {
+                  "title": "Column 2 drop zone",
+                  "dropzoneHideSelector": ""
+              }
+          },
+          "551f06c9-ce7d-4226-b255-68efb462cdf4": {
+              "settings": {
+                  "title": "Banking Designed for You"
+              },
+              "e2e389b2-5c09-43a1-9063-c156b94320db": {
+                  "entity": {
+                      "entityUUID": "f5e3b731-d47b-4ecc-a792-18ad6df3f43a",
+                      "entityId": "f5e3b731-d47b-4ecc-a792-18ad6df3f43a",
+                      "entityType": "media"
+                  }
+              },
+              "f0bb808b-dc36-4dfd-a7da-ff2272214c51": "Banking Designed for You",
+              "42c67b18-1610-47eb-b102-29cc1cde918f": {
+                  "text": "<p>There are several perks that come along with banking at Arvest. Some of our customers\u2019 favorite Arvest features are:<\/p>\n\n<ul>\n\t<li>Online applications for several accounts, including <a href=\"\/personal\/borrow\/consumer-loans\">consumer loans<\/a> and <a href=\"\/homeloan\">home loans<\/a><\/li>\n\t<li>Easily manage your account from anywhere with online banking and our highly-rated Arvest Go mobile app<\/li>\n\t<li><a href=\"\/gojdpower\">Certified by J.D. Power<\/a> for providing \"An Outstanding Mobile Banking Experience\"<\/li>\n\t<li>More than 270 branches in Arkansas, Oklahoma, Missouri and Kansas<\/li>\n\t<li>Extended hours at many branches<\/li>\n<\/ul>\n",
+                  "textFormat": "cohesion"
+              },
+              "1187eb1c-e1d5-40ab-89b9-da28f1d1a100": {
+                  "entity_type": "media",
+                  "view_mode": "thumbnail_overlay"
+              }
+          },
+          "229ecd12-ea16-40c0-b6f3-d81c63816e4e": {
+              "settings": {
+                  "title": "Campaign Accordion item - Checking Accounts"
+              },
+              "45737439-0721-49fd-8006-90701912e04f": "Checking Accounts"
+          },
+          "ca1a81c7-0d2d-462a-8849-64e9693dcdc7": {
+              "settings": {
+                  "dropzoneHideSelector": "",
+                  "title": "Content drop zone"
+              }
+          },
+          "aa661673-c35c-49be-a471-749c1214238c": {
+              "settings": {
+                  "title": "Campaign Header Card - Apply Online"
+              },
+              "ca12f516-0541-4263-8dd9-8464769a226c": {
+                  "entity": {
+                      "entityId": "e399ed8a-3376-4652-9604-e422cc462c1d",
+                      "entityUUID": "e399ed8a-3376-4652-9604-e422cc462c1d",
+                      "entityType": "media"
+                  }
+              },
+              "8b41f1c7-8cb1-4372-b3a7-a4ed9d0d538b": {
+                  "text": "<h1><span class=\"coh-style-font-medium\">FIND THE CHECKING<br \/>\nACCOUNT FOR YOUR NEEDS<\/span><br \/>\n<span class=\"coh-style-font-large\">&amp; APPLY ONLINE TODAY<\/span><\/h1>\n\n<p>&nbsp;<\/p>\n\n<p><a class=\"coh-style-link-arrow-button\" href=\"https:\/\/secure.arvest.com\/apply\/servlet\/SmartForm.html?formCode=usdaops&amp;_gl=1*hwjgsm*_ga*MTgxNjA1NjA5Mi4xNjIxNTM4MTg2*_ga_GRH26TKW0W*MTYyNDU2Mjk2Mi4xNjMuMS4xNjI0NTYyOTYzLjU5\">Get Started<\/a><\/p>\n",
+                  "textFormat": "cohesion"
+              }
+          },
+          "8ef09da8-3a98-4a8f-b94d-0003ab15a932": {
+              "settings": {
+                  "title": "Campaign Text and Table Card"
+              },
+              "a64fd33a-5058-4baa-8979-20eddfe592c8": "Arvest Checking Accounts Feature Benefits to Fit Your Personal Style",
+              "10ef5980-5ca6-48c0-b355-02dd1070dc68": {
+                  "text": "<p>Arvest Bank offers a variety of personal checking accounts that allow you to bank your way. If you're wondering what it's like to bank with us, just take a look at the chart below to decide which account is right for you. Whether you're looking for a service like <a href=\"\/personal\/protect\/id-protect?WT.ac=ABO-get150-accountchooser-perks-familyidprotect-text\" target=\"_blank\">IDProtect<sup>\u00ae<\/sup><\/a> to help protect your identity, or one of over 200 specialty designed <a href=\"\/style?WT.ac=ABO-get150-accountchooser-perks-debitcard-text\" target=\"_blank\">debit cards<\/a> to show off your personality while being safe and secure - we've got what you need!<\/p>\n\n<p>Take a look at our <a href=\"\/pdf\/personal\/checking-accounts.pdf?WT.ac=ABO-get150-accountchooser-checkingaccounts-pdf-text\" target=\"_blank\">checking accounts<\/a> below and apply today!<\/p>\n\n<table class=\"table table-bordered\">\n\t<thead>\n\t\t<tr>\n\t\t\t<th scope=\"col\">Arvest Bank Accounts<\/th>\n\t\t\t<th scope=\"col\">Preferred Club<\/th>\n\t\t\t<th scope=\"col\">Arvest Club<\/th>\n\t\t\t<th scope=\"col\">myBlue<sup>\u00ae<\/sup><\/th>\n\t\t\t<th scope=\"col\">Basic Blue\u2122<\/th>\n\t\t\t<th scope=\"col\">Free Blue\u2122<\/th>\n\t\t<\/tr>\n\t<\/thead>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>&nbsp;<\/td>\n\t\t\t<td align=\"center\">Our checking account with the most features<\/td>\n\t\t\t<td align=\"center\">Enjoy free checks, Online BillPay, and lots of extras<\/td>\n\t\t\t<td align=\"center\">Affordable checking with IDProtect<sup>\u00ae<\/sup> and other valuable benefits<\/td>\n\t\t\t<td align=\"center\">A paper statement<br \/>\n\t\t\tchecking account<\/td>\n\t\t\t<td align=\"center\">A free checking account<br \/>\n\t\t\twith e.Statements<\/td>\n\t\t<\/tr>\n\t\t<tr>\n\t\t\t<th scope=\"row\">Apply Now<\/th>\n\t\t\t<td align=\"center\"><a class=\"coh-style-link-arrow-button\" href=\"\/personal\/bank\/checking\/preferred-club\/apply\" target=\"_blank\">Apply For<br \/>\n\t\t\tPreferred Club<\/a><\/td>\n\t\t\t<td align=\"center\"><a class=\"coh-style-link-arrow-button\" href=\"\/personal\/bank\/checking\/club\/apply\" target=\"_blank\">Apply For<br \/>\n\t\t\tArvest Club<\/a><\/td>\n\t\t\t<td align=\"center\"><a class=\"coh-style-link-arrow-button\" href=\"\/personal\/bank\/checking\/myblue\/apply\" target=\"_blank\">Apply For<br \/>\n\t\t\tmyBlue<sup>\u00ae<\/sup><\/a><\/td>\n\t\t\t<td align=\"center\"><a class=\"coh-style-link-arrow-button\" href=\"\/personal\/bank\/checking\/basic-blue\/apply\" target=\"_blank\">Apply For<br \/>\n\t\t\tBasic Blue\u2122<\/a><\/td>\n\t\t\t<td align=\"center\"><a class=\"coh-style-link-arrow-button\" href=\"\/personal\/bank\/checking\/free-blue\/apply\" target=\"_blank\">Apply For<br \/>\n\t\t\tFree Blue\u2122<\/a><\/td>\n\t\t<\/tr>\n\t\t<tr>\n\t\t\t<th scope=\"row\">Monthly Service Charge<\/th>\n\t\t\t<td>$18 unless waived\u2020\u2020<\/td>\n\t\t\t<td>$12<\/td>\n\t\t\t<td>$6<\/td>\n\t\t\t<td>$3<\/td>\n\t\t\t<td>$0<\/td>\n\t\t<\/tr>\n\t\t<tr>\n\t\t\t<th scope=\"row\">IDProtect<sup>\u00ae\u2020<\/sup><\/th>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---yes\">Yes<\/span><\/td>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---yes\">Yes<\/span><\/td>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---yes\">Yes<\/span><\/td>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---no\">No<\/span><\/td>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---no\">No<\/span><\/td>\n\t\t<\/tr>\n\t\t<tr>\n\t\t\t<th scope=\"row\">Free Online BillPay*<\/th>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---yes\">Yes<\/span><\/td>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---yes\">Yes<\/span><\/td>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---yes\">Yes<\/span><\/td>\n\t\t\t<td>$0.50\/ea.<\/td>\n\t\t\t<td>$0.50\/ea.<\/td>\n\t\t<\/tr>\n\t\t<tr>\n\t\t\t<th scope=\"row\">AD&amp;D Insurance<\/th>\n\t\t\t<td>$30,000 Family<\/td>\n\t\t\t<td>$30,000 Family<\/td>\n\t\t\t<td>$10,000 Account holder(s)<\/td>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---no\">No<\/span><\/td>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---no\">No<\/span><\/td>\n\t\t<\/tr>\n\t\t<tr>\n\t\t\t<th scope=\"row\">Free Checks*<\/th>\n\t\t\t<td>All ages<br \/>\n\t\t\t(Single wallet or duplicate style)<\/td>\n\t\t\t<td>All ages<br \/>\n\t\t\t(Single wallet style only)<\/td>\n\t\t\t<td>Ages 62+<br \/>\n\t\t\t(Single wallet style, shipping and handling fees apply)<\/td>\n\t\t\t<td>Ages 62+<br \/>\n\t\t\t(Single wallet style, shipping and handling fees apply)<\/td>\n\t\t\t<td>Ages 62+<br \/>\n\t\t\t(Single wallet style, shipping and handling fees apply)<\/td>\n\t\t<\/tr>\n\t\t<tr>\n\t\t\t<th scope=\"row\">Earns Interest<\/th>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---yes\">Yes<\/span><\/td>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---no\">No<\/span><\/td>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---no\">No<\/span><\/td>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---no\">No<\/span><\/td>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---no\">No<\/span><\/td>\n\t\t<\/tr>\n\t\t<tr>\n\t\t\t<th scope=\"row\">Free Debit Card<\/th>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---yes\">Yes<\/span><\/td>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---yes\">Yes<\/span><\/td>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---yes\">Yes<\/span><\/td>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---yes\">Yes<\/span><\/td>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---yes\">Yes<\/span><\/td>\n\t\t<\/tr>\n\t\t<tr>\n\t\t\t<th scope=\"row\">Free Online &amp; Mobile Banking*<\/th>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---yes\">Yes<\/span><\/td>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---yes\">Yes<\/span><\/td>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---yes\">Yes<\/span><\/td>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---yes\">Yes<\/span><\/td>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---yes\">Yes<\/span><\/td>\n\t\t<\/tr>\n\t\t<tr>\n\t\t\t<th scope=\"row\">Paper or e.Statements*<\/th>\n\t\t\t<td>Choice<\/td>\n\t\t\t<td>Choice<\/td>\n\t\t\t<td>Choice<\/td>\n\t\t\t<td>Paper<\/td>\n\t\t\t<td>e.Statements<\/td>\n\t\t<\/tr>\n\t\t<tr>\n\t\t\t<th scope=\"row\">Additional Club Package Benefits<\/th>\n\t\t\t<td>2 free Cashier's Checks and\/or Money Orders per day<br \/>\n\t\t\t<br \/>\n\t\t\tSafe Deposit Box discount (one box only)<br \/>\n\t\t\t<br \/>\n\t\t\tStop pays at no charge<br \/>\n\t\t\t<br \/>\n\t\t\t6 free non-Arvest ATM transactions\/statement cycle (ATM owner may charge additional fee)<\/td>\n\t\t\t<td>2 free Cashier's Checks and\/or Money Orders per day<br \/>\n\t\t\t<br \/>\n\t\t\tSafe Deposit Box discount (one box only)<br \/>\n\t\t\t<br \/>\n\t\t\t1 stop pay at no charge per year<\/td>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---no\">No<\/span><\/td>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---no\">No<\/span><\/td>\n\t\t\t<td class=\"text-align-center\"><span class=\"coh-style-icon---no\">No<\/span><\/td>\n\t\t<\/tr>\n\t\t<tr>\n\t\t\t<th scope=\"row\">Balance to Waive Monthly Service Charge\u2020\u2020<\/th>\n\t\t\t<td>$20,000 in consumer deposits or consumer loans <b>OR<\/b><br \/>\n\t\t\t$25,000 in combined consumer loans &amp; deposits <b>OR<\/b><br \/>\n\t\t\t$100,000 in mortgage loans <b>OR<\/b><br \/>\n\t\t\t$50,000 in brokerage assets <b>OR<\/b><br \/>\n\t\t\tQualifying managed trusts<\/td>\n\t\t\t<td>N\/A<\/td>\n\t\t\t<td>N\/A<\/td>\n\t\t\t<td>N\/A<\/td>\n\t\t\t<td>N\/A<\/td>\n\t\t<\/tr>\n\t\t<tr>\n\t\t\t<th scope=\"row\">Apply Now<\/th>\n\t\t\t<td align=\"center\"><a class=\"coh-style-link-arrow-button\" href=\"\/personal\/bank\/checking\/preferred-club\/apply\" target=\"_blank\">Apply For<br \/>\n\t\t\tPreferred Club<\/a><\/td>\n\t\t\t<td align=\"center\"><a class=\"coh-style-link-arrow-button\" href=\"\/personal\/bank\/checking\/club\/apply\" target=\"_blank\">Apply For<br \/>\n\t\t\tArvest Club<\/a><\/td>\n\t\t\t<td align=\"center\"><a class=\"coh-style-link-arrow-button\" href=\"\/personal\/bank\/checking\/myblue\/apply\" target=\"_blank\">Apply For<br \/>\n\t\t\tmyBlue<sup>\u00ae<\/sup><\/a><\/td>\n\t\t\t<td align=\"center\"><a class=\"coh-style-link-arrow-button\" href=\"\/personal\/bank\/checking\/basic-blue\/apply\" target=\"_blank\">Apply For<br \/>\n\t\t\tBasic Blue\u2122<\/a><\/td>\n\t\t\t<td align=\"center\"><a class=\"coh-style-link-arrow-button\" href=\"\/personal\/bank\/checking\/free-blue\/apply\" target=\"_blank\">Apply For<br \/>\n\t\t\tFree Blue\u2122<\/a><\/td>\n\t\t<\/tr>\n\t<\/tbody>\n<\/table>\n\n<p><b>*Additional Account information below<\/b><\/p>\n\n<p><b>Balance Requirements<\/b><br \/>\nAll Checking Accounts: Minimum to open $50.<\/p>\n\n<p><b>IDProtect<sup>\u00ae<\/sup><\/b><br \/>\nThe description herein is a summary only and does not include all terms, conditions and exclusions of the program described. Please refer to the complete program description as well as certificate of insurance for complete details of eligibility, coverage and exclusions.<\/p>\n\n<p><b>Online BillPay:<\/b>&nbsp;Free for Preferred Club, Arvest Club &amp; myBlue<sup>\u00ae<\/sup>. Bill payments are $0.50 each for Basic Blue\u2122 and Free Blue\u2122.<\/p>\n\n<p><b>Mobile Banking, Mobile Alerts, &amp; Mobile Check Deposit<\/b>&nbsp;available with checking, savings, and money market accounts. Consult your wireless internet provider about applicable fees for required data plans.<\/p>\n\n<p><b>Non-Arvest ATM Transaction Fees:<\/b><br \/>\nFees apply to all accounts except Preferred Club. Fees may apply at non-Arvest ATMs or other non-ATM PIN withdrawals or transfers.<\/p>\n\n<p><b>Preferred Club:<\/b>&nbsp;The Arvest portion of the ATM fee is waived on 6 non-Arvest ATM transactions per statement cycle. ATM owners may charge an additional fee.<\/p>\n\n<p><b>AD&amp;D Insurance<\/b><br \/>\nInsurance products are not insured by the FDIC or any Federal Government Agency; not a deposit of or guaranteed by the bank or any bank affiliate. AD&amp;D coverage is underwritten by National Union Fire Insurance Company of Pittsburgh, PA. See plan details for terms and conditions of coverage.<\/p>\n\n<p><b>Free Checks<\/b><br \/>\n<b>myBlue<sup>\u00ae<\/sup>, Basic Blue\u2122, &amp; Free Blue\u2122 (ages 62+):<\/b>&nbsp;Account holders must be 62+ to receive free specialty single wallet-style checks. Shipping and handling charges apply.<br \/>\n<b>Preferred Club:<\/b>&nbsp;Free specialty single wallet or duplicate-style checks available at no charge. A $3 discount is applied to any other personal check type selected.<br \/>\n<b>Arvest Club:<\/b>&nbsp;Free specialty single wallet-style checks available at no charge. A $3 discount is applied to any other personal check type selected.<\/p>\n\n<p><b>e.Statements<\/b><br \/>\n<b>All checking accounts:<\/b>&nbsp;To receive an electronic statement you must be enrolled in online banking.<br \/>\n<b>Free Blue\u2122<\/b>&nbsp;e.Statements and online banking are required for this account. If you do not accept the Online Banking terms and conditions and consent to the Use of Electronic Communications, the account will be converted to a Basic Blue account with a $3 monthly service fee.<\/p>\n",
+                  "textFormat": "cohesion"
+              }
+          },
+          "31f57d58-b60d-4297-ae27-04cdfe22cb0b": {
+              "settings": {
+                  "title": "Campaign Accordion item - Switching Banks"
+              },
+              "45737439-0721-49fd-8006-90701912e04f": "Switching Banks?"
+          },
+          "865167b3-f6ad-4918-b5e0-9880ec8bfd3b": {
+              "settings": {
+                  "dropzoneHideSelector": "",
+                  "title": "Content drop zone"
+              }
+          },
+          "1b00ec2f-ecd6-4d83-8594-338e4e644379": {
+              "settings": {
+                  "title": "Campaign Header Card - Jump to Arvest"
+              },
+              "ca12f516-0541-4263-8dd9-8464769a226c": {
+                  "entity": {
+                      "entityId": "7f3cb658-ac72-4466-9b81-093695de89dd",
+                      "entityUUID": "7f3cb658-ac72-4466-9b81-093695de89dd",
+                      "entityType": "media"
+                  }
+              },
+              "8b41f1c7-8cb1-4372-b3a7-a4ed9d0d538b": {
+                  "text": "<h1><span class=\"coh-style-font-large\">JUMP TO ARVEST<\/span><br \/>\n<span class=\"coh-style-font-medium\">IT'S FAST AND EASY<br \/>\nYOU'LL BE GLAD YOU DID<\/span><\/h1>\n\n<p>&nbsp;<\/p>\n\n<p><a class=\"coh-style-link-arrow-button\" href=\"\/get150\/account-chooser?WT.ac=ABO-get150-accountopeninghelp-header-chooseaccount-cta\">Choose Your Account<\/a><\/p>\n",
+                  "textFormat": "cohesion"
+              }
+          },
+          "d0c0518d-6b80-4845-8606-10372deb1437": {
+              "settings": {
+                  "title": "Get Moving and Open a New Bank Account"
+              },
+              "e2e389b2-5c09-43a1-9063-c156b94320db": {
+                  "entity": {
+                      "entityUUID": "bd27ce87-20ad-49f9-893f-027b846bac6d",
+                      "entityId": "bd27ce87-20ad-49f9-893f-027b846bac6d",
+                      "entityType": "media"
+                  }
+              },
+              "f0bb808b-dc36-4dfd-a7da-ff2272214c51": "Get Moving and Open a New Bank Account",
+              "42c67b18-1610-47eb-b102-29cc1cde918f": {
+                  "text": "<p>Our associates and resources make it easy to choose the bank account that fits your needs. The information on this page can help you make sure you don't forget anything. We strive to help make the account selection process simple and easy for you.<\/p>\n\n<ul>\n\t<li><b>Relationship benefits<\/b> - Look for accounts that offer relationship benefits such as checking accounts that earn interest or consumer loans that include discounts.<\/li>\n\t<li><b>Branch locations and hours<\/b> - <a href=\"\/branch-locator\" target=\"_blank\">Find an Arvest bank<\/a> that's convenient to where you live, work or go to school.<\/li>\n\t<li><b>Account protection<\/b> - Look for the Member FDIC logo on their website or in branches at teller windows.<\/li>\n<\/ul>\n",
+                  "textFormat": "cohesion"
+              },
+              "1187eb1c-e1d5-40ab-89b9-da28f1d1a100": {
+                  "entity_type": "media",
+                  "view_mode": "thumbnail_overlay"
+              }
+          },
+          "fc2795e8-8733-48cc-add0-1064dddef27e": {
+              "settings": {
+                  "title": "Switching Banks Should be EASY"
+              },
+              "e2e389b2-5c09-43a1-9063-c156b94320db": {
+                  "entity": {
+                      "entityUUID": "374cdfcf-5e36-4bdc-9c84-a472c37c9724",
+                      "entityId": "374cdfcf-5e36-4bdc-9c84-a472c37c9724",
+                      "entityType": "media"
+                  }
+              },
+              "f0bb808b-dc36-4dfd-a7da-ff2272214c51": "Switching Banks Should be EASY",
+              "42c67b18-1610-47eb-b102-29cc1cde918f": {
+                  "text": "<p>When you're ready to change banks, you want it to be great! At Arvest, we want to help make the transition as easy and enjoyable as possible - you can even switch online!<\/p>\n\n<ul>\n\t<li><a href=\"\/personal\/bank\/online\/online-switch-kit\" target=\"_blank\">Switch Online<\/a><\/li>\n\t<li><a href=\"\/pdfs\/personal\/switch-kit-checklist.pdf\" target=\"_blank\">Switch Kit Checklist<\/a> &amp; <a href=\"\/pdfs\/personal\/switch-kit-worksheet.pdf\" target=\"_blank\">Switch Kit Transfer Worksheet<\/a><\/li>\n\t<li>Direct Deposits - Move direct deposits for&nbsp;<a data-rel=\"external\" href=\"https:\/\/www.ssa.gov\/deposit\/howtosign.htm\" target=\"_blank\">Social Security<\/a>, <a data-rel=\"external\" href=\"https:\/\/www.va.gov\/change-direct-deposit\/\" target=\"_blank\">Department of Veterans Affairs (VA)<\/a>&nbsp;or anything else.<\/li>\n<\/ul>\n",
+                  "textFormat": "cohesion"
+              },
+              "1187eb1c-e1d5-40ab-89b9-da28f1d1a100": {
+                  "entity_type": "media",
+                  "view_mode": "thumbnail_overlay"
+              }
+          },
+          "c748d74e-90c2-486c-a2a4-9f510452ded7": {
+              "settings": {
+                  "title": "Adjustable Two Column Layout"
+              },
+              "7a3de526-046d-4851-991f-0771a619f822": "4"
+          },
+          "49abcd65-d9cf-4219-99ef-05a56c8adadb": {
+              "settings": {
+                  "title": "Column 1 drop zone",
+                  "dropzoneHideSelector": ""
+              }
+          },
+          "f0db9444-fb88-4019-989b-f5b4175606b0": {
+              "settings": {
+                  "title": "Day-to-Day Spending"
+              },
+              "e2e389b2-5c09-43a1-9063-c156b94320db": {
+                  "entity": {
+                      "entityUUID": "c7f71740-991a-4546-9a75-9f96da436c2d",
+                      "entityId": "c7f71740-991a-4546-9a75-9f96da436c2d",
+                      "entityType": "media"
+                  }
+              },
+              "f0bb808b-dc36-4dfd-a7da-ff2272214c51": "Day-to-Day Spending",
+              "42c67b18-1610-47eb-b102-29cc1cde918f": {
+                  "text": "<p>Your checking account is where you'll keep your spending money until you're ready to use it for regular expenses. This may include expenses like groceries, electricity, your rent or mortgage, or a car payment.<\/p>\n\n<p>Deposit money and then spend it in ways that are easiest for you. Keep track of your deposits and withdrawals by watching your account statements through <a href=\"\/personal\/bank\/online\/blueiq\">online banking<\/a> or <a href=\"\/personal\/bank\/online\/mobile-banking\">mobile banking<\/a>.<\/p>\n",
+                  "textFormat": "cohesion"
+              },
+              "1187eb1c-e1d5-40ab-89b9-da28f1d1a100": {
+                  "entity_type": "media",
+                  "view_mode": "thumbnail_overlay"
+              }
+          },
+          "20f88cba-9a8b-473e-9d21-fd278cf0caf8": {
+              "settings": {
+                  "title": "Column 2 drop zone",
+                  "dropzoneHideSelector": ""
+              }
+          },
+          "e7e6d1d9-3b10-4e38-8835-fc9bab3fcdbf": {
+              "settings": {
+                  "title": "Savings Accounts can Help You Prepare for The Future"
+              },
+              "e2e389b2-5c09-43a1-9063-c156b94320db": {
+                  "entity": {
+                      "entityUUID": "656e0cd3-075d-434c-821f-2a2e1fcd5721",
+                      "entityId": "656e0cd3-075d-434c-821f-2a2e1fcd5721",
+                      "entityType": "media"
+                  }
+              },
+              "f0bb808b-dc36-4dfd-a7da-ff2272214c51": "Savings Accounts can Help You Prepare for The Future",
+              "42c67b18-1610-47eb-b102-29cc1cde918f": {
+                  "text": "<div>\n<p>Your savings account is where you set aside money for the future. Whether you're thinking of saving for a down payment on a house, car or new appliance - it's a safe and convenient way to save and earn interest. When choosing a savings account, you'll want to consider a few things:<\/p>\n\n<ul>\n\t<li><b>Interest rate<\/b>&nbsp;- Savings accounts generally earn interest based on how much money you have in the savings account.<\/li>\n\t<li><b>Minimum balance<\/b> - Most savings accounts require a minimum deposit to open an account and may ask that you maintain a minimum balance to avoid a monthly fee.<\/li>\n\t<li><b>Withdrawal limitations<\/b> - Know how many withdrawals you can make without incurring fees.<\/li>\n<\/ul>\n\n<p>An Arvest Savings Account makes a great companion to an Arvest Checking Account. <a href=\"\/personal\/bank\/savings\" target=\"_blank\">Learn more and apply for a Savings Account<\/a>.<\/p>\n<\/div>\n",
+                  "textFormat": "cohesion"
+              },
+              "1187eb1c-e1d5-40ab-89b9-da28f1d1a100": {
+                  "entity_type": "media",
+                  "view_mode": "thumbnail_overlay"
+              }
+          },
+          "91918584-0f1e-44a9-b7dc-7ea53b46c0aa": {
+              "settings": {
+                  "title": "Campaign Accordion item - Who We Are"
+              },
+              "45737439-0721-49fd-8006-90701912e04f": "Who We Are"
+          },
+          "b70f07da-782b-494f-93ef-2d01c9dd1a8d": {
+              "settings": {
+                  "dropzoneHideSelector": "",
+                  "title": "Content drop zone"
+              }
+          },
+          "95877076-6a5d-4456-b2aa-ec017ef9d2ed": {
+              "settings": {
+                  "title": "Campaign Header Card - Committed to Your Community"
+              },
+              "ca12f516-0541-4263-8dd9-8464769a226c": {
+                  "entity": {
+                      "entityId": "e092eaef-076b-4a47-931d-d19c47975e88",
+                      "entityUUID": "e092eaef-076b-4a47-931d-d19c47975e88",
+                      "entityType": "media"
+                  }
+              },
+              "8b41f1c7-8cb1-4372-b3a7-a4ed9d0d538b": {
+                  "text": "<h1>ARVEST BANK IS<br \/>\n<span class=\"coh-style-font-large\">COMMITTED TO<br \/>\nYOUR COMMUNITY<\/span><\/h1>\n\n<p>&nbsp;<\/p>\n\n<p><a class=\"coh-style-link-arrow-button\" href=\"\/get150\/account-chooser\">Bank Locally<\/a><\/p>\n",
+                  "textFormat": "cohesion"
+              }
+          },
+          "4e1e3f6c-f922-4336-bfe7-c3e3968dc736": {
+              "settings": {
+                  "title": "Serving All of Our Communities - Large and Small"
+              },
+              "e2e389b2-5c09-43a1-9063-c156b94320db": {
+                  "entity": {
+                      "entityUUID": "3570d47c-374a-47e1-91d5-a227a8270e06",
+                      "entityId": "3570d47c-374a-47e1-91d5-a227a8270e06",
+                      "entityType": "media"
+                  }
+              },
+              "f0bb808b-dc36-4dfd-a7da-ff2272214c51": "Serving All of Our Communities - Large and Small",
+              "42c67b18-1610-47eb-b102-29cc1cde918f": {
+                  "text": "<p>We've made a commitment to managing our banks at the local level, which is unusual for a bank our size. However, we believe it is one of the values that makes us unique. Arvest operates 15 autonomous, community-oriented banks, each with its own local president, board of directors and management team. Serving our communities in this way allows our associates to be deeply involved in our communities, volunteering time and donating resources to make the communities we call home better for everyone.<\/p>\n\n<p>We take banking seriously while creating a friendly, welcoming environment in our branches and at community events. Take a look at some of the things already going on in our communities!<\/p>\n",
+                  "textFormat": "cohesion"
+              },
+              "1187eb1c-e1d5-40ab-89b9-da28f1d1a100": {
+                  "entity_type": "media",
+                  "view_mode": "thumbnail_overlay"
+              }
+          },
+          "10d80c55-f9f9-4f1e-97ce-9bfd7d6a8aa5": {
+              "settings": {
+                  "title": "Adjustable Two Column Layout"
+              },
+              "7a3de526-046d-4851-991f-0771a619f822": "8"
+          },
+          "4a10e9f6-267d-4f06-a1ea-1fc7616417ae": {
+              "settings": {
+                  "title": "Column 1 drop zone",
+                  "dropzoneHideSelector": ""
+              }
+          },
+          "954043b5-ec77-42f2-a16d-2c845112b7a7": {
+              "settings": {
+                  "title": "People Helping People Videos Highlight Our Communities"
+              },
+              "7c24e955-a352-43ba-aea5-91cec8508615": "People Helping People Videos Highlight Our Communities",
+              "b035b584-3e8d-4baa-a687-493e7bf49432": {
+                  "text": "<p>We take great pride in being a part of the communities we serve. That's why we launched the&nbsp;<em>People Helping People<\/em>&nbsp;series. We want to spotlight the inspiring individuals around us making a difference.<\/p>\n",
+                  "textFormat": "cohesion"
+              }
+          },
+          "5013028b-4f3f-4c88-ace3-c79fa37b3e6a": {
+              "settings": {
+                  "dropzoneHideSelector": ""
+              }
+          },
+          "ec331f9a-e489-4816-a21b-2255da52fbc7": {
+              "settings": {
+                  "title": "Adjustable Two Column Layout"
+              },
+              "7a3de526-046d-4851-991f-0771a619f822": "6"
+          },
+          "ee720b55-c0fc-451b-bd1f-afdfe33678cc": {
+              "settings": {
+                  "title": "Column 1 drop zone",
+                  "dropzoneHideSelector": ""
+              }
+          },
+          "89b26b3b-5dd9-44bf-904d-afd133430a97": {
+              "settings": {
+                  "title": "Video"
+              },
+              "4298fcd9-ee74-401f-ab2a-ec8d06145218": {
+                  "entity_type": "media",
+                  "view_mode": "thumbnail_overlay",
+                  "entity": "6e0eef2a-532b-4cc9-9234-40d4c6146416"
+              }
+          },
+          "ff404966-f4d6-4ac1-86fc-602b8a5c2429": {
+              "settings": {
+                  "title": "Column 2 drop zone",
+                  "dropzoneHideSelector": ""
+              }
+          },
+          "d27b255d-4008-4279-8fac-2cd4cf8d6436": {
+              "settings": {
+                  "title": "Video"
+              },
+              "4298fcd9-ee74-401f-ab2a-ec8d06145218": {
+                  "entity_type": "media",
+                  "view_mode": "thumbnail_overlay",
+                  "entity": "6e0eef2a-532b-4cc9-9234-40d4c6146416"
+              }
+          },
+          "fca51829-e12d-40fe-9f7c-43a24ebefa28": {
+              "settings": {
+                  "title": "Column 2 drop zone",
+                  "dropzoneHideSelector": ""
+              }
+          },
+          "778e6c77-af3f-4fba-93ad-2935b61ecc2a": {
+              "settings": {
+                  "title": "We Are Local"
+              },
+              "e2e389b2-5c09-43a1-9063-c156b94320db": {
+                  "entity": {
+                      "entityUUID": "dd8ef516-c6d1-4532-8d4f-a67b5af33694",
+                      "entityId": "dd8ef516-c6d1-4532-8d4f-a67b5af33694",
+                      "entityType": "media"
+                  }
+              },
+              "f0bb808b-dc36-4dfd-a7da-ff2272214c51": "We Are Local",
+              "42c67b18-1610-47eb-b102-29cc1cde918f": {
+                  "text": "<p>We appreciate you as a member of our community. We pride ourselves on staying involved with our local communities and support them whenever we can. Staying local is important. Make the choice to switch to Arvest and start banking local, today.<\/p>\n\n<p><a class=\"coh-style-link-arrow-button\" href=\"\/get150\/account-chooser\">Get Started<\/a><\/p>\n",
+                  "textFormat": "cohesion"
+              },
+              "1187eb1c-e1d5-40ab-89b9-da28f1d1a100": {
+                  "entity_type": "media",
+                  "view_mode": "thumbnail_overlay"
+              }
+          }
+      },
+      "previewModel": {
+          "288b5d36-e236-4c7a-9ab2-f0fc3ab593a3": {},
+          "d32eb3dc-1c14-403a-8792-efa086ff3699": {},
+          "8320baa6-fad6-47bc-8b0e-b083dc1da20c": {},
+          "58e6b41e-82ed-4361-b67e-47b7c5bf5a13": {},
+          "0b49f534-b3c2-4401-95d1-db35755593e8": {},
+          "9c47e2ef-18cc-4bec-8828-11814e994ff3": {},
+          "404ded09-f4e0-45a6-985f-6f3aafc201a6": {},
+          "f6bf643c-9449-4f5f-bc75-f4371a9c6f16": {},
+          "551f06c9-ce7d-4226-b255-68efb462cdf4": {},
+          "229ecd12-ea16-40c0-b6f3-d81c63816e4e": {},
+          "aa661673-c35c-49be-a471-749c1214238c": {},
+          "8ef09da8-3a98-4a8f-b94d-0003ab15a932": {},
+          "31f57d58-b60d-4297-ae27-04cdfe22cb0b": {},
+          "1b00ec2f-ecd6-4d83-8594-338e4e644379": {},
+          "d0c0518d-6b80-4845-8606-10372deb1437": {},
+          "fc2795e8-8733-48cc-add0-1064dddef27e": {},
+          "c748d74e-90c2-486c-a2a4-9f510452ded7": {},
+          "f0db9444-fb88-4019-989b-f5b4175606b0": {},
+          "e7e6d1d9-3b10-4e38-8835-fc9bab3fcdbf": {},
+          "91918584-0f1e-44a9-b7dc-7ea53b46c0aa": {},
+          "95877076-6a5d-4456-b2aa-ec017ef9d2ed": {},
+          "4e1e3f6c-f922-4336-bfe7-c3e3968dc736": {},
+          "10d80c55-f9f9-4f1e-97ce-9bfd7d6a8aa5": {},
+          "954043b5-ec77-42f2-a16d-2c845112b7a7": {},
+          "ec331f9a-e489-4816-a21b-2255da52fbc7": {},
+          "89b26b3b-5dd9-44bf-904d-afd133430a97": {},
+          "d27b255d-4008-4279-8fac-2cd4cf8d6436": {},
+          "778e6c77-af3f-4fba-93ad-2935b61ecc2a": {}
+      },
+      "variableFields": {
+          "288b5d36-e236-4c7a-9ab2-f0fc3ab593a3": [],
+          "d32eb3dc-1c14-403a-8792-efa086ff3699": [],
+          "8320baa6-fad6-47bc-8b0e-b083dc1da20c": [],
+          "58e6b41e-82ed-4361-b67e-47b7c5bf5a13": [],
+          "0b49f534-b3c2-4401-95d1-db35755593e8": [],
+          "9c47e2ef-18cc-4bec-8828-11814e994ff3": [],
+          "404ded09-f4e0-45a6-985f-6f3aafc201a6": [],
+          "f6bf643c-9449-4f5f-bc75-f4371a9c6f16": [],
+          "551f06c9-ce7d-4226-b255-68efb462cdf4": [],
+          "229ecd12-ea16-40c0-b6f3-d81c63816e4e": [],
+          "aa661673-c35c-49be-a471-749c1214238c": [],
+          "8ef09da8-3a98-4a8f-b94d-0003ab15a932": [],
+          "31f57d58-b60d-4297-ae27-04cdfe22cb0b": [],
+          "1b00ec2f-ecd6-4d83-8594-338e4e644379": [],
+          "d0c0518d-6b80-4845-8606-10372deb1437": [],
+          "fc2795e8-8733-48cc-add0-1064dddef27e": [],
+          "c748d74e-90c2-486c-a2a4-9f510452ded7": [],
+          "f0db9444-fb88-4019-989b-f5b4175606b0": [],
+          "e7e6d1d9-3b10-4e38-8835-fc9bab3fcdbf": [],
+          "91918584-0f1e-44a9-b7dc-7ea53b46c0aa": [],
+          "95877076-6a5d-4456-b2aa-ec017ef9d2ed": [],
+          "4e1e3f6c-f922-4336-bfe7-c3e3968dc736": [],
+          "10d80c55-f9f9-4f1e-97ce-9bfd7d6a8aa5": [],
+          "954043b5-ec77-42f2-a16d-2c845112b7a7": [],
+          "ec331f9a-e489-4816-a21b-2255da52fbc7": [],
+          "89b26b3b-5dd9-44bf-904d-afd133430a97": [],
+          "d27b255d-4008-4279-8fac-2cd4cf8d6436": [],
+          "778e6c77-af3f-4fba-93ad-2935b61ecc2a": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+category: hlp_cat_campaign_page_helpers
+preview_image: ''
+entity_type_access: {  }
+bundle_access: {  }
+weight: null

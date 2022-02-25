@@ -1,6 +1,5 @@
 ignored_config_entities:
-  - 'cohesion.*'
-  - 'cohesion_*.*'
+  - 'cohesion_*'
   - acquia_connector.settings
   - shield.settings
   - arvestbank_rates.settings

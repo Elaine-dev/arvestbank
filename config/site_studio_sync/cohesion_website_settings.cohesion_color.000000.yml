@@ -1,0 +1,27 @@
+uuid: dd308c1a-c263-4c72-8516-f60cd8f1c9d4
+langcode: en
+status: true
+dependencies: {  }
+id: '000000'
+label: '#000000'
+json_values: |
+  {
+      "link": true,
+      "value": {
+          "value": {
+              "hex": "#000000",
+              "rgba": "rgba(0, 0, 0, 1)"
+          }
+      },
+      "name": "#000000",
+      "uid": "000000",
+      "class": ".coh-color-000000",
+      "variable": "$coh-color-000000",
+      "inuse": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 25

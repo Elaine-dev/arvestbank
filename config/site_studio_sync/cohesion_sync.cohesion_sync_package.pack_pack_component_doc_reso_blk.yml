@@ -1,0 +1,26 @@
+uuid: 08ddec3b-b013-451b-b25d-d3e20059cb84
+langcode: en
+status: true
+dependencies: {  }
+id: pack_pack_component_doc_reso_blk
+label: 'Documents and Resources Component'
+description: "Documents and resources component to display the view block.\r\nAuthor: Scott Earnest / Last update: 04/28/2021"
+excluded_entity_types: '[]'
+settings: |
+  {
+      "760add91-80ac-4854-8bce-e40c7ebdf58e": {
+          "type": "cohesion_component",
+          "items": {
+              "760add91-80ac-4854-8bce-e40c7ebdf58e": {
+                  "type": "cohesion_component"
+              },
+              "a58aa7af-aa5e-466b-acf2-df36074658ae": {
+                  "type": "cohesion_component_category"
+              },
+              "3a58648a-f514-405e-b715-304364bcc3b0": {
+                  "type": "view"
+              }
+          },
+          "checked": true
+      }
+  }

@@ -1,0 +1,20 @@
+uuid: 3904d30a-5565-4dc1-b81e-4285a7a6a4fe
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_login_blocks
+label: 'Custom Style Login Blocks'
+description: 'Login blocks custom styles. Updated: Aaron Parkening 7/26/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "b9f91c00-f2ee-404a-88ac-553571093f7e": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "b9f91c00-f2ee-404a-88ac-553571093f7e": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

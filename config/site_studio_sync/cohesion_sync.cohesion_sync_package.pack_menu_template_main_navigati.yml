@@ -1,0 +1,20 @@
+uuid: c0d241e0-014e-4ca0-965a-01c82431d4e0
+langcode: en
+status: true
+dependencies: {  }
+id: pack_menu_template_main_navigati
+label: 'Menu Template Main Navigation'
+description: 'Main navigation menu template. Updated: Aaron Parkening 7/14/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "6bc27fd8-cc37-4d63-ba83-0cb3e50990e1": {
+          "type": "cohesion_menu_templates",
+          "items": {
+              "6bc27fd8-cc37-4d63-ba83-0cb3e50990e1": {
+                  "type": "cohesion_menu_templates"
+              }
+          },
+          "checked": true
+      }
+  }

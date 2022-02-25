@@ -1,0 +1,20 @@
+uuid: 53a26080-b0df-46a2-9ec9-177aabc5cd3b
+langcode: en
+status: true
+dependencies: {  }
+id: pack_menu_template_sidebar
+label: 'Menu Template Sidebar'
+description: 'A Site Studio package for the menu template for the sidebar menu.'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "4997470f-9a71-44e7-8784-d63b7f970033": {
+          "type": "cohesion_menu_templates",
+          "items": {
+              "4997470f-9a71-44e7-8784-d63b7f970033": {
+                  "type": "cohesion_menu_templates"
+              }
+          },
+          "checked": true
+      }
+  }

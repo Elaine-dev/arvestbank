@@ -1,0 +1,20 @@
+uuid: 3be13f59-f845-4263-befe-40675377682f
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_homepage_in_be
+label: 'Custom Style Homepage in between block'
+description: 'A custom style for the homepage inbetween block. Last Updated Allie Jones 07/23/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "8bd71185-51b0-442b-aaa0-24770508c19c": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "8bd71185-51b0-442b-aaa0-24770508c19c": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

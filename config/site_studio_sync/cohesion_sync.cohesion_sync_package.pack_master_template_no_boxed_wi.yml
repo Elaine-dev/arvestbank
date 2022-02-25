@@ -1,0 +1,20 @@
+uuid: ead9d757-1e52-43ed-9fe9-56de4b3bffdc
+langcode: en
+status: true
+dependencies: {  }
+id: pack_master_template_no_boxed_wi
+label: 'Master Template No Boxed Width. Last Updated: Allie Jones 06/17/2021'
+description: "Master template with no content width, margin or padding. Used for the stage pages.\r\nUpdated: Aaron Parkening 6/16/2021"
+excluded_entity_types: '[]'
+settings: |
+  {
+      "d364113a-baf6-48a4-9230-35cf4e71c7e1": {
+          "type": "cohesion_master_templates",
+          "items": {
+              "d364113a-baf6-48a4-9230-35cf4e71c7e1": {
+                  "type": "cohesion_master_templates"
+              }
+          },
+          "checked": true
+      }
+  }

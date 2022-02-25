@@ -1,0 +1,23 @@
+uuid: 22c9b8b4-b51f-450c-b7df-45ac7fa6a4a6
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_three_column_layo
+label: 'Component Three Column Layout'
+description: 'Three column layout with drop zones. Last Updated: Aaron Parkening 7/15/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "6ea55c66-2396-4470-ac48-eff4a7093901": {
+          "type": "cohesion_component",
+          "items": {
+              "6ea55c66-2396-4470-ac48-eff4a7093901": {
+                  "type": "cohesion_component"
+              },
+              "023a16e5-3bc4-44df-90f2-72e3cc59f402": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

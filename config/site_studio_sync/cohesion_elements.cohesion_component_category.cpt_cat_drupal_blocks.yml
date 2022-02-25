@@ -1,0 +1,14 @@
+uuid: 5265a147-d000-4243-91b3-f66bd2e84f33
+langcode: en
+status: true
+dependencies: {  }
+id: cpt_cat_drupal_blocks
+label: 'Drupal Blocks'
+json_values: '{}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: false
+selectable: true
+class: category-11
+weight: -5

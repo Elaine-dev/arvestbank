@@ -1,0 +1,20 @@
+uuid: 049ec858-31ba-4291-9a27-782a636e7783
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_site_footer
+label: 'Component Site Footer'
+description: 'Main site footer. Updated: Aaron Parkening 6/16/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "54dfc795-20d5-4508-a827-37fcb1ff0250": {
+          "type": "cohesion_component",
+          "items": {
+              "54dfc795-20d5-4508-a827-37fcb1ff0250": {
+                  "type": "cohesion_component"
+              }
+          },
+          "checked": true
+      }
+  }

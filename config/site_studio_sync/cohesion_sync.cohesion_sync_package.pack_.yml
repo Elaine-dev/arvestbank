@@ -1,0 +1,20 @@
+uuid: 6289158c-4774-40c9-bae1-81680be96452
+langcode: en
+status: true
+dependencies: {  }
+id: pack_
+label: 'Master Template Content Only. Last Updated: Allie Jones 06/17/2021'
+description: 'A Site Studio package for the content only master template.'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "7477ca17-c482-4b92-89f3-e3615830c7e0": {
+          "type": "cohesion_master_templates",
+          "items": {
+              "7477ca17-c482-4b92-89f3-e3615830c7e0": {
+                  "type": "cohesion_master_templates"
+              }
+          },
+          "checked": true
+      }
+  }

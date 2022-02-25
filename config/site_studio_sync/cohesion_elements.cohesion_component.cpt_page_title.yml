@@ -1,0 +1,231 @@
+uuid: 51afecd5-4686-4e3f-96c4-13ad482b4f30
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_elements.cohesion_component_category.cpt_cat_general_components
+  content:
+    - 'file:file:af047307-a0c5-4443-bb28-e5b4650dd51f'
+id: cpt_page_title
+label: 'Page Title'
+json_values: |
+  {
+      "canvas": [
+          {
+              "type": "container",
+              "uid": "heading",
+              "title": "Heading",
+              "status": {
+                  "collapsed": true
+              },
+              "uuid": "8c723352-72fc-49f8-9abf-92f5068d6314",
+              "parentUid": "root",
+              "children": []
+          }
+      ],
+      "componentForm": [
+          {
+              "type": "form-container",
+              "uid": "form-tab-item",
+              "title": "Tab item",
+              "status": {
+                  "collapsed": false
+              },
+              "options": {
+                  "formBuilder": true
+              },
+              "uuid": "1f955862-e4c6-4140-9d7f-187fdadcfc1a",
+              "parentUid": "root",
+              "children": [
+                  {
+                      "type": "form-container",
+                      "uid": "form-section",
+                      "title": "Field group",
+                      "status": {
+                          "collapsed": false
+                      },
+                      "options": {
+                          "formBuilder": true
+                      },
+                      "uuid": "731540e0-1e68-473d-978a-f5ec95fb9dab",
+                      "parentUid": "form-tab-item",
+                      "children": [
+                          {
+                              "type": "form-help",
+                              "uid": "form-helptext",
+                              "title": "Help text",
+                              "status": {
+                                  "collapsed": false
+                              },
+                              "uuid": "e5712994-bd64-4eb9-b4e9-db5532a72da6",
+                              "parentUid": "form-section",
+                              "children": []
+                          }
+                      ]
+                  }
+              ]
+          }
+      ],
+      "mapper": {
+          "8c723352-72fc-49f8-9abf-92f5068d6314": {
+              "settings": {
+                  "formDefinition": [
+                      {
+                          "formKey": "heading-settings",
+                          "children": [
+                              {
+                                  "formKey": "heading-element",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "element",
+                                          "active": true
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "heading-heading",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "content",
+                                          "active": true
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "heading-style",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "customStyle",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "customStyle",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "selectorType": "topLevel",
+                  "form": null,
+                  "items": []
+              },
+              "styles": {
+                  "formDefinition": [],
+                  "selectorType": "topLevel",
+                  "items": [],
+                  "form": null
+              }
+          }
+      },
+      "model": {
+          "8c723352-72fc-49f8-9abf-92f5068d6314": {
+              "settings": {
+                  "title": "Heading",
+                  "element": "[current-page:title]",
+                  "customStyle": [
+                      {
+                          "customStyle": ""
+                      }
+                  ],
+                  "settings": {
+                      "element": "h1",
+                      "customStyle": [
+                          {
+                              "customStyle": ""
+                          }
+                      ]
+                  }
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "heading"
+                  }
+              }
+          },
+          "1f955862-e4c6-4140-9d7f-187fdadcfc1a": {
+              "settings": {
+                  "title": "Help",
+                  "type": "cohTabItem",
+                  "breakpointIcon": ""
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "731540e0-1e68-473d-978a-f5ec95fb9dab": {
+              "settings": {
+                  "title": "Help and information",
+                  "type": "cohSection",
+                  "hideRowHeading": 0,
+                  "removePadding": 0,
+                  "columnCount": "coh-component-field-group-1-col",
+                  "breakpointIcon": "",
+                  "breakpoints": false,
+                  "propertiesMenu": false,
+                  "disableScrollbar": true,
+                  "disableEllipsisMenu": true,
+                  "isOpen": true
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "e5712994-bd64-4eb9-b4e9-db5532a72da6": {
+              "settings": {
+                  "title": "Help text",
+                  "type": "cohHelpText",
+                  "options": {
+                      "showClose": false,
+                      "helpType": "coh-help-text--help",
+                      "helpText": "This component should be placed **once** on any page that needs a page title (H1). It has no editable settings."
+                  }
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          }
+      },
+      "previewModel": {
+          "8c723352-72fc-49f8-9abf-92f5068d6314": {
+              "settings": {
+                  "element": "h1"
+              }
+          },
+          "1f955862-e4c6-4140-9d7f-187fdadcfc1a": {},
+          "731540e0-1e68-473d-978a-f5ec95fb9dab": {},
+          "e5712994-bd64-4eb9-b4e9-db5532a72da6": {}
+      },
+      "variableFields": {
+          "8c723352-72fc-49f8-9abf-92f5068d6314": [
+              "settings.element"
+          ],
+          "1f955862-e4c6-4140-9d7f-187fdadcfc1a": [],
+          "731540e0-1e68-473d-978a-f5ec95fb9dab": [],
+          "e5712994-bd64-4eb9-b4e9-db5532a72da6": []
+      },
+      "meta": {
+          "fieldHistory": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+category: cpt_cat_general_components
+preview_image: 'public://element-preview-images/page-heading.png'
+has_quick_edit: true
+entity_type_access: {  }
+bundle_access: {  }
+twig_template: component--cohesion-cpt-page-title
+weight: 0

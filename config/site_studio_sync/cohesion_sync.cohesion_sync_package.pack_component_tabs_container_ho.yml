@@ -1,0 +1,23 @@
+uuid: c787f404-e6e0-4fee-91e0-40f44acfe607
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_tabs_container_ho
+label: 'Component Tabs Container - Horizontal'
+description: 'Horizontal tabs container component. Updated: Aaron Parkening 06/17/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "0a290122-6ef6-4a14-b967-306bfa8140f0": {
+          "type": "cohesion_component",
+          "items": {
+              "0a290122-6ef6-4a14-b967-306bfa8140f0": {
+                  "type": "cohesion_component"
+              },
+              "154d71fc-af4c-404f-91a0-a6e578ac7f04": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

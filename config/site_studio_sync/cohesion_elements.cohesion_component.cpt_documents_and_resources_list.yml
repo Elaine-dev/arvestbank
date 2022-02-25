@@ -1,0 +1,82 @@
+uuid: 760add91-80ac-4854-8bce-e40c7ebdf58e
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_elements.cohesion_component_category.cpt_cat_media_components
+    - views.view.documents_and_resources
+id: cpt_documents_and_resources_list
+label: 'Documents and resources list'
+json_values: |
+  {
+      "canvas": [
+          {
+              "type": "item",
+              "uid": "drupal-block",
+              "title": "Block",
+              "status": {
+                  "collapsed": true
+              },
+              "uuid": "e361bc44-29ff-4c95-b921-f2ee78672540",
+              "parentUid": "root",
+              "children": []
+          }
+      ],
+      "componentForm": [],
+      "mapper": {
+          "e361bc44-29ff-4c95-b921-f2ee78672540": {}
+      },
+      "model": {
+          "e361bc44-29ff-4c95-b921-f2ee78672540": {
+              "settings": {
+                  "title": "Block",
+                  "customStyle": [
+                      {
+                          "customStyle": ""
+                      }
+                  ],
+                  "settings": {
+                      "theme": "all",
+                      "customStyle": [
+                          {
+                              "customStyle": ""
+                          }
+                      ]
+                  },
+                  "theme": "all",
+                  "block": "views_block__documents_and_resources_block_1"
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "block"
+                  }
+              }
+          }
+      },
+      "previewModel": {
+          "e361bc44-29ff-4c95-b921-f2ee78672540": {}
+      },
+      "variableFields": {
+          "e361bc44-29ff-4c95-b921-f2ee78672540": []
+      },
+      "meta": {
+          "fieldHistory": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+category: cpt_cat_media_components
+preview_image: ''
+has_quick_edit: true
+entity_type_access: {  }
+bundle_access: {  }
+twig_template: component--cohesion-cpt-documents-and-resources-list
+weight: 0

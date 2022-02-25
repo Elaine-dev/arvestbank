@@ -1,0 +1,23 @@
+uuid: 3552904a-e2b3-450a-a7aa-c4a4d689ec55
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_adjustable_two_co
+label: 'Component Adjustable Two Column Layout'
+description: '2 column layout with adjustable widths and drop zones. Last Updated: Aaron Parkening 7/15/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "85aeefbd-ab79-4120-8a27-4f932efd0d40": {
+          "type": "cohesion_component",
+          "items": {
+              "85aeefbd-ab79-4120-8a27-4f932efd0d40": {
+                  "type": "cohesion_component"
+              },
+              "59056300-4b91-4434-8efd-13f9a0979b27": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

@@ -1,0 +1,23 @@
+uuid: 54cb3bb6-6c30-420f-974d-2da7e772b4bd
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_campaign_accordio
+label: 'Component Campaign Accordion Item'
+description: 'Accordion item used in campaign cards. Updated: Aaron Parkening 7/30/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "6cca6bde-ae47-4a9e-ac26-5678fc832c86": {
+          "type": "cohesion_component",
+          "items": {
+              "6cca6bde-ae47-4a9e-ac26-5678fc832c86": {
+                  "type": "cohesion_component"
+              },
+              "c41009f3-c273-41cd-9949-5acc0115cc89": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

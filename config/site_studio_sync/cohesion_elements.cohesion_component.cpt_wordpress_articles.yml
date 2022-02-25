@@ -1,0 +1,221 @@
+uuid: 87f78e59-5773-4194-b8f4-653f636b7548
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_elements.cohesion_component_category.cpt_cat_dynamic_components
+id: cpt_wordpress_articles
+label: 'Wordpress Articles'
+json_values: |
+  {
+      "canvas": [
+          {
+              "type": "item",
+              "uid": "site_studio_wordpress_articles_element",
+              "isCustom": true,
+              "title": "Wordpress Articles",
+              "selected": false,
+              "status": {
+                  "collapsed": true
+              },
+              "parentUid": "root",
+              "uuid": "1d251ef0-015b-4218-967d-c5b074bc1b9f",
+              "children": []
+          }
+      ],
+      "componentForm": [
+          {
+              "type": "form-field",
+              "uid": "form-input",
+              "title": "Input",
+              "translate": true,
+              "status": {
+                  "collapsed": false
+              },
+              "parentUid": "root",
+              "uuid": "0dee765e-99e4-4ea4-a31a-fb57c3975df1",
+              "children": []
+          },
+          {
+              "type": "form-field",
+              "uid": "form-select",
+              "title": "Select",
+              "translate": false,
+              "status": {
+                  "collapsed": false
+              },
+              "parentUid": "root",
+              "uuid": "9c861fcf-9aff-40c1-b12b-8ac7a2ea41e6",
+              "children": []
+          },
+          {
+              "type": "form-field",
+              "uid": "form-input",
+              "title": "Input",
+              "translate": true,
+              "status": {
+                  "collapsed": false
+              },
+              "uuid": "afca44d5-3d32-44d3-aaef-d8e7574c26fd",
+              "parentUid": "root",
+              "children": []
+          },
+          {
+              "type": "form-field",
+              "uid": "form-input",
+              "title": "Input",
+              "translate": true,
+              "status": {
+                  "collapsed": false
+              },
+              "parentUid": "root",
+              "uuid": "b5204d60-c7d4-47f1-b319-864ce4d148db",
+              "children": []
+          }
+      ],
+      "mapper": {
+          "1d251ef0-015b-4218-967d-c5b074bc1b9f": {}
+      },
+      "model": {
+          "1d251ef0-015b-4218-967d-c5b074bc1b9f": {
+              "settings": {}
+          },
+          "0dee765e-99e4-4ea4-a31a-fb57c3975df1": {
+              "settings": {
+                  "title": "Block Title",
+                  "schema": {
+                      "type": "string",
+                      "escape": true,
+                      "required": true
+                  },
+                  "machineName": "block-title",
+                  "tooltipPlacement": "auto right"
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "9c861fcf-9aff-40c1-b12b-8ac7a2ea41e6": {
+              "settings": {
+                  "title": "Display",
+                  "type": "cohSelect",
+                  "selectType": "custom",
+                  "schema": {
+                      "type": "string"
+                  },
+                  "options": [
+                      {
+                          "label": "Summary of Articles in Categories",
+                          "value": "categories"
+                      },
+                      {
+                          "label": "Summary of Articles with Tags",
+                          "value": "tags"
+                      },
+                      {
+                          "label": "Articles from Endpoint",
+                          "value": "endpoint"
+                      }
+                  ],
+                  "machineName": "display",
+                  "tooltipPlacement": "auto right"
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              },
+              "model": {
+                  "value": "categories"
+              }
+          },
+          "afca44d5-3d32-44d3-aaef-d8e7574c26fd": {
+              "settings": {
+                  "title": "Wordpress Endpoint",
+                  "schema": {
+                      "type": "string",
+                      "escape": true,
+                      "required": true
+                  },
+                  "machineName": "wordpress-endpoint",
+                  "tooltipPlacement": "auto right",
+                  "placeholder": "https:\/\/share.arvest.com\/feed\/json",
+                  "showCondition": "[field.9c861fcf-9aff-40c1-b12b-8ac7a2ea41e6] == 'endpoint'"
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              },
+              "9c861fcf-9aff-40c1-b12b-8ac7a2ea41e6": 1
+          },
+          "b5204d60-c7d4-47f1-b319-864ce4d148db": {
+              "settings": {
+                  "title": "Limit Number of Results To Show",
+                  "schema": {
+                      "type": "string",
+                      "escape": true,
+                      "required": false
+                  },
+                  "machineName": "limit-article-results",
+                  "tooltipPlacement": "auto right",
+                  "showCondition": "[field.9c861fcf-9aff-40c1-b12b-8ac7a2ea41e6] == 'endpoint'"
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              },
+              "model": {
+                  "value": "5"
+              }
+          }
+      },
+      "previewModel": {
+          "afca44d5-3d32-44d3-aaef-d8e7574c26fd": {},
+          "0dee765e-99e4-4ea4-a31a-fb57c3975df1": {},
+          "b5204d60-c7d4-47f1-b319-864ce4d148db": {},
+          "9c861fcf-9aff-40c1-b12b-8ac7a2ea41e6": {}
+      },
+      "variableFields": {
+          "afca44d5-3d32-44d3-aaef-d8e7574c26fd": [],
+          "0dee765e-99e4-4ea4-a31a-fb57c3975df1": [],
+          "b5204d60-c7d4-47f1-b319-864ce4d148db": [],
+          "9c861fcf-9aff-40c1-b12b-8ac7a2ea41e6": []
+      },
+      "meta": {
+          "fieldHistory": [
+              {
+                  "uuid": "b5204d60-c7d4-47f1-b319-864ce4d148db",
+                  "type": "form-input",
+                  "machineName": "limit-article-results"
+              },
+              {
+                  "uuid": "afca44d5-3d32-44d3-aaef-d8e7574c26fd",
+                  "type": "form-input",
+                  "machineName": "wordpress-endpoint"
+              },
+              {
+                  "uuid": "9c861fcf-9aff-40c1-b12b-8ac7a2ea41e6",
+                  "type": "form-select",
+                  "machineName": "display"
+              },
+              {
+                  "uuid": "0dee765e-99e4-4ea4-a31a-fb57c3975df1",
+                  "type": "form-input",
+                  "machineName": "block-title"
+              },
+              {
+                  "uuid": "200f3acd-93c8-43da-814e-9a27fc8391dd",
+                  "type": "form-checkbox-toggle",
+                  "machineName": "show-latest-news-summary"
+              }
+          ]
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+category: cpt_cat_dynamic_components
+preview_image: ''
+has_quick_edit: true
+entity_type_access: {  }
+bundle_access: {  }
+twig_template: component--cohesion-cpt-wordpress-articles
+weight: 0

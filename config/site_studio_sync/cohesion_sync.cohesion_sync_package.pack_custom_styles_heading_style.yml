@@ -1,0 +1,47 @@
+uuid: 20010088-cc74-47b8-bb77-a05d4be3d470
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_styles_heading_style
+label: 'Custom Styles Heading Styles'
+description: "A Site studio package for all heading related custom styles.\r\nUpdated: Allie Jones on 07/03/2021"
+excluded_entity_types: '[]'
+settings: |
+  {
+      "216741e3-d9f0-4299-b6a6-ee5e46997d63": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "216741e3-d9f0-4299-b6a6-ee5e46997d63": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      },
+      "7ff98709-cb47-4dee-a86e-a100c040822c": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "7ff98709-cb47-4dee-a86e-a100c040822c": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      },
+      "3dd39cc2-14b0-4f73-adce-c4ceb5261ca3": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "3dd39cc2-14b0-4f73-adce-c4ceb5261ca3": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      },
+      "4b090d13-0e3c-4b1c-9ccb-70ae6536c8f8": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "4b090d13-0e3c-4b1c-9ccb-70ae6536c8f8": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

@@ -1,0 +1,20 @@
+uuid: b37a3f9e-26d2-4389-957a-6bcdc4857661
+langcode: en
+status: true
+dependencies: {  }
+id: pack_content_template_basic_pa_0
+label: 'Content Template Basic Page'
+description: 'A Content Template for the Basic Page. Last Updated: Allie Jones 07/20/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "91e48b96-a0bc-4bcb-b602-657fa6405b9e": {
+          "type": "cohesion_content_templates",
+          "items": {
+              "91e48b96-a0bc-4bcb-b602-657fa6405b9e": {
+                  "type": "cohesion_content_templates"
+              }
+          },
+          "checked": true
+      }
+  }

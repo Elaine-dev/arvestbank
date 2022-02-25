@@ -1,0 +1,28 @@
+uuid: 919b6dd9-168b-462c-9069-1ff5a4e8d197
+langcode: en
+status: true
+dependencies: {  }
+id: white
+label: White
+json_values: |
+  {
+      "link": true,
+      "value": {
+          "value": {
+              "hex": "#ffffff",
+              "rgba": "rgba(255, 255, 255, 1)"
+          }
+      },
+      "name": "White",
+      "uid": "white",
+      "class": ".coh-color-white",
+      "variable": "$coh-color-white",
+      "wysiwyg": true,
+      "inuse": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 42

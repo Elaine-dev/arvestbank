@@ -1,0 +1,20 @@
+uuid: 0660de49-3fec-4b38-8459-bca5be0bcf3b
+langcode: en
+status: true
+dependencies: {  }
+id: pack_content_template_full_conte
+label: 'Content Template full content stage page content type'
+description: 'The full and default content template for the Stage Page Content type.'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "44d10cb6-e5cd-418e-a9cb-4924ce191e51": {
+          "type": "cohesion_content_templates",
+          "items": {
+              "44d10cb6-e5cd-418e-a9cb-4924ce191e51": {
+                  "type": "cohesion_content_templates"
+              }
+          },
+          "checked": true
+      }
+  }

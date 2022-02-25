@@ -1,0 +1,20 @@
+uuid: c525e530-7dc5-433d-becb-03ac0440b1e0
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_icon_and_text_blo
+label: 'Component Icon and Text Block'
+description: 'A Site Studio package for the "Component Icon and Text Block" component.'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "0624d17b-f67f-4215-be31-02de9f9403a8": {
+          "type": "cohesion_component",
+          "items": {
+              "0624d17b-f67f-4215-be31-02de9f9403a8": {
+                  "type": "cohesion_component"
+              }
+          },
+          "checked": true
+      }
+  }

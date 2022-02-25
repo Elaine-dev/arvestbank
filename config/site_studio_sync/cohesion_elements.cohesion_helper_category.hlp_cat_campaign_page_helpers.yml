@@ -1,0 +1,13 @@
+uuid: 1c8eaceb-352d-440f-b6ca-cfa314420414
+langcode: en
+status: true
+dependencies: {  }
+id: hlp_cat_campaign_page_helpers
+label: 'Campaign helpers'
+json_values: '{}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+modified: false
+selectable: true
+class: category-9
+weight: -4

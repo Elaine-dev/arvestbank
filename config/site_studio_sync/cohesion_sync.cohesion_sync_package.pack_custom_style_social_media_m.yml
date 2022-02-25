@@ -1,0 +1,20 @@
+uuid: 16154348-c24c-490d-b555-b0262cc63e62
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_social_media_m
+label: 'Custom Style Social Media Menu'
+description: 'Social media header and footer menu styles. Updated: Aaron Parkening 6/16/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "35de2ffd-02cd-4920-b35a-110be9080d1f": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "35de2ffd-02cd-4920-b35a-110be9080d1f": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

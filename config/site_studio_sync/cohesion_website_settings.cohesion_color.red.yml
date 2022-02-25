@@ -1,0 +1,28 @@
+uuid: 642da0bb-fe1b-48d9-ae8f-f0727a7c999b
+langcode: en
+status: true
+dependencies: {  }
+id: red
+label: Red
+json_values: |
+  {
+      "link": true,
+      "value": {
+          "value": {
+              "hex": "#cc0000",
+              "rgba": "rgba(204, 0, 0, 1)"
+          }
+      },
+      "name": "Red",
+      "uid": "red",
+      "class": ".coh-color-red",
+      "variable": "$coh-color-red",
+      "wysiwyg": true,
+      "inuse": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 33

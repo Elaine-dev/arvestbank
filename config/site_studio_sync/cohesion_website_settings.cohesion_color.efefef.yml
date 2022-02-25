@@ -1,0 +1,28 @@
+uuid: de128762-a075-4e39-b285-8f3a4ade01b
+langcode: en
+status: true
+dependencies: {  }
+id: efefef
+label: '#efefef'
+json_values: |
+  {
+      "link": true,
+      "value": {
+          "value": {
+              "hex": "#efefef",
+              "rgba": "rgba(239, 239, 239, 1)"
+          }
+      },
+      "name": "#efefef",
+      "uid": "efefef",
+      "class": ".coh-color-efefef",
+      "variable": "$coh-color-efefef",
+      "wysiwyg": false,
+      "inuse": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 6

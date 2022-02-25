@@ -1,0 +1,20 @@
+uuid: b1e3cd68-6382-4179-b2ab-9d643036f879
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_accessible_hid
+label: 'Custom Style Accessible Hide'
+description: 'Hide content accessibly. Last Updated: Aaron Parkening 6/11/2020'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "9a111f80-ad13-4ec2-8205-9016e5c3ab9c": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "9a111f80-ad13-4ec2-8205-9016e5c3ab9c": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

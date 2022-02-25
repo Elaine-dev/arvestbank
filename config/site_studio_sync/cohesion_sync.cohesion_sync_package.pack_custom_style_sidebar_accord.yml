@@ -1,0 +1,20 @@
+uuid: b575ea4e-e4c0-40b2-baa8-af44d9252cf8
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_sidebar_accord
+label: 'Custom Style Sidebar Accordion Menu'
+description: 'Styles for the Sidebar Accordion Menu when on smaller screens. Last Updated: Jacob Crane 06/17/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "327e886d-62da-460c-a0a7-68bd06aed38b": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "327e886d-62da-460c-a0a7-68bd06aed38b": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

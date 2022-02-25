@@ -1,0 +1,93 @@
+uuid: c6338b31-a758-4dfe-aa2c-63b387fbc80e
+langcode: en
+status: true
+dependencies: {  }
+id: base_submit_input
+label: 'Submit Input'
+json_values: |
+  {
+      "preview": {
+          "text": "<form>\n<p>Override safari submit button defaults.<\/p>\n\n<p><input type=\"submit\" value=\"LOG IN\" \/>&nbsp;<\/p>\n<\/form>\n",
+          "textFormat": "cohesion"
+      },
+      "styles": {
+          "settings": {
+              "element": "input[type=submit]"
+          },
+          "styles": {
+              "xl": {
+                  "custom-css": [
+                      {
+                          "customCssProperty": {
+                              "value": "-webkit-appearance"
+                          },
+                          "customCss": {
+                              "value": "none"
+                          }
+                      },
+                      {
+                          "customCssProperty": {
+                              "value": "-webkit-border-radius"
+                          },
+                          "customCss": {
+                              "value": "0"
+                          }
+                      }
+                  ]
+              }
+          }
+      },
+      "sBackgroundColour": "#FFFFFF",
+      "variableFields": []
+  }
+json_mapper: |
+  {
+      "styles": {
+          "title": null,
+          "selectorType": "topLevel",
+          "formDefinition": [
+              {
+                  "formKey": "custom-css",
+                  "children": [
+                      {
+                          "formKey": "css-property-and-css-value",
+                          "breakpoints": [
+                              {
+                                  "name": "xl"
+                              }
+                          ],
+                          "activeFields": [
+                              {
+                                  "name": "custom-css",
+                                  "active": true
+                              },
+                              {
+                                  "name": "customCssProperty",
+                                  "active": true
+                              },
+                              {
+                                  "name": "customCss",
+                                  "active": true
+                              },
+                              {
+                                  "name": "customCssProperty",
+                                  "active": true
+                              },
+                              {
+                                  "name": "customCss",
+                                  "active": true
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "items": [],
+          "form": null
+      }
+  }
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+custom: null

@@ -1,0 +1,27 @@
+uuid: f53c1904-ec87-47d3-8ce9-f5efe07b478b
+langcode: en
+status: true
+dependencies: {  }
+id: 9395a1
+label: 9395A1
+json_values: |
+  {
+      "link": true,
+      "value": {
+          "value": {
+              "hex": "#9395a1",
+              "rgba": "rgba(147, 149, 161, 1)"
+          }
+      },
+      "name": "9395A1",
+      "uid": "9395a1",
+      "class": ".coh-color-9395a1",
+      "variable": "$coh-color-9395a1",
+      "inuse": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 40

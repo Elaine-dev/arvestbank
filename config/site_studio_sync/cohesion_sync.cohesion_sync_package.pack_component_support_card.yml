@@ -1,0 +1,23 @@
+uuid: db96e908-639d-46b2-8b63-a25aef5f0913
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_support_card
+label: 'Component Support Card'
+description: "Support Card layout and styles. Last Updated: Allie Jones 6/29/2021\t\r\n"
+excluded_entity_types: '[]'
+settings: |
+  {
+      "aeba55ee-754a-4da3-b95b-026191d84eb2": {
+          "type": "cohesion_component",
+          "items": {
+              "aeba55ee-754a-4da3-b95b-026191d84eb2": {
+                  "type": "cohesion_component"
+              },
+              "053bdd7e-6e88-43dd-8538-6ea7d1110ea1": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

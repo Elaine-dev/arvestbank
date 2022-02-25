@@ -1,0 +1,27 @@
+uuid: b441d91a-eae8-4d0e-b820-684288168f48
+langcode: en
+status: true
+dependencies: {  }
+id: '003162'
+label: '#003162'
+json_values: |
+  {
+      "link": true,
+      "value": {
+          "value": {
+              "hex": "#003162",
+              "rgba": "rgba(0, 49, 98, 1)"
+          }
+      },
+      "name": "#003162",
+      "uid": "003162",
+      "class": ".coh-color-003162",
+      "variable": "$coh-color-003162",
+      "inuse": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 15

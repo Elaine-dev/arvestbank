@@ -1,0 +1,29 @@
+uuid: a74eb209-8fae-44e0-8efd-fbba1208a07a
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_careers
+label: 'Component Careers'
+description: 'The associate y/n modal and iframe components for the Career Center page.  Updated: Scott Earnest 7/16/21. '
+excluded_entity_types: '[]'
+settings: |
+  {
+      "68fd56a5-3d0f-4ebb-ac63-2eecff5da78e": {
+          "type": "cohesion_component",
+          "items": {
+              "68fd56a5-3d0f-4ebb-ac63-2eecff5da78e": {
+                  "type": "cohesion_component"
+              }
+          },
+          "checked": true
+      },
+      "d351fadc-e8b0-4643-b170-dc092cc0e452": {
+          "type": "cohesion_component",
+          "items": {
+              "d351fadc-e8b0-4643-b170-dc092cc0e452": {
+                  "type": "cohesion_component"
+              }
+          },
+          "checked": true
+      }
+  }

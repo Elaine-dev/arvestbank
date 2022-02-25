@@ -1,0 +1,80 @@
+uuid: a7d5510a-f373-4fe6-9cae-f35ac94438c0
+langcode: en
+status: true
+dependencies: {  }
+id: 3667cd61
+label: 'float right'
+json_values: |
+  {
+      "preview": {
+          "text": "<div class=\"coh-preview\">Default content for 'Layout'.<\/div>\n",
+          "textFormat": "cohesion"
+      },
+      "styles": {
+          "settings": {
+              "element": "div",
+              "class": "",
+              "combinator": "",
+              "pseudo": ""
+          },
+          "styles": {
+              "xl": {
+                  "clearfix": {
+                      "value": true
+                  },
+                  "float": {
+                      "value": "right"
+                  }
+              }
+          }
+      },
+      "sBackgroundColour": "#FFFFFF",
+      "variableFields": []
+  }
+json_mapper: |
+  {
+      "styles": {
+          "title": "Layout",
+          "selectorType": "topLevel",
+          "formDefinition": [
+              {
+                  "formKey": "layout",
+                  "children": [
+                      {
+                          "formKey": "float",
+                          "breakpoints": [
+                              {
+                                  "name": "xl"
+                              }
+                          ],
+                          "activeFields": [
+                              {
+                                  "name": "float",
+                                  "active": true
+                              },
+                              {
+                                  "name": "clear",
+                                  "active": false
+                              },
+                              {
+                                  "name": "clearfix",
+                                  "active": true
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "items": [],
+          "form": null
+      }
+  }
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-float-right
+custom_style_type: generic
+available_in_wysiwyg: true
+parent: null
+weight: 0

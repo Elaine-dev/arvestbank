@@ -1,0 +1,20 @@
+uuid: 698fdd17-c5c2-4f54-900c-9d10fff1d295
+langcode: en
+status: true
+dependencies: {  }
+id: pack_trust_officers_block
+label: 'Component Trust Officers block'
+description: 'Contains the trust officers block component to be placed in a node to render the trust officers view. Last Updated: Allie Jones 06/02/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "23a90036-1b85-4511-a2f8-d971077258ba": {
+          "type": "cohesion_component",
+          "items": {
+              "23a90036-1b85-4511-a2f8-d971077258ba": {
+                  "type": "cohesion_component"
+              }
+          },
+          "checked": true
+      }
+  }

@@ -1,0 +1,20 @@
+uuid: 569982fa-a9dd-4d5a-8ae2-f6ca7e73c59f
+langcode: en
+status: true
+dependencies: {  }
+id: pack_master_template_campaign_te
+label: 'Master Template Campaign Template'
+description: 'Campaign pages master template. Updated: Aaron Parkening 7/7/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "c33d12f8-377f-444e-bf8d-16856ed5e7b8": {
+          "type": "cohesion_master_templates",
+          "items": {
+              "c33d12f8-377f-444e-bf8d-16856ed5e7b8": {
+                  "type": "cohesion_master_templates"
+              }
+          },
+          "checked": true
+      }
+  }

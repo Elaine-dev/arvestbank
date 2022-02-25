@@ -1,0 +1,28 @@
+uuid: 9d6a93a4-2979-4e98-9e9f-8266fbb906e6
+langcode: en
+status: true
+dependencies: {  }
+id: red-2
+label: 'Red 2'
+json_values: |
+  {
+      "link": false,
+      "value": {
+          "value": {
+              "hex": "#e60000",
+              "rgba": "rgba(230, 0, 0, 1)"
+          }
+      },
+      "name": "#e60000 Primary Red",
+      "uid": "red-2",
+      "class": ".coh-color-red-2",
+      "variable": "$coh-color-red-2",
+      "inuse": true,
+      "wysiwyg": false
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 35

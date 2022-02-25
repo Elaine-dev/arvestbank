@@ -1,0 +1,20 @@
+uuid: 9b3025ab-50d1-40c9-8954-e0dc0af0f765
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_white_text
+label: 'Custom Style White Text'
+description: 'A custom style to add white to a variety of text. Updated: Aaron Parkening 07/07/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "64e73e30-f6fe-4d7a-a6d2-274fa11efb67": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "64e73e30-f6fe-4d7a-a6d2-274fa11efb67": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

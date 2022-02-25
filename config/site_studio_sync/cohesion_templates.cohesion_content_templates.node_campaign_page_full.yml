@@ -1,0 +1,44 @@
+uuid: 69dc0b19-ed5c-4b0e-b0b3-46b2c9891c1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_templates.cohesion_master_templates.mstr_tpl_campaign_template
+id: node_campaign_page_full
+label: 'Full content (Node, Campaign Page)'
+json_values: |
+  {
+      "canvas": [
+          {
+              "type": "item",
+              "uid": "drupal-content",
+              "title": "Content",
+              "status": {
+                  "collapsed": true
+              },
+              "uuid": "d161bf94-eee6-494b-b6d7-4a4a28417c99",
+              "parentUid": "root",
+              "children": []
+          }
+      ],
+      "mapper": {
+          "d161bf94-eee6-494b-b6d7-4a4a28417c99": {}
+      },
+      "model": [],
+      "previewModel": {},
+      "variableFields": {},
+      "meta": {
+          "fieldHistory": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+modified: true
+selectable: true
+custom: false
+twig_template: node--cohesion--node-campaign-page-full
+default: true
+entity_type: node
+bundle: campaign_page
+view_mode: full
+master_template: mstr_tpl_campaign_template

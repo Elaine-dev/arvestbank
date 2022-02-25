@@ -1,0 +1,47 @@
+uuid: 35abcc54-f926-43e4-9df3-c5bc7e849fa1
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_styles_font_sizes_fo
+label: 'Custom Styles WYSIWYG Font Sizes'
+description: 'Custom Style for WYSIWYG font sizes. Last Updated: Aaron Parkening 6/23/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "65ed6bbe-ce4c-4bd2-b806-2fd7ff6be781": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "65ed6bbe-ce4c-4bd2-b806-2fd7ff6be781": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      },
+      "06d5a640-782b-4509-8868-1f67137d9a6a": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "06d5a640-782b-4509-8868-1f67137d9a6a": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      },
+      "0bc9e3e1-1d84-433d-ac5f-682d5cbb51e0": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "0bc9e3e1-1d84-433d-ac5f-682d5cbb51e0": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      },
+      "38bf4962-4fb8-45af-bb21-4ab7cd9d77f3": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "38bf4962-4fb8-45af-bb21-4ab7cd9d77f3": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

@@ -1,0 +1,29 @@
+uuid: c13f60dc-eca9-4cd6-944f-ab3b6b14dfa5
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_styles_icon_replace
+label: 'Custom Styles Icon Replace'
+description: 'Styles to replace yes and no with icons. Used in tables. Updated: Aaron Parkening on 5/27/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "eeef6750-f51b-4b59-9262-a644e5e3d46a": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "eeef6750-f51b-4b59-9262-a644e5e3d46a": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      },
+      "42e24d6d-5d6b-4abf-a29f-25bfbb1a5e92": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "42e24d6d-5d6b-4abf-a29f-25bfbb1a5e92": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

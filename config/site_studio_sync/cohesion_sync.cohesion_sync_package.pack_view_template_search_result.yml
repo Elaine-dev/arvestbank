@@ -1,0 +1,20 @@
+uuid: 01baa36f-5bfa-4ebd-868d-43bcc977574c
+langcode: en
+status: true
+dependencies: {  }
+id: pack_view_template_search_result
+label: 'View Template Search Results'
+description: "A Site studio package for the view template Search Results.\r\nLast Updated: Aaron Parkening 6/11/2021"
+excluded_entity_types: '[]'
+settings: |
+  {
+      "82ca245b-5d06-4b1c-8e49-25886c7cd847": {
+          "type": "cohesion_view_templates",
+          "items": {
+              "82ca245b-5d06-4b1c-8e49-25886c7cd847": {
+                  "type": "cohesion_view_templates"
+              }
+          },
+          "checked": true
+      }
+  }

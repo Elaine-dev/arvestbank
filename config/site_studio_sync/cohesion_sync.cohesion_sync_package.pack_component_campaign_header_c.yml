@@ -1,0 +1,23 @@
+uuid: 4b69ee73-f71a-47ac-9b75-0d7ebc46991c
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_campaign_header_c
+label: 'Component Campaign Header Card'
+description: 'Campaign header card layout and styles. Last Updated: Allie Jones 7/11/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "04c88134-e4b9-42e9-8e80-d9992a920d28": {
+          "type": "cohesion_component",
+          "items": {
+              "04c88134-e4b9-42e9-8e80-d9992a920d28": {
+                  "type": "cohesion_component"
+              },
+              "b550dcbb-c185-4168-8eb4-7ca7ebc2cc0d": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

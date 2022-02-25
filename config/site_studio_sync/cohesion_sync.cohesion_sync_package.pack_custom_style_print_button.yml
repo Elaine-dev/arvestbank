@@ -1,0 +1,20 @@
+uuid: 169ea75a-ea18-4a52-8f69-dc798312541a
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_print_button
+label: 'Custom Style Print Button'
+description: 'A custom style for the Print Button on basic pages and calculators. Last Updated: Allie Jones 06/10/21'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "f694aea3-8b43-4297-b7ca-43ca25aaadcc": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "f694aea3-8b43-4297-b7ca-43ca25aaadcc": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

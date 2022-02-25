@@ -1,0 +1,23 @@
+uuid: 2289eaa9-321e-4ae0-822f-fed88ecd4775
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_speciality_debit_
+label: 'Component Speciality Debit Card View Block'
+description: 'A component for the Speciality Debit Card View Block. Last Updated: Aaron Parkening 06/10/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "a5e3900a-6e4f-4374-b1da-b4ab15983ce5": {
+          "type": "cohesion_component",
+          "items": {
+              "a5e3900a-6e4f-4374-b1da-b4ab15983ce5": {
+                  "type": "cohesion_component"
+              },
+              "b1ce6167-5687-4bda-bbb6-39a77a591fd2": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

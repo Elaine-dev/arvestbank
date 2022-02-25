@@ -1,0 +1,20 @@
+uuid: de625e55-d11c-435d-b371-f18ead6557e2
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_sidebar_nav_bl
+label: 'Custom Style Sidebar Nav Block'
+description: 'A Site Studio custom style for the Sidebar navigaiton block'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "91aabcdc-a5ec-427c-94e8-ae70204b17ca": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "91aabcdc-a5ec-427c-94e8-ae70204b17ca": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

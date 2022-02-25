@@ -1,0 +1,20 @@
+uuid: e35fa92a-f0db-46eb-8918-4472a943b1b6
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_vertical_cente
+label: 'Custom Style Vertical Center Child'
+description: 'A custom style to vertically center element children. Updated: Aaron Parkening 6/8/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "5c7ecf64-f8f2-4587-a3d1-596ca9530f4d": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "5c7ecf64-f8f2-4587-a3d1-596ca9530f4d": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

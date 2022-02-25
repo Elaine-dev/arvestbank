@@ -1,0 +1,20 @@
+uuid: 583fac35-d874-4bb3-b79b-2123b4288184
+langcode: en
+status: true
+dependencies: {  }
+id: pack_helper_help_tab
+label: 'Helper Help Tab'
+description: "A helper with form builder help tab and content.\r\nAuthor: Aaron Parkening / Last update: 5/7/2021"
+excluded_entity_types: '[]'
+settings: |
+  {
+      "74b7cb05-cba6-4944-bb16-937aea33f1d5": {
+          "type": "cohesion_helper",
+          "items": {
+              "74b7cb05-cba6-4944-bb16-937aea33f1d5": {
+                  "type": "cohesion_helper"
+              }
+          },
+          "checked": true
+      }
+  }

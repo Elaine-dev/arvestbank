@@ -1,0 +1,20 @@
+uuid: 486b8631-5093-448e-ae8d-1210ef5a7a6a
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_content_with_righ
+label: 'Component Content with Right Sidebar'
+description: 'A reusable component for content with a right sidebar. Last Updated: Allie Jones 06/13/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "f55110ca-d412-48a4-9992-245427b7c0ba": {
+          "type": "cohesion_component",
+          "items": {
+              "f55110ca-d412-48a4-9992-245427b7c0ba": {
+                  "type": "cohesion_component"
+              }
+          },
+          "checked": true
+      }
+  }

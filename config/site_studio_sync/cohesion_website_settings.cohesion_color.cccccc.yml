@@ -1,0 +1,28 @@
+uuid: f445f9ef-ee42-48f7-870e-a7f2d02fbd05
+langcode: en
+status: true
+dependencies: {  }
+id: cccccc
+label: '#cccccc'
+json_values: |
+  {
+      "link": true,
+      "value": {
+          "value": {
+              "hex": "#cccccc",
+              "rgba": "rgba(204, 204, 204, 1)"
+          }
+      },
+      "name": "#cccccc",
+      "uid": "cccccc",
+      "class": ".coh-color-cccccc",
+      "variable": "$coh-color-cccccc",
+      "wysiwyg": false,
+      "inuse": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 4

@@ -1,0 +1,27 @@
+uuid: dc6b0d53-b46c-42fa-a0de-06099f273361
+langcode: en
+status: true
+dependencies: {  }
+id: f5f9fe
+label: '#f5f9fe'
+json_values: |
+  {
+      "link": true,
+      "value": {
+          "value": {
+              "hex": "#f5f9fe",
+              "rgba": "rgba(245, 249, 254, 1)"
+          }
+      },
+      "name": "#f5f9fe",
+      "uid": "f5f9fe",
+      "class": ".coh-color-f5f9fe",
+      "variable": "$coh-color-f5f9fe",
+      "inuse": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 32

@@ -1,0 +1,365 @@
+uuid: cb11330b-60f1-4e06-ae24-a9c7eda8ea21
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_custom_styles.cohesion_custom_style.91e6820e
+    - cohesion_custom_styles.cohesion_custom_style.939271cd
+    - cohesion_custom_styles.cohesion_custom_style.c5b21ed6
+    - cohesion_custom_styles.cohesion_custom_style.fa242aad
+    - cohesion_elements.cohesion_component.cpt_adjustable_two_column_layout
+    - cohesion_elements.cohesion_component.cpt_campaign_components
+    - cohesion_elements.cohesion_component.cpt_campaign_header_card
+    - cohesion_elements.cohesion_helper_category.hlp_cat_campaign_page_helpers
+id: hlp_header_and_2_rows_of_columns
+label: 'Header and 2 rows of columns'
+json_values: |
+  {
+      "canvas": [
+          {
+              "uid": "cpt_campaign_header_card",
+              "type": "component",
+              "title": "Campaign Header Card",
+              "enabled": true,
+              "category": "category-4",
+              "componentId": "cpt_campaign_header_card",
+              "componentType": "container",
+              "uuid": "badd981d-fcb6-4b52-85d0-886053d11a54",
+              "parentUid": "root",
+              "children": []
+          },
+          {
+              "uid": "cpt_adjustable_two_column_layout",
+              "type": "component",
+              "title": "Adjustable Two Column Layout",
+              "enabled": true,
+              "category": "category-1",
+              "componentId": "cpt_adjustable_two_column_layout",
+              "componentType": "row-for-columns",
+              "uuid": "e29af00c-bfd8-47a1-86c3-1bc3889fe409",
+              "parentUid": "root",
+              "status": {
+                  "collapsed": false
+              },
+              "children": [
+                  {
+                      "type": "container",
+                      "uid": "component-drop-zone",
+                      "mimicParent": true,
+                      "parentUid": "cpt_adjustable_two_column_layout",
+                      "title": "Component drop zone",
+                      "selected": false,
+                      "status": {
+                          "collapsed": false,
+                          "disabled": false,
+                          "collapsedParents": [
+                              "4d072e8d-7cba-47f8-a019-1ac929c27b1c"
+                          ]
+                      },
+                      "uuid": "18b15f6c-db27-4403-92d7-641734272221",
+                      "dropzoneId": "eda5a03c-fe3f-4039-bd24-19de468bb13e",
+                      "children": [
+                          {
+                              "uid": "cpt_campaign_components",
+                              "type": "component",
+                              "title": "Campaign Icon and Text Card",
+                              "enabled": true,
+                              "category": "category-4",
+                              "componentId": "cpt_campaign_components",
+                              "componentType": "container",
+                              "uuid": "a77582c4-47f3-4b73-bce2-7b5e5a96afcb",
+                              "parentUid": "component-drop-zone",
+                              "status": {
+                                  "collapsedParents": [
+                                      "4d072e8d-7cba-47f8-a019-1ac929c27b1c"
+                                  ]
+                              },
+                              "children": []
+                          }
+                      ]
+                  },
+                  {
+                      "type": "container",
+                      "uid": "component-drop-zone",
+                      "mimicParent": true,
+                      "parentUid": "cpt_adjustable_two_column_layout",
+                      "title": "Component drop zone",
+                      "selected": false,
+                      "status": {
+                          "collapsed": false,
+                          "disabled": false,
+                          "collapsedParents": [
+                              "4d072e8d-7cba-47f8-a019-1ac929c27b1c"
+                          ]
+                      },
+                      "uuid": "d21ddc38-879f-4a70-9c41-b200b4e4cc55",
+                      "dropzoneId": "40928edf-f27e-4e25-bc06-2a0d25b4aff1",
+                      "children": [
+                          {
+                              "uid": "cpt_campaign_components",
+                              "type": "component",
+                              "title": "Campaign Icon and Text Card",
+                              "enabled": true,
+                              "category": "category-4",
+                              "componentId": "cpt_campaign_components",
+                              "componentType": "container",
+                              "uuid": "e9dab37d-fc22-437d-9b31-43182538847c",
+                              "parentUid": "component-drop-zone",
+                              "status": {
+                                  "collapsedParents": [
+                                      "4d072e8d-7cba-47f8-a019-1ac929c27b1c"
+                                  ]
+                              },
+                              "children": []
+                          }
+                      ]
+                  }
+              ]
+          },
+          {
+              "uid": "cpt_adjustable_two_column_layout",
+              "type": "component",
+              "title": "Adjustable Two Column Layout",
+              "enabled": true,
+              "category": "category-1",
+              "componentId": "cpt_adjustable_two_column_layout",
+              "componentType": "row-for-columns",
+              "uuid": "bf973288-2222-4556-bf93-8043520daf97",
+              "parentUid": "root",
+              "status": {
+                  "collapsed": false
+              },
+              "children": [
+                  {
+                      "type": "container",
+                      "uid": "component-drop-zone",
+                      "mimicParent": true,
+                      "parentUid": "cpt_adjustable_two_column_layout",
+                      "title": "Component drop zone",
+                      "selected": false,
+                      "status": {
+                          "collapsed": false,
+                          "disabled": false,
+                          "collapsedParents": [
+                              "b1e0d0c9-c968-4174-9e14-b3c141ea190e"
+                          ]
+                      },
+                      "uuid": "46e11f4e-8911-46d2-a80c-ef5683160c1a",
+                      "dropzoneId": "eda5a03c-fe3f-4039-bd24-19de468bb13e",
+                      "children": [
+                          {
+                              "uid": "cpt_campaign_components",
+                              "type": "component",
+                              "title": "Campaign Icon and Text Card",
+                              "enabled": true,
+                              "category": "category-4",
+                              "componentId": "cpt_campaign_components",
+                              "componentType": "container",
+                              "uuid": "54cb5d06-b15e-4a23-aeb2-3f41a15e4127",
+                              "parentUid": "component-drop-zone",
+                              "children": []
+                          }
+                      ]
+                  },
+                  {
+                      "type": "container",
+                      "uid": "component-drop-zone",
+                      "mimicParent": true,
+                      "parentUid": "cpt_adjustable_two_column_layout",
+                      "title": "Component drop zone",
+                      "selected": false,
+                      "status": {
+                          "collapsed": false,
+                          "disabled": false,
+                          "collapsedParents": [
+                              "b1e0d0c9-c968-4174-9e14-b3c141ea190e"
+                          ]
+                      },
+                      "uuid": "399f3764-5003-41d5-8338-d88f6a2d20f9",
+                      "dropzoneId": "40928edf-f27e-4e25-bc06-2a0d25b4aff1",
+                      "children": [
+                          {
+                              "uid": "cpt_campaign_components",
+                              "type": "component",
+                              "title": "Campaign Icon and Text Card",
+                              "enabled": true,
+                              "category": "category-4",
+                              "componentId": "cpt_campaign_components",
+                              "componentType": "container",
+                              "uuid": "94960be3-191a-42e1-b4d6-511dedaab207",
+                              "parentUid": "component-drop-zone",
+                              "children": []
+                          }
+                      ]
+                  }
+              ]
+          }
+      ],
+      "mapper": {},
+      "model": {
+          "badd981d-fcb6-4b52-85d0-886053d11a54": {
+              "settings": {
+                  "title": "Campaign Header Card"
+              },
+              "ca12f516-0541-4263-8dd9-8464769a226c": {
+                  "entity": {
+                      "entityId": "2c4f020c-fcf4-42c9-ac87-e2599dea6cc1",
+                      "entityUUID": "2c4f020c-fcf4-42c9-ac87-e2599dea6cc1",
+                      "entityType": "media"
+                  }
+              },
+              "8b41f1c7-8cb1-4372-b3a7-a4ed9d0d538b": {
+                  "text": "<h1><span class=\"coh-style-font-small\">GET WHERE YOU'RE GOING WITH<\/span><br \/><span class=\"coh-style-font-large\"><strong>ARVEST AUTO LOANS<\/strong><\/span><br \/><span class=\"coh-style-font-x-small-\">CARS, TRUCKS, AND TRAILERS (AND MORE), OH MY!<\/span><\/h1><p>&nbsp;<\/p><p><a class=\"coh-style-link-arrow-button\" href=\"https:\/\/credit.arvest.com\/oa\/lt\/22942\/?_gl=1*19yxfnk*_ga*MTgxNjA1NjA5Mi4xNjIxNTM4MTg2*_ga_GRH26TKW0W*MTYyNDU1MjczMi4xNTAuMS4xNjI0NTU0MjI4LjYw#\/beginApp\">Apply Now<\/a><\/p>",
+                  "textFormat": "cohesion"
+              }
+          },
+          "e29af00c-bfd8-47a1-86c3-1bc3889fe409": {
+              "settings": {
+                  "title": "Adjustable Two Column Layout"
+              },
+              "7a3de526-046d-4851-991f-0771a619f822": "8"
+          },
+          "18b15f6c-db27-4403-92d7-641734272221": {
+              "settings": {
+                  "title": "Column 1 drop zone",
+                  "dropzoneHideSelector": ""
+              }
+          },
+          "a77582c4-47f3-4b73-bce2-7b5e5a96afcb": {
+              "settings": {
+                  "title": "Your new wheels are waiting for you!"
+              },
+              "e2e389b2-5c09-43a1-9063-c156b94320db": {
+                  "entity": {
+                      "entityUUID": "7fd799cf-06bc-4fd2-a404-8bcc03fea359",
+                      "entityId": "7fd799cf-06bc-4fd2-a404-8bcc03fea359",
+                      "entityType": "media"
+                  }
+              },
+              "f0bb808b-dc36-4dfd-a7da-ff2272214c51": "Your new wheels are waiting for you!",
+              "42c67b18-1610-47eb-b102-29cc1cde918f": {
+                  "text": "<p>There aren\u2019t many big purchases more exciting than buying a new vehicle. Whether you\u2019re looking for something sporty, family-friendly, or something to take off-road and get a little dirty, Arvest can customize a loan just for you.<\/p>\n\n<p><a href=\"https:\/\/credit.arvest.com\/oa\/lt\/22942\/#\/beginApp\">Apply now!<\/a><\/p>\n\n<p>Arvest also offers loans for boats, motorcycles, RVs, disability conversion vans, and more.&nbsp;<a href=\"\/personal\/borrow\/consumer-loans\/auto-loans-boats-motorcycles-vans?WT.ac=ABO-autoLP-visitrecloanspage-text\">Visit our recreational loans page<\/a>&nbsp;to learn more and apply.<\/p>\n",
+                  "textFormat": "cohesion"
+              },
+              "1187eb1c-e1d5-40ab-89b9-da28f1d1a100": {
+                  "entity_type": "media",
+                  "view_mode": "thumbnail_overlay"
+              }
+          },
+          "d21ddc38-879f-4a70-9c41-b200b4e4cc55": {
+              "settings": {
+                  "title": "Column 2 drop zone",
+                  "dropzoneHideSelector": ""
+              }
+          },
+          "e9dab37d-fc22-437d-9b31-43182538847c": {
+              "settings": {
+                  "title": "How to Apply"
+              },
+              "e2e389b2-5c09-43a1-9063-c156b94320db": {
+                  "entity": {
+                      "entityUUID": "51812830-d64a-48f8-b080-a96632e808bd",
+                      "entityId": "51812830-d64a-48f8-b080-a96632e808bd",
+                      "entityType": "media"
+                  }
+              },
+              "f0bb808b-dc36-4dfd-a7da-ff2272214c51": "How to Apply",
+              "42c67b18-1610-47eb-b102-29cc1cde918f": {
+                  "text": "<ol>\n\t<li><a href=\"https:\/\/credit.arvest.com\/oa\/lt\/22942\/?_gl=1*1ai9x1x*_ga*MTgxNjA1NjA5Mi4xNjIxNTM4MTg2*_ga_GRH26TKW0W*MTYyNDU1MjczMi4xNTAuMS4xNjI0NTUyNzM2LjU2#\/beginApp\">Apply Online<\/a><\/li>\n\t<li><a href=\"https:\/\/www.arvest.com\/branch-locator?WT.ac=ABO-autoLP-howtoapply-branchlocator-text\">Visit a local Arvest Bank branch<\/a><\/li>\n\t<li>Apply via phone at<br \/>\n\t(855) 662-5626<\/li>\n<\/ol>\n\n<p>&nbsp;<\/p>\n\n<p>Complete our easy online application and let our lending professionals help you get a great rate on your new auto loan.<\/p>\n",
+                  "textFormat": "cohesion"
+              },
+              "1187eb1c-e1d5-40ab-89b9-da28f1d1a100": {
+                  "entity_type": "media",
+                  "view_mode": "thumbnail_overlay"
+              }
+          },
+          "bf973288-2222-4556-bf93-8043520daf97": {
+              "settings": {
+                  "title": "Adjustable Two Column Layout"
+              },
+              "7a3de526-046d-4851-991f-0771a619f822": "8"
+          },
+          "46e11f4e-8911-46d2-a80c-ef5683160c1a": {
+              "settings": {
+                  "title": "Column 1 drop zone",
+                  "dropzoneHideSelector": ""
+              }
+          },
+          "54cb5d06-b15e-4a23-aeb2-3f41a15e4127": {
+              "settings": {
+                  "title": "Protection plans for your vehicle"
+              },
+              "e2e389b2-5c09-43a1-9063-c156b94320db": {
+                  "entity": {
+                      "entityUUID": "41b0d5a4-fee1-4a18-baf7-ee479ce48e72",
+                      "entityId": "41b0d5a4-fee1-4a18-baf7-ee479ce48e72",
+                      "entityType": "media"
+                  }
+              },
+              "f0bb808b-dc36-4dfd-a7da-ff2272214c51": "Arvest offers protection plans for your vehicle",
+              "42c67b18-1610-47eb-b102-29cc1cde918f": {
+                  "text": "<p>As we all know, the longer you own your vehicle, the more likely you are to eventually make repairs to it. That's why Arvest offers extended service plans for your vehicle from Route 66 Auto Service Contracts. The contracts provide coverage for all makes and models of cars and protects against major mechanical expense with no deductible on covered parts and labor (other shop fees may apply).<\/p>\n\n<p>Different plans are available to fit your needs.&nbsp;<a href=\"\/personal\/protect\/auto-warranty\/quote?WT.ac=ABO-autoLP-protectionplans-ratequote-text\">Request a free rate quote<\/a> or <a href=\"\/pdfs\/personal\/route-66-coverage.pdf?WT.ac=ABO-autoLP-protectionplans-pdf-brochure\">download the Route 66 Coverage Brochure<\/a> for more details.<\/p>\n",
+                  "textFormat": "cohesion"
+              },
+              "1187eb1c-e1d5-40ab-89b9-da28f1d1a100": {
+                  "entity_type": "media",
+                  "view_mode": "thumbnail_overlay"
+              }
+          },
+          "399f3764-5003-41d5-8338-d88f6a2d20f9": {
+              "settings": {
+                  "title": "Column 2 drop zone",
+                  "dropzoneHideSelector": ""
+              }
+          },
+          "94960be3-191a-42e1-b4d6-511dedaab207": {
+              "settings": {
+                  "title": "Campaign Icon and Text Card"
+              },
+              "e2e389b2-5c09-43a1-9063-c156b94320db": {
+                  "entity": {
+                      "entityUUID": "aaddec2f-28c2-48c3-a737-ab8c5a11772f",
+                      "entityId": "aaddec2f-28c2-48c3-a737-ab8c5a11772f",
+                      "entityType": "media"
+                  }
+              },
+              "f0bb808b-dc36-4dfd-a7da-ff2272214c51": "Calculators",
+              "42c67b18-1610-47eb-b102-29cc1cde918f": {
+                  "text": "<p>Our financial calculators can help you decide what\u2019s best for you and your family\u2019s budget.<\/p>\n\n<ul>\n\t<li><a data-target=\"#calc-modal-one\" data-toggle=\"modal\" href=\"https:\/\/www.arvest.com\/auto#\" id=\"calc-link-one\" onclick=\"dcsMultiTrack( 'WT.dl', '0', 'DCS.dcsuri', '\/auto-afford-calc', 'WT.ti', 'Calculator Open');\">What kind of car can I afford?<\/a><\/li>\n\t<li><a data-target=\"#calc-modal-two\" data-toggle=\"modal\" href=\"https:\/\/www.arvest.com\/auto#\" id=\"calc-link-two\" onclick=\"dcsMultiTrack( 'WT.dl', '0', 'DCS.dcsuri', '\/auto-time-payoff-calc', 'WT.ti', 'Calculator Open');\">How long will it take to pay off my loan?<\/a><\/li>\n\t<li><a data-target=\"#calc-modal-three\" data-toggle=\"modal\" href=\"https:\/\/www.arvest.com\/auto#\" id=\"calc-link-three\" onclick=\"dcsMultiTrack( 'WT.dl', '0', 'DCS.dcsuri', '\/auto-calc-loan-payment', 'WT.ti', 'Calculator Open');\">How much will my loan payment be?<\/a><\/li>\n<\/ul>\n",
+                  "textFormat": "cohesion"
+              },
+              "1187eb1c-e1d5-40ab-89b9-da28f1d1a100": {
+                  "entity_type": "media",
+                  "view_mode": "thumbnail_overlay"
+              }
+          }
+      },
+      "previewModel": {
+          "badd981d-fcb6-4b52-85d0-886053d11a54": {},
+          "e29af00c-bfd8-47a1-86c3-1bc3889fe409": {},
+          "a77582c4-47f3-4b73-bce2-7b5e5a96afcb": {},
+          "e9dab37d-fc22-437d-9b31-43182538847c": {},
+          "bf973288-2222-4556-bf93-8043520daf97": {},
+          "54cb5d06-b15e-4a23-aeb2-3f41a15e4127": {},
+          "94960be3-191a-42e1-b4d6-511dedaab207": {}
+      },
+      "variableFields": {
+          "badd981d-fcb6-4b52-85d0-886053d11a54": [],
+          "e29af00c-bfd8-47a1-86c3-1bc3889fe409": [],
+          "a77582c4-47f3-4b73-bce2-7b5e5a96afcb": [],
+          "e9dab37d-fc22-437d-9b31-43182538847c": [],
+          "bf973288-2222-4556-bf93-8043520daf97": [],
+          "54cb5d06-b15e-4a23-aeb2-3f41a15e4127": [],
+          "94960be3-191a-42e1-b4d6-511dedaab207": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+category: hlp_cat_campaign_page_helpers
+preview_image: ''
+entity_type_access: {  }
+bundle_access: {  }
+weight: null

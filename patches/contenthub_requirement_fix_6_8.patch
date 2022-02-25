@@ -1,0 +1,13 @@
+diff --git a/cohesion.install b/cohesion.install
+index b03798b..dd4aa87 100755
+--- a/cohesion.install
++++ b/cohesion.install
+@@ -32,7 +32,7 @@ function cohesion_requirements($phase) {
+     );
+   }
+
+-  if (\Drupal::moduleHandler()->moduleExists('acquia_lift') && !\Drupal::moduleHandler()->moduleExists('sitestudio_contenthub_publisher')) {
++  if (\Drupal::moduleHandler()->moduleExists('acquia_contenthub') && !\Drupal::moduleHandler()->moduleExists('sitestudio_contenthub_publisher')) {
+     $settings = ['@link' => 'https://github.com/acquia/sitestudio_contenthub'];
+     $requirements['cohesion'] = array(
+       'title' => t('Site Studio'),

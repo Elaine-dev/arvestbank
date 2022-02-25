@@ -1,0 +1,20 @@
+uuid: e8f75015-02d1-47dc-b2c2-fb16edd01e07
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_webforms
+label: 'Custom Style Webforms'
+description: 'A custom style for all webforms. Last updated: Edward Wu 08/23/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "c8959ad9-781b-4e07-bac8-00686cf1966a": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "c8959ad9-781b-4e07-bac8-00686cf1966a": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

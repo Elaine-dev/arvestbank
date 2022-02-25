@@ -1,0 +1,20 @@
+uuid: 1e66d1d3-69c3-44f5-821c-7ce0f170a80e
+langcode: en
+status: true
+dependencies: {  }
+id: pack_content_template_all_conten
+label: 'Content Template All content'
+description: 'The default content template and fall back for all content. Last Updated: Allie Jones 06/30/21'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "b1290348-d60f-4b65-9794-efc22b7a8499": {
+          "type": "cohesion_content_templates",
+          "items": {
+              "b1290348-d60f-4b65-9794-efc22b7a8499": {
+                  "type": "cohesion_content_templates"
+              }
+          },
+          "checked": true
+      }
+  }

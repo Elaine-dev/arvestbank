@@ -1,0 +1,20 @@
+uuid: ad7aed77-a257-4949-861e-0932ee34f7a4
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_horizontal_app
+label: 'Custom Style Horizontal App Buttons'
+description: 'A custom style for horizontal app buttons. Last Updated: Allie Jones 07/11/2021.'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "b7fd13ac-cac3-4627-9e68-103405aad07a": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "b7fd13ac-cac3-4627-9e68-103405aad07a": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

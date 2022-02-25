@@ -1,0 +1,23 @@
+uuid: 81b0c606-745d-4cfe-b648-0dce749a3e27
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_campaign_text_a_1
+label: 'Component Campaign Text and Videos Card'
+description: 'Campaign text and videos card layout and styles. Last Updated: Aaron Parkening 6/29/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "a151274f-f5cd-4c37-8b07-28efed053a7e": {
+          "type": "cohesion_component",
+          "items": {
+              "a151274f-f5cd-4c37-8b07-28efed053a7e": {
+                  "type": "cohesion_component"
+              },
+              "f90baf07-b7a3-4bfd-9f4f-903f18bd97ee": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

@@ -1,0 +1,33 @@
+uuid: 598ec417-3023-49db-8ea7-f2c8f0ea388f
+langcode: en
+status: true
+dependencies: {  }
+id: '266190'
+label: '266190'
+json_values: |
+  {
+      "link": true,
+      "value": {
+          "value": {
+              "hex": "#266190",
+              "rgba": "rgba(38, 97, 144, 1)"
+          }
+      },
+      "name": "266190",
+      "uid": "266190",
+      "class": ".coh-color-266190",
+      "variable": "$coh-color-266190",
+      "tags": [
+          {
+              "label": "Featured",
+              "value": "featured"
+          }
+      ],
+      "inuse": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 11

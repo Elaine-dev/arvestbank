@@ -1,0 +1,27 @@
+uuid: 620009e9-f360-49e0-938f-c3b158e6b0e5
+langcode: en
+status: true
+dependencies: {  }
+id: '426386'
+label: '#426386'
+json_values: |
+  {
+      "link": true,
+      "value": {
+          "value": {
+              "hex": "#426386",
+              "rgba": "rgba(66, 99, 134, 1)"
+          }
+      },
+      "name": "#426386",
+      "uid": "426386",
+      "class": ".coh-color-426386",
+      "variable": "$coh-color-426386",
+      "inuse": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 23

@@ -1,0 +1,20 @@
+uuid: 7ea76c85-9734-46a0-9802-f9e4ff09dea1
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_ask_arvest
+label: 'Component Ask Arvest'
+description: 'A component for an Ask Arvest Search block. Last Updated: Allie Jones 06/09/2021.'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "38446baa-cd91-42d6-8344-19b3516c3e9c": {
+          "type": "cohesion_component",
+          "items": {
+              "38446baa-cd91-42d6-8344-19b3516c3e9c": {
+                  "type": "cohesion_component"
+              }
+          },
+          "checked": true
+      }
+  }

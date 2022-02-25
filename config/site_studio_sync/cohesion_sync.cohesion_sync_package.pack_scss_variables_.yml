@@ -1,0 +1,38 @@
+uuid: 02168013-79ab-4471-b01f-4706cc7e9fd2
+langcode: en
+status: true
+dependencies: {  }
+id: pack_scss_variables_
+label: 'SCSS Variables '
+description: "A Site Studio package for all SCSS variables.\r\nAuthor: Aaron Parkening / Last update: 5/7/2021"
+excluded_entity_types: '[]'
+settings: |
+  {
+      "4e87ed85-a03d-49e4-989f-cc36928935b0": {
+          "type": "cohesion_scss_variable",
+          "items": {
+              "4e87ed85-a03d-49e4-989f-cc36928935b0": {
+                  "type": "cohesion_scss_variable"
+              }
+          },
+          "checked": true
+      },
+      "a7ac7cc3-6cd7-433f-ad8c-9335992b2689": {
+          "type": "cohesion_scss_variable",
+          "items": {
+              "a7ac7cc3-6cd7-433f-ad8c-9335992b2689": {
+                  "type": "cohesion_scss_variable"
+              }
+          },
+          "checked": true
+      },
+      "4f6145e3-c530-4040-abec-6c434fd58e8c": {
+          "type": "cohesion_scss_variable",
+          "items": {
+              "4f6145e3-c530-4040-abec-6c434fd58e8c": {
+                  "type": "cohesion_scss_variable"
+              }
+          },
+          "checked": true
+      }
+  }

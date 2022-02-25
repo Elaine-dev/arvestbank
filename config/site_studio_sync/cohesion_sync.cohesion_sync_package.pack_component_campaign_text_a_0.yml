@@ -1,0 +1,23 @@
+uuid: c2ddf833-68af-48a3-8e3a-f1aee0b88783
+langcode: en
+status: true
+dependencies: {  }
+id: pack_component_campaign_text_a_0
+label: 'Component Campaign Text and Dropzone Card'
+description: 'Campaign text and dropzone card layout and styles. Last Updated: Aaron Parkening 6/29/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "cbe59470-cc12-4f71-a7ef-ad2dc9b70357": {
+          "type": "cohesion_component",
+          "items": {
+              "cbe59470-cc12-4f71-a7ef-ad2dc9b70357": {
+                  "type": "cohesion_component"
+              },
+              "314226c6-485b-4cd2-abed-0fc31b1079fb": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

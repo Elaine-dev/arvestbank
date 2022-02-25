@@ -1,0 +1,20 @@
+uuid: 0ea7a897-dedf-4af8-8924-067e3d763e90
+langcode: en
+status: true
+dependencies: {  }
+id: pack_advisors_block_component
+label: 'Component Advisors Block'
+description: 'Contains the advisors block component to be placed in a node to render the advisors view. Last Updated: Allie Jones 06/02/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "cb4fe448-4171-4931-b94f-b2d52e1aa598": {
+          "type": "cohesion_component",
+          "items": {
+              "cb4fe448-4171-4931-b94f-b2d52e1aa598": {
+                  "type": "cohesion_component"
+              }
+          },
+          "checked": true
+      }
+  }

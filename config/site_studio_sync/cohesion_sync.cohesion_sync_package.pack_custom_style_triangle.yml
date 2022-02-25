@@ -1,0 +1,20 @@
+uuid: 2e3e7763-238e-4199-9f51-75ee81689852
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_triangle
+label: 'Custom Style Triangle'
+description: 'Base triangle style. Mostly used in links. Updated: Aaron Parkening 5/27/2021'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "3053a813-8eac-41ce-abba-a4eaebbdb81a": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "3053a813-8eac-41ce-abba-a4eaebbdb81a": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }

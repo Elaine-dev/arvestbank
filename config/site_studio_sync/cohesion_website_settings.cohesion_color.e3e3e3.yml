@@ -1,0 +1,28 @@
+uuid: 14b52e46-d24a-47bb-83ec-870c62235da6
+langcode: en
+status: true
+dependencies: {  }
+id: e3e3e3
+label: '#e3e3e3'
+json_values: |
+  {
+      "link": true,
+      "value": {
+          "value": {
+              "hex": "#e3e3e3",
+              "rgba": "rgba(227, 227, 227, 1)"
+          }
+      },
+      "name": "#e3e3e3",
+      "uid": "e3e3e3",
+      "class": ".coh-color-e3e3e3",
+      "variable": "$coh-color-e3e3e3",
+      "wysiwyg": false,
+      "inuse": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+weight: 5

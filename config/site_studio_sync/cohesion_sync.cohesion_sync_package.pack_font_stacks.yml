@@ -1,0 +1,29 @@
+uuid: 4d920c16-391d-4491-8425-cdef464e94e4
+langcode: en
+status: true
+dependencies: {  }
+id: pack_font_stacks
+label: 'Font Stacks'
+description: 'A Site studio package for all fonts for the site.'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "aab13d06-c276-4bc2-ac05-676db3039168": {
+          "type": "cohesion_font_stack",
+          "items": {
+              "aab13d06-c276-4bc2-ac05-676db3039168": {
+                  "type": "cohesion_font_stack"
+              }
+          },
+          "checked": true
+      },
+      "ad2cd4e8-f50b-4d84-b11c-1f4108a41eba": {
+          "type": "cohesion_font_stack",
+          "items": {
+              "ad2cd4e8-f50b-4d84-b11c-1f4108a41eba": {
+                  "type": "cohesion_font_stack"
+              }
+          },
+          "checked": true
+      }
+  }

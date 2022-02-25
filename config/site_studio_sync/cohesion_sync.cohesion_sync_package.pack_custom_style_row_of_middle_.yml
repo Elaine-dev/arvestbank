@@ -1,0 +1,20 @@
+uuid: 41d699e7-4faa-448f-bb22-2bc781f07ecc
+langcode: en
+status: true
+dependencies: {  }
+id: pack_custom_style_row_of_middle_
+label: 'Custom Style Row of Middle Border Columns'
+description: "A custom style for rows of columns with borders between them.\r\nUpdated: Aaron Parkening on 5/14/2021"
+excluded_entity_types: '[]'
+settings: |
+  {
+      "65f2cec7-2218-4268-a99b-726bea04490d": {
+          "type": "cohesion_custom_style",
+          "items": {
+              "65f2cec7-2218-4268-a99b-726bea04490d": {
+                  "type": "cohesion_custom_style"
+              }
+          },
+          "checked": true
+      }
+  }
