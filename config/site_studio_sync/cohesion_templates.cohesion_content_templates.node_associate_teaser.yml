@@ -245,8 +245,7 @@ json_values: |
                                       "uid": "link",
                                       "title": "Link",
                                       "status": {
-                                          "collapsed": true,
-                                          "collapsedParents": []
+                                          "collapsed": true
                                       },
                                       "uuid": "16d28f9d-d170-42d4-ac26-1086043b495a",
                                       "parentUid": "container",
@@ -4060,7 +4059,7 @@ json_values: |
                   "type": "url",
                   "target": "_self",
                   "linkText": "BEGIN ONLINE APPLICATION",
-                  "url": "https:\/\/homeloan.arvest.com\/borrower\/onboarding\/[node:field_email]"
+                  "url": "https:\/\/homeloan.arvest.com\/homehub\/signup\/[node:field_email]"
               },
               "context-visibility": {
                   "contextVisibility": {
@@ -4204,7 +4203,8 @@ json_values: |
           ]
       },
       "meta": {
-          "fieldHistory": []
+          "fieldHistory": [],
+          "lastModifiedEl": "16d28f9d-d170-42d4-ac26-1086043b495a"
       }
   }
 json_mapper: '{}'
