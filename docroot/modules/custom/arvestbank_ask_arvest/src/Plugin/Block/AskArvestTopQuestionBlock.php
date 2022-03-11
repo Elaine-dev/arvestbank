@@ -108,6 +108,9 @@ class AskArvestTopQuestionBlock extends BlockBase implements ContainerFactoryPlu
       // This is to avoid duplicate calls showing up in [24]7.ai tracking.
       if (!isset($GLOBALS['ask_query_response'][$searchTerm][$source])) {
         // Get Answers.
+        if (empty($searchTerm)) {
+          $searchTerm = 'Have a question? Ask it here.';
+        }
         $answers = $this->answersClient->askQuery($searchTerm, $source);
         // Save ask response in globals for use later in the request.
         $GLOBALS['ask_query_response'][$searchTerm][$source] = $answers;
