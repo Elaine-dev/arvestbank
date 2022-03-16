@@ -184,8 +184,7 @@ json_values: |
                               "uid": "container",
                               "title": "Container",
                               "status": {
-                                  "collapsed": false,
-                                  "collapsedParents": []
+                                  "collapsed": false
                               },
                               "uuid": "ae6cd755-27f7-4ecb-808f-71f77eab93e6",
                               "parentUid": "column",
@@ -220,8 +219,7 @@ json_values: |
                                       "uid": "link",
                                       "title": "Link",
                                       "status": {
-                                          "collapsed": true,
-                                          "collapsedParents": []
+                                          "collapsed": true
                                       },
                                       "uuid": "987bddc8-1c4d-408c-8f93-13f64ab6cf3c",
                                       "parentUid": "container",
@@ -255,12 +253,13 @@ json_values: |
                           },
                           {
                               "type": "container",
-                              "uid": "paragraph",
-                              "title": "Paragraph",
+                              "uid": "drupal-field",
+                              "title": "Field",
                               "status": {
                                   "collapsed": true
                               },
-                              "uuid": "2352f140-4fea-45f7-8288-0bb38764a167",
+                              "iconColor": "drupal",
+                              "uuid": "98ab2530-d0b6-4d44-a481-a4fa29cf15fb",
                               "parentUid": "column",
                               "children": []
                           }
@@ -1273,7 +1272,6 @@ json_values: |
                   "items": []
               }
           },
-          "2352f140-4fea-45f7-8288-0bb38764a167": {},
           "4ca5a927-529a-4885-acd4-2d7d707a2766": {
               "settings": {
                   "formDefinition": [
@@ -1476,6 +1474,33 @@ json_values: |
                   "selectorType": "topLevel",
                   "items": [],
                   "form": null
+              },
+              "hideNoData": {
+                  "formDefinition": [
+                      {
+                          "formKey": "tab-hide-data-settings",
+                          "children": [
+                              {
+                                  "formKey": "tab-hide-data-hide",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "hideEnable",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "hideData",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "title": "Hide if no data",
+                  "selectorType": "topLevel",
+                  "form": null,
+                  "items": []
               }
           },
           "16d28f9d-d170-42d4-ac26-1086043b495a": {
@@ -2054,6 +2079,33 @@ json_values: |
                   "selectorType": "topLevel",
                   "items": [],
                   "form": null
+              },
+              "hideNoData": {
+                  "formDefinition": [
+                      {
+                          "formKey": "tab-hide-data-settings",
+                          "children": [
+                              {
+                                  "formKey": "tab-hide-data-hide",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "hideEnable",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "hideData",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "title": "Hide if no data",
+                  "selectorType": "topLevel",
+                  "form": null,
+                  "items": []
               }
           },
           "987bddc8-1c4d-408c-8f93-13f64ab6cf3c": {
@@ -2505,6 +2557,33 @@ json_values: |
                   "selectorType": "topLevel",
                   "items": [],
                   "form": null
+              },
+              "hideNoData": {
+                  "formDefinition": [
+                      {
+                          "formKey": "tab-hide-data-settings",
+                          "children": [
+                              {
+                                  "formKey": "tab-hide-data-hide",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "hideEnable",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "hideData",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "title": "Hide if no data",
+                  "selectorType": "topLevel",
+                  "form": null,
+                  "items": []
               }
           },
           "7fc95caf-fb12-4542-a631-87280f4dafad": {
@@ -3230,7 +3309,8 @@ json_values: |
                   "form": null,
                   "items": []
               }
-          }
+          },
+          "98ab2530-d0b6-4d44-a481-a4fa29cf15fb": {}
       },
       "model": {
           "4c55dabc-639a-4753-a788-0375378f5565": {
@@ -3881,6 +3961,10 @@ json_values: |
                           }
                       }
                   }
+              },
+              "hideNoData": {
+                  "hideEnable": true,
+                  "hideData": "[node:field_coconut_appointment]"
               }
           },
           "7fc95caf-fb12-4542-a631-87280f4dafad": {
@@ -3959,6 +4043,10 @@ json_values: |
                           }
                       }
                   }
+              },
+              "hideNoData": {
+                  "hideEnable": true,
+                  "hideData": "[node:field_pb_application]"
               }
           },
           "987bddc8-1c4d-408c-8f93-13f64ab6cf3c": {
@@ -4037,6 +4125,10 @@ json_values: |
                           }
                       }
                   }
+              },
+              "hideNoData": {
+                  "hideEnable": true,
+                  "hideData": "[node:field_email]"
               }
           },
           "16d28f9d-d170-42d4-ac26-1086043b495a": {
@@ -4117,22 +4209,13 @@ json_values: |
                   }
               }
           },
-          "2352f140-4fea-45f7-8288-0bb38764a167": {
+          "98ab2530-d0b6-4d44-a481-a4fa29cf15fb": {
               "settings": {
-                  "title": "Paragraph",
-                  "customStyle": [
-                      {
-                          "customStyle": ""
-                      }
-                  ],
+                  "title": "Field",
                   "settings": {
-                      "customStyle": [
-                          {
-                              "customStyle": ""
-                          }
-                      ]
+                      "drupalField": ""
                   },
-                  "content": "[node:body]"
+                  "drupalField": "content.body"
               },
               "context-visibility": {
                   "contextVisibility": {
@@ -4141,7 +4224,7 @@ json_values: |
               },
               "styles": {
                   "settings": {
-                      "element": "p"
+                      "element": "drupal-field"
                   }
               }
           }
@@ -4173,7 +4256,7 @@ json_values: |
           },
           "a389cb10-ce51-4cd0-a05f-afe9e35776e9": {},
           "2497e688-898a-446e-bbe4-98b21524ef52": {},
-          "2352f140-4fea-45f7-8288-0bb38764a167": {}
+          "98ab2530-d0b6-4d44-a481-a4fa29cf15fb": {}
       },
       "variableFields": {
           "4c55dabc-639a-4753-a788-0375378f5565": [],
@@ -4198,13 +4281,10 @@ json_values: |
           "987bddc8-1c4d-408c-8f93-13f64ab6cf3c": [],
           "a389cb10-ce51-4cd0-a05f-afe9e35776e9": [],
           "2497e688-898a-446e-bbe4-98b21524ef52": [],
-          "2352f140-4fea-45f7-8288-0bb38764a167": [
-              "settings.content"
-          ]
+          "98ab2530-d0b6-4d44-a481-a4fa29cf15fb": []
       },
       "meta": {
-          "fieldHistory": [],
-          "lastModifiedEl": "16d28f9d-d170-42d4-ac26-1086043b495a"
+          "fieldHistory": []
       }
   }
 json_mapper: '{}'
