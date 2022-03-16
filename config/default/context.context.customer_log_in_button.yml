@@ -4,8 +4,8 @@ status: true
 dependencies:
   module:
     - system
-name: customer_log_in_button
 label: 'Customer Log In Button'
+name: customer_log_in_button
 group: 'campaign page'
 description: ''
 requireAllConditions: false
@@ -13,9 +13,9 @@ disabled: false
 conditions:
   request_path:
     id: request_path
-    pages: /balanceeraser
     negate: false
     uuid: 0ac882b8-cff3-4c55-a634-40cfedd38051
     context_mapping: {  }
+    pages: /balanceeraser
 reactions: {  }
 weight: 0

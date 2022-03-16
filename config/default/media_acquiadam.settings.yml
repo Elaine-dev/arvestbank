@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: GxmzZTLxQQW3HxqkAimrxwAlUASIAJx1xbSA1q_IxoI
 username: arvestadmin
 password: 'Arv3st42*'
 client_id: 445e7798666d5ca4f0ea2906549edb3f0eca6ea1
@@ -8,9 +10,7 @@ oauth:
   excluded_redirect_keys:
     - original_path
 notifications_sync: 0
-num_images_per_page: 12
-_core:
-  default_config_hash: GxmzZTLxQQW3HxqkAimrxwAlUASIAJx1xbSA1q_IxoI
-fallback_thumbnail: 'public://webdam.png'
 perform_sync_delete: 1
+num_images_per_page: 12
+fallback_thumbnail: 'public://webdam.png'
 samesite_cookie_disable: 0

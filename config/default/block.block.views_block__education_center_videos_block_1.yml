@@ -18,13 +18,13 @@ plugin: 'views_block:education_center_videos-block_1'
 settings:
   id: 'views_block:education_center_videos-block_1'
   label: ''
-  provider: views
   label_display: visible
+  provider: views
+  context_mapping: {  }
   views_label: ''
   items_per_page: none
-  context_mapping: {  }
 visibility:
   cohesion_master_template:
     id: cohesion_master_template
-    using_master_template: 0
     negate: false
+    using_master_template: 0

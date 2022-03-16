@@ -20,23 +20,23 @@ bundle: acquia_dam_document
 mode: default
 content:
   field_acquiadam_asset_doc:
-    weight: 0
+    type: image
     label: hidden
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
     third_party_settings: {  }
-    type: image
+    weight: 0
     region: content
   field_hide_from_list:
-    weight: 1
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 1
     region: content
 hidden:
   content_moderation_control: true

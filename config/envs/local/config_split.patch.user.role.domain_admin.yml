@@ -1,0 +1,13 @@
+adding:
+  dependencies:
+    module:
+      - devel
+      - qa_accounts
+      - simplesamlphp_auth
+  permissions:
+    28: 'access devel information'
+    128: 'administer qa_accounts settings'
+    139: 'administer simplesamlphp authentication'
+    172: 'change saml authentication setting'
+    346: 'switch users'
+removing: {  }

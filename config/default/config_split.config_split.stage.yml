@@ -5,6 +5,7 @@ dependencies: {  }
 id: stage
 label: Stage
 description: 'Configuration for the Cloud Platform staging environment.'
+weight: 0
 storage: folder
 folder: ../config/envs/stage
 module:
@@ -15,7 +16,6 @@ module:
   qa_accounts: 0
   simplesamlphp_auth: 0
 theme: {  }
-weight: 0
 complete_list: {  }
 partial_list:
   - shield.settings

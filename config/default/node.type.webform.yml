@@ -2,12 +2,12 @@ uuid: 371d5649-2ea2-4ad4-9968-aaa48696e0c5
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - webform_node
   module:
     - menu_ui
     - scheduler
+  enforced:
+    module:
+      - webform_node
 third_party_settings:
   menu_ui:
     available_menus:

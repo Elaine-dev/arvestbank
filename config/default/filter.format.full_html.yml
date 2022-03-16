@@ -44,12 +44,12 @@ filters:
     weight: 100
     settings:
       default_view_mode: media_library
-      allowed_media_types: {  }
       allowed_view_modes:
         default: default
         media_button: media_button
         media_caption: media_caption
         thumbnail_overlay: thumbnail_overlay
+      allowed_media_types: {  }
   editor_file_reference:
     id: editor_file_reference
     provider: editor

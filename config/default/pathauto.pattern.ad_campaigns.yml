@@ -11,12 +11,12 @@ pattern: 'ad-campaign/[node:nid]'
 selection_criteria:
   68838c2f-6a33-4af3-a504-c4509f836070:
     id: node_type
-    bundles:
-      ad_campaign: ad_campaign
     negate: false
+    uuid: 68838c2f-6a33-4af3-a504-c4509f836070
     context_mapping:
       node: node
-    uuid: 68838c2f-6a33-4af3-a504-c4509f836070
+    bundles:
+      ad_campaign: ad_campaign
 selection_logic: and
 weight: -5
 relationships: {  }

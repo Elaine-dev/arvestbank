@@ -63,20 +63,18 @@ mode: default
 content:
   body:
     type: text_default
-    weight: 32
-    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
-  content_moderation_control:
-    weight: 0
+    weight: 32
     region: content
+  content_moderation_control:
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
   field_block_button:
     type: link
-    weight: 34
-    region: content
     label: hidden
     settings:
       trim_length: 80
@@ -85,91 +83,93 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
+    weight: 34
+    region: content
   field_block_title:
     type: string
-    weight: 33
-    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 33
+    region: content
   field_icon_four:
     type: entity_reference_entity_view
-    weight: 12
     label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 12
     region: content
   field_icon_four_text:
-    weight: 13
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 13
     region: content
   field_icon_one:
     type: entity_reference_entity_view
-    weight: 27
     label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 27
     region: content
   field_icon_one_text:
-    weight: 4
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 4
     region: content
   field_icon_three:
     type: entity_reference_entity_view
-    weight: 9
     label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 9
     region: content
   field_icon_three_text:
-    weight: 10
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 10
     region: content
   field_icon_two:
     type: entity_reference_entity_view
-    weight: 6
     label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 6
     region: content
   field_icon_two_text:
-    weight: 7
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 7
     region: content
   field_meta_tags:
-    weight: 14
+    type: metatag_empty_formatter
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: metatag_empty_formatter
+    weight: 14
     region: content
   field_sidebar_button:
-    weight: 37
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -178,31 +178,31 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 37
     region: content
   field_sidebar_description:
-    weight: 35
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 35
     region: content
   field_sidebar_title:
-    weight: 36
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 36
     region: content
   field_slide1_cta_color:
-    weight: 16
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 16
     region: content
   field_slide1_cta_link:
-    weight: 15
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -211,24 +211,24 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 15
     region: content
   field_slide1_cta_position:
-    weight: 17
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 17
     region: content
   field_slide2_cta_color:
-    weight: 19
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 19
     region: content
   field_slide2_cta_link:
-    weight: 18
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -237,24 +237,24 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 18
     region: content
   field_slide2_cta_position:
-    weight: 20
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 20
     region: content
   field_slide3_cta_color:
-    weight: 22
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 22
     region: content
   field_slide3_cta_link:
-    weight: 21
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -263,24 +263,24 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 21
     region: content
   field_slide3_cta_position:
-    weight: 23
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 23
     region: content
   field_slide4_cta_color:
-    weight: 25
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 25
     region: content
   field_slide4_cta_link:
-    weight: 24
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -289,93 +289,93 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 24
     region: content
   field_slide4_cta_position:
-    weight: 26
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 26
     region: content
   field_slide_four:
     type: entity_reference_entity_view
-    weight: 11
     label: hidden
     settings:
       view_mode: full_width_slideshow
       link: false
     third_party_settings: {  }
+    weight: 11
     region: content
   field_slide_four_cta_text:
-    weight: 31
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 31
     region: content
   field_slide_one:
     type: entity_reference_entity_view
-    weight: 3
     label: hidden
     settings:
       view_mode: full_width_slideshow
       link: false
     third_party_settings: {  }
+    weight: 3
     region: content
   field_slide_one_cta_text:
-    weight: 28
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 28
     region: content
   field_slide_three:
     type: entity_reference_entity_view
-    weight: 8
     label: hidden
     settings:
       view_mode: full_width_slideshow
       link: false
     third_party_settings: {  }
+    weight: 8
     region: content
   field_slide_three_cta_text:
-    weight: 30
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 30
     region: content
   field_slide_two:
     type: entity_reference_entity_view
-    weight: 5
     label: hidden
     settings:
       view_mode: full_width_slideshow
       link: false
     third_party_settings: {  }
+    weight: 5
     region: content
   field_slide_two_cta_text:
-    weight: 29
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 29
     region: content
   field_wordpress_articles:
     type: entity_reference_revisions_entity_view
-    weight: 2
     label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 2
     region: content
   links:
-    weight: 1
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   field_alert_block_body: true
   field_alert_block_dates: true

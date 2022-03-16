@@ -24,14 +24,14 @@ bundle: article_education_article
 mode: default
 content:
   body:
-    weight: 0
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 0
     region: content
   field_link:
-    weight: 2
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -40,14 +40,14 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 2
     region: content
   field_reference_text:
-    weight: 1
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 1
     region: content
 hidden:
   content_moderation_control: true

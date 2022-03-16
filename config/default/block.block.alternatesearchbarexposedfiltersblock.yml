@@ -16,10 +16,10 @@ plugin: alt_search_bar_exposed_filters_block
 settings:
   id: alt_search_bar_exposed_filters_block
   label: 'Ask a QUESTION or Enter a KEYWORD'
-  provider: arvestbank_search
   label_display: visible
+  provider: arvestbank_search
 visibility:
   cohesion_master_template:
     id: cohesion_master_template
-    using_master_template: 1
     negate: false
+    using_master_template: 1

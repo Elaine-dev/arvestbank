@@ -12,12 +12,12 @@ pattern: '/education-center/[term:name]'
 selection_criteria:
   0351256e-c698-44a3-9826-2aceab1d57ac:
     id: 'entity_bundle:taxonomy_term'
-    bundles:
-      education_article_category: education_article_category
     negate: false
+    uuid: 0351256e-c698-44a3-9826-2aceab1d57ac
     context_mapping:
       taxonomy_term: taxonomy_term
-    uuid: 0351256e-c698-44a3-9826-2aceab1d57ac
+    bundles:
+      education_article_category: education_article_category
 selection_logic: and
 weight: -5
 relationships: {  }

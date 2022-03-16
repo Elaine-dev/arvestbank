@@ -19,24 +19,24 @@ plugin: 'menu_block:education-center-menu'
 settings:
   id: 'menu_block:education-center-menu'
   label: 'Education Center'
-  provider: menu_block
   label_display: visible
+  provider: menu_block
   follow: false
   follow_parent: child
+  label_link: false
+  label_type: block
   level: 1
   depth: 1
   expand_all_items: false
   parent: 'education-center-menu:'
   suggestion: education_center_menu
-  label_type: block
-  label_link: false
   expand: false
 visibility:
   cohesion_master_template:
     id: cohesion_master_template
-    using_master_template: 0
     negate: false
+    using_master_template: 0
   request_path:
     id: request_path
-    pages: ''
     negate: true
+    pages: ''

@@ -32,10 +32,10 @@ fields:
     body:
       type: text_summary_field_diff_builder
       settings:
-        compare_format: 0
-        compare_summary: 0
         show_header: 1
         markdown: drupal_html_to_text
+        compare_format: 0
+        compare_summary: 0
   component_content:
     langcode:
       type: core_field_diff_builder
@@ -158,13 +158,13 @@ fields:
     thumbnail:
       type: image_field_diff_builder
       settings:
+        show_header: 1
+        markdown: drupal_html_to_text
         show_id: 0
         compare_alt_field: 1
         compare_title_field: 1
         property_separator: nl
         show_thumbnail: 1
-        show_header: 1
-        markdown: drupal_html_to_text
     created:
       type: hidden
       settings: {  }
@@ -188,12 +188,12 @@ fields:
     field_acquiadam_asset_doc:
       type: file_field_diff_builder
       settings:
+        show_header: 1
+        markdown: drupal_html_to_text
         show_id: 1
         compare_description_field: 0
         compare_display_field: 0
         property_separator: nl
-        show_header: 1
-        markdown: drupal_html_to_text
     field_acquiadam_asset_id:
       type: core_field_diff_builder
       settings:
@@ -202,40 +202,40 @@ fields:
     field_acquiadam_asset_image:
       type: image_field_diff_builder
       settings:
+        show_header: 1
+        markdown: drupal_html_to_text
         show_id: 0
         compare_alt_field: 1
         compare_title_field: 1
         property_separator: nl
         show_thumbnail: 1
-        show_header: 1
-        markdown: drupal_html_to_text
     field_acquiadam_asset_video:
       type: file_field_diff_builder
       settings:
+        show_header: 1
+        markdown: drupal_html_to_text
         show_id: 1
         compare_description_field: 0
         compare_display_field: 0
         property_separator: nl
-        show_header: 1
-        markdown: drupal_html_to_text
     field_credit_or_debit_card:
       type: list_field_diff_builder
       settings:
-        compare: key
         show_header: 1
         markdown: drupal_html_to_text
+        compare: key
     field_debit_card_category:
       type: entity_reference_field_diff_builder
       settings:
-        compare_entity_reference: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_entity_reference: 1
     field_debit_card_keywords:
       type: entity_reference_field_diff_builder
       settings:
-        compare_entity_reference: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_entity_reference: 1
     field_description:
       type: hidden
       settings: {  }
@@ -248,13 +248,13 @@ fields:
     field_image:
       type: image_field_diff_builder
       settings:
+        show_header: 1
+        markdown: drupal_html_to_text
         show_id: 0
         compare_alt_field: 1
         compare_title_field: 1
         property_separator: nl
         show_thumbnail: 1
-        show_header: 1
-        markdown: drupal_html_to_text
     field_link:
       type: hidden
       settings: {  }
@@ -266,15 +266,15 @@ fields:
     field_school_zip_code:
       type: entity_reference_field_diff_builder
       settings:
-        compare_entity_reference: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_entity_reference: 1
     field_video_subtitle:
       type: text_field_diff_builder
       settings:
-        compare_format: 0
         show_header: 1
         markdown: drupal_html_to_text
+        compare_format: 0
     field_video_time_length:
       type: core_field_diff_builder
       settings:
@@ -349,9 +349,9 @@ fields:
     uid:
       type: entity_reference_field_diff_builder
       settings:
-        compare_entity_reference: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_entity_reference: 1
     title:
       type: core_field_diff_builder
       settings:
@@ -389,19 +389,19 @@ fields:
     body:
       type: text_summary_field_diff_builder
       settings:
-        compare_format: 0
-        compare_summary: 0
         show_header: 1
         markdown: drupal_html_to_text
+        compare_format: 0
+        compare_summary: 0
     feeds_item:
       type: hidden
       settings: {  }
     field_account_disclosure_informa:
       type: text_field_diff_builder
       settings:
-        compare_format: 0
         show_header: 1
         markdown: drupal_html_to_text
+        compare_format: 0
     field_appointment:
       type: core_field_diff_builder
       settings:
@@ -413,26 +413,26 @@ fields:
     field_associate_image:
       type: image_field_diff_builder
       settings:
+        show_header: 1
+        markdown: drupal_html_to_text
         show_id: 0
         compare_alt_field: 1
         compare_title_field: 1
         property_separator: nl
         show_thumbnail: 1
-        show_header: 1
-        markdown: drupal_html_to_text
     field_associate_type:
       type: entity_reference_field_diff_builder
       settings:
-        compare_entity_reference: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_entity_reference: 1
     field_block_button:
       type: link_field_diff_builder
       settings:
-        compare_title: 0
-        compare_uri: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_title: 0
+        compare_uri: 1
     field_block_title:
       type: core_field_diff_builder
       settings:
@@ -446,16 +446,16 @@ fields:
     field_button_links:
       type: link_field_diff_builder
       settings:
-        compare_title: 0
-        compare_uri: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_title: 0
+        compare_uri: 1
     field_calculator:
       type: entity_reference_field_diff_builder
       settings:
-        compare_entity_reference: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_entity_reference: 1
     field_callout_layout_optio:
       type: core_field_diff_builder
       settings:
@@ -469,17 +469,17 @@ fields:
     field_coconut_appointment:
       type: link_field_diff_builder
       settings:
-        compare_title: 0
-        compare_uri: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_title: 0
+        compare_uri: 1
     field_cta:
       type: link_field_diff_builder
       settings:
-        compare_title: 0
-        compare_uri: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_title: 0
+        compare_uri: 1
     field_cta_text:
       type: core_field_diff_builder
       settings:
@@ -488,15 +488,15 @@ fields:
     field_designation:
       type: entity_reference_field_diff_builder
       settings:
-        compare_entity_reference: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_entity_reference: 1
     field_education_article_category:
       type: entity_reference_field_diff_builder
       settings:
-        compare_entity_reference: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_entity_reference: 1
     field_email:
       type: core_field_diff_builder
       settings:
@@ -505,9 +505,9 @@ fields:
     field_fallback_image:
       type: entity_reference_field_diff_builder
       settings:
-        compare_entity_reference: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_entity_reference: 1
     field_fax_number:
       type: core_field_diff_builder
       settings:
@@ -516,21 +516,21 @@ fields:
     field_featured_image:
       type: entity_reference_field_diff_builder
       settings:
-        compare_entity_reference: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_entity_reference: 1
     field_field_callout_phone_number:
       type: entity_reference_field_diff_builder
       settings:
-        compare_entity_reference: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_entity_reference: 1
     field_icon_four:
       type: entity_reference_field_diff_builder
       settings:
-        compare_entity_reference: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_entity_reference: 1
     field_icon_four_text:
       type: core_field_diff_builder
       settings:
@@ -539,9 +539,9 @@ fields:
     field_icon_one:
       type: entity_reference_field_diff_builder
       settings:
-        compare_entity_reference: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_entity_reference: 1
     field_icon_one_text:
       type: core_field_diff_builder
       settings:
@@ -550,9 +550,9 @@ fields:
     field_icon_three:
       type: entity_reference_field_diff_builder
       settings:
-        compare_entity_reference: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_entity_reference: 1
     field_icon_three_text:
       type: core_field_diff_builder
       settings:
@@ -561,9 +561,9 @@ fields:
     field_icon_two:
       type: entity_reference_field_diff_builder
       settings:
-        compare_entity_reference: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_entity_reference: 1
     field_icon_two_text:
       type: core_field_diff_builder
       settings:
@@ -572,9 +572,9 @@ fields:
     field_image:
       type: entity_reference_field_diff_builder
       settings:
-        compare_entity_reference: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_entity_reference: 1
     field_insurance_license_number:
       type: core_field_diff_builder
       settings:
@@ -594,10 +594,10 @@ fields:
     field_link:
       type: link_field_diff_builder
       settings:
-        compare_title: 0
-        compare_uri: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_title: 0
+        compare_uri: 1
     field_location:
       type: core_field_diff_builder
       settings:
@@ -624,9 +624,9 @@ fields:
     field_page_type:
       type: list_field_diff_builder
       settings:
-        compare: key
         show_header: 1
         markdown: drupal_html_to_text
+        compare: key
     field_phone_number:
       type: core_field_diff_builder
       settings:
@@ -645,22 +645,22 @@ fields:
     field_private_bank_location_link:
       type: link_field_diff_builder
       settings:
-        compare_title: 0
-        compare_uri: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_title: 0
+        compare_uri: 1
     field_private_bank_reference:
       type: entity_reference_field_diff_builder
       settings:
-        compare_entity_reference: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_entity_reference: 1
     field_reference_text:
       type: text_field_diff_builder
       settings:
-        compare_format: 0
         show_header: 1
         markdown: drupal_html_to_text
+        compare_format: 0
     field_related_content_reference:
       type: hidden
       settings: {  }
@@ -672,41 +672,41 @@ fields:
     field_schedule_appointment_link:
       type: link_field_diff_builder
       settings:
-        compare_title: 0
-        compare_uri: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_title: 0
+        compare_uri: 1
     field_second_callout:
       type: list_field_diff_builder
       settings:
-        compare: key
         show_header: 1
         markdown: drupal_html_to_text
+        compare: key
     field_slide1_bg_position:
       type: list_field_diff_builder
       settings:
-        compare: key
         show_header: 1
         markdown: drupal_html_to_text
+        compare: key
     field_slide1_cta_color:
       type: list_field_diff_builder
       settings:
-        compare: key
         show_header: 1
         markdown: drupal_html_to_text
+        compare: key
     field_slide1_cta_link:
       type: link_field_diff_builder
       settings:
-        compare_title: 0
-        compare_uri: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_title: 0
+        compare_uri: 1
     field_slide1_cta_position:
       type: list_field_diff_builder
       settings:
-        compare: key
         show_header: 1
         markdown: drupal_html_to_text
+        compare: key
     field_slide1_cta_text_1:
       type: core_field_diff_builder
       settings:
@@ -720,28 +720,28 @@ fields:
     field_slide2_bg_position:
       type: list_field_diff_builder
       settings:
-        compare: key
         show_header: 1
         markdown: drupal_html_to_text
+        compare: key
     field_slide2_cta_color:
       type: list_field_diff_builder
       settings:
-        compare: key
         show_header: 1
         markdown: drupal_html_to_text
+        compare: key
     field_slide2_cta_link:
       type: link_field_diff_builder
       settings:
-        compare_title: 0
-        compare_uri: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_title: 0
+        compare_uri: 1
     field_slide2_cta_position:
       type: list_field_diff_builder
       settings:
-        compare: key
         show_header: 1
         markdown: drupal_html_to_text
+        compare: key
     field_slide2_cta_text_1:
       type: core_field_diff_builder
       settings:
@@ -755,28 +755,28 @@ fields:
     field_slide3_bg_position:
       type: list_field_diff_builder
       settings:
-        compare: key
         show_header: 1
         markdown: drupal_html_to_text
+        compare: key
     field_slide3_cta_color:
       type: list_field_diff_builder
       settings:
-        compare: key
         show_header: 1
         markdown: drupal_html_to_text
+        compare: key
     field_slide3_cta_link:
       type: link_field_diff_builder
       settings:
-        compare_title: 0
-        compare_uri: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_title: 0
+        compare_uri: 1
     field_slide3_cta_position:
       type: list_field_diff_builder
       settings:
-        compare: key
         show_header: 1
         markdown: drupal_html_to_text
+        compare: key
     field_slide3_cta_text_1:
       type: core_field_diff_builder
       settings:
@@ -790,28 +790,28 @@ fields:
     field_slide4_bg_position:
       type: list_field_diff_builder
       settings:
-        compare: key
         show_header: 1
         markdown: drupal_html_to_text
+        compare: key
     field_slide4_cta_color:
       type: list_field_diff_builder
       settings:
-        compare: key
         show_header: 1
         markdown: drupal_html_to_text
+        compare: key
     field_slide4_cta_link:
       type: link_field_diff_builder
       settings:
-        compare_title: 0
-        compare_uri: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_title: 0
+        compare_uri: 1
     field_slide4_cta_position:
       type: list_field_diff_builder
       settings:
-        compare: key
         show_header: 1
         markdown: drupal_html_to_text
+        compare: key
     field_slide4_cta_text_1:
       type: core_field_diff_builder
       settings:
@@ -825,41 +825,41 @@ fields:
     field_slide_four:
       type: entity_reference_field_diff_builder
       settings:
-        compare_entity_reference: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_entity_reference: 1
     field_slide_one:
       type: entity_reference_field_diff_builder
       settings:
-        compare_entity_reference: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_entity_reference: 1
     field_slide_three:
       type: entity_reference_field_diff_builder
       settings:
-        compare_entity_reference: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_entity_reference: 1
     field_slide_two:
       type: entity_reference_field_diff_builder
       settings:
-        compare_entity_reference: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_entity_reference: 1
     field_vanity_url:
       type: link_field_diff_builder
       settings:
-        compare_title: 0
-        compare_uri: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_title: 0
+        compare_uri: 1
     field_website:
       type: link_field_diff_builder
       settings:
-        compare_title: 0
-        compare_uri: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_title: 0
+        compare_uri: 1
     field_wordpress_articles:
       type: entity_reference_revisions_field_diff_builder
       settings:
@@ -942,15 +942,15 @@ fields:
     field_body:
       type: text_field_diff_builder
       settings:
-        compare_format: 0
         show_header: 1
         markdown: drupal_html_to_text
+        compare_format: 0
     field_featured_image:
       type: entity_reference_field_diff_builder
       settings:
-        compare_entity_reference: 1
         show_header: 1
         markdown: drupal_html_to_text
+        compare_entity_reference: 1
     field_featured_videos:
       type: hidden
       settings: {  }

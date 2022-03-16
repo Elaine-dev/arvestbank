@@ -11,6 +11,10 @@ pattern: '[node:title]'
 selection_criteria:
   ad4094d6-33f1-45d4-b29e-88cfb8082eb5:
     id: node_type
+    negate: false
+    uuid: ad4094d6-33f1-45d4-b29e-88cfb8082eb5
+    context_mapping:
+      node: node
     bundles:
       ad: ad
       ad_campaign: ad_campaign
@@ -21,10 +25,6 @@ selection_criteria:
       private_bank_location: private_bank_location
       stage_page: stage_page
       webform: webform
-    negate: false
-    context_mapping:
-      node: node
-    uuid: ad4094d6-33f1-45d4-b29e-88cfb8082eb5
 selection_logic: and
 weight: -5
 relationships: {  }

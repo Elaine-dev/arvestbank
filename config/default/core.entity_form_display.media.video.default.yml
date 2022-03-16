@@ -19,47 +19,47 @@ bundle: video
 mode: default
 content:
   field_education_article_category:
+    type: options_select
     weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_media_oembed_video:
     type: oembed_textfield
     weight: 1
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   field_video_subtitle:
+    type: text_textfield
     weight: 4
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: text_textfield
-    region: content
   field_video_thumbnail:
     type: media_library_widget
     weight: 26
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
   field_video_time_length:
+    type: string_textfield
     weight: 3
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   moderation_state:
     type: moderation_state_default
     weight: 5
-    settings: {  }
     region: content
+    settings: {  }
     third_party_settings: {  }
   name:
     type: string_textfield

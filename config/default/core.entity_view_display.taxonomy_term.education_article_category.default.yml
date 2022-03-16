@@ -23,20 +23,20 @@ bundle: education_article_category
 mode: default
 content:
   field_body:
-    weight: 0
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 0
     region: content
   field_featured_image:
     type: entity_reference_entity_view
-    weight: 1
     label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
   description: true

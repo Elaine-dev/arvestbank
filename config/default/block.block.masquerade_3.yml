@@ -16,10 +16,10 @@ plugin: masquerade
 settings:
   id: masquerade
   label: Masquerade
-  provider: masquerade
   label_display: visible
+  provider: masquerade
 visibility:
   cohesion_master_template:
     id: cohesion_master_template
-    using_master_template: 0
     negate: false
+    using_master_template: 0

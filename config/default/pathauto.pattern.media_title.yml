@@ -12,14 +12,14 @@ pattern: '[media:name]'
 selection_criteria:
   241e8782-dfb7-4d82-a662-bf2101dd2064:
     id: 'entity_bundle:media'
+    negate: false
+    uuid: 241e8782-dfb7-4d82-a662-bf2101dd2064
+    context_mapping:
+      media: media
     bundles:
       acquia_dam_image: acquia_dam_image
       credit_or_debit_card: credit_or_debit_card
       video: video
-    negate: false
-    context_mapping:
-      media: media
-    uuid: 241e8782-dfb7-4d82-a662-bf2101dd2064
 selection_logic: and
 weight: -5
 relationships: {  }

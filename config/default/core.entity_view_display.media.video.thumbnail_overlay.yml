@@ -19,14 +19,14 @@ mode: thumbnail_overlay
 content:
   field_video_thumbnail:
     type: micromodal_field_formatter
-    weight: 0
-    region: content
     label: hidden
     settings:
-      thumbnail_image_style: large
       string_classes: ''
+      thumbnail_image_style: large
       thumbnail_override_fieldname: ''
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   content_moderation_control: true
   created: true

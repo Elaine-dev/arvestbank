@@ -40,11 +40,14 @@ third_party_settings:
         - field_callout_title
         - field_field_callout_phone_number
         - field_second_callout
+      label: CTA
       parent_name: ''
+      region: hidden
       weight: 21
       format_type: html_element
-      region: hidden
       format_settings:
+        classes: basic-page-cta
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -52,30 +55,27 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-        id: ''
-        classes: basic-page-cta
-      label: CTA
 id: node.page.default
 targetEntityType: node
 bundle: page
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 1
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
   field_account_disclosure_informa:
     type: text_default
-    weight: 5
-    region: content
     label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 5
+    region: content
   field_button_links:
-    weight: 4
+    type: link
     label: hidden
     settings:
       trim_length: null
@@ -86,61 +86,61 @@ content:
     third_party_settings:
       field_formatter_class:
         class: button
-    type: link
+    weight: 4
     region: content
   field_featured_image:
     type: entity_reference_entity_view
-    weight: 2
     label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 2
     region: content
   field_featured_video:
     type: entity_reference_entity_view
-    weight: 3
     label: hidden
     settings:
       view_mode: thumbnail_overlay
       link: false
     third_party_settings: {  }
+    weight: 3
     region: content
   field_layout_canvas:
-    weight: 6
+    type: cohesion_entity_reference_revisions_entity_view
     label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
-    type: cohesion_entity_reference_revisions_entity_view
+    weight: 6
     region: content
   field_print_button_text:
     type: string
-    weight: 0
-    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 0
+    region: content
   field_second_callout_icon:
     type: entity_reference_entity_view
-    weight: 9
     label: above
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 9
     region: content
   field_second_callout_label:
-    weight: 7
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 7
     region: content
   field_second_callout_link:
-    weight: 8
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -149,7 +149,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 8
     region: content
 hidden:
   content_moderation_control: true

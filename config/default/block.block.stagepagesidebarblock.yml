@@ -16,10 +16,10 @@ plugin: stagepage_sidebar_block
 settings:
   id: stagepage_sidebar_block
   label: 'Stage Page Sidebar Block'
-  provider: arvestbank_blocks
   label_display: visible
+  provider: arvestbank_blocks
 visibility:
   cohesion_master_template:
     id: cohesion_master_template
-    using_master_template: 0
     negate: false
+    using_master_template: 0

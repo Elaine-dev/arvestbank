@@ -26,96 +26,12 @@ base_table: node_field_data
 base_field: nid
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: perm
-        options:
-          perm: 'edit any ad content'
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_comment: ''
-          query_tags: {  }
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        type: none
-        options:
-          items_per_page: 0
-          offset: 0
-      style:
-        type: table
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          override: true
-          sticky: false
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            title: title
-            field_cta: field_cta
-            field_ad_nav_image: field_ad_nav_image
-            field_image: field_image
-            field_ad_content_image: field_ad_content_image
-          info:
-            title:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_cta:
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_ad_nav_image:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_image:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_ad_content_image:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: title
-          empty_table: false
-      row:
-        type: fields
+      title: Ads
       fields:
         nid:
           id: nid
@@ -124,6 +40,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -178,9 +97,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -188,6 +104,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: Title
           exclude: false
           alter:
@@ -243,9 +162,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_cta:
           id: field_cta
           table: node__field_cta
@@ -253,6 +169,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: CTA
           exclude: false
           alter:
@@ -312,7 +229,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_ad_nav_image:
           id: field_ad_nav_image
           table: node__field_ad_nav_image
@@ -320,6 +236,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'Image (Navigation)'
           exclude: false
           alter:
@@ -364,8 +281,8 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: medium
             image_link: ''
+            image_style: medium
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -376,7 +293,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_image:
           id: field_image
           table: node__field_image
@@ -384,6 +300,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'Image (Sidebar)'
           exclude: false
           alter:
@@ -428,8 +345,8 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: medium
             image_link: ''
+            image_style: medium
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -440,7 +357,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_ad_content_image:
           id: field_ad_content_image
           table: node__field_ad_content_image
@@ -448,6 +364,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'Image (Content)'
           exclude: false
           alter:
@@ -492,8 +409,8 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: medium
             image_link: ''
+            image_style: medium
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -504,35 +421,121 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
+      pager:
+        type: none
+        options:
+          offset: 0
+          items_per_page: 0
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'edit any ad content'
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
+      sorts: {  }
+      arguments: {  }
       filters:
         status:
-          value: '1'
+          id: status
           table: node_field_data
           field: status
-          plugin_id: boolean
           entity_type: node
           entity_field: status
-          id: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
           expose:
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-          group: 1
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            ad: ad
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            ad: ad
           expose:
             operator_limit_selection: false
             operator_list: {  }
-      sorts: {  }
-      title: Ads
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          columns:
+            title: title
+            field_cta: field_cta
+            field_ad_nav_image: field_ad_nav_image
+            field_image: field_image
+            field_ad_content_image: field_ad_content_image
+          default: title
+          info:
+            title:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_cta:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_ad_nav_image:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_image:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_ad_content_image:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: false
+          summary: ''
+          empty_table: false
+          caption: ''
+          description: ''
+      row:
+        type: fields
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
+      relationships: {  }
       header:
         area:
           id: area
@@ -541,16 +544,13 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: text
           empty: true
-          tokenize: false
           content:
             value: "<a href=\"/node/add/ad?destination=/admin/content/ads\">click here to add an ad</a> | \r\n<a href=\"/media/add/acquia_dam_image?destination=/admin/content/ads\">click here to add media</a>"
             format: cohesion
-          plugin_id: text
+          tokenize: false
       footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -566,13 +566,11 @@ display:
         - 'config:field.storage.node.field_cta'
         - 'config:field.storage.node.field_image'
   entity_reference_1:
-    display_plugin: entity_reference
     id: entity_reference_1
     display_title: 'Main Navigation Images'
+    display_plugin: entity_reference
     position: 2
     display_options:
-      display_extenders:
-        metatag_display_extender: {  }
       fields:
         title:
           id: title
@@ -581,6 +579,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -636,43 +637,49 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+      pager:
+        type: none
+        options:
+          offset: 0
+      sorts:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
           entity_type: node
           entity_field: title
-          plugin_id: field
-      defaults:
-        fields: false
-        filters: false
-        filter_groups: false
-        sorts: false
-      style:
-        type: entity_reference
-        options:
-          search_fields:
-            title: title
-            nid: '0'
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: title
+          exposed: false
       filters:
         status:
-          value: '1'
+          id: status
           table: node_field_data
           field: status
-          plugin_id: boolean
           entity_type: node
           entity_field: status
-          id: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
           expose:
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-          group: 1
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            ad: ad
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            ad: ad
           expose:
             operator_limit_selection: false
             operator_list: {  }
@@ -683,6 +690,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: numeric
           operator: 'not empty'
           value:
             min: ''
@@ -704,9 +712,9 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-            placeholder: ''
             min_placeholder: ''
             max_placeholder: ''
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -719,31 +727,24 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: numeric
       filter_groups:
         operator: AND
         groups:
           1: AND
-      display_description: ''
-      sorts:
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: node
-          entity_field: title
-          plugin_id: standard
-      pager:
-        type: none
+      style:
+        type: entity_reference
         options:
-          offset: 0
+          search_fields:
+            title: title
+            nid: '0'
+      defaults:
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders:
+        metatag_display_extender: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -753,13 +754,11 @@ display:
         - user.permissions
       tags: {  }
   entity_reference_2:
-    display_plugin: entity_reference
     id: entity_reference_2
     display_title: 'Sidebar Images'
+    display_plugin: entity_reference
     position: 2
     display_options:
-      display_extenders:
-        metatag_display_extender: {  }
       fields:
         title:
           id: title
@@ -768,6 +767,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -823,43 +825,49 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+      pager:
+        type: none
+        options:
+          offset: 0
+      sorts:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
           entity_type: node
           entity_field: title
-          plugin_id: field
-      defaults:
-        fields: false
-        filters: false
-        filter_groups: false
-        sorts: false
-      style:
-        type: entity_reference
-        options:
-          search_fields:
-            title: title
-            nid: '0'
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: title
+          exposed: false
       filters:
         status:
-          value: '1'
+          id: status
           table: node_field_data
           field: status
-          plugin_id: boolean
           entity_type: node
           entity_field: status
-          id: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
           expose:
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-          group: 1
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            ad: ad
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            ad: ad
           expose:
             operator_limit_selection: false
             operator_list: {  }
@@ -870,6 +878,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: numeric
           operator: 'not empty'
           value:
             min: ''
@@ -891,9 +900,9 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-            placeholder: ''
             min_placeholder: ''
             max_placeholder: ''
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -906,31 +915,24 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: numeric
       filter_groups:
         operator: AND
         groups:
           1: AND
-      display_description: ''
-      sorts:
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: node
-          entity_field: title
-          plugin_id: standard
-      pager:
-        type: none
+      style:
+        type: entity_reference
         options:
-          offset: 0
+          search_fields:
+            title: title
+            nid: '0'
+      defaults:
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders:
+        metatag_display_extender: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -940,13 +942,11 @@ display:
         - user.permissions
       tags: {  }
   entity_reference_3:
-    display_plugin: entity_reference
     id: entity_reference_3
     display_title: 'Exit Page Images'
+    display_plugin: entity_reference
     position: 2
     display_options:
-      display_extenders:
-        metatag_display_extender: {  }
       fields:
         title:
           id: title
@@ -955,6 +955,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -1010,43 +1013,49 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+      pager:
+        type: none
+        options:
+          offset: 0
+      sorts:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
           entity_type: node
           entity_field: title
-          plugin_id: field
-      defaults:
-        fields: false
-        filters: false
-        filter_groups: false
-        sorts: false
-      style:
-        type: entity_reference
-        options:
-          search_fields:
-            title: title
-            nid: '0'
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: title
+          exposed: false
       filters:
         status:
-          value: '1'
+          id: status
           table: node_field_data
           field: status
-          plugin_id: boolean
           entity_type: node
           entity_field: status
-          id: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
           expose:
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-          group: 1
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            ad: ad
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            ad: ad
           expose:
             operator_limit_selection: false
             operator_list: {  }
@@ -1057,6 +1066,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: numeric
           operator: 'not empty'
           value:
             min: ''
@@ -1078,9 +1088,9 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-            placeholder: ''
             min_placeholder: ''
             max_placeholder: ''
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -1093,31 +1103,24 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: numeric
       filter_groups:
         operator: AND
         groups:
           1: AND
-      display_description: ''
-      sorts:
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: node
-          entity_field: title
-          plugin_id: standard
-      pager:
-        type: none
+      style:
+        type: entity_reference
         options:
-          offset: 0
+          search_fields:
+            title: title
+            nid: '0'
+      defaults:
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders:
+        metatag_display_extender: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -1127,24 +1130,11 @@ display:
         - user.permissions
       tags: {  }
   page_1:
-    display_plugin: page
     id: page_1
     display_title: Administration
+    display_plugin: page
     position: 1
     display_options:
-      display_extenders:
-        metatag_display_extender: {  }
-      path: admin/content/ads
-      menu:
-        type: normal
-        title: Ads
-        description: ''
-        expanded: false
-        parent: system.admin_content
-        weight: 0
-        context: '0'
-        menu_name: admin
-      display_description: ''
       fields:
         nid:
           id: nid
@@ -1153,6 +1143,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -1207,9 +1200,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -1217,6 +1207,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: Title
           exclude: false
           alter:
@@ -1272,9 +1265,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_cta:
           id: field_cta
           table: node__field_cta
@@ -1282,6 +1272,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'Ad Link'
           exclude: false
           alter:
@@ -1341,7 +1332,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_ad_nav_image:
           id: field_ad_nav_image
           table: node__field_ad_nav_image
@@ -1349,6 +1339,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'Image (Navigation)'
           exclude: false
           alter:
@@ -1393,8 +1384,8 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: thumbnail
             image_link: ''
+            image_style: thumbnail
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -1405,7 +1396,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_image:
           id: field_image
           table: node__field_image
@@ -1413,6 +1403,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'Image (Sidebar)'
           exclude: false
           alter:
@@ -1457,8 +1448,8 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: medium
             image_link: ''
+            image_style: medium
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -1469,7 +1460,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_ad_content_image:
           id: field_ad_content_image
           table: node__field_ad_content_image
@@ -1477,6 +1467,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'Image (Exit Page)'
           exclude: false
           alter:
@@ -1521,8 +1512,8 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: medium
             image_link: ''
+            image_style: medium
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -1533,7 +1524,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_ad_alternate:
           id: field_ad_alternate
           table: node__field_ad_alternate
@@ -1541,6 +1531,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'Alt Ad'
           exclude: false
           alter:
@@ -1596,12 +1587,12 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
+      arguments: {  }
       defaults:
         fields: false
         arguments: false
         header: false
-      arguments: {  }
+      display_description: ''
       header:
         area:
           id: area
@@ -1610,12 +1601,24 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: text
           empty: true
-          tokenize: false
           content:
             value: "<div class=\"action-link\"><a href=\"/node/add/ad?destination=/admin/content/ads\">Add an Ad</a></div>\r\n<div class=\"action-link\"><a href=\"https://arvestbank.acquiadam.com/cloud/#landing\" target=\"_blank\">Add Media</a></div>"
             format: cohesion
-          plugin_id: text
+          tokenize: false
+      display_extenders:
+        metatag_display_extender: {  }
+      path: admin/content/ads
+      menu:
+        type: normal
+        title: Ads
+        description: ''
+        weight: 0
+        expanded: false
+        menu_name: admin
+        parent: system.admin_content
+        context: '0'
     cache_metadata:
       max-age: -1
       contexts:

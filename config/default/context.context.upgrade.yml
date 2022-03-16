@@ -5,8 +5,8 @@ dependencies:
   module:
     - condition_query
     - system
-name: upgrade
 label: upgrade
+name: upgrade
 group: 'error codes'
 description: 'If Cashmanager has an error EC=upgrade'
 requireAllConditions: true
@@ -14,16 +14,16 @@ disabled: false
 conditions:
   request_path:
     id: request_path
-    pages: /business/bank/online-services/online-cash-manager
     negate: false
     uuid: bdfd5da6-e05f-4347-9760-759c59d9ad39
     context_mapping: {  }
+    pages: /business/bank/online-services/online-cash-manager
   request_param:
     id: request_param
-    request_param: EC=upgrade
-    case_sensitive: true
     negate: false
     uuid: cb0ec62b-0e0d-4f0e-839c-3772756b5c72
     context_mapping: {  }
+    request_param: EC=upgrade
+    case_sensitive: true
 reactions: {  }
 weight: 0

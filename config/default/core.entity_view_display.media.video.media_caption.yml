@@ -19,15 +19,15 @@ mode: media_caption
 content:
   name:
     type: micromodal_field_formatter
-    weight: 0
-    region: content
     label: hidden
     settings:
       string_classes: ''
-      caption_swap: '1'
       thumbnail_image_style: ''
+      caption_swap: '1'
       thumbnail_override_fieldname: ''
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   content_moderation_control: true
   created: true

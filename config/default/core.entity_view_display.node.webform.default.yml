@@ -26,56 +26,56 @@ bundle: webform
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 2
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 2
     region: content
   content_moderation_control:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
   field_disable_sidebar_ad:
-    weight: 6
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 6
     region: content
   field_layout_canvas:
-    weight: 4
+    type: cohesion_entity_reference_revisions_entity_view
     label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
-    type: cohesion_entity_reference_revisions_entity_view
+    weight: 4
     region: content
   field_sidebar_ad:
-    weight: 5
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 5
     region: content
   links:
-    weight: 1
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 1
+    region: content
   webform:
-    weight: 3
+    type: webform_entity_reference_entity_view
     label: hidden
     settings:
       source_entity: true
     third_party_settings: {  }
-    type: webform_entity_reference_entity_view
+    weight: 3
     region: content
 hidden:
   field_disclosure: true
