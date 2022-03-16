@@ -22,42 +22,42 @@ bundle: acquia_dam_video
 mode: teaser
 content:
   field_acquiadam_asset_video:
-    weight: 0
+    type: file_video
     label: visually_hidden
     settings:
       controls: true
-      multiple_file_display_type: tags
-      width: 236
-      height: 117
       autoplay: false
       loop: false
+      multiple_file_display_type: tags
       muted: false
+      width: 236
+      height: 117
     third_party_settings: {  }
-    type: file_video
+    weight: 0
     region: content
   field_video_subtitle:
-    weight: 3
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 3
     region: content
   field_video_time_length:
-    weight: 2
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 2
     region: content
   name:
     type: string
-    weight: 1
-    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   content_moderation_control: true
   created: true

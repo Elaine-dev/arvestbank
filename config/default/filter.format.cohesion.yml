@@ -72,16 +72,16 @@ filters:
     weight: 100
     settings:
       default_view_mode: default
-      allowed_media_types:
-        acquia_dam_document: acquia_dam_document
-        acquia_dam_image: acquia_dam_image
-        credit_or_debit_card: credit_or_debit_card
-        video: video
       allowed_view_modes:
         media_button: media_button
         media_caption: media_caption
         media_links: media_links
         thumbnail_overlay: thumbnail_overlay
+      allowed_media_types:
+        acquia_dam_document: acquia_dam_document
+        acquia_dam_image: acquia_dam_image
+        credit_or_debit_card: credit_or_debit_card
+        video: video
   filter_responsive_tables_filter:
     id: filter_responsive_tables_filter
     provider: responsive_tables_filter

@@ -1,7 +1,70 @@
 uuid: 3286a557-2ee1-4cb4-a987-a6bdabc3795d
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.cohesion
+    - filter.format.full_html
+    - media.type.acquia_dam_document
+    - media.type.acquia_dam_image
+    - media.type.credit_or_debit_card
+    - media.type.video
+    - node.type.ad
+    - node.type.ad_campaign
+    - node.type.article_education_article
+    - node.type.associate
+    - node.type.calculators
+    - node.type.campaign_page
+    - node.type.cta_phone_number
+    - node.type.financing
+    - node.type.landing_page
+    - node.type.page
+    - node.type.private_bank_location
+    - node.type.stage_page
+    - node.type.webform
+    - taxonomy.vocabulary.associate_category
+    - taxonomy.vocabulary.branch_location
+    - taxonomy.vocabulary.card_category_keywords
+    - taxonomy.vocabulary.certs
+    - taxonomy.vocabulary.debit_card_category
+    - taxonomy.vocabulary.designation
+    - taxonomy.vocabulary.disclosures
+    - taxonomy.vocabulary.document_and_resource_category
+    - taxonomy.vocabulary.education_article_category
+    - workflows.workflow.editorial
+  module:
+    - arvestbank_calculators
+    - arvestbank_rates
+    - cohesion
+    - cohesion_custom_styles
+    - cohesion_elements
+    - cohesion_style_helpers
+    - cohesion_templates
+    - cohesion_website_settings
+    - conditional_fields
+    - content_moderation
+    - entity_browser
+    - environment_indicator
+    - field_ui
+    - filter
+    - gtm
+    - imce
+    - masquerade
+    - media
+    - menu_admin_per_menu
+    - menu_link_attributes
+    - metatag
+    - moderation_sidebar
+    - node
+    - path
+    - rebuild_cache_access
+    - redirect
+    - scheduler
+    - shortcut
+    - system
+    - taxonomy
+    - toolbar
+    - yoast_seo
 id: site_editor
 label: 'Site Editor'
 weight: -6
@@ -71,7 +134,6 @@ permissions:
   - 'administer content templates'
   - 'administer custom styles'
   - 'administer education-center-menu menu items'
-  - 'administer external link popup'
   - 'administer filters'
   - 'administer footer menu items'
   - 'administer gtm'
@@ -112,12 +174,10 @@ permissions:
   - 'create terms in card_category_keywords'
   - 'create terms in certs'
   - 'create terms in debit_card_category'
-  - 'create terms in debit_card_keywords'
   - 'create terms in designation'
   - 'create terms in disclosures'
   - 'create terms in document_and_resource_category'
   - 'create terms in education_article_category'
-  - 'create terms in school_zip_code'
   - 'create url aliases'
   - 'create video media'
   - 'create webform content'
@@ -132,7 +192,6 @@ permissions:
   - 'edit any credit_or_debit_card media'
   - 'edit any cta_phone_number content'
   - 'edit any financing content'
-  - 'edit any image media'
   - 'edit any landing_page content'
   - 'edit any page content'
   - 'edit any private_bank_location content'
@@ -153,7 +212,6 @@ permissions:
   - 'edit own credit_or_debit_card media'
   - 'edit own cta_phone_number content'
   - 'edit own financing content'
-  - 'edit own image media'
   - 'edit own landing_page content'
   - 'edit own page content'
   - 'edit own private_bank_location content'
@@ -165,12 +223,10 @@ permissions:
   - 'edit terms in card_category_keywords'
   - 'edit terms in certs'
   - 'edit terms in debit_card_category'
-  - 'edit terms in debit_card_keywords'
   - 'edit terms in designation'
   - 'edit terms in disclosures'
   - 'edit terms in document_and_resource_category'
   - 'edit terms in education_article_category'
-  - 'edit terms in school_zip_code'
   - 'masquerade as reviewer'
   - 'rebuild cache access'
   - 'revert ad revisions'
@@ -193,7 +249,6 @@ permissions:
   - 'use editorial transition archive'
   - 'use editorial transition create_new_draft'
   - 'use editorial transition draft_to_review'
-  - 'use editorial transition in_review'
   - 'use editorial transition in_review_to_approve'
   - 'use editorial transition publish'
   - 'use editorial transition restore_from_archive'

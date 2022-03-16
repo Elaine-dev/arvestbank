@@ -5,6 +5,7 @@ dependencies: {  }
 id: local
 label: Local
 description: 'Local Configuration for development purposes outside of the Cloud Platform.'
+weight: 0
 storage: folder
 folder: ../config/envs/local
 module:
@@ -14,7 +15,6 @@ module:
   qa_accounts: 0
   simplesamlphp_auth: 0
 theme: {  }
-weight: 0
 complete_list:
   - dblog.settings
   - devel.settings

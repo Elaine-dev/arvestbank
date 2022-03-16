@@ -12,6 +12,10 @@ pattern: '[term:name]'
 selection_criteria:
   2c6e8297-2e54-4115-a622-ab9967820707:
     id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 2c6e8297-2e54-4115-a622-ab9967820707
+    context_mapping:
+      taxonomy_term: taxonomy_term
     bundles:
       associate_category: associate_category
       branch_location: branch_location
@@ -22,10 +26,6 @@ selection_criteria:
       disclosures: disclosures
       document_and_resource_category: document_and_resource_category
       education_article_category: education_article_category
-    negate: false
-    context_mapping:
-      taxonomy_term: taxonomy_term
-    uuid: 2c6e8297-2e54-4115-a622-ab9967820707
 selection_logic: and
 weight: -5
 relationships: {  }

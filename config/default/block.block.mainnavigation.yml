@@ -18,19 +18,19 @@ plugin: 'menu_block:main'
 settings:
   id: 'menu_block:main'
   label: 'Main navigation'
-  provider: menu_block
   label_display: '0'
+  provider: menu_block
   follow: false
   follow_parent: child
+  label_link: false
+  label_type: block
   level: 1
   depth: 1
   expand_all_items: false
   parent: 'main:'
   suggestion: main
-  label_type: block
-  label_link: false
 visibility:
   cohesion_master_template:
     id: cohesion_master_template
-    using_master_template: 0
     negate: false
+    using_master_template: 0

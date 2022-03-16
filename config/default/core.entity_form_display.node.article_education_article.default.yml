@@ -32,80 +32,80 @@ third_party_settings:
       children:
         - body
         - field_reference_text
+      label: 'Education Article'
+      region: content
       parent_name: ''
       weight: 3
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: 'Education Article'
     group_external_article:
       children:
         - field_link
+      label: 'External Article'
+      region: content
       parent_name: ''
       weight: 4
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: 'External Article'
 id: node.article_education_article.default
 targetEntityType: node
 bundle: article_education_article
 mode: default
 content:
   body:
+    type: text_textarea_with_summary
     weight: 3
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    type: text_textarea_with_summary
-    region: content
   field_disclosure:
-    weight: 1
-    settings: {  }
-    third_party_settings: {  }
     type: options_select
+    weight: 1
     region: content
-  field_education_article_category:
-    weight: 2
     settings: {  }
     third_party_settings: {  }
+  field_education_article_category:
     type: options_buttons
+    weight: 2
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_exclude_from_search:
+    type: search_api_exclude_entity_widget
     weight: 31
+    region: content
     settings:
       field_label: 'Yes, exclude this entity from the search indexes.'
     third_party_settings: {  }
-    type: search_api_exclude_entity_widget
-    region: content
   field_link:
+    type: link_default
     weight: 3
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_meta_tags:
+    type: metatag_firehose
     weight: 10
+    region: content
     settings:
       sidebar: true
     third_party_settings: {  }
-    type: metatag_firehose
-    region: content
   field_reference_text:
     type: text_textarea
     weight: 4
@@ -115,17 +115,17 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_yoast_seo:
+    type: yoast_seo_widget
     weight: 11
+    region: content
     settings:
       body: body
     third_party_settings: {  }
-    type: yoast_seo_widget
-    region: content
   moderation_state:
     type: moderation_state_default
     weight: 13
-    settings: {  }
     region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -152,10 +152,10 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 9
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield

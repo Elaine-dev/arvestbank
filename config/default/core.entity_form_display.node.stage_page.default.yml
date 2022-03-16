@@ -73,245 +73,245 @@ third_party_settings:
         - group_alert_block
         - group_latest_news_videos
         - group_latest_news_alert
+      label: 'Left Block'
+      region: content
       parent_name: ''
       weight: 2
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: 'Left Block'
     group_slide_one:
       children:
         - field_slide_one
         - field_icon_one
         - field_icon_one_text
         - group_cta_slide1
+      label: 'Slide One'
+      region: content
       parent_name: ''
       weight: 3
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: 'Slide One'
     group_slide_two:
       children:
         - field_slide_two
         - field_icon_two
         - field_icon_two_text
         - group_cta_slide2
+      label: 'Slide Two'
+      region: content
       parent_name: ''
       weight: 4
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: 'Slide Two'
     group_slide_three:
       children:
         - field_slide_three
         - field_icon_three
         - field_icon_three_text
         - group_cta_slide3
+      label: 'Slide Three'
+      region: content
       parent_name: ''
       weight: 5
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: 'Slide Three'
     group_slide_four:
       children:
         - field_slide_four
         - field_icon_four
         - field_icon_four_text
         - group_cta_slide4
+      label: 'Slide Four'
+      region: content
       parent_name: ''
       weight: 6
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: 'Slide Four'
     group_cta_slide1:
       children:
         - field_slide1_cta_color
         - field_slide_one_cta_text
         - field_slide1_cta_link
         - field_slide1_cta_position
+      label: CTA
+      region: content
       parent_name: group_slide_one
       weight: 19
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: CTA
     group_cta_slide2:
       children:
         - field_slide2_cta_color
         - field_slide_two_cta_text
         - field_slide2_cta_link
         - field_slide2_cta_position
+      label: CTA
+      region: content
       parent_name: group_slide_two
       weight: 21
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: CTA
     group_cta_slide3:
       children:
         - field_slide3_cta_color
         - field_slide_three_cta_text
         - field_slide3_cta_link
         - field_slide3_cta_position
+      label: CTA
+      region: content
       parent_name: group_slide_three
       weight: 31
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: CTA
     group_cta_slide4:
       children:
         - field_slide4_cta_color
         - field_slide_four_cta_text
         - field_slide4_cta_link
         - field_slide4_cta_position
+      label: CTA
+      region: content
       parent_name: group_slide_four
       weight: 44
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: CTA
     group_sidebar_block:
       children:
         - field_sidebar_title
         - field_sidebar_description
         - field_sidebar_button
+      label: 'Sidebar Block'
+      region: content
       parent_name: group_left_block
       weight: 21
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: 'Sidebar Block'
     group_alert_block:
       children:
         - field_alert_block_body
         - field_alert_block_link
         - field_alert_block_dates
+      label: 'Alert Block'
+      region: content
       parent_name: group_left_block
       weight: 22
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: 'Alert Block'
     group_latest_news_videos:
       children:
         - field_wordpress_articles
+      label: 'Latest News & Videos'
+      region: content
       parent_name: group_left_block
       weight: 23
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: 'Latest News & Videos'
     group_latest_news_alert:
       children:
         - field_news_alert_block_body
         - field_news_alert_block_dates
+      label: 'Latest News Alert'
+      region: content
       parent_name: group_left_block
       weight: 24
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: 'Latest News Alert'
     group_homepage:
       children:
         - field_block_title
         - body
         - field_block_button
+      label: Homepage
+      region: content
       parent_name: group_left_block
       weight: 20
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: Homepage
 id: node.stage_page.default
 targetEntityType: node
 bundle: stage_page
 mode: default
 content:
   body:
+    type: text_textarea_with_summary
     weight: 8
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    type: text_textarea_with_summary
-    region: content
   created:
     type: datetime_timestamp
     weight: 8
@@ -319,304 +319,305 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_alert_block_body:
+    type: text_textarea
     weight: 20
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_alert_block_dates:
+    type: daterange_default
     weight: 22
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: daterange_default
-    region: content
   field_alert_block_link:
+    type: link_default
     weight: 21
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_block_button:
+    type: link_default
     weight: 9
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_block_title:
+    type: string_textfield
     weight: 7
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_disclosure:
+    type: options_select
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_exclude_from_search:
+    type: search_api_exclude_entity_widget
     weight: 57
+    region: content
     settings:
       field_label: 'Yes, exclude this entity from the search indexes.'
     third_party_settings: {  }
-    type: search_api_exclude_entity_widget
-    region: content
   field_icon_four:
     type: media_library_widget
     weight: 42
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
   field_icon_four_text:
+    type: string_textfield
     weight: 43
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_icon_one:
     type: media_library_widget
     weight: 17
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
   field_icon_one_text:
+    type: string_textfield
     weight: 18
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_icon_three:
     type: media_library_widget
     weight: 29
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
   field_icon_three_text:
+    type: string_textfield
     weight: 30
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_icon_two:
     type: media_library_widget
     weight: 18
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
   field_icon_two_text:
+    type: string_textfield
     weight: 20
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_meta_tags:
+    type: metatag_firehose
     weight: 17
+    region: content
     settings:
       sidebar: true
     third_party_settings: {  }
-    type: metatag_firehose
-    region: content
   field_news_alert_block_body:
+    type: text_textarea
     weight: 18
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_news_alert_block_dates:
+    type: daterange_default
     weight: 20
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: daterange_default
-    region: content
   field_sidebar_button:
+    type: link_default
     weight: 60
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_sidebar_description:
+    type: text_textarea
     weight: 59
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_sidebar_title:
+    type: text_textfield
     weight: 58
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: text_textfield
-    region: content
   field_slide1_cta_color:
+    type: options_select
     weight: 30
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_slide1_cta_link:
+    type: link_default
     weight: 32
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_slide1_cta_position:
+    type: options_select
     weight: 33
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_slide2_cta_color:
+    type: options_select
     weight: 51
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_slide2_cta_link:
+    type: link_default
     weight: 53
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_slide2_cta_position:
+    type: options_select
     weight: 54
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_slide3_cta_color:
+    type: options_select
     weight: 46
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_slide3_cta_link:
+    type: link_default
     weight: 48
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_slide3_cta_position:
+    type: options_select
     weight: 49
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_slide4_cta_color:
+    type: options_select
     weight: 53
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_slide4_cta_link:
+    type: link_default
     weight: 55
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_slide4_cta_position:
+    type: options_select
     weight: 56
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_slide_four:
     type: media_library_widget
     weight: 40
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
   field_slide_four_cta_text:
+    type: text_textarea
     weight: 54
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_slide_one:
     type: media_library_widget
     weight: 15
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
   field_slide_one_cta_text:
+    type: text_textarea
     weight: 31
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_slide_three:
     type: media_library_widget
     weight: 26
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
   field_slide_three_cta_text:
+    type: text_textarea
     weight: 47
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_slide_two:
     type: media_library_widget
     weight: 16
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
   field_slide_two_cta_text:
+    type: text_textarea
     weight: 52
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_wordpress_articles:
     type: entity_reference_paragraphs
     weight: 26
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -625,19 +626,18 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-    region: content
   field_yoast_seo:
+    type: yoast_seo_widget
     weight: 18
+    region: content
     settings:
       body: body
     third_party_settings: {  }
-    type: yoast_seo_widget
-    region: content
   moderation_state:
     type: moderation_state_default
     weight: 14
-    settings: {  }
     region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -664,10 +664,10 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 15
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -680,12 +680,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 7
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default

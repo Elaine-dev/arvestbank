@@ -5,8 +5,8 @@ dependencies:
   module:
     - condition_query
     - system
-name: error_code_140
 label: 'Error Code = 140'
+name: error_code_140
 group: 'error codes'
 description: 'If Cashmanager has an error EC=140'
 requireAllConditions: true
@@ -14,16 +14,16 @@ disabled: false
 conditions:
   request_path:
     id: request_path
-    pages: /business/bank/online-services/online-cash-manager
     negate: false
     uuid: 394f3ff0-b70c-4f1b-b4ff-528264ccfd2c
     context_mapping: {  }
+    pages: /business/bank/online-services/online-cash-manager
   request_param:
     id: request_param
-    request_param: EC=140
-    case_sensitive: true
     negate: false
     uuid: 78ec333d-ce55-4a50-ac3e-932c0846bc28
     context_mapping: {  }
+    request_param: EC=140
+    case_sensitive: true
 reactions: {  }
 weight: 0

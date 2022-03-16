@@ -1,17 +1,17 @@
+_core:
+  default_config_hash: gpIMmHdWGMtTf2ZJoO-QHF9bk9ZVESnX-4LD-r3YtTw
+api_build_status: NO_CONTENT
 api_url: 'https://api.cohesiondx.com'
 api_key: nutmeggharial-28166
 organization_key: arvestbank-84023
 site_id: 8246659d-1968-4f07-bcb2-e558d62053fe
-api_build_status: NO_CONTENT
+use_dx8: enable
 google_map_api_key: ''
+asset_is_imported: '1'
+animate_on_view_mobile: DISABLED
 elements_permissions: '{}'
 sidebar_view_style: thumbnails
-_core:
-  default_config_hash: gpIMmHdWGMtTf2ZJoO-QHF9bk9ZVESnX-4LD-r3YtTw
-use_dx8: enable
-asset_is_imported: '1'
 log_dx8_error: enable
-animate_on_view_mobile: DISABLED
 add_animation_classes: DISABLED
 image_browser:
   config:

@@ -18,10 +18,10 @@ widget_selector: tabs
 widget_selector_configuration: {  }
 widgets:
   34bf3388-40d2-40fc-baa4-80d24b4bb285:
+    id: acquiadam
+    uuid: 34bf3388-40d2-40fc-baa4-80d24b4bb285
+    label: acquiadam
+    weight: 1
     settings:
       media_type: acquia_dam_video
       submit_text: 'Select assets'
-    uuid: 34bf3388-40d2-40fc-baa4-80d24b4bb285
-    weight: 1
-    label: acquiadam
-    id: acquiadam

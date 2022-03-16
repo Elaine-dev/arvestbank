@@ -12,13 +12,13 @@ bundle: calculator_code
 mode: default
 content:
   field_calculator_code_descript:
+    type: string_textfield
     weight: 3
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   name:
     type: string_textfield
     weight: -4

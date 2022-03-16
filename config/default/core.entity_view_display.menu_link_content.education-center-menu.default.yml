@@ -11,10 +11,10 @@ bundle: education-center-menu
 mode: default
 content:
   children:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_sidebar_menu_title_overrid: true
   search_api_excerpt: true

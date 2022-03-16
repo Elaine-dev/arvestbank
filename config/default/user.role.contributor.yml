@@ -1,7 +1,66 @@
 uuid: 3b88ad50-9457-487c-bced-a0a856d40d84
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.cohesion
+    - filter.format.full_html
+    - media.type.acquia_dam_document
+    - media.type.acquia_dam_image
+    - media.type.credit_or_debit_card
+    - media.type.video
+    - node.type.ad
+    - node.type.ad_campaign
+    - node.type.article_education_article
+    - node.type.associate
+    - node.type.calculators
+    - node.type.campaign_page
+    - node.type.cta_phone_number
+    - node.type.financing
+    - node.type.landing_page
+    - node.type.page
+    - node.type.private_bank_location
+    - node.type.stage_page
+    - node.type.webform
+    - taxonomy.vocabulary.associate_category
+    - taxonomy.vocabulary.branch_location
+    - taxonomy.vocabulary.card_category_keywords
+    - taxonomy.vocabulary.certs
+    - taxonomy.vocabulary.debit_card_category
+    - taxonomy.vocabulary.designation
+    - taxonomy.vocabulary.disclosures
+    - taxonomy.vocabulary.document_and_resource_category
+    - taxonomy.vocabulary.education_article_category
+    - workflows.workflow.editorial
+  module:
+    - arvestbank_calculators
+    - cohesion
+    - cohesion_custom_styles
+    - cohesion_elements
+    - cohesion_style_helpers
+    - cohesion_templates
+    - cohesion_website_settings
+    - conditional_fields
+    - content_moderation
+    - entity_browser
+    - environment_indicator
+    - filter
+    - masquerade
+    - media
+    - menu_admin_per_menu
+    - menu_link_attributes
+    - metatag
+    - moderation_sidebar
+    - node
+    - path
+    - rebuild_cache_access
+    - redirect
+    - scheduler
+    - shortcut
+    - system
+    - taxonomy
+    - toolbar
+    - yoast_seo
 id: contributor
 label: Contributor
 weight: -7
@@ -120,7 +179,6 @@ permissions:
   - 'edit any credit_or_debit_card media'
   - 'edit any cta_phone_number content'
   - 'edit any financing content'
-  - 'edit any image media'
   - 'edit any landing_page content'
   - 'edit any page content'
   - 'edit any private_bank_location content'
@@ -139,7 +197,6 @@ permissions:
   - 'edit own credit_or_debit_card media'
   - 'edit own cta_phone_number content'
   - 'edit own financing content'
-  - 'edit own image media'
   - 'edit own landing_page content'
   - 'edit own page content'
   - 'edit own private_bank_location content'

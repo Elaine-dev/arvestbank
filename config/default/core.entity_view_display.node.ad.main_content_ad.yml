@@ -23,12 +23,12 @@ mode: main_content_ad
 content:
   field_ad_content_image:
     type: ad_formatter
-    weight: 106
-    region: content
     label: hidden
     settings:
       ad_style: main
     third_party_settings: {  }
+    weight: 106
+    region: content
 hidden:
   body: true
   content_moderation_control: true

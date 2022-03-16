@@ -12,10 +12,10 @@ bundle: top-menu
 mode: default
 content:
   children:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_canonical_menu_item: true
   field_sidebar_menu_title_overrid: true

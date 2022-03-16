@@ -11,14 +11,14 @@ id: debit_cards
 label: 'Debit Cards'
 image_style_mappings:
   -
-    breakpoint_id: arvestbank_theme.phone_landscape
-    multiplier: 1x
     image_mapping_type: image_style
     image_mapping: debit_card
-  -
-    breakpoint_id: arvestbank_theme.phone
+    breakpoint_id: arvestbank_theme.phone_landscape
     multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: debit_card_mobile
+    breakpoint_id: arvestbank_theme.phone
+    multiplier: 1x
 breakpoint_group: arvestbank_theme
 fallback_image_style: debit_card

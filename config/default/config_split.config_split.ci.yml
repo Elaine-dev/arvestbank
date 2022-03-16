@@ -5,10 +5,10 @@ dependencies: {  }
 id: ci
 label: CI
 description: 'Configure for automated testing with Acquia Pipelines.'
+weight: 0
 storage: folder
 folder: ../config/envs/ci
 module: {  }
 theme: {  }
-weight: 0
 complete_list: {  }
 partial_list: {  }

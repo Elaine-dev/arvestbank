@@ -4,8 +4,8 @@ status: true
 dependencies:
   module:
     - context_entity_field
-name: second_call_out_button
 label: 'Second Call Out Button'
+name: second_call_out_button
 group: 'basic page'
 description: ''
 requireAllConditions: false
@@ -13,11 +13,11 @@ disabled: false
 conditions:
   'entity_field:node':
     id: 'entity_field:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
     field_name: field_second_callout
     field_state: value
     field_value: schedule_appointment
-    context_mapping:
-      node: '@node.node_route_context:node'
-    negate: false
 reactions: {  }
 weight: 0

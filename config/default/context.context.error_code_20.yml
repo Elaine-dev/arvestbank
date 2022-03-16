@@ -5,8 +5,8 @@ dependencies:
   module:
     - condition_query
     - system
-name: error_code_20
 label: 'Error Code = 20'
+name: error_code_20
 group: 'error codes'
 description: 'If Cashmanager has an error EC=20'
 requireAllConditions: true
@@ -14,16 +14,16 @@ disabled: false
 conditions:
   request_path:
     id: request_path
-    pages: /business/bank/online-services/online-cash-manager
     negate: false
     uuid: 2161818d-b0b5-4cd2-824f-af9c1f5beaed
     context_mapping: {  }
+    pages: /business/bank/online-services/online-cash-manager
   request_param:
     id: request_param
-    request_param: EC=20
     negate: false
     uuid: 1c4b618e-d73c-4ecf-93de-ccc8e962408c
     context_mapping: {  }
+    request_param: EC=20
     case_sensitive: true
 reactions: {  }
 weight: 0

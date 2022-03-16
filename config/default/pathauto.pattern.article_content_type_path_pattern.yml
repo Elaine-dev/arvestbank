@@ -11,12 +11,12 @@ pattern: '/education-center/[node:field_education_article_category]/[node:title]
 selection_criteria:
   53b95e2f-ccd8-4d44-84b9-203e6717a8f8:
     id: node_type
-    bundles:
-      article_education_article: article_education_article
     negate: false
+    uuid: 53b95e2f-ccd8-4d44-84b9-203e6717a8f8
     context_mapping:
       node: node
-    uuid: 53b95e2f-ccd8-4d44-84b9-203e6717a8f8
+    bundles:
+      article_education_article: article_education_article
 selection_logic: and
 weight: -5
 relationships: {  }

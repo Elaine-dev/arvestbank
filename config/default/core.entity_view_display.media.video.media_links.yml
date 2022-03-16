@@ -19,13 +19,13 @@ mode: media_links
 content:
   name:
     type: micromodal_field_formatter
-    weight: 0
-    region: content
     label: hidden
     settings:
       string_classes: coh-style-red-triangle
       thumbnail_image_style: ''
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   content_moderation_control: true
   created: true

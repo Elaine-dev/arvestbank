@@ -14,20 +14,20 @@ third_party_settings:
         find: /^(\/)/
         replace: ''
         limit: 1
+        uuid: ae1e926c-1482-48fa-8431-996dbee1c954
         plugin: find_replace_regex
         source: url
         weight: 0
         label: 'Find replace REGEX'
-        uuid: ae1e926c-1482-48fa-8431-996dbee1c954
       8c57b674-2766-4a13-b575-e20e32c9efa9:
         text: '301'
+        uuid: 8c57b674-2766-4a13-b575-e20e32c9efa9
         plugin: rewrite
         source: dummy_source
         weight: 0
         label: Rewrite
-        uuid: 8c57b674-2766-4a13-b575-e20e32c9efa9
-id: import_redirects
 label: 'Import Redirects'
+id: import_redirects
 description: 'Imports Redirects'
 help: ''
 import_period: -1
@@ -42,28 +42,28 @@ parser_configuration:
   line_limit: 100
 processor: 'entity:redirect'
 processor_configuration:
+  values:
+    type: redirect
   langcode: en
   update_existing: 2
   update_non_existent: _delete
-  expire: -1
   skip_hash_check: false
-  values:
-    type: redirect
-  owner_id: 0
   authorize: false
+  expire: -1
   owner_feed_author: false
+  owner_id: 0
 custom_sources:
   redirect_destination:
-    label: 'redirect destination'
     value: 'redirect destination'
+    label: 'redirect destination'
     machine_name: redirect_destination
   url:
-    label: url
     value: url
+    label: url
     machine_name: url
   dummy_source:
-    label: dummy_source
     value: dummy_source
+    label: dummy_source
     machine_name: dummy_source
 mappings:
   -
@@ -83,12 +83,12 @@ mappings:
     map:
       url: ''
       guid: url
+    settings: {  }
     unique:
       guid: '1'
-    settings: {  }
   -
     target: status_code
     map:
       value: dummy_source
-    unique: {  }
     settings: {  }
+    unique: {  }

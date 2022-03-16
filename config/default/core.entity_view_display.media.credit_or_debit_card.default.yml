@@ -22,66 +22,66 @@ bundle: credit_or_debit_card
 mode: default
 content:
   field_acquiadam_asset_descrip:
-    weight: 2
+    type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 2
     region: content
   field_acquiadam_asset_id:
+    type: number_integer
     label: visually_hidden
-    weight: 0
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_integer
+    weight: 0
     region: content
   field_acquiadam_asset_image:
-    weight: 6
+    type: image
     label: above
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
     third_party_settings: {  }
-    type: image
+    weight: 6
     region: content
   field_credit_or_debit_card:
-    weight: 4
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 4
     region: content
   field_debit_card_category:
-    weight: 3
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 3
     region: content
   field_debit_card_keywords:
-    weight: 8
+    type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 8
     region: content
   field_geolocation:
-    weight: 9
+    type: geolocation_latlng
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: geolocation_latlng
+    weight: 9
     region: content
   field_id_internal:
-    weight: 11
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 11
     region: content
 hidden:
   created: true

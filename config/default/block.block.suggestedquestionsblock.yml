@@ -16,10 +16,10 @@ plugin: suggested_questions_block
 settings:
   id: suggested_questions_block
   label: 'Suggested Questions Block'
-  provider: arvestbank_ask_arvest
   label_display: '0'
+  provider: arvestbank_ask_arvest
 visibility:
   cohesion_master_template:
     id: cohesion_master_template
-    using_master_template: 0
     negate: false
+    using_master_template: 0

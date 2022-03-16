@@ -35,7 +35,7 @@
         "drupal/context_entity_field": "1.x-dev@dev",
         "drupal/cookiepro": "^2.0",
         "drupal/core-composer-scaffold": "^9",
-        "drupal/core-recommended": "9.2.13",
+        "drupal/core-recommended": "9.3.8",
         "drupal/critical_css": "^1.17",
         "drupal/ctools": "^3.6",
         "drupal/devel": "^4.1",
@@ -183,7 +183,7 @@
         },
         "patches": {
             "drupal/core": {
-                "FinishResponseSubscriber: Need warning/error when headers exceed 16k": "https://www.drupal.org/files/issues/2021-02-08/finish-response-subscriber--need-warning-error-when-headers-exceed-16k-2844620-34.patch"
+                "FinishResponseSubscriber: Need warning/error when headers exceed 16k": "https://git.drupalcode.org/project/drupal/-/merge_requests/1943.patch"
             },
             "drupal/config_ignore": {
                 "Support for export filtering via Drush": "https://www.drupal.org/files/issues/2021-01-04/config_ignore_2857247-61.patch"

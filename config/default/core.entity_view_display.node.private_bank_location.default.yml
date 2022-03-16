@@ -19,23 +19,23 @@ mode: default
 content:
   field_image:
     type: media_thumbnail
-    weight: 2
     label: hidden
     settings:
-      image_style: private_banker_location_image
       image_link: ''
+      image_style: private_banker_location_image
     third_party_settings: {  }
+    weight: 2
     region: content
   field_phone_number:
-    weight: 0
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 0
     region: content
   field_private_bank_location_link:
-    weight: 1
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -44,13 +44,13 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 1
     region: content
   links:
-    weight: 3
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 3
+    region: content
 hidden:
   content_moderation_control: true
   search_api_excerpt: true

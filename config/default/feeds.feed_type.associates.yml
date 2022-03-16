@@ -33,27 +33,27 @@ third_party_settings:
       bb0e1df6-690a-43e5-bb3f-d3fdf0950c34:
         separator: ','
         limit: null
+        uuid: bb0e1df6-690a-43e5-bb3f-d3fdf0950c34
         plugin: explode
         source: certs
         weight: 0
         label: Explode
-        uuid: bb0e1df6-690a-43e5-bb3f-d3fdf0950c34
       fd9bace4-d88a-4a97-8248-a8a0ec87241f:
         text: '1'
+        uuid: fd9bace4-d88a-4a97-8248-a8a0ec87241f
         plugin: rewrite
         source: status
         weight: 0
         label: Rewrite
-        uuid: fd9bace4-d88a-4a97-8248-a8a0ec87241f
       106028f8-1831-47b3-91aa-98d6ec00341c:
         text: 'SCHEDULE AN APPOINTMENT'
+        uuid: 106028f8-1831-47b3-91aa-98d6ec00341c
         plugin: rewrite
         source: coconut_text
         weight: 0
         label: Rewrite
-        uuid: 106028f8-1831-47b3-91aa-98d6ec00341c
-id: associates
 label: Associates
+id: associates
 description: ''
 help: ''
 import_period: -1
@@ -68,161 +68,161 @@ parser_configuration:
   line_limit: 100
 processor: 'entity:node'
 processor_configuration:
+  values:
+    type: associate
   langcode: en
   update_existing: 1
   update_non_existent: _delete
+  skip_hash_check: false
+  authorize: true
   expire: -1
   owner_feed_author: false
   owner_id: 146
-  authorize: true
-  skip_hash_check: false
-  values:
-    type: associate
 custom_sources:
   name:
-    label: name
     value: name
+    label: name
     machine_name: name
   title:
-    label: title
     value: title
+    label: title
     machine_name: title
   title2:
-    label: title2
     value: title2
+    label: title2
     machine_name: title2
   nmls_id:
-    label: 'nmls id'
     value: 'nmls id'
+    label: 'nmls id'
     machine_name: nmls_id
   insurance_license_number:
-    label: insurance_license_number
     value: insurance_license_number
+    label: insurance_license_number
     machine_name: insurance_license_number
   phone:
-    label: phone
     value: phone
+    label: phone
     machine_name: phone
   email:
-    label: email
     value: email
+    label: email
     machine_name: email
   bio:
-    label: bio
     value: bio
+    label: bio
     machine_name: bio
   location:
-    label: Location
     value: Location
+    label: Location
     machine_name: location
   associate_type:
-    label: associate_type
     value: associate_type
+    label: associate_type
     machine_name: associate_type
   image:
-    label: image
     value: image
+    label: image
     machine_name: image
   branch:
-    label: branch
     value: branch
+    label: branch
     machine_name: branch
   fax:
-    label: fax
     value: fax
+    label: fax
     machine_name: fax
   mobile:
-    label: mobile
     value: mobile
+    label: mobile
     machine_name: mobile
   appointment:
-    label: appointment
     value: appointment
+    label: appointment
     machine_name: appointment
   id:
-    label: id
     value: id
+    label: id
     machine_name: id
   certs:
-    label: certs
     value: certs
+    label: certs
     machine_name: certs
   image_01:
-    label: image
     value: image
+    label: image
     machine_name: image_01
   published_status:
-    label: published_status
     value: published_status
+    label: published_status
     machine_name: published_status
   status:
-    label: status
     value: status
+    label: status
     machine_name: status
   coconut_appointment:
-    label: coconut_appointment
     value: coconut_appointment
+    label: coconut_appointment
     machine_name: coconut_appointment
   coconut_text:
-    label: coconut_text
     value: coconut_text
+    label: coconut_text
     machine_name: coconut_text
   associate_bio:
-    label: associate_bio
     value: associate_bio
+    label: associate_bio
     machine_name: associate_bio
   associate_bio_text:
-    label: associate_bio_text
     value: associate_bio_text
+    label: associate_bio_text
     machine_name: associate_bio_text
   pb_location:
-    label: pb_location
     value: pb_location
+    label: pb_location
     machine_name: pb_location
   pb_application:
-    label: pb_application
     value: pb_application
+    label: pb_application
     machine_name: pb_application
   user_id:
-    label: user_id
     value: user_id
+    label: user_id
     machine_name: user_id
 mappings:
   -
     target: title
     map:
       value: name
-    unique: {  }
     settings:
       language: null
+    unique: {  }
   -
     target: field_job_title
     map:
       value: title
-    unique: {  }
     settings:
       language: null
+    unique: {  }
   -
     target: field_job_title
     map:
       value: title2
-    unique: {  }
     settings:
       language: null
+    unique: {  }
   -
     target: field_nmls_number
     map:
       value: nmls_id
-    unique: {  }
     settings:
       language: null
+    unique: {  }
   -
     target: field_insurance_license_number
     map:
       value: insurance_license_number
-    unique: {  }
     settings:
       language: null
+    unique: {  }
   -
     target: field_office_number
     map:
@@ -233,10 +233,10 @@ mappings:
     target: field_email
     map:
       value: email
-    unique: {  }
     settings:
       language: null
       defuse: false
+    unique: {  }
   -
     target: body
     map:
@@ -249,9 +249,9 @@ mappings:
     target: field_location
     map:
       value: location
-    unique: {  }
     settings:
       language: null
+    unique: {  }
   -
     target: field_associate_type
     map:
@@ -264,9 +264,9 @@ mappings:
     target: field_branch_nickname
     map:
       value: branch
-    unique: {  }
     settings:
       language: null
+    unique: {  }
   -
     target: field_fax_number
     map:
@@ -283,10 +283,10 @@ mappings:
     target: field_associate_id
     map:
       value: id
-    unique:
-      value: '1'
     settings:
       language: null
+    unique:
+      value: '1'
   -
     target: field_designation
     map:
@@ -337,6 +337,6 @@ mappings:
     target: field_username
     map:
       value: user_id
-    unique: {  }
     settings:
       language: null
+    unique: {  }

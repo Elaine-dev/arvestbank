@@ -1,7 +1,14 @@
 uuid: a8a52604-8f82-4a57-af4a-607c674da5f8
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - content_moderation
+    - media
+    - moderation_sidebar
+    - node
+    - sitemap
+    - system
 id: reviewer
 label: Reviewer
 weight: -9
@@ -9,7 +16,6 @@ is_admin: null
 permissions:
   - 'access content overview'
   - 'access sitemap'
-  - 'use editorial transition unpublished'
   - 'use moderation sidebar'
   - 'view all revisions'
   - 'view any unpublished content'

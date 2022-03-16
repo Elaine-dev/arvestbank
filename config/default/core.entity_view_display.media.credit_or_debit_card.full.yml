@@ -22,13 +22,13 @@ bundle: credit_or_debit_card
 mode: full
 content:
   field_acquiadam_asset_image:
-    weight: 0
+    type: image
     label: hidden
     settings:
-      image_style: hub_content_card_credit_card
       image_link: ''
+      image_style: hub_content_card_credit_card
     third_party_settings: {  }
-    type: image
+    weight: 0
     region: content
 hidden:
   created: true

@@ -19,12 +19,12 @@ bundle: acquia_dam_image
 mode: full_width_slideshow
 content:
   field_acquiadam_asset_image:
-    weight: 0
+    type: image_url
     label: hidden
     settings:
       image_style: stage_slide
     third_party_settings: {  }
-    type: image_url
+    weight: 0
     region: content
 hidden:
   content_moderation_control: true

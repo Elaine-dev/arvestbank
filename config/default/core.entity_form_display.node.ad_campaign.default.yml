@@ -53,17 +53,17 @@ third_party_settings:
         - field_ad_nav_credit_cards
         - field_ad_nav_home_loans
         - field_ad_nav_investments
+      label: 'Main Navigation'
+      region: content
       parent_name: ''
       weight: 12
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: 'Main Navigation'
     group_side_navigation:
       children:
         - group_personal
@@ -73,149 +73,149 @@ third_party_settings:
         - group_ad_side_investments_trusts
         - group_top_links
         - group_footer_links
+      label: Sidebar
+      region: content
       parent_name: ''
       weight: 13
       format_type: details
-      region: content
       format_settings:
+        classes: ''
+        id: ''
+        open: false
         description: ''
         required_fields: true
-        id: ''
-        classes: ''
-        open: false
-      label: Sidebar
     group_personal:
       children:
         - field_ad_side_p_bank
         - field_ad_side_p_borrow
         - field_ad_side_p_invest
         - field_ad_side_p_other
+      label: Personal
+      region: content
       parent_name: group_side_navigation
       weight: 20
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: Personal
     group_ad_side_business:
       children:
         - field_ad_side_b_bank
         - field_ad_side_b_borrow
         - field_ad_side_b_manage
         - field_ad_side_b_protect
+      label: Business
+      region: content
       parent_name: group_side_navigation
       weight: 21
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: Business
     group_ad_side_credit_cards:
       children:
         - field_ad_side_cc_personal
         - field_ad_side_cc_business
         - field_ad_side_cc_manage
         - field_ad_side_cc_protect
+      label: 'Credit Cards'
+      region: content
       parent_name: group_side_navigation
       weight: 22
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: 'Credit Cards'
     group_home_loans:
       children:
         - field_ad_side_hl_get_started
         - field_ad_side_hl_lending_options
         - field_ad_side_hl_learn_more
         - field_ad_side_hl_existing_loan
+      label: 'Home Loans'
+      region: content
       parent_name: group_side_navigation
       weight: 23
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: 'Home Loans'
     group_ad_side_investments_trusts:
       children:
         - field_ad_side_it_planning
         - field_ad_side_it_investing
         - field_ad_side_it_insurance
         - field_ad_side_it_trust_estate
+      label: 'Investments & Trusts'
+      region: content
       parent_name: group_side_navigation
       weight: 24
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: 'Investments & Trusts'
     group_top_links:
       children:
         - field_ad_side_about
         - field_ad_side_contact
+      label: 'Top Links'
+      region: content
       parent_name: group_side_navigation
       weight: 25
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: 'Top Links'
     group_footer_links:
       children:
         - field_ad_side_education_center
         - field_ad_side_docs_resources
+      label: 'Footer Links'
+      region: content
       parent_name: group_side_navigation
       weight: 26
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: 'Footer Links'
     group_exit_pages:
       children:
         - field_ad_exit_application
         - field_ad_exit_banking
         - field_ad_exit_ccapply
         - field_ad_exit_switchkit
+      label: 'Exit Pages'
+      region: content
       parent_name: ''
       weight: 14
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: 'Exit Pages'
 id: node.ad_campaign.default
 targetEntityType: node
 bundle: ad_campaign
@@ -228,214 +228,214 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_ad_active_dates:
-    weight: 1
-    settings: {  }
-    third_party_settings: {  }
     type: daterange_default
+    weight: 1
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_ad_exit_application:
+    type: options_select
     weight: 16
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_exit_banking:
+    type: options_select
     weight: 17
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_exit_ccapply:
+    type: options_select
     weight: 18
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_exit_switchkit:
+    type: options_select
     weight: 19
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_nav_business:
+    type: options_select
     weight: 13
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_nav_credit_cards:
+    type: options_select
     weight: 14
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_nav_home_loans:
+    type: options_select
     weight: 15
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_nav_investments:
+    type: options_select
     weight: 16
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_nav_personal:
+    type: options_select
     weight: 12
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_side_about:
+    type: options_select
     weight: 15
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_side_b_bank:
+    type: options_select
     weight: 30
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_side_b_borrow:
+    type: options_select
     weight: 31
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_side_b_manage:
+    type: options_select
     weight: 32
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_side_b_protect:
+    type: options_select
     weight: 33
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_side_cc_business:
+    type: options_select
     weight: 35
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_side_cc_manage:
+    type: options_select
     weight: 36
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_side_cc_personal:
+    type: options_select
     weight: 34
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_side_cc_protect:
+    type: options_select
     weight: 37
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_side_contact:
+    type: options_select
     weight: 16
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_side_docs_resources:
+    type: options_select
     weight: 18
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_side_education_center:
+    type: options_select
     weight: 17
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_side_hl_existing_loan:
+    type: options_select
     weight: 41
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_side_hl_get_started:
+    type: options_select
     weight: 38
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_side_hl_learn_more:
+    type: options_select
     weight: 40
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_side_hl_lending_options:
+    type: options_select
     weight: 39
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_side_it_insurance:
+    type: options_select
     weight: 44
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_side_it_investing:
+    type: options_select
     weight: 43
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_side_it_planning:
+    type: options_select
     weight: 42
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_side_it_trust_estate:
+    type: options_select
     weight: 45
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_side_p_bank:
+    type: options_select
     weight: 26
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_side_p_borrow:
+    type: options_select
     weight: 27
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_side_p_invest:
+    type: options_select
     weight: 28
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_ad_side_p_other:
+    type: options_select
     weight: 29
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   moderation_state:
     type: moderation_state_default
     weight: 10
-    settings: {  }
     region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -445,10 +445,10 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 4
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
@@ -464,17 +464,17 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 11
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 5
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -487,12 +487,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 2
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default

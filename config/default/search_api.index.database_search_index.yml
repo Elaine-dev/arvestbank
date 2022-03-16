@@ -138,18 +138,21 @@ processor_settings:
     excluded_private: 0
     excluded_mimes: 'audio/x-aiff image/x-jg video/x-msvideo image/x-ms-bmp image/gif image/vnd.microsoft.icon video/quicktime audio/ogg video/ogg image/png image/x-photoshop audio/x-realaudio audio/x-pn-realaudio image/x-rgb video/x-flv'
   highlight:
-    highlight: always
-    highlight_partial: false
+    weights:
+      postprocess_query: 0
+    prefix: '<strong>'
+    suffix: '</strong>'
     excerpt: true
     excerpt_length: 256
     exclude_fields:
       - name
       - title
-    prefix: '<strong>'
-    suffix: '</strong>'
-    weights:
-      postprocess_query: 0
+    highlight: always
+    highlight_partial: false
   html_filter:
+    weights:
+      preprocess_index: -15
+      preprocess_query: -48
     all_fields: false
     fields:
       - body
@@ -164,10 +167,10 @@ processor_settings:
       h2: 3
       h3: 2
       strong: 2
-    weights:
-      preprocess_index: -15
-      preprocess_query: -48
   ignorecase:
+    weights:
+      preprocess_index: -20
+      preprocess_query: -43
     all_fields: false
     fields:
       - body
@@ -176,12 +179,12 @@ processor_settings:
       - name
       - saa_field_acquiadam_asset_doc
       - title
-    weights:
-      preprocess_index: -20
-      preprocess_query: -43
   language_with_fallback: {  }
   rendered_item: {  }
   stemmer:
+    weights:
+      preprocess_index: 0
+      preprocess_query: -44
     all_fields: false
     fields:
       - body
@@ -193,10 +196,10 @@ processor_settings:
     exceptions:
       mexican: mexic
       texan: texa
-    weights:
-      preprocess_index: 0
-      preprocess_query: -44
   tokenizer:
+    weights:
+      preprocess_index: -6
+      preprocess_query: -46
     all_fields: false
     fields:
       - body
@@ -205,14 +208,14 @@ processor_settings:
       - name
       - saa_field_acquiadam_asset_doc
       - title
-    ignored: ._-
     spaces: ''
+    ignored: ._-
     overlap_cjk: 1
     minimum_word_size: '3'
-    weights:
-      preprocess_index: -6
-      preprocess_query: -46
   transliteration:
+    weights:
+      preprocess_index: -20
+      preprocess_query: -49
     all_fields: true
     fields:
       - body
@@ -225,14 +228,11 @@ processor_settings:
       - type
       - uri
       - url
-    weights:
-      preprocess_index: -20
-      preprocess_query: -49
 tracker_settings:
   default:
     indexing_order: fifo
 options:
-  index_directly: true
   cron_limit: 50
+  index_directly: true
   track_changes_in_references: true
 server: database_search_server

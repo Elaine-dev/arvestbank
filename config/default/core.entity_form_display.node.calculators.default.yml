@@ -30,46 +30,46 @@ third_party_settings:
     group_external_calcu:
       children:
         - field_link
+      label: 'External Calculator Redirect'
+      region: content
       parent_name: ''
       weight: 3
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: 'Use this field to redirect to an external Calculator.'
+        id: ''
         open: false
+        description: 'Use this field to redirect to an external Calculator.'
         required_fields: true
-      label: 'External Calculator Redirect'
     group_internal_calculator:
       children: {  }
+      label: 'Internal Calculator'
+      region: hidden
       parent_name: ''
       weight: 18
       format_type: details
-      region: hidden
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: 'Internal Calculator'
     group_iframe_calculator:
       children:
         - field_calculator
         - field_print_button_text
         - body
+      label: 'iFrame Calculator'
+      region: content
       parent_name: ''
       weight: 2
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: 'iFrame Calculator'
 id: node.calculators.default
 targetEntityType: node
 bundle: calculators
@@ -78,13 +78,13 @@ content:
   body:
     type: text_textarea_with_summary
     weight: 6
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 5
@@ -92,59 +92,59 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_calculator:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
     type: options_select
+    weight: 4
     region: content
-  field_education_article_category:
-    weight: 1
     settings: {  }
     third_party_settings: {  }
+  field_education_article_category:
     type: options_buttons
+    weight: 1
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_exclude_from_search:
+    type: search_api_exclude_entity_widget
     weight: 31
+    region: content
     settings:
       field_label: 'Yes, exclude this entity from the search indexes.'
     third_party_settings: {  }
-    type: search_api_exclude_entity_widget
-    region: content
   field_link:
+    type: link_default
     weight: 6
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_meta_tags:
+    type: metatag_firehose
     weight: 13
+    region: content
     settings:
       sidebar: true
     third_party_settings: {  }
-    type: metatag_firehose
-    region: content
   field_print_button_text:
+    type: string_textfield
     weight: 5
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_yoast_seo:
+    type: yoast_seo_widget
     weight: 14
+    region: content
     settings:
       body: body
     third_party_settings: {  }
-    type: yoast_seo_widget
-    region: content
   moderation_state:
     type: moderation_state_default
     weight: 11
-    settings: {  }
     region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -171,10 +171,10 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 12
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -187,12 +187,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 4
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
