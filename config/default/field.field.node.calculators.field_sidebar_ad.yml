@@ -1,0 +1,25 @@
+uuid: 9804773d-0777-4f63-98ea-8f844e891916
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sidebar_ad
+    - node.type.calculators
+id: node.calculators.field_sidebar_ad
+field_name: field_sidebar_ad
+entity_type: node
+bundle: calculators
+label: 'Sidebar Ad'
+description: 'Select the sidebar tile ad to display on this page.  Not tied to an ad campaign and will override any other setting.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: ads
+      display_name: entity_reference_2
+      arguments: {  }
+field_type: entity_reference

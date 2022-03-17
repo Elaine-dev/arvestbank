@@ -1,0 +1,23 @@
+uuid: 01520d68-c855-4874-a927-61cdffbdd518
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_disable_sidebar_ad
+    - node.type.calculators
+id: node.calculators.field_disable_sidebar_ad
+field_name: field_disable_sidebar_ad
+entity_type: node
+bundle: calculators
+label: 'Disable Sidebar Ad'
+description: 'Check this box to hide the ad that appears below the sidebar menu on this page.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
