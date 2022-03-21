@@ -76,6 +76,7 @@ permissions:
   - 'access content elements group'
   - 'access content overview'
   - 'access context visibility'
+  - 'access contextual links'
   - 'access cpt_cat_campaign_components cohesion_component_category group'
   - 'access cpt_cat_drupal_blocks cohesion_component_category group'
   - 'access cpt_cat_dynamic_components cohesion_component_category group'
