@@ -28,15 +28,6 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
-  field_acquiadam_asset_id:
-    type: number_integer
-    label: visually_hidden
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    weight: 0
-    region: content
   field_acquiadam_asset_image:
     type: image
     label: above
@@ -85,6 +76,7 @@ content:
     region: content
 hidden:
   created: true
+  field_acquiadam_asset_id: true
   name: true
   search_api_excerpt: true
   thumbnail: true

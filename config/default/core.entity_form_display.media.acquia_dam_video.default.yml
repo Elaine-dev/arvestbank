@@ -10,9 +10,7 @@ dependencies:
     - field.field.media.acquia_dam_video.field_video_subtitle
     - field.field.media.acquia_dam_video.field_video_time_length
     - media.type.acquia_dam_video
-    - workflows.workflow.editorial
   module:
-    - content_moderation
     - text
 _core:
   default_config_hash: PLmWkKplrfHYG0SeraE02PbJh37FMMRau7mNY24dRYg
@@ -22,10 +20,11 @@ bundle: acquia_dam_video
 mode: default
 content:
   field_acquiadam_asset_id:
-    type: number
-    weight: 1
+    type: string_textfield
+    weight: 26
     region: content
     settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
   field_education_article_category:
