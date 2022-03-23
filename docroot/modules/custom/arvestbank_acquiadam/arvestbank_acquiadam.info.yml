@@ -1,0 +1,8 @@
+name: Arvest Bank Acquia DAM
+type: module
+description: Media Acquia DAM extension.
+package: Arvest
+
+core_version_requirement: ^8 || ^9
+dependencies:
+  - media_acquiadam
