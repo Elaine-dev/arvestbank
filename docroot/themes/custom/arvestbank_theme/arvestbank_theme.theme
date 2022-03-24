@@ -8,6 +8,7 @@
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\block\Entity\Block;
 use Drupal\Core\Render\Markup;
+use Drupal\Component\Utility\Html;
 
 /**
  * Implements hook_form_alter().
@@ -222,4 +223,15 @@ function arvestbank_theme_preprocess_field__field_print_button_text(&$variables,
     unset($variables['items'][0]);
   }
 
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function arvestbank_theme_theme_suggestions_filter_caption_alter(array &$suggestions, array $variables, $hook) {
+  $html = Html::load($variables['node']->__toString());
+  foreach($html->getElementsByTagName('drupal-media') as $drupal_media) {
+    $view_mode = $drupal_media->getAttribute('data-view-mode');
+    $suggestions[] = 'filter_caption__media__' . $view_mode;
+  }
 }

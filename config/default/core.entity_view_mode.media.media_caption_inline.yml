@@ -1,0 +1,10 @@
+uuid: 190c1396-d75e-44e3-9e24-862c6f6b69d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.media_caption_inline
+label: 'Media Caption - Inline'
+targetEntityType: media
+cache: true

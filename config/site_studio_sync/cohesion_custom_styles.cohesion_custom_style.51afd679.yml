@@ -1,0 +1,606 @@
+uuid: 6c9b8119-fdfa-481b-983c-4d6468ffa36b
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_custom_styles.cohesion_custom_style.3a874b28
+label: 'Media Embed - Display Inline'
+id: 51afd679
+json_values: |
+  {
+      "preview": {
+          "text": "<div class=\"coh-preview\">Default content for 'Generic'.<\/div>\n",
+          "textFormat": "cohesion"
+      },
+      "styles": {
+          "settings": {
+              "element": "div",
+              "class": "",
+              "combinator": "",
+              "pseudo": ""
+          },
+          "styles": {
+              "xl": {
+                  "display": {
+                      "value": "inline"
+                  }
+              }
+          },
+          "af122711-1be9-4840-960a-a0e43dacab8f": {
+              "settings": {
+                  "element": ".coh-style-display-inline",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ""
+              },
+              "styles": {
+                  "xl": {
+                      "display": {
+                          "value": "inline"
+                      },
+                      "margin": {
+                          "margin-left": {
+                              "value": "0"
+                          }
+                      }
+                  }
+              }
+          },
+          "efd7c2d5-0f3d-404e-889d-560e258ae081": {
+              "settings": {
+                  "element": "article",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ""
+              },
+              "styles": {
+                  "xl": {
+                      "display": {
+                          "value": "inline"
+                      }
+                  }
+              }
+          },
+          "b5d91bd1-4154-44c3-8ab7-5d8e29cc8c5f": {
+              "settings": {
+                  "element": "div",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ""
+              },
+              "styles": {
+                  "xl": {
+                      "display": {
+                          "value": "inline"
+                      }
+                  }
+              }
+          },
+          "f3d07ef5-e82b-49fc-8737-f13e2cdf8c88": {
+              "settings": {
+                  "element": ".micromodal-slide",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ""
+              },
+              "styles": {
+                  "xl": {
+                      "display": {
+                          "value": "none"
+                      }
+                  }
+              }
+          },
+          "f33d7752-3bb5-4d98-95d9-485a543e3cee": {
+              "settings": {
+                  "element": "",
+                  "class": ".is-open",
+                  "combinator": "",
+                  "pseudo": ""
+              },
+              "styles": {
+                  "xl": {
+                      "display": {
+                          "value": "inline"
+                      }
+                  }
+              }
+          },
+          "ba6852b5-dfd3-44cf-a6dc-3e228681a49b": {
+              "settings": {
+                  "element": "div",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ""
+              },
+              "styles": {
+                  "xl": {
+                      "display": {
+                          "value": "block"
+                      }
+                  }
+              }
+          },
+          "b2d77fa0-0ca5-4e48-859f-f6e9eab62340": {
+              "settings": {
+                  "element": "",
+                  "class": ".modal__overlay",
+                  "combinator": "",
+                  "pseudo": ""
+              },
+              "styles": {
+                  "xl": {
+                      "display": {
+                          "value": "flex"
+                      }
+                  }
+              }
+          }
+      },
+      "sBackgroundColour": "#FFFFFF",
+      "variableFields": []
+  }
+json_mapper: |
+  {
+      "styles": {
+          "title": "Layout",
+          "selectorType": "topLevel",
+          "formDefinition": [
+              {
+                  "formKey": "layout",
+                  "children": [
+                      {
+                          "formKey": "display",
+                          "breakpoints": [
+                              {
+                                  "name": "xl"
+                              }
+                          ],
+                          "activeFields": [
+                              {
+                                  "name": "display",
+                                  "active": true
+                              },
+                              {
+                                  "name": "visibility",
+                                  "active": false
+                              },
+                              {
+                                  "name": "overflow",
+                                  "active": false
+                              },
+                              {
+                                  "name": "overflow-x",
+                                  "active": false
+                              },
+                              {
+                                  "name": "overflow-y",
+                                  "active": false
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "items": [
+              {
+                  "title": ".coh-style-display-inline",
+                  "type": "container",
+                  "items": [
+                      {
+                          "title": "article",
+                          "type": "container",
+                          "items": [
+                              {
+                                  "title": "div",
+                                  "type": "container",
+                                  "items": [
+                                      {
+                                          "title": ".micromodal-slide",
+                                          "type": "container",
+                                          "items": [
+                                              {
+                                                  "title": ".is-open",
+                                                  "type": "container",
+                                                  "items": [],
+                                                  "form": null,
+                                                  "selectorType": "modifier",
+                                                  "model": ".is-open",
+                                                  "uuid": "f33d7752-3bb5-4d98-95d9-485a543e3cee",
+                                                  "allowedTypes": [
+                                                      "child",
+                                                      "pseudo",
+                                                      "modifier"
+                                                  ],
+                                                  "formDefinition": [
+                                                      {
+                                                          "formKey": "layout",
+                                                          "children": [
+                                                              {
+                                                                  "formKey": "display",
+                                                                  "breakpoints": [
+                                                                      {
+                                                                          "name": "xl"
+                                                                      }
+                                                                  ],
+                                                                  "activeFields": [
+                                                                      {
+                                                                          "name": "display",
+                                                                          "active": true
+                                                                      },
+                                                                      {
+                                                                          "name": "visibility",
+                                                                          "active": false
+                                                                      },
+                                                                      {
+                                                                          "name": "overflow",
+                                                                          "active": false
+                                                                      },
+                                                                      {
+                                                                          "name": "overflow-x",
+                                                                          "active": false
+                                                                      },
+                                                                      {
+                                                                          "name": "overflow-y",
+                                                                          "active": false
+                                                                      }
+                                                                  ]
+                                                              }
+                                                          ]
+                                                      }
+                                                  ]
+                                              },
+                                              {
+                                                  "title": "div",
+                                                  "type": "container",
+                                                  "items": [
+                                                      {
+                                                          "title": ".modal__overlay",
+                                                          "type": "container",
+                                                          "items": [],
+                                                          "form": null,
+                                                          "selectorType": "modifier",
+                                                          "model": ".modal__overlay",
+                                                          "uuid": "b2d77fa0-0ca5-4e48-859f-f6e9eab62340",
+                                                          "allowedTypes": [
+                                                              "child",
+                                                              "pseudo",
+                                                              "modifier"
+                                                          ],
+                                                          "formDefinition": [
+                                                              {
+                                                                  "formKey": "layout",
+                                                                  "children": [
+                                                                      {
+                                                                          "formKey": "display",
+                                                                          "breakpoints": [
+                                                                              {
+                                                                                  "name": "xl"
+                                                                              }
+                                                                          ],
+                                                                          "activeFields": [
+                                                                              {
+                                                                                  "name": "display",
+                                                                                  "active": true
+                                                                              },
+                                                                              {
+                                                                                  "name": "visibility",
+                                                                                  "active": false
+                                                                              },
+                                                                              {
+                                                                                  "name": "overflow",
+                                                                                  "active": false
+                                                                              },
+                                                                              {
+                                                                                  "name": "overflow-x",
+                                                                                  "active": false
+                                                                              },
+                                                                              {
+                                                                                  "name": "overflow-y",
+                                                                                  "active": false
+                                                                              }
+                                                                          ]
+                                                                      }
+                                                                  ]
+                                                              }
+                                                          ]
+                                                      }
+                                                  ],
+                                                  "form": null,
+                                                  "selectorType": "child",
+                                                  "model": "div",
+                                                  "uuid": "ba6852b5-dfd3-44cf-a6dc-3e228681a49b",
+                                                  "allowedTypes": [
+                                                      "child",
+                                                      "pseudo",
+                                                      "modifier"
+                                                  ],
+                                                  "formDefinition": [
+                                                      {
+                                                          "formKey": "layout",
+                                                          "children": [
+                                                              {
+                                                                  "formKey": "display",
+                                                                  "breakpoints": [
+                                                                      {
+                                                                          "name": "xl"
+                                                                      }
+                                                                  ],
+                                                                  "activeFields": [
+                                                                      {
+                                                                          "name": "display",
+                                                                          "active": true
+                                                                      },
+                                                                      {
+                                                                          "name": "visibility",
+                                                                          "active": false
+                                                                      },
+                                                                      {
+                                                                          "name": "overflow",
+                                                                          "active": false
+                                                                      },
+                                                                      {
+                                                                          "name": "overflow-x",
+                                                                          "active": false
+                                                                      },
+                                                                      {
+                                                                          "name": "overflow-y",
+                                                                          "active": false
+                                                                      }
+                                                                  ]
+                                                              }
+                                                          ]
+                                                      }
+                                                  ]
+                                              }
+                                          ],
+                                          "form": null,
+                                          "selectorType": "child",
+                                          "model": ".micromodal-slide",
+                                          "uuid": "f3d07ef5-e82b-49fc-8737-f13e2cdf8c88",
+                                          "allowedTypes": [
+                                              "child",
+                                              "pseudo",
+                                              "modifier"
+                                          ],
+                                          "formDefinition": [
+                                              {
+                                                  "formKey": "layout",
+                                                  "children": [
+                                                      {
+                                                          "formKey": "display",
+                                                          "breakpoints": [
+                                                              {
+                                                                  "name": "xl"
+                                                              }
+                                                          ],
+                                                          "activeFields": [
+                                                              {
+                                                                  "name": "display",
+                                                                  "active": true
+                                                              },
+                                                              {
+                                                                  "name": "visibility",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "overflow",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "overflow-x",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "overflow-y",
+                                                                  "active": false
+                                                              }
+                                                          ]
+                                                      }
+                                                  ]
+                                              }
+                                          ]
+                                      }
+                                  ],
+                                  "form": null,
+                                  "selectorType": "child",
+                                  "model": "div",
+                                  "uuid": "b5d91bd1-4154-44c3-8ab7-5d8e29cc8c5f",
+                                  "allowedTypes": [
+                                      "child",
+                                      "pseudo",
+                                      "modifier"
+                                  ],
+                                  "formDefinition": [
+                                      {
+                                          "formKey": "layout",
+                                          "children": [
+                                              {
+                                                  "formKey": "display",
+                                                  "breakpoints": [
+                                                      {
+                                                          "name": "xl"
+                                                      }
+                                                  ],
+                                                  "activeFields": [
+                                                      {
+                                                          "name": "display",
+                                                          "active": true
+                                                      },
+                                                      {
+                                                          "name": "visibility",
+                                                          "active": false
+                                                      },
+                                                      {
+                                                          "name": "overflow",
+                                                          "active": false
+                                                      },
+                                                      {
+                                                          "name": "overflow-x",
+                                                          "active": false
+                                                      },
+                                                      {
+                                                          "name": "overflow-y",
+                                                          "active": false
+                                                      }
+                                                  ]
+                                              }
+                                          ]
+                                      }
+                                  ]
+                              }
+                          ],
+                          "form": null,
+                          "selectorType": "child",
+                          "model": "article",
+                          "uuid": "efd7c2d5-0f3d-404e-889d-560e258ae081",
+                          "allowedTypes": [
+                              "child",
+                              "pseudo",
+                              "modifier"
+                          ],
+                          "formDefinition": [
+                              {
+                                  "formKey": "layout",
+                                  "children": [
+                                      {
+                                          "formKey": "display",
+                                          "breakpoints": [
+                                              {
+                                                  "name": "xl"
+                                              }
+                                          ],
+                                          "activeFields": [
+                                              {
+                                                  "name": "display",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "visibility",
+                                                  "active": false
+                                              },
+                                              {
+                                                  "name": "overflow",
+                                                  "active": false
+                                              },
+                                              {
+                                                  "name": "overflow-x",
+                                                  "active": false
+                                              },
+                                              {
+                                                  "name": "overflow-y",
+                                                  "active": false
+                                              }
+                                          ]
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "form": null,
+                  "selectorType": "child",
+                  "model": ".coh-style-display-inline",
+                  "uuid": "af122711-1be9-4840-960a-a0e43dacab8f",
+                  "allowedTypes": [
+                      "child",
+                      "pseudo",
+                      "modifier"
+                  ],
+                  "formDefinition": [
+                      {
+                          "formKey": "layout",
+                          "children": [
+                              {
+                                  "formKey": "display",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "display",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "visibility",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "overflow",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "overflow-x",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "overflow-y",
+                                          "active": false
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "margin",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xl"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "margin-equal",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "margin-top",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "margin-bottom",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "margin-left",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "margin-right",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "margin-block-start",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "margin-block-end",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "margin-inline-start",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "margin-inline-end",
+                                          "active": false
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "form": null
+      }
+  }
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-media-embed-display-inline
+custom_style_type: generic
+available_in_wysiwyg: true
+parent: null
+weight: 0

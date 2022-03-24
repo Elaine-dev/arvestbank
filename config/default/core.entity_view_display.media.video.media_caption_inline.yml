@@ -1,0 +1,40 @@
+uuid: 5c6e953b-27d4-46c2-9619-7d49d44f82f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_caption_inline
+    - field.field.media.video.field_education_article_category
+    - field.field.media.video.field_media_oembed_video
+    - field.field.media.video.field_video_subtitle
+    - field.field.media.video.field_video_thumbnail
+    - field.field.media.video.field_video_time_length
+    - media.type.video
+  module:
+    - media_video_micromodal
+id: media.video.media_caption_inline
+targetEntityType: media
+bundle: video
+mode: media_caption_inline
+content:
+  name:
+    type: micromodal_field_formatter
+    label: hidden
+    settings:
+      string_classes: ''
+      thumbnail_image_style: ''
+      caption_swap: '1'
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  content_moderation_control: true
+  created: true
+  field_education_article_category: true
+  field_media_oembed_video: true
+  field_video_subtitle: true
+  field_video_thumbnail: true
+  field_video_time_length: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true
