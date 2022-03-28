@@ -25,7 +25,7 @@ function arvestbank_acquiadam_media_presave(MediaInterface $entity) {
 
   foreach ($entity->bundle->entity->getFieldMap() as $source_field => $destination_field) {
     if ($entity->hasField($destination_field) && $destination_field == 'field_acquiadam_asset_image') {
-      $entity->field_acquiadam_asset_image->alt = $source->getMetadata($entity, 'customField1');
+      $entity->field_acquiadam_asset_image->alt = $source->getMetadata($entity, 'altText');
     }
   }
 }
