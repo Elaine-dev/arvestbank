@@ -16,10 +16,6 @@ use Drupal\media\MediaInterface;
  * created/changed because they are already set by Drupal core.
  */
 function arvestbank_acquiadam_media_presave(MediaInterface $entity) {
-  // Only go for a resync when updating existing entities.
-  if ($entity->isNew()) {
-    return;
-  }
 
   /** @var \Drupal\media_acquiadam\Plugin\media\Source\AcquiadamAsset $source */
   $source = $entity->getSource();
