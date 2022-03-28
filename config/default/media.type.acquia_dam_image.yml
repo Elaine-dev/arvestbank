@@ -15,6 +15,4 @@ new_revision: true
 source_configuration:
   source_field: field_acquiadam_asset_id
 field_map:
-  description: field_acquiadam_asset_descrip
   file: field_acquiadam_asset_image
-  status: status

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "92be7e328c12c5107d79772cffca657d",
+    "content-hash": "ce85ef5d3a40e0be91999f35be1752b9",
     "packages": [
         {
             "name": "acquia/blt",
@@ -1603,53 +1603,6 @@
             "time": "2022-01-25T19:21:20+00:00"
         },
         {
-            "name": "cweagans/php-webdam-client",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cweagans/php-webdam-client.git",
-                "reference": "f5c9987f1ad4115dd8b0348c7d27e9598a6098a0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cweagans/php-webdam-client/zipball/f5c9987f1ad4115dd8b0348c7d27e9598a6098a0",
-                "reference": "f5c9987f1ad4115dd8b0348c7d27e9598a6098a0",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": ">=4.1.4 <7.0",
-                "guzzlehttp/psr7": "~1.0",
-                "php": ">=5.6.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~6.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "cweagans\\webdam\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Cameron Eagans",
-                    "email": "me@cweagans.net",
-                    "homepage": "https://cweagans.net"
-                }
-            ],
-            "description": "Integrates with the Webdam.com API.",
-            "homepage": "https://github.com/cweagans/php-webdam-client",
-            "support": {
-                "issues": "https://github.com/cweagans/php-webdam-client/issues",
-                "source": "https://github.com/cweagans/php-webdam-client/tree/master"
-            },
-            "time": "2020-04-17T16:29:49+00:00"
-        },
-        {
             "name": "dflydev/dot-access-data",
             "version": "v1.1.0",
             "source": {
@@ -2722,30 +2675,27 @@
         },
         {
             "name": "drupal/acquiadam_asset_import",
-            "version": "1.1.0",
+            "version": "dev-2.0.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquiadam_asset_import.git",
-                "reference": "8.x-1.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquiadam_asset_import-8.x-1.1.zip",
-                "reference": "8.x-1.1",
-                "shasum": "49807ed0ec53cd36498eb0dd21832bafe96f694c"
+                "reference": "8048f433412b73172b3aa4ac60d063d3db5ab16d"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
-                "drupal/media_acquiadam": "*"
+                "drupal/media_acquiadam": "^2.0"
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-2.0.x": "2.0.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-1.1",
-                    "datestamp": "1615589177",
+                    "version": "2.0.x-dev",
+                    "datestamp": "1637167182",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -2763,6 +2713,7 @@
                     "homepage": "https://www.drupal.org/user/228997"
                 }
             ],
+            "description": "This module allows you to bulk import the contents of folders from Acquia DAM into your Drupal site. This extends the functionality provided by Media: Acquia DAM, allowing you to have assets in Drupal without having to first associate them to another Drupal entity.",
             "homepage": "https://www.drupal.org/project/acquiadam_asset_import",
             "support": {
                 "source": "https://git.drupalcode.org/project/acquiadam_asset_import"
@@ -6302,47 +6253,46 @@
         },
         {
             "name": "drupal/media_acquiadam",
-            "version": "1.48.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/media_acquiadam.git",
-                "reference": "8.x-1.48"
+                "reference": "2.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/media_acquiadam-8.x-1.48.zip",
-                "reference": "8.x-1.48",
-                "shasum": "951ae08661d6afb6ff7d0e57d27cdf0e38426dc3"
+                "url": "https://ftp.drupal.org/files/projects/media_acquiadam-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "9d7520d79ef9eeba696310c5f13f77e15174c0bd"
             },
             "require": {
-                "cweagans/php-webdam-client": "^1.0.1",
-                "drupal/core": "^8.7 || ^9",
+                "drupal/core": "^8.9 || ^9",
                 "drupal/fallback_formatter": "1.x-dev"
             },
             "require-dev": {
-                "acquia/coding-standards": "*",
-                "brainmaestro/composer-git-hooks": "^2.7",
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.5",
                 "drupal/entity_browser": "~2.0",
                 "drupal/entity_usage": "*",
                 "drupal/fallback_formatter": "*",
                 "drupal/linkit": "~5.0",
-                "drupal/media": "*",
-                "drupal/media_acquiadam_example": "*",
-                "phpunit/phpunit": "^6.5"
+                "drupal/media": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.48",
-                    "datestamp": "1624560891",
+                    "version": "2.0.0",
+                    "datestamp": "1639410642",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
                 },
                 "branch-alias": {
-                    "dev-8.x-1.x": "1.x-dev"
+                    "dev-2.x": "2.x-dev"
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
                 },
                 "hooks": {
                     "pre-commit": "vendor/bin/phpcs",
@@ -17946,6 +17896,7 @@
         "acquia/blt-simplesamlphp": 20,
         "acquia/blt-site-studio": 20,
         "acquia/site_studio_webform": 20,
+        "drupal/acquiadam_asset_import": 20,
         "drupal/better_exposed_filters": 10,
         "drupal/condition_query": 20,
         "drupal/conditional_fields": 15,
@@ -17976,5 +17927,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.2.0"
 }
