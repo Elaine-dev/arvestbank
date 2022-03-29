@@ -730,3 +730,24 @@ function arvestbank_core_update_9006(&$sandbox) {
 
   $sandbox['#finished'] = $sandbox['progress'] / $sandbox['total'];
 }
+
+/**
+ * Implements hook_update_N().
+ *
+ * Delete erroneously created workflow.
+ */
+function arvestbank_core_update_9007() {
+  $workflows = ['associates_'];
+  /** @var \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager */
+  $entity_type_manager = \Drupal::service('entity_type.manager');
+  $content_moderation_storage = $entity_type_manager->getStorage('content_moderation_state');
+  foreach($workflows as $workflow) {
+    // Load all the content moderation of a workflow type.
+    $results = $content_moderation_storage->loadByProperties(['workflow' => $workflow]);
+    /** @var \Drupal\content_moderation\ContentModerationState $result */
+    // Delete the content moderation entity.
+    foreach ($results as $result) {
+      $result->delete();
+    }
+  }
+}
