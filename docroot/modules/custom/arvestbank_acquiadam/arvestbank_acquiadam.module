@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Arvest Bank AcquiaDAM module.
+ *
+ */
+
+use Drupal\media\MediaInterface;
+
+/**
+ * Implements hook_ENTITY_TYPE_presave().
+ *
+ * Override the preSave function from \Drupal\media\Entity\Media because it
+ * ignores empty values (e.g. status = 0) and doesn't set date values for
+ * created/changed because they are already set by Drupal core.
+ */
+function arvestbank_acquiadam_media_presave(MediaInterface $entity) {
+
+  /** @var \Drupal\media_acquiadam\Plugin\media\Source\AcquiadamAsset $source */
+  $source = $entity->getSource();
+  if ($source->getPluginId() !== 'acquiadam_asset' || $entity->get('field_acquiadam_asset_id')->isEmpty()) {
+    return;
+  }
+
+  foreach ($entity->bundle->entity->getFieldMap() as $source_field => $destination_field) {
+    if ($entity->hasField($destination_field) && $destination_field == 'field_acquiadam_asset_image') {
+      $entity->field_acquiadam_asset_image->alt = $source->getMetadata($entity, 'altText');
+    }
+  }
+}
