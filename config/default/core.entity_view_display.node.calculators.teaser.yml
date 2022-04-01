@@ -6,12 +6,14 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.calculators.body
     - field.field.node.calculators.field_calculator
+    - field.field.node.calculators.field_disable_sidebar_ad
     - field.field.node.calculators.field_education_article_category
     - field.field.node.calculators.field_exclude_from_search
     - field.field.node.calculators.field_link
     - field.field.node.calculators.field_meta_tags
     - field.field.node.calculators.field_print_button_text
     - field.field.node.calculators.field_rendered_node
+    - field.field.node.calculators.field_sidebar_ad
     - field.field.node.calculators.field_yoast_seo
     - node.type.calculators
   module:
@@ -42,11 +44,13 @@ content:
     region: content
 hidden:
   field_calculator: true
+  field_disable_sidebar_ad: true
   field_education_article_category: true
   field_exclude_from_search: true
   field_link: true
   field_meta_tags: true
   field_print_button_text: true
   field_rendered_node: true
+  field_sidebar_ad: true
   field_yoast_seo: true
   search_api_excerpt: true

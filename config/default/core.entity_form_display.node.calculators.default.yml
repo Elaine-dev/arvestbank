@@ -5,12 +5,14 @@ dependencies:
   config:
     - field.field.node.calculators.body
     - field.field.node.calculators.field_calculator
+    - field.field.node.calculators.field_disable_sidebar_ad
     - field.field.node.calculators.field_education_article_category
     - field.field.node.calculators.field_exclude_from_search
     - field.field.node.calculators.field_link
     - field.field.node.calculators.field_meta_tags
     - field.field.node.calculators.field_print_button_text
     - field.field.node.calculators.field_rendered_node
+    - field.field.node.calculators.field_sidebar_ad
     - field.field.node.calculators.field_yoast_seo
     - node.type.calculators
     - workflows.workflow.editorial
@@ -46,7 +48,7 @@ third_party_settings:
       label: 'Internal Calculator'
       region: hidden
       parent_name: ''
-      weight: 18
+      weight: 22
       format_type: details
       format_settings:
         classes: ''
@@ -70,6 +72,23 @@ third_party_settings:
         open: false
         description: ''
         required_fields: true
+    group_sidebar_ad:
+      children:
+        - field_sidebar_ad
+        - field_disable_sidebar_ad
+      label: 'Sidebar Ad'
+      region: content
+      parent_name: ''
+      weight: 15
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+        weight: 0
 id: node.calculators.default
 targetEntityType: node
 bundle: calculators
@@ -97,6 +116,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_disable_sidebar_ad:
+    type: boolean_checkbox
+    weight: 20
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_education_article_category:
     type: options_buttons
     weight: 1
@@ -105,7 +131,7 @@ content:
     third_party_settings: {  }
   field_exclude_from_search:
     type: search_api_exclude_entity_widget
-    weight: 31
+    weight: 18
     region: content
     settings:
       field_label: 'Yes, exclude this entity from the search indexes.'
@@ -132,6 +158,12 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_sidebar_ad:
+    type: options_select
+    weight: 19
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_yoast_seo:
     type: yoast_seo_widget
@@ -160,7 +192,7 @@ content:
     third_party_settings: {  }
   publish_state:
     type: scheduler_moderation
-    weight: 30
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -202,7 +234,7 @@ content:
     third_party_settings: {  }
   unpublish_state:
     type: scheduler_moderation
-    weight: 30
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
