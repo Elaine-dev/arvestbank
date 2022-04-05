@@ -1,0 +1,10 @@
+uuid: ead70c4b-4c2b-47cc-9932-d74c69878144
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.teaser_associates
+label: 'Teaser - Associates'
+targetEntityType: node
+cache: true

@@ -1,0 +1,180 @@
+uuid: e46a0b4f-efae-4509-b5c3-95fe136008be
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser_associates
+    - field.field.node.associate.body
+    - field.field.node.associate.feeds_item
+    - field.field.node.associate.field_associate_id
+    - field.field.node.associate.field_associate_image
+    - field.field.node.associate.field_associate_type
+    - field.field.node.associate.field_branch_nickname
+    - field.field.node.associate.field_coconut_appointment
+    - field.field.node.associate.field_designation
+    - field.field.node.associate.field_email
+    - field.field.node.associate.field_fax_number
+    - field.field.node.associate.field_hide_from_views_listings
+    - field.field.node.associate.field_insurance_license_number
+    - field.field.node.associate.field_job_title
+    - field.field.node.associate.field_location
+    - field.field.node.associate.field_mobile_number
+    - field.field.node.associate.field_nmls_number
+    - field.field.node.associate.field_office_number
+    - field.field.node.associate.field_pb_application
+    - field.field.node.associate.field_username
+    - field.field.node.associate.field_vanity_url
+    - field.field.node.associate.field_website
+    - image.style.associate_headshot
+    - node.type.associate
+  module:
+    - image
+    - link
+    - text
+    - user
+id: node.associate.teaser_associates
+targetEntityType: node
+bundle: associate
+mode: teaser_associates
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_associate_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: associate_headshot
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_associate_type:
+    type: entity_reference_entity_id
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_branch_nickname:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_coconut_appointment:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_designation:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_email:
+    type: email_mailto
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_insurance_license_number:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_job_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_location:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_nmls_number:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_office_number:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_pb_application:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_website:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  feeds_item: true
+  field_associate_id: true
+  field_fax_number: true
+  field_hide_from_views_listings: true
+  field_mobile_number: true
+  field_username: true
+  field_vanity_url: true
+  search_api_excerpt: true
