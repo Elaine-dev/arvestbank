@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.media_button
     - core.entity_view_mode.media.media_caption
+    - core.entity_view_mode.media.media_caption_inline
     - core.entity_view_mode.media.media_library
     - core.entity_view_mode.media.thumbnail_overlay
   module:
@@ -22,7 +23,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <blockquote> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2> <h3> <h4> <h5> <h6> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid data-align data-caption> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p> <br> <h1> <pre> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button title alt> <sup> <sub> <div><div class> <drupal-media data-entity-type, data-entity-uuid>'
+      allowed_html: '<a href hreflang> <em> <strong> <blockquote> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2> <h3> <h4> <h5> <h6> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid data-align data-caption> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p> <br> <h1> <pre> <div class=""> <u> <span class="coh-style-red-triangle coh-style-margin-left-small coh-style-margin-top-large coh-style-mobile-only coh-style-heading-2-card coh-style-float-right coh-style-white-text coh-style-margin-right-small coh-style-display-inline coh-style-icon---no coh-style-margin-top-small coh-style-float-left coh-style-margin-right-large coh-style-media-embed-display-inline coh-style-clear-both coh-style-alert coh-style-font-small coh-style-font-x-small- coh-style-negative-margin-top coh-style-blue-arrow-link-button coh-style-mobile-buttons-horizontal coh-style-margin-bottom-small coh-style-link-arrow-button coh-style-font-medium coh-style-icon---yes coh-style-link-button coh-style-app-buttons-horizontal coh-style-font-large coh-style-margin-left-large coh-color-black coh-color-gray-1 coh-color-transparent-blue coh-color-004580 coh-color-blue-6 coh-color-red coh-color-white"> <drupal-media data-entity-type, data-entity-uuid data-entity-type data-view-mode data-align data-caption alt title> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button title alt data-langcode>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_align:
@@ -48,6 +49,7 @@ filters:
         default: default
         media_button: media_button
         media_caption: media_caption
+        media_caption_inline: media_caption_inline
         thumbnail_overlay: thumbnail_overlay
       allowed_media_types: {  }
   editor_file_reference:

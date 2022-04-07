@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.media_button
     - core.entity_view_mode.media.media_caption
+    - core.entity_view_mode.media.media_caption_inline
     - core.entity_view_mode.media.media_links
     - core.entity_view_mode.media.thumbnail_overlay
   module:
@@ -25,7 +26,7 @@ filters:
     status: false
     weight: -10
     settings:
-      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h4 id> <h5 id> <h6 id> <img src alt data-entity-type data-entity-uuid> <h1 class="heading-2 heading-1"> <h2 id class="heading-3"> <h3 id class="heading-4"> <u> <p> <pre> <a href hreflang data-entity-substitution data-entity-type data-entity-uuid title class=" coh-style-link-arrow-button coh-style-link-button"> <span class="red-pill blue-pill coh-color-blue-1 coh-color-navy-2 coh-color-midnight-blue-3 coh-color-dark-navy-4 coh-color-danube-5 coh-color-regent-st-blue-6 coh-color-red-7 coh-color-gray-8 coh-color-white-9 coh-color-mine-shaft-10 coh-style-link-arrow-button coh-style-link-button coh-color-black coh-color-gray-1 coh-color-blue-6 coh-color-white coh-style-red-triangle coh-style-font-small coh-style-font-medium coh-style-font-large coh-style-triangle"> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr>'
+      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h4 id> <h5 id> <h6 id> <img src alt data-entity-type data-entity-uuid> <h1 class="heading-2 heading-1"> <h2 id class="heading-3"> <h3 id class="heading-4"> <u> <p> <pre> <a href hreflang data-entity-substitution data-entity-type data-entity-uuid title class=" coh-style-link-arrow-button coh-style-link-button"> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <sup> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title> <span class="red-pill blue-pill coh-color-blue-1 coh-color-navy-2 coh-color-midnight-blue-3 coh-color-dark-navy-4 coh-color-danube-5 coh-color-regent-st-blue-6 coh-color-red-7 coh-color-gray-8 coh-color-white-9 coh-color-mine-shaft-10 coh-style-link-arrow-button coh-style-link-button coh-color-black coh-color-gray-1 coh-color-blue-6 coh-color-white coh-style-red-triangle coh-style-font-small coh-style-font-medium coh-style-font-large coh-style-triangle coh-style-margin-left-small coh-style-margin-top-large coh-style-mobile-only coh-style-heading-2-card coh-style-float-right coh-style-white-text coh-style-margin-right-small coh-style-display-inline coh-style-icon---no coh-style-margin-top-small coh-style-float-left coh-style-margin-right-large coh-style-clear-both coh-style-alert coh-style-font-x-small- coh-style-negative-margin-top coh-style-blue-arrow-link-button coh-style-mobile-buttons-horizontal coh-style-margin-bottom-small coh-style-icon---yes coh-style-app-buttons-horizontal coh-style-margin-left-large coh-color-transparent-blue coh-color-004580 coh-color-red">'
       filter_html_help: true
       filter_html_nofollow: false
   editor_file_reference:
@@ -75,6 +76,7 @@ filters:
       allowed_view_modes:
         media_button: media_button
         media_caption: media_caption
+        media_caption_inline: media_caption_inline
         media_links: media_links
         thumbnail_overlay: thumbnail_overlay
       allowed_media_types:
