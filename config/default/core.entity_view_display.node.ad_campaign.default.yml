@@ -18,6 +18,10 @@ dependencies:
     - field.field.node.ad_campaign.field_ad_side_b_borrow
     - field.field.node.ad_campaign.field_ad_side_b_manage
     - field.field.node.ad_campaign.field_ad_side_b_protect
+    - field.field.node.ad_campaign.field_ad_side_careers_apply_now
+    - field.field.node.ad_campaign.field_ad_side_careers_benefits
+    - field.field.node.ad_campaign.field_ad_side_careers_hiring
+    - field.field.node.ad_campaign.field_ad_side_careers_interns
     - field.field.node.ad_campaign.field_ad_side_cc_business
     - field.field.node.ad_campaign.field_ad_side_cc_manage
     - field.field.node.ad_campaign.field_ad_side_cc_personal
@@ -49,6 +53,7 @@ third_party_settings:
       children:
         - group_personal
         - group_business
+        - group_careet
         - group_credit_cards
         - group_home_loans
         - group_investments_trusts
@@ -93,7 +98,7 @@ third_party_settings:
       label: 'Investments & Trusts'
       parent_name: group_side_navigation
       region: content
-      weight: 8
+      weight: 9
       format_type: fieldset
       format_settings:
         classes: ''
@@ -108,7 +113,7 @@ third_party_settings:
       label: 'Home Loans'
       parent_name: group_side_navigation
       region: content
-      weight: 7
+      weight: 8
       format_type: fieldset
       format_settings:
         classes: ''
@@ -123,7 +128,7 @@ third_party_settings:
       label: 'Credit Cards'
       parent_name: group_side_navigation
       region: content
-      weight: 6
+      weight: 7
       format_type: fieldset
       format_settings:
         classes: ''
@@ -142,6 +147,7 @@ third_party_settings:
       format_type: fieldset
       format_settings:
         classes: ''
+        show_empty_fields: false
         id: ''
         description: ''
     group_main_navigation:
@@ -173,7 +179,7 @@ third_party_settings:
       label: 'Top Links'
       parent_name: group_side_navigation
       region: content
-      weight: 9
+      weight: 10
       format_type: fieldset
       format_settings:
         classes: ''
@@ -186,7 +192,7 @@ third_party_settings:
       label: 'Footer Links'
       parent_name: group_side_navigation
       region: content
-      weight: 10
+      weight: 11
       format_type: fieldset
       format_settings:
         classes: ''
@@ -201,7 +207,7 @@ third_party_settings:
       label: 'Exit Pages'
       parent_name: ''
       region: content
-      weight: 11
+      weight: 4
       format_type: html_element
       format_settings:
         classes: ''
@@ -213,6 +219,22 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
+    group_careet:
+      children:
+        - field_ad_side_careers_apply_now
+        - field_ad_side_careers_benefits
+        - field_ad_side_careers_hiring
+        - field_ad_side_careers_interns
+      label: Careers
+      parent_name: group_side_navigation
+      region: content
+      weight: 6
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
 id: node.ad_campaign.default
 targetEntityType: node
 bundle: ad_campaign
@@ -339,6 +361,38 @@ content:
       ad_style: sidebar
     third_party_settings: {  }
     weight: 54
+    region: content
+  field_ad_side_careers_apply_now:
+    type: ad_formatter
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_ad_side_careers_benefits:
+    type: ad_formatter
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_ad_side_careers_hiring:
+    type: ad_formatter
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_ad_side_careers_interns:
+    type: ad_formatter
+    label: above
+    settings:
+      ad_style: sidebar
+    third_party_settings: {  }
+    weight: 9
     region: content
   field_ad_side_cc_business:
     type: ad_formatter

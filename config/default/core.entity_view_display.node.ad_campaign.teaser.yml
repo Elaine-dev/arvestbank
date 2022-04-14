@@ -19,6 +19,10 @@ dependencies:
     - field.field.node.ad_campaign.field_ad_side_b_borrow
     - field.field.node.ad_campaign.field_ad_side_b_manage
     - field.field.node.ad_campaign.field_ad_side_b_protect
+    - field.field.node.ad_campaign.field_ad_side_careers_apply_now
+    - field.field.node.ad_campaign.field_ad_side_careers_benefits
+    - field.field.node.ad_campaign.field_ad_side_careers_hiring
+    - field.field.node.ad_campaign.field_ad_side_careers_interns
     - field.field.node.ad_campaign.field_ad_side_cc_business
     - field.field.node.ad_campaign.field_ad_side_cc_manage
     - field.field.node.ad_campaign.field_ad_side_cc_personal
@@ -67,6 +71,10 @@ hidden:
   field_ad_side_b_borrow: true
   field_ad_side_b_manage: true
   field_ad_side_b_protect: true
+  field_ad_side_careers_apply_now: true
+  field_ad_side_careers_benefits: true
+  field_ad_side_careers_hiring: true
+  field_ad_side_careers_interns: true
   field_ad_side_cc_business: true
   field_ad_side_cc_manage: true
   field_ad_side_cc_personal: true

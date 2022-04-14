@@ -1,0 +1,19 @@
+uuid: f8a245b8-39c3-4176-8446-2e8b6bf9432b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_ad_side_careers_benefits
+field_name: field_ad_side_careers_benefits
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
