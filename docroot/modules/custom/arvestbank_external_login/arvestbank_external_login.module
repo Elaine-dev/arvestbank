@@ -123,6 +123,8 @@ function _arvestbank_external_login_login_form_alter(array &$form, string $form_
 
   }
 
+  // Set the cache for these forms to 0 so that way they are not cached.
+  $form['#cache']['max-age'] = 0;
 }
 
 /**
