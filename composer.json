@@ -194,7 +194,8 @@
             "acquia/cohesion": {
                 "Allow master templates to use to be defined at route level.": "patches/cohesion-master-template-by-route.patch",
                 "Stop Site Studio from going into maintenance mode": "patches/site-studio-no-maintenance-mode-patch.diff",
-                "Check for Contenthub module instead of Lift": "patches/contenthub_requirement_fix_6_8.patch"
+                "Check for Contenthub module instead of Lift": "patches/contenthub_requirement_fix_6_8.patch",
+                "Render component content referenced by entity ID instead of UUID": "patches/fix-component-content-rendering.patch"
             },
             "drupal/simplesamlphp_auth": {
                 "fix roles": "https://www.drupal.org/files/issues/2020-07-13/simplesamlphp_auth-role_assignment-2894945-11.patch"
