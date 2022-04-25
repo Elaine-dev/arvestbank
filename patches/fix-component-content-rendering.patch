@@ -1,0 +1,52 @@
+diff --git a/modules/cohesion_templates/src/TwigExtension/TwigExtension.php b/modules/cohesion_templates/src/TwigExtension/TwigExtension.php
+index 1b2bb17197..e6d86acc24 100644
+--- a/modules/cohesion_templates/src/TwigExtension/TwigExtension.php
++++ b/modules/cohesion_templates/src/TwigExtension/TwigExtension.php
+@@ -581,6 +581,25 @@ class TwigExtension extends \Twig_Extension {
+ 
+   }
+ 
++  /**
++   * Helper function to render component content.
++   *
++   * @param \Drupal\cohesion_elements\Entity\ComponentContent
++   * @param $_context
++   * @param null $componentInstanceUuid
++   *
++   * @return array | \Drupal\Component\Render\MarkupInterface
++   */
++  private function renderComponentContent($componentContent) {
++    if ($componentContent && $componentContent->isPublished()) {
++      $view_builder = $this->entityTypeManager->getViewBuilder('component_content');
++      $build = $view_builder->view($componentContent);
++      $renderer = $build;
++      return $this->addComponentFrontEndBuilderMarkup($renderer, $_context, $componentInstanceUuid, $componentContent->uuid(), $componentContent->id());
++    }
++    return [];
++  }
++
+   /**
+    * Render a component (handles caching, styles, etc).
+    *
+@@ -609,13 +628,14 @@ class TwigExtension extends \Twig_Extension {
+ 
+       $componentContent = reset($componentContents);
+ 
+-      if ($componentContent && $componentContent->isPublished()) {
+-        $view_builder = $this->entityTypeManager->getViewBuilder('component_content');
+-        $build = $view_builder->view($componentContent);
+-        $renderer = $build;
+-        return $this->addComponentFrontEndBuilderMarkup($renderer, $_context, $componentInstanceUuid, $componentContent->uuid(), $componentContent->id());
+-      }
+-      return [];
++      return $this->renderComponentContent($componentContent, $_context, $componentInstanceUuid);
++    }
++    // Fallback for component content referenced by entity ID.
++    elseif ($componentContentId && is_numeric($componentContentId) && (!isset($_context['component_content']) || $_context['component_content'] instanceof ComponentContent && $_context['component_content']->id() !== $componentContentId)) {
++      /** @var \Drupal\cohesion_elements\Entity\ComponentContent $componentContent */
++      $componentContent = ComponentContent::load($componentContentId);
++
++      return $this->renderComponentContent($componentContent);
+     }
+ 
+     // First, check the component actually exists.
