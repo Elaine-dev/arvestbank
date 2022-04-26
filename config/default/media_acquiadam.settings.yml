@@ -2,8 +2,10 @@ domain: arvestbank.widencollective.com
 token: arvestbank/e2d274285b3f74d6ec595940938cacfd
 sync_interval: 3600
 sync_method: updated_date
-size_limit: 2048
-image_quality: 80
+size_limit: null
+transcode: original
+image_quality: null
+image_format: null
 sync_perform_delete: 0
 num_assets_per_page: 12
 report_asset_usage: 1
