@@ -18,6 +18,10 @@ dependencies:
     - field.field.node.ad_campaign.field_ad_side_b_borrow
     - field.field.node.ad_campaign.field_ad_side_b_manage
     - field.field.node.ad_campaign.field_ad_side_b_protect
+    - field.field.node.ad_campaign.field_ad_side_careers_apply_now
+    - field.field.node.ad_campaign.field_ad_side_careers_benefits
+    - field.field.node.ad_campaign.field_ad_side_careers_hiring
+    - field.field.node.ad_campaign.field_ad_side_careers_interns
     - field.field.node.ad_campaign.field_ad_side_cc_business
     - field.field.node.ad_campaign.field_ad_side_cc_manage
     - field.field.node.ad_campaign.field_ad_side_cc_personal
@@ -44,6 +48,7 @@ dependencies:
     - field_group
     - path
     - scheduler
+    - scheduler_content_moderation_integration
 third_party_settings:
   field_group:
     group_main_navigation:
@@ -68,6 +73,7 @@ third_party_settings:
       children:
         - group_personal
         - group_ad_side_business
+        - group_careers
         - group_ad_side_credit_cards
         - group_home_loans
         - group_ad_side_investments_trusts
@@ -127,7 +133,7 @@ third_party_settings:
       label: 'Credit Cards'
       region: content
       parent_name: group_side_navigation
-      weight: 22
+      weight: 23
       format_type: details
       format_settings:
         classes: ''
@@ -144,7 +150,7 @@ third_party_settings:
       label: 'Home Loans'
       region: content
       parent_name: group_side_navigation
-      weight: 23
+      weight: 24
       format_type: details
       format_settings:
         classes: ''
@@ -161,7 +167,7 @@ third_party_settings:
       label: 'Investments & Trusts'
       region: content
       parent_name: group_side_navigation
-      weight: 24
+      weight: 25
       format_type: details
       format_settings:
         classes: ''
@@ -176,7 +182,7 @@ third_party_settings:
       label: 'Top Links'
       region: content
       parent_name: group_side_navigation
-      weight: 25
+      weight: 26
       format_type: details
       format_settings:
         classes: ''
@@ -191,7 +197,7 @@ third_party_settings:
       label: 'Footer Links'
       region: content
       parent_name: group_side_navigation
-      weight: 26
+      weight: 27
       format_type: details
       format_settings:
         classes: ''
@@ -212,6 +218,24 @@ third_party_settings:
       format_type: details
       format_settings:
         classes: ''
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+    group_careers:
+      children:
+        - field_ad_side_careers_apply_now
+        - field_ad_side_careers_benefits
+        - field_ad_side_careers_hiring
+        - field_ad_side_careers_interns
+      label: Careers
+      region: content
+      parent_name: group_side_navigation
+      weight: 22
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
         id: ''
         open: false
         description: ''
@@ -314,6 +338,30 @@ content:
   field_ad_side_b_protect:
     type: options_select
     weight: 33
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ad_side_careers_apply_now:
+    type: options_select
+    weight: 18
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ad_side_careers_benefits:
+    type: options_select
+    weight: 19
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ad_side_careers_hiring:
+    type: options_select
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ad_side_careers_interns:
+    type: options_select
+    weight: 21
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -458,7 +506,7 @@ content:
     third_party_settings: {  }
   publish_state:
     type: scheduler_moderation
-    weight: 30
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -502,7 +550,7 @@ content:
     third_party_settings: {  }
   unpublish_state:
     type: scheduler_moderation
-    weight: 30
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }

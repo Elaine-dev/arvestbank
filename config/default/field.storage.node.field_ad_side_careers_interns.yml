@@ -1,0 +1,19 @@
+uuid: 5fc6fa87-e8e8-41e9-b2e0-2997f799d31c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_ad_side_careers_interns
+field_name: field_ad_side_careers_interns
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

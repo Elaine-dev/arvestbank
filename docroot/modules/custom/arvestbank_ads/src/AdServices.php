@@ -57,6 +57,10 @@ class AdServices {
       'contact' => 'field_ad_side_contact',
       'education-center' => 'field_ad_side_education_center',
       'documents-and-resources' => 'field_ad_side_docs_resources',
+      'careers/applynow' => 'field_ad_side_careers_apply_now',
+      'careers/benefits' => 'field_ad_side_careers_benefits',
+      'careers/hiring-process' => 'field_ad_side_careers_hiring',
+      'careers/interns' => 'field_ad_side_careers_interns',
     ];
 
   }
