@@ -1,5 +1,5 @@
 diff --git a/modules/cohesion_templates/src/TwigExtension/TwigExtension.php b/modules/cohesion_templates/src/TwigExtension/TwigExtension.php
-index 1b2bb17197..e6d86acc24 100644
+index 1b2bb17197..66469c5b39 100644
 --- a/modules/cohesion_templates/src/TwigExtension/TwigExtension.php
 +++ b/modules/cohesion_templates/src/TwigExtension/TwigExtension.php
 @@ -581,6 +581,25 @@ class TwigExtension extends \Twig_Extension {
@@ -15,7 +15,7 @@ index 1b2bb17197..e6d86acc24 100644
 +   *
 +   * @return array | \Drupal\Component\Render\MarkupInterface
 +   */
-+  private function renderComponentContent($componentContent) {
++  private function renderComponentContent($componentContent, $_context, $componentInstanceUuid) {
 +    if ($componentContent && $componentContent->isPublished()) {
 +      $view_builder = $this->entityTypeManager->getViewBuilder('component_content');
 +      $build = $view_builder->view($componentContent);
@@ -46,7 +46,7 @@ index 1b2bb17197..e6d86acc24 100644
 +      /** @var \Drupal\cohesion_elements\Entity\ComponentContent $componentContent */
 +      $componentContent = ComponentContent::load($componentContentId);
 +
-+      return $this->renderComponentContent($componentContent);
++      return $this->renderComponentContent($componentContent, $_context, $componentInstanceUuid);
      }
  
      // First, check the component actually exists.
