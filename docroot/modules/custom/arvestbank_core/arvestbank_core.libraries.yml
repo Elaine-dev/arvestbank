@@ -2,3 +2,9 @@ yoast_admin:
   css:
     theme:
       css/yoast.css: {}
+mobile_redirect:
+  js:
+    js/mobile.js: {}
+  dependencies:
+    - core/drupalSettings
+    - core/jquery

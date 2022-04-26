@@ -1,0 +1,148 @@
+uuid: 59891246-7717-4d54-8f82-2097e88c0dd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_elements.cohesion_component_category.cpt_cat_general_components
+label: 'Mobile Redirects'
+id: cpt_mobile_redirects
+json_values: |
+  {
+      "canvas": [
+          {
+              "type": "item",
+              "uid": "mobile_redirects",
+              "isCustom": true,
+              "title": "Mobile Redirects to the different app stores.",
+              "selected": false,
+              "status": {
+                  "collapsed": true
+              },
+              "iconColor": "custom",
+              "uuid": "7bda04eb-0a9c-4b06-960a-8884def307e6",
+              "parentUid": "root",
+              "children": []
+          }
+      ],
+      "componentForm": [
+          {
+              "type": "form-field",
+              "uid": "form-input",
+              "title": "Input",
+              "translate": true,
+              "status": {
+                  "collapsed": false
+              },
+              "iconColor": "formField",
+              "uuid": "0f5a7184-824e-4697-a9d7-b4e674ec6fd9",
+              "parentUid": "root",
+              "children": []
+          },
+          {
+              "type": "form-field",
+              "uid": "form-input",
+              "title": "Input",
+              "translate": true,
+              "status": {
+                  "collapsed": false
+              },
+              "iconColor": "formField",
+              "uuid": "84789c2e-aa39-4ac2-8a7b-153a81e2a675",
+              "parentUid": "root",
+              "children": []
+          }
+      ],
+      "mapper": {
+          "7bda04eb-0a9c-4b06-960a-8884def307e6": {}
+      },
+      "model": {
+          "7bda04eb-0a9c-4b06-960a-8884def307e6": {
+              "settings": {
+                  "title": "Mobile Redirects to the different app stores.",
+                  "apple_store_url": "[field.0f5a7184-824e-4697-a9d7-b4e674ec6fd9]",
+                  "google_store_url": "[field.84789c2e-aa39-4ac2-8a7b-153a81e2a675]"
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "mobile_redirects"
+                  }
+              }
+          },
+          "0f5a7184-824e-4697-a9d7-b4e674ec6fd9": {
+              "settings": {
+                  "title": "Apple Store URL",
+                  "schema": {
+                      "type": "string",
+                      "escape": true,
+                      "required": true
+                  },
+                  "machineName": "apple-store-url",
+                  "tooltipPlacement": "auto right"
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "84789c2e-aa39-4ac2-8a7b-153a81e2a675": {
+              "settings": {
+                  "title": "Google Store URL",
+                  "schema": {
+                      "type": "string",
+                      "escape": true,
+                      "required": true
+                  },
+                  "machineName": "google-store-url",
+                  "tooltipPlacement": "auto right"
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          }
+      },
+      "previewModel": {
+          "0f5a7184-824e-4697-a9d7-b4e674ec6fd9": {},
+          "84789c2e-aa39-4ac2-8a7b-153a81e2a675": {},
+          "7bda04eb-0a9c-4b06-960a-8884def307e6": {}
+      },
+      "variableFields": {
+          "0f5a7184-824e-4697-a9d7-b4e674ec6fd9": [],
+          "84789c2e-aa39-4ac2-8a7b-153a81e2a675": [],
+          "7bda04eb-0a9c-4b06-960a-8884def307e6": [
+              "settings.apple_store_url",
+              "settings.google_store_url"
+          ]
+      },
+      "disabledNodes": [],
+      "meta": {
+          "lastModifiedEl": "7bda04eb-0a9c-4b06-960a-8884def307e6",
+          "fieldHistory": [
+              {
+                  "uuid": "84789c2e-aa39-4ac2-8a7b-153a81e2a675",
+                  "type": "form-input",
+                  "machineName": "google-store-url"
+              },
+              {
+                  "uuid": "0f5a7184-824e-4697-a9d7-b4e674ec6fd9",
+                  "type": "form-input",
+                  "machineName": "apple-store-url"
+              }
+          ]
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+category: cpt_cat_general_components
+preview_image: ''
+has_quick_edit: null
+entity_type_access: {  }
+bundle_access: {  }
+twig_template: component--cohesion-cpt-mobile-redirects
+weight: 0
