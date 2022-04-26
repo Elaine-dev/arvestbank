@@ -1,0 +1,10 @@
+uuid: df9f2a0e-73f1-4436-af55-bc5b004a680f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.teaser_associates_lenders
+label: 'Teaser - Associate Lenders'
+targetEntityType: node
+cache: true

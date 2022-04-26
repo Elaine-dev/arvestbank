@@ -5,8 +5,8 @@ dependencies:
   config:
     - cohesion_custom_styles.cohesion_custom_style.fc5216fd
     - views.view.advisors
-id: view_tpl_advisors_view_template
 label: 'Advisors View Template'
+id: view_tpl_advisors_view_template
 json_values: |
   {
       "canvas": [
@@ -1696,7 +1696,7 @@ json_values: |
                       {
                           "entity_type": "node",
                           "bundle": "associate",
-                          "view_mode": "teaser"
+                          "view_mode": "teaser_associates"
                       }
                   ]
               },
@@ -1751,7 +1751,8 @@ json_values: |
           "459e35d1-6cb3-4bac-a027-cbe53b1a8ef5": []
       },
       "meta": {
-          "fieldHistory": []
+          "fieldHistory": [],
+          "lastModifiedEl": "9f343471-30b9-4769-9ec7-35638d819153"
       }
   }
 json_mapper: '{}'
