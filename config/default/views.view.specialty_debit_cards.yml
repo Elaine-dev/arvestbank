@@ -15,6 +15,8 @@ dependencies:
     - system.menu.admin
     - system.menu.main
     - taxonomy.vocabulary.debit_card_category
+  content:
+    - 'taxonomy_term:debit_card_category:6a4815e2-ac5e-4024-be5c-33511cefe876'
   module:
     - better_exposed_filters
     - geolocation
@@ -2994,7 +2996,8 @@ display:
           admin_label: ''
           plugin_id: taxonomy_index_tid
           operator: or
-          value: {  }
+          value:
+            751: 751
           group: 1
           exposed: true
           expose:
