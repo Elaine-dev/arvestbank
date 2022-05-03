@@ -1,0 +1,84 @@
+uuid: b3357a75-77b2-4e8a-8715-5e72b1b2f7d1
+langcode: en
+status: true
+dependencies: {  }
+label: 'External Ad'
+id: mstr_tpl_external_ad
+json_values: |
+  {
+      "canvas": [
+          {
+              "type": "container",
+              "uid": "container",
+              "title": "Container",
+              "status": {
+                  "collapsed": false
+              },
+              "iconColor": "layout",
+              "uuid": "c35236f8-9997-4522-b565-d52b05d26aa9",
+              "parentUid": "root",
+              "children": [
+                  {
+                      "type": "item",
+                      "uid": "drupal-region",
+                      "title": "Region",
+                      "status": {
+                          "collapsed": true
+                      },
+                      "iconColor": "drupal",
+                      "uuid": "83c6d040-a6b5-4799-bd88-7db5a3ed79a8",
+                      "parentUid": "container",
+                      "children": []
+                  }
+              ]
+          }
+      ],
+      "mapper": {
+          "83c6d040-a6b5-4799-bd88-7db5a3ed79a8": {},
+          "c35236f8-9997-4522-b565-d52b05d26aa9": {}
+      },
+      "model": {
+          "c35236f8-9997-4522-b565-d52b05d26aa9": {
+              "settings": {
+                  "width": "fluid"
+              }
+          },
+          "83c6d040-a6b5-4799-bd88-7db5a3ed79a8": {
+              "settings": {
+                  "title": "Region",
+                  "region": {
+                      "theme": "arvestbank_theme",
+                      "type": "content"
+                  }
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "region"
+                  }
+              }
+          }
+      },
+      "previewModel": {
+          "83c6d040-a6b5-4799-bd88-7db5a3ed79a8": {}
+      },
+      "variableFields": {
+          "83c6d040-a6b5-4799-bd88-7db5a3ed79a8": []
+      },
+      "meta": {
+          "lastModifiedEl": "83c6d040-a6b5-4799-bd88-7db5a3ed79a8",
+          "fieldHistory": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+locked: false
+modified: true
+selectable: true
+custom: null
+twig_template: page--cohesion--mstr-tpl-external-ad
+default: false

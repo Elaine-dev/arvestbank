@@ -1,0 +1,31 @@
+uuid: 9f847cd6-1d90-462e-bb06-25834cbc7a79
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: true
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: true
+name: 'External Ad'
+type: external_ad
+description: 'An ad that will be displayed externally through an Iframe or other means.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

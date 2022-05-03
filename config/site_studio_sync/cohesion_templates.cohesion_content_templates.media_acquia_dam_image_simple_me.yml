@@ -1,0 +1,104 @@
+uuid: 8427c1e0-49f8-4d52-8d5a-4a1eb1598e7c
+langcode: en
+status: true
+dependencies: {  }
+label: 'Simple media (Media, Image)'
+id: media_acquia_dam_image_simple_me
+json_values: |
+  {
+      "canvas": [
+          {
+              "type": "item",
+              "uid": "image",
+              "title": "Image",
+              "status": {
+                  "collapsed": true
+              },
+              "iconColor": "media",
+              "uuid": "ad0ab2ae-c4d1-46bf-8460-8f7374c6437d",
+              "parentUid": "root",
+              "children": []
+          }
+      ],
+      "mapper": {
+          "ad0ab2ae-c4d1-46bf-8460-8f7374c6437d": {}
+      },
+      "model": {
+          "ad0ab2ae-c4d1-46bf-8460-8f7374c6437d": {
+              "settings": {
+                  "title": "Image",
+                  "styles": {
+                      "xl": {
+                          "displaySize": "coh-image-responsive",
+                          "imageAlignment": null
+                      }
+                  },
+                  "customStyle": [
+                      {
+                          "customStyle": ""
+                      }
+                  ],
+                  "lazyload": true,
+                  "settings": {
+                      "lazyload": false,
+                      "styles": {
+                          "xl": {
+                              "displaySize": "coh-image-responsive"
+                          }
+                      },
+                      "imageStyle": "",
+                      "customStyle": [
+                          {
+                              "customStyle": ""
+                          }
+                      ]
+                  },
+                  "imageStyle": "",
+                  "attributes": {
+                      "alt": "[media:field_acquiadam_asset_image:alt]"
+                  },
+                  "image": "[media:field_acquiadam_asset_image:entity:url]"
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "img"
+                  }
+              }
+          }
+      },
+      "previewModel": {
+          "ad0ab2ae-c4d1-46bf-8460-8f7374c6437d": {
+              "settings": {
+                  "attributes": {
+                      "alt": ""
+                  }
+              }
+          }
+      },
+      "variableFields": {
+          "ad0ab2ae-c4d1-46bf-8460-8f7374c6437d": [
+              "settings.image",
+              "settings.attributes.alt"
+          ]
+      },
+      "meta": {
+          "lastModifiedEl": "ad0ab2ae-c4d1-46bf-8460-8f7374c6437d",
+          "fieldHistory": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+modified: true
+selectable: false
+custom: false
+twig_template: media--cohesion--media-acquia-dam-image-simple-me
+default: true
+entity_type: media
+bundle: acquia_dam_image
+view_mode: simple_media
+master_template: ''
