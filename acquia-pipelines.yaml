@@ -35,7 +35,7 @@ events:
       - tests:
           type: script
           script:
-            - local-php-security-checker
+            - ./local-php-security-checker
             - source ${BLT_DIR}/scripts/pipelines/tests
       - build-artifact:
           type: script
