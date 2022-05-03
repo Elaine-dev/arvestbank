@@ -1,0 +1,10 @@
+uuid: f719b61a-aeeb-4fd9-a4c4-28677700efb8
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.simple_media
+label: 'Simple media'
+targetEntityType: media
+cache: true

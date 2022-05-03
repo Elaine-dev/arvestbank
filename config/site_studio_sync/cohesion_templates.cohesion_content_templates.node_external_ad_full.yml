@@ -1,0 +1,195 @@
+uuid: c3208e6b-d3f8-4bd3-8962-57a1ee60b84e
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_templates.cohesion_master_templates.mstr_tpl_external_ad
+label: 'Full content (Node, External Ad)'
+id: node_external_ad_full
+json_values: |
+  {
+      "canvas": [
+          {
+              "type": "item",
+              "uid": "drupal-block",
+              "title": "Block",
+              "status": {
+                  "collapsed": true
+              },
+              "iconColor": "drupal",
+              "uuid": "b0b8bc6b-9922-4504-83ae-c9e9b924ba8e",
+              "parentUid": "root",
+              "children": []
+          },
+          {
+              "type": "container",
+              "uid": "container",
+              "title": "Container",
+              "status": {
+                  "collapsed": false
+              },
+              "iconColor": "layout",
+              "uuid": "90e4bb8c-55f3-4ba4-a0fb-186523d9e330",
+              "parentUid": "root",
+              "children": [
+                  {
+                      "type": "container",
+                      "uid": "link",
+                      "title": "Link",
+                      "status": {
+                          "collapsed": false
+                      },
+                      "iconColor": "content",
+                      "uuid": "07edf319-0833-4f38-a29d-5a6185db636b",
+                      "parentUid": "container",
+                      "children": [
+                          {
+                              "type": "item",
+                              "uid": "entity-browser",
+                              "title": "Entity browser",
+                              "status": {
+                                  "collapsed": true
+                              },
+                              "iconColor": "drupal",
+                              "uuid": "20ef26ba-a23e-4482-8678-afcc72abc6fe",
+                              "parentUid": "link",
+                              "children": []
+                          }
+                      ]
+                  }
+              ]
+          }
+      ],
+      "mapper": {
+          "90e4bb8c-55f3-4ba4-a0fb-186523d9e330": {},
+          "07edf319-0833-4f38-a29d-5a6185db636b": {},
+          "20ef26ba-a23e-4482-8678-afcc72abc6fe": {},
+          "b0b8bc6b-9922-4504-83ae-c9e9b924ba8e": {}
+      },
+      "model": {
+          "b0b8bc6b-9922-4504-83ae-c9e9b924ba8e": {
+              "settings": {
+                  "title": "Admin Tabs Block",
+                  "customStyle": [
+                      {
+                          "customStyle": ""
+                      }
+                  ],
+                  "settings": {
+                      "theme": "all",
+                      "customStyle": [
+                          {
+                              "customStyle": ""
+                          }
+                      ]
+                  },
+                  "theme": "arvestbank_theme",
+                  "block": "arvestbank_theme_local_tasks"
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "block"
+                  }
+              }
+          },
+          "90e4bb8c-55f3-4ba4-a0fb-186523d9e330": {
+              "settings": {
+                  "width": "fluid"
+              }
+          },
+          "07edf319-0833-4f38-a29d-5a6185db636b": {
+              "settings": {
+                  "title": "Link",
+                  "customStyle": [
+                      {
+                          "customStyle": ""
+                      }
+                  ],
+                  "settings": {
+                      "type": "internal-page",
+                      "target": "_self",
+                      "customStyle": [
+                          {
+                              "customStyle": ""
+                          }
+                      ]
+                  },
+                  "type": "url",
+                  "target": "_blank",
+                  "noFollow": "",
+                  "noOpener": "",
+                  "noReferrer": "",
+                  "url": "[node:field_ad_url:path]"
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "link"
+                  }
+              }
+          },
+          "20ef26ba-a23e-4482-8678-afcc72abc6fe": {
+              "settings": {
+                  "title": "Entity browser",
+                  "entity": {
+                      "entityBrowserType": "typeahead",
+                      "entityType": "media",
+                      "entity": {
+                          "entityType": "media",
+                          "entityId": "[node:field_ad_image:target_id]"
+                      },
+                      "bundles": {
+                          "acquia_dam_image": true
+                      }
+                  },
+                  "entityViewMode": "media.simple_media"
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "entity-browser"
+                  }
+              }
+          }
+      },
+      "previewModel": {
+          "20ef26ba-a23e-4482-8678-afcc72abc6fe": {},
+          "07edf319-0833-4f38-a29d-5a6185db636b": {},
+          "b0b8bc6b-9922-4504-83ae-c9e9b924ba8e": {}
+      },
+      "variableFields": {
+          "20ef26ba-a23e-4482-8678-afcc72abc6fe": [],
+          "07edf319-0833-4f38-a29d-5a6185db636b": [
+              "settings.url"
+          ],
+          "b0b8bc6b-9922-4504-83ae-c9e9b924ba8e": []
+      },
+      "meta": {
+          "lastModifiedEl": "20ef26ba-a23e-4482-8678-afcc72abc6fe",
+          "fieldHistory": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0035
+modified: true
+selectable: true
+custom: false
+twig_template: node--cohesion--node-external-ad-full
+default: true
+entity_type: node
+bundle: external_ad
+view_mode: full
+master_template: mstr_tpl_external_ad

@@ -7,6 +7,7 @@ dependencies:
     - node.type.article_education_article
     - node.type.calculators
     - node.type.campaign_page
+    - node.type.external_ad
     - node.type.landing_page
     - node.type.page
     - node.type.private_bank_location
@@ -124,6 +125,7 @@ type_settings:
       - article_education_article
       - calculators
       - campaign_page
+      - external_ad
       - landing_page
       - page
       - private_bank_location

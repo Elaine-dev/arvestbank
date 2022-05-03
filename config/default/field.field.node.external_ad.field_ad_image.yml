@@ -1,0 +1,29 @@
+uuid: ae5b2959-e332-49fa-8a38-d5a02f446aeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ad_image
+    - media.type.acquia_dam_image
+    - node.type.external_ad
+id: node.external_ad.field_ad_image
+field_name: field_ad_image
+entity_type: node
+bundle: external_ad
+label: 'Ad Image'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      acquia_dam_image: acquia_dam_image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
