@@ -59,6 +59,7 @@ module:
   context_entity_field: 0
   context_ui: 0
   contextual: 0
+  csv_serialization: 0
   ctools: 0
   ctools_entity_mask: 0
   datetime: 0
@@ -184,6 +185,7 @@ module:
   user: 0
   views_autosubmit: 0
   views_block_filter_block: 0
+  views_data_export: 0
   views_ui: 0
   webform: 0
   webform_node: 0
