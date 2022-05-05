@@ -25,6 +25,11 @@ class MobileRedirects extends CustomElementPluginBase {
         'title' => 'Google Store URL',
         'type' => 'textfield',
       ],
+      'fallback_url' => [
+        'htmlClass' => 'col-xs-12',
+        'title' => 'Fallback URL',
+        'type' => 'textfield',
+      ],
     ];
   }
 
@@ -38,6 +43,7 @@ class MobileRedirects extends CustomElementPluginBase {
         'drupalSettings' => [
           'appleUrl' => $settings['apple_store_url'],
           'googleUrl' => $settings['google_store_url'],
+          'fallbackUrl' => $settings['fallback_url'],
         ],
         'library' => [
           'arvestbank_core/mobile_redirect',
