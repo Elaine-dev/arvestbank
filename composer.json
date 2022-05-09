@@ -59,6 +59,7 @@
         "drupal/imageapi_optimize": "^4.0@beta",
         "drupal/imageapi_optimize_resmushit": "^2.0@beta",
         "drupal/inline_entity_form": "^1.0@RC",
+        "drupal/jquery_ui_datepicker": "^1.2",
         "drupal/link_attributes": "^1.11",
         "drupal/linkit": "5.0.0-beta13",
         "drupal/masquerade": "^2.0@beta",
