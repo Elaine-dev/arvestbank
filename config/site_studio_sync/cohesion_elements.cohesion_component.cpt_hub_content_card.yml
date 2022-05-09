@@ -11,8 +11,8 @@ dependencies:
     - cohesion_website_settings.cohesion_color.white
   content:
     - 'file:file:737ceb5d-a752-47b2-93b8-fb3223ff9048'
-id: cpt_hub_content_card
 label: 'Hub Content List Card'
+id: cpt_hub_content_card
 json_values: |
   {
       "canvas": [
@@ -942,7 +942,7 @@ json_values: |
                               "uid": "column",
                               "title": "Column",
                               "status": {
-                                  "collapsed": true
+                                  "collapsed": false
                               },
                               "uuid": "98cfa6cf-8a83-4c3d-a38b-ae53f6358ca8",
                               "parentUid": "row-for-columns",
@@ -968,7 +968,7 @@ json_values: |
                               "uid": "column",
                               "title": "Column",
                               "status": {
-                                  "collapsed": true
+                                  "collapsed": false
                               },
                               "uuid": "16283310-78fa-4c57-9c29-293764b2a57d",
                               "parentUid": "row-for-columns",
@@ -2259,6 +2259,33 @@ json_values: |
                                                       },
                                                       {
                                                           "name": "clearfix",
+                                                          "active": true
+                                                      }
+                                                  ]
+                                              }
+                                          ]
+                                      },
+                                      {
+                                          "formKey": "custom-css",
+                                          "children": [
+                                              {
+                                                  "formKey": "css-property-and-css-value",
+                                                  "breakpoints": [
+                                                      {
+                                                          "name": "xl"
+                                                      }
+                                                  ],
+                                                  "activeFields": [
+                                                      {
+                                                          "name": "custom-css",
+                                                          "active": true
+                                                      },
+                                                      {
+                                                          "name": "customCssProperty",
+                                                          "active": true
+                                                      },
+                                                      {
+                                                          "name": "customCss",
                                                           "active": true
                                                       }
                                                   ]
@@ -5797,7 +5824,67 @@ json_values: |
               "styles": {
                   "formDefinition": [],
                   "selectorType": "topLevel",
-                  "items": [],
+                  "items": [
+                      {
+                          "title": "article",
+                          "type": "container",
+                          "items": [
+                              {
+                                  "title": "img",
+                                  "type": "container",
+                                  "items": [],
+                                  "form": null,
+                                  "selectorType": "child",
+                                  "model": "img",
+                                  "uuid": "32629480-b60e-4d2e-81ac-699a31c9ddc8",
+                                  "allowedTypes": [
+                                      "child",
+                                      "pseudo",
+                                      "modifier"
+                                  ],
+                                  "formDefinition": [
+                                      {
+                                          "formKey": "custom-css",
+                                          "children": [
+                                              {
+                                                  "formKey": "css-property-and-css-value",
+                                                  "breakpoints": [
+                                                      {
+                                                          "name": "xl"
+                                                      }
+                                                  ],
+                                                  "activeFields": [
+                                                      {
+                                                          "name": "custom-css",
+                                                          "active": true
+                                                      },
+                                                      {
+                                                          "name": "customCssProperty",
+                                                          "active": true
+                                                      },
+                                                      {
+                                                          "name": "customCss",
+                                                          "active": true
+                                                      }
+                                                  ]
+                                              }
+                                          ]
+                                      }
+                                  ]
+                              }
+                          ],
+                          "form": null,
+                          "selectorType": "child",
+                          "model": "article",
+                          "uuid": "bb9366e3-42e0-4b65-bb5b-98f943bc8a89",
+                          "allowedTypes": [
+                              "child",
+                              "pseudo",
+                              "modifier"
+                          ],
+                          "formDefinition": []
+                      }
+                  ],
                   "form": null
               },
               "markup": {
@@ -13908,6 +13995,37 @@ json_values: |
               "styles": {
                   "settings": {
                       "element": "container"
+                  },
+                  "bb9366e3-42e0-4b65-bb5b-98f943bc8a89": {
+                      "settings": {
+                          "element": "article",
+                          "class": "",
+                          "combinator": "",
+                          "pseudo": ""
+                      },
+                      "styles": {}
+                  },
+                  "32629480-b60e-4d2e-81ac-699a31c9ddc8": {
+                      "settings": {
+                          "element": "img",
+                          "class": "",
+                          "combinator": "",
+                          "pseudo": ""
+                      },
+                      "styles": {
+                          "xl": {
+                              "custom-css": [
+                                  {
+                                      "customCssProperty": {
+                                          "value": "max-width"
+                                      },
+                                      "customCss": {
+                                          "value": "20px"
+                                      }
+                                  }
+                              ]
+                          }
+                      }
                   }
               },
               "markup": {
@@ -14463,7 +14581,17 @@ json_values: |
                               },
                               "float": {
                                   "value": "right"
-                              }
+                              },
+                              "custom-css": [
+                                  {
+                                      "customCssProperty": {
+                                          "value": ""
+                                      },
+                                      "customCss": {
+                                          "value": ""
+                                      }
+                                  }
+                              ]
                           }
                       }
                   }
@@ -15566,6 +15694,7 @@ json_values: |
           ],
           "c41a9203-8366-42aa-9d39-2514f4f56d20": []
       },
+      "disabledNodes": [],
       "meta": {
           "fieldHistory": [
               {
@@ -15713,7 +15842,8 @@ json_values: |
                   "type": "form-checkbox-toggle",
                   "machineName": "glossary-only-card"
               }
-          ]
+          ],
+          "lastModifiedEl": "9017c05d-dd48-4367-ab88-a0723b427d6f"
       }
   }
 json_mapper: '{}'
