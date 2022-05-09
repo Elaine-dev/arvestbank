@@ -50,6 +50,19 @@ json_values: |
               "uuid": "84789c2e-aa39-4ac2-8a7b-153a81e2a675",
               "parentUid": "root",
               "children": []
+          },
+          {
+              "type": "form-field",
+              "uid": "form-input",
+              "title": "Input",
+              "translate": true,
+              "status": {
+                  "collapsed": false
+              },
+              "iconColor": "formField",
+              "uuid": "cc91d969-01db-4181-bb8f-4175b5648857",
+              "parentUid": "root",
+              "children": []
           }
       ],
       "mapper": {
@@ -60,7 +73,8 @@ json_values: |
               "settings": {
                   "title": "Mobile Redirects to the different app stores.",
                   "apple_store_url": "[field.0f5a7184-824e-4697-a9d7-b4e674ec6fd9]",
-                  "google_store_url": "[field.84789c2e-aa39-4ac2-8a7b-153a81e2a675]"
+                  "google_store_url": "[field.84789c2e-aa39-4ac2-8a7b-153a81e2a675]",
+                  "fallback_url": "[field.cc91d969-01db-4181-bb8f-4175b5648857]"
               },
               "context-visibility": {
                   "contextVisibility": {
@@ -102,25 +116,48 @@ json_values: |
               "contextVisibility": {
                   "condition": "ALL"
               }
+          },
+          "cc91d969-01db-4181-bb8f-4175b5648857": {
+              "settings": {
+                  "title": "Fallback URL",
+                  "schema": {
+                      "type": "string",
+                      "escape": true,
+                      "required": true
+                  },
+                  "machineName": "fallback-url",
+                  "tooltipPlacement": "auto right"
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
           }
       },
       "previewModel": {
           "0f5a7184-824e-4697-a9d7-b4e674ec6fd9": {},
           "84789c2e-aa39-4ac2-8a7b-153a81e2a675": {},
-          "7bda04eb-0a9c-4b06-960a-8884def307e6": {}
+          "7bda04eb-0a9c-4b06-960a-8884def307e6": {},
+          "cc91d969-01db-4181-bb8f-4175b5648857": {}
       },
       "variableFields": {
           "0f5a7184-824e-4697-a9d7-b4e674ec6fd9": [],
           "84789c2e-aa39-4ac2-8a7b-153a81e2a675": [],
           "7bda04eb-0a9c-4b06-960a-8884def307e6": [
               "settings.apple_store_url",
-              "settings.google_store_url"
-          ]
+              "settings.google_store_url",
+              "settings.fallback_url"
+          ],
+          "cc91d969-01db-4181-bb8f-4175b5648857": []
       },
       "disabledNodes": [],
       "meta": {
           "lastModifiedEl": "7bda04eb-0a9c-4b06-960a-8884def307e6",
           "fieldHistory": [
+              {
+                  "uuid": "cc91d969-01db-4181-bb8f-4175b5648857",
+                  "type": "form-input",
+                  "machineName": "fallback-url"
+              },
               {
                   "uuid": "84789c2e-aa39-4ac2-8a7b-153a81e2a675",
                   "type": "form-input",
