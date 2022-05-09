@@ -12,8 +12,8 @@ git:
     - 'arvestbank@svn-37631.prod.hosting.acquia.com:arvestbank.git'
 disable-targets:
   tests:
-    security-drupal: true
-    security-composer: true
+    security-drupal: false
+    security-composer: false
 simplesamlphp: true
 drush:
   aliases:
