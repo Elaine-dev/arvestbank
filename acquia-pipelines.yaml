@@ -20,6 +20,10 @@ events:
             - composer validate --no-check-all --ansi
             - composer install --ansi
             - source ${BLT_DIR}/scripts/pipelines/setup_env
+            # Setup php dependency checker.
+            - wget https://github.com/fabpot/local-php-security-checker/releases/download/v2.0.3/local-php-security-checker_2.0.3_linux_amd64
+            - mv local-php-security-checker_2.0.3_linux_amd64 local-php-security-checker
+            - chmod +x local-php-security-checker
       - validate:
           type: script
           script:
@@ -31,8 +35,10 @@ events:
       - tests:
           type: script
           script:
+            - ./local-php-security-checker
             - source ${BLT_DIR}/scripts/pipelines/tests
       - build-artifact:
           type: script
           script:
+            - rm local-php-security-checker
             - source ${BLT_DIR}/scripts/pipelines/build_artifact
